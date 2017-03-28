@@ -1,0 +1,6 @@
+/_site
+/externals
+/obj
+/api/*.yml
+/api/.manifest
+build.log
