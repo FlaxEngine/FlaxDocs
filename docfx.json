@@ -26,8 +26,8 @@
       },
       {
         "files": [
-          "articles/**.md",
-          "articles/**/toc.yml",
+          "manual/**.md", "manual/**/toc.yml",
+		  "api/*.md", "api/*.yml",
           "toc.yml",
           "*.md"
         ],
@@ -40,7 +40,7 @@
     "resource": [
       {
         "files": [
-          "images/**"
+          "media/**",
         ],
         "exclude": [
           "obj/**",
@@ -60,6 +60,10 @@
       }
     ],
     "dest": "_site",
+	"globalMetadata": {
+      "_appTitle": "Flax",
+      "_enableSearch": true
+    },
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
