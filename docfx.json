@@ -63,13 +63,11 @@
 	"globalMetadata": {
       "_appTitle": "Flax Documentation",
       "_appFooter": "Copyright © 2017 Flax Engine",
-      "_appLogoPath": "logo_512.png",
-      "_appFaviconPath": "favicon.ico",
 	"_enableSearch": true,
 	"_enableNewTab": true,
 	"_disableContribution": false,
 	"_gitContribute": {
-		"repo ": "https://github.com/FlaxEngine/FlaxDocs"
+		"repo ": "https://github.com/FlaxEngine/FlaxDocs",
 		"branch": "master"
 	}
     },
