@@ -61,15 +61,16 @@
     ],
     "dest": "_site",
 	"globalMetadata": {
-      "_appTitle": "Flax Documentation",
-      "_appFooter": "Copyright © 2017 Flax Engine",
-	"_enableSearch": true,
-	"_enableNewTab": true,
-	"_disableContribution": false,
-	"_gitContribute": {
-		"repo ": "https://github.com/FlaxEngine/FlaxDocs",
-		"branch": "master"
-	}
+		"_appTitle": "Flax Documentation",
+		"_appFooter": "Copyright © 2017 Flax Engine",
+		"_enableSearch": true,
+		"_enableNewTab": true,
+		"_disableContribution": false,
+		//"_gitUrlPattern": "github",
+		//"_gitContribute": {
+		//		"repo ": "https://github.com/FlaxEngine/FlaxDocs",
+		//		"branch": "master"
+		//}
     },
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
