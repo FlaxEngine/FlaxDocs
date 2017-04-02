@@ -18,7 +18,7 @@ Flax Launcher requires [Microsoft .NET Framework 4 Client Profile](http://www.mi
 We also recommend using Visual Studio 2013, 2015 or 2017 for writing code.
 You can get free version [here](https://www.visualstudio.com/downloads/).
 
-## Video Card Drivers
+## GPU Drivers
 
 Please ensure to have the latest GPU drivers installed. Helper links:
 - [NVIDIA drivers](http://www.nvidia.com/Download/index.aspx?lang=en-us/)
