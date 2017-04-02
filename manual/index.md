@@ -21,7 +21,5 @@ These pages contain information about how to use Flax Engine. This manual helps 
 
 ## Help us creating documentation
 
-The Flax documentation is open-source, whichmeans anyone can edit it. If you find a mistake, you can correct it or comment in GitHub.
-
-To edit any page of this manual, in the top right, click **Improve this Doc**.
+The Flax documentation is open-source, whichmeans anyone can edit it. If you find a mistake, you can correct it or comment in GitHub. [Here](https://github.com/FlaxEngine/FlaxDocs) is official repository.
 

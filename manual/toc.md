@@ -41,5 +41,8 @@
 # [Virtual Reality](virtual-reality/index.md)
 
 # [Contributing](contributing/index.md)
+## [Feature Requests](contributing/feature-requests.md)
+## [Open Source API](contributing/open-source-api.md)
+## [Report a bug](contributing/report-a-bug.md)
 
 # [Launcher](launcher/index.md)
