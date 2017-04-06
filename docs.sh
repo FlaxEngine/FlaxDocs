@@ -77,7 +77,7 @@ update() {
 	git reset --hard origin/master
 	git pull origin master
 	
-	chmod +x docs
+	chmod +x docs.sh
 	chmod +x serve.sh
 	
 	update_api
