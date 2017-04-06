@@ -26,7 +26,7 @@ start() {
 	#	return 1
 	#fi
 	echo 'Starting service...'
-	screen -d -m -S "flaxdocs" ".$(dirname "$0")/serveDocs.sh"
+	screen -d -m -S "flaxdocs" ".$(dirname "$0")/serve.sh"
 	#if isRunning; then
 		echo 'Service started'
 	#else
