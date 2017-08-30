@@ -122,12 +122,12 @@ case "$1" in
 	refresh)
 		
 		# Optional refresh
-		docs.sh stop
-		docs.sh update
+		./docs.sh stop
+		./docs.sh update
 		rm -rf _site
 		rm -rf api
 		unzip -o Docs.zip
-		docs.sh start
+		./docs.sh start
 		
 		#stop
 		#update
