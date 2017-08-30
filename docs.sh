@@ -120,10 +120,19 @@ case "$1" in
 		update
 	;;
 	refresh)
-		stop
-		update
-		build
-		start
+		
+		# Optional refresh
+		docs.sh stop
+		docs.sh update
+		rm -rf _site
+		rm -rf api
+		unzip -o Docs.zip
+		docs.sh start
+		
+		#stop
+		#update
+		#build
+		#start
 	;;
 	*)
 		echo "Usage: $0 {start|stop|status|restart|build|update|refresh}"
