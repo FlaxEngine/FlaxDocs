@@ -5,5 +5,5 @@ ___
 ___
 
 temporary links:
-- [Manual](manual/index.html)
-- [API](api/index.html)
+- [Manual](manual/index.md)
+- [API](api/index.md)
