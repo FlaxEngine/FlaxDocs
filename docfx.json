@@ -27,8 +27,10 @@
       },
       {
         "files": [
-          "manual/**.md", "manual/**/toc.yml",
-		  "api/*.md", "api/*.yml",
+		  "manual/**/*.md",
+		  "manual/**/toc.yml",
+		  "api/*.md",
+		  "api/*.yml",
           "toc.yml",
           "*.md"
         ],
@@ -41,7 +43,13 @@
     "resource": [
       {
         "files": [
-          "media/**",
+		  "**/media/**/*.png", 
+		  "**/media/**/*.jpg", 
+		  "**/media/**/*.gif", 
+		  "**/media/**/*.mp4", 
+		  "**/media/**/*.zip", 
+		  "**/media/**/*.svg",
+		  "**/media/**/*.cs"
         ],
         "exclude": [
           "obj/**",
@@ -63,7 +71,7 @@
     "dest": "_site",
 	"globalMetadata": {
 		"_appTitle": "Flax Documentation",
-		"_appFooter": "Copyright © 2017 Flax Engine",
+		"_appFooter": "Copyright © 2017-2018 Wojciech Figat",
 		"_enableSearch": true,
 		"_enableNewTab": true,
 		"_disableContribution": false,
