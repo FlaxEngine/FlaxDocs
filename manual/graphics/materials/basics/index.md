@@ -12,13 +12,13 @@
 
 3. Select option *New* -> *Material*
 
-![Creating new material](../media/new-material.jpg)
+    ![Creating new material](../media/new-material.jpg)
 
 4. Specify new material name and press *Enter*
 
 5. Double click on a material
 
-![Creating new material](../media/my-material.png)
+    ![Creating new material](../media/my-material.png)
 
 6. [Material Editor](../material-editor/index.md) window shows up
 
@@ -37,6 +37,10 @@ To learn more about materials editor you can find documentation in the [Material
 The most common way to supply details to material surfaces is by using **Textures**. In the case of materials, textures are simply images that provide some sort of pixel-based data. This data may be the color of an object, how shiny it is, its transparency, and a variety of other aspects. There is an old-school mode of thought that *texturing* is how you apply color to your game models. While the process of creating textures is still critical, it is important to think of textures as a component of materials, and not as the end result themselves.
 
 A single material may use several different textures for different purposes. For instance, s simple material may have a diffuse color texture, a roughness map and a normal map. 
+
+To use texture in a material, simply drag & drop it from the *Content* window into the material surface. It will automaticly create a proper texture sampling node. Alternativly you can create new *Texture* or *Normal Map* node.
+
+![Sample material](../media/texture-node.png)
 
 To learn more about textures pipeline you can find documentation in the [Textures](../../textures/index.md) section.
 

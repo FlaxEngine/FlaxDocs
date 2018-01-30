@@ -41,7 +41,7 @@ The viewport panel shows the preview of the current material. During editing mat
 
 You can navigate in the viewport by using the **right mouse button** or zoom in/out by pressing right mouse button and using **mouse scroll wheel**.
 
-Like all editor viewport that one also comes up with a *View* widget menu. By pressing that button you can debug material channels or view different debug mode or even change preview camera field of view angle. To lear more about using the editor viewports and related tools please read [debugging tools](../../debugging-tools/index.md) page.
+Like all viewports in editor, this one also comes up with a *View* widget menu. By pressing that button you can debug material channels, preview different view modes or even change camera field of view angle. To learn more about using the editor viewports and related tools please read [debugging tools](../../debugging-tools/index.md) page.
 
 ## Properties panel
 

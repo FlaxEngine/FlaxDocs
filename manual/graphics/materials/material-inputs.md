@@ -50,7 +50,7 @@ The default value is 0.4.
 
 ## Ambient Occlusion
 
-The **Ambient Occlusion** input helps with simulating the self=shadowing effect that happens within certain surface types. Generally, this input will be connected to an AO map of some type, which is often created within 3D modeling packages such as *Maya*, *3ds Max*, or *ZBrush*.
+The **Ambient Occlusion** input helps with simulating the self-shadowing effect that happens within certain surface types. Generally, this input will be connected to an AO map of some type, which is often created within 3D modeling packages such as *Maya*, *3ds Max*, or *ZBrush*.
 The default value is 1.0.
 
 ![Material Ambient Occlusion](media/material-ao.png)
