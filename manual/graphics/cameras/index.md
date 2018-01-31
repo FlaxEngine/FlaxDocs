@@ -1,6 +1,6 @@
 # Cameras
 
-![Camera](../media/camera.png)
+![Camera](media/camera.png)
 
 **Camera** captures the scene and displays it to the user. It defines a view in screen space. Camera's position and rotaton define the *viewport* and *view direction*. Those properties are used to render scene objects and preent them to the user.
 
@@ -11,7 +11,7 @@ Flax Engine allows to create unlimited amount of cameras in scene while the [mai
 In the *Scene* tree window, right-click and select **New -> Camera**.
 Editor will create new Camera actor with default properties.
 
-![New Camera](../media/new-cam.jpg)
+![New Camera](media/new-cam.jpg)
 
 ## Creating camera in script
 
@@ -33,7 +33,7 @@ To learn more about the C# scripting API see [Camera](http://docs.flaxengine.com
 
 ## Camera properties
 
-![Camera Propertiess](../media/camera-properties.png)
+![Camera Propertiess](media/camera-properties.png)
 
 | Property | Description |
 |--------|--------|
@@ -58,7 +58,7 @@ If camera has checked value **Use Perspective**, then it will use perspective pr
 
 | Field of view: 50 | Field of view: 80 |
 |--------|--------|
-| ![Field of View 50](../media/fov_1.png) | ![Field of View 80](../media/fov_2.png) |
+| ![Field of View 50](media/fov_1.png) | ![Field of View 80](media/fov_2.png) |
 
 ## Orthographic scale (orthographic mode only)
 
@@ -66,7 +66,7 @@ If camera has unchecked value **Use Perspective**, then it will use orthographic
 
 | Orthographic scale: 0.3 | Orthographic scale: 1 |
 |--------|--------|
-| ![Field of View 50](../media/ortho_scale_1.png) | ![Field of View 80](../media/ortho_scale_2.png) |
+| ![Field of View 50](media/ortho_scale_1.png) | ![Field of View 80](media/ortho_scale_2.png) |
 
 ## Near and far planes
 
@@ -78,7 +78,7 @@ Adjusting near and far planes affects rendering precision and scene depth qualit
 
 | Near plane: 300 | Far plane: 800 |
 |--------|--------|
-| ![Field of View 50](../media/nearFar_1.png) | ![Field of View 80](../media/nearFar_2.png) |
+| ![Field of View 50](media/nearFar_1.png) | ![Field of View 80](media/nearFar_2.png) |
 
 ## Render a camera to a texture
 

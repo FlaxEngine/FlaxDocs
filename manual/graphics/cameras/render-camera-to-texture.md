@@ -4,7 +4,7 @@ Flax Engine offers very wide range of customization that can be made to extend t
 
 In this tutorial you will learn how to achive picture-in-picture effect:
 
-![Render to Texture](../media/picture-in-picture.png)
+![Render to Texture](media/picture-in-picture.png)
 
 ## Creating material
 
@@ -13,18 +13,18 @@ The first step is to create a dedicated material for the TV object. It will be u
 1. Create new empty material, and name it `TV Material` (see [Materials Basics](../materials/basics/index.md) page to learn how to do it)
 
 2. Open it in Material Editor (double-click on an asset)
-   ![Material Editor](../media/picture-in-picture-2.jpg)
+   ![Material Editor](media/picture-in-picture-2.jpg)
 
 3. Scroll down the *Properties Panel*, select **Render Target** option from the bottom drop down menu and press **Add parameter** button
-   <br>![Material Parameter](../media/picture-in-picture-3.jpg)
+   <br>![Material Parameter](media/picture-in-picture-3.jpg)
 
 4. Right-click on created *New parameter*, select option **Rename** and set its name to **Image**
 
 5. Right-click on a Surface background and create **Get Parameter** node (to learn more about creating nodes see [Material Editor](../materials/material-editor/index.md) page)
-   ![Material Get Parameter](../media/picture-in-picture-4.jpg)
+   ![Material Get Parameter](media/picture-in-picture-4.jpg)
 
 6. Select **Image** parameter from the dropdown menu of that node and connect it's **Color** box with Material **Emissive** input.
-   <br>![Material Parameter Usage](../media/picture-in-picture-5.jpg)
+   <br>![Material Parameter Usage](media/picture-in-picture-5.jpg)
 
 7. **Save** the material asset
 
@@ -33,7 +33,7 @@ The first step is to create a dedicated material for the TV object. It will be u
 Now it's time to write a simple script that will use a camera and render it to the texture (which is also called a *render target*).
 
 1. Navigate to *Source* directory of your project and create new C# script with name **CameraTV**
-   ![Creating new Script](../media/picture-in-picture-6.jpg)
+   ![Creating new Script](media/picture-in-picture-6.jpg)
 
 2. Open the script
 
@@ -133,13 +133,13 @@ The final step is to set up a scene and link all this stuff together.
 
 1. Create new **Camera** object and place it in your scene
 2. Add object that will present a camera image. You can use **Cube** model from the *Toolbox* window
-   ![Tutorial](../media/picture-in-picture-7.jpg)
+   ![Tutorial](media/picture-in-picture-7.jpg)
 
 3. Select spawned object and add **CameraTV** script to it by simply draging it
-   ![Tutorial](../media/picture-in-picture-8.jpg)
+   ![Tutorial](media/picture-in-picture-8.jpg)
 
 4. Set reference to the camera and material for script properties **Cam** and **Material**. You can also adjust the resolution (in pixels).
-   <br>![Tutorial ](../media/picture-in-picture-9.jpg)
+   <br>![Tutorial ](media/picture-in-picture-9.jpg)
 
 5. Hit **Play** and see the results!
-   ![Tutorial ](../media/picture-in-picture-10.jpg)
+   ![Tutorial ](media/picture-in-picture-10.jpg)
