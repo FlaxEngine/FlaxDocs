@@ -119,20 +119,20 @@ case "$1" in
 	update)
 		update
 	;;
+	rebuild)
+		stop
+		update
+		build
+		start
+	;;
 	refresh)
-		
-		# Optional refresh
+		# Uses prebuilded site from Docs.zip (archive with _site and api folders)
 		./docs.sh stop
 		./docs.sh update
 		rm -rf _site
 		rm -rf api
 		unzip -o Docs.zip
 		./docs.sh start
-		
-		#stop
-		#update
-		#build
-		#start
 	;;
 	*)
 		echo "Usage: $0 {start|stop|status|restart|build|update|refresh}"
