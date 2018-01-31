@@ -35,7 +35,7 @@ This page breaks down all the available material properties. These options are a
 |--------|--------|
 | **Disable Depth Write** | If checked, disables depth buffer write when rendering material.|
 | **Mask Threshold** | Controls mask values clipping point. |
-| **PostFx Location** | Specifies when render post material. Applies only to materials with *Domain* set to *Post Process*. is going to be used. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**After Post Processing Pass**</td><td>Render material after post processing pass using *LDR* input frame.</td></tr><tr><td>**Before Post Processing Pass**</td><td>Render material before post processing pass using *HDR* input frame.</td></tr><tr><td>**Before Forward Pass**</td><td>Render material before forward pass but after *GBuffer* with *HDR* input frame.</td></tr><tr><td>**After Custom Post Effects**</td><td>Render material after custom post effects (scripted).</td></tr></tbody></table>|
+| **PostFx Location** | Specifies when render post effect material. Applies only to materials with *Domain* set to *Post Process*. is going to be used. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**After Post Processing Pass**</td><td>Render material after post processing pass using *LDR* input frame.</td></tr><tr><td>**Before Post Processing Pass**</td><td>Render material before post processing pass using *HDR* input frame.</td></tr><tr><td>**Before Forward Pass**</td><td>Render material before forward pass but after *GBuffer* with *HDR* input frame.</td></tr><tr><td>**After Custom Post Effects**</td><td>Render material after custom post effects (scripted).</td></tr></tbody></table>|
 
 ## Parameters
 
