@@ -28,6 +28,8 @@
 ### [Layered Materials](graphics/materials/layered-materials/index.md)
 ### [Instanced Materials](graphics/materials/instanced-materials/index.md)
 ## [Textures](graphics/textures/index.md)
+### [Texture Window](graphics/textures/texture-window.md)
+### [Texture Import Settings](graphics/textures/import-settings.md)
 ## [Models](graphics/models/index.md)
 ## [Lighting](graphics/lighting/index.md)
 ## [Fog effects](graphics/fog-effects/index.md)
