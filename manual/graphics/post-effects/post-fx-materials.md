@@ -28,7 +28,7 @@ Use the following tutorial steps to create simple distortion with coloring effec
     ![PostFx Material Tutorial](media/post-fx-material-tutorial-3.jpg)
 
 6. Material is ready!
-    ![PostFx Material Tutorial](media/post-fx-material-tutorial-4.jpg)
+    <br>![PostFx Material Tutorial](media/post-fx-material-tutorial-4.jpg)
 
 ## Applying a post process material
 
