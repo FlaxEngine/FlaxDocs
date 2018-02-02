@@ -2,7 +2,7 @@
 
 ![IES Light Profiles](media/ies_profiles_sample.png)
 
-**IES Profiles** are assets that contain information about light intensity of the light build around the arc. They are used to simulate real-life lights emission properties. Using IES Profiles for [Point Lights](light-types/point-light.md) and [Spot Lights](light-types/spot-light.mod) adds more realism and highly recommended for architectural visualizations.
+**IES Profiles** are assets that contain information about light intensity of the light build around the arc. They are used to simulate real-life lights emission properties. Using IES Profiles for [Point Lights](light-types/point-light.md) and [Spot Lights](light-types/spot-light.md) adds more realism and highly recommended for architectural visualizations.
 
 ## Importing IES Profiles
 

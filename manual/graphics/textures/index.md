@@ -8,7 +8,7 @@ For example, texture can contain color information or material roughness variati
 
 Textures can be also used outside the materials. For instance in UI or via direct CPU calculations. For more information about the C# scripting see [Texture](http://docs.flaxengine.com/api/FlaxEngine.Texture.html) class page in the C# API documentation.
 
-## Supported file type
+## Supported file types
 
 Flax Engine supports importing the following list of file types as textures:
 - `.png`
