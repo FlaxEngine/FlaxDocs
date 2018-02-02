@@ -30,6 +30,7 @@
 ## [Textures](graphics/textures/index.md)
 ### [Texture Window](graphics/textures/texture-window.md)
 ### [Texture Import Settings](graphics/textures/import-settings.md)
+### [Cube Textures](graphics/textures/cube-textures.md)
 ## [Models](graphics/models/index.md)
 ## [Lighting](graphics/lighting/index.md)
 ### [Light Types](graphics/lighting/light-types/index.md)

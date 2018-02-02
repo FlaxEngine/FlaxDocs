@@ -23,6 +23,9 @@ Flax Engine supports importing the following list of file types as textures:
 > [!Note]
 > Flax imports only the first frame of animated image files, such as animated gifs or PNGs. They don't animate in Flax; they appear as static images.
 
+> [!Note]
+> For documentation related to cube textures check out [this page](cube-textures.md).
+
 ## Importing a texture
 
 The easiest way to import one or more textures is to drag them from *Explorer* to the *Content* window.
