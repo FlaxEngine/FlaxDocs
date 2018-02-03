@@ -50,6 +50,7 @@
 #### [Lightmapping](graphics/lighting/gi/lightmapping.md)
 #### [Lightmap Settings](graphics/lighting/gi/settings.md)
 ## [Fog effects](graphics/fog-effects/index.md)
+### [Volumetric Fog](graphics/fog-effects/volumetric-fog.md)
 ## [Post effects](graphics/post-effects/index.md)
 ### [Ambient Occlusion](graphics/post-effects/ambient-occlusion.md)
 ### [Anti-Aliasing](graphics/post-effects/anti-aliasing.md)
@@ -64,12 +65,15 @@
 ### [PostFx Volumes](graphics/post-effects/post-fx-volumes.md)
 ### [Post Process Materials](graphics/post-effects/post-fx-materials.md)
 ## [Debugging tools](graphics/debugging-tools/index.md)
+### [Profiler](graphics/debugging-tools/profiler/index.md)
+### [Debug View](graphics/debugging-tools/debug-view.md)
+### [View Flags](graphics/debugging-tools/view-flags.md)
 
 # [Scripting](scripting/index.md)
 
-# [Animation](animation/index.md)
+<!--# [Animation](animation/index.md)-->
 
-# [Particles](particles/index.md)
+<!--# [Particles](particles/index.md)-->
 
 # [UI](ui/index.md)
 
@@ -77,15 +81,15 @@
 
 # [Physics](physics/index.md)
 
-# [Navigation](navigation/index.md)
+<!--# [Navigation](navigation/index.md)-->
 
-# [Audio](audio/index.md)
+<!--# [Audio](audio/index.md)-->
 
-# [Networking](networking/index.md)
+<!--# [Networking](networking/index.md)-->
 
 # [Platforms](platforms/index.md)
 
-# [Virtual Reality](virtual-reality/index.md)
+<!--# [Virtual Reality](virtual-reality/index.md)-->
 
 # [Contributing](contributing/index.md)
 ## [Feature Requests](contributing/feature-requests.md)
