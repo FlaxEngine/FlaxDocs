@@ -91,6 +91,8 @@ build() {
 	echo "Building site..."
 	mono docfx/docfx.exe build
 	cp favicon.ico _site/favicon.ico
+	cp logo.svg _site/logo.svg
+	cp logo.png _site/logo.png
 	
 	echo "Done!"
 }
