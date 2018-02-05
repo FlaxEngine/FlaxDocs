@@ -83,9 +83,10 @@
     },
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
-    "template": [
-      "default"
-    ],
+	"template": [
+		"default",
+		"template"
+	],
     "postProcessors": [],
     "noLangKeyword": false
   }
