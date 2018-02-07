@@ -15,6 +15,8 @@
 # [Samples and Tutorials](samples-tutorials/index.md)
 
 # [Editor](editor/index.md)
+## [Game Settings](editor/game-settings/index.md)
+## [Game Cooker](editor/game-cooker/index.md)
 
 # [Graphics](graphics/index.md)
 ## [Rendering overview](graphics/overview/index.md)
