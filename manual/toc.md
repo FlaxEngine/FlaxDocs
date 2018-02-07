@@ -74,6 +74,26 @@
 ### [View Flags](graphics/debugging-tools/view-flags.md)
 
 # [Scripting](scripting/index.md)
+## [Create and use a script](scripting/new-script.md)
+## [Script properties and fields](scripting/properties.md)
+## [Script events](scripting/events.md)
+## [Accessing scene objects](scripting/scene-objects.md)
+## [Creating and destroying objects](scripting/objects-lifetime.md)
+## [Attributes](scripting/attributes.md)
+## [Scripts debugging](scripting/debugging/index.md)
+### [Visual Studio](scripting/debugging/visual-studio.md)
+### [Mono Develop](scripting/debugging/mono-develop.md)
+## [Scripts serialization](scripting/serialization/index.md)
+## [Custom Editors](scripting/custom-editors/index.md)
+### [Custom script editor](scripting/custom-editors/example.md)
+### [Attributes](scripting/custom-editors/attributes.md)
+## [Preprocessor variables](scripting/preprocessor.md)
+## [Scripting restrictions](scripting/restrictions.md)
+## [Tutorials](scripting/tutorials/index.md)
+### [How to create a custom editor](scripting/tutorials/custom-editor.md)
+### [How to create a custom editor window](scripting/tutorials/custom-window.md)
+### [How to create a custom editor plugin](scripting/tutorials/custom-plugin.md)
+### [How to create a custom asset type](scripting/tutorials/custom-asset.md)
 
 <!--# [Animation](animation/index.md)-->
 
