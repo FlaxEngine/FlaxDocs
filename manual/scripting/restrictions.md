@@ -1,0 +1,3 @@
+# Scripting restrictions
+
+TODO
