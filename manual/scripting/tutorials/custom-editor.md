@@ -1,4 +1,4 @@
-# HOWTO: Render create a custom editor
+# HOWTO: Create a custom editor
 
 In this tutorial you will learn how to create a simple custom editor for the script. To learn more about Cutom Editors pipeline see related documentation [page here](../custom-editors/index.md).
 

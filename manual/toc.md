@@ -87,7 +87,7 @@
 ### [Mono Develop](scripting/debugging/mono-develop.md)
 ## [Scripts serialization](scripting/serialization/index.md)
 ## [Custom Editors](scripting/custom-editors/index.md)
-### [Custom script editor](scripting/custom-editors/example.md)
+### [Custom script editor](scripting/tutorials/custom-editor.md)
 ### [Attributes](scripting/custom-editors/attributes.md)
 ## [Preprocessor variables](scripting/preprocessor.md)
 ## [Scripting restrictions](scripting/restrictions.md)

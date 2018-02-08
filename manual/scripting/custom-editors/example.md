@@ -1,3 +1,0 @@
-# Custom script editor
-
-TODO

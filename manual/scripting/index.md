@@ -23,7 +23,7 @@ If you need help with learning C# see [this page](http://www.letmegooglethat.com
  * [Mono Develop](debugging/mono-develop.md)
 * [Scripts serialization](serialization/index.md)
 * [Custom Editors](custom-editors/index.md)
- * [Custom script editor](custom-editors/example.md)
+ * [Custom script editor](tutorials/custom-editor.md)
  * [Attributes](custom-editors/attributes.md)
 * [Preprocessor variables](preprocessor.md)
 * [Scripting restrictions](restrictions.md)

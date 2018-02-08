@@ -1,4 +1,4 @@
-# HOWTO: Render create a custom editor window
+# HOWTO: Create a custom editor window
 
 In this tutorial you will learn how to extend the Flax Editor by creating a fully customized tool window.
 

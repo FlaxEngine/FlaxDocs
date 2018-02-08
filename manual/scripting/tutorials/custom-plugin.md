@@ -1,3 +1,3 @@
-# HOWTO: Render create a custom editor plugin
+# HOWTO: Create a custom editor plugin
 
 TODO
