@@ -11,5 +11,3 @@ Then you can preview the output in *Debug* window.
 
 **The best way to debug you code is to use an IDE** such as Visual Studio. See the dedicated documentation:
 * [Visual Studio](visual-studio.md)
-* [Mono Develop](mono-develop.md)
-
