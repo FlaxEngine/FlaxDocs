@@ -84,7 +84,6 @@
 ## [Attributes](scripting/attributes.md)
 ## [Scripts debugging](scripting/debugging/index.md)
 ### [Visual Studio](scripting/debugging/visual-studio.md)
-### [Mono Develop](scripting/debugging/mono-develop.md)
 ## [Scripts serialization](scripting/serialization/index.md)
 ## [Custom Editors](scripting/custom-editors/index.md)
 ### [Custom script editor](scripting/tutorials/custom-editor.md)

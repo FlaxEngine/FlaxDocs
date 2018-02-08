@@ -20,7 +20,6 @@ If you need help with learning C# see [this page](http://www.letmegooglethat.com
 * [Attributes](attributes.md)
 * [Scripts debugging](debugging/index.md)
  * [Visual Studio](debugging/visual-studio.md)
- * [Mono Develop](debugging/mono-develop.md)
 * [Scripts serialization](serialization/index.md)
 * [Custom Editors](custom-editors/index.md)
  * [Custom script editor](tutorials/custom-editor.md)
