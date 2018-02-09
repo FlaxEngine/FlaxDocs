@@ -113,6 +113,9 @@
 <!--# [Networking](networking/index.md)-->
 
 # [Platforms](platforms/index.md)
+## [Windows](platforms/windows.md)
+## [UWP](platforms/uwp.md)
+## [Xbox One](platforms/xbox-one.md)
 
 <!--# [Virtual Reality](virtual-reality/index.md)-->
 
