@@ -103,6 +103,11 @@
 # [UI](ui/index.md)
 
 # [Input](input/index.md)
+## [Virtual Input](input/virtual-input.md)
+## [Input Settings](input/input-settings.md)
+## [Mouse](input/mouse.md)
+## [Keyboard](input/keyboard.md)
+## [Gamepads](input/gamepads.md)
 
 # [Physics](physics/index.md)
 
