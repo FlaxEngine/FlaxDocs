@@ -6,7 +6,7 @@ In this tutorial you will learn how to create and use a box trigger to switch th
 
 See [Triggers](../triggers.md) page to learn more about triggers.
 
-### 1. Create a light
+## 1. Create a light
 
 Firstly we need to spawn a point light (it can be other type of light) and place it somewhere in the level near the trigger. So player can see the light color change.
 
@@ -24,9 +24,9 @@ Created Box Collider will block objects and generate collisions. We want to just
 
 ![Is Trigger](../media/set-trigger.jpg)
 
-### 4. Create a script
+## 4. Create a script
 
-Next step is to write a C# script (name it `TriggerSample`). It will handle the trigger event and implement the desired logic. To learn more about creating scripts see [this page](../../scripting/new-script.html).
+Next step is to write a C# script (name it `TriggerSample`). It will handle the trigger event and implement the desired logic. To learn more about creating scripts see [this page](../../scripting/new-script.md).
 
 ```cs
 public class TriggerSample : Script
@@ -74,14 +74,14 @@ public class TriggerSample : Script
 }
 ```
 
-### 5. Setup a script
+## 5. Setup a script
 
 Add a script to the created Box Collider and attach a reference to the light (edit **LightToControl** property).
 You can also test if it works by using the **LightOn** checkbox.
 
 ![Setup a Script](media/setup-scripttrigger-3.jpg)
 
-### 6. Test it out!
+## 6. Test it out!
 
 Hit **Play** button and enter you player character right into the trigger to see the light changing its color.
 
