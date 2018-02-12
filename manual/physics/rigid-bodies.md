@@ -31,7 +31,7 @@ Destroy(ball, 5.0f);
 
 | Property | Description |
 |--------|--------|
-| **Is Kinematic** | If checked, enables kinematic mode for the rigidbody. See [Kinematic rigidbodies](rigid-bodies.html#kinematic-rigidbodies) section down below. |
+| **Is Kinematic** | If checked, enables kinematic mode for the rigidbody. See [Kinematic rigidbodies](rigid-bodies.md#kinematic-rigidbodies) section down below. |
 | **Enable Simulation** | If checked, simulation and collisions detection will be enabled for the rigidbody. |
 | **Use CCD** | If checked, Continuous Collision Detection (CCD) will be used for this object. |
 | **Enable Gravity** | If checked, object should have the force of gravity applied. |
