@@ -1,9 +1,20 @@
 # Flax Engine Documentation
 
-___
-// TODO: finish landing page
-___
+<hr>
+<div class="frontpage">
 
-temporary links:
-- [Manual](manual/index.md)
-- [API](api/index.md)
+<div class="frontpage-section">
+<a href="manual/index.md"><img src="manual/physics/media/icon.jpg"></a>
+<h3><a href="manual/index.md">Manual</a></h3>
+<p>Learn how to create games with Flax Engine!</p>
+</div>
+
+<div class="frontpage-section">
+<a href="api/index.md"><img src="media/api-icon.jpg"></a>
+<h3><a href="api/index.md">C# API</a></h3>
+<p>Full C# scripting API reference.</p>
+</div>
+
+</div>
+
+

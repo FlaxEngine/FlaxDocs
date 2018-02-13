@@ -1,5 +1,43 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");
 
+/* Docs pages
+   ------------------------------------------------------- */
+
+div.frontpage {
+}
+div.frontpage:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+div.frontpage-section {
+  width: 254px; height: 220px; float: left; margin: 0 15px 0 0; display: inline;
+}
+div.frontpage-section img {
+  width: 254px; height: 120px; margin: 0 0 10px 0; -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3); -moz-box-shadow: 0 0 10px rgba(0,0,0,0.3); box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+div.frontpage-section img:hover {
+  -webkit-box-shadow: 0 0 12px rgba(0,0,0,0.7); -moz-box-shadow: 0 0 12px rgba(0,0,0,0.7); box-shadow: 0 0 12px rgba(0,0,0,0.7);
+}
+div.frontpage-section h3 {
+  margin: 0 0 10px 0;
+}
+div.frontpage-section h3 a {
+  color: #555;
+}
+div.frontpage-topsection {
+  width: 330px; height: 182px; float: left; margin: 0 15px 0 0; display: inline;
+}
+div.frontpage-topsection h3 {
+  margin: 0 0 10px 0;
+}
+div.frontpage-topsection h3 a {
+  color: #555;
+}
+
+/* Template
+   ------------------------------------------------------- */
+   
 .navbar-brand {
 	display: block;
 	margin-left: auto;
