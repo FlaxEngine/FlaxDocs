@@ -11,6 +11,6 @@ _tocTitle: 'API'
 That section of documentation contains pages with information about the Flax scripting API, grouped by namespace.
 
 To use this section, you should be familiar with C# scripting.
-We also recommend using Visual Studio 2015.
+We also recommend using *Visual Studio 2017* with [Flax Engine Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=Flax.FlaxVS) extension installed.
 
 For information about scripting, see the [Scripting](/manual/scripting/index.html) pages in the manual.
