@@ -17,6 +17,8 @@
 ### [World Units](get-started/scenes/world-units.md)
 ### [Scene Data](get-started/scenes/scene-data.md)
 ## [Assets](get-started/assets/index.md)
+### [Creating Assets](get-started/assets/creating-assets.md)
+### [Using Assets](get-started/assets/using-assets.md)
 ## [Project structure](get-started/project-structure.md)
 ### [Version control](get-started/version-control.md)
 ### [Distribute a game](get-started/distribute-a-game.md)
