@@ -12,7 +12,7 @@ All commercial games made using Flax Engine must to follow various guidelines. I
 
 ## 3. Build a game
 
-Now prepare the final build. Remember to use **Release** mode and remove any debug/testing code sections with [preprocessor variables](../scripting/preprocessor.html). Use [Game Cooker](../editor/game-cooker/index.md) tool to generate the game files for a target platform.
+Now prepare the final build. Remember to use **Release** mode and remove any debug/testing code sections with [preprocessor variables](../scripting/preprocessor.md). Use [Game Cooker](../editor/game-cooker/index.md) tool to generate the game files for a target platform.
 
 ![Game Cooker](media/build-release.jpg)
 

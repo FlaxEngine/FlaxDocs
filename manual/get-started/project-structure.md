@@ -31,6 +31,7 @@ Flax Editor can load project located in any place on your drive. It's only requi
 * **&lt;root&gt;**
  * **Cache** - editor local cache folder, used for thumbnails, game cooker cache and other temporary files
  * **Content** - contains all the game assets (models, textures, settings, etc.)
+   * **SceneData** - dedicated directory for the [private scene assets](scenes/scene-data.md)
    * **GameSettings.json** - fixed location for the game settings asset
  * **Logs** - contains editor log files
  * **Screenshots** - contains screenshot files (`.png` format) you took in editor (use `F12` key)
