@@ -46,7 +46,7 @@ See [Flax projects structure](../project-structure.md) page to learn more about 
 
 ## Assets
 
-Flax doesn't use `.meta` files. Instead of it, every assets contains all required metadata information and is self contained file. Files with extension `.flax` are using our own binary format. Other assets are usually stored in json format (scenes, settings, etc.).
+Flax doesn't use `.meta` files. Instead of it, every asset contains all required metadata information and is self contained file. Files with extension `.flax` are using our own binary format that is well optimized for scalability and streaming. Other assets are usually stored in json format (scenes, settings, etc.).
 
 Flax supports the most popular asset files formats (for 3D models and textures) so you can import you game content.
 
