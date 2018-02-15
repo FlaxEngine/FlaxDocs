@@ -16,7 +16,7 @@ Flax Editor and Unreal Editor are very similar. You can see the color-coded, hig
 ![Flax Editor](../media/flax-layout.png)
 
 > [!TIP]
-> With Flax Editor you don't have to wait for 15 minutes before the project opens like in UE4. We worry about your time.
+> With Flax Editor, you don't have to wait for 15 minutes before the project opens like in UE4. We are sorry that you had to waste so much time.
 
 ## Terminology
 
@@ -64,7 +64,7 @@ In Flax, Scene object is also an Actor so you can access it like any other Actor
 When it comes to game scripting, there is a significant difference between Unreal and Flax.
 Firstly, we use C# language to write game code (instead of C\+\+).
 Using C# helps with rapid game development and simplifies the development.
-Flax Engine is written in C++ so no worry about the performance.
+Flax Engine is written in C++ so you don't have to worry about the performance.
 
 You can create C# files with script classes that provide a gameplay logic. Then scripts can be attached to the actors and used in a game. Our scripting C# API is an open-source project and can be found [here](https://github.com/FlaxEngine/FlaxAPI). Any contributions are welcome.
 
