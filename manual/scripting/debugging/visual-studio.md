@@ -1,5 +1,7 @@
 # Visual Studio
 
+![Visual Studio Extension](../../get-started/media/vs.jpg)
+
 You can download Visual Studio [here](https://www.visualstudio.com).
 
 ### 1. Install Visual Studio plugin

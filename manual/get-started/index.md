@@ -1,3 +1,72 @@
-# Let's get started!
+# Get started with Flax
 
-// TODO: add doc
+![Flax Engine Logo](media/flax-title.jpg)
+
+Welcome to the official Flax Engine Manual! In this section you will find everything you need to start creating games with Flax from scratch. Let's get started!
+
+## The first steps
+
+<div class="frontpage">
+
+<div class="frontpage-section">
+<a href="install.md"><img src="../../media/dummy-icon.jpg"></a>
+<h3><a href="install.md">Install Flax</a></h3>
+<p>Download and install Flax.</p>
+</div>
+
+<div class="frontpage-section">
+<a href="launch.md"><img src="../../media/dummy-icon.jpg"></a>
+<h3><a href="launch.md">Launch Flax</a></h3>
+<p>Start using the Flax Launcher.</p>
+</div>
+
+<div class="frontpage-section">
+<a href="create-a-project.md"><img src="../../media/dummy-icon.jpg"></a>
+<h3><a href="create-a-project.md">Create a project</a></h3>
+<p>Create your very first Flax game project.</p>
+</div>
+
+</div>
+
+## Learn the basics
+
+<div class="frontpage">
+
+<div class="frontpage-section">
+<a href="editor.md"><img src="../editor/media/icon.jpg"></a>
+<h3><a href="editor.md">Editor</a></h3>
+<p>Learn how to work with Flax Editor.</p>
+</div>
+
+<div class="frontpage-section">
+<a href="scenes/index.md"><img src="scenes/media/icon.jpg"></a>
+<h3><a href="scenes/index.md">Scenes</a></h3>
+<p>Create levels for your game.</p>
+</div>
+
+<div class="frontpage-section">
+<a href="assets/index.md"><img src="assets/media/icon.jpg"></a>
+<h3><a href="assets/index.md">Assets</a></h3>
+<p>Start creating content.</p>
+</div>
+
+<div class="frontpage-section">
+<a href="project-structure.md"><img src="media/project-structure-icon.jpg"></a>
+<h3><a href="project-structure.md">Project structure</a></h3>
+<p>Learn about Flax projects structure.</p>
+</div>
+
+<div class="frontpage-section">
+<a href="vs-extension.md"><img src="media/vs-icon.jpg"></a>
+<h3><a href="vs-extension.md">Visual Studio extension</a></h3>
+<p>Install our plugin for Visual Studio for programmers.</p>
+</div>
+
+<div class="frontpage-section">
+<a href="glossary.md"><img src="media/glossary-icon.jpg"></a>
+<h3><a href="glossary.md">Glossary</a></h3>
+<p>See the most common terms used in Flax Engine.</p>
+</div>
+
+</div>
+
