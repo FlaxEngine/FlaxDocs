@@ -1,3 +1,7 @@
 # Advanced Topics
 
-TODO
+This section contains more advanced topic about games development with Flax Engine.
+
+* [Extending Flax Editor](extending-editor.md)
+* [Command Line Access](command-line-access.md)
+
