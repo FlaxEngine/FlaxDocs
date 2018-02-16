@@ -27,10 +27,17 @@
 
 # [Editor](editor/index.md)
 ## [Windows](editor/windows/index.md)
+### [Viewport](editor/windows/viewport.md)
+### [Content Window](editor/windows/content-window.md)
+### [Properties Window](editor/windows/properties-window.md)
+### [Scene Window](editor/windows/scene-window.md)
+### [Toolbar](editor/windows/toolbox.md)
+### [Toolbox](editor/windows/toolbar.md)
 ## [Game Settings](editor/game-settings/index.md)
 ## [Game Cooker](editor/game-cooker/index.md)
-## [Extending Flax Editor](editor/extending-editor.md)
-## [Command Line Access](editor/command-line-access.md)
+## [Advanced](editor/advanced/index.md)
+### [Extending Flax Editor](editor/advanced/extending-editor.md)
+### [Command Line Access](editor/advanced/command-line-access.md)
 
 # [Graphics](graphics/index.md)
 ## [Rendering overview](graphics/overview/index.md)
@@ -166,4 +173,4 @@
 ## [Open Source API](contributing/open-source-api.md)
 ## [Report a bug](contributing/report-a-bug.md)
 
-# [Launcher](launcher/index.md)
+<!--# [Launcher](launcher/index.md)-->
