@@ -1,7 +1,7 @@
 # Build Settings
 
 Build settings asset specifies the Game Cooker options and contains set of game building presets.
-For editing and using presets see [Game Cooker window](../game-cooker.md) as it has a better interface to do it.
+For editing and using presets see [Game Cooker window](../game-cooker/index.md) as it has a better interface to do it.
 
 ## Properties
 
