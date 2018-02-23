@@ -24,6 +24,8 @@
 ### [Distribute a game](get-started/distribute-a-game.md)
 
 # [Samples and Tutorials](samples-tutorials/index.md)
+## [Samples](samples-tutorials/samples/index.md)
+## [Tutorials](samples-tutorials/tutorials/index.md)
 
 # [Editor](editor/index.md)
 ## [Windows](editor/windows/index.md)
@@ -125,7 +127,7 @@
 
 <!--# [Particles](particles/index.md)-->
 
-# [UI](ui/index.md)
+<!--# [UI](ui/index.md) -->
 
 # [Input](input/index.md)
 ## [Virtual Input](input/virtual-input.md)
