@@ -109,4 +109,14 @@ This documentation page contains link to all tutorials related to working with a
 <h3><a href="../../physics/joints/index.md">Joints</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="../../audio/audio-source.md"><img src="../../audio/media/autio-source-icon.jpg"></a>
+<h3><a href="../../audio/audio-source.md">Audio Source</a></h3>
+</div>
+
+<div class="frontpage-section">
+<a href="../../audio/audio-listener.md"><img src="../../audio/media/audio-listener-icon.jpg"></a>
+<h3><a href="../../audio/audio-listener.md">Audio Listener</a></h3>
+</div>
+
 </div>

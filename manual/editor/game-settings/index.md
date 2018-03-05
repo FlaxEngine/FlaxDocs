@@ -30,6 +30,7 @@ You can use the *Content* window to create new settings. Simply right-click in t
 | **FirstScene** | Reference to the first scene to load on a game startup. |
 | **Defines** | The custom macros used using scripts compilation. |
 | **Time** | Reference to [Time Settings](time-settings.md) asset. Contains initial time manager options. |
+| **Audio** | Reference to [Audio Settings](../../audio/audio-settings.md) asset. Contains initial audio playback engine options. |
 | **Layers And Tags** | Reference to [Layers And Tags Settings](layers-and-tags-settings.md) asset. Contains actors tags and layer names used in your game. |
 | **Physics** | Reference to [Physics Settings](../../physics/physics-settings.md) asset. Contains physics simulation options. |
 | **Input** | Reference to [Input Settings](../../input/input-settings.md) asset. Contains initial virtual input layout. |

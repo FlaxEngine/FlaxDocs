@@ -28,6 +28,8 @@
 ## [Tutorials](samples-tutorials/tutorials/index.md)
 
 # [Editor](editor/index.md)
+## [Interface](editor/interface.md)
+## [Play in-editor](editor/play-in-editor.md)
 ## [Windows](editor/windows/index.md)
 ### [Viewport](editor/windows/viewport.md)
 ### [Content Window](editor/windows/content-window.md)
@@ -122,6 +124,14 @@
 ### [How to create a custom editor window](scripting/tutorials/custom-window.md)
 ### [How to create a custom editor plugin](scripting/tutorials/custom-plugin.md)
 ### [How to create a custom asset type](scripting/tutorials/custom-asset.md)
+
+# [Audio](audio/index.md)
+## [Importing audio](audio/importing.md)
+## [Using audio](audio/using.md)
+## [Audio Clip](audio/audio-clip.md)
+## [Audio Source](audio/audio-source.md)
+## [Audio Listener](audio/audio-listener.md)
+## [Audio Settings](audio/audio-settings.md)
 
 <!--# [Animation](animation/index.md)-->
 
