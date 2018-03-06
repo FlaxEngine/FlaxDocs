@@ -61,3 +61,7 @@ Flax Editor shows public script properties and fields using a dedicated group (w
 To **remove**, **edit** or **reorder** script use **settings button** which shows a popup with various options.
 
 ![Script settings](media/script-settings.jpg)
+
+You can also easily pick a reference to a script or reorder it. Simply click and drag the **three-bar icon button** as shown on a gif below:
+
+![Reorder Script](media/script-reorder-with-drag.gif)
