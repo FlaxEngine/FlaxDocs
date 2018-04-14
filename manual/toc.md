@@ -125,6 +125,27 @@
 ### [How to create a custom editor plugin](scripting/tutorials/custom-plugin.md)
 ### [How to create a custom asset type](scripting/tutorials/custom-asset.md)
 
+# [Animation](animation/index.md)
+## [Skinned Model](animation/skinned-model/index.md)
+### [Editor Interface](animation/skinned-model/interface.md)
+## [Animation](animation/animation/index.md)
+## [Anim Graph](animation/anim-graph/index.md)
+### [Editor Interface](animation/anim-graph/interface.md)
+### [Graph Parameters](animation/anim-graph/parameters.md)
+## [Animated Model](animation/animated-model.md)
+## [Skeleton Mask](animation/skeleton-mask.md)
+## [Bone Socket](animation/bone-socket.md)
+## [Advanced](animation/advanced/index.md)
+### [Root motion](animation/advanced/root-motion.md)
+### [Bones debugging](animation/advanced/bones-debugging.md)
+## [Tutorials](animation/tutorials/index.md)
+### [How to setup animated model](animation/tutorials/setup-animated-model.md)
+### [How to create Anim Graph](animation/tutorials/create-anim-graph.md)
+### [How to use Anim Graph](animation/tutorials/use-anim-graph.md)
+### [How to change Anim Graph parameter from code](animation/tutorials/change-anim-graph-param.md)
+### [How to blend two animations](animation/tutorials/blend-anims.md)
+### [How to use Skeleton Mask](animation/tutorials/use-skeleton-mask.md)
+
 # [Audio](audio/index.md)
 ## [Importing audio](audio/importing.md)
 ## [Using audio](audio/using.md)
@@ -132,8 +153,6 @@
 ## [Audio Source](audio/audio-source.md)
 ## [Audio Listener](audio/audio-listener.md)
 ## [Audio Settings](audio/audio-settings.md)
-
-<!--# [Animation](animation/index.md)-->
 
 <!--# [Particles](particles/index.md)-->
 

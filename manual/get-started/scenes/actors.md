@@ -119,4 +119,14 @@ This documentation page contains link to all tutorials related to working with a
 <h3><a href="../../audio/audio-listener.md">Audio Listener</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="../../animation/animated-model.md"><img src="../../animation/media/animated-model-icon.jpg"></a>
+<h3><a href="../../animation/animated-model.md">Animated Model</a></h3>
+</div>
+
+<div class="frontpage-section">
+<a href="../../animation/bone-socket.md"><img src="../../animation/media/bone-socket-icon.jpg"></a>
+<h3><a href="../../animation/bone-socket.md">Bone Socket</a></h3>
+</div>
+
 </div>

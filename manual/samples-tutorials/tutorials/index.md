@@ -24,4 +24,10 @@ Use **Ctrl + F** to quickly find what you looking for.
 * [How to use command line](../../editor/advanced/command-line-access.md)
 * [How to use a version control](../../get-started/version-control.md)
 * [How to distribute a game](../../get-started/distribute-a-game.md)
+* [How to setup animated model](../../animation/tutorials/setup-animated-model.md)
+* [How to create Anim Graph](../../animation/tutorials/create-anim-graph.md)
+* [How to use Anim Graph](../../animation/tutorials/use-anim-graph.md)
+* [How to change Anim Graph parameter from code](../../animation/tutorials/change-anim-graph-param.md)
+* [How to blend two animations](../../animation/tutorials/blend-anims.md)
+* [How to use Skeleton Mask](../../animation/tutorials/use-skeleton-mask.md)
 

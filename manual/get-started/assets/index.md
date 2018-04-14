@@ -87,6 +87,26 @@ This section covers the basic principles of working with assets in Flax.
 <h3><a href="../../scripting/tutorials/custom-asset.md">Custom Assets</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="../../animation/skinned-model/index.md"><img src="../../animation/skinned-model/media/icon.jpg"></a>
+<h3><a href="../../animation/skinned-model/index.md">Skinned Model</a></h3>
+</div>
+
+<div class="frontpage-section">
+<a href="../../animation/anim-graph/index.md"><img src="../../animation/anim-graph/media/icon.jpg"></a>
+<h3><a href="../../animation/anim-graph/index.md">Anim Graph</a></h3>
+</div>
+
+<div class="frontpage-section">
+<a href="../../animation/animation/index.md"><img src="../../animation/animation/media/icon.jpg"></a>
+<h3><a href="../../animation/animation/index.md">Animation</a></h3>
+</div>
+
+<div class="frontpage-section">
+<a href="../../animation/skeleton-mask.md"><img src="../../animation/media/skeleton-mask-icon.jpg"></a>
+<h3><a href="../../animation/skeleton-mask.md">Skeleton Mask</a></h3>
+</div>
+
 </div>
 
 
