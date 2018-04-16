@@ -12,7 +12,7 @@ Firstly prepare your Anim Graph asset. To learn how to setup one see the related
 
 ![Anim Graph Add Param](media/add-param-button.jpg)
 
-Now add one or more graph parameter. To do it simply specify the parameter type (with combo box menu) and click the **Add parameter** button. It will add a new parameter. You can rename or remvoe the created parameters by using the dedicated context menu. Simply right click on a parameter name label. You can also specify the default value for the parametrs.
+Now add one or more graph parameter. To do it simply specify the parameter type (with combo box menu) and click the **Add parameter** button. It will add a new parameter. You can rename or remove the created parameters by using the dedicated context menu. Simply right click on a parameter name label. You can also specify the default value for the parametrs.
 
 ![Anim Graph Edit Param](media/anim-param-edit.jpg)
 
