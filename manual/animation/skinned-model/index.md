@@ -36,4 +36,4 @@ To learn more about editing the skinned model properties and exploring it see th
 
 Skinned models are used by the many parts of the animation system.
 The most important usage is to feed the rendering system with the meshes data.
-Also assets like [Anim Graph](../anim-graph/index.md) and [Skeleton Mask](../skeleton-mask.md) are using the skeleton bones structure indiced within the skinned model asset. You can also access the skeleton data via C# scripting API (see [SkinnedModel](fixmeeee) class).
+Also assets like [Anim Graph](../anim-graph/index.md) and [Skeleton Mask](../skeleton-mask.md) are using the skeleton bones structure indiced within the skinned model asset. You can also access the skeleton data via C# scripting API (see [SkinnedModel](https://docs.flaxengine.com/api/FlaxEngine.SkinnedModel.html) class).

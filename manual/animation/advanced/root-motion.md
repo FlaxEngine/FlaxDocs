@@ -22,5 +22,5 @@ In order to use root motion you need to:
 
 You can manually specify the root node for the motion extracting when importing the animation. Use **Root Node Name** field (more info [here](../../graphics/models/import.md)).
 
-If your character uses [Character Controller](../../physics/character-controller.md) or kinematic [rigidbody](../../physics/rigid-bodies.md) you may want to apply the root motion to it instead of to animated model. To do this simply assign the target object to [AnimatedModel.RootMotionTarget](fixmeeeee).
+If your character uses [Character Controller](../../physics/character-controller.md) or kinematic [rigidbody](../../physics/rigid-bodies.md) you may want to apply the root motion to it instead of to animated model. To do this simply assign the target object to [AnimatedModel.RootMotionTarget](https://docs.flaxengine.com/api/FlaxEngine.AnimatedModel.html#FlaxEngine_AnimatedModel_RootMotionTarget).
 

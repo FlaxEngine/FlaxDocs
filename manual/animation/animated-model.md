@@ -13,7 +13,7 @@ To learn how to setup and use the animated model please see the dedicated tutori
 
 ## Scripting
 
-Animated Model actor exposes a rich C# scripting API. You can modify the anim graph instanced parameters values via [AnimatedModel.Parameters](fixmeeee), modify rendered model meshes materials via [AnimatedModel.Entries](fixmeeee), gather the current skeleton bones pose via [AnimatedModel.GetCurrentPose](fixmeeee), or even manually update animation via [AnimatedModel.UpdateAnimation](fixmeeee).
+Animated Model actor exposes a rich C# scripting API. You can modify the anim graph instanced parameters values via [AnimatedModel.Parameters](https://docs.flaxengine.com/api/FlaxEngine.AnimatedModel.html#FlaxEngine_AnimatedModel_Parameters), modify rendered model meshes materials via [AnimatedModel.Entries](https://docs.flaxengine.com/api/FlaxEngine.AnimatedModel.html#FlaxEngine_AnimatedModel_Entries), gather the current skeleton bones pose via [AnimatedModel.GetCurrentPose](https://docs.flaxengine.com/api/FlaxEngine.AnimatedModel.html#FlaxEngine_AnimatedModel_GetCurrentPose_FlaxEngine_AnimatedModel_Pose__), or even manually update animation via [AnimatedModel.UpdateAnimation](https://docs.flaxengine.com/api/FlaxEngine.AnimatedModel.html#FlaxEngine_AnimatedModel_UpdateAnimation).
 
 ## Properties
 
