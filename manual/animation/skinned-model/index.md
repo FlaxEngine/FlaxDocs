@@ -12,7 +12,7 @@ Importing skinned models works in the same way as for other asset types. Simple 
 
 ![Importing Skinned Model](../animation/media/import-animation.jpg)
 
-After choosing the files **Import file settings** dialog shows up. It's used to specify import options per asset. In most cases the default values are fine and you can just press the **Import** button.
+After choosing the files **Import file settings** dialog shows up. It's used to specify import options per asset. In most cases the default values are fine and you can just press the **Import** button. Remember to set the imported model type to **Skinned Model**, otherwise, it will be imported as a static model asset.
 
 > [!Note]
 > Using **Import file settings** dialog you can select more than one asset at once (or use **Ctrl+A** to select all) and specify import options at once.
@@ -22,7 +22,7 @@ Every asset can be reimport (relative path to the source file is cached) and imp
 To learn more about **Import Options** see [Models Importing page](../../graphics/models/import.md).
 
 > [!Note]
-> Flax during importing separates the skeleton bones (used for the skinning) and the skeleton nodes hierarchy dur to performance reasons (there is less bones that are used for rendering). If your model used a sockets or any dedicated nodes they may be lost. However, it's better to use the Bone Socket actor in Flax.
+> Flax during importing separates the skeleton bones (used for the skinning) and the skeleton nodes hierarchy due to performance reasons (there are fewer bones that are used for rendering). If your model used sockets or any dedicated nodes they may be lost. However, it's better to use the Bone Socket actor in Flax.
 
 ## Editing skinned model
 
