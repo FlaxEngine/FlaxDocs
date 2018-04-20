@@ -52,7 +52,7 @@ See [Assets](../assets/index.md) page to learn more about importing and using ga
 
 ## Scenes and Actors
 
-Flax doesn't use components to build scene objects logic. We only use [Actors](../scenes/actors.md). Each Actor has own type (e.g. point light, box collider) and collection of attached scripts. This means, in Flax the scene object hierarchy is created with Actors.
+Flax doesn't use components to build scene objects logic. We only use [Actors](../scenes/actors.md). Each Actor has its own type (e.g. point light, box collider) and a collection of attached scripts. This means, in Flax the scene object hierarchy is created with Actors.
 
 However, you can still use the entity-component design with your scripts because every actor can have scripts.
 You can use `GetChild<T>()`/`GetScript<T>()` methods in your scripts to access the other objects.
