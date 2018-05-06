@@ -208,4 +208,7 @@
 ## [Open Source API](contributing/open-source-api.md)
 ## [Report a bug](contributing/report-a-bug.md)
 
-<!--# [Launcher](launcher/index.md)-->
+# [Release Notes](release-notes/index.md)
+## [Alpha](release-notes/index.md#alpha)
+### [0.1 release notes](release-notes/0_1/index.md)
+

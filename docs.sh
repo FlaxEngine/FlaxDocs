@@ -75,8 +75,8 @@ update_api() {
 
 update() {
 	echo "Updating Flax Docs..."
-	git reset --hard origin/master
 	git pull origin master
+	git reset --hard origin/master
 	
 	chmod +x docs.sh
 	chmod +x serve.sh
