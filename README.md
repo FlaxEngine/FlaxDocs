@@ -26,7 +26,3 @@ Documentation can be builded and hosted on both Linux and Windows. DocFx can run
 * Clone repository (`git clone https://github.com/FlaxEngine/FlaxDocs.git`)
 * Call `chmod +x docs.sh`. It will modify permissions for the script `docs.sh` to allow to execute it
 * Call `./docs.sh rebuild`
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MzE1NDk3N119
--->
