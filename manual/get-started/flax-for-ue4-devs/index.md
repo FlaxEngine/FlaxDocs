@@ -2,14 +2,14 @@
 
 ![Unreal to Flax](media/title.jpg)
 
-Flax and Unreal have many similarities (materials pipeline, physics engine) and share many concepts, hovewer there are a few diffrences. This page helps Unreal Engine 4 developers to translate their existing experience into the world of Flax Engine.
+Flax and Unreal have many similarities (materials pipeline, physics engine) and share many concepts, however there are a few differences. This page helps Unreal Engine 4 developers to translate their existing experience into the world of Flax Engine.
 
 > [!Warning]
 > Warning! Once you switch from Unreal to Flax you will love this engine!
 
 ## Editor
 
-Flax Editor and Unreal Editor are very similar. You can see the color-coded, highlighted areas on screenshots of both editors that have common functionalities. Flax Editor layout is also highly customizable so you can drag and drop windows around to adapt the editor into you workflow.
+Flax Editor and Unreal Editor are very similar. You can see the color-coded, highlighted areas on screenshots of both editors that have common functionalities. Flax Editor layout is also highly customizable so you can drag and drop windows around to adapt the editor to your workflow.
 
 ![Unreal Editor](media/unreal-layout.png)
 
@@ -29,7 +29,7 @@ This section contains the most common terms used in UE4 and their Flax equivalen
 | **C++** | [C#](../../scripting/index.md) |
 |||
 | **World Outliner** | [Scene Window](../../editor/windows/scene-window.md) |
-| **Details Panel** | [Propertis Window](../../editor/windows/properties-window.md) |
+| **Details Panel** | [Properties Window](../../editor/windows/properties-window.md) |
 | **Content Browser** | [Content Window](../../editor/windows/content-window.md) |
 
 ## Project
@@ -46,29 +46,29 @@ See [Flax projects structure](../project-structure.md) page to learn more about 
 
 Flax also uses binary asset files with extension `.flax` (instead of `.uasset`). We are using our own binary format that is well optimized for scalability and streaming. Other assets are usually stored in json format (scenes, settings, etc.).
 
-Flax supports the most popular asset files formats (for 3D models and textures) so you can import you game content.
+Flax supports the most popular asset files formats (for 3D models and textures) so you can import your game content.
 
 See [Assets](../assets/index.md) page to learn more about importing and using game assets.
 
 ## Scenes and Actors
 
-Flax doesn't use components to build scene objects logic. We only use [Actors](../scenes/actors.md). Each Actor has own type (e.g. point light, box collider) and collection of attached scripts. This means, in Flax scene objects hierarchy is created with Actors.
+Flax doesn't use components to build scene objects logic. We only use [Actors](../scenes/actors.md). Each Actor has its own type (e.g. point light, box collider) and a collection of attached scripts. This means, in Flax the scene object hierarchy is created with Actors.
 
-However, you can still use entity-component design with you scripts because every actor can have scripts.
+However, you can still use the entity-component design with your scripts because every actor can have scripts.
 You can use `GetChild<T>()`/`GetScript<T>()` methods in your scripts to access the other objects.
 
-In Flax, Scene object is also an Actor so you can access it like any other Actors. This means that Scene can have own scripts and be transformed like other objects.
+In Flax, Scene object is also an Actor so you can access it like any other Actor. This means that Scenes can have their own scripts and be transformed like other objects.
 
 ## Scripting
 
 When it comes to game scripting, there is a significant difference between Unreal and Flax.
 Firstly, we use C# language to write game code (instead of C\+\+).
 Using C# helps with rapid game development and simplifies the development.
-Flax Engine is written in C++ so you don't have to worry about the performance.
+The Flax Engine itself is written in C++ so you don't have to worry about the performance.
 
-You can create C# files with script classes that provide a gameplay logic. Then scripts can be attached to the actors and used in a game. Our scripting C# API is an open-source project and can be found [here](https://github.com/FlaxEngine/FlaxAPI). Any contributions are welcome.
+You can create C# files with script classes that provide a gameplay logic. Then scripts can be attached to the actors and used in a game. Our scripting C# API is an open-source project and can be found [here](https://github.com/FlaxEngine/FlaxAPI). All contributions are welcome.
 
-Here is an example script that has been written for Unreal and Flax which every frame prints the next number.
+Here is an example script that has been written for Unreal and Flax which prints the next number every frame.
 
 * Unreal
 
@@ -128,7 +128,7 @@ public class MyScript : Script
 }
 ```
 
-See [Scripting](../../scripting/index.md) documentation to learn more about C# scripts in C#.
+See [Scripting](../../scripting/index.md) documentation to learn more about C# scripts in Flax.
 
 <hr>
 
