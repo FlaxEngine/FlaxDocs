@@ -1,6 +1,6 @@
 # Scene Data Storage
 
-**Scene Data Storage** is a dedicated folder located in Content directory that is used to store the scene private asset. Each scene uses own subdirectory in scene data to keep own assets. When you bake the lightmaps or environent probes, they are stored right in the scene data directory. You can move these assets and reused in other parts of the game if you need. For instance, environment probe cube texture can be used for a skybox.
+**Scene Data Storage** is a dedicated folder located in a Content directory that is used to store the scene private asset. Each scene uses own subdirectory scene data to keep own assets. When you bake the lightmaps or environment probes, they are stored right in the scene data directory. You can move these assets and reused in other parts of the game if you need. For instance, environment probe cube texture can be used for a skybox.
 
 ## Storage
 
