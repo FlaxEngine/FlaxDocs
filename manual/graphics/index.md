@@ -13,6 +13,7 @@ This section explains all you need to know about working with materials pipeline
 * [Materials](materials/index.md)
 * [Textures](textures/index.md)
 * [Models](models/index.md)
+* [Decals](decals/index.md)
 * [Lighting](lighting/index.md)
 * [Fog effects](fog-effects/index.md)
 * [Post effects](post-effects/index.md)

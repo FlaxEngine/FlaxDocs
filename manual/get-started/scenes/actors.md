@@ -129,4 +129,9 @@ This documentation page contains link to all tutorials related to working with a
 <h3><a href="../../animation/bone-socket.md">Bone Socket</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="../../graphics/decals/decal.md"><img src="../../graphics/decals/media/icon.jpg"></a>
+<h3><a href="../../graphics/decals/decal.md">Decal</a></h3>
+</div>
+
 </div>
