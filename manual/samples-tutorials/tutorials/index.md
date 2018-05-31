@@ -16,6 +16,7 @@ Use **Ctrl + F** to quickly find what you looking for.
 * [How to create a custom asset type](../../scripting/tutorials/custom-asset.md)
 * [How to create a bouncing ball](../../physics/tutorials/bouncing-ball.md)
 * [How to use a trigger](../../physics/tutorials/use-trigger.md)
+* [How to create a decal](../../graphics/decals/create-decal.md)
 * [How to report a bug](../../contributing/report-a-bug.md)
 * [How to use raycasting](../../physics/raycasting.md)
 * [How to detect collisions](../../physics/collisions.md)
