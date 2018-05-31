@@ -10,6 +10,11 @@ If you need help with learning C# see [this page](http://www.letmegooglethat.com
 > [!Note]
 > Explaining C# and vector math is out of the scope of this documentation.
 
+## Scripting Backend
+
+Flax uses [Mono](http://www.mono-project.com/) to load, compile and execute C# scripts.
+Currently the newest **C# 7.2** version is fully supported (uses .Net 4.5).
+
 ## In this section
 
 * [Create and use a script](new-script.md)
