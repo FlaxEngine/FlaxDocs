@@ -43,6 +43,7 @@
 ### [Graphics Settings](editor/game-settings/graphics-settings.md)
 ### [Build Settings](editor/game-settings/build-settings.md)
 ## [Game Cooker](editor/game-cooker/index.md)
+## [Editor Options](editor/options/index.md)
 ## [Advanced](editor/advanced/index.md)
 ### [Extending Flax Editor](editor/advanced/extending-editor.md)
 ### [Command Line Access](editor/advanced/command-line-access.md)
