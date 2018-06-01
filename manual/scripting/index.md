@@ -26,6 +26,7 @@ Currently the newest **C# 7.2** version is fully supported (uses .Net 4.5).
 * [Scripts debugging](debugging/index.md)
  * [Visual Studio](debugging/visual-studio.md)
 * [Scripts serialization](serialization/index.md)
+* [Empty Actor](empty-actor.md)
 * [Custom Editors](custom-editors/index.md)
  * [Custom script editor](tutorials/custom-editor.md)
  * [Attributes](custom-editors/attributes.md)

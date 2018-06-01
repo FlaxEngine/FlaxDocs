@@ -117,6 +117,7 @@
 ## [Scripts debugging](scripting/debugging/index.md)
 ### [Visual Studio](scripting/debugging/visual-studio.md)
 ## [Scripts serialization](scripting/serialization/index.md)
+## [Empty Actor](scripting/empty-actor.md)
 ## [Custom Editors](scripting/custom-editors/index.md)
 ### [Custom script editor](scripting/tutorials/custom-editor.md)
 ### [Attributes](scripting/custom-editors/attributes.md)
@@ -194,8 +195,6 @@
 ### [How to use a trigger](physics/tutorials/use-trigger.md)
 
 <!--# [Navigation](navigation/index.md)-->
-
-<!--# [Audio](audio/index.md)-->
 
 <!--# [Networking](networking/index.md)-->
 

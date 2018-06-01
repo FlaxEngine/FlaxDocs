@@ -134,4 +134,9 @@ This documentation page contains link to all tutorials related to working with a
 <h3><a href="../../graphics/decals/decal.md">Decal</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="../../scripting/empty-actor.md"><img src="../../..//media/dummy-icon.jpg"></a>
+<h3><a href="../../scripting/empty-actor.md">Empty Actor</a></h3>
+</div>
+
 </div>
