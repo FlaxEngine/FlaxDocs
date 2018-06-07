@@ -23,7 +23,52 @@ Now you can use the newest **C# 7.2** features including:
 
 The current Flax version includes [Roslyn](https://github.com/dotnet/roslyn) compiler and supports using the newest C# language version in your scripts.
 
+### Editor Options
+
+Now you can modify the editor options and keep the globally for all installed engine instanced. You can adjust scripts recompilation logic, change the interface, modify the selection outline colors and more.
+
 ## Changelog
+
+### Version 0.1.6157 - 7 June 2018
+
+* Added **Editor Options**
+* Added scroll bar to tabs menu in Toolbox window
+* Added live preview for the color picker
+* Added caching expanded actor nodes in Scene Tree
+* Added `Font.Asset` to get font object parent asset
+* Added new event `Scripting.Exit` to handle engine closing
+* Added calling Start function if Script is enabled for the first time from code at runtime
+* Added support for Matrix parameter type for Materials
+* Added dedicated MatrixEditor
+* Added Depth node to Materials (linear distance of the pixel/vertex to the camera)
+* Added Mask nodes to Material/AnimGraph to get swizzle values like X,Y or XY, ZW
+* Added dragging the Material/AnimGraph parameter into the surface
+* Added creating Material Instance from Material in Content Window
+* Added spawning surface parameters getter node via context menu
+* Added showing scene filename on a Scene Tree node name
+* Rotate decal actor in Material Preview (easier to use on Plane model)
+* Support importing TIFF files with extension `.tif`
+* Improve Material/AnimGraph parameter renaming with left mouse double click
+* Improve selecting actors in editor (don’t pick colliders if Physics Debug mode is off)
+* Improve texture format auto-detection
+* Improve gizmo and camera usage with Alt to orbit and move objects
+* Improve internal C++ calls to prevent crashes in invalid object usage cases
+* Improve C# assemblies debug symbols loading (don’t use pdb2mdb tool)
+* Improve editor status strip message to use the editor state messages
+* Improve filtering property name labels (cut common prefixes, share memory)
+* Improve GPU and I/O async tasks cleanup and cancellation on exit
+* Fix crash for Copy Bone if skeleton has only a single bone
+* Fix crash when sampling material pixel shader surface properties in vertex shader
+* Fix importing 1x1 texture with mipmaps generation turned on
+* Fix crash when reimporting binary asset to the different type
+* Fix crash when spawning in editor model with more than 300 meshes
+* Fix drawing gizmos, editor primitives and debug shapes in debug render modes
+* Fix setting scene modified flax on actor spawn
+* Fix rare errors when reimporting the asset
+* Fix `Camera.Viewport` property (invalid size)
+* Fix removing tag from the actor
+* Fix minor memory leaks
+* Fix crash for empty PostFx/GUI material which is not using constant buffer
 
 ### Version 0.1.6156 - 1 June 2018
 
