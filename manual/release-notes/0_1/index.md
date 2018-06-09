@@ -29,6 +29,10 @@ Now you can modify the editor options and keep the globally for all installed en
 
 ## Changelog
 
+### Version 0.1.6159 - 9 June 2018
+
+* Fix `Actor.Scene` (was always returning parent actor)
+
 ### Version 0.1.6158 - 9 June 2018
 
 * Added BoneSocket.UseScale
@@ -39,7 +43,6 @@ Now you can modify the editor options and keep the globally for all installed en
 * Fix crash when searching for `CustomEditorAttribute`
 * Fix deadlock when compiling 20 or more layered materials at once (recursive layers)
 * Fix crash when using PostFx with not used parameters
-* Fix `Actor.Scene` (was always returning parent actor)
 * Fix typo in Mask Z node
 
 ### Version 0.1.6157 - 7 June 2018
