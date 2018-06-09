@@ -29,6 +29,19 @@ Now you can modify the editor options and keep the globally for all installed en
 
 ## Changelog
 
+### Version 0.1.6158 - 9 June 2018
+
+* Added BoneSocket.UseScale
+* Added showing `No camera` text in game window when no enabled cameras
+* Implement all `Control.AnchorTypes` logic
+* Fix crash on material compilation error
+* Fix project shaders database caching to use also materials format version
+* Fix crash when searching for `CustomEditorAttribute`
+* Fix deadlock when compiling 20 or more layered materials at once (recursive layers)
+* Fix crash when using PostFx with not used parameters
+* Fix `Actor.Scene` (was always returning parent actor)
+* Fix typo in Mask Z node
+
 ### Version 0.1.6157 - 7 June 2018
 
 * Added **Editor Options**
