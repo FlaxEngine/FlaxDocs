@@ -37,3 +37,4 @@ Currently the newest **C# 7.2** version is fully supported (uses .Net 4.5).
  * [How to create a custom editor window](tutorials/custom-window.md)
  * [How to create a custom editor plugin](tutorials/custom-plugin.md)
  * [How to create a custom asset type](tutorials/custom-asset.md)
+ * [How to change scene from script](change-scene.md)
