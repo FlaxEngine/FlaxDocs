@@ -28,6 +28,33 @@ void OnCollisionEnter(Collision c)
 
 To access information about the collision use [Collision](https://docs.flaxengine.com/api/FlaxEngine.Collision.html) class and [ContactPoint](https://docs.flaxengine.com/api/FlaxEngine.ContactPoint.html) structures.
 
+Alternatively, you can use the [Collider](https://docs.flaxengine.com/api/FlaxEngine.Collider.html) events to handle the collisions without using a dedicated method signature and linking script to the collider.
+Here is an example script that registers for the collision detection for the given input collider in your scene.
+
+```cs
+public class MyScript : Script
+{
+	public Collider TargetCollider;
+
+	void OnEnable()
+	{
+		TargetCollider.CollisionEnter += OnTargetCollisionEnter;
+	}
+
+	void OnDisable()
+	{
+		TargetCollider.CollisionEnter -= OnTargetCollisionEnter;
+	}
+
+	private void OnTargetCollisionEnter(Collision collision)
+	{
+		Debug.Log("We got the collision sir! With: " + collision.OtherCollider);
+	}
+}
+```
+
+## Learn more
+
 See [Script Events](../scripting/events.md) page to learn more about the C# script events.
 
 
