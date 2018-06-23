@@ -17,7 +17,7 @@ Of course, all those things can be made manually by using Flax Editor C# API and
 
 | Command | Description |
 |--------|--------|
-| **-widowed** | Starts the game in windowed mode (even if default builded game setting was fullscreen). |
+| **-windowed** | Starts the game in windowed mode (even if default builded game setting was fullscreen). |
 | **-fullscreen** | Starts the game in fullscreen mode (even if default builded game setting was windowed). |
 | **-vsync** | Forces to enable vertical synchronization when presenting the frame on screen. |
 | **-novsync** | Forces to disable vertical synchronization when presenting the frame on screen. |
