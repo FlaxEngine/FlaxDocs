@@ -19,6 +19,7 @@ Flax Engine supports importing the following list of file types as textures:
 - `.tga`
 - `.tif`
 - `.tiff`
+- `.dds`
 
 > [!Note]
 > Flax imports only the first frame of animated image files, such as animated gifs or PNGs. They don't animate in Flax; they appear as static images.
