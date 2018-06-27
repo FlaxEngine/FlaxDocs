@@ -4,7 +4,7 @@
 
 In this tutorial you will learn how to create a simple icosahedron mesh.
 
-This sample uses two C# API methods: [Content.CreateVirtualAsset<T>](http://docs.flaxengine.com/api/FlaxEngine.Content.html#FlaxEngine_Content_CreateVirtualAsset__1) and [Model.UpdateMesh](http://docs.flaxengine.com/api/FlaxEngine.Model.html#FlaxEngine_Model_UpdateMesh_FlaxEngine_Vector3___System_Int32___FlaxEngine_Vector3___FlaxEngine_Vector2___FlaxEngine_Color32___) to generate procedural model resource.
+This sample uses C# API method [Content.CreateVirtualAsset<T>](http://docs.flaxengine.com/api/FlaxEngine.Content.html#FlaxEngine_Content_CreateVirtualAsset__1) to generate procedural model resource which can be modified at runtime from code.
 
 ## Tutorial
 
@@ -13,7 +13,7 @@ This sample uses two C# API methods: [Content.CreateVirtualAsset<T>](http://docs
 * Write mesh data generating function
 
 ```cs
-private void UpdateMesh(Model model)
+private void UpdateMesh(Mesh mesh)
 {
     const float X = 0.525731112119133606f;
     const float Z = 0.850650808352039932f;
@@ -41,7 +41,7 @@ private void UpdateMesh(Model model)
         6, 11, 7, 6, 0, 11, 6, 1, 0, 10, 1, 6,
         11, 0, 9, 2, 11, 9, 5, 2, 9, 11, 2, 7
     };
-    model.UpdateMesh(vertices, triangles, vertices);
+    mesh.UpdateMesh(vertices, triangles, vertices);
 }
 ```
 
@@ -52,9 +52,12 @@ public MaterialBase Material;
 
 private void Start()
 {
-    var model = Content.CreateVirtualAsset<Model>();
-    UpdateMesh(model);
+	// Create dynamic model with a single LOD with one mesh
+	var model = Content.CreateVirtualAsset<Model>();
+	model.SetupLODs(1);
+	UpdateMesh(model.LODs[0].Meshes[0]);
 
+	// Create or reuse child model actor
     var childModel = Actor.GetOrAddChild<ModelActor>();
     childModel.Model = model;
     childModel.LocalScale = new Vector3(100);
