@@ -19,3 +19,7 @@ This section covers the specific information for different aspects of each platf
 
 * DirectX 10, 11, 12
 
+## Builded game logs
+
+By default Flax stores the log files inside the project folder in subdirectory `Logs` (as described [here](../get-started/project-structure.md)). Builded game is often installed in a folder with no write-access which means Flax needs to store the log files in a temporary directory located in `%LocalAppData%\<CompanyName>\<ProductName>`. Where `<CompanyName>` and `<ProductName>` are values defined in the *Game Settings*. To debug your game crashes or errors please see the log files.
+
