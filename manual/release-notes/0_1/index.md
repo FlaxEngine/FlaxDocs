@@ -23,11 +23,82 @@ Now you can use the newest **C# 7.2** features including:
 
 The current Flax version includes [Roslyn](https://github.com/dotnet/roslyn) compiler and supports using the newest C# language version in your scripts.
 
+### Games UI
+
+New **UICanvas** and **UIControl** actor types enable game developers to create easily UI for game menus, player HUD and other level interfaces like control panels. User Interface can be created from code or right inside the editor with full serialization and undo support.
+
 ### Editor Options
 
 Now you can modify the editor options and keep the globally for all installed engine instanced. You can adjust scripts recompilation logic, change the interface, modify the selection outline colors and more.
 
 ## Changelog
+
+### Version 0.1.6160 - 27 June 2018
+
+* Added **UICanvas** and **UIControl** actor types for building Game UI systems
+* Added texture import option *Flip Y*
+* Added support for global custom PostFx applied to all game scene viewports
+* Added using position snapping when spawning the object via drag and drop
+* Added C# API to get GPU memory usage and dump resources info to log
+* Added `RenderBuffers.DepthBuffer` to be accessed from the C# API
+* Added new attribute `VisibleIf` to show/hide properties in editor based on object state
+* Added creating mesh from code with 16bit index buffer
+* Added new PostFx Material rendering location: `BeforeReflectionsPass`, can be used to implement custom light types and extend the shading pipeline
+* Added `PostProcessEffect.Location` that specifies location during frame rendering when to execute the custom postFx
+* Added `PostProcessEffect.UseSingleTarget` that allows to render graphics in additive mode to the input texture (can be used to optimize game performance)
+* Added `PostProcessEffect.Order` that allows to sort the effects
+* Added new PostFx location `AfterAntiAliasingPass` for PostFx Materials and Custom PostFx, can be used to perform rendering after full-screen AA filter
+* Added more C# API for the scenes management
+* Added helper API for scene assets referencing
+* Added events `Collider.CollisionEnter` and `Collider.CollisionExit`
+* Added `Camera.ConvertMouseToRay`
+* Added dedicated editors for primitive types: double, long, ulong, byte, sbyte, short, ushort, uint and char
+* Added dedicated editor for Guid type
+* Added `Actor.AddChild<T>`
+* Added `ExpandGroupsAttribute` to help with editor UI rule creating
+* Added showing material slot name in selected ModelActor/AnimatedModel entries list
+* Added showing tooltips for Scripts (use TooltipAttribute on a script class)
+* Added showing tooltips for inlined groups in editor
+* Added ability to create object in editor for null reference in script
+* Support importing `.dds` files as a single texture (not only cube texture)
+* Change default editor font to Roboto (bigger characters set)
+* Improve materiał instances performance
+* Implement proper GUI serialization and editing (via attributes)
+* Improve GPU memory usage efficiency (better render targets sharing)
+* Improve reflections specular occlusion
+* Increase sun shadow maps resolution for quality level Medium
+* General GUI refactoring and improvements
+* Reduce dynamic memory allocations during rendering
+* Remove `Control.Name`
+* Remove `LH` postfix from math functions
+* Remove `CharacterController.Velocity` setter (not supported by PhysX), getter still works
+* Refactor editor asset picker
+* Refactor Flax GUI library controls to be more usable in games
+* Move Editor-only GUI controls to FlaxEditor assembly
+* Change default Editor update rate to 60FPS
+* Optimize collision events sending (less memory allocations)
+* Optimize memory allocations during rendering
+* Optimize `Render2D.DrawText` memory allocations
+* Change default Contact Offset for the Colliders to 10
+* Change scene tree node double click to start rename it (not focus on actor)
+* Change `EnvironmentProbe.AutoUpdate` to be disabled by default
+* Fix fog blending mode (can can be black now)
+* Fix transforming meshes to root node when importing animated models
+* Fix applying scale on imported model if any mesh has additional transformation
+* Fix rare crashes when baking the collision mesh data
+* Fix Parallax Occlusion mapping ignores custom UVs
+* Fix duplicated content item when selecting with shift
+* Fix auto-detecting workspace modification for scripts recompilation
+* Fix `PostFxVolume` blending with blend radius set to 0
+* Fix issue with material instance params not syncing layout in builded game
+* Fix Get Parameter node width based on param name
+* Fix crash when disabling script without a parent actor (eg. created from code)
+* Fix crash when using parameter getter spawned with Visject context menu
+* Fix recording immediate undo action after using Color Picker
+* Fix scale gizmo snapping
+* Fix alpha blended GUI rendering
+* Fix AnchorStyle update for Center mode
+* Minor fixes
 
 ### Version 0.1.6159 - 9 June 2018
 
