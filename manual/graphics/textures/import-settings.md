@@ -10,6 +10,7 @@
 | **Compress** | If checked, texture data will be comrpessed to use less memory. |
 | **Independent Channels** | If checked, texture channels have independent data (used for compression methods). Should be used for masks or packed textures.|
 | **Is sRGB** | If checked, texture contains colors in sRGB format data. |
+| **Flip Y** | If checked, texture Y coordinate will be flipped. |
 | **Generate Mip Maps** | If checked, full mip maps chain will be generated for the texture. |
 | **Scale** | Custom scale parameter. Allows to increase or decrese imported texture resolution. The default value is 1. |
 | **Max Size** | The maximum size of imported texture. Used to clip too big textures. |
