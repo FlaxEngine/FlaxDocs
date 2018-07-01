@@ -56,3 +56,9 @@ To use your texture asset in a material simply drag and drop it into the materia
 
 To learn more about materials and using textures for rendering go to [Materials Basics](../materials/basics/index.md) page.
 
+## Procedural textures
+
+![Procedural texture](media/cubeResult.png)
+
+Flax API exposes several methods that enable you to create and use procedural textures from your code. To learn how to use it see the related tutorial here: [How to create a procedural texture](generate-texture.md).
+

@@ -10,6 +10,7 @@ Use **Ctrl + F** to quickly find what you looking for.
 
 * [How to render a camera to a texture](../../graphics/cameras/render-camera-to-texture.md)
 * [How to generate procedural model](../../graphics/models/generate-model.md)
+* [How to generate procedural texture](../../graphics/textures/generate-texture.md)
 * [How to create a custom editor](../../scripting/tutorials/custom-editor.md)
 * [How to create a custom editor window](../../scripting/tutorials/custom-window.md)
 * [How to create a custom editor plugin](../../scripting/tutorials/custom-plugin.md)
