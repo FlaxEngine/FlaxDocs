@@ -33,6 +33,30 @@ Now you can modify the editor options and keep the globally for all installed en
 
 ## Changelog
 
+### Version 0.1.6161 - 1 July 2018
+
+* Added support for importing `.hdr` files
+* Added support for **exporting assets** in Editor (textures, sprite atlases, cube textures, audio clips, models and skinned models)
+* Added support for virtual texture assets (with updating from code)
+* Added support for saving textures to file (in Editor)
+* Added API to get texture mip data
+* Added more C# API for creating models with custom LODs from code
+* Added support for virtual skinned models creating from code
+* Added support for updating skinned model properties at runtime
+* Added support for editing material slots collection for Model/SkinnedModel
+* Added support for saving Model/SkinnedModel to other asset and saving generated geometry to the file (in Editor)
+* Added support for downloading vertex and index buffers data from the Mesh/SkinnedMesh (from GPU or from memory/drive)
+* Added `Mesh.HasVertexColors`, `Mesh.HasLightmapUVs` and `Mesh.IndexBufferFormat`
+* Added `Int4` type
+* Added `DebugDraw.DrawArrow`
+* Added support for uploading mesh data from the other threads
+* Added `MessageBox.BrowseFolderDialog`
+* Added `AllowUnsafeCode` for projects template
+* Added drawing arrow with selected directional/spot light direction in Editor
+* Fix node values types for Surface copy paste
+* Fix project regenerate on script change
+* Fix import file dialog list
+
 ### Version 0.1.6160 - 27 June 2018
 
 * Added **UICanvas** and **UIControl** actor types for building Game UI systems
