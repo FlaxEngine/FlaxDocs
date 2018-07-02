@@ -33,6 +33,14 @@ Now you can modify the editor options and keep the globally for all installed en
 
 ## Changelog
 
+### Version 0.1.6162 - 2 July 2018
+
+* Add support for DirectX profile events
+* Fix rendering on Intel GPUs
+* Fix dynamic models bounds updating
+* Fix various memory leaks
+* Fix `VerticalPanel` layout
+
 ### Version 0.1.6161 - 1 July 2018
 
 * Added support for importing `.hdr` files
