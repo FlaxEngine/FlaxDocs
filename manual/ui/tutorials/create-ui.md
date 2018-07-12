@@ -22,7 +22,7 @@ Created GUI will use a `Progress Bar` control to visualize the player's health l
 
 ![Set Type](media/set-progress-bar.png)
 
-Then the `UI Control` actor will link the created conrol to the GUI. Show the **Game** window tab to see the progress bar. You can adjust its properties using the panel below the *Set Type` button.
+Then the `UI Control` actor will link the created conrol to the GUI. Show the **Game** window tab to see the progress bar. You can adjust its properties using the panel below the *Set Type* button.
 
 ![Edit Progress Bar](media/created-progress-bar.png)
 
@@ -35,6 +35,9 @@ Add a new script named `PlayerHealth` that will control the player's health leve
 Open script file and write the following code:
 
 ```cs
+using FlaxEngine;
+using FlaxEngine.GUI;
+
 public class PlayerHealth : Script
 {
 	[Limit(0, 100), Tooltip("The current player health (in range 0-100)")]
