@@ -191,6 +191,8 @@ Now you can modify the editor options and keep the globally for all installed en
 
 ### Version 0.1.6156 - 1 June 2018
 
+Contributors: klukule
+
 * Added **Decals** support
 * Added **C# 7.2** support
 * Upgrade to **Mono 5.12**
