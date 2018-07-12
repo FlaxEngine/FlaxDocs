@@ -33,4 +33,11 @@ Use **Ctrl + F** to quickly find what you looking for.
 * [How to change Anim Graph parameter from code](../../animation/tutorials/change-anim-graph-param.md)
 * [How to blend two animations](../../animation/tutorials/blend-anims.md)
 * [How to use Skeleton Mask](../../animation/tutorials/use-skeleton-mask.md)
+* [How to create UI](../../ui/tutorials/create-ui.md)
+* [How to create UI from code](../../ui/tutorials/create-ui-from-code.md)
+* [How to create custom font material](../../ui/tutorials/create-font-material.md)
+* [How to create custom GUI material](../../ui/tutorials/create-gui-material.md)
+* [How to blur UI panel background](../../ui/tutorials/blur-background.md)
+* [How to create Main Menu](../../ui/tutorials/create-main-menu.md)
+* [How to create custom control](../../ui/tutorials/create-custom-control.md)
 
