@@ -135,8 +135,23 @@ This documentation page contains link to all tutorials related to working with a
 </div>
 
 <div class="frontpage-section">
-<a href="../../scripting/empty-actor.md"><img src="../../..//media/dummy-icon.jpg"></a>
+<a href="../../scripting/empty-actor.md"><img src="../../../media/dummy-icon.jpg"></a>
 <h3><a href="../../scripting/empty-actor.md">Empty Actor</a></h3>
+</div>
+
+<div class="frontpage-section">
+<a href="../../ui/text-render/index.md"><img src="../../ui/text-render/media/icon.jpg"></a>
+<h3><a href="../../ui/text-render/index.md">Text Render</a></h3>
+</div>
+
+<div class="frontpage-section">
+<a href="../../ui/canvas/index.md"><img src="../../ui/canvas/media/icon.jpg"></a>
+<h3><a href="../../ui/canvas/index.md">UI Canvas</a></h3>
+</div>
+
+<div class="frontpage-section">
+<a href="../../ui/control/index.md"><img src="../../ui/control/media/icon.jpg"></a>
+<h3><a href="../../ui/control/index.md">UI Control</a></h3>
 </div>
 
 </div>

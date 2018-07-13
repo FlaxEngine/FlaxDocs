@@ -107,6 +107,11 @@ This section covers the basic principles of working with assets in Flax.
 <h3><a href="../../animation/skeleton-mask.md">Skeleton Mask</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="../../ui/fonts/index.md"><img src="../../ui/fonts/media/icon.jpg"></a>
+<h3><a href="../../ui/fonts/index.md">Font Asset</a></h3>
+</div>
+
 </div>
 
 
