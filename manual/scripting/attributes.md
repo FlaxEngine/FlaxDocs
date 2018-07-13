@@ -21,6 +21,7 @@ The following table lists the most common attributes with usage description.
 | **Serialize** | Indicates that a field or a property should be be serialized. |
 | **NoSerialize** | Indicates that a field or a property should not be serialized. |
 | **HideInEditor** | Makes a variable not show up in the editor. |
+| **ShowInEditor** | Makes a variable show up in the editor (even private ones). If used on a private field/property you may also need to add SerializeAttribute to ensure that modified value is being serialized. |
 | **Tooltip** | Specifies a tooltip for a property/field in the editor. Useful to provide documentation for object properties. |
 | **Limit** |  Used to make a float or int variable in a script be restricted to a specific range. |
 | **Range** | Used to make a float or int variable in a script be restricted to a specific range. When used, the float or int will be shown as a slider in the editor instead of default number field. |
@@ -35,3 +36,4 @@ The following table lists the most common attributes with usage description.
 | **CustomEditorAlias** | Works the same as *CustomEditor* attribute, except uses a typename that can be located in different assembly (not referenced). |
 | **ExecuteInEditMode** | Makes a script execute in edit mode. |
 | **RequireChildActor** | Automatically adds required child actor as dependencies if not added yet. |
+| **VisibleIf** | Shows property/field in the editor only if the specified member has a given value. Can be used to hide properties based on other properties (also private properties). The given member has to be bool type. |
