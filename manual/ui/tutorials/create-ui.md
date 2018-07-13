@@ -28,7 +28,7 @@ Then the `UI Control` actor will link the created conrol to the GUI. Show the **
 
 ## 4. Create `PlayerHealth` script
 
-Add a new script named `PlayerHealth` that will control the player's health level and update the progress bar to visualize it. To learn more about creating and using scripts see [this tutorial](../scripting/new-script.md).
+Add a new script named `PlayerHealth` that will control the player's health level and update the progress bar to visualize it. To learn more about creating and using scripts see [this tutorial](../../scripting/new-script.md).
 
 ## 5. Edit script
 

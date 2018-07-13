@@ -4,7 +4,7 @@ In this tutorial, you will learn how to create customized User Interface control
 
 ## 1. Create `MyControl` script
 
-Add a new script named `MyControl` that will implement the control logic. The C# class need to inherit from [Control](https://docs.flaxengine.com/api/FlaxEngine.GUI.Control.html) type. To learn more about creating and using scripts see [this tutorial](../scripting/new-script.md).
+Add a new script named `MyControl` that will implement the control logic. The C# class need to inherit from [Control](https://docs.flaxengine.com/api/FlaxEngine.GUI.Control.html) type. To learn more about creating and using scripts see [this tutorial](../../scripting/new-script.md).
 
 ## 2. Edit script
 

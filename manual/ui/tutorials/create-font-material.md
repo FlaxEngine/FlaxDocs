@@ -4,7 +4,7 @@ In this tutorial, you will learn how to create a font material that can be used 
 
 ## 1. Create `Text Render` or `Label`
 
-The first step is to add [Text Render](../text-render/index.md) actor or [Label](../controls/label.md) control (with [UI Control]((../control/index.md) and [UI Canvas](../canvas/index.md)).
+The first step is to add [Text Render](../text-render/index.md) actor or [Label](../controls/label.md) control (with [UI Control](../control/index.md) and [UI Canvas](../canvas/index.md)).
 
 ![Spawn Text Render](media/spawn-text-render.png)
 

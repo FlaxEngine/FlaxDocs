@@ -4,7 +4,7 @@ In this tutorial, you will learn how to create a User Interface for your game. F
 
 ## 1. Create `PlayerHealthFromCode` script
 
-Add a new script named `PlayerHealthFromCode` that will control the player's health level and update the progress bar to visualize it. To learn more about creating and using scripts see [this tutorial](../scripting/new-script.md).
+Add a new script named `PlayerHealthFromCode` that will control the player's health level and update the progress bar to visualize it. To learn more about creating and using scripts see [this tutorial](../../scripting/new-script.md).
 
 ## 2. Edit script
 

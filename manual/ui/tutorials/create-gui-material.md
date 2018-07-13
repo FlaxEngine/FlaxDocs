@@ -4,7 +4,7 @@ In this tutorial, you will learn how to create a GUI material that can be used t
 
 ## 1. Create `Image`
 
-The first step is to add [Image](../controls/image.md) control (with [UI Control]((../control/index.md) and [UI Canvas](../canvas/index.md)).
+The first step is to add [Image](../controls/image.md) control (with [UI Control](../control/index.md) and [UI Canvas](../canvas/index.md)).
 
 ## 2. Create new material asset
 

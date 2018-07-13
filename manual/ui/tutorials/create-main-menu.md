@@ -34,7 +34,7 @@ Duplicate the created button with **Ctrl+D** or use **Shift + Mouse** with trans
 
 ## 5. Create `MainMenu` script
 
-Add a new script named `MainMenu` that will handle the button click events. To learn more about creating and using scripts see [this tutorial](../scripting/new-script.md).
+Add a new script named `MainMenu` that will handle the button click events. To learn more about creating and using scripts see [this tutorial](../../scripting/new-script.md).
 
 ## 6. Edit script
 
