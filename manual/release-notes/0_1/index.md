@@ -33,6 +33,44 @@ Now you can modify the editor options and keep the globally for all installed en
 
 ## Changelog
 
+### Version 0.1.6163 - 14 July 2018
+
+Contributors: stefnotch, Sauler
+
+* Add *IndirectLightingIntensity* parameter to lights and to the scene setting (global)
+* Add `ModelActor.HiddenShadow` for rendering only model shadow
+* Add `ModelActor.BoundsScale` for scale its bounds
+* Add `Border` control
+* Add `BlurPanel` for blurring GUI background with Gaussian blur
+* Add **GUI material preview in Editor**
+* Add `Mesh.UpdateTriangles`
+* Add `ShowInEditor` attribute to display object private fields/properties in editor
+* Add more styling options to GUI controls
+* Add `SolidColorBrush`, `LinearGradientBrush` and `MaterialBrush`
+* Add support for rendering text in GUI with a custom material
+* Add support for masking GUI materials
+* Add *CSG.Model* to Scene for CSG geometry rendering (exposed)
+* Add events `Collider.TriggerEnter` and `Collider.TriggerExit`
+* Add renaming selected actor with `F2` key (via scene tree)
+* Add arrow Keys & Enter to choose an autocomplete suggestion in Visject
+* Add alternative names for nodes (`*` for multiply, `+` for add, etc.) in Visject
+* Add auto connecting selected nodes in Visject when new node is added
+* Add adding new Visject nodes to selection
+* Rename `IImageSource` to `IBrush` (and related symbols)
+* Remove `ViewFlags.CSG`
+* Move `Tree`, `TreeNode`, `ContextMenu`, `ComboBox`, and `ValueBox` control types to Editor assembly
+* Fix sampling directional light shadow map cascades for volumetric fog scattering
+* Fix texture mip data downloading
+* Fix focus in Visject on node creation
+* Fix Debug Window messages count button size
+* Fix expanding tree nodes in some cases
+* Fix for missing reference in FlaxObjectRefEditor
+* Fix World Position sampling in GUI material types
+* Fix control location constraint for Anchor Style set to Center
+* Fix main thread stall when loading scene in async
+* Fix crash when renaming actor during scripts reload
+* Minor fixes
+
 ### Version 0.1.6162 - 2 July 2018
 
 * Add support for DirectX profile events
