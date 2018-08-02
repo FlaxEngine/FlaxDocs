@@ -11,6 +11,8 @@ This page lists and describes the most common terms used in Flax Engine. For ins
 | **C# Script** | It is a text document that contains a source code of the custom [Script](https://docs.flaxengine.com/api/FlaxEngine.Script.html) class implementation written in a [C# language](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/). |
 | **Scene Objects** | This term refers to both **Actors** and **Scripts** as they can be instantiated in your game and appear on the scene. Every scene object can be created and destroyed at runtime and is identified by the [Object.ID](https://docs.flaxengine.com/api/FlaxEngine.Object.html#FlaxEngine_Object_ID). |
 | **Visject** | It is a visual surface graph that contains nodes connected to a network. For instance, it is used by the [Materials Editor](../graphics/materials/material-editor/index.md) to create material shaders. *Visject* was a name of the deprecated visual scripting interface that was featured in a very old version of the engine. It has been replaced by the C# scripts. |
+| **Prefab** | An asset in json format that contains a prefab data. It holds serialized data of the prefab objects collection. Prefabs can be instantiated to reuse the objects within an archetype. |
+| **Prefab Instance** | Spawned prefab objects, contain links to prefab asset and prefab objects, can be modified at runtime, can contain more than one actor (whole actors tree, including nested prefabs). |
 | **Flax** | ![Flax Icon](../../media/Web_Logo_64.png) |
 
 
