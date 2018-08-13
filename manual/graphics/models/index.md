@@ -34,6 +34,10 @@ Created model from code can have all the proeprties as the imported one. Althog 
 
 To learn more about creating procedural meshes see the [tutorial here](generate-model.md).
 
+## Geometry instancing
+
+Flax supports hardware geometry instancing out of the box. During scene rendering all model instances that use the same model and materials are batched and rendered at once to provide ultra-high performance. Flax can merge thousands of mesh instances into just a single draw call as long as they are using the same material. Instancing and draw calls batching is enabled by default on platforms that support it.
+
 ## Vertex properties
 
 Flax uses fixed model data format. Although index buffer can use 16 or 32-bit format layout vertex buffers layout is strictly defined. Vertex Buffers data is highly compressed to reduce memory usage and optimize the rendering performance.
