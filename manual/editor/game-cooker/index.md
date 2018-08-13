@@ -19,7 +19,7 @@ Game Cooker features:
 * Command line access ([more info](../advanced/command-line-access.md))
 * Custom build presets
 * Incremental building
-* Shaders/materials precompiling (read more)
+* Shaders/materials precompiling
 * Content encryption/compression
 * Asset references auto searching
 * Multi-platform support
