@@ -65,6 +65,7 @@
 ## [Textures](graphics/textures/index.md)
 ### [Texture Window](graphics/textures/texture-window.md)
 ### [Texture Import Settings](graphics/textures/import-settings.md)
+### [How to generate procedural texture](graphics/textures/generate-texture.md)
 ### [Cube Textures](graphics/textures/cube-textures.md)
 ## [Models](graphics/models/index.md)
 ### [Importing Models](graphics/models/import.md)
