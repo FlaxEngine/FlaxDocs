@@ -83,6 +83,11 @@ This section covers the basic principles of working with assets in Flax.
 </div>
 
 <div class="frontpage-section">
+<a href="../prefabs/index.md"><img src="../prefabs/media/icon.jpg"></a>
+<h3><a href="../prefabs/index.md">Prefab</a></h3>
+</div>
+
+<div class="frontpage-section">
 <a href="../../scripting/tutorials/custom-asset.md"><img src="../../scripting/tutorials/media/custom-asset-icon.jpg"></a>
 <h3><a href="../../scripting/tutorials/custom-asset.md">Custom Assets</a></h3>
 </div>

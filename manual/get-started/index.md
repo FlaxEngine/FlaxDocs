@@ -75,6 +75,12 @@ Welcome to the official Flax Engine Manual! In this section you will find everyt
 </div>
 
 <div class="frontpage-section">
+<a href="prefabs/index.md"><img src="prefabs/media/icon.jpg"></a>
+<h3><a href="prefabs/index.md">Prefabs</a></h3>
+<p>Learn how to create and use prefabs.</p>
+</div>
+
+<div class="frontpage-section">
 <a href="vs-extension.md"><img src="media/vs-icon.jpg"></a>
 <h3><a href="vs-extension.md">Visual Studio extension</a></h3>
 <p>Install our plugin for Visual Studio for programmers.</p>
