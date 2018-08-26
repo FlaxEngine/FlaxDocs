@@ -4,7 +4,7 @@
 
 ### Decals
 
-![Declas](media/decals.png)
+![Decals](media/decals.png)
 
 We've added a new material type: **Decal** and new **Decal Actor** which can be used to draw decal materials on top of the surface of the scene geometry. It's a very common and easy way to add special effects like blood drops, footsteps or more. Draw calls rendering is very optimized and fits needs of most of the games. To learn more about decals see the related documentation [here](../../graphics/decals/index.md).
 
