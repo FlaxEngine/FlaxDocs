@@ -41,7 +41,7 @@ Starting from this version scenes and actors collections will serialize scripts 
 - Remove deprecated `Globals.LocalizationFolder` and `Globals.ConfigFolder`
 - Fix rare crashes on prefabs apply
 - Fix Script callback searching (better method signature query)
-- Fix using Script callback methods in base clases that use generic parameters
+- Fix using Script callback methods in base classes that use generic parameters
 
 ### Version 0.2.6165 - 26 August 2018
 
