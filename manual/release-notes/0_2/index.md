@@ -28,6 +28,21 @@ Starting from this version scenes and actors collections will serialize scripts 
 
 ## Changelog
 
+### Version 0.2.6166 - 28 August 2018
+
+- Add support object ids mapping inside scripts (use `ObjectIdModifier` on deserialization)
+- Add `ISceneObject` interface to unify various functionalities for both Scripts and Actors
+- Add `TextLayoutOptions.Scale`
+- Improve text layout
+- Improve Mono backend performance
+- Improve object references handling in scripts in prefabs
+- Improve reverting changes to prefab for ISceneObject references
+- Increase **default editor update rate to 60 FPS** and reduce physics update
+- Remove deprecated `Globals.LocalizationFolder` and `Globals.ConfigFolder`
+- Fix rare crashes on prefabs apply
+- Fix Script callback searching (better method signature query)
+- Fix using Script callback methods in base clases that use generic parameters
+
 ### Version 0.2.6165 - 26 August 2018
 
 Contributors: klukule, stefnotch
