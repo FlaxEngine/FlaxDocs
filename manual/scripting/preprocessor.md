@@ -18,6 +18,7 @@ private void Start()
 | Define | Description |
 |--------|--------|
 | **FLAX_EDITOR** | Compile for editor (play in-edior). |
+| **FLAX_PLUGIN** | Compile project for plugin export. |
 | **FLAX_EDITOR_WIN** | Compile for editor on Windows. |
 | **FLAX_WINDOWS** | Compile for Windows. |
 | **FLAX_UWP** | Compile for Universal Windows Platform (UWP). |
