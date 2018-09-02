@@ -2,7 +2,7 @@
 
 ![Flax Engine Docs](manual/graphics/post-effects/media/postFx.png)
 
-Welcome to the Flax documentation repository. This repository contains all the source files for the Flax documentation (http://docs.flaxengine.com/). Anyone is welcome to contribute!
+Welcome to the Flax documentation repository. This repository contains all the source files for the Flax documentation (https://docs.flaxengine.com/). Anyone is welcome to contribute!
 
 ## Editing
 
