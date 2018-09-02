@@ -36,6 +36,6 @@ You can use the *Content* window to create new settings. Simply right-click in t
 | **Input** | Reference to [Input Settings](../../input/input-settings.md) asset. Contains initial virtual input layout. |
 | **Graphics** | Reference to [Graphics Settings](graphics-settings.md) asset. Contains initial rendering options. |
 | **Game Cooking** | Reference to [Build Settings](build-settings.md) asset. Contains Game Cooker profiles and additional options used during games building. |
-| **Custom Settings** | Collection of custom json assets used by the game and plugins. |
+| **Custom Settings** | Collection of custom json assets used by the game and plugins. To learn more see the related documentation [here](custom-settings.md). |
 | **Windows** | Reference to [Windows Settings](../../platforms/windows.md) asset. Contains options used when building game for Windows. |
 | **Universal Windows Platform** | Reference to [Universal Windows Platform Settings](../../platforms/uwp.md) asset. Contains options used when building game for Xbox One and Windows Store |
