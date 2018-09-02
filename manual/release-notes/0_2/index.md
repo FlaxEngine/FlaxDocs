@@ -10,6 +10,12 @@ We've added a new asset type: **Prefab**. It is used to build archetypes of acto
 
 To learn more about prefabs see the related documentation [here](../../get-started/prefabs/index.md).
 
+### Plugins
+
+![Plugins](../../scripting/plugins/media/plugins-window.png)
+
+Now, Flax supports **Game Plugins** and **Editor Plugins**. Developers can also easly include .Net libraries to be used in game scripts. Flax plugins system allows adding custom functionalities and extending engine features. See the dedicated page [here](../../scripting/plugins/index.md) to learn more about creating and using plugins.
+
 ### Texture arrays and volume textures in materials
 
 New material parameter types and improve render targets C# API enable developers to create and use 3D textures and texture arrays. Also, `GPUContext` has been updated to support rendering PostFx material to a single texture slice. New C# API allows creating advanced visual effects for your games such as volumetric clouds or water flow simulations on a GPU.
@@ -27,6 +33,33 @@ Also, many editor windows contain a dedicated button to the related documentatio
 Starting from this version scenes and actors collections will serialize scripts inlined in the actors data list, instead of inside parent actor. It is related to the scene objects serialization changes introduced during prefabs system implementation. The new engine version will still load scenes in the older format but serialized scenes will match the new design.
 
 ## Changelog
+
+### Version 0.2.6167 - 2 September 2018
+
+* Add **plugins support**
+* Add `GamePlugin` class
+* Add `EditorPlugin` class
+* Add plugins manager window in Editor
+* Add support for custom data stored in project cache
+* Add loading plugin assemblies from the project and build game
+* Add `Debug.Write` for direct message write to log
+* Add support for accessing custom game settings at runtime
+* Add helper C# API for editing custom game settings in editor
+* Add `JsonAsset.CreateInstance<T>()` for easy settings object casting
+* Add support for JsonAsset object from any loaded assembly
+* Add support for  restoring custom editor windows on scripts reload
+* Add `ScriptsBuilder.Compile` to build a custom solution
+* Add support for **showing all files from Content directory** in editor
+* Add support for renaming selected file in Content Window with F2 key
+* Add `Version` editor
+* Add a reference to FlaxEditor assembly for game scripts in Editor
+* Add showing tooltip with full type name in add script popup
+* Add support for adding scripts from all loaded assemblies (including plugins)
+* Add `EditorIcons` container for faster editor icons caching
+* Optimize logging by managed code
+* Optimize control and script types searching in editor
+* Fix too frequent editor cache saving
+* Fix typos
 
 ### Version 0.2.6166 - 28 August 2018
 
