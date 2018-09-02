@@ -3,7 +3,7 @@
 Editor plugins can extend the Flax Editor or implement a proper tooling for the related game plugins that they are shipping with.
 
 > [!Note]
-> Note: if your plugin uses both **Game Plugin** and **Editor Plugin** types the remember to implement `EditorPluginGamePluginType` to point the type of the game plugin.
+> Note: if your plugin uses both **Game Plugin** and **Editor Plugin** types the remember to implement `EditorPlugin.GamePluginType` to point the type of the game plugin.
 
 ### 1. Create editor script
 
