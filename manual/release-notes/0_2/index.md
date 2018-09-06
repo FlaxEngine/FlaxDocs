@@ -16,6 +16,12 @@ To learn more about prefabs see the related documentation [here](../../get-start
 
 Now, Flax supports **Game Plugins** and **Editor Plugins**. Developers can also easly include .Net libraries to be used in game scripts. Flax plugins system allows adding custom functionalities and extending engine features. See the dedicated page [here](../../scripting/plugins/index.md) to learn more about creating and using plugins.
 
+### Tessellation and Displacement
+
+![Tessellation and Displacement](media/tessellation_support.png)
+
+The newest Flax version supports tessellated materials and displacement maps. Using this feature can help to achieve realistic looking terrain or water surfaces.
+
 ### Texture arrays and volume textures in materials
 
 New material parameter types and improve render targets C# API enable developers to create and use 3D textures and texture arrays. Also, `GPUContext` has been updated to support rendering PostFx material to a single texture slice. New C# API allows creating advanced visual effects for your games such as volumetric clouds or water flow simulations on a GPU.

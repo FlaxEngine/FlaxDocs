@@ -17,7 +17,7 @@ This page breaks down all the available material properties. These options are a
 
 ## Transparency
 
-![General](../media/properties-transparency.png)
+![Transparency](../media/properties-transparency.png)
 
 | Property | Description |
 |--------|--------|
@@ -27,20 +27,29 @@ This page breaks down all the available material properties. These options are a
 | **Disable Distortion** | If checked, disables distortion effect when rendering material. |
 | **Opacity Threshold** | Controls opacity values clipping point. |
 
+## Tessellation
+
+![Tessellation](../media/properties-tessellation.png)
+
+| Property | Description |
+|--------|--------|
+| **Tessellation Mode** | Mesh surface tessellation method. Applies only to materials with *Domain* set to *Surface*. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**None**</td><td>No tessellation.</td></tr><tr><td>**Flat**</td><td>Flat tessellation. Also known as dicing tessellation.</td></tr><tr><td>**PointNormal**</td><td>Point normal tessellation.</td></tr><tr><td>**Phong**</td><td>Geometric version of Phong normal interpolation, not applied on normals but on the vertex positions.</td></tr></tbody></table>|
+| **Max Tessellation Factor** | Maximum triangle tessellation factor. Default value is `15`. Increase it to unlock even higher tessellation. Higher values reduce rendering performance. |
+
 ## Miscellaneous
 
-![General](../media/properties-misc.png)
+![Miscellaneous](../media/properties-misc.png)
 
 | Property | Description |
 |--------|--------|
 | **Disable Depth Write** | If checked, disables depth buffer write when rendering material.|
 | **Mask Threshold** | Controls mask values clipping point. |
 | **Decal Blending Mode** | Specifies decal material blending mode. Applies only to materials with *Domain* set to *Decal*. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Translucent**</td><td>Decal will be fully blended with the material surface.</td></tr><tr><td>**Stain**</td><td>Decal color will be blended with the material surface color (using multiplication).</td></tr><tr><td>**Normal**</td><td>Decal will blend the normal vector only.</td></tr><tr><td>**Emissive**</td><td>Decal will apply the emissive light only.</td></tr></tbody></table>|
-| **PostFx Location** | Specifies when render post effect material. Applies only to materials with *Domain* set to *Post Process*.Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**After Post Processing Pass**</td><td>Render material after post processing pass using *LDR* input frame.</td></tr><tr><td>**Before Post Processing Pass**</td><td>Render material before post processing pass using *HDR* input frame.</td></tr><tr><td>**Before Forward Pass**</td><td>Render material before forward pass but after *GBuffer* with *HDR* input frame.</td></tr><tr><td>**After Custom Post Effects**</td><td>Render material after custom post effects (scripted).</td></tr></tbody></table>|
+| **PostFx Location** | Specifies when render post effect material. Applies only to materials with *Domain* set to *Post Process*.Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**After Post Processing Pass**</td><td>Render material after post processing pass using *LDR* input frame.</td></tr><tr><td>**Before Post Processing Pass**</td><td>Render material before post processing pass using *HDR* input frame.</td></tr><tr><td>**Before Forward Pass**</td><td>Render material before forward pass but after *GBuffer* with *HDR* input frame.</td></tr><tr><td>**After Custom Post Effects**</td><td>Render material after custom post effects (scripted).</td></tr><tr><td>**Before Reflections Pass **</td><td>Render material before Reflections pass. After the Light pass. Can be used to implement a custom light types that accumulate lighting to the light buffer.</td></tr><tr><td>**After Anti-Aliasing Pass **</td><td>Render material The after AA filter pass. Rendering is done to the output backbuffer.</td></tr></tbody></table>|
 
 ## Parameters
 
-![General](../media/properties-params.png)
+![Parameters](../media/properties-params.png)
 
 Every material contains a collection of custom parameters. Those parameters can be accessed from the game logic code or be overriden using [Material Instances](../instanced-materials/index.md).
 

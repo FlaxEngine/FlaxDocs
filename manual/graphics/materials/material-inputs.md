@@ -80,3 +80,15 @@ The default value is 1.
 The **Position Offset** input allows moving rendered geometry vertices in world space. This is especially useful for making objects move, change shape, rotate or morph. It can be also used for ambient animation.
 
 ![Material Position Offset](media/material-vertex-offset.png)
+
+## Tessellation Multiplier
+
+The **Tessellation Multiplier** input controls the amount of tessellation along the surface geometry. It allows more detail to be added where needed. As with World Displacement, for this to be enabled, the Tessellation Mode property must be set to something other than None.
+
+![Material Tessellation Multiplier](media/material-tessellation-multiplier.png)
+
+## World Displacement
+
+The **World Displacement** input works very much like Position Offset, but it uses Tessellation vertices rather than the base vertices of the mesh. In order for this to be enabled, the Tessellation Mode property must be set to something other than None.
+
+![Material World Displacement](media/material-world-displacement.png)
