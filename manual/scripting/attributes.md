@@ -37,3 +37,29 @@ The following table lists the most common attributes with usage description.
 | **ExecuteInEditMode** | Makes a script execute in edit mode. |
 | **RequireChildActor** | Automatically adds required child actor as dependencies if not added yet. |
 | **VisibleIf** | Shows property/field in the editor only if the specified member has a given value. Can be used to hide properties based on other properties (also private properties). The given member has to be bool type. |
+
+## Script execution in editor
+
+By using **ExecuteInEditMode** you can enable your scripts to run in Editor. This is useful to generate procedural content for your game from code. Here is an example script that generates a grid of lights in Editor:
+
+```cs
+[ExecuteInEditMode]
+public class MyGenerator : Script
+{
+    private void Start()
+    {
+        for (int x = 0; x < 5; x++)
+        {
+            for (int z = 0; z < 5; z++)
+            {
+                var light = PointLight.New();
+                light.Radius = 1000;
+                light.ShadowsMode = ShadowsCastingMode.None;
+                light.Position = new Vector3(x * 100.0f, 0, z * 100.0f);
+                light.Parent = Actor;
+                //light.HideFlags = HideFlags.DontSave; // Uncomment to don't save generated actors
+            }
+        }
+    }
+}
+```
