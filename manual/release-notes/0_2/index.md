@@ -10,6 +10,12 @@ We've added a new asset type: **Prefab**. It is used to build archetypes of acto
 
 To learn more about prefabs see the related documentation [here](../../get-started/prefabs/index.md).
 
+### Motion Blur
+
+![Motion Blur](media/motion_blur.gif)
+
+Flax contains in-build **Motion Blur** effect that simulates the real-life camera aperture. Now, dynamic objects are rendered to the Motion Vectors buffer which is used to draw per-object (or skinned model per-bone) blur. Also, any camera movement provides realistic blur which helps with creating stunning visual effects and cut-scenes.
+
 ### Plugins
 
 ![Plugins](../../scripting/plugins/media/plugins-window.png)
