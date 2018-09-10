@@ -103,6 +103,7 @@
 ### [Camera Artifacts](graphics/post-effects/camera-artifacts.md)
 ### [Color Grading](graphics/post-effects/color-grading.md)
 ### [Depth of Field](graphics/post-effects/depth-of-field.md)
+### [Motion Blur](graphics/post-effects/motion-blur.md)
 ### [Eye Adaptation](graphics/post-effects/eye-adaptation.md)
 ### [Lens Flares](graphics/post-effects/lens-flares.md)
 ### [Screen Space Reflections](graphics/post-effects/screen-space-reflections.md)

@@ -13,6 +13,7 @@ You can use post-effects to establish look of your scenes and add more realism t
 * [Camera Artifacts](camera-artifacts.md)
 * [Color Grading](color-grading.md)
 * [Depth of Field](depth-of-field.md)
+* [Motion Blur](motion-blur.md)
 * [Eye Adaptation](eye-adaptation.md)
 * [Lens Flares](lens-flares.md)
 * [Screen Space Reflections](screen-space-reflections.md)
