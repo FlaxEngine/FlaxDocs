@@ -23,6 +23,7 @@ Animated Model actor exposes a rich C# scripting API. You can modify the anim gr
 |--------|--------|
 | **Skinned Model** | Skinned model asset used for rendering. |
 | **Animation Graph** | Animation graph used for the skinned mesh skeleton bones evaluation. |
+| **Per Bone Motion Blur** | If checked, use per-bone motion blur on this skeletal model. It requires additional rendering, can be disabled to save performance. |
 | **Use Time Scale** | If checked, animation speed will be affected by the global time scale parameter. |
 | **Update When Offscreen** | If checked, the animation will be updated even when an actor cannot be seen by any camera. Otherwise, the animations themselves will also stop running when the actor is off - screen. |
 | **Update Mode** | The animation update mode. Can be used to optimize the performance. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Auto**</td><td>The automatic updates will be used (based on platform capabilities, distance to the player, etc.).</td></tr><tr><td>**Every Update**</td><td>Animation will be updated every game update.</td></tr><tr><td>**Every Second Update**</td><td>Animation will be updated every second game update.</td></tr><tr><td>**Every Fourth Update**</td><td>Animation will be updated every fourth game update.</td></tr><tr><td>**Manual**</td><td>Animation can be updated manually by the user scripts. Use AnimatedModel.UpdateAnimation() method.</td></tr><tr><td>**Never**</td><td>Animation won't be updated at all.</td></tr></tbody></table>|
