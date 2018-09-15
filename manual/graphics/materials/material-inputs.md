@@ -92,3 +92,10 @@ The **Tessellation Multiplier** input controls the amount of tessellation along 
 The **World Displacement** input works very much like Position Offset, but it uses Tessellation vertices rather than the base vertices of the mesh. In order for this to be enabled, the Tessellation Mode property must be set to something other than None.
 
 ![Material World Displacement](media/material-world-displacement.png)
+
+## Subsurface Color
+
+**Subsurface** shading model tries to simulate the light scattering effect through the material. **Subsurface Color** input defines the color of volume inside the material. Use the **Opacity** to define the thickness of the material.
+
+![Material Subsurface Color](media/material-subsurface.png)
+

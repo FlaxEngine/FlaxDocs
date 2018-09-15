@@ -22,6 +22,12 @@ Flax contains in-build **Motion Blur** effect that simulates the real-life camer
 
 Now, Flax supports **Game Plugins** and **Editor Plugins**. Developers can also easly include .Net libraries to be used in game scripts. Flax plugins system allows adding custom functionalities and extending engine features. See the dedicated page [here](../../scripting/plugins/index.md) to learn more about creating and using plugins.
 
+### Subsurface materials
+
+![Subsurface Scattering](media/subsurface_materials.gif)
+
+Materials will now use **Shading Model** property to define the type of the shading to use for it. Supported are **Unlit**, **Lit** and **Subsurface**. Creating skin, wax or foliage materials is now much easier and gives more possibilities.
+
 ### Tessellation and Displacement
 
 ![Tessellation and Displacement](media/tessellation_support.png)
