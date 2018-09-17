@@ -32,6 +32,8 @@ The following table lists the options in the toolstrip and what they do.
 | ![icon](../media/material-editor-ui-toolstrip-1.png) | Shows and selects the asset in the *Content* window |
 | ![icon](../media/material-editor-ui-toolstrip-2.png) | Saves the asset to the file |
 | ![icon](../media/material-editor-ui-toolstrip-3.png) | Shows the whole material graph on the surface |
+| ![icon](media/material-editor-ui-toolstrip-4.png) | Shows the generated shader source code |
+| ![icon](media/material-editor-ui-toolstrip-5.png) | Shows the online materials documentation page |
 
 ## Viewport
 
@@ -93,4 +95,10 @@ In order to add a new material node right click on a surface background and sele
 
 ![Adding new nodes](../media/material-context-menu-1.png)
 ![Adding new nodes](../media/material-context-menu-2.png)
+
+# Material Shader Source Code
+
+Material Editor Window allows previewing the generates source code of the material shader. To see it use the toolstrip button.
+
+![Material Source Code](media/material-source-code.png)
 
