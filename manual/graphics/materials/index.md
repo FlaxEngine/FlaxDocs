@@ -12,6 +12,7 @@ Speaking more technically, when light from the scene hits the surface, a Materia
 * [Materials Editor](material-editor/index.md)
 * [Material Properties](material-properties/index.md)
 * [Material Inputs](material-inputs.md)
+* [Blend Modes](blend-modes/index.md)
 * [Shading Models](shading-models/index.md)
 * [Layered Materials](layered-materials/index.md)
 * [Instanced Materials](instanced-materials/index.md)

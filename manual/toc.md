@@ -62,6 +62,7 @@
 ### [Materials Editor](graphics/materials/material-editor/index.md)
 ### [Material Properties](graphics/materials/material-properties/index.md)
 ### [Material Inputs](graphics/materials/material-inputs.md)
+### [Blend Modes](graphics/materials/blend-modes/index.md)
 ### [Shading Models](graphics/materials/shading-models/index.md)
 ### [Layered Materials](graphics/materials/layered-materials/index.md)
 ### [Instanced Materials](graphics/materials/instanced-materials/index.md)
