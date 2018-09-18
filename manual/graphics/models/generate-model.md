@@ -8,9 +8,9 @@ This sample uses C# API method [Content.CreateVirtualAsset<T>](http://docs.flaxe
 
 ## Tutorial
 
-* Create new C# script `ModelGenerator`
+### 1. Create new C# script `ModelGenerator`
 
-* Write mesh data generating function
+### 2. Write mesh data generating function
 
 ```cs
 private void UpdateMesh(Mesh mesh)
@@ -45,15 +45,18 @@ private void UpdateMesh(Mesh mesh)
 }
 ```
 
-* Create model asset and model actor in `Start` function
+### 3. Create model asset and model actor in `Start` function
 
 ```cs
+private Model _tempModel;
+
 public MaterialBase Material;
 
 private void Start()
 {
 	// Create dynamic model with a single LOD with one mesh
 	var model = Content.CreateVirtualAsset<Model>();
+	_tempModel = model;
 	model.SetupLODs(1);
 	UpdateMesh(model.LODs[0].Meshes[0]);
 
@@ -63,12 +66,19 @@ private void Start()
     childModel.LocalScale = new Vector3(100);
     childModel.Entries[0].Material = Material;
 }
+
+private void OnDestroy()
+{
+	FlaxEngine.Object.Destroy(ref _tempModel);
+}
 ```
 
-* Add the script and set the material
+Remember to dispose all the created at runtime resources to prevent memory leaks.
+
+### 4. Add the script and set the material
 
 ![Model](media/sample-model-2.jpg)
 
-* See the result
+### 5. See the result
 
 ![Model](media/sample-model-1.jpg)

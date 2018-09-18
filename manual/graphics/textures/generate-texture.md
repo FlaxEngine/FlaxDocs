@@ -15,6 +15,9 @@ This sample uses C# API method [Content.CreateVirtualAsset<T>](http://docs.flaxe
 ```cs
 public class TextureFromCode : Script
 {
+	private Texture _tempTexture;
+	private MaterialInstance _tempMaterialInstance;
+
 	public Material Material;
 	public Model Model;
 
@@ -25,12 +28,13 @@ public class TextureFromCode : Script
 
 		// Create new texture asset
 		var texture = Content.CreateVirtualAsset<Texture>();
+		_tempTexture = texture;
 		TextureBase.InitData initData;
 		initData.Width = 64;
 		initData.Height = 64;
 		initData.ArraySize = 1;
 		initData.Format = PixelFormat.R8G8B8A8_UNorm;
-		var data = new byte[initData.Width * initData.Height * initData.Format.SizeInBytes()]
+		var data = new byte[initData.Width * initData.Height * initData.Format.SizeInBytes()];
 		fixed (byte* dataPtr = data)
 		{
 			// Generate pixels data (linear gradient)
@@ -61,12 +65,20 @@ public class TextureFromCode : Script
 
 		// Use a dynamic material instance with a texture to sample
 		var material = Material.CreateVirtualInstance();
+		_tempMaterialInstance = material;
 		material.GetParam("tex").Value = texture;
 
 		// Add a model actor and use the dynamic material for rendering
 		var modelActor = Actor.GetOrAddChild<ModelActor>();
 		modelActor.Model = Model;
 		modelActor.Entries[0].Material = material;
+	}
+
+	void OnDestroy()
+	{
+		// Ensure to cleanup resources
+		FlaxEngine.Object.Destroy(ref _tempTexture);
+		FlaxEngine.Object.Destroy(ref _tempMaterialInstance);
 	}
 }
 ```
