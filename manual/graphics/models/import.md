@@ -67,6 +67,7 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 | **Duration** | Specifies the imported animation duration mode. Can use the original value or overriden by settings. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Imported**</td><td>The imported duration.</td></tr><tr><td>**Custom**</td><td>The custom duration specified via keyframes range.</td></tr></table></tbody>|
 | **Frames Range Start** | Imported animation first frame index. Used only if Duration mode is set to Custom. |
 | **Frames Range End** | Imported animation last frame index. Used only if Duration mode is set to Custom. |
+| **Default Frame Rate** | The imported animation default frame rate. Can specify the default frames per second amount for imported animation. If value is 0 then the original animation frame rate will be used. |
 | **Sampling Rate** | The imported animation sampling rate. If value is 0 then the original animation speed will be used. |
 | **Skip Empty Curves** | If checked, the imported animation will have removed tracks with no keyframes or unspeficied data. Disable it to leave the data as it is. |
 | **Optimize Keyframes** | If checked, the imported animation channels will be optimized to remove redundant keyframes. This option helps with getting better animation sampling performance. |
