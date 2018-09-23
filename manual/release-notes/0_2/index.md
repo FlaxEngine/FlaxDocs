@@ -52,6 +52,60 @@ Starting from this version scenes and actors collections will serialize scripts 
 
 ## Changelog
 
+### Version 0.2.6168 - 23 September 2018
+
+Contributors: stefnotch
+
+* Add **Motion Blur** effect
+* Add **Motion Vectors** rendering support
+* Add per-bone motion vectors for skinned meshes
+* Add **Subsurface** material shading model
+* Add `MaterialShadingModel` enum
+* Add **Tessellation** support to materials
+* Add **search popup to asset picker**
+* Add *Panner* node to materials
+* Add **Wireframe** view mode
+* Add support for restoring material slots on model reimport
+* Add *Camera Position* node to materials
+* Add `PerBoneMotionBlur` to Animated Model
+* Add `RenderTask.CameraCut()` to mark the next rendered frame as camera cut
+* Add removing static flags from actors added to level during play in editor (eg. via drag and drop)
+* Add **Visject Surface comments** (with `C` key for selection or with `C + Left Mouse` for custom area)
+* Add profile event for GBuffer clear
+* Add *Per Instance Random* node to materials
+* Add option to show material shader HLSL source code
+* Add splash screen to build game (with Flax logo)
+* Add support for point and spot lights shadows for volumetric fog
+* Add filtering textbox contents (remove \r characters)
+* Add support for scrolling multiline textbox with mouse wheel
+* Add even smarter Visject context menu (eg. type `true` to spawn boolean literal node with value set to true)
+* Add *DefaultFrameRate* to animation import options
+* Refactor material shader template to simplify the code generation and improve material compilation time
+* Refactor Visject Surface and make it easier to customize or extend
+* Optimize Decal, GUI and PostProcess material types constant buffers usage
+* Optimize DirectX resources binding if render stage is not used
+* Optimize DirectX 12 backend
+* Modify default scene lightmap options
+* Improve Editor drag handler API
+* Use GPU buffers resources naming in dev builds
+* Fix selecting textbox characters if content has scale other than 1
+* Fix text layout for many new-line characters
+* Fix not needed remove button for some Visject nodes
+* Fix asset picker and make it bigger in some cases to prevent buttons not matching the layout
+* Fix quality of the skinned mesh blend weights to prevent blending issues
+* Fix various prefab issues
+* Fix preserving alpha channel value when using color selecting wheel control
+* Fix selecting viewport area under FPS counter control (if counter is hidden)
+* Fix shadows issues for materials with position offset in use
+* Fix crash when Custom Code node in materials has no code
+* Fix setting audio source volume on init
+* Fix crash when adding new objects to actor in Start
+* Fix Game window undocking in Editor on select in play mode with mouse auto-center mode enabled
+* Fix scene graph event handling
+* Fixes for DirectX 12 backend
+* Fix `BoundingBox` fields/properties serialization (in C# scripts)
+* Fix typos
+
 ### Version 0.2.6167 - 2 September 2018
 
 * Add **plugins support**
