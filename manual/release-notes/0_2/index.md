@@ -52,6 +52,25 @@ Starting from this version scenes and actors collections will serialize scripts 
 
 ## Changelog
 
+### Version 0.2.6169 - 25 September 2018
+
+* Add support for sampling normal map texture object in Sample Texture node with automatic normal vector unpacking
+* Change default Material Instance editor window panels split to 0.5
+* Fix colliders properties synchronization in prefab instances
+* Fix  texture format autodetect on reimport
+* Fix sample texture node to not use explicit mipmap level in some cases
+* Fix creating comment on selected nodes with Ctrl+S
+* Fix rare error when changing preview model in material preview
+* Fix removing main material node in materials
+* Fix visject surface error on parsing numbers in context menu
+* Fix combobox deselecting
+* Fix crash when creating prefab from model with baked lightmap data
+* Fix importing FBX models without nodes structure but valid meshes inside
+* Fix deadlock in asset managed objects creation in rare casesFix importing textures with alpha channel to ColorRGB with compression enabled (alpha channel was used to premultiply colors which was wrong)
+* Fix pasting text to TextBox when it's empty
+* Fix creating prefab from model that has baked lightmap data (remove it during prefab asset creation)
+* Fix undo on object reparent
+
 ### Version 0.2.6168 - 23 September 2018
 
 Contributors: stefnotch
