@@ -28,7 +28,7 @@ The following table lists the options in the toolstrip and what they do.
 
 The viewport panel shows the preview of the texture. You can navigate in the viewport by using the **mouse buttons** or zoom in/out using **mouse scroll wheel**.
 
-In the upper left corner the viewport contains a widget buttons. By pressing `R/G/B/A` buttons you can toggle texture channels visibility. This is useful for debugging mask textures contents.
+In the upper left corner the viewport contains a widget buttons. By pressing `R/G/B/A` buttons you can toggle texture channels visibility. This is useful for debugging mask textures contents. You can also use buttons for changing the texture filtering in the preview between *Point* and *Linear*. Also, **Mip** button can be used to preview any texture mip map contents.
 
 ### Properties panel
 

@@ -11,7 +11,8 @@
 | Property | Description |
 |--------|--------|
 | **Enabled** | If checked, depth of field effect will be visible. |
-| **Focal Distance** | Distance from the camera (in world units) of the center point of the focus area.  |
+| **Blur Strength** | The blur intensity in the out-of-focus areas. Allows reducing blur amount by scaling down the Gaussian Blur radius. Normalized to range 0-1. |
+| **Focal Distance** | Distance from the camera (in world units) of the center point of the focus area. |
 | **Focal Region** | Controls length of the focal region (in world units). |
 | **Near Transition Range** | Near camera blur transition distance (in world units). |
 | **Far Transition Range** | Far camera blur transition distance (in world units). |

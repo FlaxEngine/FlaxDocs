@@ -58,4 +58,10 @@ Flax physics simulation supports layer-based collision detection. You can specif
 
 This uses the global layers settings and shows them as a layers matrix. Use checkboxes to define the layers collision mask.
 
+## Other
 
+![Other](media/physics-other-options.jpg)
+
+| Property | Description |
+|--------|--------|
+| **Support Cooking At Runtime** | Enables support for cooking physical collision shapes geometry at runtime. Use it to enable generating runtime terrain collision or convex mesh colliders. |

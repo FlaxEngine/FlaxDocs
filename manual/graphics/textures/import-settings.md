@@ -14,4 +14,5 @@
 | **Generate Mip Maps** | If checked, full mip maps chain will be generated for the texture. |
 | **Scale** | Custom scale parameter. Allows to increase or decrese imported texture resolution. The default value is 1. |
 | **Max Size** | The maximum size of imported texture. Used to clip too big textures. |
-
+| **Resize** | If checked, importer will resize texture. Use Size property to define texture width and height. Texture scale property will be ignored. |
+| **Size** | The size of the imported texture. If *Resize* property is checked then texture will be resized during the import to this value. Otherwise it will be ignored. |

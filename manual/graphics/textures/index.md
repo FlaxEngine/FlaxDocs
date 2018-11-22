@@ -21,12 +21,16 @@ Flax Engine supports importing the following list of file types as textures:
 - `.tiff`
 - `.dds`
 - `.hdr`
+- `.raw`
 
 > [!Note]
 > Flax imports only the first frame of animated image files, such as animated gifs or PNGs. They don't animate in Flax; they appear as static images.
 
 > [!Note]
 > For documentation related to cube textures check out [this page](cube-textures.md).
+
+> [!Note]
+> Files of type `.RAW` are assumed to contain 16-bit grayscale raw unsigned normalized values in little-endian byte order (it must be a square, width equals height). You can use them to import heightmaps for your terrain to minimalize quality loss during generating terrain from asset exported by the external tool (choose suggested `HdrRGBA` format with `no compression`).
 
 ## Importing a texture
 
