@@ -5,10 +5,9 @@ Once you create your own plugin you can export it and reuse across other project
 ## Export dialog
 
 Open exporting dialog by using menu item **Tools -> Plugin Exporter**.
-
 ![Plugin Exporter](media/export-plugin.png)
 
-Use this dialog to specify the plugin exporting options such as plugin assembly name, plugin icon or ooutput data options.
+Use this dialog to specify the plugin exporting options such as plugin assembly name, plugin icon or output data options.
 
 During plugin exporting plugin source code is compiled like a normal game scripts project but the assembly name is changed from `Assembly` to enter in dialog and the preprocessor variables used to indicate target platform or the environment are changed and the only used is **FLAX_PLUGIN**.
 

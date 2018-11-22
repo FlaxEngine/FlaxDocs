@@ -1,6 +1,6 @@
 # Plugins
 
-Plugins are separate code libraries that can contain content. Plugins can be used to implement custom features to the engine or extend the editor by adding custom tools. This documentation section explains the basics about creating and using plugins. Follow these notes to learn more about plugins system in Flax.
+Plugins are separate code libraries that can contain content. Plugins can be used to implement custom features to the engine or extend the editor by adding custom tools. This documentation section explains the basics of creating and using plugins. Follow these notes to learn more about plugins system in Flax.
 
 Example plugin project can be found [here](https://github.com/FlaxEngine/ExamplePlugin). Use it as a reference.
 
@@ -68,7 +68,7 @@ If you need to include custom settings for your plugin see [this tutorial](../tu
 
 ## Editor Plugins
 
-**Editor Plugins** can extend the Flax Editor by adding new tools or functionalities. Editor plugin can add new buttons to the Editor GUI and/or override the Custom Editors pipeline or create a custom windows to be used for game content creation. The aount of possiblities is very large. To learn more how to create and use editor plugin see the related tutorial [here](../tutorials/custom-plugin.md).
+**Editor Plugins** can extend the Flax Editor by adding new tools or functionalities. Editor plugin can add new buttons to the Editor GUI and/or override the Custom Editors pipeline or create custom windows to be used for game content creation. The amount of possibilities is very large. To learn more how to create and use editor plugin see the related tutorial [here](../tutorials/custom-plugin.md).
 
 > [!Note]
 > Note: if your plugin uses both **Game Plugin** and **Editor Plugin** types the remember to implement `EditorPlugin.GamePluginType` to point the type of the game plugin.
