@@ -59,6 +59,8 @@ You can use `GetChild<T>()`/`GetScript<T>()` methods in your scripts to access t
 
 In Flax, Scene object is also an Actor so you can access it like any other Actor. This means that Scenes can have their own scripts and be transformed like other objects.
 
+Also, multiple actors can have the same name and you can also move assets whenever you like because Flax uses unique IDs of the objects for tracking. This unlocks your development speed. We don't want to constrain your development to some ancient-design but to allow you to iterate faster and create beautiful games even easier.
+
 ## Scripting
 
 When it comes to game scripting, there is a significant difference between Unreal and Flax.
