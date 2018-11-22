@@ -19,6 +19,18 @@ Flax supports dynamic model LODs switching based on a model instance screen size
 
 ![Model LOD switching](media/model_lods_switching.gif)
 
+By enabling **Use Dithered LOD Transition** option on model materials you can use smooth LOD transitions that reduce popping artifacts and produce a seamless way to reduce geometry complexity in the scene.
+
+![Smooth Model LOD switching](media/lod_transition.gif)
+
+In some cases, eg. during the cut-scenes it may be required to bump the visual quality of the scene and ignore the lower LODs. To achive this you can apply the Model LOD Bias per view using the following C# code:
+
+``
+MainRenderTask.Instance.View.ModelLODBias = 2;
+``
+
+or adjusting it per model instance using **LOD Bias** and **Forced LOD** properties.
+
 ## Importing models
 
 To learn about importing model assets and adjusting import settings read the dedicated [page here](import.md).
