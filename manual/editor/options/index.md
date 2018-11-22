@@ -16,7 +16,7 @@ You can modify the properties and press **Save** icon on a toolstrip to apply th
 
 ![General Options](media/options-general.png)
 
-| column | column |
+| Property | Description |
 |--------|--------|
 | **Auto Reload Scripts On Main Window Focus** | Determines whether reload scripts after a change on main window focus. |
 | **Auto Rebuild CSG** | Determines whether perform automatic CSG rebuild on brush change. |
@@ -27,7 +27,7 @@ You can modify the properties and press **Save** icon on a toolstrip to apply th
 
 ![Interface Options](media/options-interface.png)
 
-| column | column |
+| Property | Description |
 |--------|--------|
 | **Show Selected Camera Preview** | Determines whether show selected camera preview in the edit window. |
 | **Center Mouse On Game Window Focus** | Determines whether center mouse position on window focus in play mode. Helps when working with games that lock mouse cursor. |
@@ -36,8 +36,16 @@ You can modify the properties and press **Save** icon on a toolstrip to apply th
 
 ![Visual Options](media/options-visual.png)
 
-| column | column |
+| Property | Description |
 |--------|--------|
 | **Selection Outline Color0** | The first color of the selection outline gradient. |
 | **Selection Outline Color1** | The second color of the selection outline gradient. |
 | **Enable MSAA For DebugDraw** | Determines whether enable MSAA for DebugDraw primitives rendering. Helps with pixel aliasing but reduces performance. |
+
+## Source Code options
+
+![Source Code Options](media/options-source-code.png)
+
+| Property | Description |
+|--------|--------|
+| **Source Code Editor** | The source code editing IDE to use for project and source files accessing. |
