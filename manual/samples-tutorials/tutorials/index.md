@@ -42,4 +42,12 @@ Use **Ctrl + F** to quickly find what you looking for.
 * [How to blur UI panel background](../../ui/tutorials/blur-background.md)
 * [How to create Main Menu](../../ui/tutorials/create-main-menu.md)
 * [How to create custom control](../../ui/tutorials/create-custom-control.md)
+* [How to import asset from code](../../scripting/tutorials/import-asset-from-code.md)
+* [How to create terrain](../../terrain/tutorials/create-terrain.md)
+* [How to import terrain](../../terrain/tutorials/import-terrain.md)
+* [How to create terrain material](../../terrain/tutorials/terrain-material.md)
+* [How to create terrain from code](../../terrain/tutorials/terrain-from-code.md)
+* [How to create holes in terrain](../../terrain/tutorials/terrain-holes.md)
+* [How to add tessallation to terrain](../../terrain/tutorials/tessellation-and-terrain.md)
+
 

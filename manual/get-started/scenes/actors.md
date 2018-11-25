@@ -154,4 +154,9 @@ This documentation page contains link to all tutorials related to working with a
 <h3><a href="../../ui/control/index.md">UI Control</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="../../terrain/index.md"><img src="../../terrain/media/icon.jpg"></a>
+<h3><a href="../../terrain/index.md">Terrain</a></h3>
+</div>
+
 </div>
