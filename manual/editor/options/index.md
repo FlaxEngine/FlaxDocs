@@ -31,6 +31,7 @@ You can modify the properties and press **Save** icon on a toolstrip to apply th
 |--------|--------|
 | **Show Selected Camera Preview** | Determines whether show selected camera preview in the edit window. |
 | **Center Mouse On Game Window Focus** | Determines whether center mouse position on window focus in play mode. Helps when working with games that lock mouse cursor. |
+| **Focus Game Window On Play** | Determines whether auto-focus game window on play mode start. |
 
 ## Visual options
 

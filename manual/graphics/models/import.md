@@ -73,4 +73,5 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 | **Optimize Keyframes** | If checked, the imported animation channels will be optimized to remove redundant keyframes. This option helps with getting better animation sampling performance. |
 | **Enable Root Motion** | If checked, enables root motion extraction support from this animation. |
 | **Root Node Name** | The custom node name to be used as a root motion source. If not specified the actual root node will be used. |
+| **Animation Index** | The zero-based index for the animation clip to import. If the source file has more than one animation it can be used to pick a desire clip. |
 | **Restore Materials On Reimport** | If checked, the importer will try to restore the model material slots. |
