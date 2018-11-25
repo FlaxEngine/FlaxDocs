@@ -7,4 +7,5 @@ This section contains a set of tutorials related to C# scripting.
 * [How to create a custom editor plugin](custom-plugin.md)
 * [How to create a custom asset type](custom-asset.md)
 * [How to change scene from script](change-scene.md)
+* [How to import asset from code](import-asset-from-code.md)
 
