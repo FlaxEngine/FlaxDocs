@@ -53,6 +53,8 @@ public class MyScript : Script
 }
 ```
 
+Please keep in mind that not only Colliders may be a source of collision but also other actor types eg. Terrain. To handle this use properties **ThisActor** and **OtherActor**.
+
 ## Learn more
 
 See [Script Events](../scripting/events.md) page to learn more about the C# script events.
