@@ -38,8 +38,8 @@ Now you can modify the editor options and keep the globally for all installed en
 Contributors: stefnotch, Sauler
 
 * Add *IndirectLightingIntensity* parameter to lights and to the scene setting (global)
-* Add `ModelActor.HiddenShadow` for rendering only model shadow
-* Add `ModelActor.BoundsScale` for scale its bounds
+* Add `StaticModel.HiddenShadow` for rendering only model shadow
+* Add `StaticModel.BoundsScale` for scale its bounds
 * Add `Border` control
 * Add `BlurPanel` for blurring GUI background with Gaussian blur
 * Add **GUI material preview in Editor**
@@ -126,7 +126,7 @@ Contributors: stefnotch, Sauler
 * Added dedicated editor for Guid type
 * Added `Actor.AddChild<T>`
 * Added `ExpandGroupsAttribute` to help with editor UI rule creating
-* Added showing material slot name in selected ModelActor/AnimatedModel entries list
+* Added showing material slot name in selected StaticModel/AnimatedModel entries list
 * Added showing tooltips for Scripts (use TooltipAttribute on a script class)
 * Added showing tooltips for inlined groups in editor
 * Added ability to create object in editor for null reference in script

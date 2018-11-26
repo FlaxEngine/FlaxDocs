@@ -61,7 +61,7 @@ private void Start()
 	UpdateMesh(model.LODs[0].Meshes[0]);
 
 	// Create or reuse child model actor
-    var childModel = Actor.GetOrAddChild<ModelActor>();
+    var childModel = Actor.GetOrAddChild<StaticModel>();
     childModel.Model = model;
     childModel.LocalScale = new Vector3(100);
     childModel.Entries[0].Material = Material;

@@ -69,9 +69,9 @@ public class TextureFromCode : Script
 		material.GetParam("tex").Value = texture;
 
 		// Add a model actor and use the dynamic material for rendering
-		var modelActor = Actor.GetOrAddChild<ModelActor>();
-		modelActor.Model = Model;
-		modelActor.Entries[0].Material = material;
+		var staticModel = Actor.GetOrAddChild<StaticModel>();
+		staticModel.Model = Model;
+		staticModel.Entries[0].Material = material;
 	}
 
 	void OnDestroy()

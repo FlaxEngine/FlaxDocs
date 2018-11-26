@@ -15,7 +15,7 @@ You can also spawn rigidbodies from C# code at runtime. Here is an example that 
 ```cs
 var ball = RigidBody.New();
 var ballCollider = SphereCollider.New();
-var ballModel = ModelActor.New();
+var ballModel = StaticModel.New();
 ballModel.Model = SphereModel;
 ballModel.Parent = ball;
 ballCollider.Parent = ball;

@@ -70,7 +70,7 @@ public class SetMaterial : Script
 
     void Start()
     {
-        ((ModelActor)Actor).Entries[0].Material = Material;
+        ((StaticModel)Actor).Entries[0].Material = Material;
     }
 }
 ```

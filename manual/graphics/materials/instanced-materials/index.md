@@ -30,7 +30,7 @@ public class MyScript : Script
 		instance.GetParam("Color").Value = new Color(0xff00ff);
 
 		// Assign instance to the material slot
-		((ModelActor)Actor).Entries[0].Material = instance;
+		((StaticModel)Actor).Entries[0].Material = instance;
 	}
 }
 ```
