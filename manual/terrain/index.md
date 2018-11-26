@@ -21,6 +21,7 @@ Flax supports **up to 8 weights for terrain layers**. This means that developers
 * [Terrain Materials](materials.md)
 * [Terrain Editing](editing.md)
 * [Terrain Painting](painting.md)
+* [Terrain Brushes](brushes.md)
 * [Terrain Collision](collision.md)
 * [Importing Terrain](importing.md)
 * [Terrain Holes](holes.md)

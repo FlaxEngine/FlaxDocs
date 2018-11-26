@@ -220,6 +220,7 @@
 ## [Terrain Materials](terrain/materials.md)
 ## [Terrain Editing](terrain/editing.md)
 ## [Terrain Painting](terrain/painting.md)
+## [Terrain Brushes](terrain/brushes.md)
 ## [Terrain Collision](terrain/collision.md)
 ## [Importing Terrain](terrain/importing.md)
 ## [Terrain Holes](terrain/holes.md)
