@@ -9,6 +9,7 @@
    * &lt;scene_name&gt;
      * **EnvProbes** - directory with baked environment probes cube textures
      * **Lightmaps** - directory with baked lightmap textures
+     * **Terrain** - directory with terrain heightmaps and splatmap textures
      * **CSG_Collision.flax** - CSG mesh collision data
      * **CSG_Data.flax** - additional CSG data
      * **CSG_Mesh.flax** - CSG model
