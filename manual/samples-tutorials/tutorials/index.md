@@ -32,6 +32,7 @@ Use **Ctrl + F** to quickly find what you looking for.
 * [How to setup animated model](../../animation/tutorials/setup-animated-model.md)
 * [How to create Anim Graph](../../animation/tutorials/create-anim-graph.md)
 * [How to use Anim Graph](../../animation/tutorials/use-anim-graph.md)
+* [How to setup State Machine](../../animation/tutorials/setup-state-machine.md)
 * [How to change Anim Graph parameter from code](../../animation/tutorials/change-anim-graph-param.md)
 * [How to blend two animations](../../animation/tutorials/blend-anims.md)
 * [How to use Skeleton Mask](../../animation/tutorials/use-skeleton-mask.md)

@@ -151,6 +151,7 @@
 ## [Anim Graph](animation/anim-graph/index.md)
 ### [Editor Interface](animation/anim-graph/interface.md)
 ### [Graph Parameters](animation/anim-graph/parameters.md)
+### [State Machines](animation/anim-graph/state-machine.md)
 ## [Animated Model](animation/animated-model.md)
 ## [Skeleton Mask](animation/skeleton-mask.md)
 ## [Bone Socket](animation/bone-socket.md)
@@ -164,6 +165,7 @@
 ### [How to change Anim Graph parameter from code](animation/tutorials/change-anim-graph-param.md)
 ### [How to blend two animations](animation/tutorials/blend-anims.md)
 ### [How to use Skeleton Mask](animation/tutorials/use-skeleton-mask.md)
+### [How to setup State Machine](animation/tutorials/setup-state-machine.md)
 
 # [Audio](audio/index.md)
 ## [Importing audio](audio/importing.md)

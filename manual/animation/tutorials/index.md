@@ -6,3 +6,4 @@
 * [How to change Anim Graph parameter from code](change-anim-graph-param.md)
 * [How to blend two animations](blend-anims.md)
 * [How to use Skeleton Mask](use-skeleton-mask.md)
+* [How to setup State Machine](setup-state-machine.md)

@@ -16,6 +16,7 @@ This documentation section describes how to work with Flax animations pipeline. 
 * [Anim Graph](anim-graph/index.md)
  * [Editor Interface](anim-graph/interface.md)
  * [Graph Parameters](anim-graph/parameters.md)
+ * [State Machines](anim-graph/state-machine.md)
 * [Animated Model](animated-model.md)
 * [Skeleton Mask](skeleton-mask.md)
 * [Bone Socket](bone-socket.md)
@@ -29,3 +30,4 @@ This documentation section describes how to work with Flax animations pipeline. 
  * [How to change Anim Graph parameter from code](tutorials/change-anim-graph-param.md)
  * [How to blend two animations](tutorials/blend-anims.md)
  * [How to use Skeleton Mask](tutorials/use-skeleton-mask.md)
+ * [How to setup State Machine](tutorials/setup-state-machine.md)
