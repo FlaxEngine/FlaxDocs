@@ -10,6 +10,7 @@ This documentation section explains the basics and shows how to create and use t
 
 * [Editor Interface](interface.md)
 * [Graph Parameters](parameters.md)
+* [State Machines](state-machine.md)
 
 ## Creating Anim Graph
 

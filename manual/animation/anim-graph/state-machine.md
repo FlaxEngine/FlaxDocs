@@ -10,7 +10,7 @@ Using state machine scan greatly simplify the design and implementation process 
 
 ![Anim Graph State Machine Example](../tutorials/media/punching-state-example.gif)
 
-To learn how to create and use state machine in Anim Graph please follow [this tutorial](../tutorials).
+To learn how to create and use state machine in Anim Graph please follow [this tutorial](../tutorials/setup-state-machine.md).
 
 ## State Transitions
 
