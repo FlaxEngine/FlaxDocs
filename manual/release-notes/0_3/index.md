@@ -71,7 +71,7 @@ In some cases it may be useful to play character animation selected by the pose 
 
 ![Terrain World](media/terrain_pic_09.gif)
 
-Creating terrain system was not enough to enable developers to create huge world. While Flax rendering pipeline is already quite optimized for big scenes we applied more optimizations to CPU rendering code and scene ticking code to make it run even faster. This results in **great performance** and **less memory usage**. Scene objects culling has been improved (using *Radix* sort and better data locality). Draw calls sorting is not even faster and Flax does not allocate any memory during scene rendering.
+Creating terrain system was not enough to enable developers to create huge worlds. While Flax rendering pipeline is already quite optimized for big scenes we applied more optimizations to CPU rendering code and scene ticking code to make it run even faster. This results in **great performance** and **less memory usage**. Scene objects culling has been improved (using *Radix* sort and better data locality). Draw calls sorting is not only faster but Flax does not allocate any memory during scene rendering.
 
 ### Scripting Improvements
 
@@ -103,6 +103,11 @@ The last very important change to mention is the **ModelActor** name refactor. N
 We just want to remember that during **Alpha** releases we still may introduce breaking changes to naming or data so please keep in mind that many engine parts may be still subject to change. However, it's not likely to be done since we want to stabilize the engine before **Beta** release.
 
 ## Changelog
+
+### Version 0.3.6172 - 4 December 2018
+
+* Fix materials loading issue
+* Fix missing terrain assets for editor
 
 ### Version 0.3.6171 - 4 December 2018
 
