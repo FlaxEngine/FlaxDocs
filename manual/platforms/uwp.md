@@ -1,5 +1,9 @@
 # Universal Windows Platform (UWP)
 
+## Technical information
+
+Flax is compiled for Universal Windows Platform using Microsoft Visual C++ compiler. It uses v141 toolset and Windows 10 SDK 10.0.17134.0 with Multi-threaded DLL runtime. All dependent libraries are used via static linking by the Flax Engine binary.
+
 ## Build options
 
 ![Build Options](media/build-xbox-one.jpg)

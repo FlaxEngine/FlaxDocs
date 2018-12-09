@@ -2,6 +2,10 @@
 
 ![Title](media/Post_XboxOneSupport1.jpg)
 
+## Technical information
+
+Flax is compiled for Xbox One (via UWP) using Microsoft Visual C++ compiler. It uses v141 toolset and Windows 10 SDK 10.0.17763.0 with Multi-threaded DLL runtime. All dependent libraries are used via static linking by the Flax Engine binary.
+
 ## Build options
 
 ![Build Options](media/build-xbox-one.jpg)

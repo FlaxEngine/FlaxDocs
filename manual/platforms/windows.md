@@ -1,5 +1,12 @@
 # Windows
 
+## Technical information
+
+Flax is compiled for Windows platform using Microsoft Visual C++ compiler. It uses v140 toolset and Windows 8.1 SDK with Multi-threaded DLL runtime.
+
+> [!Note]
+> Flax requires **Visual C++ Redistributable for Visual Studio 2015** to be installed on Windows in order to start.
+
 ## Build options
 
 ![Build Options](media/build-windows.jpg)

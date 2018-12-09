@@ -14,6 +14,8 @@ Flax Engine has some specific hardware and software requirements for running the
 
 ## Software
 
+Flax Engine requires **Visual C++ Redistributable for Visual Studio 2015** to be installed on Windows in order to start. Flax Launcher will check for the missing package and begin installation however if your game is targeting Windows platform please remember to include redistributes installer with it.
+
 Flax Launcher requires [Microsoft .NET Framework 4 Client Profile](http://www.microsoft.com/pl-pl/download/details.aspx?id=24872) or higher.
 We also recommend using Visual Studio 2013, 2015 or 2017 for writing code.
 You can get free version [here](https://www.visualstudio.com/downloads/).
