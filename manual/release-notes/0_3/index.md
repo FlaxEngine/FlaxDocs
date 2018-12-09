@@ -104,6 +104,12 @@ We just want to remember that during **Alpha** releases we still may introduce b
 
 ## Changelog
 
+### Version 0.3.6173 - 9 December 2018
+
+* Fix using custom SSE Intel instructions for float to/from half data conversion
+* Rebuild UWP dependencies libraries to use v141 toolset and Windows 10 SDK 10.0.17134.0
+* Remove VC++ 2015 redistribute libs from Flax binaries (launcher installs them if missing, the game has to package them on its own as documentation states)
+
 ### Version 0.3.6172 - 4 December 2018
 
 * Fix materials loading issue
