@@ -104,6 +104,36 @@ We just want to remember that during **Alpha** releases we still may introduce b
 
 ## Changelog
 
+### Version 0.3.6174 - 18 December 2018
+
+* Add Capsule to basic models toolbox in editor
+* Add **content searching with filters**
+* Add **scene and prefab hierarchy searching**
+* Add content folders hierarchy searching
+* Add `AnimatedModel.ResetAnimation`
+* Add C# API for extracting audio data from AudioClip (internal format, raw PCM or normalized float)
+* Add `Application.VirtualDesktopBounds`
+* Add support for drawing **audio clips previews** and thumbnails
+* Add expand all and collapse all to content and scene tree context menus
+* Add Editor undo limit support to options
+* Add double-click option to import assets settings window to rename the designation filename
+* Add context menu for import file dialog entries (rename, remove, show in explorer)
+* Add restoring editor selection on scripts reload
+* Add support for using virtual assets in AssetPicker
+* Add option to show floor model in animated model and model windows previews
+* Add dock panel windows context menu for quick closing windows
+* Add button for adding/removing new items to collection in editor
+* Add move up/down buttons to collection property items labels
+* Add support for saving and restoring **workspace layout slots**
+* Fix HistoryStack leaks on buffers overflow
+* Fix editor windows layout loading for some specific windows setup for virtual desktop environment
+* Fix building CSG mesh during play mode (disabled to prevent issues)
+* Fix screenshots brightness
+* Fix editor atlas missing icons
+* Fix crash on one of the sample projects
+* Fix character controller move filter for rare issues while moving
+* Minor fixes
+
 ### Version 0.3.6173 - 9 December 2018
 
 * Fix using custom SSE Intel instructions for float to/from half data conversion
