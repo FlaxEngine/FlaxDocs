@@ -10,6 +10,9 @@ Flax supports loading C# libraries (from *.dll* files) and adding references to 
 
 Using plugins allows also to use external .Net libraries to be used within a game. For instance, the developer can use a custom networking library or the social plugin for gameplay implementation. By default Flax loads all .Net modules contained in the **Content** folder (or any subdirectory) and adds references to them for the game projects. During Game Cooking those assemblies can be deployed with the game to be used at runtime.
 
+> [!IMPORTANT]
+> If your plugin collects the C# types information (eg. methods cache or attributes) always remember to release them in Editor on [FlaxEditor.Scripting.ScriptsBuilder.ScriptsReloadBegin](https://docs.flaxengine.com/api/FlaxEditor.Scripting.ScriptsBuilder.html#FlaxEditor_Scripting_ScriptsBuilder_ScriptsReloadBegin) event to prevent crashes during scripts reload in Editor.
+
 ## Plugin Description
 
 Every plugin has to export its description structure that defines the basic plugin properties. Plugin description is used to show the plugin information in [Plugins Window](plugins-window.md). Contents of the plugin description and related comment are listed below:
