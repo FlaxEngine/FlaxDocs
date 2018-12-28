@@ -107,6 +107,8 @@ We just want to remember that during **Alpha** releases we still may introduce b
 ### Version 0.3.6175 - 28 December 2018
 
 * Add support for wireframe GUI material
+* Add printing inner exceptions via DebugLog exceptions reporting service
+* Fix using `ServicePointManager.ServerCertificateValidationCallback` and Mono backend configuration
 * Fix depth clipping for GUI materials
 * Fix Windows version detection for Windows 8.1
 * Fix game window focus on mouse down when using UICanvas in game viewport
