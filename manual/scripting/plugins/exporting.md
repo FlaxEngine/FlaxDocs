@@ -11,6 +11,14 @@ Use this dialog to specify the plugin exporting options such as plugin assembly 
 
 During plugin exporting plugin source code is compiled like a normal game scripts project but the assembly name is changed from `Assembly` to enter in dialog and the preprocessor variables used to indicate target platform or the environment are changed and the only used is **FLAX_PLUGIN**.
 
+## Short name restrictions
+
+Plugin **Short Name** provided via the plugin exporting dialog is used as a plugin assembly name and has to match a certain set of limitations such as:
+* it cannot be empty
+* it cannot contain whitespace characters (spaces, newlines, tabs, etc.)
+* it cannot use restricted names (eg. `Assembly`)
+* it must be a valid path name (it cannot contain invalid path characters such as `?` or `/`).
+
 ## Output Data
 
 After exporting the plugin the output directory will contain: plugin binaries (*.dll* files), plugin description asset (*.json* file), and plugin content (*Content* folder; if checked to export it).
