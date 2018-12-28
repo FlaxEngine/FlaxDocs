@@ -104,6 +104,26 @@ We just want to remember that during **Alpha** releases we still may introduce b
 
 ## Changelog
 
+### Version 0.3.6175 - 28 December 2018
+
+* Add support for wireframe GUI material
+* Fix depth clipping for GUI materials
+* Fix Windows version detection for Windows 8.1
+* Fix game window focus on mouse down when using UICanvas in game viewport
+* Fix crash after creating new scene and opening game settings asset
+* Fix handling Scripts implemented as nested classes
+* Fix crash on scripts reload in editor when using `XmlQueryType`
+* Fix drawing TextRender when using characters from different texture atlases
+* Fix enabling/disabling scene objects in more complex usage cases
+* Fix default values for ToneMap_WhiteTint and ToneMap_FilmBlackClip
+* Fix ray intersection test for `StaticMode` meshes
+* Fix typo in `ThumbnailRequest.States` enum
+* Fix crash when loading script that is not a valid script type anymore
+* Fix plugin assembly name validation and add more useful error messages
+* Fix exporting plugin after changing its name
+* Fix System.Version serialization to Json
+* Fix debug log messages overflow by clipping too long text
+
 ### Version 0.3.6174 - 18 December 2018
 
 * Add Capsule to basic models toolbox in editor
