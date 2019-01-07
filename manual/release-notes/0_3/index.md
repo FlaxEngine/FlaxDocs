@@ -104,6 +104,37 @@ We just want to remember that during **Alpha** releases we still may introduce b
 
 ## Changelog
 
+### Version 0.3.6176 - 7 January 2019
+
+* Add option to serialize scene to compact Json
+* Add support for recording GC collection events in profiler
+* Optimize Scripting Engine object cache
+* Optimize Actor::OnTransformChanged
+* Optimize play mode enter
+* Optimize scenes loading, unloading and saving
+* Optimize object reference Id serialization and caching in Json serializer
+* Optimize C# objects deserialization
+* Optimize SSAO shader
+* Add SSAO fade distance parameter
+* Add TextureDimensions
+* Adjust SSAO fade parameters
+* Fix SSAO sampling radius on huge far plane setting
+* Reduce scene loading and saving memory allocations
+* Fix too dark color of not selected anim graph blend points
+* Fix crash when using custom draw call with mesh that is not initialized yet
+* Fix using View node in materials
+* Fix actor location when spawning it to the parent
+* Fix terrain first splatmap deserialization
+* Fix showing memory allocations in profiler (include sub events allocations)
+* Fix sprite atlas names gather write barrier
+* Fix handling ReadOnly attribute for editors with group inside
+* Fix invoking OnDebugDraw and OnDebugDrawSelected for scripts in editor
+* Fix AssetPicker for SceneReference
+* Fix transform gizmo rotation in World mode
+* Fix updating RigidBody bounds when has no colliders and on collider attach
+* Fix profiler event names collecting (use proper GC write barriers)
+* Fix code documentation comments
+
 ### Version 0.3.6175 - 28 December 2018
 
 * Add support for wireframe GUI material
