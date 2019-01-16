@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://www.flaxengine.com">
+      <a class="navbar-brand" href="https://www.flaxengine.com">
 		<div style="text-align:center; line-height:45px">
 	    <img id="logo" height="40" width="40" src="{{_rel}}logo.png" alt="{{_appName}}" >
 		</div>
