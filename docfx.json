@@ -71,7 +71,7 @@
     "dest": "_site",
 	"globalMetadata": {
 		"_appTitle": "Flax Documentation",
-		"_appFooter": "Copyright © 2017-2018 Wojciech Figat",
+		"_appFooter": "Copyright © 2017-2019 Wojciech Figat",
 		"_enableSearch": true,
 		"_enableNewTab": true,
 		"_disableContribution": false,
