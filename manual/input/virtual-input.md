@@ -40,6 +40,11 @@ public void Update()
 	var mouseX = MouseX.Value;
 	...
 }
+
+public void OnDestroy()
+{
+	FireEvent.Dispose();
+}
 ```
 
 Then if you select the object with this script in Editor you can modify the `FireEvent` and `MouseX` mappings names so it can be modified without editing the code.
