@@ -2,7 +2,7 @@
 
 ![Post Process Effects](media/postFx.png)
 
-**Post effects** (or **PostFx**) are usually applied to the rendered scene image bu before UI drawing.
+**Post effects** (or **PostFx**) are usually applied to the rendered scene image but before UI drawing.
 You can use post-effects to establish look of your scenes and add more realism to them.
 
 ## In this section
