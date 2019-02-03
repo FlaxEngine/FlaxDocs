@@ -38,5 +38,5 @@ Then the transition graph will show. Again, it works like a State Machine graph.
 
 Also, remember about using special **Transition Source State Anim** node that can be added to the transition graph to access the source state animation playback information. It can be used to trigger the animation in a specific moment, for instance when the source state animation is about to end.
 
-![Transition Source State Anim](../tutorials/media/transition -source-state-anim.png)
+![Transition Source State Anim](../tutorials/media/transition%20-source-state-anim.png)
 
