@@ -27,5 +27,5 @@ Foliage actor contains a list of predefined *foliage instance types* and a colle
 
 Foliage internally uses **Quad Tree** structure to achieve great performance in scenes that use more than 200k instances. Quad tree clusters are on scene load or after modifications. Flax supports various tools to optimize the game content such as foliage density scaling, cull distance, LOD bias and minimum screen size per model LOD.
 
-For small grass and rocks, it is recommended to use density scaling. By adjusting `Foliage.GlobalDensityScale` you can apply the global foliage density scale factor and reduce the amount of visible instances using the random pattern. Use it to tweak game performance for slower devices. To learn more about adjusting foliage performance see [this page](density-scaling).
+For small grass and rocks, it is recommended to use density scaling. By adjusting `Foliage.GlobalDensityScale` you can apply the global foliage density scale factor and reduce the amount of visible instances using the random pattern. Use it to tweak game performance for slower devices. To learn more about adjusting foliage performance see [this page](density-scaling.md).
 

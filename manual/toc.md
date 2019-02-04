@@ -175,8 +175,6 @@
 ## [Audio Listener](audio/audio-listener.md)
 ## [Audio Settings](audio/audio-settings.md)
 
-<!--# [Particles](particles/index.md)-->
-
 # [UI](ui/index.md)
 ## [UI Canvas](ui/canvas/index.md)
 ## [UI Control](ui/control/index.md)
@@ -234,6 +232,14 @@
 ### [How to create holes in terrain](terrain/tutorials/terrain-holes.md)
 ### [How to add tessallation to terrain](terrain/tutorials/tessellation-and-terrain.md)
 
+# [Foliage](foliage/index.md)
+## [Foliage Types](foliage/types.md)
+## [Foliage Editing](foliage/editing.md)
+## [Foliage Density Scaling](foliage/density-scaling.md)
+## [Tutorials](foliage/tutorials/index.md)
+### [How to create foliage](foliage/tutorials/create-foliage.md)
+### [How to create foliage from code](foliage/tutorials/foliage-from-code.md)
+
 # [Physics](physics/index.md)
 ## [Colliders](physics/colliders/index.md)
 ### [Box Collider](physics/colliders/box-collider.md)
@@ -259,16 +265,10 @@
 ### [How to create a bouncing ball](physics/tutorials/bouncing-ball.md)
 ### [How to use a trigger](physics/tutorials/use-trigger.md)
 
-<!--# [Navigation](navigation/index.md)-->
-
-<!--# [Networking](networking/index.md)-->
-
 # [Platforms](platforms/index.md)
 ## [Windows](platforms/windows.md)
 ## [UWP](platforms/uwp.md)
 ## [Xbox One](platforms/xbox-one.md)
-
-<!--# [Virtual Reality](virtual-reality/index.md)-->
 
 # [Contributing](contributing/index.md)
 ## [Feature Requests](contributing/feature-requests.md)

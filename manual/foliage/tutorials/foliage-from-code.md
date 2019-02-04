@@ -26,13 +26,13 @@ public class FoliageFromCode : Script
         [Tooltip("The foliage type mode asset.")]
         public Model Model;
 
-        [DefaultValue(10.0f), Tooltip("The spawnign density. Highr values increase amount of spawned instances.")]
+        [DefaultValue(10.0f), Tooltip("The instances spawning density.")]
         public float Density;
     }
 
     [Tooltip("The generated foliage instances bounds (in actor local-space).")]
     public Vector2 Bounds = new Vector2(5000);
-    
+
     [Tooltip("The foliage types collection.")]
     public FoliageType[] Types;
 
