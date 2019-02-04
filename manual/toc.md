@@ -152,6 +152,7 @@
 ### [Editor Interface](animation/anim-graph/interface.md)
 ### [Graph Parameters](animation/anim-graph/parameters.md)
 ### [State Machines](animation/anim-graph/state-machine.md)
+### [Custom Nodes](animation/anim-graph/custom-nodes.md)
 ## [Animated Model](animation/animated-model.md)
 ## [Skeleton Mask](animation/skeleton-mask.md)
 ## [Bone Socket](animation/bone-socket.md)
