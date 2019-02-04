@@ -43,6 +43,24 @@ Destroy(ball, 5.0f);
 | **Mass Scale** | Per-instance scaling of the mass. Used only for auto computed mass, not the overriden value. |
 | **Update Mass When Scale Changes** | If checked, mass will be updated when actor scale changes. Used only when mass is not being overriden. |
 | **Center Of Mass Offset** | Custom offset for the center of mass of this object, from the calculated location. In actor local space. |
+| **Constraints** | The object movement constraint flags that define degrees of freedom are allowed for the simulation of object. |
+
+## Rigidbody Constraints
+
+Dynamic rigidbodies movement and rotation can be locked using the constraints. They can be used to provide a mechanism to lock motion along/around a specific axis or set of axes to constrain object motion.
+
+| Constraints | Description |
+|--------|--------|
+| **None** | No constraints. |
+| **Lock Position X** | Freeze motion along the X-axis. |
+| **Lock Position Y** | Freeze motion along the Y-axis. |
+| **Lock Position Z** | Freeze motion along the Z-axis. |
+| **Lock Rotation X** | Freeze rotation along the X-axis. |
+| **Lock Rotation Y** | Freeze rotation along the Y-axis. |
+| **Lock Rotation Z** | Freeze rotation along the Z-axis. |
+| **Lock Position** | Freeze motion along all axes. |
+| **Lock Rotation** | Freeze rotation along all axes. |
+| **Lock All** | Freeze rotation and motion along all axes. |
 
 ## Kinematic rigidbodies
 
