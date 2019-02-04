@@ -40,6 +40,7 @@ You can modify the properties and press **Save** icon on a toolstrip to apply th
 
 | Property | Description |
 |--------|--------|
+| **Show Selection Outline** | If checked, the selection outline will be visible. |
 | **Selection Outline Color 0** | The first color of the selection outline gradient. |
 | **Selection Outline Color 1** | The second color of the selection outline gradient. |
 | **Enable MSAA For DebugDraw** | Determines whether enable MSAA for DebugDraw primitives rendering. Helps with pixel aliasing but reduces performance. |

@@ -25,6 +25,10 @@ Of course, all those things can be made manually by using Flax Editor C# API and
 | **-std** | Redirects log to the standard process output (std). |
 | **-debug <ip:port>** | Sets the Mono debugger adress and port used for the remote debugging. The default Mono debugger IP=127.0.0.1, Port=41000+(process_id%1000). |
 | **-headless** | Starts without windows, used by CL. |
+| **-d3d12** | Forces to use DirectX 12 rendering backend (if available). |
+| **-d3d11** | Forces to use DirectX 11 rendering backend (if available). |
+| **-d3d10** | Forces to use DirectX 10 rendering backend (if available). |
+| **-null** | Forces to use Null rendering backend. Graphics rendering will be disabled but other game systems will work normally. Highly recommended to use for headless server builds for multiplayer games. |
 
 ## Editor-only options
 
