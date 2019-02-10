@@ -32,17 +32,20 @@ public InputAxis MouseX = new InputAxis("MouseX");
 
 public MyScript()
 {
+	// Register for input action event
 	FireEvent.Triggered += ShootBall;
 }
 
 public void Update()
 {
+	// Read the virtual axis value
 	var mouseX = MouseX.Value;
 	...
 }
 
 public void OnDestroy()
 {
+	// Remember to dispose the action object (it holds reference to your methods)
 	FireEvent.Dispose();
 }
 ```

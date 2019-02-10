@@ -17,9 +17,9 @@ foreach (var gamepad in Input.Gamepads)
 
 ## Gamepads scanning
 
-Flax input layer supports detecting connected gamepads at runtime. Some platforms (eg. Xbox One) do it by auto but on other (eg. Windows) game should handle this. By default, [Input.AutoGamepadsScanInterval](https://docs.flaxengine.com/api/FlaxEngine.Input.html#FlaxEngine_Input_AutoGamepadsScanInterval) property is used to perform an automatic gamepads scan every few seconds. However you may want to disable it and perform a manual scan using [Input.ScanGamepads](https://docs.flaxengine.com/api/FlaxEngine.Input.html#FlaxEngine_Input_ScanGamepads) method.
+Flax input layer supports detecting connected gamepads at runtime. Some platforms (eg. Xbox One) expose proper events for tracking input devices change but on other (eg. Windows) engine handles checking for gamepads change by default.
 
-If you want to detect any gamepads changes (connect/disconnect) use [Input.GamepadsChanged](https://docs.flaxengine.com/api/FlaxEngine.Input.html#FlaxEngine_Input_GamepadsChanged) event. It's always called on the main app thread before the scripts update or during *ScanGamepads* call. This helps with detecting new/old players for local multiplayer games.
+If you want to detect any gamepads changes (connect/disconnect) use [Input.GamepadsChanged](https://docs.flaxengine.com/api/FlaxEngine.Input.html#FlaxEngine_Input_GamepadsChanged) event. It's always called on the main app thread before the scripts update. This helps with detecting new/old players for local multiplayer games.
 
 
 
