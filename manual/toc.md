@@ -176,6 +176,14 @@
 ## [Audio Listener](audio/audio-listener.md)
 ## [Audio Settings](audio/audio-settings.md)
 
+# [Navigation](navigation/index.md)
+## [Nav Mesh Bounds Volume](navigation/nav-mesh-bounds-volume.md)
+## [Nav Link](navigation/nav-link.md)
+## [Navigation Settings](navigation/navigation-settings.md)
+## [Tutorials](navigation/tutorials/index.md)
+### [How to create navmesh](navigation/tutorials/create-navmesh.md)
+### [How to create path following agent](navigation/tutorials/path-following.md)
+
 # [UI](ui/index.md)
 ## [UI Canvas](ui/canvas/index.md)
 ## [UI Control](ui/control/index.md)

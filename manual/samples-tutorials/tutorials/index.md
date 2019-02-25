@@ -43,6 +43,8 @@ Use **Ctrl + F** to quickly find what you looking for.
 * [How to blur UI panel background](../../ui/tutorials/blur-background.md)
 * [How to create Main Menu](../../ui/tutorials/create-main-menu.md)
 * [How to create custom control](../../ui/tutorials/create-custom-control.md)
+* [How to create navmesh](../../navigation/tutorials/create-navmesh.md)
+* [How to create path following agent](../../navigation/tutorials/path-following.md)
 * [How to create foliage](../../foliage/tutorials/create-foliage.md)
 * [How to create foliage from code](../../foliage/tutorials/foliage-from-code.md)
 * [How to import asset from code](../../scripting/tutorials/import-asset-from-code.md)

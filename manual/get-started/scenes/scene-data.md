@@ -13,4 +13,5 @@
      * **CSG_Collision.flax** - CSG mesh collision data
      * **CSG_Data.flax** - additional CSG data
      * **CSG_Mesh.flax** - CSG model
+     * **NavMesh.flax** - Navigation Mesh tiles data
 

@@ -159,4 +159,14 @@ This documentation page contains link to all tutorials related to working with a
 <h3><a href="../../terrain/index.md">Terrain</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="../../navigation/nav-mesh-bounds-volume.md"><img src="../../navigation/media/nav-mesh-bounds-volume-icon.jpg"></a>
+<h3><a href="../../navigation/nav-mesh-bounds-volume.md">Nav Mesh Bounds Volume</a></h3>
+</div>
+
+<div class="frontpage-section">
+<a href="../../navigation/nav-link.md"><img src="../../navigation/media/nav-link-icon.jpg"></a>
+<h3><a href="../../navigation/nav-link.md">Nav Link</a></h3>
+</div>
+
 </div>

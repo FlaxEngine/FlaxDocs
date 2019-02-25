@@ -22,6 +22,8 @@ You can modify the properties and press **Save** icon on a toolstrip to apply th
 | **Auto Reload Scripts On Main Window Focus** | Determines whether reload scripts after a change on main window focus. |
 | **Auto Rebuild CSG** | Determines whether perform automatic CSG rebuild on brush change. |
 | **Auto Rebuild CSG Timeout** | Auto CSG rebuilding timeout (in milliseconds). Use lower value for more frequent and responsive updates but higher complexity. |
+| **Auto Rebuild Nav Mesh** | Determines whether perform automatic NavMesh rebuild on scene change. |
+| **Auto Rebuild Nav Mesh Timeout** | Auto NavMesh rebuilding timeout (in milliseconds). Use lower value for more frequent and responsive updates but higher complexity. |
 | **Enable Editor Analytics** | Enables or disables anonymous editor analytics service used to improve editor experience and the quality. |
 
 ## Interface options
