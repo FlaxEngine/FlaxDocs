@@ -3,7 +3,7 @@
 Anim Graph supports extending it by defining and using **custom nodes**. This feature can be used to implement custom IK solver or to perform very specific animation data processing or using custom animation data source such as live-rigging. Follow this documentation page to learn more about how to create and use custom nodes in Anim Graph. Also, [plugins](../../scripting/plugins/index.md) can ship with custom nodes to be reused across different projects.
 
 > [!NOTE]
-> Anim Graph uses low-level optimizations to reduce memory allocations and memory copies. Extending it with custom nodes requires basic knowledge about unmanaged memory pointers usage and skinned model skeleton nodes/bones.
+> Anim Graph uses low-level optimizations to reduce memory allocations and memory copies. Extending it with custom nodes requires basic knowledge about unmanaged memory pointers usage and skinned model skeleton nodes/bones scheme.
 
 ## Defining custom node archetype
 
@@ -25,7 +25,7 @@ public static class MyAnimGraphNodeFactory
             // Define node title and metadata
             Title = "My Scale Node",
             Description = "",
-            Flags = NodeFlags.AnimGraphOnly,
+            Flags = NodeFlags.AnimGraph,
 
             // Define node variables (per instance)
             // DefaultValues[0] must specify the C# runtime controller typename
@@ -36,6 +36,7 @@ public static class MyAnimGraphNodeFactory
                 "MyScaleNode", // Runtime node typename
                 "Tools", // Group name
                 1.0f, // Custom value stored per node
+                // ..here you can store more per-node data
             },
 
             // Define node visuals and elements
@@ -54,7 +55,7 @@ public static class MyAnimGraphNodeFactory
 In general, classes in Editor assembly or Editor plugins assemblies marked with `AnimationGraph.CustomNodeArchetypeFactory` attribute are scanned to find static parameter-less methods that return `NodeArchetype` type. You can define many node types in the factory.
 
 > [!NOTE]
-> If you custom node doesn't show in the editor or doesn't work as intended see the engine log file for warning information.
+> If your custom node doesn't show in the editor or doesn't work as intended see the engine log file for warning information.
 
 ## Implementing runtime logic controller
 

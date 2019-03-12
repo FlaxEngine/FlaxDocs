@@ -20,13 +20,13 @@ Use the material properties panel and set the material **domain to GUI**. The ge
 
 ## 4. Setup material graph
 
-In this step you need to create a complete material nodes network based on the following screenshot. To learn more about creating materials and using material parameters see the related documentation [here](../../graphics/materials/index.md).
+In this step you need to create a complete material. You can use the nodes network based on the following screenshot. To learn more about creating materials and using material parameters see the related documentation [here](../../graphics/materials/index.md).
 
 ![Setup GUI Material](media/gui-material-setup-2.png)
 
 ## 5. Assign the material
 
-The last step is to assign the created material asset to Image brush property. To do so, set the 
+The last step is to assign the created material asset to `Image` brush property. To do so, set the 
 
 ![Assign Custom GUI Material](media/set-material-brush.png)
 

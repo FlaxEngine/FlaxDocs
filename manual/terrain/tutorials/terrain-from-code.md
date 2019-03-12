@@ -78,7 +78,7 @@ Drag and drop the script to empty actor or use *Properties* window and **Add scr
 
 ## 4. Test it in Play Mode
 
-Press **Play** button on the toolbar or hit *F5* key and see the results. Terrain should quickly generate in a background. The following example uses *virtual* textures for terrain heightmap and splatmaps storage so it uses any I/O and terrain data will be stored in memory only. You can use it in your games that need to generate a terrain at runtime or in the editor.
+Press **Play** button on the toolbar or hit *F5* key and see the results. Terrain should quickly generate in a background. The following example uses *virtual* textures for terrain heightmap and splatmaps storage which means no I/O use. Virtual terrain data is stored in memory only. You can use it in your games that need to generate a terrain at runtime or in the editor.
 
 ![Terrain From Code Results](media/generated-terrain.png)
 
