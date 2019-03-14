@@ -60,6 +60,22 @@ We always keep working on Flax Renderer. This time we've:
 
 ## Changelog
 
+### Version 0.4.6180 - 14 March 2019
+
+* Add `JsonSerializer.Deserialize<T>(string json)` helper method
+* Add `Render.DrawRectangle` with 4 vertex colors
+* Add Show Default Scene option to editor asset previews
+* Add padding for material parameters alignment
+* Add profile event for Distortion pass
+* Add support for virtual RawDataAsset, saving it and editing Data property
+* Add `Scripting.InvokeOnUpdate`
+* Add support for async loading of solution and source code files
+* Remove deprecated ReferencedBy from surface parameter
+* Fix CollisionData cooking
+* Fix DeepClone and utils class name
+* Fix crash when connecting Visject boxes with autokey popup without popup created
+* Fix crash when using Bool value cast in Material
+
 ### Version 0.4.6179 - 26 February 2019
 * Add **Foliage** system
 * Add various foliage tools for **spawning and editing foliage**
