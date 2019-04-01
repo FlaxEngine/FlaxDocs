@@ -60,6 +60,22 @@ We always keep working on Flax Renderer. This time we've:
 
 ## Changelog
 
+### Version 0.4.6181 - 1 April 2019
+
+* Add showing overridden filename for imported asset in import files dialog
+* Add `UIControl.FallbackParentGetDelegate`
+* Add showing UIControls in prefab preview
+* Add showing UIControl in prefab thumbnails
+* Increase default timeout for `Asset.WaitForLoaded` to 30s
+* Use MainCamera if UICanvas uses CameraSpace without camera specified
+* Fix UIControl deserialization without control type
+* Fix UICanvas deserialziation on prefab changes apply
+* Fix crash when removing object from prefab which instance is selected in editor
+* Fix crash when applying prefab changes after removing one of the actors that has child actors
+* Fix prefab diff serialization for members that value has different types
+* Fix various crashes when reloading scripts in Editor
+* Fix importing skinned models that has valid skeleton but no skinning information
+
 ### Version 0.4.6180 - 14 March 2019
 
 * Add `JsonSerializer.Deserialize<T>(string json)` helper method
