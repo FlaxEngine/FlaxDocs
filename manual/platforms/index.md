@@ -17,7 +17,12 @@ This section covers the specific information for different aspects of each platf
 
 ## Supported graphics backends
 
-* DirectX 10, 11, 12
+* DirectX 11 (with DirectX 10/10.1 fallback)
+* DirectX 12
+* Vulkan
+
+> [!TIP]
+> To check on which rendering backend game is running use [GraphicsDevice.RendererType](https://docs.flaxengine.com/api/FlaxEngine.Rendering.GraphicsDevice.html#FlaxEngine_Rendering_GraphicsDevice_RendererType). You can also use [GraphicsDevice.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.Rendering.GraphicsDevice.html#FlaxEngine_Rendering_GraphicsDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.
 
 ## Builded game logs
 
