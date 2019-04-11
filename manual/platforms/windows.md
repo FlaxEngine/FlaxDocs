@@ -32,5 +32,6 @@ Flax is compiled for Windows platform using Microsoft Visual C++ compiler. It us
 | **Run In Background** | Enables game running when application window loses focus. |
 | **Force Single Instance** | Limits maximum amount of concurrent game instances running to one, otherwise user may launch application more than once. |
 | **Override Icon** | Custom icon texture to use for the application (overrides the default one). |
-| **Support DirectX 10** | If checked, game will support DirectX 10 and DirectX 10.1. Otherwise app won't launch if no DirectX 11 supported. This reduces compiled shaders count. |
-
+| **Support DirectX 11** | Enables support for DirectX 11. Disabling it reduces compiled shaders count. |
+| **Support DirectX 10** | Enables support for DirectX 10 and DirectX 10.1. Disabling it reduces compiled shaders count. |
+| **Support Vulkan** | Enables support for Vulkan. Disabling it reduces compiled shaders count. |
