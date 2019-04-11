@@ -137,7 +137,7 @@
 ### [Plugins Window](scripting/plugins/plugins-window.md)
 ### [Plugin Exporting](scripting/plugins/exporting.md)
 ## [Advanced](scripting/advanced/index.md)
-### [Raw Data Asset](scriptingadvanced/raw-data-asset.md)
+### [Raw Data Asset](scripting/advanced/raw-data-asset.md)
 ## [Tutorials](scripting/tutorials/index.md)
 ### [How to create a custom editor](scripting/tutorials/custom-editor.md)
 ### [How to create a custom editor window](scripting/tutorials/custom-window.md)
