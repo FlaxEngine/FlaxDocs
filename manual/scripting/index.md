@@ -37,6 +37,7 @@ Currently the newest **C# 7.2** version is fully supported (uses .Net 4.5).
  * [Plugin Exporting](plugins/exporting.md)
 * [Advanced](advanced/index.md)
  * [Raw Data Asset](advanced/raw-data-asset.md)
+ * [Custom Editor Options](advanced/custom-editor-options.md)
 * [Tutorials](tutorials/index.md)
  * [How to create a custom editor](tutorials/custom-editor.md)
  * [How to create a custom editor window](tutorials/custom-window.md)
