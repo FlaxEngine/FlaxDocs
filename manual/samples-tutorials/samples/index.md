@@ -24,6 +24,9 @@ All samples can be downloaded from the store (via Launcher) or from open-source 
 
 ![Physics Features Tour](media/PhysicsFeaturesTour.png)
 
+## Particles Features Tour
+
+![Particles Features Tour](media/ParticlesFeaturesTour.png)
 
 
 
