@@ -48,6 +48,10 @@ All modules from the **Initialize context** are executed for all particles befor
 
 **Update context** defines the actual particles simulation logic. Modules are executed one after another and perform the simulation logic such as aging particles, applying gravity and simulating collisions.
 
+Update context can be used to animate anything in particles. Here is sth example of particle color animation using the **Color Gradient** node used to sample the gradient over the particle normalized age.
+
+![Particle Color Gradient](media/particle-color-gradient.gif)
+
 ### Render context
 
 ![Particle Emitter Render context](media/particle-emitter-render.png)
