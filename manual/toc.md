@@ -139,6 +139,7 @@
 ## [Advanced](scripting/advanced/index.md)
 ### [Raw Data Asset](scripting/advanced/raw-data-asset.md)
 ### [Custom Editor Options](scripting/advanced/custom-editor-options.md)
+### [Curve](scripting/advanced/curve.md)
 ## [Tutorials](scripting/tutorials/index.md)
 ### [How to create a custom editor](scripting/tutorials/custom-editor.md)
 ### [How to create a custom editor window](scripting/tutorials/custom-window.md)
