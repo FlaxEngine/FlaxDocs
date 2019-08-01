@@ -169,4 +169,9 @@ This documentation page contains link to all tutorials related to working with a
 <h3><a href="../../navigation/nav-link.md">Nav Link</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="../../particles/particle-effect.md"><img src="../../particles/media/particle-effect-icon.jpg"></a>
+<h3><a href="../../particles/particle-effect.md">Particle Effect</a></h3>
+</div>
+
 </div>

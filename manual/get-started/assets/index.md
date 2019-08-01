@@ -117,6 +117,16 @@ This section covers the basic principles of working with assets in Flax.
 <h3><a href="../../ui/fonts/index.md">Font Asset</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="../../particles/particle-emitter.md"><img src="../../particles/media/particle-emitter-icon.jpg"></a>
+<h3><a href="../../particles/particle-emitter.md">Particle Emitter</a></h3>
+</div>
+
+<div class="frontpage-section">
+<a href="../../particles/particle-system.md"><img src="../../particles/media/particle-system-icon.jpg"></a>
+<h3><a href="../../particles/particle-system.md">Particle System</a></h3>
+</div>
+
 </div>
 
 
