@@ -2,7 +2,7 @@
 
 ![Anim Graph](media/title.jpg)
 
-**Anim Graph** asset is used to define the skinned model animation playback logic. It allows to blend the unlimited amount of animations, perform custom bone transformations or advanced animation state machines. The only limit here is your creativity as anim graph editor can be a very powerful tool in right hands. It is one of the key elmenets of the Flaxx animation system.
+**Anim Graph** asset is used to define the skinned model animation playback logic. It allows to blend the unlimited amount of animations, perform custom bone transformations or advanced animation state machines. The only limit here is your creativity as anim graph editor can be a very powerful tool in right hands. It is one of the key elmenets of the Flax animation system.
 
 This documentation section explains the basics and shows how to create and use the Anim Graph. Follow these documentation pages to create your very own character with lifelike animations and behavior.
 

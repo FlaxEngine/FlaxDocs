@@ -3,7 +3,7 @@
 Anim Graph parameters are **public variables** of the graph which can be modified from the outside to configure its logic.
 For example, you can create a parameter called **Speed** and use it to blend between *Run* and *Walk* animations fo your character to implement the proper animation playback for your game.
 
-Uisng graph parameters allow you to implement desired gameplay features and extend the default skeleton animation playback in order to use Inverse-Kinematics (IK), transform single bone or simply blend between the set of animations using the parameters passed from the C# source. It is a very common technique to create the player animation controller script and pass the animation control variables like `Move Forward`, `Move Right`, `Is Jumping` to the graph and implement the proper animation logic.
+Using graph parameters allow you to implement desired gameplay features and extend the default skeleton animation playback in order to use Inverse-Kinematics (IK), transform single bone or simply blend between the set of animations using the parameters passed from the C# source. It is a very common technique to create the player animation controller script and pass the animation control variables like `Move Forward`, `Move Right`, `Is Jumping` to the graph and implement the proper animation logic.
 
 ## Creating and using parameters
 
