@@ -277,6 +277,16 @@
 ### [How to create a bouncing ball](physics/tutorials/bouncing-ball.md)
 ### [How to use a trigger](physics/tutorials/use-trigger.md)
 
+# [Particles](particles/index.md)
+## [Particle Emitter](particles/particle-emitter.md)
+## [Particle System](particles/particle-system.md)
+## [Particle Effect](particles/particle-effect.md)
+## [Particle Parameters](particles/particle-parameters.md)
+## [Particle Materials](particles/particle-materials.md)
+## [Tutorials](particles/tutorials/index.md)
+### [How to fade particles near camera](particles/tutorials/fade-near-camera.md)
+### [How to make soft particles](particles/tutorials/soft-particles.md)
+
 # [Platforms](platforms/index.md)
 ## [Windows](platforms/windows.md)
 ## [UWP](platforms/uwp.md)
