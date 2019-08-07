@@ -24,6 +24,8 @@ By default skybox uses provided cube texture and samples it creating illusion of
 > [!Note]
 > Custom material should be **Two Sided** and has checked option **Disabled Depth Write**.
 
+When editing shader in *Material Window* you can **uncheck Show -> Default Scene** for better live preview.
+
 Here is a sample material that can be used for a simple **2-gradient sky**:
 
 ![Sky Material Example](media/sky-material.jpg)
