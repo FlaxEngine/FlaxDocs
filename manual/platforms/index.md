@@ -9,7 +9,7 @@ This section covers the specific information for different aspects of each platf
 ## Supported platforms
 
 * [Windows Desktop 7, 8, 10](windows.md)
-* [Universal Window (UWP)](uwp.md)
+* [Universal Windows (UWP)](uwp.md)
 * [Xbox One](xbox-one.md)
 
 > [!TIP]
