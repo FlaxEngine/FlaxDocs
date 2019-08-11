@@ -16,6 +16,7 @@ Use **Ctrl + F** to quickly find what you looking for.
 * [How to create a custom editor plugin](../../scripting/tutorials/custom-plugin.md)
 * [How to create a custom asset type](../../scripting/tutorials/custom-asset.md)
 * [How to change scene from script](../../scripting/tutorials/change-scene.md)
+* [How to spawn decal on mouse click](../../scripting/tutorials/decal-on-mouse-click.md)
 * [How to create a prefab](../../get-started/prefabs/creating-prefabs.md)
 * [How to spawn a prefab](../../get-started/prefabs/spawning-prefabs.md)
 * [How to create a bouncing ball](../../physics/tutorials/bouncing-ball.md)
