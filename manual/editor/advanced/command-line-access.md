@@ -30,6 +30,9 @@ Of course, all those things can be made manually by using Flax Editor C# API and
 | **-d3d11** | Forces to use DirectX 11 rendering backend (if available). |
 | **-d3d10** | Forces to use DirectX 10 rendering backend (if available). |
 | **-null** | Forces to use Null rendering backend. Graphics rendering will be disabled but other game systems will work normally. Highly recommended to use for headless server builds for multiplayer games. |
+| **-nvidia** | Hints to use NVIDIA GPU (if available). |
+| **-amd** | Hints to use AMD GPU (if available). |
+| **-intel** | Hints to use Intel GPU (if available). |
 
 ## Editor-only options
 
