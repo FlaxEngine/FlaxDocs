@@ -2,7 +2,7 @@
 
 ## Technical information
 
-Flax is compiled for Windows platform using Microsoft Visual C++ compiler. It uses v140 toolset and Windows 8.1 SDK with Multi-threaded DLL runtime.
+Flax is compiled for Windows platform using Microsoft Visual C++ compiler. It uses v140 toolset and Windows 8.1 SDK with Multi-Threaded DLL runtime.
 
 > [!Note]
 > Flax requires **Visual C++ Redistributable for Visual Studio 2015** to be installed on Windows in order to start.
@@ -25,7 +25,7 @@ Flax is compiled for Windows platform using Microsoft Visual C++ compiler. It us
 
 | Property | Description |
 |--------|--------|
-| **Fullscreen Mode** | If checked, game will use fullscreen mode as default. |
+| **Window Mode** | The default game window mode. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Windowed**</td><td>The window has borders and does not take up the full screen.</td></tr><tr><td>**Fullscreen**</td><td>The window exclusively takes up the full screen.</td></tr><tr><td>**Borderless**</td><td>The window behaves like in Windowed mode but has no borders.</td></tr><tr><td>**Fullscreen Borderless**</td><td>Same as in Borderless, but is of the size of the screen.</td></tr></tbody></table> |
 | **Screen Width** | The default game window width (in pixels). |
 | **Screen Height** | The default game window height (in pixels). |
 | **Resizable Window** | Enables resizing the game window by the user. |

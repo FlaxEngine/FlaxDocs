@@ -25,6 +25,7 @@ You can use the *Content* window to create new settings. Simply right-click in t
 |--------|--------|
 | **Product Name** | The name of your game. |
 | **Company Name** | The name of your company or organization. |
+| **Copyright Notice** | The copyright note used for content signing (eg. source code header). |
 | **Version** | The product version. Separated with dots: *major.minor.build.revision*. |
 | **Icon** | The default application icon. Can be overriden per platform. |
 | **FirstScene** | Reference to the first scene to load on a game startup. |
