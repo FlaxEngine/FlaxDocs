@@ -15,7 +15,7 @@ As you can see on the above image there are several configurations in that file.
 Then in your C# script you can handle this action:
 
 ```cs
-public void Update()
+public override void OnUpdate()
 {
 	if (Input.GetAction("Fire"))
 	{
@@ -36,14 +36,14 @@ public MyScript()
 	FireEvent.Triggered += ShootBall;
 }
 
-public void Update()
+public override void OnUpdate()
 {
 	// Read the virtual axis value
 	var mouseX = MouseX.Value;
 	...
 }
 
-public void OnDestroy()
+public override void OnDestroy()
 {
 	// Remember to dispose the action object (it holds reference to your methods)
 	FireEvent.Dispose();

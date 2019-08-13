@@ -15,7 +15,7 @@ public class SceneChanger : Script
 {
 	public SceneReference AnotherScene;
 
-	private void Update()
+	public override void OnUpdate()
 	{
 		if (Input.GetKeyDown(Keys.G))
 			SceneManager.ChangeSceneAsync(AnotherScene);

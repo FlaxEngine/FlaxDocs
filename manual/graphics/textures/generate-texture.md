@@ -21,7 +21,7 @@ public class TextureFromCode : Script
 	public Material Material;
 	public Model Model;
 
-	private unsafe void Start()
+	public unsafe override void OnStart()
 	{
 		// Ensure that model asset is loaded
 		Model.WaitForLoaded();
@@ -74,7 +74,7 @@ public class TextureFromCode : Script
 		staticModel.Entries[0].Material = material;
 	}
 
-	void OnDestroy()
+	public override void OnDestroy()
 	{
 		// Ensure to cleanup resources
 		FlaxEngine.Object.Destroy(ref _tempTexture);

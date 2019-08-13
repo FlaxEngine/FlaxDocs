@@ -116,13 +116,13 @@ public class MyScript : Script
 {
 	int Count;
 
-	void Start()
+	public override void OnStart()
 	{
 		// Use this for initialization
 		Count = 0;
 	}
 
-	void Update()
+	public override void OnUpdate()
 	{
 		// Update is called once per frame
 		Debug.Log(Count++);

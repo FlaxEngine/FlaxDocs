@@ -46,7 +46,7 @@ public class PlayerHealth : Script
 	[Tooltip("Reference to the player health progress bar control")]
 	public UIControl HealthBar { get; set; }
 
-	private void Start()
+	public override void OnStart()
 	{
 		if (HealthBar == null || !HealthBar.Is<ProgressBar>())
 		{
@@ -58,7 +58,7 @@ public class PlayerHealth : Script
 		progressBar.Value = Health;
 	}
 
-	private void Update()
+	public override void OnUpdate()
 	{
 		var health = Health;
 		if (Input.GetKey(Keys.Q))

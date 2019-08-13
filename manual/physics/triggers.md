@@ -18,10 +18,10 @@ Triggers don't generate collisions.
 
 ## Use a trigger
 
-Triggers, instead of collision events, use dedicated trigger callbacks:
-* `void OnTriggerEnter(Collider c)`
-* `void OnTriggerStay(Collider c)`
-* `void OnTriggerExit(Collider c)`
+Triggers use dedicated trigger events that you can register for:
+* `Trigger.TriggerEnter`
+* `Trigger.TriggerStay`
+* `Trigger.TriggerExit`
 
 To learn more about using triggers see tutorial [How to use a trigger](tutorials/use-trigger.md).
 

@@ -5,7 +5,7 @@ If you're developing for multiple platforms, you often need to write custom code
 ## Example
 
 ```cs
-private void Start()
+public override void OnStart()
 {
 #if FLAX_EDITOR
     Debug.Log("Ups! It's Editor!");

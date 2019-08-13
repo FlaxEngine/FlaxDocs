@@ -82,7 +82,7 @@ public class MyScript : MonoBehaviour
 ```cs
 public class MyScript : Script
 {
-	void Start()
+	public override void OnStart()
 	{
 		Debug.Log("It is Flax!");
 	}

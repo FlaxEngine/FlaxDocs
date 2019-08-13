@@ -48,7 +48,7 @@ By using **ExecuteInEditMode** you can enable your scripts to run in Editor. Thi
 [ExecuteInEditMode]
 public class MyGenerator : Script
 {
-    private void Start()
+    public override void OnStart()
     {
         for (int x = 0; x < 5; x++)
         {

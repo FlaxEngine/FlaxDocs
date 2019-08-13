@@ -52,7 +52,7 @@ private Model _tempModel;
 
 public MaterialBase Material;
 
-private void Start()
+public override void OnStart()
 {
 	// Create dynamic model with a single LOD with one mesh
 	var model = Content.CreateVirtualAsset<Model>();
@@ -67,7 +67,7 @@ private void Start()
     childModel.Entries[0].Material = Material;
 }
 
-private void OnDestroy()
+public override void OnDestroy()
 {
 	FlaxEngine.Object.Destroy(ref _tempModel);
 }

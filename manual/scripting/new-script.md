@@ -32,12 +32,12 @@ namespace GraphicsFeaturesTour
 {
 	public class MyScript : Script
 	{
-		private void Start()
+		public override void OnStart()
 		{
 			// Here you can add code that needs to be called when script is created
 		}
 
-		private void Update()
+		public override void OnUpdate()
 		{
 			// Here you can add code that needs to be called every frame
 		}

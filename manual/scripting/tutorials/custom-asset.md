@@ -100,7 +100,7 @@ public class MyScript : Script
 {
 	public JsonAsset MySettings;
 
-	public void Start()
+	public override void OnStart()
 	{
 		if (MySettings)
 		{

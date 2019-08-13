@@ -68,7 +68,7 @@ public class SetMaterial : Script
     [Tooltip("Material to assign to the model")]
     public Material Material;
 
-    void Start()
+    public override void OnStart()
     {
         ((StaticModel)Actor).Entries[0].Material = Material;
     }

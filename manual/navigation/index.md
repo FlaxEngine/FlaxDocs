@@ -20,7 +20,7 @@ Navigation system exposes a unified API for performing navigation queries via C#
 ```cs
 public class TestFindDistanceToWall : Script
 {
-    void Update()
+    public override void OnUpdate()
     {
         if (Navigation.FindDistanceToWall(Actor.Position, out var hit))
         {

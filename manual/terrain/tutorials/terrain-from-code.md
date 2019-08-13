@@ -25,7 +25,7 @@ public class TerrainFromCode : Script
     [Limit(1, 10), Tooltip("Terrain patches count (in each direction on XZ plane).")]
     public Int2 PatchesCount = new Int2(2, 2);
 
-    private void Start()
+    public override void OnStart()
     {
         // Create new dynamic terrain actor and add it to the scene
         _terrain = FlaxEngine.Terrain.New();

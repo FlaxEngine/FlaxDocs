@@ -18,7 +18,7 @@ Adidtionally you can perform similar tests for single collider using [Collider.R
 This code sends a raycast from the object location and draws a red sphere at the hit location.
 
 ```cs
-public void Update()
+public override void OnUpdate()
 {
     RayCastHit hit;
     if (Physics.RayCast(Actor.Position, Actor.Direction, out hit))

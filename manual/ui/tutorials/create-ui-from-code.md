@@ -21,7 +21,7 @@ public class PlayerHealthFromCode : Script
 
 	private ProgressBar _progressBar;
 
-	private void OnEnable()
+	public override void OnEnable()
 	{
 		_progressBar = new ProgressBar
 		{
@@ -31,13 +31,13 @@ public class PlayerHealthFromCode : Script
 		_progressBar.Value = Health;
 	}
 
-	private void OnDisable()
+	public override void OnDisable()
 	{
 		_progressBar.Dispose();
 		_progressBar = null;
 	}
 
-	private void Update()
+	public override void OnUpdate()
 	{
 		var health = Health;
 		if (Input.GetKey(Keys.Q))

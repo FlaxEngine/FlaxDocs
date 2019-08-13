@@ -32,45 +32,59 @@ Next step is to write a C# script (name it `TriggerSample`). It will handle the 
 public class TriggerSample : Script
 {
     [Serialize]
-	private bool _lightOn;
+    private bool _lightOn;
 
-	public Light LightToControl;
+    public Light LightToControl;
 
-	[NoSerialize]
-	public bool LightOn
-	{
-	    get { return _lightOn; }
-	    set
-	    {
-	        _lightOn = value;
-		    if (LightToControl)
-			    LightToControl.Color = value ? Color.Green : Color.Red;
-	    }
-	}
+    [NoSerialize]
+    public bool LightOn
+    {
+        get { return _lightOn; }
+        set
+        {
+            _lightOn = value;
+            if (LightToControl)
+                LightToControl.Color = value ? Color.Green : Color.Red;
+        }
+    }
 
-	void Start()
-	{
+    public override void OnStart()
+    {
         // Restore state
-	    LightOn = _lightOn;
-	}
+        LightOn = _lightOn;
+    }
+    
+    public override void OnEnable()
+    {
+        // Register for event
+        Actor.As<Collider>().TriggerEnter += OnTriggerEnter;
+        Actor.As<Collider>().TriggerExit += OnTriggerExit;
+    }
+    
+    public override void OnDisable()
+    {
+        // Unregister for event
+        Actor.As<Collider>().TriggerEnter -= OnTriggerEnter;
+        Actor.As<Collider>().TriggerExit -= OnTriggerExit;
+    }
 
-	void OnTriggerEnter(Collider c)
-	{
-        // Check player
-	    if (c is CharacterController)
-	    {
-	        LightOn = true;
-	    }
-	}
+    void OnTriggerEnter(Collider collider)
+    {
+        // Check for player
+        if (collider is CharacterController)
+        {
+            LightOn = true;
+        }
+    }
 
-	void OnTriggerExit(Collider c)
-	{
-	    // Check player
-	    if (c is CharacterController)
-	    {
-	        LightOn = false;
-	    }
-	}
+    void OnTriggerExit(Collider collider)
+    {
+        // Check for player
+        if (collider is CharacterController)
+        {
+            LightOn = false;
+        }
+    }
 }
 ```
 

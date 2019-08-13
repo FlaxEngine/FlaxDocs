@@ -36,7 +36,7 @@ public class FoliageFromCode : Script
     [Tooltip("The foliage types collection.")]
     public FoliageType[] Types;
 
-    private void Start()
+    public override void OnStart()
     {
         // Create new dynamic foliage actor and add it to the scene
         _foliage = Foliage.New();
@@ -51,7 +51,7 @@ public class FoliageFromCode : Script
     }
 
 #if FLAX_EDITOR
-    private void OnDebugDrawSelected()
+    public override void OnDebugDrawSelected()
     {
         // Draw bounds area in editor
         var bounds = new BoundingBox(Vector3.Zero, new Vector3(Bounds.X, 1000.0f, Bounds.Y));

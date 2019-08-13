@@ -20,7 +20,7 @@ The following sample code can be used to instantiate new camera object in a scen
 ```cs
 public class MyScript : Script
 {
-	void Start()
+	public override void OnStart()
 	{
 		var camera = Camera.New();
 		SceneManager.SpawnActor(camera);

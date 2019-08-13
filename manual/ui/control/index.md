@@ -17,7 +17,7 @@ public class MyScript : Script
 {
 	public UIControl MyControl;
 
-	private void Start()
+	public override void OnStart()
 	{
 		MyControl.Control = new Button
 		{

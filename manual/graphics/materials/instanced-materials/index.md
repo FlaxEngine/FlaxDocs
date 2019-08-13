@@ -23,7 +23,7 @@ public class MyScript : Script
 	[Tooltip("Base material asset to override its properties")]
 	public Material BaseMaterial;
 
-	void Start()
+	public override void OnStart()
 	{
 		// Create dynamic material instance and modify parameter
 		var instance = BaseMaterial.CreateVirtualInstance();

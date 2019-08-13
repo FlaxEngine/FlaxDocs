@@ -36,13 +36,13 @@ public class EditAnimGraphParam : Script
 
 	private AnimationGraphParameter _parameter;
 
-	public void Start()
+	public override void OnStart()
 	{
 		// Cache the parameter handle
 		_parameter = Actor.As<AnimatedModel>().GetParam("Head Scale");
 	}
 
-	public void Update()
+	public override void OnUpdate()
 	{
 		// Update the value
 		_parameter.Value = HeadScale;

@@ -7,7 +7,7 @@ Scene objects lifetime is controlled by the Flax but the game can also access **
 Example code that spawn a new point light:
 
 ```cs
-private void Start()
+public override void OnStart()
 {
     var light = PointLight.New();
     light.Color = Color.Blue;
@@ -18,7 +18,7 @@ private void Start()
 You can add new scripts to any objects by using [AddScript](https://docs.flaxengine.com/api/FlaxEngine.Actor.html#FlaxEngine_Actor_AddScript_FlaxEngine_Script_) method:
 
 ```cs
-private void Start()
+public override void OnStart()
 {
     var player = Actor.AddScript<Player>();
     player.HP = 100;
@@ -37,7 +37,7 @@ public class MyScript : Script
 {
     public SpotLight Flashlight;
 
-    private void OnTriggerEnter(Collider c)
+    public override void OnEnable()
     {
         Destroy(ref Flashlight);
     }
@@ -52,7 +52,7 @@ public class AutoRemoveObj : Script
     [Tooltip("The time left to destroy object (in seconds).")]
     public float Timeout = 5.0f;
 
-    void Start()
+    public override void OnStart()
     {
         Destroy(Actor, Timeout);
     }

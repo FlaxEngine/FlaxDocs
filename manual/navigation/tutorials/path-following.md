@@ -28,7 +28,7 @@ public class Agent007 : Script
     private float _pathLength;
     private float _pathPosition;
 
-    void Update()
+    public override void OnUpdate()
     {
         if (!MoveToTarget)
         {

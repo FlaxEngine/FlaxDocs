@@ -16,12 +16,12 @@ public class CustomCurve : Script
     private float start;
     public float speed = 0.1f;
 
-    private void Start()
+    public override void OnStart()
     {
         start = Time.GameTime;
     }
 
-    private void Update()
+    public override void OnUpdate()
     {
         var time = (Time.GameTime - start) * speed;
 

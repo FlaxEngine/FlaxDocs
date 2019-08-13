@@ -11,7 +11,7 @@ public class MyScript : Script
 
     public Color LightColor = Color.Yellow;
 
-    public void Start()
+    public override void OnStart()
     {
     }
 }

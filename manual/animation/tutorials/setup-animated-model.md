@@ -42,7 +42,7 @@ public class SpawnAnimModel : Script
 	public AnimationGraph AnimGraph;
 	public SkinnedModel Model;
 
-	private void Update()
+	public override void OnUpdate()
 	{
 		if (Input.GetMouseButtonDown(MouseButton.Left))
 		{
