@@ -48,9 +48,9 @@ using FlaxEngine.GUI;
 public class MainMenu : Script
 {
 	[Tooltip("The menu buttons.")]
-	public List<Button> Buttons;
+	public List<UIControl> Buttons;
 
-	private void Start()
+	public override void OnStart()
 	{
 		if (Buttons == null || Buttons.Count == 0)
 		{
@@ -60,7 +60,7 @@ public class MainMenu : Script
 
 		foreach (var button in Buttons)
 		{
-			button.ButtonClicked += OnButtonClicked;
+			button.Get<Button>().ButtonClicked += OnButtonClicked;
 		}
 	}
 
