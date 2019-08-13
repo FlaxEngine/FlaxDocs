@@ -34,6 +34,8 @@ Of course, all those things can be made manually by using Flax Editor C# API and
 | **-amd** | Hints to use AMD GPU (if available). |
 | **-intel** | Hints to use Intel GPU (if available). |
 | **-mononolog** | Enables advanced debugging for Mono runtime. Can be used to debug problems with managed scripting runtime. Produces lots of logs. |
+| **-mute** | Disables audio playback and uses Null Audio Backend. |
+| **-skipcompile** | Skips the scripts compilation on editor startup, useful when launching engine from IDE. |
 
 ## Editor-only options
 
