@@ -1,22 +1,20 @@
 # Custom Visject Surfaces
 
-The FlaxEngine has a visual scripting language called Visject. It's used for the [material graph](./../../graphics/materials/material-editor/index.md), the particle graph and the [animation graph](./../../animation/anim-graph/index.md). It offers a nice and easy way to things done.
+The Flax Engine has a visual scripting language called Visject. It's used by [Materials](./../../graphics/materials/material-editor/index.md), [Particles](./../../particles/particle-emitter.md), and [Animations](./../../animation/anim-graph/index.md). It offers a wide range of features to be used by content creation tools.
 
-You can also use it for your own purposes which can range from a simple graphing plugin to a fully blown scripting system.
+You can also use it for your own purposes which can range from a simple graphing plugin to a full-blown scripting system.
 
-These tutorials will go over the process of creating your own Visject surface for an expression graph. Something very simple that takes a few numbers, performs a few calculations and spits out a number. It is recommended to first check out the [custom plugin tutorials](./../../scripting/plugins/index.md).
+These tutorials will go over the process of creating your own Visject surface for an expression graph. Something very simple that takes a few numbers, performs a few calculations and outputs a number. It is recommended to first check out the [custom plugin tutorials](./../../scripting/plugins/index.md).
 
 ![Graphing Calculator](./media/expression-graph-advanced.png)
 
+## Asset
 
-
-## Asset 
-
-The first step is creating our own asset type. This asset type needs a `byte[]` to save the Visject surface. 
+The first step is creating our own asset type. This asset type needs a `byte[]` to save the Visject surface.
 
 It also needs a version of the graph that you can execute in a built game. This part will be covered in a later tutorial.
 
-```csharp
+```cs
 public class ExpressionGraph
 {
     /// <summary>
@@ -30,20 +28,18 @@ public class ExpressionGraph
 
 This asset type will be a [json asset](https://docs.flaxengine.com/api/FlaxEngine.JsonAsset.html).
 
-
-
 ## Asset Proxy
 
-To create and open assets using the Flax Editor, an [asset proxy](https://docs.flaxengine.com/api/FlaxEditor.Content.AssetProxy.html) is required. Since it's an editor file, it needs to be in the editor assembly. To do so, create a new folder called `Editor`. In this folder, create a new asset proxy. 
+To create and open assets using the Flax Editor, an [asset proxy](https://docs.flaxengine.com/api/FlaxEditor.Content.AssetProxy.html) is required. Since it's an editor file, it needs to be in the editor assembly. To do so, create a new folder called `Editor`. In this folder, create a new asset proxy.
 
-```csharp
-public class ExpressionGraphProxy : JsonAssetProxy // JSON files
+```cs
+public class ExpressionGraphProxy : JsonAssetProxy
 {
     /// <inheritdoc />
     public override string Name => "Expression Graph";
 
     /// <inheritdoc />
-    // Will be implemented in the next step
+    // This will be implemented in the next step...
     //public override EditorWindow Open(FlaxEditor.Editor editor, ContentItem item)
     //{
     //    return new ExpressionGraphWindow(editor, (JsonAssetItem)item);
@@ -74,23 +70,24 @@ public class ExpressionGraphProxy : JsonAssetProxy // JSON files
 
 ### Register the proxy
 
-Then, we have to use an editor [plugin] to register the proxy. 
+Then, we have to use an editor [plugin](./../../scripting/plugins/index.md) to register the proxy.
 
 > ![Note]
 >
 > Note: Make sure to add it *before* the `GenericJsonAssetProxy`, which is the last proxy in the list and is used as a fallback proxy.
 
-```csharp
+```cs
 public class ExpressionGraphPlugin : EditorPlugin
 {
     private ExpressionGraphProxy _expressionGraphProxy;
-    
+
     /// <inheritdoc />
     public override void InitializeEditor()
     {
         base.InitializeEditor();
 
         _expressionGraphProxy = new ExpressionGraphProxy();
+
         // Register the proxy
         Editor.ContentDatabase.Proxy.Insert(0, _expressionGraphProxy);
     }
@@ -98,13 +95,13 @@ public class ExpressionGraphPlugin : EditorPlugin
     /// <inheritdoc />
     public override void Deinitialize()
     {
+    	// Cleanup on plugin deinit
         Editor.ContentDatabase.Proxy.Remove(_expressionGraphProxy);
+
         base.Deinitialize();
     }
 }
 ```
-
-
 
 Once this is done, you should be able to create a new expression graph asset in your `Content` folder.
 
@@ -118,36 +115,37 @@ Opening the expression graph is currently rather disappointing. So, in this step
 
 To do so, we create a file in the `Editor` folder that inherits from `VisjectSurfaceWindow`. We'll also need a preview and a surface in the `Editor` folder.
 
-```csharp
+```cs
 public class ExpressionGraphPreview : AssetPreview
 {
     // Preview will be expanded later
     public ExpressionGraphPreview(bool useWidgets) : base(useWidgets)
     {
     }
-    
+
     public ExpressionGraph ExpressionGraph { get; set; }
 }
 ```
 
-```csharp
+```cs
 public class ExpressionGraphSurface : VisjectSurface
 {
     public const int MainNodeGroupId = 1;
     public const int MainNodeTypeId = 1;
-    
+
     // Surface will be expanded later
-    public ExpressionGraphSurface(IVisjectSurfaceOwner owner, Action onSave, FlaxEditor.Undo undo = null, SurfaceStyle style = null, List<GroupArchetype> groups = null) : base(owner, onSave, undo, style, groups)
+    public ExpressionGraphSurface(IVisjectSurfaceOwner owner, Action onSave, FlaxEditor.Undo undo = null, SurfaceStyle style = null, List<GroupArchetype> groups = null)
+    : base(owner, onSave, undo, style, groups)
     {
     }
 }
 ```
 
-```csharp
+```cs
 public class ExpressionGraphWindow : VisjectSurfaceWindow<JsonAsset, ExpressionGraphSurface, ExpressionGraphPreview>
 {
 	/// <summary>
-	/// Allowed parameter types
+	/// The allowed parameter types. Define custom list based on ParameterType enum.
 	/// </summary>
 	private enum NewParameterType
 	{
@@ -168,7 +166,6 @@ public class ExpressionGraphWindow : VisjectSurfaceWindow<JsonAsset, ExpressionG
 
 		[EditorOrder(20), EditorDisplay("General"), Tooltip("It's for demo purposes")]
 		public int DemoInteger { get; set; }
-
 
 		[HideInEditor, Serialize]
 		public List<SurfaceParameter> Parameters
@@ -226,14 +223,14 @@ public class ExpressionGraphWindow : VisjectSurfaceWindow<JsonAsset, ExpressionG
 
 		// Toolstrip
 		_toolstrip.AddSeparator();
-		_toolstrip.AddButton(editor.Icons.BracketsSlash32, () => ShowSourceCode(_asset)).LinkTooltip("Show generated shader source code");
+		_toolstrip.AddButton(editor.Icons.BracketsSlash32, () => ShowJson(_asset)).LinkTooltip("Show asset contents");
 	}
 
 	/// <summary>
-	/// Shows the source code window.
+	/// Shows the JSON contents window.
 	/// </summary>
-	/// <param name="asset">The asset.</param>
-	public static void ShowSourceCode(JsonAsset asset)
+	/// <param name="asset">The JSON asset.</param>
+	public static void ShowJson(JsonAsset asset)
 	{
 		FlaxEditor.Utilities.Utils.ShowSourceCode(asset.Data, "Asset JSON");
 	}
@@ -241,6 +238,7 @@ public class ExpressionGraphWindow : VisjectSurfaceWindow<JsonAsset, ExpressionG
 	/// <inheritdoc />
 	protected override void UnlinkItem()
 	{
+    	// Cleanup
 		_properties.OnClean();
 		_preview.ExpressionGraph = null;
 
@@ -250,6 +248,7 @@ public class ExpressionGraphWindow : VisjectSurfaceWindow<JsonAsset, ExpressionG
 	/// <inheritdoc />
 	protected override void OnAssetLinked()
 	{
+    	// Setup
 		_assetInstance = _asset.CreateInstance<ExpressionGraph>();
 		_preview.ExpressionGraph = _assetInstance;
 
@@ -321,8 +320,6 @@ public class ExpressionGraphWindow : VisjectSurfaceWindow<JsonAsset, ExpressionG
 }
 ```
 
-
-
 ### Saving and Loading
 
 Usually an asset has a `SaveSurface` and a `LoadSurface` method. To implement those methods, we need to call functions from the editor assembly such as `FlaxEditor.Editor.SaveJsonAsset`. However, we can't reference the editor assembly from the game assembly. Thus, we'll put those functions in `ExpressionGraphSurface.cs`.
@@ -331,7 +328,7 @@ The surface loading method tried to load the surface from an ExpressionGraph ins
 
 The surface saving method saves the surface to the asset instance. It then saves the asset instance as json to the hard drive.
 
-```csharp
+```cs
 /// <summary>
 /// For saving and loading surfaces
 /// </summary>
@@ -373,7 +370,7 @@ public static byte[] LoadSurface(JsonAsset asset, ExpressionGraph assetInstance,
         // Add the main node
         // TODO: Change NodeFactory.DefaultGroups to your list of group archetypes
         var node = NodeFactory.CreateNode(NodeFactory.DefaultGroups, 1, surfaceContext, MainNodeGroupId, MainNodeTypeId);
-        
+
         if (node == null)
         {
             Debug.LogWarning("Failed to create main node.");
@@ -411,14 +408,12 @@ public static bool SaveSurface(JsonAsset asset, ExpressionGraph assetInstance, b
 
 To actually use the window, we need to uncomment the following in `ExpressionGraphProxy.cs`
 
-```csharp
+```cs
 public override EditorWindow Open(FlaxEditor.Editor editor, ContentItem item)
 {
     return new ExpressionGraphWindow(editor, (JsonAssetItem)item);
 }
 ```
-
-
 
 Congratulations, you now have your own Visject surface!
 
@@ -430,19 +425,18 @@ Every Visject node has a `NodeArchetype` , which specifies the type of the node.
 
 To add custom nodes, we need to pass our own list of group archetypes to the surface's base constructor.
 
-```csharp
+```cs
 public static readonly List<GroupArchetype> ExpressionGraphGroups = new List<GroupArchetype>();
 
-public ExpressionGraphSurface(IVisjectSurfaceOwner owner, Action onSave, FlaxEditor.Undo undo = null, SurfaceStyle style = null) 
+public ExpressionGraphSurface(IVisjectSurfaceOwner owner, Action onSave, FlaxEditor.Undo undo = null, SurfaceStyle style = null)
     : base(owner, onSave, undo, style, ExpressionGraphGroups) // Note the last parameter
 {
-
 }
 ```
 
 And then we can fill our list of group archetypes with our own ones. We can also use [existing node archetypes](https://github.com/FlaxEngine/FlaxAPI/tree/master/FlaxEditor/Surface/Archetypes).
 
-```csharp
+```cs
 // Our own node archetypes
 public static readonly NodeArchetype[] ExpressionGraphNodes =
 {
@@ -506,19 +500,13 @@ public static readonly List<GroupArchetype> ExpressionGraphGroups = new List<Gro
 };
 ```
 
-
-
 Lastly, we need to update the `LoadSurface` method to use the `ExpressionGraphGroups` instead of `NodeFactory.DefaultGroups`.
 
-```csharp
+```cs
 var node = NodeFactory.CreateNode(ExpressionGraphGroups, 1, surfaceContext, MainNodeGroupId, MainNodeTypeId);
 ```
 
-
-
 ![Custom Nodes](./media/expression-graph-custom-nodes.png)
-
-
 
 ## Compiling and Running
 
@@ -531,11 +519,9 @@ The Visject graph has a number of important parts that need to be compiled into 
   - with their inputs and outputs
 - An output node
 
-
-
 For the surface compilation, add a method to the `ExpressionGraph`. 
 
-```csharp
+```cs
 public void CompileSurface(ExpressionGraph graph)
 {
 	// Code
@@ -544,23 +530,21 @@ public void CompileSurface(ExpressionGraph graph)
 
 Then, to automatically compile the surface, modify the `SaveSurface` method in `ExpressionGraphWindow.cs` to include a call to the surface compilation method.
 
-```csharp
+```cs
  /// <inheritdoc />
  protected override bool SaveSurface()
  {
      // Compile the surface
-     _surface.CompileSurface(_assetInstance); 
+     _surface.CompileSurface(_assetInstance);
      // Save it
      _surface.Save();
      return false;
  }
 ```
 
+The input parameters are stored in the ['Parameters' list](https://docs.flaxengine.com/api/FlaxEditor.Surface.VisjectSurface.html#FlaxEditor_Surface_VisjectSurface_Parameters). The most important parts of a parameter are the following
 
-
-The input parameters are stored in the [`Parameters` list](https://docs.flaxengine.com/api/FlaxEditor.Surface.VisjectSurface.html#FlaxEditor_Surface_VisjectSurface_Parameters). The most important parts of a parameter are the following
-
-```csharp
+```cs
 var param = Parameters[0];
 param.ID; // Used to map the parameter-nodes to the parameters
 param.Name; // The name of the param
@@ -568,9 +552,9 @@ param.Value; // The value of the param
 0 // The index of the param in the list. Used for live-updating the preview.
 ```
 
-The index of the parameter in the `Parameters` list is used for the live-updating the preview in the `SetParameter` function in the file `ExpressionGraphWindow.cs`. 
+The index of the parameter in the `Parameters` list is used for the live-updating the preview in the `SetParameter` function in the file `ExpressionGraphWindow.cs`.
 
-```csharp
+```cs
 protected override void SetParameter(int index, object value)
 {
     // Update the asset value to have nice live preview
@@ -580,11 +564,9 @@ protected override void SetParameter(int index, object value)
 }
 ```
 
-
-
 The nodes are stored in the [`Nodes` list](https://docs.flaxengine.com/api/FlaxEditor.Surface.VisjectSurface.html#FlaxEditor_Surface_VisjectSurface_Nodes). The most important parts of a node are the following
 
-```csharp
+```cs
 node.GroupArchetype.GroupID; // Which group-archetype the node belongs to
 node.Archetype.TypeID; // Which node-archetype
 node.Values; // The internal values of the node
@@ -594,16 +576,12 @@ node.Elements.OfType<OutputBox>(); // Outputs
 
 Every node has a number of [`Box`](https://docs.flaxengine.com/api/FlaxEditor.Surface.Elements.Box.html)es for the inputs and outputs. Those boxes have
 
-```csharp
+```cs
 box.Connections[index]; // The boxes connected to this one
 box.Archetype.ValueIndex; // Index of the box in node.Values[ ]
 ```
 
-
-
 Lastly, the output node, or main node, can be obtained using [`FindNode(MainNodeGroupId, MainNodeTypeId)`](https://docs.flaxengine.com/api/FlaxEditor.Surface.VisjectSurface.html#collapsible-FlaxEditor_Surface_VisjectSurface_FindNode_System_UInt16_System_UInt16_).
-
-
 
 ### Example Implementation
 
@@ -615,15 +593,13 @@ A simple way to execute a Visject surface at runtime is making a copy of it and 
 
 To copy a surface, iterate over it in a *depth first* manner. This makes it easy to execute the nodes in a correct order, where every node gets executed *after* the nodes before it have finished. It also conveniently detects cycles in the graph.
 
-An example implementation can be found in the [custom Visject surface sample project].
-
-
+An example implementation can be found in the [custom Visject surface sample project](https://github.com/stefnotch/flax-custom-visject-plugin).
 
 ### Preview
 
 A simple text only preview
 
-```csharp
+```cs
 public class ExpressionGraphPreview : AssetPreview
 {
     public ExpressionGraphPreview(bool useWidgets) : base(useWidgets)
@@ -669,11 +645,9 @@ The final result should look similar to this
 
 ![End result](./media/expression-graph.png)
 
-
-
 ## Going Further
 
-A simple idea for going further is to evaluate the same graph multiple times. For example, the material graph is evaluated for every single pixel on the screen. 
+A simple idea for going further is to evaluate the same graph multiple times. For example, the material graph is evaluated for every single pixel on the screen.
 
 So, a simple graphing calculator can be created by adding a custom "Get X-Coordinate" node and then evaluating the graph once for every value on the x-axis. Then, the output can be plotted by drawing line segments through those points.
 

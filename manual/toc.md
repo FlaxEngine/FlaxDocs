@@ -52,6 +52,7 @@
 ## [Advanced](editor/advanced/index.md)
 ### [Extending Flax Editor](editor/advanced/extending-editor.md)
 ### [Command Line Access](editor/advanced/command-line-access.md)
+### [Custom Visject Surfaces](editor/advanced/custom-visject-surface.md)
 
 # [Graphics](graphics/index.md)
 ## [Rendering overview](graphics/overview/index.md)
