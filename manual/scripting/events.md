@@ -60,3 +60,7 @@ Engine main loop update is highly configurable and supports performing the game 
 On game end all scripts are disabled and **OnDisable** event is called when removing the object from gameplay. Then during actual object destruction, the **OnDestroy** is invoked. Also, if the script gets inactive (eg. someone disables it or one of its parents in hierarchy) then engine invokes **OnDisable**. The disabled script can be activated again and receive *OnEnable* to begin being part of the gameplay logic.
 
 Event OnDestroy can be called only once on a script. Flax does not uses script anymore after OnDestroy event invocation.
+
+### Events in Editor
+
+Flax does not invoke any script events during `edit-time` (when the scene is loaded and user modifies it) except **OnDebugDraw** and **OnDebugDrawSelected**. Only when in-build play mode starts the actual game logic is being simulated. However, if the game script wants to receive events during editing it can be marked with `[ExecuteInEditMode]` attribute. Then all events will be called normally.
