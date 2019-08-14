@@ -10,11 +10,20 @@ This page breaks down all the available material properties. These options are a
 
 | Property | Description |
 |--------|--------|
-| **Domain** | Specifies how material is going to be used. Certain materials used for postFx or 2D rendering requrie additional instructions for the rendering pipeline to be generated. Because of this, it's important to specify material domain that covers those cases. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Surface**</td><td>Used for object's surface materials (e.g. meshes). This is a default value.</td></tr><tr><td>**Post Process**</td><td>Used for the [Post Process Materials](../../post-effects/post-fx-materials.md)</td></tr><tr><td>**Decal**</td><td>Used for the [Decal Materials](../../decals/index.md)</td></tr><tr><td>**GUI**</td><td>Used for custom shader rendering in GUI.</td></tr></tbody></table>|
-| **Blend Mode** | Specifies how blend material with the environment. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Opaque**</td><td>The opaque material. Used during *GBuffer* pass rendering. This is a default value.</td></tr><tr><td>**Transparent**</td><td>The transparent material. Used during *Forward* pass rendering.</td></tr><tr><td>**Additive**</td><td>The additive blend. Material color is used to add to color of the objects behind the surface. Used during Forward pass rendering.</td></tr><tr><td>**Multiply**</td><td>The multiply blend. Material color is used to multiply color of the objects behind the surface. Used during Forward pass rendering.</td></tr></tbody></table>To learn more about blend modes see the related documentation [here](../blend-modes/index.md).|
+| **Domain** | Specifies how material is going to be used. Certain materials used for postFx or 2D rendering requrie additional instructions for the rendering pipeline to be generated. Because of this, it's important to specify material domain that covers those cases. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Surface**</td><td>The surface material. Can be used to render the scene geometry including models and skinned models.</td></tr><tr><td>**Post Process**</td><td>The [Post Process Material](../../post-effects/post-fx-materials.md). Can be used to perform custom post-processing of the rendered frame.</td></tr><tr><td>**Decal**</td><td>The [Decal Material](../../decals/index.md). Can be used to apply custom overlay or surface modifications to the object surfaces in the world.</td></tr><tr><td>**GUI**</td><td>The GUI shader. Can be used to draw custom control interface elements or to add custom effects to the GUI.</td></tr><tr><td>**Terrain**</td><td>The terrain shader. Can be used only with landscape chunks geometry that use optimized vertex data and support multi-layered blending.</td></tr><tr><td>**Particle**</td><td>The particle shader. Can be used only with particles geometry (sprites, trails and ribbons). Supports reading particle data on a GPU.</td></tr></tbody></table>|
 | **Shading Model** | Specifies how material inputs and properties are combined to result the final surface color. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Unlit**</td><td>The unlit material. Emissive channel is used as an output color. Can perform custom lighting operations or just glow. Won't be affected by the lighting pipeline.</td></tr><tr><td>**Lit**</td><td>The default lit material. The most common choice for the material surfaces.</td></tr><tr><td>**Subsurface**</td><td>The subsurface material. Intended for materials like vax or skin that need light scattering to transport simulation through the object.</td></tr></tbody></table>To learn more about shading models see the related documentation [here](../shading-models/index.md).|
-| **Two Sided** | If checked, geometry using this material will be rendered with triangle faces culling disabled. This is commonly used option for foliage materials to keep from having double up the number of rendered polygons. However, two sided materials may not work correcly with static lighting, since mesh still uses only a single lightmap UVs channel. As a result, two sided materials with static lightmap wll be shaded the same on both sides.|
+| **Blend Mode** | Specifies how blend material with the environment. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Opaque**</td><td>The opaque material. Used during *GBuffer* pass rendering. This is a default value.</td></tr><tr><td>**Transparent**</td><td>The transparent material. Used during *Forward* pass rendering.</td></tr><tr><td>**Additive**</td><td>The additive blend. Material color is used to add to color of the objects behind the surface. Used during Forward pass rendering.</td></tr><tr><td>**Multiply**</td><td>The multiply blend. Material color is used to multiply color of the objects behind the surface. Used during Forward pass rendering.</td></tr></tbody></table>To learn more about blend modes see the related documentation [here](../blend-modes/index.md).|
+
+## Rendering
+
+![Rendering](../media/properties-rendering.png)
+
+| Property | Description |
+|--------|--------|
+| **Cull Mode** | Defines the primitives culling mode used during geometry rendering. |
 | **Wireframe** | If checked, geometry using this material will be rendered in wireframe mode without a solid triangles fill. |
+| **Depth Test** | If checked, enables performing depth test during material rendering. |
+| **Depth Write** | If checked, enables writing to the depth buffer during material rendering. |
 
 ## Transparency
 
@@ -22,10 +31,9 @@ This page breaks down all the available material properties. These options are a
 
 | Property | Description |
 |--------|--------|
-| **Lighting** | Specifies lighting mode for transparent materials. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**None**</td><td>Shading is disabled.</td></tr><tr><td>**Single Directional Per Pixel**</td><td>Shading is performed per pixel for single directional light.</td></tr></tbody></table>|
-| **Disable Depth Test** | If checked, disables depth test when rendering material. |
-| **Disable Reflections** | If checked, disables reflections when rendering material. |
-| **Disable Distortion** | If checked, disables distortion effect when rendering material. |
+| **Enable Reflections** | If checked, enables reflections when rendering material. |
+| **Enable Fog** | If checked, enables fog effect when rendering material. |
+| **Enable Distortion** | If checked, enables distortion effect when rendering material. |
 | **Opacity Threshold** | Controls opacity values clipping point. |
 
 ## Tessellation
