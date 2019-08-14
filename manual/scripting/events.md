@@ -39,3 +39,24 @@ The following table lists all the available event functions to override from the
 | **void OnDebugDraw()** | Called during drawing debug shapes in editor. Use [DebugDraw](https://docs.flaxengine.com/api/FlaxEngine.DebugDraw.html). |
 | **void OnDebugDrawSelected()** | Called during drawing debug shapes in editor when the object is selected. Use [DebugDraw](https://docs.flaxengine.com/api/FlaxEngine.DebugDraw.html). |
 
+## Order of execution for event functions
+
+Script events are invoked in the following order:
+
+![Script Events Order](media/Script Events.png)
+
+### Initialization
+
+Every created and added to *Actor* script receives **OnAwake**. If Script and its parent are active in the hierarchy then **OnStart** and **OnEnable** are being called (on game start or object spawn). Otherwise, this call is postponed until someone enables that script.
+
+Events OnAwake and OnStart can be called only once on a script. OnStart is always called before the first OnEnable.
+
+### Game Logic
+
+Engine main loop update is highly configurable and supports performing the game update, physics update and drawing at different framerates. This means that update, fixed update, and a draw might be desynchronized and not called in the same order. Event **OnUpdate** is called during the game update, then is followed by **OnLateUpdate**. During physics update engine invokes **OnFixedUpdate**. During rendering engine can invoke **OnDebugDraw** and **OnDebugDrawSelected** (used by the editor).
+
+### Deinitialization
+
+On game end all scripts are disabled and **OnDisable** event is called when removing the object from gameplay. Then during actual object destruction, the **OnDestroy** is invoked. Also, if the script gets inactive (eg. someone disables it or one of its parents in hierarchy) then engine invokes **OnDisable**. The disabled script can be activated again and receive *OnEnable* to begin being part of the gameplay logic.
+
+Event OnDestroy can be called only once on a script. Flax does not uses script anymore after OnDestroy event invocation.
