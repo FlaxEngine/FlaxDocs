@@ -4,4 +4,5 @@ This section contains more advanced topic about games development with Flax Engi
 
 * [Extending Flax Editor](extending-editor.md)
 * [Command Line Access](command-line-access.md)
+* [Custom Visject Surfaces](custom-visject-surface.md)
 
