@@ -43,7 +43,7 @@ The following table lists all the available event functions to override from the
 
 Script events are invoked in the following order:
 
-![Script Events Order](media/Script Events.png)
+![Script Events Order](media/script-events.png)
 
 ### Initialization
 
