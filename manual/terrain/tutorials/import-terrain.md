@@ -28,6 +28,8 @@ Use Main Menu button **Scene -> Create terrain**.
 
 Use this dialog to adjust the initial terrain properties. Select **chunk size** and amount of **patches** to create. Most of the following properties can be adjusted later. This window supports creating terrain without imported heightmap as shown in [this tutorial](create-terrain.md).
 
+To learn more about terrain patches, chunks and technical details see related documentation [here](../index.md).
+
 ![Create Terrain Dialog](media/import-terrain-dialog.png)
 
 ## 4. Generate terrain

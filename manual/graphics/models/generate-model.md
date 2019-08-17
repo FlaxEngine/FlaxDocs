@@ -45,7 +45,7 @@ private void UpdateMesh(Mesh mesh)
 }
 ```
 
-### 3. Create model asset and model actor in `Start` function
+### 3. Create model asset and model actor in `OnStart` function
 
 ```cs
 private Model _tempModel;
