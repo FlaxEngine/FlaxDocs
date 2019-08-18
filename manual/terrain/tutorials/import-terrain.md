@@ -10,6 +10,8 @@ When importing `.RAW` files importer will hint to use *HdrRGBA* format without c
 
 Flax supports **any heightmap size** as a heightmap.
 
+![Import Heightmap Options](media/import-heightmap-options.png)
+
 If you don't have any heightmap you can download this image:
 
 ![Sample heightmap](media/heightmap4.png)
