@@ -303,6 +303,7 @@
 
 # [Release Notes](release-notes/index.md)
 ## [Alpha](release-notes/index.md#alpha)
+### [0.5 release notes](release-notes/0_5/index.md)
 ### [0.4 release notes](release-notes/0_4/index.md)
 ### [0.3 release notes](release-notes/0_3/index.md)
 ### [0.2 release notes](release-notes/0_2/index.md)
