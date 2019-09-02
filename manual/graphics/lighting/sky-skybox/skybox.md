@@ -21,8 +21,9 @@ Using a **Skybox** creates a background for your scene. Typical skybox contains 
 
 By default skybox uses provided cube texture and samples it creating illusion of 3D environment. However, this behaviour can be overridden by specifying a **custom material**. Then it will be rendered with a sphere model.
 
-> [!Note]
-> Custom material should be **Two Sided** and has checked option **Disabled Depth Write**.
+To make create such a material ensure to:
+* Change **Cull Mode** to **Two Sided**
+* Uncheck **Depth Write** option
 
 When editing shader in *Material Window* you can **uncheck Show -> Default Scene** for better live preview.
 
