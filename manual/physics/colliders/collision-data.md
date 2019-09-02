@@ -34,3 +34,14 @@ var path = "Content/MyModel";
 var model = Content.LoadAsync<Model>(path);
 FlaxEditor.Editor.CookMeshCollision(path + "_Collision", CollisionDataType.ConvexMesh, model);
 ```
+
+> [!TIP]
+> When invoking the collision data cooking, please ensure to invoke it on a separate thread or via async job to not block the game thread.
+
+If your game generates the geoemtry at runtime and you need to use collision for virtual models then you can enable physics settings option **Support Cooking At Runtime** (see [Physics Settings](../physics-settings.md)) and use the following code to create a virtual collision data asset:
+
+```cs
+var collisionData = Content.CreateVirtualAsset<CollisionData>();
+collisionData.CookCollision(CollisionDataType.TriangleMesh, myModel);
+```
+
