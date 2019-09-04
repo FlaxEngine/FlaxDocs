@@ -107,6 +107,23 @@ To learn more about Flax.Build see [this blog post](https://flaxengine.com/blog/
 
 ## Changelog
 
+### Version 0.5.6185 - 5 September 2019
+
+* Add UpdateMesh and UpdateTriangles methods to Mesh that use List&lt;T&gt;
+* Add `Collider.ComputePenetration`
+* Add `CollisionData.CookCollision` from custom geometry buffers
+* Add default value attributes to actors properties
+* Update ofbx library
+* Remove SceneRenderTask.Flags and SceneRenderTask.Mode (use View structure)
+* Optimize CollisionCooking to allocate less memory in certain cases
+* Fix using Assert library from FlaxAPI
+* Fix Sky shader to place pixels always on max depth
+* Fix mouse position issues in locked cursor mode in editor
+* Fix FirstScene setting in Game Settings
+* Fix crash when using physics overlap test with too many results
+* Fix errors when editing material instance parameters
+* Fix parsing values on different system language settings
+
 ### Version 0.5.6184 - 19 August 2019
 
 Contributors: JimiVacarians, stefnotch
