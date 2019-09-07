@@ -55,7 +55,7 @@ As Flax is often used in various scenarios and we want to keep very agile here i
 * `-intel` - hints to use Intel GPU if available
 * `-mononolog` - enables advanced debugging for Mono runtime
 
-Additionally, the startup command-line arguments are exposed to C# API via `Application.CommandLine` for your applications.
+Additionally, the startup command-line arguments are exposed to C# API via `Platform.CommandLine` for your applications.
 
 ### New material nodes
 

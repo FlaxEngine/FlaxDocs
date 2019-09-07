@@ -41,10 +41,10 @@ Now you can use Flax Editor to open and edit the settings. Simply **double click
 
 ### 4. Access settings at runtime
 
-Custom Settings can be accessed at runtime via `Application.GetCustomSettings` method that returns the `JsonAsset` linked by the given key (this example code uses key *MyPlugin*).
+Custom Settings can be accessed at runtime via `Platform.GetCustomSettings` method that returns the `JsonAsset` linked by the given key (this example code uses key *MyPlugin*).
 
 ```cs
-var settings = Application.GetCustomSettings("MyPlugin");
+var settings = Platform.GetCustomSettings("MyPlugin");
 if (settings)
 {
     Debug.Log("Settings: " + settings.CreateInstance<MySettings>().Speed);

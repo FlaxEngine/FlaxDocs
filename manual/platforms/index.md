@@ -13,7 +13,7 @@ This section covers the specific information for different aspects of each platf
 * [Xbox One](xbox-one.md)
 
 > [!TIP]
-> To check on which platform game is running use [Application.Platform](https://docs.flaxengine.com/api/FlaxEngine.Application.html#FlaxEngine_Application_Platform). You can also use [preprocessor variables](../scripting/preprocessor.md) in your code.
+> To check on which platform game is running use [Platform.Platform](https://docs.flaxengine.com/api/FlaxEngine.Platform.html#FlaxEngine_Application_Platform). You can also use [preprocessor variables](../scripting/preprocessor.md) in your code.
 
 ## Supported graphics backends
 
