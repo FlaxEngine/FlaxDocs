@@ -49,3 +49,8 @@ To learn more about using terrain brushes see the related documentation page [he
 
 Terrain heightmap editing using **Edit** tool allows to add or remove terrain patch and modify single terrain chunk properties. Use it to expand your terrain or remove unused terrain parts. Also, using *Edit Chunk* mode you can pick a single terrain chunk, view its location and override the material.
 
+### Exporting terrain
+
+![Export Terrain](media/terrain-export-heightmap.jpg)
+
+Terrain created in the editor can be exported to image files using the **Export terrain** mode. Once terrain selected you can use export button to select the output directory for the terrain heightmap. Exported terrain heightmap uses 16-bit PNG file format to store the heights as normalized to grayscale in range 0-1.
