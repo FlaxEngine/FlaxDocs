@@ -107,6 +107,12 @@ To learn more about Flax.Build see [this blog post](https://flaxengine.com/blog/
 
 ## Changelog
 
+### Version 0.5.6186 - 27 September
+
+* Update ofbx
+* Fix Lerp in Anim Graph and CPU particles graph
+* Fix importing skinned models from fbx (invalid offset matrix calculations)
+
 ### Version 0.5.6185 - 5 September 2019
 
 * Add UpdateMesh and UpdateTriangles methods to Mesh that use List&lt;T&gt;
