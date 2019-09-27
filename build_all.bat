@@ -1,7 +1,5 @@
 @echo off
 
-call update_api.bat
-
 echo Preparing API metadata...
 docfx\docfx.exe metadata
 

@@ -54,25 +54,6 @@ status() {
 	fi
 }
 
-update_api() {
-	mkdir -p src
-	cd src
-	
-	if [ -d "FlaxAPI" ]; then
-		echo "Updating Flax API..."
-		cd FlaxAPI
-		git reset --hard origin/master
-		git pull origin master
-		cd ..
-	else
-		echo "Downloading Flax API..."
-		git clone https://github.com/FlaxEngine/FlaxAPI.git
-	fi
-
-	echo "Source is ready!"
-	cd ..
-}
-
 update() {
 	echo "Updating Flax Docs..."
 	git pull origin master
@@ -80,8 +61,6 @@ update() {
 	
 	chmod +x docs.sh
 	chmod +x serve.sh
-	
-	update_api
 }
 
 build() {
