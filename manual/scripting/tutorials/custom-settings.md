@@ -8,7 +8,7 @@ To learn more about custom settings see related page [here](../../editor/game-se
 
 The first step is to prepare the actual layout for the custom settings.
 Flax uses C# objects that are a very good way to define data, serialize, and access from C# code.
-Here is a sample class that defines a set of settings used by the example game. Create this class in your game project (Assembly project).
+Here is a sample class that defines a set of settings used by the example game. Create this class in your game project (Game project).
 
 ```cs
 public class MySettings

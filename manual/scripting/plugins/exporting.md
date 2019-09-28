@@ -16,7 +16,7 @@ During plugin exporting plugin source code is compiled like a normal game script
 Plugin **Short Name** provided via the plugin exporting dialog is used as a plugin assembly name and has to match a certain set of limitations such as:
 * it cannot be empty
 * it cannot contain whitespace characters (spaces, newlines, tabs, etc.)
-* it cannot use restricted names (eg. `Assembly`)
+* it cannot use restricted names (eg. `Game`)
 * it must be a valid path name (it cannot contain invalid path characters such as `?` or `/`).
 
 ## Output Data
