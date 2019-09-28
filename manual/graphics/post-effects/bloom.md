@@ -14,4 +14,4 @@
 | **Intensity** | Bloom effect strength. Value 0 disabled is, while higher values increase the effect. |
 | **Threshold** | Minimum pixel brightness value to start blowing. Values below the threshold are skipped. |
 | **Blur Sigma** | This affects the fall-off of the bloom. It's the standard deviation (sigma) used in the Gaussian blur formula when calculating the kernel of the bloom. |
-| **Scale** | Size of the blur. |
+| **Limit** | Bloom effect brightness limit. Pixels with higher luminance will be capped to this brightness level. |

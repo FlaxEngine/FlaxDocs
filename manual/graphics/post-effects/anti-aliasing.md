@@ -17,9 +17,9 @@ Temporal Anti-Aliasing (**TAA**) is advanced effect where frames are accumulated
 | Property | Description |
 |--------|--------|
 | **Jitter Spread** | The diameter (in texels) inside which jitter samples are spread. Smaller values result in crisper but more aliased output, whilst larger values result in more stable but blurrier output. |
+| **Sharpness** | Controls the amount of sharpening applied to the color buffer. TAA can induce a slight loss of details in high frequency regions. Sharpening alleviates this issue. High values may introduce dark-border artifacts. |
 | **Stationary Blending** | The blend coefficient for stationary fragments. Controls the percentage of history sample blended into final color for fragments with minimal active motion. |
 | **Motion Blending** | The blending coefficient for moving fragments. Controls the percentage of history sample blended into the final color for fragments with significant active motion. |
-| **Sharpness** | TAA can induce a slight loss of details in high frequency regions. Sharpening alleviates this issue. |
 
 ## Subpixel Morphological Anti-Aliasing
 

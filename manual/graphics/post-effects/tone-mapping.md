@@ -21,8 +21,5 @@ Using tone mapper options allows to adjust final filmic S-curve shape and balanc
 |--------|--------|
 | **White Temperature** | Adjusts the white balance in relation to the temperature of the light in the scene. When the light temperature and this one match the light will appear white. When a value is used that is higher than the light in the scene it will yield a "warm" or yellow color, and, conversely, if the value is lower, it would yield a "cool" or blue color. The default value is `6500`. |
 | **White Tint** | Adjusts the white balance temperature tint for the scene by adjusting the cyan and magenta color ranges. Ideally, this setting should be used once you've adjusted the white balance temporature to get accurate colors. Under some light temperatures, the colors may appear to be more yellow or blue. This can be used to balance the resulting color to look more natural. The default value is `0`. |
-| **Film Slpe** | Adjusts the steepness of the S-curve used for the tone mapper, where larger values will make the slope steeper (darker) and lower values will make the slope less steep (lighter). The default value is `0.88`. |
-| **Film Toe** | Adjusts the dark color in the tone mapper. The default value is `0.55`. |
-| **Film Shoulder** | Adjusts the bright color in the tone mapper. The default value is `0.26`. |
-| **Film Black Clip** | Sets the point where the crossover happens where black's start to cut off their value. The default value is `0`. |
-| **Film White Clip** | Sets the point where the crossover happens where white's start to cut off their values. This will appear as a subtle change in most cases. The default value is `0.04`. |
+| **Mode** | The tone mapping mode to use for the color grading process. |
+

@@ -25,11 +25,11 @@ Flax Engine renders SSR in several passes:
 | **Intensity** | Reflections intensity scale (in range from 0 to 1). |
 | **Depth Resolution** | Downscales the depth buffer to optimize raycast performance. *Full* gives better quality, but *half* improves performance. The default is half. |
 | **Ray Trace Resolution** | The raycast resolution. There are two options: *full* and *half*. Full gives better quality, but half improves performance. The default value is half. |
-| **BRDF Bias** | The reflection spread parameter. Higher values provide finer, more mirror-like reflections. The default value is `0.82`. |
+| **BRDF Bias** | The reflection spread parameter. This value controls source roughness effect on reflections blur. Smaller values produce wider reflections spread but also introduce more noise. Higher values provide more mirror-like reflections. Default value is `0.82`. |
 | **Roughness Threshold** | The maximum amount of roughness a material can have to reflect the scene. For example, if this value is set to `0.4`, only materials with a roughness value of `0.4` below above reflect the scene. The default value is `0.45`. |
 | **Wolrd Anti Self Occlusion Bias** | The offset of the raycast origin. Lower values produce more correct reflection placement, but produce minor artifacts. We recommend values of `0.3` or lower. The default value is `0.1`. |
 | **Resolve Resolution** | Calculates reflection color using raycast results. There are two options: *full* and *half*. Full gives the best results, but half improves performance. The default value is full. |
-| **Resolve Samples** | The number of rays used to resolve the reflection color. Higher values produce less noise, but worse performance. The default value is `4`. |
+| **Resolve Samples** | The number of rays used to resolve the reflection color. Higher values produce less noise, but worse performance. The default value is `4`. Use 1 for the highest speed. |
 | **Edge Fade Factor** | The point at which the far edges of the reflection begin to fade. This has no effect on performance. The default value is `0.1`. |
 | **Use Color Buffer Mips** | If checked, downscales the input color buffer and uses blurred mipmaps chain when resolving the reflection color. This produces more realistic results by blurring distant parts of reflections in rough (high-roughness) materials. It also improves performance on most platforms. However, it uses more memory, so you might want to disable it on (for example) mobile platforms. |
 | **Enable Temporal Effect** | If checked, enables the temporal pass. This reduces noise, but produces an animated "jittering" effect that is sometimes noticeable. The temporal effect is enabled by default. |

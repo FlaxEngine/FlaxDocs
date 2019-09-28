@@ -12,14 +12,14 @@ The artifacts are generally aligned along the line defined by the original brigh
 
 | Property | Description |
 |--------|--------|
-| **Intensity** | Strength of the effect. |
+| **Intensity** | Strength of the effect. Value 0 disabled it. |
 | **Ghosts** | Amount of *ghost* samples. |
 | **Halo Width** | Lens flares halo width. |
 | **Halo Intensity** | Lens flares halo intensity. |
 | **Ghost Dispersal** | *Ghost* samples dispersal parameter. |
 | **Distortion** | Lens flares color distortion parameter. |
-| **Threshold Bias** | Input image brightness thresshold. Added to input pixels.  |
-| **Threshold Scale** | Input image brightness thresshold scale. Used to multiply input pixels. |
+| **Threshold Bias** | Input image brightness threshold. Added to input pixels.  |
+| **Threshold Scale** | Input image brightness threshold scale. Used to multiply input pixels. |
 | **Lens Dirt** | Fullscreen lens dirt texture. |
 | **Lens Dirt Intensity** | Fullscreen lens dirt intensity parameter. Allows to tune dirt visibility. |
 | **Lens Color** | Custom lens color texture (1D) used for lens color spectrum. |

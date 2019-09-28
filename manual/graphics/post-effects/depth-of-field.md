@@ -20,7 +20,8 @@
 | **Bokeh Enable** | If checked, bokeh shapes will be rendered. |
 | **Bokeh Size** | Controls size of the bokeh shapes. |
 | **Bokeh Shape** | Defines bokeh shapes type. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Hexagon**</td><td>The hexagon shape.<br>![Hexagon](media/Bokeh/Bokeh_Hex.png)</td></tr><tr><td>**Octagon**</td><td>The octagon shape.<br>![Octagon](media/Bokeh/Bokeh_Oct.png)</td></tr><tr><td>**Circle**</td><td>The circle shape.<br>![Circle](media/Bokeh/Bokeh_Circle.png)</td></tr><tr><td>**Cross**</td><td>The cross shape.<br>![HexaCrossgon](media/Bokeh/Bokeh_Cross.png)</td></tr><tr><td>**Custom**</td><td>The custom texture shape (uses *Bokeh Shape Custom Texture* property).</td></tr></tbody></table>|
-| **Bokeh Shape Custom Texture** | If *Bokeh Shape* is set to **Custom**, then this texture will be used for the bokeh shapes. For best performance, use small, compressed, grayscale textures (for instance 32px) |
+| **Bokeh Shape Custom Texture** | If *Bokeh Shape* is set to **Custom**, then this texture will be used for the bokeh shapes. For best performance, use small, compressed, grayscale textures (for instance 32px). |
 | **Bokeh Brightness Threshold** | The minimum pixel brightness to create bokeh. Pixels with lower brightness will be skipped. |
+| **Bokeh Blur Threshold** | Controls Bokeh shapes blur threshold value. |
 | **Bokeh Falloff** | Controls bokeh shapes brightness falloff. Higher values reduce bokeh visibility. |
 | **Bokeh Depth Cutoff** | Controls bokeh shape generation for depth discontinuities. |

@@ -11,9 +11,9 @@
 | Property | Description |
 |--------|--------|
 | **Enabled** | If checked, motion blur effect will be rendered. |
-| **Scale** | Motion Blur effect strength. Value 0 disabled is, while higher values increase the effect. |
-| **Sample Count** | The amount of sample points used during motion blur rendering. It affects quality and performances. |
-| **Motion Vectors Resolution** | The motion vectors texture resolution. Motion blur uses per-pixel motion vectors buffer that contains objects movement information. Use lowe resolution to improve performance. |
+| **Scale** | The blur effect strength. Value 0 disabled is, while higher values increase the effect. |
+| **Sample Count** | The amount of sample points used during motion blur rendering. It affects quality and performance. |
+| **Motion Vectors Resolution** | The motion vectors texture resolution. Motion blur uses per-pixel motion vectors buffer that contains objects movement information. Use lower resolution to improve performance. |
 
 ## Motion Vectors Debug
 
