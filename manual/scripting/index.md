@@ -47,4 +47,5 @@ Currently the newest **C# 7.2** version is fully supported (uses .Net 4.5).
  * [How to change scene from script](tutorials/change-scene.md)
  * [How to use custom settings](tutorials/custom-settings.md)
  * [How to import asset from code](tutorials/import-asset-from-code.md)
+ * [How to control PostFx from code](tutorials/control-postfx-from-code.md)
 

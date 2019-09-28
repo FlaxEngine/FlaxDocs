@@ -4,7 +4,7 @@ Flax Documenation contains a various step-by-step tutorials.
 Use them to learn about Flax Engine and implement cool features into your game.
 This page lists all aveliable text tutorials contained by this documentation.
 
-Use **Ctrl + F** to quickly find what you looking for.
+You can use **Ctrl + F** to quickly find what you are looking for.
 
 ## HOWTOs and Examples
 
@@ -30,6 +30,7 @@ Use **Ctrl + F** to quickly find what you looking for.
 * [How to use command line](../../editor/advanced/command-line-access.md)
 * [How to use a version control](../../get-started/version-control.md)
 * [How to distribute a game](../../get-started/distribute-a-game.md)
+* [How to control PostFx from code](../../scripting/tutorials/control-postfx-from-code.md)
 * [How to fade particles near camera](../../particles/tutorials/fade-near-camera.md)
 * [How to make soft particles](../../particles/tutorials/soft-particles.md)
 * [How to setup animated model](../../animation/tutorials/setup-animated-model.md)
