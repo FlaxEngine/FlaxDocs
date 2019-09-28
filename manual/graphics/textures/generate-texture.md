@@ -15,71 +15,71 @@ This sample uses C# API method [Content.CreateVirtualAsset<T>](http://docs.flaxe
 ```cs
 public class TextureFromCode : Script
 {
-	private Texture _tempTexture;
-	private MaterialInstance _tempMaterialInstance;
+    private Texture _tempTexture;
+    private MaterialInstance _tempMaterialInstance;
 
-	public Material Material;
-	public Model Model;
+    public Material Material;
+    public Model Model;
 
-	public unsafe override void OnStart()
-	{
-		// Ensure that model asset is loaded
-		Model.WaitForLoaded();
+    public override unsafe void OnStart()
+    {
+        // Ensure that model asset is loaded
+        Model.WaitForLoaded();
 
-		// Create new texture asset
-		var texture = Content.CreateVirtualAsset<Texture>();
-		_tempTexture = texture;
-		TextureBase.InitData initData;
-		initData.Width = 64;
-		initData.Height = 64;
-		initData.ArraySize = 1;
-		initData.Format = PixelFormat.R8G8B8A8_UNorm;
-		var data = new byte[initData.Width * initData.Height * initData.Format.SizeInBytes()];
-		fixed (byte* dataPtr = data)
-		{
-			// Generate pixels data (linear gradient)
-			var colorsPtr = (Color32*)dataPtr;
-			for (int y = 0; y < initData.Height; y++)
-			{
-				float t1 = (float)y / initData.Height;
-				var c1 = Color32.LerpUnclamped(Color.Red, Color.Blue, t1);
-				var c2 = Color32.LerpUnclamped(Color.Yellow, Color.Green, t1);
-				for (int x = 0; x < initData.Width; x++)
-				{
-					float t2 = (float)x / initData.Width;
-					colorsPtr[y * initData.Width + x] = Color32.LerpUnclamped(c1, c2, t2);
-				}
-			}
-		}
-		initData.Mips = new[]
-		{
-			// Initialize mip maps data container description
-			new TextureBase.InitData.MipData
-			{
-				Data = data,
-				RowPitch = data.Length / initData.Height,
-				SlicePitch = data.Length
-			},
-		};
-		texture.Init(initData);
+        // Create new texture asset
+        var texture = Content.CreateVirtualAsset<Texture>();
+        _tempTexture = texture;
+        TextureBase.InitData initData;
+        initData.Width = 64;
+        initData.Height = 64;
+        initData.ArraySize = 1;
+        initData.Format = PixelFormat.R8G8B8A8_UNorm;
+        var data = new byte[initData.Width * initData.Height * initData.Format.SizeInBytes()];
+        fixed (byte* dataPtr = data)
+        {
+            // Generate pixels data (linear gradient)
+            var colorsPtr = (Color32*)dataPtr;
+            for (int y = 0; y < initData.Height; y++)
+            {
+                float t1 = (float)y / initData.Height;
+                var c1 = Color32.Lerp(Color.Red, Color.Blue, t1);
+                var c2 = Color32.Lerp(Color.Yellow, Color.Green, t1);
+                for (int x = 0; x < initData.Width; x++)
+                {
+                    float t2 = (float)x / initData.Width;
+                    colorsPtr[y * initData.Width + x] = Color32.Lerp(c1, c2, t2);
+                }
+            }
+        }
+        initData.Mips = new[]
+        {
+            // Initialize mip maps data container description
+            new TextureBase.InitData.MipData
+            {
+                Data = data,
+                RowPitch = data.Length / initData.Height,
+                SlicePitch = data.Length
+            },
+        };
+        texture.Init(ref initData);
 
-		// Use a dynamic material instance with a texture to sample
-		var material = Material.CreateVirtualInstance();
-		_tempMaterialInstance = material;
-		material.GetParam("tex").Value = texture;
+        // Use a dynamic material instance with a texture to sample
+        var material = Material.CreateVirtualInstance();
+        _tempMaterialInstance = material;
+        material.GetParam("tex").Value = texture;
 
-		// Add a model actor and use the dynamic material for rendering
-		var staticModel = Actor.GetOrAddChild<StaticModel>();
-		staticModel.Model = Model;
-		staticModel.Entries[0].Material = material;
-	}
+        // Add a model actor and use the dynamic material for rendering
+        var staticModel = Actor.GetOrAddChild<StaticModel>();
+        staticModel.Model = Model;
+        staticModel.Entries[0].Material = material;
+    }
 
-	public override void OnDestroy()
-	{
-		// Ensure to cleanup resources
-		FlaxEngine.Object.Destroy(ref _tempTexture);
-		FlaxEngine.Object.Destroy(ref _tempMaterialInstance);
-	}
+    public override void OnDestroy()
+    {
+        // Ensure to cleanup resources
+        FlaxEngine.Object.Destroy(ref _tempTexture);
+        FlaxEngine.Object.Destroy(ref _tempMaterialInstance);
+    }
 }
 ```
 
