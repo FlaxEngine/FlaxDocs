@@ -43,7 +43,7 @@ class AsyncTest : Script
     public override void OnEnable()
     {
         // Start async work
-        _task = HandleFileAsync();
+        _task = Task.Run(HandleFileAsync);
     }
 
     /// <inheritdoc />
@@ -55,7 +55,7 @@ class AsyncTest : Script
 
     async Task HandleFileAsync()
     {
-        Debug.Log("Starting async job from thread " + Thread.CurrentThread.Name);
+        Debug.Log("Starting async job from thread: " + Thread.CurrentThread.ManagedThreadId);
         string file = Path.Combine(Globals.ContentFolder, "myFile.txt");
         int count = 0;
 
@@ -115,7 +115,7 @@ class ThreadTest : Script
 
     void HandleFileAsync()
     {
-        Debug.Log("Starting async job from thread " + Thread.CurrentThread.Name);
+        Debug.Log("Starting async job from thread " + Thread.CurrentThread.ManagedThreadId);
         string file = Path.Combine(Globals.ContentFolder, "myFile.txt");
         int count = 0;
 
@@ -175,7 +175,7 @@ class ThreadPoolTest : Script
 
     void HandleFileAsync(object stateInfo)
     {
-        Debug.Log("Starting async job from thread " + Thread.CurrentThread.Name);
+        Debug.Log("Starting async job from thread " + Thread.CurrentThread.ManagedThreadId);
         string file = Path.Combine(Globals.ContentFolder, "myFile.txt");
         int count = 0;
 
