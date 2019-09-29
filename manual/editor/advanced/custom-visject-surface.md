@@ -72,9 +72,8 @@ public class ExpressionGraphProxy : JsonAssetProxy
 
 Then, we have to use an editor [plugin](./../../scripting/plugins/index.md) to register the proxy.
 
-> ![Note]
->
-> Note: Make sure to add it *before* the `GenericJsonAssetProxy`, which is the last proxy in the list and is used as a fallback proxy.
+> [!NOTE] 
+> Make sure to add it *before* the `GenericJsonAssetProxy`, which is the last proxy in the list and is used as a fallback proxy.
 
 ```cs
 public class ExpressionGraphPlugin : EditorPlugin
@@ -587,9 +586,8 @@ Lastly, the output node, or main node, can be obtained using [`FindNode(MainNode
 
 A simple way to execute a Visject surface at runtime is making a copy of it and running an interpreter over it.
 
-> ![Note]
->
-> Note: You cannot reference `SurfaceNode` at runtime, because it is in the Editor assembly. So, you have to copy every single node to your own class if you want to write an interpreter.
+> [!NOTE] 
+> You cannot reference `SurfaceNode` at runtime, because it is in the Editor assembly. So, you have to copy every single node to your own class if you want to write an interpreter.
 
 To copy a surface, iterate over it in a *depth first* manner. This makes it easy to execute the nodes in a correct order, where every node gets executed *after* the nodes before it have finished. It also conveniently detects cycles in the graph.
 
@@ -651,6 +649,6 @@ A simple idea for going further is to evaluate the same graph multiple times. Fo
 
 So, a simple graphing calculator can be created by adding a custom "Get X-Coordinate" node and then evaluating the graph once for every value on the x-axis. Then, the output can be plotted by drawing line segments through those points.
 
-This can be found in the [graphing-demo] branch in the sample project.
+This can be found in the [graphing-demo](https://github.com/stefnotch/flax-custom-visject-plugin/tree/graphing-demo) branch in the sample project.
 
 ![Gif](./media/expression-graph-graphing.gif)
