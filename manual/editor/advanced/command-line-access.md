@@ -25,7 +25,7 @@ Of course, all those things can be made manually by using Flax Editor C# API and
 | **-std** | Redirects log to the standard process output (std). |
 | **-debug <ip:port>** | Sets the Mono debugger adress and port used for the remote debugging. The default Mono debugger IP=127.0.0.1, Port=41000+(process_id%1000). |
 | **-headless** | Starts without windows, used by CL. Can be also used in cooked game on desktop platforms. |
-| **-low-dpi** | Disables High DPI awareness support. |
+| **-lowdpi** | Disables High DPI awareness support. |
 | **-vulkan** | Forces to use Vulkan rendering backend (if available). |
 | **-d3d12** | Forces to use DirectX 12 rendering backend (if available). |
 | **-d3d11** | Forces to use DirectX 11 rendering backend (if available). |

@@ -142,6 +142,7 @@
 ### [Custom Editor Options](scripting/advanced/custom-editor-options.md)
 ### [Curve](scripting/advanced/curve.md)
 ### [Access Game Window](scripting/advanced/access-game-window.md)
+### [Multithreading](advanced/multithreading.md)
 ## [Tutorials](scripting/tutorials/index.md)
 ### [How to create a custom editor](scripting/tutorials/custom-editor.md)
 ### [How to create a custom editor window](scripting/tutorials/custom-window.md)
