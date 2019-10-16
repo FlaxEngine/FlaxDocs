@@ -17,6 +17,7 @@ public override void OnStart()
 
 | Define | Description |
 |--------|--------|
+| **FLAX** | Always defined. Can be used to detect code compiled for Flax environment. |
 | **FLAX_EDITOR** | Compile for editor (play in-edior). |
 | **FLAX_PLUGIN** | Compile project for plugin export. |
 | **FLAX_EDITOR_WIN** | Compile for editor on Windows. |
