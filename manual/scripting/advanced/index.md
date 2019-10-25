@@ -7,3 +7,4 @@
 * [Curve](curve.md)
 * [Access Game Window](access-game-window.md)
 * [Multithreading](multithreading.md)
+* [Screenshots](screenshots.md)

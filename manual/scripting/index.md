@@ -41,6 +41,7 @@ Currently the newest **C# 7.2** version is fully supported (uses .Net 4.5).
  * [Curve](advanced/curve.md)
  * [Access Game Window](advanced/access-game-window.md)
  * [Multithreading](advanced/multithreading.md)
+ * [Screenshots](advanced/screenshots.md)
 * [Tutorials](tutorials/index.md)
  * [How to create a custom editor](tutorials/custom-editor.md)
  * [How to create a custom editor window](tutorials/custom-window.md)
