@@ -107,7 +107,13 @@ To learn more about Flax.Build see [this blog post](https://flaxengine.com/blog/
 
 ## Changelog
 
-### Version 0.5.6186 - 27 September
+### Version 0.5.6187 - 26 October 2019
+
+* Fix and improve animations looping and playback with negative speed factor
+* Fix crash on skinned mesh update draw with cached data missing
+* Fix Blend Pose crash
+
+### Version 0.5.6186 - 27 September 2019
 
 * Update ofbx
 * Fix Lerp in Anim Graph and CPU particles graph
