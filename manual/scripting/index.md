@@ -43,6 +43,7 @@ If you want to use custom .NET libraries simply put them into the project `Conte
  * [Curve](advanced/curve.md)
  * [Access Game Window](advanced/access-game-window.md)
  * [Multithreading](advanced/multithreading.md)
+ * [Screenshots](advanced/screenshots.md)
 * [Tutorials](tutorials/index.md)
  * [How to create a custom editor](tutorials/custom-editor.md)
  * [How to create a custom editor window](tutorials/custom-window.md)
