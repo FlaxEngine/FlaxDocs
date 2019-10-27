@@ -72,7 +72,7 @@ public class ExpressionGraphProxy : JsonAssetProxy
 
 Then, we have to use an editor [plugin](./../../scripting/plugins/index.md) to register the proxy.
 
-> [!NOTE] 
+> [!NOTE]
 > Make sure to add it *before* the `GenericJsonAssetProxy`, which is the last proxy in the list and is used as a fallback proxy.
 
 ```cs
