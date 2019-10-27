@@ -127,6 +127,11 @@ This section covers the basic principles of working with assets in Flax.
 <h3><a href="../../particles/particle-system.md">Particle System</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="../../animation/scene-animations/scene-animation.md"><img src="../../animation/scene-animations/media/scene-animation-icon.jpg"></a>
+<h3><a href="../../animation/scene-animations/scene-animation.md">Scene Animation</a></h3>
+</div>
+
 </div>
 
 

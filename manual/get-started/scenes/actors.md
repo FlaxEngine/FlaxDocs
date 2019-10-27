@@ -174,4 +174,9 @@ This documentation page contains link to all tutorials related to working with a
 <h3><a href="../../particles/particle-effect.md">Particle Effect</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="../../animation/scene-animations/scene-animation-player.md"><img src="../../animation/scene-animations/media/scene-animation-player-icon.jpg"></a>
+<h3><a href="../../animation/scene-animations/scene-animation-player.md">Scene Animation Player</a></h3>
+</div>
+
 </div>
