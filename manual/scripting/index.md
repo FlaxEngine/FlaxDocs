@@ -15,6 +15,8 @@ If you need help with learning C# see [this page](http://www.letmegooglethat.com
 Flax uses [Mono](http://www.mono-project.com/) to load, compile and execute C# scripts.
 Currently the newest **C# 7.2** version is fully supported (uses .Net 4.5).
 
+If you want to use custom .NET libraries simply put them into the project `Content` folder (or any subdirectory). Flax will automatically reference it in your game scripts project.
+
 ## In this section
 
 * [Create and use a script](new-script.md)
