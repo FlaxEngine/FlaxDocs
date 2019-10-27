@@ -77,7 +77,7 @@
 ### [Cube Textures](graphics/textures/cube-textures.md)
 ## [Models](graphics/models/index.md)
 ### [Importing Models](graphics/models/import.md)
-### [Model Actor](graphics/models/model-actor.md)
+### [Static Model](graphics/models/static-model.md)
 ### [Model Window](graphics/models/model-window.md)
 ### [How to generate procedural model](graphics/models/generate-model.md)
 ## [Lighting](graphics/lighting/index.md)

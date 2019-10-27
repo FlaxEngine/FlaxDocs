@@ -45,8 +45,8 @@ This documentation page contains link to all tutorials related to working with a
 </div>
 
 <div class="frontpage-section">
-<a href="../../graphics/models/model-actor.md"><img src="../../graphics/models/media/icon.jpg"></a>
-<h3><a href="../../graphics/models/model-actor.md">Model Actor</a></h3>
+<a href="../../graphics/models/static-model.md"><img src="../../graphics/models/media/icon.jpg"></a>
+<h3><a href="../../graphics/models/static-model.md">Static Actor</a></h3>
 </div>
 
 <div class="frontpage-section">

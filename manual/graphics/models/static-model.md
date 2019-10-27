@@ -1,4 +1,4 @@
-# Model Actor
+# Static Model
 
 ![Models](media/box.png)
 

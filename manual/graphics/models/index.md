@@ -4,7 +4,7 @@
 
 **Models** are one of the most important parts of the games. Player character and whole environment can be created using them. Flax supports importing model files created by using the most common 3D modeling software (e.g. Maya, 3dsMax, Blender) or generating procedural geometry.
 
-A Model asset contains a collection of **Level Of Details** (shorten as *LOD*) and **Material Slots**. Each LOD contains a collection meshes to draw. During model rendering, each mesh uses a specific material slot which can hold the default value or be overridden by the [Model Actor](model-actor.md).
+A Model asset contains a collection of **Level Of Details** (shorten as *LOD*) and **Material Slots**. Each LOD contains a collection meshes to draw. During model rendering, each mesh uses a specific material slot which can hold the default value or be overridden by the [Static Model](static-model.md).
 
 ![Model Design](media/ModelDesign.png)
 
@@ -37,7 +37,7 @@ To learn about importing model assets and adjusting import settings read the ded
 
 ## Using models
 
-Model assets are used by the many parts of the engine. The most common case is by creating a **Model Actor**. That actor type renders a model and allows to override some of its properties like shadows casting or material slots collection. To learn more about it see a dedicated [page here](model-actor.md).
+Model assets are used by the many parts of the engine. The most common case is by creating a **Static Model**. That actor type renders a model and allows to override some of its properties like shadows casting or material slots collection. To learn more about it see a dedicated [page here](static-model.md).
 
 ## Procedural geometry
 

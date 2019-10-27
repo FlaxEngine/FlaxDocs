@@ -60,7 +60,7 @@ public override void OnStart()
 	model.SetupLODs(1);
 	UpdateMesh(model.LODs[0].Meshes[0]);
 
-	// Create or reuse child model actor
+	// Create or reuse child model
     var childModel = Actor.GetOrAddChild<StaticModel>();
     childModel.Model = model;
     childModel.LocalScale = new Vector3(100);

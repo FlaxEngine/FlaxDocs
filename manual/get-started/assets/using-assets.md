@@ -13,7 +13,7 @@ In editor, for most of the time, to use the asset simply drag and drop it into t
 ![Apply material](../../graphics/materials/media/apply-material-2.jpg)
 
 Some asset types (models, materials, etc.) support direct drag and drop into the editor viewport.
-For example, if you drag and drop the model into the scene it will spawn the Model Actor instance.
+For example, if you drag and drop the model into the scene it will spawn the Static Model instance.
 You can also drag and drop material or material instance onto the model to set its material.
 
 ![Apply material](../../graphics/materials/media/apply-material-1.jpg)
