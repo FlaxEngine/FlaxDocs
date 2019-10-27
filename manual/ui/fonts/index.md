@@ -23,3 +23,16 @@ Alternatively, you can use **Import** button in a *Content Window* toolbar and t
 You can use it to type the text and preview the font characters.
 
 ![Font Window](media/font-window.png)
+
+## Font Properties
+
+Font Window can be used to preview and edit the font rasterization options:
+
+| Property | Description |
+|--------|--------|
+| **Hinting** | The font hinting used when rendering characters. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Default**</td><td>Use the default hinting specified in the font.</td></tr><tr><td>**Auto**</td><td>Force the use of an automatic hinting algorithm (over the font's native hinter).</td></tr><tr><td>**Auto Light**</td><td>Force the use of an automatic light hinting algorithm, optimized for non-monochrome displays.</td></tr><tr><td>**Monochrome**</td><td>Force the use of an automatic hinting algorithm optimized for monochrome displays.</td></tr><tr><td>**None**</td><td>Do not use hinting. This generally generates 'blurrier' bitmap glyphs when the glyph are rendered in any of the anti-aliased modes.</td></tr></tbody></table> |
+| **Anti Aliasing** | Enables using anti-aliasing for font characters. Otherwise font will use monochrome data. |
+| **Bold** | Enables artificial embolden effect. |
+| **Italic** | Enables slant effect, emulating italic style. |
+
+![Font Window](media/font-tools.gif)
