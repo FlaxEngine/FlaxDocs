@@ -17,7 +17,6 @@ If your game build runs on Linux as a server build then you can pass `-mute -nul
 | **Output** | The builded game output folder (relative to the project). |
 | **Show Output** | If checked, after building the output folder will be shown in an Explorer. |
 | **Configuration Mode** | Game building mode. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Release**</td><td>The release build ready for shipment.</td></tr><tr><td>**Debug**</td><td>The debug build for testing and profiling.</td></tr></tbody></table>|
-| **Architecture** | Target platform CPU type. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**x64**</td><td>The 64-bit.</td></tr><tr><td>**x86**</td><td>The 32-bit.</td></tr></tbody></table>|
 | **Defines** | Array of custom script defines to use during source code compilation. |
 
 ## Platform settings
