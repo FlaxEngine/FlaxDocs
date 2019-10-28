@@ -11,6 +11,7 @@ This section covers the specific information for different aspects of each platf
 * [Windows Desktop 7, 8, 10](windows.md)
 * [Universal Windows (UWP)](uwp.md)
 * [Xbox One](xbox-one.md)
+* [Linux](linux.md)
 
 > [!TIP]
 > To check on which platform game is running use [Platform.Platform](https://docs.flaxengine.com/api/FlaxEngine.Platform.html#FlaxEngine_Application_Platform). You can also use [preprocessor variables](../scripting/preprocessor.md) in your code.
@@ -20,6 +21,7 @@ This section covers the specific information for different aspects of each platf
 * DirectX 11 (with DirectX 10/10.1 fallback)
 * DirectX 12
 * Vulkan
+* Null
 
 > [!TIP]
 > To check on which rendering backend game is running use [GraphicsDevice.RendererType](https://docs.flaxengine.com/api/FlaxEngine.Rendering.GraphicsDevice.html#FlaxEngine_Rendering_GraphicsDevice_RendererType). You can also use [GraphicsDevice.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.Rendering.GraphicsDevice.html#FlaxEngine_Rendering_GraphicsDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.

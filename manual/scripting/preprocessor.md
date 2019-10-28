@@ -25,6 +25,7 @@ public override void OnStart()
 | **FLAX_UWP** | Compile for Universal Windows Platform (UWP). |
 | **FLAX_WSA** | Compile for Windows Store. |
 | **FLAX_XBOX_ONE** | Compile for Xbox One. |
+| **FLAX_LINUX** | Compile for Linux. |
 | **FLAX_X** | Used to detect Flax version during compilation. X=major version of Flax. eg. `FLAX_1` |
 | **FLAX_X_Y** | Used to detect Flax version during compilation. X=major version of Flax. Y=minor version of Flax. eg. `FLAX_1_2` |
 | **FLAX_X_Y_Z** | Used to detect Flax version during compilation. X=major version of Flax. Y=minor version of Flax, Z=build number of Flax. eg. `FLAX_1_2_6554` |

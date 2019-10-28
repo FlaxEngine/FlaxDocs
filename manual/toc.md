@@ -307,6 +307,7 @@
 ## [Windows](platforms/windows.md)
 ## [UWP](platforms/uwp.md)
 ## [Xbox One](platforms/xbox-one.md)
+## [Linux](platforms/linux.md)
 
 # [Contributing](contributing/index.md)
 ## [Feature Requests](contributing/feature-requests.md)
