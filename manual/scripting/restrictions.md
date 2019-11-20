@@ -6,6 +6,14 @@ Flax tries to implement all the engine features and scripting APIs across all su
 
 * `Debugger.Break()`
 
+## Not supported APIs
+
+- System.Collections.Immutable.dll
+- System.Design.dll
+- System.Drawing.Design.dll
+- System.Reflection.Metadata.dll
+- System.Web.Extensions.Design.dll
+
 ## Ahead-of-time compile
 
 Ahead-of-time (**AOT**) compile is a technique used to precompile all the managed code during game building process instead of using just-in-time (**JIT**) compilation on the target device. That's because some platforms do not allow runtime code generation. In most cases this has no effect on game scripting but in a few specific cases, AOT platforms require additional consideration.
