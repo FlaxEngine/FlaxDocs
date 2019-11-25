@@ -90,7 +90,7 @@ In this example, we define two transitions: one from Idle to Punch, and other fr
 
 Also, remember about using special **Transition Source State Anim** node that can be added to the transition graph to access the source state animation playback information. It can be used to trigger the animation in a specific moment, for instance when the source state animation is about to end.
 
-![Transition Source State Anim](media/transition -source-state-anim.png)
+![Transition Source State Anim](media/transition-source-state-anim.png)
 
 ## 9. Test it out!
 
