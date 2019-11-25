@@ -8,6 +8,7 @@
 ## [Editor](get-started/editor.md)
 ### [Flax for UE4® developers](get-started/flax-for-ue4-devs/index.md)
 ### [Flax for Unity® developers](get-started/flax-for-unity-devs/index.md)
+### [Flax for Godot developers](get-started/flax-for-godot-devs/index.md)
 ## [Glossary](get-started/glossary.md)
 ## [Scenes](get-started/scenes/index.md)
 ### [Actors](get-started/scenes/actors.md)

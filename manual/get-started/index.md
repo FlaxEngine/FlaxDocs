@@ -44,6 +44,12 @@ Welcome to the official Flax Engine Manual! In this section you will find everyt
 <p>Move your project and team from Unity to Flax.</p>
 </div>
 
+<div class="frontpage-section">
+<a href="flax-for-godot-devs/index.md"><img src="flax-for-godot-devs/media/icon.jpg"></a>
+<h3><a href="flax-for-godot-devs/index.md">Flax for Godot devs</a></h3>
+<p>Move your project and team from Godot to Flax.</p>
+</div>
+
 </div>
 
 ## Learn the basics
