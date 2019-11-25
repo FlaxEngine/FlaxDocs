@@ -64,3 +64,11 @@ Event OnDestroy can be called only once on a script. Flax does not uses script a
 ### Events in Editor
 
 Flax does not invoke any script events during `edit-time` (when the scene is loaded and user modifies it) except **OnDebugDraw** and **OnDebugDrawSelected**. Only when in-build play mode starts the actual game logic is being simulated. However, if the game script wants to receive events during editing it can be marked with `[ExecuteInEditMode]` attribute. Then all events will be called normally.
+
+### Order
+
+Script events invocation order depends on the event type. Gameplay logic events (update, fixed update and debug drawing) are called in non-stable order so gameplay logic should not depend on it. Initialization events (awake, enable, start) and deinitialization events (disable, destroy) are always called for the parent objects first, then deeper into a hierarchy. This means that script in parent actor can query the child actors' objects and scripts but they might not be initialized yet.
+
+However, you can still use initialization events to add new objects as child actors/scripts because Flax will invoke initialization for them when required.
+
+All script events are called when a script is already deserialized and has valid data ready to use.
