@@ -21,3 +21,9 @@
 
 The editor supports rendering motion vectors visualization by checking the **View -> Debug View -> Motion Vectors**.
 You can use it to preview and debug motion vectors of your game objects.
+
+## Per-Bone motion
+
+![Per Bone Motion Blue Flax](media/per-bone-motion-blur.png)
+
+Skeletal meshes support **Per Bone Motion Blur** that handles rendering the pixels motion for the animated model bones transformation changes.
