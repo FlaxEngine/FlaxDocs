@@ -99,6 +99,7 @@
 #### [Lightmapping](graphics/lighting/gi/lightmapping.md)
 #### [Lightmap Settings](graphics/lighting/gi/settings.md)
 ## [Fog effects](graphics/fog-effects/index.md)
+### [Exponential Height Fog](graphics/fog-effects/exponential-height-fog.md)
 ### [Volumetric Fog](graphics/fog-effects/volumetric-fog.md)
 ## [Post effects](graphics/post-effects/index.md)
 ### [Ambient Occlusion](graphics/post-effects/ambient-occlusion.md)

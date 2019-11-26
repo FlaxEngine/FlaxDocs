@@ -179,4 +179,9 @@ This documentation page contains link to all tutorials related to working with a
 <h3><a href="../../animation/scene-animations/scene-animation-player.md">Scene Animation Player</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="../../graphics/fog-effects/exponential-height-fog.md"><img src="../../graphics/fog-effects/media/exponential-height-fog-icon.jpg"></a>
+<h3><a href="../../graphics/fog-effects/exponential-height-fog.md">Exponential Height Fog</a></h3>
+</div>
+
 </div>
