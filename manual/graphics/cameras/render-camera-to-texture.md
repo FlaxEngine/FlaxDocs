@@ -42,7 +42,6 @@ Now it's time to write a simple script that will use a camera and render it to t
 ```cs
 using System;
 using FlaxEngine;
-using FlaxEngine.Rendering;
 
 public class CameraTV : Script
 {

@@ -13,7 +13,7 @@ This section explains all you need to know about working with materials pipeline
 * Vulkan
 
 > [!TIP]
-> To check on which rendering backend game is running use [GraphicsDevice.RendererType](https://docs.flaxengine.com/api/FlaxEngine.Rendering.GraphicsDevice.html#FlaxEngine_Rendering_GraphicsDevice_RendererType). You can also use [GraphicsDevice.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.Rendering.GraphicsDevice.html#FlaxEngine_Rendering_GraphicsDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.
+> To check on which rendering backend game is running use [GPUDevice.RendererType](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_GPUDevice_RendererType). You can also use [GPUDevice.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_Rendering_GPUDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.
 
 ## In this section
 
