@@ -34,5 +34,10 @@
 <h3><a href="toolbox.md">Toolbox</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="output-log.md"><img src="media/output-log-icon.jpg"></a>
+<h3><a href="output-log.md">Output Log</a></h3>
+</div>
+
 </div>
 
