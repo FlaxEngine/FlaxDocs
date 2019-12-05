@@ -24,7 +24,7 @@ This section covers the specific information for different aspects of each platf
 * Null
 
 > [!TIP]
-> To check on which rendering backend game is running use [GraphicsDevice.RendererType](https://docs.flaxengine.com/api/FlaxEngine.GraphicsDevice.html#FlaxEngine_Rendering_GraphicsDevice_RendererType). You can also use [GraphicsDevice.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.GraphicsDevice.html#FlaxEngine_Rendering_GraphicsDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.
+> To check on which rendering backend game is running use [GPUDevice.RendererType](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_Rendering_GPUDevice_RendererType). You can also use [GPUDevice.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_Rendering_GPUDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.
 
 ## Builded game logs
 
