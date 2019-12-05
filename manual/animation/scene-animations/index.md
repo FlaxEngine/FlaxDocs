@@ -2,7 +2,7 @@
 
 ![Scene Animations](media/scene-anims-cut-scenes.gif)
 
-**Scene Animations** in an in-build tool that is used to animated objects on the scene. This can be used to created cut-scenes, game objects animations, UI animations, etc. Flax provides various tools to develop and use scene animations in-game projects. Follow this documentation section to learn how to animated objects in your scenes.
+**Scene Animations** in an in-build tool that is used to animate objects on the scene. For instance, to create cut-scenes, game objects animations, UI animations, etc. Flax provides various tools to develop and use scene animations in-game projects. Follow this documentation section to learn how to animated objects in your scenes.
 
 Flax supports animating any scene objects (actors, scripts) and all of their properties. This also includes creating camera shots and audio playback as well as event tracks to implement various gameplay mechanics.
 
