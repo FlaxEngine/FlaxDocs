@@ -38,10 +38,21 @@ You can modify the properties and press **Save** icon on a toolstrip to apply th
 
 | Property | Description |
 |--------|--------|
+| *Interface* ||
+| **Use Native Window System** | Determines whether use native window title bar. Editor restart required. |
 | **Show Selected Camera Preview** | Determines whether show selected camera preview in the edit window. |
 | **Center Mouse On Game Window Focus** | Determines whether center mouse position on window focus in play mode. Helps when working with games that lock mouse cursor. |
 | **Debug Log Timestamps Format** | The timestamps prefix mode for debug log messages. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**None**</td><td>No prefix.</td></tr><tr><td>**Utc**</td><td>The UTC time format.</td></tr><tr><td>**Local Time**</td><td>The local time format.</td></tr><tr><td>**Time Since Startup**</td><td>The time since startup (in seconds).</td></tr></tbody></table> |
+| *Output Log* ||
+| **Timestamps Format** | The timestamps prefix mode for output log log messages. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**None**</td><td>No prefix.</td></tr><tr><td>**Utc**</td><td>The UTC time format.</td></tr><tr><td>**Local Time**</td><td>The local time format.</td></tr><tr><td>**Time Since Startup**</td><td>The time since startup (in seconds).</td></tr></tbody></table> |
+| **Show Log Type** | Determines whether show log type prefix in output log messages. |
+| **Text Font** | The output log text font. |
+| **Text Color** | The output log text color. |
+| **Text Shadow Color** | The output log text shadow color. |
+| **Text Shadow Offset** | The output log text shadow offset. Set to 0 to disable this feature. |
+| *Play In-Editor* ||
 | **Focus Game Window On Play** | Determines whether auto-focus game window on play mode start. |
+| *Fonts* ||
 | **Title Font** | The title font for editor UI. |
 | **Large Font** | The large font for editor UI. |
 | **Medium Font** | The medium font for editor UI. |
