@@ -1,8 +1,7 @@
 
 # [Get started](get-started/index.md)
-## [Install Flax](get-started/install.md)
+## [Get Flax](get-started/get-flax.md)
 ### [Requirements](get-started/requirements.md)
-## [Launch Flax](get-started/launch.md)
 ## [Visual Studio extension](get-started/vs-extension.md)
 ## [Create a project](get-started/create-a-project.md)
 ## [Editor](get-started/editor.md)

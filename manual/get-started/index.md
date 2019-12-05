@@ -9,19 +9,13 @@ Welcome to the official Flax Engine Manual! In this section you will find everyt
 <div class="frontpage">
 
 <div class="frontpage-section">
-<a href="install.md"><img src="../../media/dummy-icon.jpg"></a>
-<h3><a href="install.md">Install Flax</a></h3>
-<p>Download and install Flax.</p>
+<a href="get-flax.md"><img src="media/get-flax-icon.jpg"></a>
+<h3><a href="get-flax.md">Get Flax</a></h3>
+<p>Start using the Flax.</p>
 </div>
 
 <div class="frontpage-section">
-<a href="launch.md"><img src="../../media/dummy-icon.jpg"></a>
-<h3><a href="launch.md">Launch Flax</a></h3>
-<p>Start using the Flax Launcher.</p>
-</div>
-
-<div class="frontpage-section">
-<a href="create-a-project.md"><img src="../../media/dummy-icon.jpg"></a>
+<a href="create-a-project.md"><img src="media/create-a-project-icon.jpg"></a>
 <h3><a href="create-a-project.md">Create a project</a></h3>
 <p>Create your very first Flax game project.</p>
 </div>
