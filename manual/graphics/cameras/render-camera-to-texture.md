@@ -61,23 +61,29 @@ public class CameraTV : Script
                 if (_output)
                 {
                     // Resize backbuffer
-                    _output.Init(PixelFormat.R8G8B8A8_UNorm, (int) _resolution.X, (int) _resolution.Y);
+                    UpdateOutput();
                 }
             }
         }
     }
 
     private Vector2 _resolution = new Vector2(640, 374);
-    private RenderTarget _output;
+    private GPUTexture _output;
     private SceneRenderTask _task;
     private MaterialInstance _material;
+
+	private void UpdateOutput()
+	{
+		var desc = GPUTextureDescription.New2D((int) _resolution.X, (int) _resolution.Y, PixelFormat.R8G8B8A8_UNorm);
+		_output.Init(ref desc);
+	}
 
     public override void OnEnable()
     {
         // Create backbuffer
         if (_output == null)
-            _output = RenderTarget.New();
-        _output.Init(PixelFormat.R8G8B8A8_UNorm, (int) _resolution.X, (int) _resolution.Y);
+            _output = GPUDevice.CreateTexture();
+		UpdateOutput();
 
         // Create rendering task
         if (_task == null)

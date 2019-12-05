@@ -43,7 +43,7 @@ Enter camera into the volume to see the final effect result.
 >[!Note]
 >Single *PostFx Volume* can use up to `8` post-process materials. But you can stack them and use unlimited amount of post process materials. Hovewer keep in mind to maintain a solid performance because fullscreen effects rendering may slow down a game.
 
-When extending the rendering pipeline with C# scripts and using [render tasks](http://docs.flaxengine.com/api/FlaxEngine.RenderTask.html) you can use [GPUContext.DrawPostFxMaterial](http://docs.flaxengine.com/api/FlaxEngine.GPUContext.html#FlaxEngine_Rendering_GPUContext_DrawPostFxMaterial_FlaxEngine_MaterialBase_FlaxEngine_Rendering_RenderTarget_FlaxEngine_Rendering_RenderTarget_) method. This allows to extend rendering and use custom drawing with [RenderTargets](http://docs.flaxengine.com/api/FlaxEngine.RenderTarget.html).
+When extending the rendering pipeline with C# scripts and using [render tasks](http://docs.flaxengine.com/api/FlaxEngine.RenderTask.html) you can use [GPUContext.DrawPostFxMaterial](http://docs.flaxengine.com/api/FlaxEngine.GPUContext.html#FlaxEngine_Rendering_GPUContext_DrawPostFxMaterial_FlaxEngine_MaterialBase_FlaxEngine_Rendering_GPUTexture_FlaxEngine_Rendering_GPUTexture_) method. This allows to extend rendering and use custom drawing with [GPUTextures](http://docs.flaxengine.com/api/FlaxEngine.GPUTexture.html).
 
 ## Post process material location
 
