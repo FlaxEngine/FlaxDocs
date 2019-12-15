@@ -30,3 +30,11 @@ The next step is to edit and use the animation graph. You can see how to do it i
 ![Edit Anim Graph Parameters](../tutorials/media/edit-anim-graph-param-code.gif)
 
 Finally, if you want to access and change the Anim Graph parameter values from the **C# code** you can see the dedicated [step-by-step tutorial](../tutorials/change-anim-graph-param.md) where you can learn how to do it.
+
+## Bone Transformations
+
+In Anim Graph skeleton nodes transformations are stores in an array of matrices. Those matrices have format depending on context:
+* **local space** - connections are *white* using *ConnectionType.Impulse* - bone matrixes are in local space of the parent bone
+* **global space** - connections are *green* using *ConnectionType.ImpulseSecondary* - bone matrixes are in local space of the actor (Animated Model that runs the animation playback)
+
+To change the transformations spaces you can use `Local to Global` and `Global to Local` nodes.
