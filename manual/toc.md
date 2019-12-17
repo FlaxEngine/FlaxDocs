@@ -317,6 +317,8 @@
 ## [Report a bug](contributing/report-a-bug.md)
 
 # [Release Notes](release-notes/index.md)
+## [Beta](release-notes/index.md#beta)
+### [0.6 release notes](release-notes/0_6/index.md)
 ## [Alpha](release-notes/index.md#alpha)
 ### [0.5 release notes](release-notes/0_5/index.md)
 ### [0.4 release notes](release-notes/0_4/index.md)
