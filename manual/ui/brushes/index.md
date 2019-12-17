@@ -19,15 +19,16 @@ Brush that draws a single sprite from the sprite atlas.
 
 ![Sprite Brush](media/brush-sprite.png)
 
-# Render Target Brush
+# GPU Texture Brush
 
 Brush that draws a render target surface (assigned from code).
 
 ```cs
-var renderTarget = RenderTarget.New();
-renderTarget.Init(PixelFormat.R8G8B8A8_UNorm, 640, 480);
+var texture = GPUDevice.CreateTexture();
+var desc = GPUTextureDescription.New2D(640, 480, PixelFormat.R8G8B8A8_UNorm);
+texture.Init(ref desc);
 
-image.Brush = new RenderTargetBrush(renderTarget);
+image.Brush = new GPUTextureBrush(texture);
 ```
 
 # Material Brush

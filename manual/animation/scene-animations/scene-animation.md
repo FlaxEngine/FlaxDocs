@@ -2,7 +2,7 @@
 
 ![Scene Animation](media/scene-anims-object-properties.gif)
 
-**Scene Animation** in a binary asset that contains a timeline that is made of a set of tracks. Various types of tracks can be sued to animate objects, invoke events, playback audio or perform other operations such as screen fading. This documentation page describes how to create and edit a scene animation asset. To play the animation use the [Scene Animation Player](scene-animation-player.md) actor.
+**Scene Animation** in a binary asset that contains a timeline that is made of a set of tracks. Various types of tracks can be used to animate objects, invoke events, playback audio or perform other operations such as screen fading. This documentation page describes how to create and edit a scene animation asset. To play the animation use the [Scene Animation Player](scene-animation-player.md) actor.
 
 ## Create a scene animation
 
@@ -68,7 +68,7 @@ You can use **right click on the timeline** to edit selected media properties or
 
 #### Camera Cut
 
-**Camera Cut** it a special type of Actor track that is sued for Camera shots animations. It contains a media event that defines the camera shot with the preview thumbnails. Use **+** button to animate camera properties during the cut. For camera shots editing use **camera icon** that starts the camera actor pilot mode which enables you to move and orient camera to the editor viewport. Then use the viewport widget to stop acotr piloting and add keyframes for the camera shot location.
+**Camera Cut** it a special type of Actor track that is used for Camera shots animations. It contains a media event that defines the camera shot with the preview thumbnails. Use **+** button to animate camera properties during the cut. For camera shots editing use **camera icon** that starts the camera actor pilot mode which enables you to move and orient camera to the editor viewport. Then use the viewport widget to stop acotr piloting and add keyframes for the camera shot location.
 
 ## Playback preview
 
