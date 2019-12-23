@@ -61,6 +61,30 @@ To make particle systems editing even easier we've added particle emitter parame
 
 ## Changelog
 
+### Version 0.6.6191 - 23 December 2019
+
+* Add support for `FlaxEngine.Object.New<GPUTexture>()`
+* Add using async calls for content loading in editor
+* Add warning with missing custom node typename
+* Add output log window auto focus on game build fail
+* Add `Actor.Children` getter
+* Add ctrl+tab navigation for dock panel tabs
+* Add ctrl+w shortcut for closing selected dock window
+* Improve range for postFx intensity options max range
+* Improve Asset.WaitForLoaded
+* Change live relaod to be disabled by default for prefab editors
+* Fix loading custom node in Visject without any custom nodes in project
+* Fix deadlock in Asset::WaitForLoaded when asset load task fails
+* Fix specular for area lights source length is non zero
+* Fix crash on `AutomaticAverageLuminance`
+* Fix rare crash on engine exit in DirectInput gamepads scanning thread on Windows
+* Fix text culling in RichTextBoxBase
+* Fix duplicating actors in prefab editor
+* Fix exception when moving actors in prefab editor
+* Fix custom editor window title bar on High-Dpi display
+* Fix Desaturation node elements positioning
+* Fix Border control drawing
+
 ### Version 0.6.6190 - 17 December 2019
 
 Contributors: stefnotch, JimiVacarians
