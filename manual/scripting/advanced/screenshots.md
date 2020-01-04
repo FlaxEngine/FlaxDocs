@@ -14,3 +14,13 @@ var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desk
 FlaxEngine.Utilities.Screenshot.Capture(MainRenderTask.Instance, path);
 ```
 
+## In Editor
+
+![Editor Viewport Screenshot](media/viewport-screenshot-2.png)
+
+To take a screenshot of the focused game view or game edit view you can use **F12** key or main menu option **Tools -> Take Screenshot**.
+
+![Game Viewport Screenshot](media/viewport-screenshot-1.png)
+
+If you want to take **high-resolution** screenshot of the game viewport you can *right-click* on the dock window tab and use the option to increase the resolution scale (eg. to 2) and then use additional option for screenshot taking. Saved images are stored in the **project folder/Screenshots** directory.
+
