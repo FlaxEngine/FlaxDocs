@@ -10,15 +10,16 @@ By default, all Flax projects data is split into two parts: **Content** and **So
 Here is an example `.gitignore` file for the **Git** repository with Flax project ([download link](https://github.com/FlaxEngine/FlaxSamples/blob/master/.gitignore)).
 
 ```
-#Ignore Flax Engine files
+# Ignore Flax Engine files
 Cache/
 Logs/
 Output/
+Screenshots/
 
-#Ignore thumbnails created by Windows
+# Ignore thumbnails created by Windows
 Thumbs.db
 
-#Ignore files built by Visual Studio
+# Ignore files built by Visual Studio
 *.obj
 *.exe
 *.pdb
@@ -46,6 +47,28 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 .vs/
 
-#Nuget packages folder
+# Nuget packages folder
 packages/
+```
+
+## Example .gitattributes
+
+Here is an example `.gitattributes` file for the **Git LFS** repository with Flax project. By using [Large Files Storage](https://github.com/git-lfs/git-lfs/wiki/Tutorial) you can improve repository performance for asset files that are using binary format and tend to be big (models, textures, etc.).
+
+```
+# Flax Engine files
+*.flax filter=lfs diff=lfs merge=lfs -text
+*.flaxpac filter=lfs diff=lfs merge=lfs -text
+
+# Asset source file types
+*.png filter=lfs diff=lfs merge=lfs -text
+*.tga filter=lfs diff=lfs merge=lfs -text
+*.raw filter=lfs diff=lfs merge=lfs -text
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.hdr filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
 ```
