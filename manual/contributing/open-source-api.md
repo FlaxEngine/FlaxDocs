@@ -8,7 +8,7 @@ The main open-source repository [FlaxAPI](https://github.com/FlaxEngine/FlaxAPI)
 
 Open source C# Editor and API can be forked and modified to be customized by you and your team. Also, modified code can be used as a Pull Request to introduce new features into the engine. We kindly support that.
 
-If you want to use custom FlaxAPI, then fork the repository on a [Github](https://github.com/FlaxEngine/FlaxAPI) and clone it to your computer. After adding custom modifications into the code you can build it in *Release* mode and copy binaries into `<engine_installation_root>\Editor\Assemblies\Release` folder. To automate this process you can uncomment certain lines in `CopyDotNetApi.bat` file that will copy the binaries after building the FlaxAPI.
+If you want to use custom FlaxAPI, then fork the repository on a [Github](https://github.com/FlaxEngine/FlaxAPI) and clone it to your computer. After adding custom modifications into the code you can build it in *Release* mode and copy binaries into `<engine_installation_root>\FlaxAPI\bin` folder.
 
 ## Flax Engine Tools for Visual Studio
 
