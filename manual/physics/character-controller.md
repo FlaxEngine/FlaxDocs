@@ -29,6 +29,7 @@ You can adjust auto-stepping behaviour by using [CharacterController.SlopeLimit]
 | **Radius** | The radius of the sphere, measured in the object's local space. It will be scaled by the actor's world scale. |
 | **Height** | The height of the capsule, measured in the object's local space. It will be scaled by the actor's world scale. |
 | **Slope Limit** | Limits the collider to only climb slopes that are less steep (in degrees) than the indicated value. |
+| **Non Walkable Mode** | Specifies the non-walkable mode for the character controller. |
 | **Step Offset** | The character will step up a stair only if it is closer to the ground than the indicated value. This should not be greater than the Character Controller’s height or it will generate an error. |
 | **Min Move Distance** | The minimum travelled distance to consider. If travelled distance is smaller, the character doesn't move. This is used to stop the recursive motion algorithm when remaining distance to travel is small. |
 
