@@ -5,6 +5,12 @@
 Flax Editor interface is made of **dockable windows** which can be rearranged, grouped, detached and docked.
 You can drag and arrange the window by selecting and dragging the window header. It can be very useful when adapting the workspace for your need. Editor saved the windows layout (per project) on closing, and every few seconds, to restore it on relaunch.
 
+Useful shortcuts for faster navigation:
+* **Ctrl + Tab** - next tab
+* **Ctrl + Shirt + Tab** - previous tab
+* **Ctrl + W** - close tab
+* **Ctrl + O** - finder tool to navigate to anything
+
 ## Main windows
 
 The default layout contains set of the most important elements:
