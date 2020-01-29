@@ -28,6 +28,15 @@ Editor window provides various functionalities to view and edit animation. The l
 
 Timeline uses the concept of **frame** to represent the time. Whole timeline animation uses a given frames per second factor (FPS) to define the playback speed (the speed of animation frames to play per second). You can edit timeline time axis labels by using **View -> Show time as**. The timeline FPS can be changed using the dedicated toolstrip button (default is *60 fps*). You can use one of the common, predefined values or set the custom fps.
 
+Keyboard shortcuts:
+* **Arrow Left** - sets time to the previous frame
+* **Arrow Right** - sets time to the next frame
+* **Home** - sets time to first frame
+* **End** - sets time to last frame
+* **Page Up** - sets time to frame of the next keyframe
+* **Page Down** - sets time to frame of the previous keyframe
+* **Ctrl + S** - saves the asset
+
 ## Editing scene animation
 
 To add a new track to the timeline use **Add** button. This will show the selection of track types that can be added. You can also **drag and drop actors or scripts** to the tracks panel to add animation track for those objects.
