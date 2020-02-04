@@ -13,6 +13,36 @@ public int CoolVariable;
 
 ![Example](media/HideInEditor.jpg)
 
+### ShowInEditor
+
+Makes a variable show up in the editor even if it's private.
+If used on a private field/property you may also need to add `SerializeAttribute` to ensure that modified value is being serialized.
+
+```cs
+[ShowInEditor]
+private int CoolVariable;
+```
+
+### VisibleIf
+
+Shows property/field in the editor only if the specified member has a given value. Can be used to hide properties based on other properties (also private properties). The given member has to be bool type.
+
+```cs
+public bool ShowIt;
+
+[VisibleIf(nameof(ShowIt)]
+public int CoolVariable;
+```
+
+### ReadOnly
+
+Makes a variable show up in the editor as read-only (editing is disabled).
+
+```cs
+[ReadOnly]
+public int CoolVariable;
+```
+
 ### Tooltip
 
 Specifies a tooltip for a property/field in the editor. Useful to provide documentation for object properties.
@@ -71,6 +101,9 @@ public int CoolVariable;
 Allows to change item display name or a group in the editor.
 
 ```cs
+[EditorDisplay("My Super Group")]
+public int CoolVariable1;
+
 [EditorDisplay(null, "Override Label")]
 public int CoolVariable;
 ```
@@ -83,6 +116,15 @@ Allows to declare order of the item in the editor. Items are listed from the low
 
 ```cs
 [EditorOrder(-10)]
+public int CoolVariable;
+```
+
+### ExpandGroups
+
+Marks the item to be visible in editor by expanding all the container groups in the upper hierarchy.
+
+```cs
+[EditorDisplay("My Group"), ExpandGroups]
 public int CoolVariable;
 ```
 
