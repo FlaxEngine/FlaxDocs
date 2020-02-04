@@ -61,6 +61,77 @@ To make particle systems editing even easier we've added particle emitter parame
 
 ## Changelog
 
+### Version 0.6.6192 - 4 February 2020
+
+Contributors: stefnotch
+
+* Add **Channel Mask** parameter type to materials and particles
+* Add support for scene actions shortcuts in Properties window
+* Add Unlit view mode with material color and ambient occlusion
+* Add Copy name option to asset editor window title bar
+* Add support for selecting parent of the actor with HideFlags.DontSelect when picking it
+* Add Viewport Brightness, Viewport Resolution and Take Screenshot options to Game window
+* Add profile event for profiler window update
+* Add support for tooltips for enums
+* Add **tooltips for common engine enums**
+* Add support for seeking scene animation timeline when no player assigned
+* Add Min/Max/Clamp to Color
+* Add editor option to customize editor fps
+* Add **HDR support to color picker**
+* Add NonWalkableModes to CharacterController
+* Add automatic main menu option popup when moving mouse
+* Add support for using custom graphics quality in editor (local)
+* Add support for editing multiple actor scripts that have the same scripts collection
+* Add **vertex snapping support to Render2D** (optional via Render2D.Features flags)
+* Add support for undo when transforming selected foliage instance
+* Add duplicate for folders via content window context menu
+* Add support for undo when duplicating foliage instance
+* Add support for undo when picking foliage instance
+* Add support for undo when editing and removing selected foliage instance
+* Add **Preserve Alpha Coverage support to textures** importing
+* Add 'if' as alternative title to branch node
+* Add error log when changing actor transformation to nan/inf
+* Add support for using 0 for update/draw fps as infinity
+* Add PageUp/PageDown shortcuts for rapid keyframes navigation in timeline
+* Add default values for game settings
+* Add View Flags caching for EditGameWindow
+* Add random quotes to Editor splash screen
+* Add support for running editor with relative project path specified
+* Optimize Debug Draw vertices to use 32bit color
+* Improve color picker default placement
+* Improve naming duplicated assets and folders
+* Improve moving and renaming assets (don't reload asset when storage changes)
+* Refactor Skeleton Mask asset to contain a list of skeleton nodes names (instead of bone indices)
+* Refactor Bone Socket actor to use skeleton bone as reference
+* Refactor Content api
+* Refactor and optimize Function class to be faster
+* Improve using tree nodes arrows navigation
+* Improve borderless windows support on Windows
+* Disable ModelLOD bias/scale from RenderView task for terrain
+* Fix drawing debug circle pointing down
+* Fix to use utf8 for project.xml file
+* Fix error when using native window title bar
+* Fix drawing editor sprites when using custom view mode
+* Fix new material rendering issue
+* Fix short name for folder paths with dots
+* Fix drawing selection outline when using custom view mode
+* Fix profiler timing
+* Fix material layers usage with tessellation
+* Fix constant buffer alignment for materials
+* Fix spot light debug shapes rendering
+* Fix physics layers mask editor layer names labels positioning
+* Fix Snap loading from Input settings
+* Fix profiler timings for cpu
+* Fix importing folders via drag and drop to editor
+* Fix selection outline to draw selection child actors
+* Fix material instance color picker usage with cancel
+* Fix tree node if has hidden child nodes added later
+* Fix Quaternion.LookRotation for edge cases
+* Fix dock windows stealing user focus
+* Fix Bezier interpolation for Quaternion when angle wraps
+* Fix regression on inverted culling for geometry with negative scale
+* Fix restoring windows layout to maximized when window is already maximized
+
 ### Version 0.6.6191 - 23 December 2019
 
 * Add support for `FlaxEngine.Object.New<GPUTexture>()`
