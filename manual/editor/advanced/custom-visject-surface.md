@@ -518,7 +518,7 @@ The Visject graph has a number of important parts that need to be compiled into 
   - with their inputs and outputs
 - An output node
 
-For the surface compilation, add a method to the `ExpressionGraph`. 
+For the surface compilation, add a method to `ExpressionGraphSurface.cs`. 
 
 ```cs
 public void CompileSurface(ExpressionGraph graph)
