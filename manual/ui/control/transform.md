@@ -38,13 +38,10 @@ The control rotation angle (in degrees).
 
 ![Rotation](media/rotation.jpg)
 
-## Dock Style
+## Anchor
 
-The docking style of the control. Defines how control will be docked into the parent container. Use None to disable it. Docked controls have disabled scrolling.
+The control has *anchor min* and *anchor max* properties which can be set manually or via *Anchor Presets* editor. The control anchors are normalized (to range 0-1) position in the parent control that the upper left and bottom right corners.
+This can be used to dock control inside the parent container so control location/size can depends on parent container bounds.
 
-![Dock Style](media/dock-style.jpg)
-
-## Anchor Style
-
-The anchor style of the control. Defines how control location and size will be constrained when parent container is being resized. Use it to maintain the relationship between control and the edge of the parent container when a parent is changing its size.
+![Anchor Presets](media/anchor_presets.png)
 
