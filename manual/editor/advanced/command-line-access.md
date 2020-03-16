@@ -7,7 +7,7 @@ It’s very common technique to build games on the separate machines or even in 
 Here is an example command that will build game project for Windows platform:
 
 ```
-FlaxEditor.exe -project "<project-path>" -headless -std -build "Development.Windows 64bit"
+FlaxEditor.exe -project "<project-path>" -headless -mute -null -std -build "Development.Windows 64bit"
 ```
 
 It will also send the log (including C# API [Debug.Log](https://docs.flaxengine.com/api/FlaxEngine.Debug.html#FlaxEngine_Debug_Log_System_Object_)) to the standard process output so in case of issues they can be easily detected. What is, even more, the editor may start without a window (headless mode) and perform some additional actions like clearing cooker cache or project cache.
