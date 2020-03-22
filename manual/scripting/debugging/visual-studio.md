@@ -2,7 +2,14 @@
 
 ![Visual Studio Extension](../../get-started/media/vs.jpg)
 
-You can download Visual Studio [here](https://www.visualstudio.com).
+You can download Visual Studio [here](https://www.visualstudio.com). We support **Visual Studio 2017, Visual Studio 2019**.
+
+Flax requries the following components to be installed in order to support C# scripts debugging:
+* C# and Visual Basic Roslyn Compilers
+* C# and Visual Basic
+* .NET Framework 4.8 targeting pack (or any other .Net 4.5 or newer framework)
+
+![Visual Studio Components](media/vs-components.png)
 
 ### 1. Install Visual Studio plugin
 
