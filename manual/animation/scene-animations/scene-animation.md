@@ -81,6 +81,6 @@ You can use **right click on the timeline** to edit selected media properties or
 
 ## Playback preview
 
-Scene animation editor windows supports previewing the animation playback during the game. Simply use the animation player actor picker. Then if you start the game you will be able to preview its state as well as control playback (via play/pause buttons) and use the seeking.
+Scene animation editor windows supports previewing the animation playback during the game. The game must be running in Flax Editor for animation playback to work. Simply use the animation player actor picker, start the game in Flax Editor and you will be able to preview its state as well as control playback (via play/pause buttons) and use the seeking.
 
 ![Playback Preview Picker](media/anim-player-pickup.png)
