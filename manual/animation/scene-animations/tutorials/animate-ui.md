@@ -36,6 +36,6 @@ Property track editing depends on the value type. For colors and vectors, you ca
 
 ### 5. Play the animation
 
-The final step is to add Scene Animation Player actor and play this animation.
+The final step is to add Scene Animation Player actor and play this animation. Before you can play the animation in the Animation Player, you must play the game in Flax Editor.
 
 ![Animated Object](media/ui-animation-color.gif)
