@@ -38,7 +38,7 @@ Click on a left side of the code editor to assign a breakpoint to the line. Red 
 
 ### 5. Attach to Flax
 
-Press the `Attach to Flax` button with a green arrow to connect Visual Studio to Flax Editor. Visual Studio should enter a debugging mode and the bottom of the IDE will remain orange. This signifies Visual Studio is ready for debugging. If the bottom of the IDE does not remain orange, there is an issue with Flax and VS integration.
+Press the `Attach to Flax` button with a green arrow to connect Visual Studio to Flax Editor. Visual Studio should enter a debugging mode and the bottom of the IDE will remain orange. This signifies Visual Studio is ready for debugging.
 
 ![Script in Visual Studio](media/debug-vs-3.jpg)
 
