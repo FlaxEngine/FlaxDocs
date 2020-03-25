@@ -8,3 +8,4 @@
 * [Access Game Window](access-game-window.md)
 * [Multithreading](multithreading.md)
 * [Screenshots](screenshots.md)
+* [Gameplay Globals](gameplay-globals.md)
