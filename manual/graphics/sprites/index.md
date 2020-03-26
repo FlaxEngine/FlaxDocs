@@ -43,8 +43,10 @@ In the below image the add frame "+" button has been clicked a number of times a
 
 After all the frame data is input you are ready to add the sprite to the scene. Right click on a UI canvas to add a UI Control for an image sprite and configure Image values in the properties view. Another way to add the sprite to the scene is to simply drag the sprite into the scene heiarchy. You can modify which frame of the sprite is depicted in the properties window.
 
+
 > [!Note]
 > Future versions of Flax Editor will provide for automtaic creation of the sprite atlas from different sprite sheets.
+
 
 ![Image Properties](media/sprites-05.jpg)
 
