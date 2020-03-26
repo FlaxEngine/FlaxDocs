@@ -1,6 +1,6 @@
 # Plugins
 
-Plugins are separate code libraries added to your Flax project that can be used to implement persistent game or utility classes, custom engine features or to extend the editor by adding custom tools (with UI representation inside of Flax Editor). This documentation section explains the basics of creating and using plugins. Follow these notes to learn more about plugins system in Flax.
+Plugins are separate code libraries added to your Flax project that can be used to implement persistent game or utility classes, custom engine features or to extend the editor by adding custom tools with UI representation. This documentation section explains the basics of creating and using plugins. Follow these notes to learn more about plugins system in Flax.
 
 Example plugin project can be found [here](https://github.com/FlaxEngine/ExamplePlugin). Use it as a reference.
 
