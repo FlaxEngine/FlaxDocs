@@ -73,7 +73,7 @@
 ### [How to create a decal](graphics/decals/create-decal.md)
 ## [Sprites](graphics/sprites/index.md)
 ### [Importing Sprites](graphics/sprites/importing-sprites.md)
-### [Modifying Sprite Atlas](graphics/sprites/sprite-atlas.md)
+### [Modifying Sprite Atlas](graphics/sprites/modifying-sprite-atlas.md)
 ## [Textures](graphics/textures/index.md)
 ### [Texture Window](graphics/textures/texture-window.md)
 ### [Texture Import Settings](graphics/textures/import-settings.md)
