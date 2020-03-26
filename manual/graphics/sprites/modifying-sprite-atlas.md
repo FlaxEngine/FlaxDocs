@@ -19,5 +19,3 @@ After all the frame data is input you are ready to add the sprite to the scene. 
 The sprite is now ready for use or animation.
 
 ![Completed Sprite](media/sprites-06.jpg)
-
-
