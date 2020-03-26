@@ -15,7 +15,7 @@ Flax Engine supports importing the following list of file types as sprites:
 - `.hdr`
 - `.raw`
 
-## Importing a Sprite
+## Importing Sprites
 
 The easiest way to import one or more sprites is to drag them from *Explorer* to the *Content* window.
 
@@ -33,7 +33,7 @@ The sprite should now be imported.
 
 ![Imported Sprite](media/sprites-03.jpg)
 
-## Modifying a Sprite Atlas
+## Modifying Sprite Atlas
 
 A sprite atlas refers to both the sprite and frame data. Currently frame data can be entered in one of two ways. One method is to enter frame location and size values after clicking the add frame "+" button. Once a frame has been added you can enter location and size values on the right-side navigation. Another method for adding a frame to the atlas is through code, the API reference is [here](https://docs.flaxengine.com/api/FlaxEngine.SpriteAtlas.html#FlaxEngine_SpriteAtlas_AddSprite).
 
