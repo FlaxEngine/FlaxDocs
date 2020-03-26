@@ -15,7 +15,7 @@ Flax Engine supports importing the following list of file types as sprites:
 - `.hdr`
 - `.raw`
 
-## Importing a sprite
+## Importing a Sprite
 
 The easiest way to import one or more sprites is to drag them from *Explorer* to the *Content* window.
 
@@ -33,7 +33,20 @@ The sprite should now be imported.
 
 ![Imported Sprite](media/sprites-03.jpg)
 
-## Modifying a sprite atlas
+## Modifying a Sprite Atlas
 
-A sprite atlas refers to both the sprite and frame data. Currently frame data can be entered in one of two ways. One method is to enter frame location and size values after clicking the "+" icon. Once a frame has been added you can enter location and size values on the right-side navigation. Another method for adding a frame to the atlas is through code, the API reference is [here](https://docs.flaxengine.com/api/FlaxEngine.SpriteAtlas.html#FlaxEngine_SpriteAtlas_AddSprite).
+A sprite atlas refers to both the sprite and frame data. Currently frame data can be entered in one of two ways. One method is to enter frame location and size values after clicking the add frame "+" button. Once a frame has been added you can enter location and size values on the right-side navigation. Another method for adding a frame to the atlas is through code, the API reference is [here](https://docs.flaxengine.com/api/FlaxEngine.SpriteAtlas.html#FlaxEngine_SpriteAtlas_AddSprite).
+
+In the below image the add frame "+" button has been clicked a number of times and frame data values are being input.
+
+![Modifying Sprite Atlas](media/sprites-04.jpg)
+
+After all the frame data is input you are ready to add the sprite to the scene. Right click on a UI canvas to add a UI Control for an image sprite and configure Image values in the properties view. Another way to add the sprite to the scene is to simply drag the sprite into the scene heiarchy. You can modify which frame of the sprite is depicted in the properties window.
+
+![Image Properties](media/sprites-05.jpg)
+
+The sprite is now ready for use or animation.
+
+![Completed Sprite](media/sprites-06.jpg)
+
 
