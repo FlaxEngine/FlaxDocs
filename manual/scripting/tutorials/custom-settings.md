@@ -19,7 +19,7 @@ public class MySettings
 
 ### 2. Create settings in Editor
 
-Next step is to create an actual asset (*.json* file) that contains settings. You can use you script code (Start method), a [custom editor](custom-editor.md), or a [custom editor window](custom-window.md) to do it.
+Next step is to create an actual asset (*.json* file) that contains settings. You can use your script code (Start method), a [custom editor](custom-editor.md), or a [custom editor window](custom-window.md) to do it.
 
 ```cs
 #if FLAX_EDITOR
