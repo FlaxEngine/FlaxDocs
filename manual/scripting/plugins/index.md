@@ -1,6 +1,6 @@
 # Plugins
 
-Plugins are separate code libraries that can contain content. Plugins can be used to implement custom features to the engine or extend the editor by adding custom tools. This documentation section explains the basics of creating and using plugins. Follow these notes to learn more about plugins system in Flax.
+Plugins are separate code libraries added to your Flax project that can be used to implement persistent game or utility classes, custom engine features or to extend the editor by adding custom tools with UI representation. This documentation section explains the basics of creating and using plugins. Follow these notes to learn more about plugins system in Flax.
 
 Example plugin project can be found [here](https://github.com/FlaxEngine/ExamplePlugin). Use it as a reference.
 
@@ -8,7 +8,7 @@ Example plugin project can be found [here](https://github.com/FlaxEngine/Example
 
 Flax supports loading C# libraries (from *.dll* files) and adding references to game scripts. Many Flax Engine systems are designed to be extensible, enabling developers to add entire new features and to modify built-in functionality without modifying Engine Core code directly.
 
-Using plugins allows also to use external .Net libraries to be used within a game. For instance, the developer can use a custom networking library or the social plugin for gameplay implementation. By default Flax loads all .Net modules contained in the **Content** folder (or any subdirectory) and adds references to them for the game projects. During Game Cooking those assemblies can be deployed with the game to be used at runtime.
+Using plugins allows the use of external .Net libraries to be used within a game. For instance, the developer can use custom game classes, custom networking libraries or a social media plugin. By default, Flax loads all .Net modules contained in the **Content** folder (or any subdirectory) and adds a reference to them to the game projects. During Game Cooking those assemblies can be deployed with the game to be used at runtime.
 
 > [!IMPORTANT]
 > If your plugin collects the C# types information (eg. methods cache or attributes) always remember to release them in Editor on [FlaxEditor.Scripting.ScriptsBuilder.ScriptsReloadBegin](https://docs.flaxengine.com/api/FlaxEditor.Scripting.ScriptsBuilder.html#FlaxEditor_Scripting_ScriptsBuilder_ScriptsReloadBegin) event to prevent crashes during scripts reload in Editor.
@@ -31,9 +31,15 @@ Every plugin has to export its description structure that defines the basic plug
 | **IsAlpha** | True if plugin is during Alpha tests (early version). |
 | **SupportedPlatforms** | The supported deploy platforms by this plugin. |
 
+# Types of Plugins
+
+There are two types of plugins: 
+* Game plugins
+* Editor plugins
+
 ## Game Plugins
 
-**Game Plugins** are type of plugin that can be used at runtime. Game plugins are deployed with the game and can extend the engine by adding new features. Plugins can contain also a custom Scripts that can be used in a game. To create a simple game plugin use the following code example:
+**Game Plugins** are type of plugin that can be used at runtime. Game plugins are deployed with the game and can extend the engine by adding new features. Plugins can contain custom scripts that can be used in a game. To create a simple game plugin use the following code example:
 
 ```cs
 public class MyPlugin : GamePlugin
