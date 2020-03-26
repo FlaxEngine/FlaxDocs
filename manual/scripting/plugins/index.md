@@ -33,6 +33,10 @@ Every plugin has to export its description structure that defines the basic plug
 
 # Types of Plugins
 
+There are two types of plugins: 
+* Game plugins
+* Editor plugins
+
 ## Game Plugins
 
 **Game Plugins** are type of plugin that can be used at runtime. Game plugins are deployed with the game and can extend the engine by adding new features. Plugins can contain custom scripts that can be used in a game. To create a simple game plugin use the following code example:
