@@ -11,6 +11,7 @@ This section covers the specific information for different aspects of each platf
 * [Windows Desktop 7, 8, 10](windows.md)
 * [Universal Windows (UWP)](uwp.md)
 * [Xbox One](xbox-one.md)
+* [PlayStation 4](ps4.md)
 * [Linux](linux.md)
 
 > [!TIP]
@@ -22,6 +23,7 @@ This section covers the specific information for different aspects of each platf
 * DirectX 12
 * Vulkan
 * Null
+* Platform native (eg. on PS4)
 
 > [!TIP]
 > To check on which rendering backend game is running use [GPUDevice.RendererType](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_Rendering_GPUDevice_RendererType). You can also use [GPUDevice.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_Rendering_GPUDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.

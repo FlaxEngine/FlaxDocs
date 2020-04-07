@@ -310,6 +310,7 @@
 ## [Windows](platforms/windows.md)
 ## [UWP](platforms/uwp.md)
 ## [Xbox One](platforms/xbox-one.md)
+## [PlayStation 4](platforms/ps4.md)
 ## [Linux](platforms/linux.md)
 
 # [Contributing](contributing/index.md)
