@@ -17,4 +17,4 @@ Flax uses **left-handed** coordinate system. Where each axis points:
 
 Flax uses **row-major matrices** and row vectors.
 Hovewer Flax tries to use [Transform](https://docs.flaxengine.com/api/FlaxEngine.Transform.html) structure as much as possible when it comes to objects trasformation representation as it is easier to work with and has better precision in some cases. Transformation order is always: **Scale** -> **Rotate** -> **Translate** (TRS style).
-
+Euler angles are stored in order: **pitch - yaw - roll** (x, y, z).
