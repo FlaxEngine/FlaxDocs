@@ -63,7 +63,7 @@ public class TerrainFromCode : Script
                 // Initialize patch (virtual)
                 var patchCoord = new Int2(patchX, patchZ);
                 _terrain.AddPatch(ref patchCoord);
-                _terrain.SetupPatch(ref patchCoord, heightmap, null, true);
+                _terrain.SetupPatchHeightMap(ref patchCoord, heightmap, null, true);
             }
         }
     }
