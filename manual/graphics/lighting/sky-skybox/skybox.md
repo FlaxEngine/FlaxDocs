@@ -2,7 +2,7 @@
 
 ![Skybox](media/skybox.png)
 
-Using a **Skybox** creates a background for your scene. Typical skybox contains skies, clouds, mountains, and other distant scenery. Skyboxes use pre rendered cube textures.
+Using a **Skybox** creates a background for your scene. Typical skybox contains skies, clouds, mountains, and other distant scenery. Skyboxes use pre rendered cube textures or panoramic texturs.
 
 > [!Note]
 > To learn more about importing and using cube textures see related documentation [page here](../../textures/cube-textures.md).
@@ -13,9 +13,17 @@ Using a **Skybox** creates a background for your scene. Typical skybox contains 
 
 | Property | Description |
 |--------|--------|
-| **Cube Texture** | Cube texture used to draw a skybox |
+| **Cube Texture** | The cube texture to draw. |
+| **Panoramic Texture** | The panoramic texture to draw. It should have a resolution ratio close to 2:1. |
 | **Custom Material** | Custom material asset to override the default one. |
 | **Color** | Skybox texture color multiplier |
+| **Exposure** | The skybox texture exposure value. Can be used to make skybox brighter or dimmer. |
+
+## Panoramic texture
+
+![Panoramic Skybox](media/skybox-panoramic-usage.png)
+
+If panoramic texture is assigned it will be mapped into the 360 degree of the sphere. It should have a resolution ratio close to 2:1 - Longitude / Latitude (Panoramic) skybox: 2:1 aspect ratio (eg. 8192/4096, 4096/2048, 2048/1024).
 
 ## Custom skybox material
 
