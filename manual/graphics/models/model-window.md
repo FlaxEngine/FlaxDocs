@@ -30,6 +30,12 @@ The viewport panel shows the preview of the model. You can navigate in the viewp
 
 In the upper left corner, the viewport contains a widget **View ** button with many options for the viewport customization and model debugging (LOD preview, camera settings and more).
 
+#### Level Of Detail
+
+When working with static models level of details you can preview a custom LOD by setting **View** -> **PReview LOD** (value -1 uses default LOD). To preview current LOD stats in the viewport use **View** -> **Show** -> **Current LOD**.
+
+![Current LOD Stats](media/preview-current-lod.jpg)
+
 ### Properties panel
 
 ![Properties](media/model-properties.png)
