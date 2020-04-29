@@ -19,8 +19,6 @@ public override void OnStart()
 |--------|--------|
 | **FLAX** | Always defined. Can be used to detect code compiled for Flax environment. |
 | **FLAX_EDITOR** | Compile for editor (play in-edior). |
-| **FLAX_PLUGIN** | Compile project for plugin export. |
-| **FLAX_EDITOR_WIN** | Compile for editor on Windows. |
 | **FLAX_WINDOWS** | Compile for Windows. |
 | **FLAX_UWP** | Compile for Universal Windows Platform (UWP). |
 | **FLAX_WSA** | Compile for Windows Store. |
@@ -29,7 +27,6 @@ public override void OnStart()
 | **FLAX_LINUX** | Compile for Linux. |
 | **FLAX_X** | Used to detect Flax version during compilation. X=major version of Flax. eg. `FLAX_1` |
 | **FLAX_X_Y** | Used to detect Flax version during compilation. X=major version of Flax. Y=minor version of Flax. eg. `FLAX_1_2` |
-| **FLAX_X_Y_Z** | Used to detect Flax version during compilation. X=major version of Flax. Y=minor version of Flax, Z=build number of Flax. eg. `FLAX_1_2_6554` |
 
 To specify custom compilation macros see [Game Cooker](../editor/game-cooker/index.md) and [Game Settings](../editor/game-settings/index.md) documentation.
 
