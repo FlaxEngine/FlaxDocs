@@ -150,12 +150,12 @@ public Texture CoolVariable;
 
 ![Example](media/AssetReference.jpg)
 
-### MemberCollection
+### Collection
 
 This attributes provides additional information on a member collection.
 
 ```cs
-[MemberCollection(ReadOnly = true)]
+[Collection(ReadOnly = true)]
 public int[] CoolVariable = new int[]
 {
 	1,
@@ -164,7 +164,7 @@ public int[] CoolVariable = new int[]
 };
 ```
 
-![Example](media/MemberCollection.jpg)
+![Example](media/Collection.jpg)
 
 ### CustomEditor
 

@@ -31,7 +31,7 @@ The following table lists the most common attributes with usage description.
 | **EditorOrder** | Allows to declare order of the item in the editor. Items are listed from the lowest to the highest order. |
 | **MultilineText** | Instructs UI editor to use multiline textbox for editing *string* property or field. |
 | **AssetReference** | Specifies a options for an asset reference picker in the editor. Allows to customize view or provide custom value assign policy. |
-| **MemberCollection** | This attributes provides additional information on a member collection. |
+| **Collection** | This attributes provides additional information on a member collection for the editor. |
 | **CustomEditor** | Overrides the default editor provided for the target object/class/field/property. Allows to extend visuals and editing experience of the object. To learn more see [Custom Editors](custom-editors/index.md) docuemntation. |
 | **CustomEditorAlias** | Works the same as *CustomEditor* attribute, except uses a typename that can be located in different assembly (not referenced). |
 | **ExecuteInEditMode** | Makes a script execute in edit mode. |
