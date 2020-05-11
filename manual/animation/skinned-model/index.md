@@ -24,6 +24,8 @@ To learn more about **Import Options** see [Models Importing page](../../graphic
 > [!Note]
 > Flax during importing separates the skeleton bones (used for the skinning) and the skeleton nodes hierarchy due to performance reasons (there are fewer bones that are used for rendering). If your model used sockets or any dedicated nodes they may be lost. However, it's better to use the Bone Socket actor in Flax.
 
+Flax supports **Level of Detail** for skinned models including automatic generation on import.
+
 ## Editing skinned model
 
 ![Skinned Model Window](media/skinned-model-window.jpg)
@@ -37,3 +39,11 @@ To learn more about editing the skinned model properties and exploring it see th
 Skinned models are used by the many parts of the animation system.
 The most important usage is to feed the rendering system with the meshes data.
 Also assets like [Anim Graph](../anim-graph/index.md) and [Skeleton Mask](../skeleton-mask.md) are using the skeleton bones structure indiced within the skinned model asset. You can also access the skeleton data via C# scripting API (see [SkinnedModel](https://docs.flaxengine.com/api/FlaxEngine.SkinnedModel.html) class).
+
+## Blend Shapes
+
+![Blend Shapes](media/blend-shapes.gif)
+
+Flax supports importing and using Blend Shapes (aka. morph targets) for skinned models. This can be useful to implement chaarcter face emotions or lipsync during dialog scenes. When importing asset check **Import Blend Shapes** option. Then you will be able to preview the blend shapes in the skinned model window (each channel is adjustable under *Blend Shapes* group).
+Then you can control blend shapes appearance at runtime from code using [AnimatedModel](https://docs.flaxengine.com/api/FlaxEngine.AnimatedModel.html) class methods *SetBlendShapeWeight* / *GetBlendShapeWeight* / *ClearBlendShapeWeights*.
+

@@ -36,7 +36,9 @@ This panel shows:
 * Material Slots properties
 * General model info
 * Meshes editing tools (eg. material slot binding)
-* Skeleton bones hierarchy preview
+* Skeleton nodes hierarchy
+* Skeleton bones hierarchy (nodes sued by the meshes)
+* Blend Shapes (for preview)
 * Import settings (for quick asset reimport)
 
 You can use it to modify the asset, view the model info (triangles, vertices, bones amount), or reimport it from the source asset. Because this panel contains a lot of content it has been split into several groups so by clicking on a given group header bar (eg. *Skeleton*) it will pop up its contents.

@@ -35,6 +35,10 @@ or adjusting it per model instance using **LOD Bias** and **Forced LOD** propert
 
 To learn about importing model assets and adjusting import settings read the dedicated [page here](import.md).
 
+Flax supports **generating LODs automatically** during source asset importing. When importing model file simply check **Generate LODs** property (under *Level Of Detail* group) and adjust the settings.
+
+![Automatic Model LOD](media/automatic-model-lod.gif)
+
 ## Using models
 
 Model assets are used by the many parts of the engine. The most common case is by creating a **Static Model**. That actor type renders a model and allows to override some of its properties like shadows casting or material slots collection. To learn more about it see a dedicated [page here](static-model.md).

@@ -45,7 +45,7 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 
 | Property | Description |
 |--------|--------|
-| **Type** | The type of the imported asset. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Model**</td><td>The model asset.</td></tr><tr><td>**SkinnedModel**</td><td>The skinned model asset.</td></tr><tr><td>**Animation**</td><td>The animation asset.</td></tr></table></tbody> |
+| **Type** | The type of the imported asset. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Model**</td><td>The model asset.</td></tr><tr><td>**Skinned Model**</td><td>The skinned model asset.</td></tr><tr><td>**Animation**</td><td>The animation asset.</td></tr></table></tbody> |
 |||
 | **Geometry** ||
 | **Calculate Normals** | If checked, model normal vectors will be recalculated. |
@@ -56,12 +56,14 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 | **Merge Meshes** | If checked, meshes with the same materials will be merged. Helps with rendering performance. |
 | **Import LODs** | If checked, model importer will try to find LODs and import them. See *Importing model LODs* section to learn more. |
 | **Import Vertex Colors** | If checked, vertex colors will be imported (channel 0 only, if exists). |
+| **Import Blend Shapes** | If checked, blend shapes will be imported (morph targets). |
 | **Lightmap UVs Source** | Specifies model lightmap texture coordinates source. Can import them from the source model or generate them with in-build tool. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Disable**</td><td>Don't use lightmap UVs.</td></tr><tr><td>**Generate**</td><td>Generate lightmap UVs from model geometry. Requires proper normal/tangent vectors. Highly increases the importing time.</td></tr><tr><td>**Channel 0**</td><td>Use input mesh texture coordinates channel 0.</td></tr><tr><td>**Channel 1**</td><td>Use input mesh texture coordinates channel 1.</td></tr><tr><td>**Channel 2**</td><td>Use input mesh texture coordinates channel 2.</td></tr><tr><td>**Channel 3**</td><td>Use input mesh texture coordinates channel 3.</td></tr></table></tbody>|
 |||
 | **Transform** ||
 | **Scale** | Custom uniform scale applied to the imported model data. |
 | **Rotation** | Custom import geometry rotation applied to the imported model data. |
 | **Translation** | Custom import geometry offset applied to the imported model data. |
+| **Center Geometry** | If checked, the imported geometry will be shifted to the center of mass. |
 |||
 | **Animation** ||
 | **Duration** | Specifies the imported animation duration mode. Can use the original value or overriden by settings. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Imported**</td><td>The imported duration.</td></tr><tr><td>**Custom**</td><td>The custom duration specified via keyframes range.</td></tr></table></tbody>|
@@ -74,4 +76,10 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 | **Enable Root Motion** | If checked, enables root motion extraction support from this animation. |
 | **Root Node Name** | The custom node name to be used as a root motion source. If not specified the actual root node will be used. |
 | **Animation Index** | The zero-based index for the animation clip to import. If the source file has more than one animation it can be used to pick a desire clip. |
+|||
+| **Generate LODs** | If checked, the importer will generate a sequence of LODs based on the base LOD index. |
+| **Base LOD** | The index of the LOD from the source model data to use as a reference for following LODs generation. |
+| **LOD Count** | The amount of LODs to include in the model (all reaming ones starting from Base LOD will be generated). |
+| **Triangle Reduction** | The target amount of triangles for the generated LOD (based on the higher LOD). Normalized to range 0-1. For instance 0.4 cuts the triangle count to 40%. |
+|||
 | **Restore Materials On Reimport** | If checked, the importer will try to restore the assigned materials to the model slots. |

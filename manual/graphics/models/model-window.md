@@ -36,6 +36,8 @@ When working with static models level of details you can preview a custom LOD by
 
 ![Current LOD Stats](media/preview-current-lod.jpg)
 
+![Automatic Model LOD](media/automatic-model-lod.gif)
+
 ### Properties panel
 
 ![Properties](media/model-properties.png)
