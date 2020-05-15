@@ -35,6 +35,6 @@ Finally, if you want to access and change the Anim Graph parameter values from t
 
 In Anim Graph skeleton nodes transformations are stores in an array of matrices. Those matrices have format depending on context:
 * **local space** - connections are *white* using *ConnectionType.Impulse* - bone matrixes are in local space of the parent bone
-* **global space** - connections are *green* using *ConnectionType.ImpulseSecondary* - bone matrixes are in local space of the actor (Animated Model that runs the animation playback)
+* **model space** - connections are *green* using *ConnectionType.ImpulseSecondary* - bone matrixes are in local space of the actor (Animated Model that runs the animation playback)
 
-To change the transformations spaces you can use `Local to Global` and `Global to Local` nodes.
+To change the transformations spaces you can use `Local to Model` and `Model to Local` nodes.
