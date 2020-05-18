@@ -17,6 +17,7 @@ This documentation section describes how to work with Flax animations pipeline. 
  * [Editor Interface](anim-graph/interface.md)
  * [Graph Parameters](anim-graph/parameters.md)
  * [State Machines](anim-graph/state-machine.md)
+ * [Inverse Kinematics](anim-graph/inverse-kinematics.md)
  * [Custom Nodes](anim-graph/custom-nodes.md)
 * [Animated Model](animated-model.md)
 * [Skeleton Mask](skeleton-mask.md)
