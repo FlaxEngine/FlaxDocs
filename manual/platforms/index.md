@@ -32,3 +32,9 @@ This section covers the specific information for different aspects of each platf
 
 By default Flax stores the log files inside the project folder in subdirectory `Logs` (as described [here](../get-started/project-structure.md)). Builded game is often installed in a folder with no write-access which means Flax needs to store the log files in a temporary directory located in `%LocalAppData%\<CompanyName>\<ProductName>`. Where `<CompanyName>` and `<ProductName>` are values defined in the *Game Settings*. To debug your game crashes or errors please see the log files.
 
+## Crash logs
+
+![Crash Data](media/crash-files.png)
+
+Debug and Development builds support crash dumps collecting (depending on the target platform). By default creash dump is created in Logs folder in a directory named `Crash_<log_name>` and it contains a copy of the original log file and memory dump.
+For instance, on Windows you can open minidump file with Visual Studio, specify the engine/game binaries (with .pdb files) and debug the native crash
