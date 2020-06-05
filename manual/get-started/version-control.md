@@ -10,11 +10,17 @@ By default, all Flax projects data is split into two parts: **Content** and **So
 Here is an example `.gitignore` file for the **Git** repository with Flax project ([download link](https://github.com/FlaxEngine/FlaxSamples/blob/master/.gitignore)).
 
 ```
-# Ignore Flax Engine files
+# Ignore Flax project files
+Binaries/
 Cache/
 Logs/
 Output/
 Screenshots/
+*.HotReload.*
+
+# Ignore Visual Studio project files (generated locally)
+*.csproj
+*.sln
 
 # Ignore thumbnails created by Windows
 Thumbs.db
@@ -47,7 +53,7 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 .vs/
 
-# Nuget packages folder
+# Ignore Nuget packages folder
 packages/
 ```
 
