@@ -20,6 +20,12 @@ Welcome to the official Flax Engine Manual! In this section you will find everyt
 <p>Create your very first Flax game project.</p>
 </div>
 
+<div class="frontpage-section">
+<a href="../samples-tutorials/index.md"><img src="../samples-tutorials/media/icon.jpg"></a>
+<h3><a href="../samples-tutorials/index.md">Samples and Tutorials</a></h3>
+<p>Collection of sample projects and tutorials.</p>
+</div>
+
 </div>
 
 ## Migrate to Flax
