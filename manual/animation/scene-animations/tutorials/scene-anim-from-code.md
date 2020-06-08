@@ -39,7 +39,7 @@ public class TestScript : Script
         var data = timeline.Save();
 
         // Save data to asset file
-        var path = Path.Combine(Globals.ContentFolder, "My Scene Anim.flax");
+        var path = Path.Combine(Globals.ProjectContentFolder, "My Scene Anim.flax");
         Editor.CreateAsset(Editor.NewAssetType.SceneAnimation, path);
         var sceneAnimation = Content.Load<SceneAnimation>(path);
         sceneAnimation.SaveTimeline(data);

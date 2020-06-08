@@ -56,7 +56,7 @@ class AsyncTest : Script
     async Task HandleFileAsync()
     {
         Debug.Log("Starting async job from thread: " + Thread.CurrentThread.ManagedThreadId);
-        string file = Path.Combine(Globals.ContentFolder, "myFile.txt");
+        string file = Path.Combine(Globals.ProjectContentFolder, "myFile.txt");
         int count = 0;
 
         // Read in the specified file (use async StreamReader method)
@@ -116,7 +116,7 @@ class ThreadTest : Script
     void HandleFileAsync()
     {
         Debug.Log("Starting async job from thread " + Thread.CurrentThread.ManagedThreadId);
-        string file = Path.Combine(Globals.ContentFolder, "myFile.txt");
+        string file = Path.Combine(Globals.ProjectContentFolder, "myFile.txt");
         int count = 0;
 
         // Read in the specified file
@@ -176,7 +176,7 @@ class ThreadPoolTest : Script
     void HandleFileAsync(object stateInfo)
     {
         Debug.Log("Starting async job from thread " + Thread.CurrentThread.ManagedThreadId);
-        string file = Path.Combine(Globals.ContentFolder, "myFile.txt");
+        string file = Path.Combine(Globals.ProjectContentFolder, "myFile.txt");
         int count = 0;
 
         // Read in the specified file

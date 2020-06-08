@@ -6,7 +6,7 @@ Custom settings are identified by unique key and link the custom json asset with
 To set custom settings in Editor you can use the following code:
 
 ```cs
-var path = Path.Combine(Globals.ContentFolder, "myPluginSettings.json");
+var path = Path.Combine(Globals.ProjectContentFolder, "myPluginSettings.json");
 FlaxEditor.Editor.SaveJsonAsset(path, new MySettings());
 GameSettings.SetCustomSettings("MyPlugin", Content.LoadAsync<JsonAsset>(path));
 ```

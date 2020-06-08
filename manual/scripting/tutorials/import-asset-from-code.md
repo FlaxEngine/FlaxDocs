@@ -7,7 +7,7 @@ Here is an example script that imports a texture from a given path. It is import
 ```cs
 #if FLAX_EDITOR
 var sourcePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "MyTexture.png");
-var outputPath = Globals.ContentFolder;
+var outputPath = Globals.ProjectContentFolder;
 var outputLocation = (ContentFolder)Editor.Instance.ContentDatabase.Find(outputPath);
 
 Editor.Instance.ContentImporting.Import(sourcePath, outputLocation, true);
@@ -18,7 +18,7 @@ You can also provide custom settings for the importer as shown in the example be
 
 ```cs
 var sourcePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "MyModel.fbx");
-var outputPath = Globals.ContentFolder;
+var outputPath = Globals.ProjectContentFolder;
 var outputLocation = (ContentFolder)Editor.Instance.ContentDatabase.Find(outputPath);
 
 var settings = new FlaxEditor.Content.Import.ModelImportSettings();

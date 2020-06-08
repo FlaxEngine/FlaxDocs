@@ -30,7 +30,7 @@ Also, you can use your script code (Start method), a [custom editor](custom-edit
 
 ```cs
 #if FLAX_EDITOR
-	var path = Path.Combine(Globals.ContentFolder, "mySetitng.json");
+	var path = Path.Combine(Globals.ProjectContentFolder, "mySetitng.json");
 	FlaxEditor.Editor.SaveJsonAsset(path, new MySettings());
 	GameSettings.SetCustomSettings("MyPlugin", Content.LoadAsync<JsonAsset>(path));
 #endif

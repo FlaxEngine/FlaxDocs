@@ -26,5 +26,5 @@ var myDecal = Decal.New();
 myDecal.Parent = myLight;
 
 // Create a prefab
-Editor.CreatePrefab(StringUtils.CombinePaths(Globals.ContentFolder, "myPrefab.prefab"), myLight, false);
+Editor.CreatePrefab(StringUtils.CombinePaths(Globals.ProjectContentFolder, "myPrefab.prefab"), myLight, false);
 ```
