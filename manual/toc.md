@@ -55,6 +55,7 @@
 ### [Command Line Access](editor/advanced/command-line-access.md)
 ### [Custom Visject Surfaces](editor/advanced/custom-visject-surface.md)
 ### [Editor Style](editor/advanced/style.md)
+### [Custom Engine Build](editor/advanced/custom-engine.md)
 
 # [Graphics](graphics/index.md)
 ## [Rendering overview](graphics/overview/index.md)

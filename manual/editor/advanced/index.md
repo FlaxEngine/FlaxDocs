@@ -6,4 +6,5 @@ This section contains more advanced topic about games development with Flax Engi
 * [Command Line Access](command-line-access.md)
 * [Custom Visject Surfaces](custom-visject-surface.md)
 * [Editor Style](style.md)
+* [Custom Engine Build](custom-engine.md)
 
