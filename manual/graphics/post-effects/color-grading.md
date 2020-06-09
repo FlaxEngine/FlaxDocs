@@ -4,6 +4,8 @@
 
 **Color Grading**, or **color correction** , is an effect is used to enhance the overall scene colors. Flax Engine provides solid color grading tools that enable artists to color correct cut-scenes and gameplay look right inside the editor with live preview. This means a huge step forward in good looking games production.
 
+To use custom color grading LUTs see a section below to learn how to import and apply Lookup Table texture.
+
 ## Color Wheels
 
 ![Color Wheel](media/color-grading-wheel.png)
@@ -41,3 +43,20 @@ Each group controls a selected part of the range (except *Master* which affects 
 |||
 | **Shadows Max** | Controls the luminance intensity of the image's blacks (shadows) to accurately reproduce colors. Raising or lowering this value will result in the image shadows being washed-out or too dark. |
 | **Highlights Min** | Controls a multiplier of the properties that affect the color correction properties that have been adjusted in the Highlights section. |
+
+## Custom LUT Textures
+
+**Lookup Table (LUT)** is used to perform color correction for the final rendered image. The blending is performed in LDR and is applied after tonemapping, procedural color correction and exposure control.
+
+**LUT** textures used in Flax must be unwrapped **256x16** textures imported without compression, without mipmaps and with RGB channels usd only.
+
+Example LUT texture:
+![LUT Texture](media/LUT_LateSunsetTable.png)
+
+To apply the LUT simply add PostFx Volume actor and asssing the texture and weight in the *Color Grading* category.
+![LUT Texture Example](media/lut-example.png)
+
+To make own LUT texture you can take a screenshot of the game viewport, then perform a custom color correction to achieve the desire look. Then apply the same colro grading to the neutral LUT and use it for colro grading in engine.
+Here you can download the neutral LUT:
+![Neutral LUT Texture](media/LUT_Neutral.png)
+
