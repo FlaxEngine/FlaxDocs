@@ -11,9 +11,11 @@ This section explains all you need to know about working with materials pipeline
 * DirectX 11 (with DirectX 10/10.1 fallback)
 * DirectX 12
 * Vulkan
+* Null
+* Platform native (eg. on PS4)
 
 > [!TIP]
-> To check on which rendering backend game is running use [GPUDevice.RendererType](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_GPUDevice_RendererType). You can also use [GPUDevice.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_Rendering_GPUDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.
+> To check on which rendering backend game is running use [GPUDevice.Instance.RendererType](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_Rendering_GPUDevice_RendererType). You can also use [GPUDevice.Instance.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_Rendering_GPUDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.
 
 ## In this section
 
@@ -26,4 +28,5 @@ This section explains all you need to know about working with materials pipeline
 * [Lighting](lighting/index.md)
 * [Fog effects](fog-effects/index.md)
 * [Post effects](post-effects/index.md)
+* [Shaders](shaders/index.md)
 * [Debugging tools](debugging-tools/index.md)
