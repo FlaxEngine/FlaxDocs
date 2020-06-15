@@ -15,7 +15,7 @@ To learn more about graphics programming in Flax see related [documentation here
 Flax uses **HLSL** as a shading language as it's very popular in the industry and supports all major graphics rendering features. Additionally, engine will automatically compile HLSL shaders into target platform such as Vulkan or PS4 with full runtime support.
 To learn about HLSL syntax see [Reference for HLSL](https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-reference) and [Programming guide for HLSL](https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-pguide).
 
-As an extension to the HLSL language, Flax uses a small set of **attribute macros** that are used to annotate code for the engine to understent the contents and automatically handle certain parts of the graphics pipeline such as constant buffers binding. Sample shaders (vertex, pixel, compute) in documentation showcase proper usage of those macros. Additionally you can reference the engine in-build shaders to learn more (see `Flax/Content/Shaders` assets).
+As an extension to the HLSL language, Flax uses a small set of **attribute macros** that are used to annotate code for the engine to understand the contents and automatically handle certain parts of the graphics pipeline such as constant buffers binding. Sample shaders (vertex, pixel, compute) in documentation showcase proper usage of those macros. Additionally you can reference the engine in-build shaders to learn more (see `Flax/Content/Shaders` assets).
 
 #### Reference of Flax Shaders Macros
 

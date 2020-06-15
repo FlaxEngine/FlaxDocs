@@ -13,7 +13,7 @@ If you're working with Visual Studio then use **File -> Generate project file** 
 As you can see the default generated shader contans:
 * Copyright note based on project settings (if specified)
 * Include directive that included the common types from Flax in-build shaders library
-* Constant buffer declaration that contains a ginel *Color* variable
+* Constant buffer declaration that contains a single *Color* variable
 * Pixel Shader function named *PS_Fullscreen* that simply returns a solid color from constant buffer.
 
 ![Editing Shader Source](media/shader-editing.png)
