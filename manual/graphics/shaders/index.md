@@ -83,7 +83,7 @@ Also, if your code needs to be used just for a single shader function use macro 
 Shader sources are stored in `.shader` files. Each file can contain one or more shader functions for the certain graphics rendering implementation. Hovewer when building complex graphics pipeline you might need to split some functionalities into several utility files. For this case, `.hlsl` files can be used as they can contain custom code to be included. Flax supports including files with a following pattern:
 
 ```hlsl
-#include "./<project_name>/file_path.hlsl>"
+#include "./<project_name>/<file_path>.hlsl"
 
 // Example:
 #include "./Flax/GBufferCommon.hlsl"
