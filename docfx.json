@@ -1,19 +1,7 @@
 {
   "metadata": [
     {
-      "src": [
-        {
-          "files": [
-            "src/**.csproj"
-          ],
-          "exclude": [
-            "**/obj/**",
-            "**/bin/**",
-            "_site/**",
-			"src/**.Tests.csproj"
-          ]
-        }
-      ],
+      "src": "src/*.dll",
       "dest": "api"
     }
   ],
