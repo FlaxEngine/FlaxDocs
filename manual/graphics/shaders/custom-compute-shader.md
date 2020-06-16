@@ -1,13 +1,13 @@
 # Custom Compute Shader
 
-In this tutorial you will learn how to create and use a simple **blur effect** that will use a Compute Shader in two-pass to blue the input image.
+In this tutorial you will learn how to create and use a simple **blur effect** that will use a Compute Shader in two-pass to blur the input image.
 This example requires compute shaders and draw-indirect support from GPU which might not be available on low-end GPUs.
 
-Compute shaders are GPU programs that don't use classical GPU pipeline such as vertex transformations, fragment shading or MSAA. They are fully configurable code that can run on GPU in async. They can be used for massively parallel computotional algorithms, or to accelerate parts of game rendering. Compute shaders don't need vertex/index buffers and don't write to output render target directly but instead can read and write to artibary buffers and textures provided by the user.
+Compute shaders are GPU programs that don't use classical GPU pipeline such as vertex transformations, fragment shading or MSAA. They are fully configurable code that can run on GPU in async. They can be used for massively parallel computational algorithms, or to accelerate parts of game rendering. Compute shaders don't need vertex/index buffers and don't write to output render target directly but instead can read and write to arbitrary buffers and textures provided by the user.
 
 ## 1. Create new shader
 
-Firstly, create empty file in folder **Source/Shaders** and name it in a proper way, eg. `BlueComputeShader.shader`. You can do it manually or use Editor and *right-click* in Content window shaders source folder **New -> Shader**.
+Firstly, create empty file in folder **Source/Shaders** and name it in a proper way, eg. `BlurComputeShader.shader`. You can do it manually or use Editor and *right-click* in Content window shaders source folder **New -> Shader**.
 
 ![New Shader Source](media/new-shader-source.png)
 
@@ -17,9 +17,9 @@ If you're working with Visual Studio then use **File -> Generate project file** 
 
 ## 2. Writing compute shader
 
-Now, let's write compute shader. In this example we use two functions: one will blur input mage horizotnally (`CS_BlurH`), second one will perform verticall blur (`CS_BlurV`). The blur will use configurable radius (in range 0-10) and blending intensity.
+Now, let's write the compute shader. In this example we use two functions: one will blur the input image horizotnally (`CS_BlurH`), second one will perform a vertical blur (`CS_BlurV`). The blur will use a configurable radius (in range 0-10) and blending intensity.
 
-Here is an example code used in this tutorial. Follow code comments to understand how it works better.
+Here is an example code used in this tutorial. Follow code comments to better understand how it works.
 
 ```hlsl
 #include "./Flax/Common.hlsl"
@@ -37,7 +37,7 @@ float BlurStrength;
 float BlurRadius;
 META_CB_END
 
-// Input texture to blue and the output texture to write to
+// Input texture to blur and the output texture to write to
 Texture2D Input : register(t0);
 RWTexture2D<float4> Output : register(u0);
 
@@ -156,7 +156,7 @@ void CS_BlurV(uint3 groupID : SV_GroupID, uint3 groupThreadID : SV_GroupThreadID
 
 ## 3. Dispatching compute
 
-Next step is to write a script that will invoke the compute shader execution on a GPU. To do so we will use C# script that implements **PostProcessEffect** class which is used to inject custom rendering code into the in-build graphics pipeline. You can also override the *Order* and *Location* properties to have even more control over rendering.
+Next step is to write a script that will invoke the compute shader execution on a GPU. To do so we will use a C# script that implements **PostProcessEffect** class which is used to inject custom rendering code into the in-built graphics pipeline. You can also override the *Order* and *Location* properties to have even more control over rendering.
 
 Create C# script and add it to the any actor on the scene. You can use [this tutorial](../../scripting/new-script.md) to learn how to do it. Then, write the following code:
 
@@ -165,7 +165,7 @@ using System;
 using System.Runtime.InteropServices;
 using FlaxEngine;
 
-public class BlueComputeShader : PostProcessEffect
+public class BlurComputeShader : PostProcessEffect
 {
     /// <summary>
     /// Shader constant buffer data structure that matches the HLSL source.
@@ -269,4 +269,4 @@ public class BlueComputeShader : PostProcessEffect
 
 The final step is to **add script** to actor on scene and **assign Shader** property to the auto-imported shader source from `Content/Shaders`.  When changing **Blur Radius** property from 0 to 10 you can see the effect in action real-time. In case of problems see *Output Log* window in Editor as it may contain any compilation errors (for both C# script and shader code).
 
-![COmpute Shader Blur](media/compute-blur.gif)
+![Compute Shader Blur](media/compute-blur.gif)
