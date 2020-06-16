@@ -43,7 +43,8 @@ Of course, all those things can be made manually by using Flax Editor C# API and
 | Command | Description |
 |--------|--------|
 | **-project <path>** | Startup project path. It must be specified to start the editor. |
-| **-clearcache** | Clears the project cache before starting the editor. |
-| **-clearcooker** | Clears the project Game Cooker cache before starting the editor. |
+| **-genProjectFiles** | Generates the scripts project files and exists. |
+| **-clearCache** | Clears the project cache before starting the editor. |
+| **-clearCooker** | Clears the project Game Cooker cache before starting the editor. |
 | **-build <preset.target>** | Starts the game building after editor launch and closes editor after building end. You can specify the single present name to build all its targets or specify both the present name and target name (separated by a dot. You can use braces if your preset/target name contains space characters. |
 
