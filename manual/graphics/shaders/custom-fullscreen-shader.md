@@ -81,16 +81,11 @@ public class SimplePostFx : PostProcessEffect
         Destroy(ref _psFullscreen);
     }
 
+    public override bool CanRender => base.CanRender && Shader && Shader.IsLoaded;
+
     public override unsafe void Render(GPUContext context, ref RenderContext renderContext, GPUTexture input, GPUTexture output)
     {
         // Here we perform custom rendering on top of the in-build drawing
-
-        // Skip if shader is not ready (copy source image)
-        if (!Shader || !Shader.IsLoaded)
-        {
-            context.Draw(output, input);
-            return;
-        }
 
         // Setup missing resources
         if (!_psFullscreen)
