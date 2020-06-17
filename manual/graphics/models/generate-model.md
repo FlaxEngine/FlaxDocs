@@ -57,14 +57,14 @@ public override void OnStart()
 	// Create dynamic model with a single LOD with one mesh
 	var model = Content.CreateVirtualAsset<Model>();
 	_tempModel = model;
-	model.SetupLODs(1);
+	model.SetupLODs(new[] { 1 });
 	UpdateMesh(model.LODs[0].Meshes[0]);
 
 	// Create or reuse child model
     var childModel = Actor.GetOrAddChild<StaticModel>();
     childModel.Model = model;
     childModel.LocalScale = new Vector3(100);
-    childModel.Entries[0].Material = Material;
+    childModel.SetMaterial(0, Material);
 }
 
 public override void OnDestroy()
