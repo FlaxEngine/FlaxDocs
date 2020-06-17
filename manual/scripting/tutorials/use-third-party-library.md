@@ -60,6 +60,10 @@ Then, regenerate scripts project files and use Steamworks API in your C# scripts
 Here is an example script that initializes API:
 
 ```cs
+using System;
+using FlaxEngine;
+using Steamworks;
+
 public class Steam : Script
 {
     public override void OnStart()
