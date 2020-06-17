@@ -40,9 +40,9 @@ public class PlayerHealthFromCode : Script
 	public override void OnUpdate()
 	{
 		var health = Health;
-		if (Input.GetKey(Keys.Q))
+		if (Input.GetKey(KeyboardKeys.Q))
 			health -= 5;
-		if (Input.GetKey(Keys.W))
+		if (Input.GetKey(KeyboardKeys.W))
 			health += 5;
 		Health = Mathf.Clamp(health, 0, 100);
 

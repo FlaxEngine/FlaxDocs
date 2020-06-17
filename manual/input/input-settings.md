@@ -33,9 +33,9 @@ Usefull C# API: [InputEvent](https://docs.flaxengine.com/api/FlaxEngine.InputEve
 |--------|--------|
 | **Name** | The action *"friendly name"* used to access it from code. |
 | **Mode** | The trigger mode. Allows to specify when input event should be fired. See [InputActionMode](https://docs.flaxengine.com/api/FlaxEngine.InputActionMode.html). |
-| **Key** | The [keyboard key](https://docs.flaxengine.com/api/FlaxEngine.Keys.html) to map for this action. Use *None* to ignore it. |
+| **Key** | The [keyboard key](https://docs.flaxengine.com/api/FlaxEngine.KeyboardKeys.html) to map for this action. Use *None* to ignore it. |
 | **Mouse Button** | The [mouse button](https://docs.flaxengine.com/api/FlaxEngine.MouseButton.html) to map for this action. Use *None* to ignore it. |
-| **Gamepad Button** | The [gamepad button](https://docs.flaxengine.com/api/FlaxEngine.GamePadButton.html) to map for this action. Use *None* to ignore it. |
+| **Gamepad Button** | The [gamepad button](https://docs.flaxengine.com/api/FlaxEngine.GamepadButton.html) to map for this action. Use *None* to ignore it. |
 | **Gamepad** | Which gamepad should be used. |
 
 ## Axis Mappings

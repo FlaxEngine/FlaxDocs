@@ -17,7 +17,7 @@ public class SceneChanger : Script
 
 	public override void OnUpdate()
 	{
-		if (Input.GetKeyDown(Keys.G))
+		if (Input.GetKeyDown(KeyboardKeys.G))
 			SceneManager.ChangeSceneAsync(AnotherScene);
 	}
 }

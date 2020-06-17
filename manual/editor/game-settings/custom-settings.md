@@ -14,7 +14,7 @@ GameSettings.SetCustomSettings("MyPlugin", Content.LoadAsync<JsonAsset>(path));
 To access custom settings at runtime you the following code:
 
 ```cs
-var settings = Platform.GetCustomSettings("MyPlugin");
+var settings = Engine.GetCustomSettings("MyPlugin");
 if (settings)
 {
 	var settingsObj = settings.CreateInstance<MySettings>();
