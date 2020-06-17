@@ -36,7 +36,7 @@ If you want to use custom .NET libraries simply put them into the project `Conte
 * [Scripting restrictions](restrictions.md)
 * [Plugins](plugins/index.md)
  * [Plugins Window](plugins/plugins-window.md)
- * [Plugin Exporting](plugins/exporting.md)
+ * [Plugin Project](plugins/plugin-project.md)
 * [Advanced](advanced/index.md)
  * [Raw Data Asset](advanced/raw-data-asset.md)
  * [Custom Editor Options](advanced/custom-editor-options.md)

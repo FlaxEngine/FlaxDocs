@@ -1,6 +1,6 @@
 # Plugins
 
-Plugins are separate code libraries added to your Flax project that can be used to implement persistent game or utility classes, custom engine features or to extend the editor by adding custom tools with UI representation. This documentation section explains the basics of creating and using plugins. Follow these notes to learn more about plugins system in Flax.
+Plugins are standalone chunks of code added to your Flax project that can be used to implement persistent game or utility classes, the custom engine features, or to extend the editor by adding custom tools with UI representation. This documentation section explains the basics of creating and using plugins. Follow these notes to learn more about the plugins system in Flax.
 
 Example plugin project can be found [here](https://github.com/FlaxEngine/ExamplePlugin). Use it as a reference.
 
@@ -8,10 +8,17 @@ Example plugin project can be found [here](https://github.com/FlaxEngine/Example
 
 Flax supports loading C# libraries (from *.dll* files) and adding references to game scripts. Many Flax Engine systems are designed to be extensible, enabling developers to add entire new features and to modify built-in functionality without modifying Engine Core code directly.
 
-Using plugins allows the use of external .Net libraries to be used within a game. For instance, the developer can use custom game classes, custom networking libraries or a social media plugin. By default, Flax loads all .Net modules contained in the **Content** folder (or any subdirectory) and adds a reference to them to the game projects. During Game Cooking those assemblies can be deployed with the game to be used at runtime.
+Using plugins allows the use of external .Net libraries to be used within a game. For instance, the developer can use custom game classes, custom networking libraries, or a social media plugin. To reference .Net module in your game scripts simply modify the build script file (eg. `Source/GameModule/MyGame.Build.cs`) by adding the file reference in overridden `Setup` method:
+
+```cs
+// Reference C# DLL placed Content folder
+options.ScriptingAPI.FileReferences.Add(Path.Combine(FolderPath, "..", "..", "Content", "JetBrains.Annotations.dll"));
+```
+
+This will work for scripts build for the editor and cooked game as the referenced assembly will be packaged.
 
 > [!IMPORTANT]
-> If your plugin collects the C# types information (eg. methods cache or attributes) always remember to release them in Editor on [FlaxEditor.Scripting.ScriptsBuilder.ScriptsReloadBegin](https://docs.flaxengine.com/api/FlaxEditor.Scripting.ScriptsBuilder.html#FlaxEditor_Scripting_ScriptsBuilder_ScriptsReloadBegin) event to prevent crashes during scripts reload in Editor.
+> If your plugin collects the C# types information (eg. methods cache or attributes) always remember to release them in Editor on [FlaxEditor.ScriptsBuilder.ScriptsReloadBegin](https://docs.flaxengine.com/api/FlaxEditor.ScriptsBuilder.html#FlaxEditor_Scripting_ScriptsBuilder_ScriptsReloadBegin) event to prevent crashes during scripts reload in Editor.
 
 ## Plugin Description
 
@@ -33,7 +40,7 @@ Every plugin has to export its description structure that defines the basic plug
 
 # Types of Plugins
 
-There are two types of plugins: 
+There are two types of plugins:
 * Game plugins
 * Editor plugins
 
@@ -85,6 +92,6 @@ If you need to include custom settings for your plugin see [this tutorial](../tu
 ## In this section
 
 * [Plugins Window](plugins-window.md)
-* [Plugin Exporting](exporting.md)
+* [Plugin Project](plugin-project.md)
 * [How to create a custom editor plugin](../tutorials/custom-plugin.md)
 * [How to use custom settings](../tutorials/custom-settings.md)

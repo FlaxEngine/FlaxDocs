@@ -148,7 +148,7 @@
 ## [Scripting restrictions](scripting/restrictions.md)
 ## [Plugins](scripting/plugins/index.md)
 ### [Plugins Window](scripting/plugins/plugins-window.md)
-### [Plugin Exporting](scripting/plugins/exporting.md)
+### [Plugin Project](scripting/plugins/plugin-project.md)
 ## [Advanced](scripting/advanced/index.md)
 ### [Raw Data Asset](scripting/advanced/raw-data-asset.md)
 ### [Custom Editor Options](scripting/advanced/custom-editor-options.md)
