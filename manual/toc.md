@@ -166,6 +166,7 @@
 ### [How to import asset from code](scripting/tutorials/import-asset-from-code.md)
 ### [How to spawn decal on mouse click](scripting/tutorials/decal-on-mouse-click.md)
 ### [How to control PostFx from code](scripting/tutorials/control-postfx-from-code.md)
+### [How to use third-party library](scripting/tutorials/use-third-party-library.md)
 
 # [Animation](animation/index.md)
 ## [Skinned Model](animation/skinned-model/index.md)

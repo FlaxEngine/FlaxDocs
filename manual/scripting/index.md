@@ -54,4 +54,5 @@ If you want to use custom .NET libraries simply put them into the project `Conte
  * [How to use custom settings](tutorials/custom-settings.md)
  * [How to import asset from code](tutorials/import-asset-from-code.md)
  * [How to control PostFx from code](tutorials/control-postfx-from-code.md)
+ * [How to use third-party library](tutorials/use-third-party-library.md)
 
