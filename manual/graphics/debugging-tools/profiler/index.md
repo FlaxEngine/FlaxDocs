@@ -23,9 +23,27 @@ The general profiling mode with major game performance charts and stats.
 
 The CPU performance profiling mode.
 
+To add code section to be included in profile blocks use the following code:
+
+```
+// C#
+Profiler.BeginEvent("MyFunction");
+// do something
+Profiler.EndEvent();
+```
+
 ### GPU
 
 The GPU performance profiling mode.
+
+To add code section to be included in profile blocks use the following code:
+
+```
+// C#
+Profiler.BeginEventGPU("MyFunction");
+// do something on GPU with GPUContext
+Profiler.EndEventGPU();
+```
 
 ### Memory
 
