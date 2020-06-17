@@ -100,7 +100,6 @@ Additionally, shader sources are used only in Editor during design-time. During 
 To learn how to use shaders in your projects follow the documentation and tutorials in this section:
 
 * [Custom Fullscreen Shader](custom-fullscreen-shader.md)
-* [Custom Surface Shader](custom-surface-shader.md)
 * [Custom Geometry Drawing](custom-geometry-drawing.md)
 * [Custom Compute Shader](custom-compute-shader.md)
 * [Graphics API](graphics-api.md)

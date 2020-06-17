@@ -122,7 +122,6 @@
 ### [Post Process Materials](graphics/post-effects/post-fx-materials.md)
 ## [Shaders](graphics/shaders/index.md)
 ### [Custom Fullscreen Shader](graphics/shaders/custom-fullscreen-shader.md)
-### [Custom Surface Shader](graphics/shaders/custom-surface-shader.md)
 ### [Custom Geometry Drawing](graphics/shaders/custom-geometry-drawing.md)
 ### [Custom Compute Shader](graphics/shaders/custom-compute-shader.md)
 ### [Graphics API](graphics/shaders/graphics-api.md)
