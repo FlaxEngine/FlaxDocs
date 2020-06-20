@@ -49,6 +49,8 @@
 ### [Build Settings](editor/game-settings/build-settings.md)
 ### [Custom Settings](editor/game-settings/custom-settings.md)
 ## [Game Cooker](editor/game-cooker/index.md)
+## [Flax.Build](editor/flax-build/index.md)
+### [API Tags](editor/flax-build/api-tags.md)
 ## [Editor Options](editor/options/index.md)
 ## [Advanced](editor/advanced/index.md)
 ### [Extending Flax Editor](editor/advanced/extending-editor.md)

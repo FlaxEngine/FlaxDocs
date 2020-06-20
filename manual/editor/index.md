@@ -41,6 +41,12 @@ Follow those instructions to robust your game development!
 </div>
 
 <div class="frontpage-section">
+<a href="advanced/index.md"><img src="flax-build/media/icon.jpg"></a>
+<h3><a href="advanced/index.md">Flax.Build</a></h3>
+<p>Build your game like a pro.</p>
+</div>
+
+<div class="frontpage-section">
 <a href="advanced/index.md"><img src="advanced/media/icon.jpg"></a>
 <h3><a href="advanced/index.md">Advanced</a></h3>
 <p>Learn some advanced stuff about using Flax Editor.</p>

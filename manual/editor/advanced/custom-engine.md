@@ -14,6 +14,8 @@ Flax contains an in-build utility set called **Flax.Build** which is a complete 
 
 For advanced engine customizations or deep integration of engine and game tools please refer to Flax.Build sources located under `Source\Tools\Flax.Build` and/or use `Binaries\Tools\Flax.Build.exe -help` to learn more about usage. Engine repository contains useful scripts that are wrappers against the build tool and automatically compile its sources.
 
+To learn more about build tool and build scripts see the related documentation page [here](../flax-build/index.md).
+
 ## Compiling
 
 To learn how to build editor from source see **README.md** documentation file located in the root of the repository. Under section *Windows*/*Linux* basic steps are described as well as requirements.
