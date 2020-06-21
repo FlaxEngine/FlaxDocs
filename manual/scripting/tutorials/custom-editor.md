@@ -13,33 +13,29 @@ public class MyScript : Script
 
     public override void OnStart()
     {
+        // Do something
     }
 }
 ```
 
-### 2. Create `Editor` folder in `Source` directory
+### 2. Create editor script
 
-Flax generates two projects for your game scripts. The first for the actual gameplay (the main project), and the second one for the editor plugins and extensions. Files located in `Editor` folders (eg. *Source/Player/Ammunition/Editor*) are included in editor-related project while the rest is in the main project.
-
-![Tutorial](media/custom-editor-tutorial-1.jpg)
-
-### 3. Create editor script
-
-Create a new C# script inside the `Source/Editor` directory and use the target class name with *Editor* prefix.
+Create a new C# script inside the `Source/<module_name>` directory and use the target class name with *Editor* postfix. Alternatively, you can use an additional editor-only scripts module as shown in tutorial [here](add-scripts-module.md).
 
 ![Tutorial](media/custom-editor-tutorial-2.jpg)
 
-### 4. Open file
+### 3. Open file
 
 Double-click on created file to open it in code editor.
 
 ![Tutorial](media/custom-editor-tutorial-3.jpg)
 
-### 5. Implement the custom editor
+### 4. Implement the custom editor
 
 Edit created class to inherit from [GenericEditor](https://docs.flaxengine.com/api/FlaxEditor.CustomEditors.Editors.GenericEditor.html). Add [CustomEditor](https://docs.flaxengine.com/api/FlaxEngine.CustomEditorAttribute.html) attribute that will tell Flax to use this type for editing `MyScript` objects. Implement the `Initialize` function which creates the editor layout. In the example below it inserts a label, creates a group with default editor inside and then adds a button after a small space.
 
 ```cs
+#if FLAX_EDITOR
 using FlaxEditor.CustomEditors;
 using FlaxEditor.CustomEditors.Editors;
 using FlaxEngine;
@@ -62,9 +58,12 @@ namespace GraphicsFeaturesTour
         }
     }
 }
+#endif
 ```
 
-### 6. See the results
+If your script is in editor-only module then you can skip `#if FLAX_EDITOR / #endif` pair.
+
+### 5. See the results
 
 After Flax reloads the scripts, select the object with `MyScript` added and see the custom editor as shown in the picture below.
 

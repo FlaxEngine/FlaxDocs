@@ -7,9 +7,9 @@ Editor plugins can extend the Flax Editor or implement a proper tooling for the 
 
 ### 1. Create editor script
 
-Navigate to the `Content` directory and create a new folder called `Editor`. Then enter it and create script file inside. Name it **MyEditorPlugin**. It will be *editor-only* script and it will be added to editor scripts assembly.
+Create a new C# script named **MyEditorPlugin** inside the `Source/<module_name>` directory and use the target class name with *Editor* postfix. Alternatively, you can use an additional editor-only scripts module as shown in tutorial [here](add-scripts-module.md).
 
-![Create Editor Scripts](media/editor-plugin-step-1.png)
+![Tutorial](media/custom-editor-tutorial-2.jpg)
 
 ### 2. Implement plugin logic
 
@@ -19,6 +19,7 @@ Here is a sample code that adds a new button to the editor toolstrip and shows t
 **Remember to clean up created GUI elements on editor plugin deinitialization!**
 
 ```cs
+#if FLAX_EDITOR
 using FlaxEditor;
 using FlaxEditor.GUI;
 using FlaxEngine;
@@ -51,8 +52,10 @@ namespace ExamplePlugin
         }
     }
 }
-
+#endif
 ```
+
+
 
 Flax plugins use two main methods for the lifetime: `Initialize` and `Deinitialize`. However for Editor plugins when `Initialize` is called the Editor may still be uninitialized so it's better to use `InitializeEditor` to add custom GUI to the Editor.
 

@@ -47,7 +47,7 @@ public class MyScriptEditor : GenericEditor
 
 ### 2. Create a new script
 
-Navigate to `Source/Editor` directory and create new `MyWindow` script.
+Navigate to `Source/<module_name>` directory and create new `MyWindow` script. Alternatively, you can use an additional editor-only scripts module as shown in tutorial [here](add-scripts-module.md).
 
 ![Tutorial](media/custom-window-tutorial-1.jpg)
 
