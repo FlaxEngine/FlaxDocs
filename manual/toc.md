@@ -169,6 +169,7 @@
 ### [How to spawn decal on mouse click](scripting/tutorials/decal-on-mouse-click.md)
 ### [How to control PostFx from code](scripting/tutorials/control-postfx-from-code.md)
 ### [How to use third-party library](scripting/tutorials/use-third-party-library.md)
+### [How to add scripts module](scripting/tutorials/add-scripts-module.md)
 
 # [Animation](animation/index.md)
 ## [Skinned Model](animation/skinned-model/index.md)

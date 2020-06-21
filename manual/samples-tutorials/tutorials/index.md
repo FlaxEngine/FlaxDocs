@@ -28,6 +28,7 @@ You can use **Ctrl + F** to quickly find what you are looking for.
 * [How to spawn and destroy object](../../scripting/objects-lifetime.md)
 * [How to extend the editor](../../editor/advanced/extending-editor.md)
 * [How to use command line](../../editor/advanced/command-line-access.md)
+* [How to add scripts module](../../scripting/tutorials/add-scripts-module.md)
 * [How to use a version control](../../get-started/version-control.md)
 * [How to distribute a game](../../get-started/distribute-a-game.md)
 * [How to control PostFx from code](../../scripting/tutorials/control-postfx-from-code.md)
