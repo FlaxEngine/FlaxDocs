@@ -20,9 +20,9 @@ The last way to create a new prefab is by using an editor script that creates a 
 
 ```cs
 // Setup prefab objects
-var myLight = PointLight.New();
+var myLight = new PointLight();
 myLight.Color = Color.Red;
-var myDecal = Decal.New();
+var myDecal = new Decal();
 myDecal.Parent = myLight;
 
 // Create a prefab

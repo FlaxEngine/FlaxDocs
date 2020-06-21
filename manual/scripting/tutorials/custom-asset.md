@@ -29,7 +29,14 @@ Add this class to game scripts assembly. It can be in editor scripts assembly bu
 
 ### 2. Create an asset
 
-Now use [Custom Editor](custom-editor.md) or [Custom Window](custom-window.md) or just [editor-only code](../preprocessor.md) to spawn a new asset in editor.
+Next step is to create an actual asset (*.json* file) that contains settings.
+In project *Content* use *right-click* and use option **New -> Json Asset**.
+Then specify it's name and pick the type to created class typename (in this example it's `MySettings`).
+Press **Create** button to make a file with default values of the type.
+
+![New Asset picker](media/new-settings-asset-picker.png)
+
+Also, you can use [Custom Editor](custom-editor.md) or [Custom Window](custom-window.md) or just [editor-only code](../preprocessor.md) to spawn a new asset in editor.
 
 ```cs
 [CustomEditor(typeof(MyScript))]

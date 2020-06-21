@@ -39,7 +39,7 @@ public class FoliageFromCode : Script
     public override void OnStart()
     {
         // Create new dynamic foliage actor and add it to the scene
-        _foliage = Foliage.New();
+        _foliage = new Foliage();
         _foliage.HideFlags = HideFlags.DontSave;
         _foliage.Name = "My Foliage";
         _foliage.Parent = Actor;

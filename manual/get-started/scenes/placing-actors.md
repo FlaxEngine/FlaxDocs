@@ -28,7 +28,7 @@ The fastest way to add new model into the level is by using *drag and drop* feat
 You can also spawn new actors from C# code. To learn more about it see [Scripting](../../scripting/index.md) documentation.
 
 ```cs
-var light = PointLight.New();
+var light = new PointLight();
 light.Color = Color.Blue;
 light.Parent = Actor;
 ```

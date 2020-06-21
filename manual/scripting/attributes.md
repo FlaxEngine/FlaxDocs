@@ -54,7 +54,7 @@ public class MyGenerator : Script
         {
             for (int z = 0; z < 5; z++)
             {
-                var light = PointLight.New();
+                var light = new PointLight();
                 light.Radius = 1000;
                 light.ShadowsMode = ShadowsCastingMode.None;
                 light.Position = new Vector3(x * 100.0f, 0, z * 100.0f);

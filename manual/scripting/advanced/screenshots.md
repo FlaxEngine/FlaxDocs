@@ -11,7 +11,7 @@ Here is an example usage code that captures the screenshot of the game viewport 
 var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "screenshot.png");
 
 // Caprute game screen to file (done in async)
-FlaxEngine.Utilities.Screenshot.Capture(MainRenderTask.Instance, path);
+FlaxEngine.Screenshot.Capture(MainRenderTask.Instance, path);
 ```
 
 ## In Editor

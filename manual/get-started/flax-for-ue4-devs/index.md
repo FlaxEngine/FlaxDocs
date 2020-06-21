@@ -34,7 +34,7 @@ This section contains the most common terms used in UE4 and their Flax equivalen
 
 ## Project
 
-![Flax Project](../media/project-structure.jpg)
+![Flax Project](../media/project-structure.png)
 
 Flax projects structure is similar to UE4 projects. The editor uses **Cache** folder to keep temporary data. Also, **Content** folder works the same way as in Unreal (assets-only), while **Source** directory is used to keep all C# scripts.
 

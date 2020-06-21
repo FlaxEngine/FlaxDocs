@@ -64,7 +64,6 @@ Here is an example `.gitattributes` file for the **Git LFS** repository with Fla
 ```
 # Flax Engine files
 *.flax filter=lfs diff=lfs merge=lfs -text
-*.flaxpac filter=lfs diff=lfs merge=lfs -text
 
 # Asset source file types
 *.png filter=lfs diff=lfs merge=lfs -text

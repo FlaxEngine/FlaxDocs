@@ -9,7 +9,7 @@ Example code that spawn a new point light:
 ```cs
 public override void OnStart()
 {
-    var light = PointLight.New();
+    var light = new PointLight();
     light.Color = Color.Blue;
     light.Parent = Actor;
 }

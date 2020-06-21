@@ -32,7 +32,7 @@ This section contains the most common terms used in Godot and their Flax equival
 
 ## Project
 
-![Flax Project](../media/project-structure.jpg)
+![Flax Project](../media/project-structure.png)
 
 Flax projects structure is well standardized and contains: **Cache** folder (similar to `.import` folder in Godot), **Content** folder and **Source** folder. All game assets are in Content directory, while all scripts are in Source directory. So there is less mess with assets and scripts.
 

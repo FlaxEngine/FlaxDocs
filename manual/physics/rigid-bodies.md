@@ -13,9 +13,9 @@ You can easily spawn a rigidbody actor right inside the editor using a *Toolbox*
 You can also spawn rigidbodies from C# code at runtime. Here is an example that spawns a bullet and shoots it:
 
 ```cs
-var ball = RigidBody.New();
-var ballCollider = SphereCollider.New();
-var ballModel = StaticModel.New();
+var ball = new RigidBody();
+var ballCollider = new SphereCollider();
+var ballModel = new StaticModel();
 ballModel.Model = SphereModel;
 ballModel.Parent = ball;
 ballCollider.Parent = ball;

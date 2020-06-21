@@ -46,7 +46,7 @@ public class SpawnAnimModel : Script
 	{
 		if (Input.GetMouseButtonDown(MouseButton.Left))
 		{
-			var actor = AnimatedModel.New();
+			var actor = new AnimatedModel();
 			actor.Name = "My animated model";
 			actor.SkinnedModel = Model;
 			actor.AnimationGraph = AnimGraph;

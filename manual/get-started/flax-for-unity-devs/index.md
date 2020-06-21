@@ -36,7 +36,7 @@ This section contains the most common terms used in Unity and their Flax equival
 
 ## Project
 
-![Flax Project](../media/project-structure.jpg)
+![Flax Project](../media/project-structure.png)
 
 Flax projects structure is similar to Unity projects. Instead of **Library** folder, editor uses **Cache** folder. Also **Assets** folder from Unity is splited into two separate parts: **Content** and **Source**. All C# script files are located in source directory so there is less mess with assets and scripts.
 
