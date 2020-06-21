@@ -2,20 +2,33 @@
 
 ![Scripting](media/title.jpg)
 
-The most important part of every game are **Scripts**. Creating chunks of code that handle game events, respond to user input, and control objects is an essential ingredient in all games. In short, scripts make games interactive by adding gameplay. It applies to both small and huge production. This documentation section covers the most important parts of the scripting pipeline and helps with starting the game scripting.
+The most important part of every game are **Scripts**. Creating chunks of code that handle game events, respond to user input, and control objects is an essential ingredient in all games. In short, scripts make games interactive by adding gameplay. It applies to both small and huge production. This documentation section covers the most important parts of the scripting pipeline and helps with starting the game programming.
 
-You can write scripts in **C#** and add them to scene objects. To learn more about it see the pages in this section.
-If you need help with learning C# see [this page](http://www.letmegooglethat.com/?q=C%23+tutorial).
+Flax supports **C#** and **C++** scripting. The mix of those two languages is highly integrated into the engine as it's written in both languages (engine is C++, editor is C#).
 
 > [!Note]
-> Explaining C# and vector math is out of the scope of this documentation.
+> Explaining C#, C++ and vector math is out of the scope of this documentation.
 
-## Scripting Backend
+## Code Modules
 
-Flax uses [Mono](http://www.mono-project.com/) to load, compile and execute C# scripts.
-Currently the newest **C# 7.2** version is fully supported (uses .Net 4.5).
+Important concepts related to programming in Flax are **binary modules**. Binary modules are compiled source code libraries that can reference other modules (eg. Editor, Graphics, or plugins).
 
-If you want to use custom .NET libraries simply put them into the project `Content` folder (or any subdirectory). Flax will automatically reference it in your game scripts project.
+In most cases, the main game code is in the module named `<project_name>` or named `Game` located in `Source` folder (eg. `Source/Game`). That's the place where you can add new scripts so build tool will compile them. For more, advanced uses game can contain multiple modules and have code split for better organization (as for example engine does - it's made of multiple modules working together). For instance, you can create an editor-only module and use its code only in the Editor.
+
+To learn more about build tools and infrastructure see [Flax.Build](../editor/flax-build/index.md) utility documentation.
+
+## C# Scripting
+
+You can write scripts in **C#** and add them to scene objects. To learn more about it see the pages in this section. Most of the documentation related to scripting covers C# to implement various gameplay logic. If you need help with learning C# see [this page](http://www.letmegooglethat.com/?q=C%23+tutorial).
+
+Flax uses [Mono](https://www.mono-project.com) to load, compile and execute C# scripts.
+Currently the newest **C# 7.2** version is fully supported (with .Net Framework 4.5). Flax Editor ships with C# Roslyn  Compiler - no need to install any external tools to compile and run C# code.
+
+If you want to use custom .NET libraries use build scripts to reference them as [shown here](tutorials/use-third-party-library.md).
+
+## C++ Scripting
+
+Flax supports native **C++** scripting with direct access to whole engine API. C++ scripts can be created side-by-side with C# scripts and expose own types/functions/properties via automatic bindings as decscribed [here](../editor/flax-build/api-tags.md). To write and use C\+\+ code engine source and platform toolset are requried.
 
 ## In this section
 

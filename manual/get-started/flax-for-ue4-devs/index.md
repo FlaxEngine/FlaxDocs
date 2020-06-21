@@ -25,8 +25,8 @@ This section contains the most common terms used in UE4 and their Flax equivalen
 | Unreal | Flax |
 |--------|--------|
 | **Actor** | [Actor](../scenes/actors.md) |
-| **Blueprint** | [Script](../../scripting/index.md) |
-| **C++** | [C#](../../scripting/index.md) |
+| **Blueprint** | [Prefab](../prefabs/index.md) |
+| **C++** | [C++ and C#](../../scripting/index.md) |
 |||
 | **World Outliner** | [Scene Window](../../editor/windows/scene-window.md) |
 | **Details Panel** | [Properties Window](../../editor/windows/properties-window.md) |
@@ -36,15 +36,15 @@ This section contains the most common terms used in UE4 and their Flax equivalen
 
 ![Flax Project](../media/project-structure.png)
 
-Flax projects structure is similar to UE4 projects. The editor uses **Cache** folder to keep temporary data. Also, **Content** folder works the same way as in Unreal (assets-only), while **Source** directory is used to keep all C# scripts.
+Flax projects structure is similar to UE4 projects. The editor uses **Cache** folder to keep temporary data. Also, **Content** folder works the same way as in Unreal (assets-only), while **Source** directory is used to keep all C# and C\+\+ scripts.
 
-Flax also generates a solution and project files for your game C# scripts.
+Flax also generates a solution and project files for your game scripts.
 
 See [Flax projects structure](../project-structure.md) page to learn more about the projects in Flax Engine.
 
 ## Assets
 
-Flax also uses binary asset files with extension `.flax` (instead of `.uasset`). We are using our own binary format that is well optimized for scalability and streaming. Other assets are usually stored in json format (scenes, settings, etc.).
+Flax also uses binary asset files with extension `.flax` (instead of `.uasset`). We are using our own binary format that is well optimized for scalability and streaming. Other assets are usually stored in `Json` format (scenes, settings, etc.).
 
 Flax supports the most popular asset files formats (for 3D models and textures) so you can import your game content.
 
@@ -64,11 +64,11 @@ Also, multiple actors can have the same name and you can also move assets whenev
 ## Scripting
 
 When it comes to game scripting, there is a significant difference between Unreal and Flax.
-Firstly, we use C# language to write game code (instead of C\+\+).
-Using C# helps with rapid game development and simplifies the development.
-The Flax Engine itself is written in C++ so you don't have to worry about the performance.
+Firstly, we support both C\+\+ and C# languages to write game code.
+Using C# helps with rapid game development and simplifies the development while writing parts of the gameplay in C\+\+ can benefit the performance.
+The Flax Engine core itself is written in C++, while Flax Editor is mostly written in C#.
 
-You can create C# files with script classes that provide a gameplay logic. Then scripts can be attached to the actors and used in a game. Our scripting C# API is an open-source project and can be found [here](https://github.com/FlaxEngine/FlaxAPI). All contributions are welcome.
+You can create C# and C\+\+ files with script classes that provide a gameplay logic. Then scripts can be attached to the actors and used in a game. Our scripting C# API is an open-source project and can be found [here](https://github.com/FlaxEngine/FlaxAPI). All contributions are welcome.
 
 Here is an example script that has been written for Unreal and Flax which prints the next number every frame.
 
@@ -130,7 +130,7 @@ public class MyScript : Script
 }
 ```
 
-See [Scripting](../../scripting/index.md) documentation to learn more about C# scripts in Flax.
+See [Scripting](../../scripting/index.md) documentation to learn more about scripts in Flax.
 
 <hr>
 

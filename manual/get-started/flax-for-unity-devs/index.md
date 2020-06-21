@@ -46,7 +46,7 @@ See [Flax projects structure](../project-structure.md) page to learn more about 
 
 ## Assets
 
-Flax doesn't use `.meta` files. Instead of it, every asset contains all required metadata information and is a self contained file. Files with extension `.flax` are using our own binary format that is well optimized for scalability and streaming. Other assets are usually stored in json format (scenes, settings, etc.).
+Flax doesn't use `.meta` files. Instead of it, every asset contains all required metadata information and is a self contained file. Files with extension `.flax` are using our own binary format that is well optimized for scalability and streaming. Other assets are usually stored in `Json` format (scenes, settings, etc.).
 
 Flax supports the most popular asset files formats (for 3D models and textures) so you can import your game content.
 
@@ -63,9 +63,11 @@ In Flax, Scene object is also an Actor so you can access it like any other Actor
 
 ## MonoBehaviour vs Script
 
-When it comes to game scripting, Unity and Flax are very similar. The are some differences in C# API (Flax has bigger math library and uses new C# 7.2). In fact, the whole C# API is an open-source project and can be found [here](https://github.com/FlaxEngine/FlaxAPI). All contributions are welcome.
+When it comes to game scripting, Unity and Flax are very similar. The are some differences in C# API (Flax has bigger math library, is more performance-oriented and uses new C# 7.2). In fact, the whole C# API is an open-source project and can be found [here](https://github.com/FlaxEngine/FlaxAPI). All contributions are welcome.
 
 If you write C# scripts simply replace `MonoBehaviour` with `Script` as it makes more sense (and is shorter to write).
+
+Also, Flax supports **C++//
 
 * Unity
 ```cs

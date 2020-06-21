@@ -13,7 +13,7 @@ Flax Editor creates a solution file (`.sln`) and C# projects (`.csproj`) for gam
 
 # Create a script
 
-1. Navigate to 'Source' directory in a *Content* window (double ckick on folder)
+1. Navigate to 'Source/&lt;game_module_name&gt;' directory in a *Content* window (double ckick on folder)
    <br>![Step 1](media/new-script-1.jpg)
 2. Right-click and select **New -> Script**
    <br>![Step 2](media/new-script-2.jpg)
@@ -47,7 +47,7 @@ namespace GraphicsFeaturesTour
 
 # Use a script
 
-Scripts are **attached to actors**. Every actor can contain an unlimited amount of scripts (ncluding many instances of the same script type). This means that scripts lifetime is related to actors and scenes lifetime. For instance, if you load a  scene, scripts attached to the objects in that scene also will be loaded.
+Scripts are **attached to actors**. Every actor can contain an unlimited amount of scripts (including multiple instances of the same script type). This means that scripts lifetime is related to actors and scenes lifetime. For instance, if you load a  scene, scripts attached to the objects in that scene also will be loaded.
 
 1. Select an actor to add script to it (note label *Drag scripts here* in **Scripts** group in *Properties* window)
    <br>![Step 1](media/use-script-1.jpg)

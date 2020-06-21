@@ -25,4 +25,6 @@ Because code generation is disabled in AOT mode (scriptng backend throws an exce
 
 Platforms that use AOT:
 * Xbox One
+* Xbox Scarlett
 * UWP
+* PlayStation 4

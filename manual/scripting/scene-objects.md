@@ -83,6 +83,16 @@ private void OnTriggerLeave(Collider collider)
 }
 ```
 
+However, in most cases, the best solution is to expose a field with reference to the object and set it in the editor to improve game performance.
+
+```cs
+public Actor Spaceship;
+
+private void OnTriggerLeave(Collider collider)
+{
+    Destroy(ref Spaceship);
+}
+```
 
 
 

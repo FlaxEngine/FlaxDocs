@@ -59,9 +59,9 @@ If you want to create multiple instances of compound object you can use [Prefabs
 ## Scripting
 
 > [!Tip]
-> Scripting in C# is feature-complete and production-ready in Flax (compared to Godot).
+> Scripting in C# and C\+\+ is feature-complete and production-ready in Flax (compared to Godot).
 
-When it comes to game scripting, Flax supports C# scripts (similar to Godot). The are some differences in C# API. In fact, the whole C# API is an open-source project and can be found [here](https://github.com/FlaxEngine/FlaxAPI). All contributions are welcome.
+When it comes to game scripting, Flax supports both C# and C\+\+ scripts (similar to Godot). The are some differences in C# API. In fact, the whole C# API is an open-source project and can be found [here](https://github.com/FlaxEngine/FlaxAPI). All contributions are welcome.
 
 * Godot
 ```cs
