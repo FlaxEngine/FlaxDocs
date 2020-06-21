@@ -4,7 +4,7 @@ When your project sources get bigger or you need separate library in source code
 
 To learn more about modules and build scripts see documentation page [here](../../editor/flax-build/index.md).
 
-## 1. Create folder and `.Buid.cs` file
+## 1. Create folder and `.Build.cs` file
 
 The first step is to create a new folder for a module scripts `Source/<new_module_name>` directory of your project. Then create there an empty file named `<new_module_name>.Build.cs`.
 
