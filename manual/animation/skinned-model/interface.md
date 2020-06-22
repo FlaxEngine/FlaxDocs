@@ -30,16 +30,15 @@ Like all viewports in editor, this one also comes up with a *View* widget menu. 
 
 ## Properties panel
 
-![Properties](media/properties-panel.png)
+![Properties](media/skinned-model-properties.gif)
 
-This panel shows:
-* Material Slots properties
-* General model info
-* Meshes editing tools (eg. material slot binding)
-* Skeleton nodes hierarchy
-* Skeleton bones hierarchy (nodes sued by the meshes)
-* Blend Shapes (for preview)
-* Import settings (for quick asset reimport)
+This panel shows model asset properties organized into separate tabs.
+
+- **Meshes** - properties of every model Level Of Detail (*LOD*). This includes LOD triangles/vertices stats, bounds, material slot binding for meshes and option to isolate or highlight mesh.
+- **Skeleton** - skeleton nodes and bones hierarchy. Blend Shapes preview.
+- **Materials** - list of material slots used by this model.
+- **UVs** - model texture coordinate channels debug visualizer including lightmap UVs.
+- **Import** - model import options (restored from last import). You can modify them and press **Reimport** button to update the asset from the source image file
 
 You can use it to modify the asset, view the model info (triangles, vertices, bones amount), or reimport it from the source asset. Because this panel contains a lot of content it has been split into several groups so by clicking on a given group header bar (eg. *Skeleton*) it will pop up its contents.
 

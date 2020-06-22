@@ -40,13 +40,13 @@ When working with static models level of details you can preview a custom LOD by
 
 ### Properties panel
 
-![Properties](media/model-properties.png)
+![Properties](media/model-uv-preview.gif)
 
-This panel shows model asset properties.
+This panel shows model asset properties organized into separate tabs.
 
+- **Meshes** - properties of every model Level Of Detail (*LOD*). This includes LOD triangles/vertices stats, bounds, material slot binding for meshes and option to isolate or highlight mesh.
 - **Materials** - list of material slots used by this model.
-- **General** - general model properties.
-- **LOD** - properties of every model Level Of Detail (*LOD*). This includes LOD triangles/vertices stats, bounds, material slot binding for meshes and option to isolate or highlight mesh.
-- **Import Settings** - model import options (restored from last import). You can modify them and press **Reimport** button to update the asset from the source image file
+- **UVs** - model texture coordinate channels debug visualizer including lightmap UVs.
+- **Import** - model import options (restored from last import). You can modify them and press **Reimport** button to update the asset from the source image file
 
 To learn more about model import options see dedicated [Model Import Settings](import.md) page.
