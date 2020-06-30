@@ -82,4 +82,6 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 | **LOD Count** | The amount of LODs to include in the model (all reaming ones starting from Base LOD will be generated). |
 | **Triangle Reduction** | The target amount of triangles for the generated LOD (based on the higher LOD). Normalized to range 0-1. For instance 0.4 cuts the triangle count to 40%. |
 |||
+| **Import Materials** | If checked, the importer will create materials for model meshes as specified in the file. |
+| **Import Textures** | If checked, the importer will import texture files used by the model and any embedded texture resources. |
 | **Restore Materials On Reimport** | If checked, the importer will try to restore the assigned materials to the model slots. |
