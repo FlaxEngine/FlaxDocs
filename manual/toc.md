@@ -72,6 +72,7 @@
 ### [Shading Models](graphics/materials/shading-models/index.md)
 ### [Layered Materials](graphics/materials/layered-materials/index.md)
 ### [Instanced Materials](graphics/materials/instanced-materials/index.md)
+### [Material Functions](graphics/materials/material-functions.md)
 ## [Decals](graphics/decals/index.md)
 ### [Decal Actor](graphics/decals/decal.md)
 ### [How to create a decal](graphics/decals/create-decal.md)

@@ -16,3 +16,4 @@ Speaking more technically, when light from the scene hits the surface, a Materia
 * [Shading Models](shading-models/index.md)
 * [Layered Materials](layered-materials/index.md)
 * [Instanced Materials](instanced-materials/index.md)
+* [Material Functions](material-functions.md)
