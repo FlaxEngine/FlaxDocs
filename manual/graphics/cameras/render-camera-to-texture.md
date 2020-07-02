@@ -101,7 +101,7 @@ public class CameraTV : Script
             _material = Material.CreateVirtualInstance();
 
             // Set render task output to draw on model
-            _material.GetParam("Image").Value = _output;
+            _material.SetParameterValue("Image", _output);
 
             // Bind material to parent model
             if (Actor is StaticModel staticModel && staticModel.Model)

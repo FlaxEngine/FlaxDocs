@@ -43,7 +43,7 @@ public class EditAnimGraphParam : Script
 	public override void OnStart()
 	{
 		// Cache the parameter handle
-		_parameter = Actor.As<AnimatedModel>().GetParam("Head Scale");
+		_parameter = Actor.As<AnimatedModel>().GetParameter("Head Scale");
 	}
 
 	public override void OnUpdate()

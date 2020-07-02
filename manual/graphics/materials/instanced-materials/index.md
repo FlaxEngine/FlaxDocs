@@ -27,7 +27,7 @@ public class MyScript : Script
 	{
 		// Create dynamic material instance and modify parameter
 		var instance = BaseMaterial.CreateVirtualInstance();
-		instance.GetParam("Color").Value = new Color(0xff00ff);
+		instance.SetParameterValue("Color", new Color(0xff00ff));
 
 		// Assign instance to the material slot
 		((StaticModel)Actor).Entries[0].Material = instance;
