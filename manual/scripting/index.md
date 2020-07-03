@@ -28,7 +28,9 @@ If you want to use custom .NET libraries use build scripts to reference them as 
 
 ## C++ Scripting
 
-Flax supports native **C++** scripting with direct access to whole engine API. C++ scripts can be created side-by-side with C# scripts and expose own types/functions/properties via automatic bindings as decscribed [here](../editor/flax-build/api-tags.md). To write and use C\+\+ code engine source and platform toolset are requried.
+Flax supports native **C++** scripting with direct access to whole engine API. C++ scripts can be created side-by-side with C# scripts and expose own types/functions/properties via automatic bindings as decscribed [here](../editor/flax-build/api-tags.md). To write and use C\+\+ code engine headers and platform toolset are requried.
+
+To start native scripting in C\+\+ see the related documentation [here](cpp/index.md).
 
 ## In this section
 
@@ -47,6 +49,7 @@ Flax supports native **C++** scripting with direct access to whole engine API. C
  * [Attributes](custom-editors/attributes.md)
 * [Preprocessor variables](preprocessor.md)
 * [Scripting restrictions](restrictions.md)
+* [C++ Scripting](cpp/index.md)
 * [Plugins](plugins/index.md)
  * [Plugins Window](plugins/plugins-window.md)
  * [Plugin Project](plugins/plugin-project.md)
