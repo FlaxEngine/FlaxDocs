@@ -990,6 +990,16 @@
             The target amount of triangles for the generated LOD (based on the higher LOD). Normalized to range 0-1. For instance 0.4 cuts the triangle count to 40%.
             </summary>
         </member>
+        <member name="P:FlaxEditor.Content.Import.ModelImportSettings.ImportMaterials">
+            <summary>
+            If checked, the importer will create materials for model meshes as specified in the file.
+            </summary>
+        </member>
+        <member name="P:FlaxEditor.Content.Import.ModelImportSettings.ImportTextures">
+            <summary>
+            If checked, the importer will import texture files used by the model and any embedded texture resources.
+            </summary>
+        </member>
         <member name="P:FlaxEditor.Content.Import.ModelImportSettings.RestoreMaterialsOnReimport">
             <summary>
             If checked, the importer will try to restore the model material slots.
@@ -2102,6 +2112,9 @@
         <member name="P:FlaxEditor.Content.PrefabItem.DefaultThumbnail">
             <inheritdoc />
         </member>
+        <member name="M:FlaxEditor.Content.PrefabItem.IsOfType(System.Type)">
+            <inheritdoc />
+        </member>
         <member name="T:FlaxEditor.Content.SceneItem">
             <summary>
             Content item that contains <see cref="T:FlaxEngine.Scene"/> data.
@@ -2122,6 +2135,9 @@
             <inheritdoc />
         </member>
         <member name="P:FlaxEditor.Content.SceneItem.DefaultThumbnail">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Content.SceneItem.IsOfType(System.Type)">
             <inheritdoc />
         </member>
         <member name="T:FlaxEditor.Content.ScriptItem">
@@ -3604,11 +3620,6 @@
             Reference to the first scene to load on a game startup.
             </summary>
         </member>
-        <member name="F:FlaxEditor.Content.Settings.GameSettings.Defines">
-            <summary>
-            The custom macros used using scripts compilation.
-            </summary>
-        </member>
         <member name="F:FlaxEditor.Content.Settings.GameSettings.Time">
             <summary>
             Reference to <see cref="T:FlaxEditor.Content.Settings.TimeSettings"/> asset.
@@ -4666,11 +4677,6 @@
         <member name="F:FlaxEditor.GameCooker.Options.OutputPath">
             <summary>
             The output path (normalized, absolute).
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.GameCooker.Options.Defines">
-            <summary>
-            The custom defines.
             </summary>
         </member>
         <member name="T:FlaxEditor.GameCooker.EventType">
@@ -8995,9 +9001,14 @@
             Occurs when lightmaps baking progress changes.
             </summary>
         </member>
+        <member name="M:FlaxEditor.Editor.BuildScenesOrCancel">
+            <summary>
+            Starts building scenes data or cancels it if already running.
+            </summary>
+        </member>
         <member name="M:FlaxEditor.Editor.BakeLightmapsOrCancel">
             <summary>
-            Starts lightmaps baking for the open scenes or cancel it if already running.
+            Starts lightmaps baking for the open scenes or cancels it if already running.
             </summary>
         </member>
         <member name="M:FlaxEditor.Editor.ClearLightmaps">
@@ -14299,6 +14310,16 @@
         <member name="P:FlaxEditor.GUI.Tabs.Tabs.UseScroll">
             <summary>
             Gets or sets a value indicating whether use scroll bars for the tabs.
+            </summary>
+        </member>
+        <member name="P:FlaxEditor.GUI.Tabs.Tabs.TabsTextHorizontalAlignment">
+            <summary>
+            Gets or sets the horizontal tabs text alignment within the tab titles bounds.
+            </summary>
+        </member>
+        <member name="P:FlaxEditor.GUI.Tabs.Tabs.TabsTextVerticalAlignment">
+            <summary>
+            Gets or sets the vertical tabs text alignment within the tab titles bounds.
             </summary>
         </member>
         <member name="M:FlaxEditor.GUI.Tabs.Tabs.#ctor">
@@ -21419,9 +21440,6 @@
         <member name="M:FlaxEditor.SceneGraph.GUI.ActorTreeNode.CacheTextColor">
             <inheritdoc />
         </member>
-        <member name="M:FlaxEditor.SceneGraph.GUI.ActorTreeNode.OnMouseDoubleClick(FlaxEngine.Vector2,FlaxEngine.MouseButton)">
-            <inheritdoc />
-        </member>
         <member name="M:FlaxEditor.SceneGraph.GUI.ActorTreeNode.Compare(FlaxEngine.GUI.Control)">
             <inheritdoc />
         </member>
@@ -22162,6 +22180,9 @@
         <member name="P:FlaxEditor.States.BuildingLightingState.CanEditContent">
             <inheritdoc />
         </member>
+        <member name="P:FlaxEditor.States.BuildingLightingState.IsPerformanceHeavy">
+            <inheritdoc />
+        </member>
         <member name="P:FlaxEditor.States.BuildingLightingState.Status">
             <inheritdoc />
         </member>
@@ -22175,6 +22196,44 @@
             <inheritdoc />
         </member>
         <member name="M:FlaxEditor.States.BuildingLightingState.OnExit(FlaxEngine.Utilities.State)">
+            <inheritdoc />
+        </member>
+        <member name="T:FlaxEditor.States.BuildingScenesState">
+            <summary>
+            In this state engine is building scenes data such as static lighting, navigation mesh and reflection probes. Editing scene and content is blocked.
+            </summary>
+            <seealso cref="T:FlaxEditor.States.EditorState" />
+        </member>
+        <member name="M:FlaxEditor.States.BuildingScenesState.StaticLightingState.Cancel">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.States.BuildingScenesState.Cancel">
+            <summary>
+            Cancels the build.
+            </summary>
+        </member>
+        <member name="P:FlaxEditor.States.BuildingScenesState.CanEditContent">
+            <inheritdoc />
+        </member>
+        <member name="P:FlaxEditor.States.BuildingScenesState.IsPerformanceHeavy">
+            <inheritdoc />
+        </member>
+        <member name="P:FlaxEditor.States.BuildingScenesState.Status">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.States.BuildingScenesState.CanEnter">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.States.BuildingScenesState.CanExit(FlaxEngine.Utilities.State)">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.States.BuildingScenesState.OnEnter">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.States.BuildingScenesState.Update">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.States.BuildingScenesState.OnExit(FlaxEngine.Utilities.State)">
             <inheritdoc />
         </member>
         <member name="T:FlaxEditor.States.ChangingScenesState">
@@ -22325,6 +22384,11 @@
             Checks if static is valid for Editor UI calls and other stuff.
             </summary>
         </member>
+        <member name="P:FlaxEditor.States.EditorState.IsPerformanceHeavy">
+            <summary>
+            Checks if state requires more device resources (eg. for lightmaps baking or navigation cooking). Can be used to disable other engine and editor features during this state.
+            </summary>
+        </member>
         <member name="P:FlaxEditor.States.EditorState.Status">
             <summary>
             Gets the state status message for the UI. Returns null if use the default value.
@@ -22398,6 +22462,11 @@
         <member name="F:FlaxEditor.States.EditorStateMachine.BuildingLightingState">
             <summary>
             Editor building lighting state.
+            </summary>
+        </member>
+        <member name="F:FlaxEditor.States.EditorStateMachine.BuildingScenesState">
+            <summary>
+            Editor building scenes data state.
             </summary>
         </member>
         <member name="M:FlaxEditor.States.EditorStateMachine.SwitchState(FlaxEngine.Utilities.State)">
@@ -32362,23 +32431,6 @@
         <member name="M:FlaxEditor.Viewport.EditorViewport.OnDestroy">
             <inheritdoc />
         </member>
-        <member name="F:FlaxEditor.Viewport.EditorViewport.ViewModeOptions.Mode">
-            <summary>
-            The mode.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Viewport.EditorViewport.ViewModeOptions.Name">
-            <summary>
-            The name.
-            </summary>
-        </member>
-        <member name="M:FlaxEditor.Viewport.EditorViewport.ViewModeOptions.#ctor(FlaxEngine.ViewMode,System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:FlaxEditor.Viewport.EditorViewport.ViewModeOptions"/> struct.
-            </summary>
-            <param name="mode">The mode.</param>
-            <param name="name">The name.</param>
-        </member>
         <member name="T:FlaxEditor.Viewport.MainEditorGizmoViewport">
             <summary>
             Main editor gizmo viewport used by the <see cref="T:FlaxEditor.Windows.EditGameWindow"/>.
@@ -33453,12 +33505,12 @@
         </member>
         <member name="F:FlaxEditor.Viewport.Widgets.ViewportWidgetLocation.UpperLeft">
             <summary>
-            The upper left.
+            The upper left corner of the parent container.
             </summary>
         </member>
         <member name="F:FlaxEditor.Viewport.Widgets.ViewportWidgetLocation.UpperRight">
             <summary>
-            The upper right.
+            The upper right corner of the parent container.
             </summary>
         </member>
         <member name="T:FlaxEditor.Viewport.Widgets.ViewportWidgetsContainer">
@@ -34450,6 +34502,43 @@
         <member name="M:FlaxEditor.Windows.Assets.MaterialWindow.SaveToOriginal">
             <inheritdoc />
         </member>
+        <member name="T:FlaxEditor.Windows.Assets.ModelBaseWindow`2">
+            <summary>
+            Editor window to view/modify <see cref="T:FlaxEngine.ModelBase"/> asset.
+            </summary>
+            <seealso cref="T:FlaxEngine.Model" />
+            <seealso cref="T:FlaxEditor.Windows.Assets.AssetEditorWindow" />
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.ModelBaseWindow`2.Tab.OnDestroy">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.ModelBaseWindow`2.#ctor(FlaxEditor.Editor,FlaxEditor.Content.AssetItem)">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.ModelBaseWindow`2.UpdateToolstrip">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.ModelBaseWindow`2.UnlinkItem">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.ModelBaseWindow`2.OnAssetLoaded">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.ModelBaseWindow`2.OnItemReimported(FlaxEditor.Content.ContentItem)">
+            <inheritdoc />
+        </member>
+        <member name="P:FlaxEditor.Windows.Assets.ModelBaseWindow`2.UseLayoutData">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.ModelBaseWindow`2.OnLayoutSerialize(System.Xml.XmlWriter)">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.ModelBaseWindow`2.OnLayoutDeserialize(System.Xml.XmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.ModelBaseWindow`2.OnLayoutDeserialize">
+            <inheritdoc />
+        </member>
         <member name="T:FlaxEditor.Windows.Assets.ModelWindow">
             <summary>
             Editor window to view/modify <see cref="T:FlaxEngine.Model"/> asset.
@@ -34457,50 +34546,50 @@
             <seealso cref="T:FlaxEngine.Model" />
             <seealso cref="T:FlaxEditor.Windows.Assets.AssetEditorWindow" />
         </member>
-        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.Preview.Draw">
-            <inheritdoc />
-        </member>
-        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.Preview.OnDestroy">
-            <inheritdoc />
-        </member>
-        <member name="T:FlaxEditor.Windows.Assets.ModelWindow.PropertiesProxy">
-            <summary>
-            The model properties proxy object.
-            </summary>
-        </member>
-        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.PropertiesProxy.UpdateEffectsOnUI">
+        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.MeshesPropertiesProxy.UpdateEffectsOnUI">
             <summary>
             Updates the highlight/isolate effects on UI.
             </summary>
         </member>
-        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.PropertiesProxy.UpdateMaterialSlotsUI">
+        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.MeshesPropertiesProxy.UpdateMaterialSlotsUI">
             <summary>
             Updates the material slots UI parts. Should be called after material slot rename.
             </summary>
         </member>
-        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.PropertiesProxy.SetMaterialSlot(FlaxEngine.Mesh,System.Int32)">
+        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.MeshesPropertiesProxy.SetMaterialSlot(FlaxEngine.Mesh,System.Int32)">
             <summary>
             Sets the material slot index to the mesh.
             </summary>
             <param name="mesh">The mesh.</param>
             <param name="newSlotIndex">New index of the material slot to use.</param>
         </member>
-        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.PropertiesProxy.SetIsolate(FlaxEngine.Mesh)">
+        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.MeshesPropertiesProxy.SetIsolate(FlaxEngine.Mesh)">
             <summary>
             Sets the material slot to isolate.
             </summary>
             <param name="mesh">The mesh.</param>
         </member>
-        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.PropertiesProxy.SetHighlight(FlaxEngine.Mesh)">
+        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.MeshesPropertiesProxy.SetHighlight(FlaxEngine.Mesh)">
             <summary>
             Sets the material slot index to highlight.
             </summary>
             <param name="mesh">The mesh.</param>
         </member>
-        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.PropertiesProxy.ProxyEditor.Initialize(FlaxEditor.CustomEditors.LayoutElementsContainer)">
+        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.MaterialsPropertiesProxy.UpdateMaterialSlotsUI">
+            <summary>
+            Updates the material slots UI parts. Should be called after material slot rename.
+            </summary>
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.UVsPropertiesProxy.OnClean">
             <inheritdoc />
         </member>
-        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.PropertiesProxy.ProxyEditor.RefreshInternal">
+        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.UVsPropertiesProxy.ProxyEditor.Refresh">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.UVsPropertiesProxy.UVsLayoutPreviewControl.DrawChildren">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.ImportPropertiesProxy.OnLoad(FlaxEditor.Windows.Assets.ModelWindow)">
             <inheritdoc />
         </member>
         <member name="M:FlaxEditor.Windows.Assets.ModelWindow.#ctor(FlaxEditor.Editor,FlaxEditor.Content.AssetItem)">
@@ -34517,9 +34606,6 @@
         <member name="M:FlaxEditor.Windows.Assets.ModelWindow.Save">
             <inheritdoc />
         </member>
-        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.UpdateToolstrip">
-            <inheritdoc />
-        </member>
         <member name="M:FlaxEditor.Windows.Assets.ModelWindow.UnlinkItem">
             <inheritdoc />
         </member>
@@ -34533,18 +34619,6 @@
             <inheritdoc />
         </member>
         <member name="M:FlaxEditor.Windows.Assets.ModelWindow.OnDestroy">
-            <inheritdoc />
-        </member>
-        <member name="P:FlaxEditor.Windows.Assets.ModelWindow.UseLayoutData">
-            <inheritdoc />
-        </member>
-        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.OnLayoutSerialize(System.Xml.XmlWriter)">
-            <inheritdoc />
-        </member>
-        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.OnLayoutDeserialize(System.Xml.XmlElement)">
-            <inheritdoc />
-        </member>
-        <member name="M:FlaxEditor.Windows.Assets.ModelWindow.OnLayoutDeserialize">
             <inheritdoc />
         </member>
         <member name="T:FlaxEditor.Windows.Assets.ParticleEmitterFunctionWindow">
@@ -35090,44 +35164,50 @@
         <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.Preview.OnDestroy">
             <inheritdoc />
         </member>
-        <member name="T:FlaxEditor.Windows.Assets.SkinnedModelWindow.PropertiesProxy">
-            <summary>
-            The model properties proxy object.
-            </summary>
-        </member>
-        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.PropertiesProxy.UpdateEffectsOnUI">
+        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.MeshesPropertiesProxy.UpdateEffectsOnUI">
             <summary>
             Updates the highlight/isolate effects on UI.
             </summary>
         </member>
-        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.PropertiesProxy.UpdateMaterialSlotsUI">
+        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.MeshesPropertiesProxy.UpdateMaterialSlotsUI">
             <summary>
             Updates the material slots UI parts. Should be called after material slot rename.
             </summary>
         </member>
-        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.PropertiesProxy.SetMaterialSlot(FlaxEngine.SkinnedMesh,System.Int32)">
+        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.MeshesPropertiesProxy.SetMaterialSlot(FlaxEngine.SkinnedMesh,System.Int32)">
             <summary>
             Sets the material slot index to the mesh.
             </summary>
             <param name="mesh">The mesh.</param>
             <param name="newSlotIndex">New index of the material slot to use.</param>
         </member>
-        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.PropertiesProxy.SetIsolate(FlaxEngine.SkinnedMesh)">
+        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.MeshesPropertiesProxy.SetIsolate(FlaxEngine.SkinnedMesh)">
             <summary>
             Sets the material slot to isolate.
             </summary>
             <param name="mesh">The mesh.</param>
         </member>
-        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.PropertiesProxy.SetHighlight(FlaxEngine.SkinnedMesh)">
+        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.MeshesPropertiesProxy.SetHighlight(FlaxEngine.SkinnedMesh)">
             <summary>
             Sets the material slot index to highlight.
             </summary>
             <param name="mesh">The mesh.</param>
         </member>
-        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.PropertiesProxy.ProxyEditor.Initialize(FlaxEditor.CustomEditors.LayoutElementsContainer)">
+        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.MaterialsPropertiesProxy.UpdateMaterialSlotsUI">
+            <summary>
+            Updates the material slots UI parts. Should be called after material slot rename.
+            </summary>
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.UVsPropertiesProxy.OnClean">
             <inheritdoc />
         </member>
-        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.PropertiesProxy.ProxyEditor.RefreshInternal">
+        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.UVsPropertiesProxy.ProxyEditor.Refresh">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.UVsPropertiesProxy.UVsLayoutPreviewControl.DrawChildren">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.ImportPropertiesProxy.OnLoad(FlaxEditor.Windows.Assets.SkinnedModelWindow)">
             <inheritdoc />
         </member>
         <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.#ctor(FlaxEditor.Editor,FlaxEditor.Content.AssetItem)">
@@ -35144,9 +35224,6 @@
         <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.Save">
             <inheritdoc />
         </member>
-        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.UpdateToolstrip">
-            <inheritdoc />
-        </member>
         <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.UnlinkItem">
             <inheritdoc />
         </member>
@@ -35160,18 +35237,6 @@
             <inheritdoc />
         </member>
         <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.OnDestroy">
-            <inheritdoc />
-        </member>
-        <member name="P:FlaxEditor.Windows.Assets.SkinnedModelWindow.UseLayoutData">
-            <inheritdoc />
-        </member>
-        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.OnLayoutSerialize(System.Xml.XmlWriter)">
-            <inheritdoc />
-        </member>
-        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.OnLayoutDeserialize(System.Xml.XmlElement)">
-            <inheritdoc />
-        </member>
-        <member name="M:FlaxEditor.Windows.Assets.SkinnedModelWindow.OnLayoutDeserialize">
             <inheritdoc />
         </member>
         <member name="T:FlaxEditor.Windows.Assets.SpriteAtlasWindow">
@@ -52378,6 +52443,15 @@
             Saturates this instance in the range [0,1]
             </summary>
         </member>
+        <member name="M:FlaxEngine.Vector2.TriangleArea(FlaxEngine.Vector2@,FlaxEngine.Vector2@,FlaxEngine.Vector2@)">
+            <summary>
+            Calculates the area of the triangle.
+            </summary>
+            <param name="v0">The first triangle vertex.</param>
+            <param name="v1">The second triangle vertex.</param>
+            <param name="v2">The third triangle vertex.</param>
+            <returns>The triangle area.</returns>
+        </member>
         <member name="M:FlaxEngine.Vector2.Distance(FlaxEngine.Vector2@,FlaxEngine.Vector2@,System.Single@)">
             <summary>
             Calculates the distance between two vectors.
@@ -56529,6 +56603,21 @@
             The main engine class.
             </summary>
         </member>
+        <member name="P:FlaxEngine.Engine.StartupTime">
+            <summary>
+            The engine start time (local time).
+            </summary>
+        </member>
+        <member name="P:FlaxEngine.Engine.HasFocus">
+            <summary>
+            True if app has focus (one of the windows is being focused).
+            </summary>
+        </member>
+        <member name="P:FlaxEngine.Engine.FrameCount">
+            <summary>
+            Gets the current frame count since the start of the game.
+            </summary>
+        </member>
         <member name="P:FlaxEngine.Engine.FramesPerSecond">
             <summary>
             Gets the amount of frames rendered during last second known as Frames Per Second. User scripts updates or fixed updates for physics may run at a different frequency than scene rendering. Use this property to get an accurate amount of frames rendered during the last second.
@@ -58525,6 +58614,16 @@
         <member name="F:FlaxEngine.ViewMode.Unlit">
             <summary>
             Draw materials colors with ambient occlusion
+            </summary>
+        </member>
+        <member name="F:FlaxEngine.ViewMode.LightmapUVsDensity">
+            <summary>
+            Draw meshes lightmaps coordinates density
+            </summary>
+        </member>
+        <member name="F:FlaxEngine.ViewMode.VertexColors">
+            <summary>
+            Draw meshes vertex colors
             </summary>
         </member>
         <member name="T:FlaxEngine.ViewFlags">
@@ -67102,6 +67201,13 @@
             </summary>
             <param name="nodesTransformation">The output per-node final transformation matrices in actor local-space.</param>
         </member>
+        <member name="M:FlaxEngine.AnimatedModel.GetParameter(System.String)">
+            <summary>
+            Gets the anim graph instance parameter by name.
+            </summary>
+            <param name="name">The parameter name.</param>
+            <returns>The parameters.</returns>
+        </member>
         <member name="M:FlaxEngine.AnimatedModel.GetParameterValue(System.String)">
             <summary>
             Gets the anim graph instance parameter value.
@@ -71975,6 +72081,11 @@
             The cursor is hidden.
             </summary>
         </member>
+        <member name="F:FlaxEngine.CursorType.MAX">
+            <summary>
+            The count of items in the CursorType enum.
+            </summary>
+        </member>
         <member name="T:FlaxEngine.DragDropEffect">
             <summary>
             Data drag and drop effects.
@@ -75244,6 +75355,11 @@
             Occurs on scripting `fixed` update.
             </summary>
         </member>
+        <member name="E:FlaxEngine.Scripting.Draw">
+            <summary>
+            Occurs on scripting `draw` update. Called during frame rendering and can be used to invoke custom rendering with GPUDevice.
+            </summary>
+        </member>
         <member name="E:FlaxEngine.Scripting.Exit">
             <summary>
             Occurs when scripting engine is disposing. Engine is during closing and some services may be unavailable (eg. loading scenes). This may be called after the engine fatal error event.
@@ -76843,6 +76959,54 @@
             <inheritdoc />
         </member>
         <member name="M:FlaxEngine.GUI.ProgressBar.Draw">
+            <inheritdoc />
+        </member>
+        <member name="T:FlaxEngine.GUI.RenderToTextureControl">
+            <summary>
+            UI container control that can render children to texture and display pre-cached texture instead of drawing children every frame. It can be also used to render part of UI to texture and use it in material or shader.
+            </summary>
+        </member>
+        <member name="P:FlaxEngine.GUI.RenderToTextureControl.Texture">
+            <summary>
+            Gets the texture with cached children controls.
+            </summary>
+        </member>
+        <member name="P:FlaxEngine.GUI.RenderToTextureControl.AutomaticTextureSize">
+            <summary>
+            Gets or sets a value indicating whether automatically update size of texture when control dimensions gets changed.
+            </summary>
+        </member>
+        <member name="P:FlaxEngine.GUI.RenderToTextureControl.TextureSize">
+            <summary>
+            Gets or sets the size of the texture (in pixels).
+            </summary>
+        </member>
+        <member name="P:FlaxEngine.GUI.RenderToTextureControl.AutomaticInvalidate">
+            <summary>
+            Gets or sets the value whether cached texture data should be invalidated automatically (eg. when child control changes). 
+            </summary>
+        </member>
+        <member name="M:FlaxEngine.GUI.RenderToTextureControl.Invalidate">
+            <summary>
+            Invalidates the cached image of children controls and invokes the redraw to the texture.
+            </summary>
+        </member>
+        <member name="M:FlaxEngine.GUI.RenderToTextureControl.Draw">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEngine.GUI.RenderToTextureControl.OnSizeChanged">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEngine.GUI.RenderToTextureControl.OnChildResized(FlaxEngine.GUI.Control)">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEngine.GUI.RenderToTextureControl.OnChildrenChanged">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEngine.GUI.RenderToTextureControl.PerformLayoutSelf">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEngine.GUI.RenderToTextureControl.OnDestroy">
             <inheritdoc />
         </member>
         <member name="T:FlaxEngine.GUI.RichTextBox">
