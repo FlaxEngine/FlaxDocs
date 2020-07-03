@@ -22,6 +22,8 @@ Flax supports **seamless C\+\+ and C# scripting**. We've created an open ecosyst
 
 To learn more see the official documentation [here](../../scripting/cpp/index.md).
 
+New C\+\+ scripting support required to modernize the existing game building pipeline. As a result, build logging has been improved, the build process has more customizable events as well as custom files deployment is supported. Shaders can also be cooked with additional debug data or without optimizations to debug them at the target device (eg. PS4 DevKit).
+
 ### PlayStation 4 and Xbox Scarlett support
 
 ![PlayStation 4 with Flax](media/flax-ps4-gameplay.gif)
@@ -66,11 +68,24 @@ To start [here](../../graphics/materials/material-functions.md) is a tutorial ab
 
 Flax supports importing and using Blend Shapes (aka. morph targets) for skinned models. This can be useful to implement character  face emotions or lipsync during dialog scenes. When importing asset check **Import Blend Shapes** option. Then you will be able to preview the blend shapes in the skinned model window (each channel is adjustable under Blend Shapes group). Then you can control blend shapes appearance at runtime from code using [AnimatedModel](https://docs.flaxengine.com/api/FlaxEngine.AnimatedModel.html) class methods *SetBlendShapeWeight* / *GetBlendShapeWeight* / *ClearBlendShapeWeights*.
 
+### Inverse Kinematics
+
+![Two Bone IK](media/two-bone-ik.gif)
+
+This update contains new AnimGraph nodes: **Two Bone IK** that performs inverse kinematic on a three nodes chain (eg. player hands picking a gun) and **Aim IK** that rotates a node so it aims at a target (eg. for player header look at). We've also improved skeleton nodes transformations in the graph as a result it runs faster with better stability.
+
 ### Automatic Model LOD
 
 ![Automatic Model LOD](media/automatic-model-lod.gif)
 
-Another exciting feature is the automated model LODs generation during source asset importing. When importing model file simply check **Generate LODs** property (under *Level Of Detail* group) and adjust the settings. The imported model will contain simplified LODs that will gracefully improve the performance of your game. This option works for skinned models too.
+Another exciting feature is the automated model LODs generation during source asset importing. When importing model file simply check **Generate LODs** property (under *Level Of Detail* group) and adjust the settings. The imported model will contain simplified LODs that will gracefully improve the performance of your game. This option works for skinned models too. Flax will also pick better screen-sizes for switching the LODs so players won't notice LODs transitions (*Dithered LOD Transition* option in material helps to hide popping artifacts). Also, lower LODs can use different materials - eg. more optimized with fewer textures used so you can develop even more performant games.
+We use: <https://github.com/zeux/meshoptimizer> lib for mesh simplification and optimization of generated geometry. Part of the log from importing this model:
+```
+Generated LOD1: triangles: 7100 (48% of base LOD), verteces: 3052 (16% of base LOD)
+Generated LOD2: triangles: 3352 (22% of base LOD), verteces: 1153 (6% of base LOD)
+Generated LOD3: triangles: 1516 (10% of base LOD), verteces: 484 (2% of base LOD)
+Generated LODs for 3 meshes in 17 ms
+```
 
 ### More Editor Features
 
