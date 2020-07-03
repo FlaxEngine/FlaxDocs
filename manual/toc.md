@@ -337,6 +337,7 @@
 
 # [Release Notes](release-notes/index.md)
 ## [Beta](release-notes/index.md#beta)
+### [0.7 release notes](release-notes/0_7/index.md)
 ### [0.6 release notes](release-notes/0_6/index.md)
 ## [Alpha](release-notes/index.md#alpha)
 ### [0.5 release notes](release-notes/0_5/index.md)

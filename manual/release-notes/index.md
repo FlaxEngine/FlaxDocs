@@ -2,6 +2,7 @@
 
 ## Beta
 
+* [0.7 release notes](0_7/index.md)
 * [0.6 release notes](0_6/index.md)
 
 ## Alpha
