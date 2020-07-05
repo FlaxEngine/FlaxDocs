@@ -109,6 +109,13 @@ Finally, we've modified the C# scripting API (FlaxAPI repo won't receive new sou
 
 ## Changelog
 
+### Version 0.7.6194 - 5 July 2020
+
+- Fix crash when importing fbx model with invalid material
+- Fix building and using C#-only projects without Windows 10 SDK installed
+- Fix project files generation for C#-only projects (skip native projects and toolchain checks)
+- Fix crash when converting invalid UTF-8 string to UTF-16
+
 ### Version 0.7.6193 - 3 July 2020
 
 Contributors: stefnotch, devjarmo
