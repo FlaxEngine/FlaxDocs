@@ -149,6 +149,7 @@ Some important notes to learn:
 * You can use engine API similar to C# (eg. Camera, Physics, Input...)
 * The `<module_name>_API` define used between `class` and class name (i.e. `class MYPROJECT_API MouseDecalShoot`) is to export the C++ class to public module symbols so it can be used by other code
 * For now, you have to manually implement script data serialization and deserialization (the automated solution is WIP)
+* If your game module uses types from various engine modules (eg. Graphics, Physics) you have to add a reference to the in a build script so build tools can handle modules dependencies and properly link binaries - simply add `options.PublicDependencies.Add("<module_name>");` in you build script (where module name is Physics/Terrain/etc. - see BuildScripts for all modules you can use)
 
 To learn about **API_** tags see [this documentation](../../editor/flax-build/api-tags.md).
 
