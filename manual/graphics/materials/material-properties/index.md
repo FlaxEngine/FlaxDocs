@@ -71,3 +71,13 @@ To add new parameter choose a type from a dropdown menu and press **Add paramete
 To access material parameter value directly in a graph use **Get Parameter**. It allows to choose parameter with a dropdown menu and use it's value as shown in a picture below.
 
 ![Get Material Parameter](../media/get-param.png)
+
+### Attributes
+
+Every parameter can have a collection of customizable **attributes** that can customize it's display logic in UI or be used as metadata for other systems (eg. serialization).
+
+To add attribute to parameter simply **right-click -> Edit attributes**, then use **+** button to add new attribute, set **Type** to one of the items from the dropdown list, adjust properties of the atrtribute and hit **OK** to confirm.
+
+For instance, Tooltip Attribute can be used to display documentation note about parameter for other users. Range and Slider attributes can help to customize editing scalar values and Ediotr Group and Editor Order can organize the list of parameters. To learn about attribute types see [this page](../../../scripting/attributes.md).
+
+![Parameter Attributes](../../../animation/anim-graPH/media/parameter-attribute.png)

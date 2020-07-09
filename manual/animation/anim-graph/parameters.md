@@ -53,3 +53,13 @@ public class EditAnimGraphParam : Script
 Result:
 
 ![Anim Graph Param Edit](../tutorials/media/edit-anim-graph-param-code.gif)
+
+## Attributes
+
+Every parameter can have a collection of customizable **attributes** that can customize it's display logic in UI or be used as metadata for other systems (eg. serialization).
+
+To add attribute to parameter simply **right-click -> Edit attributes**, then use **+** button to add new attribute, set **Type** to one of the items from the dropdown list, adjust properties of the atrtribute and hit **OK** to confirm.
+
+For instance, Tooltip Attribute can be used to display documentation note about parameter for other users. Range and Slider attributes can help to customize editing scalar values and Ediotr Group and Editor Order can organize the list of parameters. To learn about attribute types see [this page](../../scripting/attributes.md).
+
+![Parameter Attributes](media/parameter-attribute.png)
