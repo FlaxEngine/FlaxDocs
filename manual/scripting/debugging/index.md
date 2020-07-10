@@ -18,3 +18,4 @@ You can use editor options to change the current editor (in **Source Code** tab)
 
 **The best way to debug you code is to use an IDE** such as Visual Studio. See the dedicated documentation:
 * [Visual Studio](visual-studio.md)
+* [Visual Studio Code](visual-studio-code.md)

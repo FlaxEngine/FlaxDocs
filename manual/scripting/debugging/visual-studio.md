@@ -52,7 +52,7 @@ Press the `Attach to Flax` button with a green arrow to connect Visual Studio to
 
 ### 6. Start a game
 
-Go back to the Flax Editor and press the `Play` button to start a game. Then script *Update()* function will be called and assigned breakpoint hit.
+Go back to the Flax Editor and press the `Play` button to start a game. Then script *OnUpdate()* function will be called and assigned breakpoint hit.
 
 ![Script in Visual Studio](media/debug-vs-4.jpg)
 

@@ -90,7 +90,7 @@ Flax.Build supports also virtual table slots overriding for virtual methods of t
 
 ## Project Files Generation
 
-Flax.Build uses targets and modules to generate the scripting project files for editing the sources in the code editor environment such as Visual Studio or Visual Code. For Visual Studio the project files are stored in `Cache/Projects` folder. Generated solution organizes the referenced projects in sub-folders and includes both C++ and C# scripts projects.
+Flax.Build uses targets and modules to generate the scripting project files for editing the sources in the code editor environment such as Visual Studio or Visual Studio Code. For Visual Studio the project files are stored in `Cache/Projects` folder. Generated solution organizes the referenced projects in sub-folders and includes both C++ and C# scripts projects.
 
 Additionally, all build scripts are included in **BuildScripts** C# project which defines the build rules and can be explored with code IDE to easily edit them with contextual tooltips and code completion tools.
 
