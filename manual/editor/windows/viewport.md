@@ -32,6 +32,7 @@ To learn more about using a transform gizmo see [this page](../../get-started/sc
 | **RMB + MMB** | Move camera |
 | **MMB** | Pan camera |
 | **LMB + Mouse Wheel** | Zoom in/out |
+| **Shift + Mouse Wheel** | Change camera speed up/down |
 | **Alt + LMB** | Orbit camera (around last viewed object center, translated) |
 | **F** | Show selected actor (focus on it) |
 | **Delete** | Delete selected objects |
