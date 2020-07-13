@@ -109,12 +109,47 @@ Finally, we've modified the C# scripting API (FlaxAPI repo won't receive new sou
 
 ## Changelog
 
+### Version 0.7.6196 - 13 July 2020
+
+* Add **support for Visual Studio Code**
+* Add `Spacing` feature to `CollectionAttribute`
+* Add spacing between material slots, input actions/axes and model entries in Editor UI
+* Add VS Code detection in Flax.Build and Editor on Windows
+* Add support for automatic adding of new scripts to Visual Studio projects
+* Add editor camera speed change with shift+mouse wheel
+* Add *Interface Scale* option to Editor Options
+* Add autofocus to game UI root control on play in editor (if selected)
+* Add support for Visject parameters attributes
+* Add Anim Graph parameters attributes to Animated Model params listing in Editor
+* Add Material parameters attributes to Material Instance interface
+* Add Particle Emitter Graph parameters attributes usage in Particle System Window and Particle Effect properties panel
+* Add expanding Value group in ObjectSwitcherEditor editor
+* Add support for displaying current amount of GPU particles in the simulation
+* Add support for whole arguments quoited for Flax.Build
+* Add drag&drop for Gameplay Globals asset into graph surfaces
+* Increase scroll bars sizes in Output Log Window
+* Increase default scene lighting brightness for better look
+* Disable scrolling in Content Window when renaming an item
+* Optimize stack trace for Visject Graph callbacks
+* Optimize codebase for Shader Graph and Visject Graph
+* Fix scrolling to item in Content Window for renaming
+* Fix memory allocation on MAssembly::GetClass by fullname when using dictionary lookup
+* Fix culling single text block in RichTextBoxBase
+* Fix SliderControl usage with mouse
+* Fix skeleton nodes names importing if using namespaces
+* Fix support for C# 7.2
+* Fix possible exception on Windows Toolchains checking in Flax.Build
+* Fix skipping including C++ Flax project if game scripts are c# only
+* Fix undo exception on VisjectSurfaceWindow closing with reaming property edit action end
+* Fix terrain creation
+* Fix running Flax.Build without project
+
 ### Version 0.7.6195 - 5 July 2020
 
-- Fix crash when importing fbx model with invalid material
-- Fix building and using C#-only projects without Windows 10 SDK installed
-- Fix project files generation for C#-only projects (skip native projects and toolchain checks)
-- Fix crash when converting invalid UTF-8 string to UTF-16
+* Fix crash when importing fbx model with invalid material
+* Fix building and using C#-only projects without Windows 10 SDK installed
+* Fix project files generation for C#-only projects (skip native projects and toolchain checks)
+* Fix crash when converting invalid UTF-8 string to UTF-16
 
 ### Version 0.7.6194 - 3 July 2020
 
