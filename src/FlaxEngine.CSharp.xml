@@ -6593,6 +6593,14 @@
             <param name="name">The name.</param>
             <param name="type">The type.</param>
         </member>
+        <member name="M:FlaxEditor.CustomEditors.Editors.ObjectSwitcherEditor.OptionType.#ctor(System.String,System.Type,System.Func{System.Type,System.Object})">
+            <summary>
+            Initializes a new instance of the <see cref="T:FlaxEditor.CustomEditors.Editors.ObjectSwitcherEditor.OptionType"/> struct.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="type">The type.</param>
+            <param name="creator">The instance creation function.</param>
+        </member>
         <member name="P:FlaxEditor.CustomEditors.Editors.ObjectSwitcherEditor.Options">
             <summary>
             Gets the options collection for the property value assignment.
@@ -7539,37 +7547,37 @@
         <member name="M:FlaxEditor.CustomEditors.GUI.ClickablePropertyNameLabel.OnDestroy">
             <inheritdoc />
         </member>
-        <member name="T:FlaxEditor.CustomEditors.GUI.DragablePropertyNameLabel">
+        <member name="T:FlaxEditor.CustomEditors.GUI.DraggablePropertyNameLabel">
             <summary>
             Custom property name label that fires mouse events for label and supports dragging.
             </summary>
             <seealso cref="T:FlaxEditor.CustomEditors.GUI.PropertyNameLabel" />
         </member>
-        <member name="T:FlaxEditor.CustomEditors.GUI.DragablePropertyNameLabel.DragDelegate">
+        <member name="T:FlaxEditor.CustomEditors.GUI.DraggablePropertyNameLabel.DragDelegate">
             <summary>
             Mouse drag action delegate.
             </summary>
             <param name="label">The label.</param>
             <returns>The drag data or null if not use drag.</returns>
         </member>
-        <member name="F:FlaxEditor.CustomEditors.GUI.DragablePropertyNameLabel.Drag">
+        <member name="F:FlaxEditor.CustomEditors.GUI.DraggablePropertyNameLabel.Drag">
             <summary>
             The mouse starts the drag. Callbacks gets the drag data.
             </summary>
         </member>
-        <member name="M:FlaxEditor.CustomEditors.GUI.DragablePropertyNameLabel.#ctor(System.String)">
+        <member name="M:FlaxEditor.CustomEditors.GUI.DraggablePropertyNameLabel.#ctor(System.String)">
             <inheritdoc />
         </member>
-        <member name="M:FlaxEditor.CustomEditors.GUI.DragablePropertyNameLabel.OnMouseUp(FlaxEngine.Vector2,FlaxEngine.MouseButton)">
+        <member name="M:FlaxEditor.CustomEditors.GUI.DraggablePropertyNameLabel.OnMouseUp(FlaxEngine.Vector2,FlaxEngine.MouseButton)">
             <inheritdoc />
         </member>
-        <member name="M:FlaxEditor.CustomEditors.GUI.DragablePropertyNameLabel.OnMouseDown(FlaxEngine.Vector2,FlaxEngine.MouseButton)">
+        <member name="M:FlaxEditor.CustomEditors.GUI.DraggablePropertyNameLabel.OnMouseDown(FlaxEngine.Vector2,FlaxEngine.MouseButton)">
             <inheritdoc />
         </member>
-        <member name="M:FlaxEditor.CustomEditors.GUI.DragablePropertyNameLabel.OnMouseLeave">
+        <member name="M:FlaxEditor.CustomEditors.GUI.DraggablePropertyNameLabel.OnMouseLeave">
             <inheritdoc />
         </member>
-        <member name="M:FlaxEditor.CustomEditors.GUI.DragablePropertyNameLabel.OnDestroy">
+        <member name="M:FlaxEditor.CustomEditors.GUI.DraggablePropertyNameLabel.OnDestroy">
             <inheritdoc />
         </member>
         <member name="T:FlaxEditor.CustomEditors.GUI.PropertiesList">
@@ -8075,6 +8083,9 @@
             </summary>
         </member>
         <member name="M:FlaxEditor.CustomEditors.SyncPointEditor.Initialize(FlaxEditor.CustomEditors.LayoutElementsContainer)">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.CustomEditors.SyncPointEditor.Deinitialize">
             <inheritdoc />
         </member>
         <member name="M:FlaxEditor.CustomEditors.SyncPointEditor.Refresh">
@@ -13218,11 +13229,6 @@
             The default thickness.
             </summary>
         </member>
-        <member name="F:FlaxEditor.GUI.Input.SliderControl.Slider.DefaultMinimumSize">
-            <summary>
-            The default minimum size.
-            </summary>
-        </member>
         <member name="F:FlaxEditor.GUI.Input.SliderControl.Slider.Minimum">
             <summary>
             The minimum value (constant)
@@ -13243,11 +13249,6 @@
             Occurs when value gets changed.
             </summary>
         </member>
-        <member name="P:FlaxEditor.GUI.Input.SliderControl.Slider.IsSliding">
-            <summary>
-            Gets a value indicating whether user is using a slider.
-            </summary>
-        </member>
         <member name="P:FlaxEditor.GUI.Input.SliderControl.Slider.TrackLineColor">
             <summary>
             The color of the slider track line
@@ -13261,6 +13262,11 @@
         <member name="P:FlaxEditor.GUI.Input.SliderControl.Slider.ThumbColorSelected">
             <summary>
             The color of the slider thumb when it's selected
+            </summary>
+        </member>
+        <member name="P:FlaxEditor.GUI.Input.SliderControl.Slider.IsSliding">
+            <summary>
+            Gets a value indicating whether user is using a slider.
             </summary>
         </member>
         <member name="F:FlaxEditor.GUI.Input.SliderControl.Slider.SlidingStart">
@@ -13291,13 +13297,16 @@
         <member name="M:FlaxEditor.GUI.Input.SliderControl.Slider.OnLostFocus">
             <inheritdoc />
         </member>
-        <member name="M:FlaxEditor.GUI.Input.SliderControl.Slider.OnMouseMove(FlaxEngine.Vector2)">
-            <inheritdoc />
-        </member>
         <member name="M:FlaxEditor.GUI.Input.SliderControl.Slider.OnMouseDown(FlaxEngine.Vector2,FlaxEngine.MouseButton)">
             <inheritdoc />
         </member>
+        <member name="M:FlaxEditor.GUI.Input.SliderControl.Slider.OnMouseMove(FlaxEngine.Vector2)">
+            <inheritdoc />
+        </member>
         <member name="M:FlaxEditor.GUI.Input.SliderControl.Slider.OnMouseUp(FlaxEngine.Vector2,FlaxEngine.MouseButton)">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.GUI.Input.SliderControl.Slider.OnEndMouseCapture">
             <inheritdoc />
         </member>
         <member name="M:FlaxEditor.GUI.Input.SliderControl.Slider.OnSizeChanged">
@@ -13386,6 +13395,9 @@
             </summary>
         </member>
         <member name="M:FlaxEditor.GUI.Input.SliderControl.PerformLayoutSelf">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.GUI.Input.SliderControl.OnDestroy">
             <inheritdoc />
         </member>
         <member name="T:FlaxEditor.GUI.Input.ULongValueBox">
@@ -19430,10 +19442,16 @@
         <member name="P:FlaxEditor.Modules.SourceCodeEditing.DefaultSourceCodeEditor.Name">
             <inheritdoc />
         </member>
+        <member name="P:FlaxEditor.Modules.SourceCodeEditing.DefaultSourceCodeEditor.GenerateProjectCustomArgs">
+            <inheritdoc />
+        </member>
         <member name="M:FlaxEditor.Modules.SourceCodeEditing.DefaultSourceCodeEditor.OpenSolution">
             <inheritdoc />
         </member>
         <member name="M:FlaxEditor.Modules.SourceCodeEditing.DefaultSourceCodeEditor.OpenFile(System.String,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Modules.SourceCodeEditing.DefaultSourceCodeEditor.OnFileAdded(System.String)">
             <inheritdoc />
         </member>
         <member name="M:FlaxEditor.Modules.SourceCodeEditing.DefaultSourceCodeEditor.OnSelected(FlaxEditor.Editor)">
@@ -19468,10 +19486,16 @@
         <member name="P:FlaxEditor.Modules.SourceCodeEditing.InBuildSourceCodeEditor.Name">
             <inheritdoc />
         </member>
+        <member name="P:FlaxEditor.Modules.SourceCodeEditing.InBuildSourceCodeEditor.GenerateProjectCustomArgs">
+            <inheritdoc />
+        </member>
         <member name="M:FlaxEditor.Modules.SourceCodeEditing.InBuildSourceCodeEditor.OpenSolution">
             <inheritdoc />
         </member>
         <member name="M:FlaxEditor.Modules.SourceCodeEditing.InBuildSourceCodeEditor.OpenFile(System.String,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Modules.SourceCodeEditing.InBuildSourceCodeEditor.OnFileAdded(System.String)">
             <inheritdoc />
         </member>
         <member name="M:FlaxEditor.Modules.SourceCodeEditing.InBuildSourceCodeEditor.OnSelected(FlaxEditor.Editor)">
@@ -19496,6 +19520,11 @@
             Gets the editor name. Used to show in the UI.
             </summary>
         </member>
+        <member name="P:FlaxEditor.Modules.SourceCodeEditing.ISourceCodeEditor.GenerateProjectCustomArgs">
+            <summary>
+            Gets the custom arguments for the Flax.Build tool to add when generating project files for this code editor. Can be used to pick a different project files generator. Empty by default.
+            </summary>
+        </member>
         <member name="M:FlaxEditor.Modules.SourceCodeEditing.ISourceCodeEditor.OpenSolution">
             <summary>
             Opens the solution file (source code project file).
@@ -19507,6 +19536,12 @@
             </summary>
             <param name="path">The file path to open.</param>
             <param name="line">The line number to navigate to. Use 0 to not use it.</param>
+        </member>
+        <member name="M:FlaxEditor.Modules.SourceCodeEditing.ISourceCodeEditor.OnFileAdded(System.String)">
+            <summary>
+            Called when source file gets added to the workspace. Can be used to automatically include new files into the project files.
+            </summary>
+            <param name="path">The path.</param>
         </member>
         <member name="M:FlaxEditor.Modules.SourceCodeEditing.ISourceCodeEditor.OnSelected(FlaxEditor.Editor)">
             <summary>
@@ -20167,6 +20202,11 @@
             The time since startup (in seconds).
             </summary>
         </member>
+        <member name="P:FlaxEditor.Options.InterfaceOptions.InterfaceScale">
+            <summary>
+            Gets or sets the Editor User Interface scale. Applied to all UI elements, windows and text. Can be used to scale the interface up on a bigger display. Editor restart required.
+            </summary>
+        </member>
         <member name="P:FlaxEditor.Options.InterfaceOptions.UseNativeWindowSystem">
             <summary>
             Gets or sets a value indicating whether use native window title bar. Editor restart required.
@@ -20547,6 +20587,11 @@
         </member>
         <member name="M:FlaxEditor.Progress.Handlers.GenerateScriptsProjectFilesProgress.OnStart">
             <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Progress.Handlers.GenerateScriptsProjectFilesProgress.RunAsync">
+            <summary>
+            Runs the projects generation (as async task).
+            </summary>
         </member>
         <member name="M:FlaxEditor.Progress.Handlers.GenerateScriptsProjectFilesProgress.Run">
             <summary>
@@ -21997,6 +22042,11 @@
             Visual Studio 2019
             </summary>
         </member>
+        <member name="F:FlaxEditor.CodeEditorTypes.VSCode">
+            <summary>
+            Visual Studio Code
+            </summary>
+        </member>
         <member name="F:FlaxEditor.CodeEditorTypes.MAX">
             <summary>
             The count of items in the CodeEditorTypes enum.
@@ -22025,6 +22075,13 @@
             Opens the solution project. Handles async opening.
             </summary>
             <param name="editorType">The code editor type.</param>
+        </member>
+        <member name="M:FlaxEditor.CodeEditingManager.OnFileAdded(FlaxEditor.CodeEditorTypes,System.String)">
+            <summary>
+            Called when source file gets added to the workspace. Can be used to automatically include new files into the project files.
+            </summary>
+            <param name="editorType">The code editor type.</param>
+            <param name="path">The path.</param>
         </member>
         <member name="T:FlaxEditor.ScriptsBuilder">
             <summary>
@@ -22148,10 +22205,11 @@
             <param name="args">The Flax.Build tool invocation arguments.</param>
             <returns>True if failed, otherwise false.</returns>
         </member>
-        <member name="M:FlaxEditor.ScriptsBuilder.GenerateProject">
+        <member name="M:FlaxEditor.ScriptsBuilder.GenerateProject(System.String)">
             <summary>
             Generates the project files.
             </summary>
+            <param name="customArgs">The additional Flax.Build tool invocation arguments.</param>
             <returns>True if failed, otherwise false.</returns>
         </member>
         <member name="M:FlaxEditor.ScriptsBuilder.FindScript(System.String)">
@@ -26081,6 +26139,11 @@
             It contains collection of <see cref="T:FlaxEditor.Surface.GroupArchetype"/> and allows to plug custom node types as well.
             </summary>
         </member>
+        <member name="F:FlaxEditor.Surface.NodeFactory.ParameterAttributeTypes">
+            <summary>
+            The lis of supported attribute types for Visject Surface parameters. Attributes must be marked with Serializable attribute and contain empty constructor.
+            </summary>
+        </member>
         <member name="F:FlaxEditor.Surface.NodeFactory.DefaultGroups">
             <summary>
             The default Visject Node archetype groups collection.
@@ -26172,131 +26235,6 @@
         <member name="F:FlaxEditor.Surface.NodeFlags.AllGraphs">
             <summary>
             Node can be used in the all visual graphs.
-            </summary>
-        </member>
-        <member name="T:FlaxEditor.Surface.ParameterType">
-            <summary>
-            Surface parameters types.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.Bool">
-            <summary>
-            The boolean value.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.Integer">
-            <summary>
-            The integer value.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.Float">
-            <summary>
-            The floating point value.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.Vector2">
-            <summary>
-            The Vector2 value.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.Vector3">
-            <summary>
-            The Vector2 value.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.Vector4">
-            <summary>
-            The Vector2 value.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.Color">
-            <summary>
-            The Vector2 value.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.Texture">
-            <summary>
-            The texture id.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.NormalMap">
-            <summary>
-            The normal map texture id.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.String">
-            <summary>
-            The string value.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.Box">
-            <summary>
-            The BoundingBox value.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.Rotation">
-            <summary>
-            The Quaternion value.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.Transform">
-            <summary>
-            The Transform value.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.Asset">
-            <summary>
-            The asset id.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.Actor">
-            <summary>
-            The actor id.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.Rectangle">
-            <summary>
-            The Rectangle value.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.CubeTexture">
-            <summary>
-            The cube texture id.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.SceneTexture">
-            <summary>
-            The scene texture type.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.GPUTexture">
-            <summary>
-            The GPU texture (created from code).
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.Matrix">
-            <summary>
-            The matrix.
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.GPUTextureArray">
-            <summary>
-            The GPU texture array (created from code).
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.GPUTextureVolume">
-            <summary>
-            The GPU volume texture (created from code).
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.GPUTextureCube">
-            <summary>
-            The GPU cube texture (created from code).
-            </summary>
-        </member>
-        <member name="F:FlaxEditor.Surface.ParameterType.ChannelMask">
-            <summary>
-            The RGBA channel selection mask.
             </summary>
         </member>
         <member name="T:FlaxEditor.Surface.ParticleEmitterFunctionSurface">
@@ -26557,11 +26495,29 @@
             All meta entries
             </summary>
         </member>
-        <member name="M:FlaxEditor.Surface.SurfaceMeta.Load(System.UInt32,System.IO.BinaryReader)">
+        <member name="M:FlaxEditor.Surface.SurfaceMeta.GetAttributes(FlaxEngine.GraphParameter)">
+            <summary>
+            Gets the attributes collection rom the graph parameter.
+            </summary>
+            <param name="parameter">The graph parameter.</param>
+            <returns>The attributes collection.</returns>
+        </member>
+        <member name="M:FlaxEditor.Surface.SurfaceMeta.GetAttributes">
+            <summary>
+            Gets the attributes collection.
+            </summary>
+            <returns>The attributes collection.</returns>
+        </member>
+        <member name="M:FlaxEditor.Surface.SurfaceMeta.SetAttributes(System.Attribute[])">
+            <summary>
+            Sets the attributes collection.
+            </summary>
+            <param name="attributes">The attributes to set.</param>
+        </member>
+        <member name="M:FlaxEditor.Surface.SurfaceMeta.Load(System.IO.BinaryReader)">
             <summary>
             Load from the stream
             </summary>
-            <param name="engineBuild">Saved Visject Surface engine build number code</param>
             <param name="stream">Stream</param>
         </member>
         <member name="M:FlaxEditor.Surface.SurfaceMeta.Save(System.IO.BinaryWriter)">
@@ -26589,6 +26545,12 @@
             </summary>
             <param name="typeID">Type ID</param>
             <param name="data">Bytes to set</param>
+        </member>
+        <member name="M:FlaxEditor.Surface.SurfaceMeta.RemoveEntry(System.Int32)">
+            <summary>
+            Removes the entry.
+            </summary>
+            <param name="typeID">Type ID</param>
         </member>
         <member name="T:FlaxEditor.Surface.SurfaceNode">
             <summary>
@@ -26940,7 +26902,7 @@
             The metadata.
             </summary>
         </member>
-        <member name="M:FlaxEditor.Surface.SurfaceParameter.Create(FlaxEditor.Surface.ParameterType)">
+        <member name="M:FlaxEditor.Surface.SurfaceParameter.Create(FlaxEngine.GraphParamType)">
             <summary>
             Creates the new parameter of the given type.
             </summary>
@@ -27870,7 +27832,7 @@
         <member name="M:FlaxEditor.Surface.VisjectSurface.OnDestroy">
             <inheritdoc />
         </member>
-        <member name="M:FlaxEditor.Surface.VisjectSurface.GetParameterValueType(FlaxEditor.Surface.ParameterType)">
+        <member name="M:FlaxEditor.Surface.VisjectSurface.GetParameterValueType(FlaxEngine.GraphParamType)">
             <summary>
             Gets the type of the parameter (enum to runtime value type).
             </summary>
@@ -35538,6 +35500,45 @@
         <member name="M:FlaxEditor.Windows.Assets.VisjectSurfaceWindow`3.RenameParamAction.Dispose">
             <inheritdoc />
         </member>
+        <member name="T:FlaxEditor.Windows.Assets.VisjectSurfaceWindow`3.EditParamAttributesAction">
+            <summary>
+            The surface parameter attributes edit action for undo.
+            </summary>
+            <seealso cref="T:FlaxEditor.Windows.Assets.ClonedAssetEditorWindowBase`1" />
+            <seealso cref="T:FlaxEditor.Surface.IVisjectSurfaceOwner" />
+        </member>
+        <member name="F:FlaxEditor.Windows.Assets.VisjectSurfaceWindow`3.EditParamAttributesAction.Window">
+            <summary>
+            The window reference.
+            </summary>
+        </member>
+        <member name="F:FlaxEditor.Windows.Assets.VisjectSurfaceWindow`3.EditParamAttributesAction.Index">
+            <summary>
+            The index of the parameter.
+            </summary>
+        </member>
+        <member name="F:FlaxEditor.Windows.Assets.VisjectSurfaceWindow`3.EditParamAttributesAction.Before">
+            <summary>
+            The attributes before.
+            </summary>
+        </member>
+        <member name="F:FlaxEditor.Windows.Assets.VisjectSurfaceWindow`3.EditParamAttributesAction.After">
+            <summary>
+            The attributes after.
+            </summary>
+        </member>
+        <member name="P:FlaxEditor.Windows.Assets.VisjectSurfaceWindow`3.EditParamAttributesAction.ActionString">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.VisjectSurfaceWindow`3.EditParamAttributesAction.Do">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.VisjectSurfaceWindow`3.EditParamAttributesAction.Undo">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Windows.Assets.VisjectSurfaceWindow`3.EditParamAttributesAction.Dispose">
+            <inheritdoc />
+        </member>
         <member name="T:FlaxEditor.Windows.Assets.VisjectSurfaceWindow`3.AddRemoveParamAction">
             <summary>
             The undo action for adding or removing surface parameter.
@@ -35646,7 +35647,7 @@
         </member>
         <member name="F:FlaxEditor.Windows.Assets.VisjectSurfaceWindow`3.NewParameterTypes">
             <summary>
-            The new parameter types enum type to use. Null to disable adding new parameters. Enum items must have values matching the <see cref="T:FlaxEditor.Surface.ParameterType"/> enum.
+            The new parameter types enum type to use. Null to disable adding new parameters. Enum items must have values matching the <see cref="T:FlaxEngine.GraphParamType"/> enum.
             </summary>
         </member>
         <member name="P:FlaxEditor.Windows.Assets.VisjectSurfaceWindow`3.Surface">
@@ -35886,11 +35887,12 @@
             </summary>
             <param name="asset">The asset to select.</param>
         </member>
-        <member name="M:FlaxEditor.Windows.ContentWindow.Select(FlaxEditor.Content.ContentItem)">
+        <member name="M:FlaxEditor.Windows.ContentWindow.Select(FlaxEditor.Content.ContentItem,System.Boolean)">
             <summary>
             Selects the specified item in the content view.
             </summary>
             <param name="item">The item to select.</param>
+            <param name="fastScroll">True of scroll to the item quickly without smoothing.</param>
         </member>
         <member name="M:FlaxEditor.Windows.ContentWindow.RefreshView">
             <summary>
@@ -37359,6 +37361,32 @@
             Shipping configuration. With full optimization and no debugging data.
             </summary>
         </member>
+        <member name="P:FlaxEngine.Editor.Surface.AttributesEditor.ValuesEditor.Options">
+            <inheritdoc />
+        </member>
+        <member name="F:FlaxEngine.Editor.Surface.AttributesEditor.Edited">
+            <summary>
+            The action fired when parameters editing finishes and value gets accepted to be set.
+            </summary>
+        </member>
+        <member name="M:FlaxEngine.Editor.Surface.AttributesEditor.#ctor(System.Attribute[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:FlaxEngine.Editor.Surface.AttributesEditor"/> class.
+            </summary>
+            <param name="attributes">The attributes to edit.</param>
+        </member>
+        <member name="M:FlaxEngine.Editor.Surface.AttributesEditor.OnShow">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEngine.Editor.Surface.AttributesEditor.Hide">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEngine.Editor.Surface.AttributesEditor.OnKeyDown(FlaxEngine.KeyboardKeys)">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEngine.Editor.Surface.AttributesEditor.OnDestroy">
+            <inheritdoc />
+        </member>
         <member name="T:FlaxEngine.AlphaBlendMode">
             <summary>
             Alpha blending modes.
@@ -37474,6 +37502,11 @@
         <member name="F:FlaxEngine.AnimationGraph.CustomNode.Context.Graph">
             <summary>
             The graph pointer (unmanaged).
+            </summary>
+        </member>
+        <member name="F:FlaxEngine.AnimationGraph.CustomNode.Context.GraphExecutor">
+            <summary>
+            The graph executor pointer (unmanaged).
             </summary>
         </member>
         <member name="F:FlaxEngine.AnimationGraph.CustomNode.Context.Node">
@@ -69128,9 +69161,9 @@
             Gets or sets the last game time when particle system was updated. Value -1 indicates no previous updates.
             </summary>
         </member>
-        <member name="P:FlaxEngine.ParticleEffect.CPUParticlesCount">
+        <member name="P:FlaxEngine.ParticleEffect.ParticlesCount">
             <summary>
-            Gets the CPU particles count (total).
+            Gets the particles count (total). GPU particles count is read with one frame delay (due to GPU execution).
             </summary>
         </member>
         <member name="P:FlaxEngine.ParticleEffect.ParametersOverrides">
@@ -69283,6 +69316,11 @@
         <member name="P:FlaxEngine.ParticleEffectParameter.Value">
             <summary>
             Gets or sets the value of the parameter.
+            </summary>
+        </member>
+        <member name="P:FlaxEngine.ParticleEffectParameter.EmitterParameter">
+            <summary>
+            Gets the particle emitter parameter from the asset (the parameter instanced by this object).
             </summary>
         </member>
         <member name="T:FlaxEngine.ParticleEmitter">
@@ -71730,6 +71768,11 @@
             </summary>
             <returns>True if running on the main thread, otherwise false.</returns>
         </member>
+        <member name="P:FlaxEngine.Platform.CustomDpiScale">
+            <summary>
+            The custom screen DPI scale factor to apply globally. Can be used to adjust the User Interface scale (resolution).
+            </summary>
+        </member>
         <member name="P:FlaxEngine.Platform.PlatformType">
             <summary>
             Returns the current runtime platform type. It's compile-time constant.
@@ -71802,7 +71845,7 @@
         </member>
         <member name="P:FlaxEngine.Platform.DpiScale">
             <summary>
-            Gets the screen DPI setting scale factor (1 is default).
+            Gets the screen DPI setting scale factor (1 is default). Includes custom DPI scale.
             </summary>
         </member>
         <member name="P:FlaxEngine.Platform.NetworkConnectionType">
@@ -74616,6 +74659,11 @@
             Custom editor class typename for collection values editing.
             </summary>
         </member>
+        <member name="F:FlaxEngine.CollectionAttribute.Spacing">
+            <summary>
+            The spacing amount between collection items in the UI.
+            </summary>
+        </member>
         <member name="T:FlaxEngine.AssetReferenceAttribute">
             <summary>
             Specifies a options for an asset reference picker in the editor. Allows to customize view or provide custom value assign policy.
@@ -74705,12 +74753,12 @@
             Special text sequence used for property names to override the default layout style and inline property into the parent layout.
             </summary>
         </member>
-        <member name="P:FlaxEngine.EditorDisplayAttribute.Group">
+        <member name="F:FlaxEngine.EditorDisplayAttribute.Group">
             <summary>
             The group name. Default is null.
             </summary>
         </member>
-        <member name="P:FlaxEngine.EditorDisplayAttribute.Name">
+        <member name="F:FlaxEngine.EditorDisplayAttribute.Name">
             <summary>
             The overriden item display name. Default is null.
             </summary>
@@ -74728,7 +74776,7 @@
             </summary>
             <seealso cref="T:System.Attribute" />
         </member>
-        <member name="P:FlaxEngine.EditorOrderAttribute.Order">
+        <member name="F:FlaxEngine.EditorOrderAttribute.Order">
             <summary>
             Requested order to perform layout on. Used to order the items.
             </summary>
@@ -74945,22 +74993,6 @@
             <summary>
             Indicates that a field or a property of a serializable class should not be serialized. This class cannot be inherited.
             </summary>
-        </member>
-        <member name="T:FlaxEngine.RequireChildActorAttribute">
-            <summary>
-            The RequireChildActor attribute automatically adds required child actor as dependencies.
-            </summary>
-        </member>
-        <member name="F:FlaxEngine.RequireChildActorAttribute.Type">
-            <summary>
-            Type of the actor to require
-            </summary>
-        </member>
-        <member name="M:FlaxEngine.RequireChildActorAttribute.#ctor(System.Type)">
-            <summary>
-            Require an child.
-            </summary>
-            <param name="requiredChild"></param>
         </member>
         <member name="T:FlaxEngine.SerializeAttribute">
             <summary>
@@ -79225,13 +79257,14 @@
             </summary>
             <seealso cref="T:FlaxEngine.GUI.ScrollBar" />
         </member>
-        <member name="M:FlaxEngine.GUI.HScrollBar.#ctor(FlaxEngine.GUI.ContainerControl,System.Single,System.Single)">
+        <member name="M:FlaxEngine.GUI.HScrollBar.#ctor(FlaxEngine.GUI.ContainerControl,System.Single,System.Single,System.Single)">
             <summary>
             Initializes a new instance of the <see cref="T:FlaxEngine.GUI.HScrollBar"/> class.
             </summary>
             <param name="parent">The parent control.</param>
             <param name="y">The y position.</param>
             <param name="width">The width.</param>
+            <param name="height">The height.</param>
         </member>
         <member name="P:FlaxEngine.GUI.HScrollBar.TrackSize">
             <inheritdoc />
@@ -79298,23 +79331,26 @@
         <member name="M:FlaxEngine.GUI.Panel.SetViewOffset(FlaxEngine.Vector2@)">
             <inheritdoc />
         </member>
-        <member name="M:FlaxEngine.GUI.Panel.ScrollViewTo(FlaxEngine.GUI.Control)">
+        <member name="M:FlaxEngine.GUI.Panel.ScrollViewTo(FlaxEngine.GUI.Control,System.Boolean)">
             <summary>
             Scrolls the view to the given control area.
             </summary>
             <param name="c">The control.</param>
+            <param name="fastScroll">True of scroll to the item quickly without smoothing.</param>
         </member>
-        <member name="M:FlaxEngine.GUI.Panel.ScrollViewTo(FlaxEngine.Vector2)">
+        <member name="M:FlaxEngine.GUI.Panel.ScrollViewTo(FlaxEngine.Vector2,System.Boolean)">
             <summary>
             Scrolls the view to the given location.
             </summary>
             <param name="location">The location.</param>
+            <param name="fastScroll">True of scroll to the item quickly without smoothing.</param>
         </member>
-        <member name="M:FlaxEngine.GUI.Panel.ScrollViewTo(FlaxEngine.Rectangle)">
+        <member name="M:FlaxEngine.GUI.Panel.ScrollViewTo(FlaxEngine.Rectangle,System.Boolean)">
             <summary>
             Scrolls the view to the given area.
             </summary>
             <param name="bounds">The bounds.</param>
+            <param name="fastScroll">True of scroll to the item quickly without smoothing.</param>
         </member>
         <member name="M:FlaxEngine.GUI.Panel.OnMouseWheel(FlaxEngine.Vector2,System.Single)">
             <inheritdoc />
@@ -79444,16 +79480,6 @@
             The default size.
             </summary>
         </member>
-        <member name="F:FlaxEngine.GUI.ScrollBar.DefaultThumbThickness">
-            <summary>
-            The default thumb rectangle thickness.
-            </summary>
-        </member>
-        <member name="F:FlaxEngine.GUI.ScrollBar.DefaultTrackThickness">
-            <summary>
-            The default track line thickness.
-            </summary>
-        </member>
         <member name="F:FlaxEngine.GUI.ScrollBar.DefaultMinimumOpacity">
             <summary>
             The default minimum opacity.
@@ -79467,6 +79493,16 @@
         <member name="P:FlaxEngine.GUI.ScrollBar.Orientation">
             <summary>
             Gets the orientation.
+            </summary>
+        </member>
+        <member name="P:FlaxEngine.GUI.ScrollBar.ThumbThickness">
+            <summary>
+            Gets or sets the thumb box thickness.
+            </summary>
+        </member>
+        <member name="P:FlaxEngine.GUI.ScrollBar.TrackThickness">
+            <summary>
+            Gets or sets the track line thickness.
             </summary>
         </member>
         <member name="P:FlaxEngine.GUI.ScrollBar.SmoothingScale">
@@ -79514,6 +79550,11 @@
             Occurs when value gets changed.
             </summary>
         </member>
+        <member name="F:FlaxEngine.GUI.ScrollBar.ThumbEnabled">
+            <summary>
+            Enables/disabled scrolling by user.
+            </summary>
+        </member>
         <member name="P:FlaxEngine.GUI.ScrollBar.TrackSize">
             <summary>
             Gets the size of the track.
@@ -79525,12 +79566,13 @@
             </summary>
             <param name="orientation">The orientation.</param>
         </member>
-        <member name="M:FlaxEngine.GUI.ScrollBar.ScrollViewTo(System.Single,System.Single)">
+        <member name="M:FlaxEngine.GUI.ScrollBar.ScrollViewTo(System.Single,System.Single,System.Boolean)">
             <summary>
             Scrolls the view to the desire range (favors minimum value if cannot cover whole range in a bounds).
             </summary>
             <param name="min">The view minimum.</param>
             <param name="max">The view maximum.</param>
+            <param name="fastScroll">True of scroll to the item quickly without smoothing.</param>
         </member>
         <member name="M:FlaxEngine.GUI.ScrollBar.OnValueChanged">
             <summary>
@@ -79736,13 +79778,14 @@
             </summary>
             <seealso cref="T:FlaxEngine.GUI.ScrollBar" />
         </member>
-        <member name="M:FlaxEngine.GUI.VScrollBar.#ctor(FlaxEngine.GUI.ContainerControl,System.Single,System.Single)">
+        <member name="M:FlaxEngine.GUI.VScrollBar.#ctor(FlaxEngine.GUI.ContainerControl,System.Single,System.Single,System.Single)">
             <summary>
             Initializes a new instance of the <see cref="T:FlaxEngine.GUI.VScrollBar"/> class.
             </summary>
             <param name="parent">The parent control.</param>
             <param name="x">The x position.</param>
             <param name="height">The height.</param>
+            <param name="width">The width.</param>
         </member>
         <member name="P:FlaxEngine.GUI.VScrollBar.TrackSize">
             <inheritdoc />
@@ -81535,6 +81578,24 @@
         <member name="P:FlaxEngine.GraphParameter.Value">
             <summary>
             Gets or sets the value of the parameter.
+            </summary>
+        </member>
+        <member name="M:FlaxEngine.GraphParameter.GetMetaData(System.Int32)">
+            <summary>
+            Gets the data of the Visject Meta entry assigned to this parameter.
+            </summary>
+            <param name="typeID">Entry type ID</param>
+            <returns>The entry data or empty if missing or not loaded.</returns>
+        </member>
+        <member name="T:FlaxEngine.VisjectGraphParameter">
+            <summary>
+            Visject graph parameter.
+            </summary>
+            <seealso cref="T:FlaxEngine.GraphParameter" />
+        </member>
+        <member name="M:FlaxEngine.VisjectGraphParameter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:FlaxEngine.VisjectGraphParameter"/>.
             </summary>
         </member>
     </members>
