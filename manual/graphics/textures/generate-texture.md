@@ -66,7 +66,7 @@ public class TextureFromCode : Script
         // Use a dynamic material instance with a texture to sample
         var material = Material.CreateVirtualInstance();
         _tempMaterialInstance = material;
-        material.GetParam("tex").Value = texture;
+        material.SetParameterValue("tex", texture);
 
         // Add a model actor and use the dynamic material for rendering
         var staticModel = Actor.GetOrAddChild<StaticModel>();

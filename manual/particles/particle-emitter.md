@@ -66,8 +66,7 @@ Every particle emitter can contain a list of parameters. By using them you can e
 
 ```cs
 var effect = Actor.As<ParticleEffect>();
-var param = effect.GetParam("Emitter 0", "FlareColor");
-param.Value = Color.Red;
+effect.SetParameterValue("Emitter 0", "FlareColor", Color.Red);
 ```
 
 

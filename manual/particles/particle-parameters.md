@@ -8,12 +8,8 @@ Here is an example code that modifies the parameters. Remember to cache the effe
 
 ```cs
 var effect = Actor.As<ParticleEffect>();
-
-var color1 = effect.GetParam("Smoke 1", "Color");
-color1.Value = Color.Red;
-
-var color2 = effect.GetParam("Smoke 2", "Color");
-color2.Value = Color.Blue;
+effect.SetParameterValue("Smoke 1", "Color", Color.Red);
+effect.SetParameterValue("Smoke 2", "Color", Color.Blue);
 ```
 
 In addition, you can enumerate all particle effect parameters as follows:

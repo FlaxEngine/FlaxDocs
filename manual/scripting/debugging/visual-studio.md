@@ -11,6 +11,8 @@ Flax requries the following components to be installed in order to support C# sc
 
 ![Visual Studio Components](media/vs-components.png)
 
+For C++ scripts debugging platform-dependant toolset is required (eg. Win10 SDK and v141 toolset on Windows).
+
 ### 1. Install Visual Studio plugin
 
 Download and install [Flax Engine Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=Flax.FlaxVS) which is requried to debug game scripts right inside the VS.
@@ -30,6 +32,10 @@ Double-click on a script item and wait for the IDE to show up.
 
 ![Script in Visual Studio](media/vs-script-open.jpg)
 
+Ensure to pick a proper solution configuration eg. **Editor.Development** and select platform **Win64**.
+
+![Visual Studio Configuration](media/vs-configuration-picker.jpg)
+
 ### 4. Add a breakpoint
 
 Click on a left side of the code editor to assign a breakpoint to the line. Red dot should be added as shown in the picture below.
@@ -46,7 +52,7 @@ Press the `Attach to Flax` button with a green arrow to connect Visual Studio to
 
 ### 6. Start a game
 
-Go back to the Flax Editor and press the `Play` button to start a game. Then script *Update()* function will be called and assigned breakpoint hit.
+Go back to the Flax Editor and press the `Play` button to start a game. Then script *OnUpdate()* function will be called and assigned breakpoint hit.
 
 ![Script in Visual Studio](media/debug-vs-4.jpg)
 

@@ -39,6 +39,7 @@ You can modify the properties and press **Save** icon on a toolstrip to apply th
 | Property | Description |
 |--------|--------|
 | *Interface* ||
+| **Interface Scale** | Editor User Interface scale. Applied to all UI elements, windows and text. Can be used to scale the interface up on a bigger display. Editor restart required. |
 | **Use Native Window System** | Determines whether use native window title bar. Editor restart required. |
 | **Show Selected Camera Preview** | Determines whether show selected camera preview in the edit window. |
 | **Center Mouse On Game Window Focus** | Determines whether center mouse position on window focus in play mode. Helps when working with games that lock mouse cursor. |
