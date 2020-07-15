@@ -25,8 +25,9 @@ public override void OnStart()
 | **FLAX_XBOX_ONE** | Compile for Xbox One. |
 | **FLAX_PS4** | Compile for PlayStation 4. |
 | **FLAX_LINUX** | Compile for Linux. |
+| **FLAX_XBOX_SCARLETT** | Compile for Xbox Scarlett. |
 | **FLAX_X** | Used to detect Flax version during compilation. X=major version of Flax. eg. `FLAX_1` |
 | **FLAX_X_Y** | Used to detect Flax version during compilation. X=major version of Flax. Y=minor version of Flax. eg. `FLAX_1_2` |
 
-To specify custom compilation macros see [Game Cooker](../editor/game-cooker/index.md) and [Game Settings](../editor/game-settings/index.md) documentation.
+To specify custom compilation macros see [Game Cooker](../editor/flax-build/index.md) documentation.
 

@@ -330,6 +330,7 @@
 ## [Xbox One](platforms/xbox-one.md)
 ## [PlayStation 4](platforms/ps4.md)
 ## [Linux](platforms/linux.md)
+## [Xbox Scarlett](platforms/xbox-scarlett.md)
 
 # [Contributing](contributing/index.md)
 ## [Feature Requests](contributing/feature-requests.md)
