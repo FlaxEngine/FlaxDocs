@@ -31,8 +31,9 @@ To learn more about using a transform gizmo see [this page](../../get-started/sc
 | **RMB + Arrows/WSAD** | Move camera |
 | **RMB + MMB** | Move camera |
 | **MMB** | Pan camera |
-| **LMB + Mouse Wheel** | Zoom in/out |
-| **Shift + Mouse Wheel** | Change camera speed up/down |
+| **Mouse Wheel** | Zoom in/out |
+| **RMB + Shift** | Speed up camera by 2 |
+| **RMB + Mouse Wheel** | Change camera speed up/down |
 | **Alt + LMB** | Orbit camera (around last viewed object center, translated) |
 | **F** | Show selected actor (focus on it) |
 | **Delete** | Delete selected objects |
