@@ -111,19 +111,19 @@ DECLARE_SCRIPTING_TYPE(MouseDecalShoot);
 	// [Script]
 	void OnUpdate() override
 	{
-		if (::Input::GetMouseButtonDown(MouseButton::Left))
+		if (Input::GetMouseButtonDown(MouseButton::Left))
 		{
-			SpawnDecal(::Input::GetMousePosition());
+			SpawnDecal(Input::GetMousePosition());
 		}
 	}
-	void Serialize(Output& stream, const void* otherObj) override
+	void Serialize(SerializeStream& stream, const void* otherObj) override
 	{
 		Script::Serialize(stream, otherObj);
 
 		SERIALIZE_GET_OTHER_OBJ(MouseDecalShoot);
 		SERIALIZE_REFERENCE(DecalMaterial);
 	}
-	void Deserialize(Input& stream, ISerializeModifier* modifier) override
+	void Deserialize(DeserializeStream& stream, ISerializeModifier* modifier) override
 	{
 		Script::Deserialize(stream, modifier);
 
