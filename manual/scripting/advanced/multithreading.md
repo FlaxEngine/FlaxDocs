@@ -83,6 +83,8 @@ class AsyncTest : Script
 }
 ```
 
+Also, when using `async` tasks you can use the `Scripting.MainThreadScheduler` to invoke task on a main thread during game *Update*. This can be usefull when chacing the async tasks with main thread tasks.
+
 ## Thread
 
 If you want to have more control over the multithreaded code execution then the best way is to create thread manually and control its execution:
