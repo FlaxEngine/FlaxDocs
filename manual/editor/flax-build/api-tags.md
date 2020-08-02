@@ -62,6 +62,10 @@ API_FUNCTION()
 int32 CalculateSpeedParams(API_PARAM(ref) Vector3& offset);
 ```
 
+## API_AUTO_SERIALIZATION()
+
+Use it inside class or structure to generate automatic object data serialization code for `ISerializable` interface.
+
 ## Tag parameters
 
 Tag attributes tha can be added to the API tags braces to edjust the bindigns logic:
