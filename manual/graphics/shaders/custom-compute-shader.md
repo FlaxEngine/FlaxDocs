@@ -46,8 +46,6 @@ groupshared float4 Samples[BLUR_THREAD_GROUP_SIZE];
 
 // Compute shader blur function for horizontal pass
 META_CS(true, FEATURE_LEVEL_SM5)
-META_PERMUTATION_1(BLUR_VERTICAL=0)
-META_PERMUTATION_1(BLUR_VERTICAL=1)
 [numthreads(BLUR_THREAD_GROUP_SIZE, 1, 1)]
 void CS_BlurH(uint3 groupID : SV_GroupID, uint3 groupThreadID : SV_GroupThreadID)
 {
