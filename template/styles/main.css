@@ -44,10 +44,10 @@ div.frontpage-topsection h3 a {
 	margin-right: auto 
 }
 
-/* Make container auto adjust up to 1300px */
+/* Make container auto adjust */
 .container {
-  width: initial;
-  max-width: 1300px;
+  width: 100%;
+  max-width: 1400px;
 }
 
 /* Clickability fix for selector on sm devices */
@@ -69,8 +69,8 @@ div.frontpage-topsection h3 a {
 .sidetoc,
 body .toc,
 .sidefilter,
-.sidetoggle { 
-  background-color: #f9fbe7; 
+.sidetoggle {
+  color: #292929;
 }
 
 .sidenav,
@@ -212,7 +212,7 @@ article h4 {
    ------------------------------------------------------- */
 .navbar-inverse {
   background-color: #283f9a;
-  opacity: 0.95;
+  opacity: 1;
   border-color: #283f9a;
 }
 .navbar-inverse .navbar-brand {
@@ -235,7 +235,7 @@ article h4 {
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
-  background-color: #132F75;
+  background-color: #253989;
 }
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
@@ -244,18 +244,18 @@ article h4 {
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: #132F75;
+  background-color: #253989;
 }
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
   color: #c9c9c9;
 }
 .navbar-inverse .navbar-toggle {
-  border-color: #132F75;
+  border-color: #253989;
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-  background-color: #132F75;
+  background-color: #253989;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
   background-color: #ffffff;
@@ -283,6 +283,6 @@ article h4 {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #c9c9c9;
-    background-color: #132F75;
+    background-color: #253989;
   }
 }
