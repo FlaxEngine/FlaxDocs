@@ -22,6 +22,7 @@ You can modify the properties and press **Save** icon on a toolstrip to apply th
 | **Undo Actions Capacity** | Limit for the editor undo actions. Higher values may increase memory usage but also improve changes rollback history length. |
 | **Auto Reload Scripts On Main Window Focus** | Determines whether reload scripts after a change on main window focus. |
 | **Force Script Compilation On Startup** | Determines whether automatically compile game scripts before starting the editor. |
+| **Auto Save Visual Script On Play Start** | Determines whether automatically save the Visual Script asset editors when starting the play mode in editor. |
 | **Auto Rebuild CSG** | Determines whether perform automatic CSG rebuild on brush change. |
 | **Auto Rebuild CSG Timeout** | Auto CSG rebuilding timeout (in milliseconds). Use lower value for more frequent and responsive updates but higher complexity. |
 | **Auto Rebuild Nav Mesh** | Determines whether perform automatic NavMesh rebuild on scene change. |
