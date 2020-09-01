@@ -19,3 +19,9 @@ Then you can use terrain layer weights and terrain holes mask node to implement 
 <p>
 ![Terrain Holes Mask](media/terrain-holes-material.png)
 </p>
+
+## Terrain Layers
+
+![Terrain Layers Blending](media/height-layer-blend-terrain.png)
+
+One of the common techniques when creating terrain material shaders is to use **layers**. Each layer can be a separate material or a material function (eg. with additional height output). Then you can easily blend those layers to produce final surface properties.
