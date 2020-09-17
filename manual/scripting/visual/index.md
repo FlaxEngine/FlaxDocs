@@ -33,7 +33,7 @@ To call Visual Script from C\+\+ you can do it as in the following example:
 #include "Engine/Content/Assets/VisualScript.h"
 ..
 VisualScript* myScript = ..; // Assign it from editor or load asset manually
-ScriptingObject* instabce = nullptr; // Null for static methods, assign to object instance to call member function
+ScriptingObject* instance = nullptr; // Null for static methods, assign to object instance to call member function
 Span<Variant> parameters; // Here you can pass parameters to the function
 Variant result = VisualScripting::Invoke(myScript->FindMethod("My Func"), instance, parameters);
 ```
