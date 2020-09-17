@@ -86,6 +86,7 @@ Now, to understand some basic concepts related to C\+\+ scripting in Flax let's 
 
 API_CLASS() class MYPROJECT_API MouseDecalShoot : public Script
 {
+API_AUTO_SERIALIZATION();
 DECLARE_SCRIPTING_TYPE(MouseDecalShoot);
 
 	// The decal material to use for spawned decals.
@@ -111,23 +112,10 @@ DECLARE_SCRIPTING_TYPE(MouseDecalShoot);
 	// [Script]
 	void OnUpdate() override
 	{
-		if (::Input::GetMouseButtonDown(MouseButton::Left))
+		if (Input::GetMouseButtonDown(MouseButton::Left))
 		{
-			SpawnDecal(::Input::GetMousePosition());
+			SpawnDecal(Input::GetMousePosition());
 		}
-	}
-	void Serialize(Output& stream, const void* otherObj) override
-	{
-		Script::Serialize(stream, otherObj);
-
-		SERIALIZE_GET_OTHER_OBJ(MouseDecalShoot);
-		SERIALIZE_REFERENCE(DecalMaterial);
-	}
-	void Deserialize(Input& stream, ISerializeModifier* modifier) override
-	{
-		Script::Deserialize(stream, modifier);
-
-		DESERIALIZE_REFERENCE(DecalMaterial);
 	}
 };
 
@@ -148,7 +136,7 @@ Some important notes to learn:
 * To expose a function to the editor and C# scripting use `API_FUNCTION` prefix macro
 * You can use engine API similar to C# (eg. Camera, Physics, Input...)
 * The `<module_name>_API` define used between `class` and class name (i.e. `class MYPROJECT_API MouseDecalShoot`) is to export the C++ class to public module symbols so it can be used by other code
-* For now, you have to manually implement script data serialization and deserialization (the automated solution is WIP)
+* You can manually override `Serialize`/`Deserialize` method or use `API_AUTO_SERIALIZATION` macro to automatically generate serialziation code for the type (for classes and structures that inherit from `ISerializable`)
 * If your game module uses types from various engine modules (eg. Graphics, Physics) you have to add a reference to the in a build script so build tools can handle modules dependencies and properly link binaries - simply add `options.PublicDependencies.Add("<module_name>");` in you build script (where module name is Physics/Terrain/etc. - see BuildScripts for all modules you can use)
 
 To learn about **API_** tags see [this documentation](../../editor/flax-build/api-tags.md).

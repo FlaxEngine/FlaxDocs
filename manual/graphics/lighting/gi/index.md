@@ -1,6 +1,6 @@
 # Global Illumination
 
-![Global Illumination in Flax](media/Screenshot_2017_03_28_22_39_33.png)
+![Global Illumination in Flax](media/gi-flax.gif)
 
 **Global Illumination** (shorten as *GI*) is a technique that models how light is bounced off of surfaces onto other surfaces. This effect is called indirect light transport and is highly complex to compute. Flax supports baking GI into lightmap textures in Editor. This highly improves the overall visual look of the scenes.
 

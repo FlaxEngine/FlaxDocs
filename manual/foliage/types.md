@@ -13,6 +13,7 @@ Each foliage actor contains a list of types that it uses. This helps editing man
 | **Cull Distance Random Range** | The per-instance cull distance randomization range (randomized per instance and added to master CullDistance value). |
 | **Shadows Mode** | The shadows casting mode. |
 | **Receive Decals** | Determines whenever this meshes can receive decals. |
+| **Scale In Lightmap** | The scale in lightmap (for instances of this foliage type). Can be used to adjust static lighting quality for the foliage instances. |
 | **Use Density Scaling** | Flag used to determinate whenever use global foliage density scaling for instances of this foliage type. |
 | **Density Scaling Scale** | The density scaling scale applied to the global scale for the foliage instances of this type. Can be used to boost or reduce density scaling effect on this foliage type. |
 |||

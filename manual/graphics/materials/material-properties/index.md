@@ -34,6 +34,7 @@ This page breaks down all the available material properties. These options are a
 | **Enable Reflections** | If checked, enables reflections when rendering material. |
 | **Enable Fog** | If checked, enables fog effect when rendering material. |
 | **Enable Distortion** | If checked, enables distortion effect when rendering material. |
+| **Pixel Normal Offset Refraction** | Enables refraction offset based on the difference between the per-pixel normal and the per-vertex normal. Useful for large water-like surfaces. |
 | **Opacity Threshold** | Controls opacity values clipping point. |
 
 ## Tessellation

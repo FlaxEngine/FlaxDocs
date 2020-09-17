@@ -16,5 +16,6 @@ Lightmaps can be configured using various parameters:
 | **Charts Padding** | Amount of pixels space between charts in lightmap atlas |
 | **Atlas Size** | Single lightmap atlas size (width and height) |
 | **Bounce Count** | Amount of indirect light GI bounce passes |
+| **Compress Lightmaps** | Enable/disable compressing lightmap textures (3 textures per lightmap with RGBA data in HDR) |
 | **Use Geometry With No Materials** | Enable/disable rendering static light for geometry with missing or empty material slots |
 | **Quality** | GI quality (range  [0;100]) |
