@@ -49,9 +49,6 @@ public class ExpressionGraphProxy : JsonAssetProxy
     public override Color AccentColor => Color.FromRGB(0x0F0371);
 
     /// <inheritdoc />
-    public override ContentDomain Domain => ContentDomain.Other;
-
-    /// <inheritdoc />
     public override string TypeName { get; } = typeof(ExpressionGraph).FullName;
 
     /// <inheritdoc />
@@ -143,16 +140,16 @@ public class ExpressionGraphSurface : VisjectSurface
 ```cs
 public class ExpressionGraphWindow : VisjectSurfaceWindow<JsonAsset, ExpressionGraphSurface, ExpressionGraphPreview>
 {
-	/// <summary>
-	/// The allowed parameter types. Define custom list based on ParameterType enum.
-	/// </summary>
-	private enum NewParameterType
-	{
-		Float = ParameterType.Float,
-		Vector2 = ParameterType.Vector2,
-		Vector3 = ParameterType.Vector3,
-		Vector4 = ParameterType.Vector4
-	}
+    /// <summary>
+    /// The allowed parameter types.
+    /// </summary>
+    private readonly ScriptType[] _newParameterTypes =
+    {
+        new ScriptType(typeof(float)),
+        new ScriptType(typeof(Vector2)),
+        new ScriptType(typeof(Vector3)),
+        new ScriptType(typeof(Vector4)),
+    };
 
 	/// <summary>
 	/// The properties proxy object.
@@ -201,8 +198,6 @@ public class ExpressionGraphWindow : VisjectSurfaceWindow<JsonAsset, ExpressionG
 	public ExpressionGraphWindow(FlaxEditor.Editor editor, AssetItem item)
 	: base(editor, item)
 	{
-		NewParameterTypes = typeof(NewParameterType);
-
 		// Asset preview
 		_preview = new ExpressionGraphPreview(true)
 		{
@@ -231,8 +226,11 @@ public class ExpressionGraphWindow : VisjectSurfaceWindow<JsonAsset, ExpressionG
 	/// <param name="asset">The JSON asset.</param>
 	public static void ShowJson(JsonAsset asset)
 	{
-		FlaxEditor.Utilities.Utils.ShowSourceCode(asset.Data, "Asset JSON");
+		FlaxEditor.Utilities.Utils.ShowSourceCodeWindow(asset.Data, "Asset JSON");
 	}
+
+    /// <inheritdoc />
+    public override IEnumerable<ScriptType> NewParameterTypes => _newParameterTypes;
 
 	/// <inheritdoc />
 	protected override void UnlinkItem()
@@ -309,7 +307,7 @@ public class ExpressionGraphWindow : VisjectSurfaceWindow<JsonAsset, ExpressionG
 	}
 
 	/// <inheritdoc />
-	protected override void SetParameter(int index, object value)
+	public override void SetParameter(int index, object value)
 	{
 		// TODO: Update the asset value to have nice live preview
 		//_assetInstance.Parameters[index].Value = value;
@@ -449,9 +447,9 @@ public static readonly NodeArchetype[] ExpressionGraphNodes =
         Size = new Vector2(150, 300),
         Elements = new[]
         {
-            NodeElementArchetype.Factory.Input(0, "Float", true, ConnectionType.Float, 0),
-            NodeElementArchetype.Factory.Input(1, "Vector2", true, ConnectionType.Vector2, 1),
-            NodeElementArchetype.Factory.Input(2, "Vector3", true, ConnectionType.Vector3, 2)
+            NodeElementArchetype.Factory.Input(0, "Float", true, typeof(float), 0),
+            NodeElementArchetype.Factory.Input(1, "Vector2", true, typeof(Vector2), 1),
+            NodeElementArchetype.Factory.Input(2, "Vector3", true, typeof(Vector3), 2)
         }
     },
     // Random float
@@ -464,7 +462,7 @@ public static readonly NodeArchetype[] ExpressionGraphNodes =
         Size = new Vector2(150, 30),
         Elements = new[]
         {
-            NodeElementArchetype.Factory.Output(0, "Float", ConnectionType.Float, 0),
+            NodeElementArchetype.Factory.Output(0, "Float", typeof(float), 0),
         }
     }
 };
@@ -554,7 +552,7 @@ param.Value; // The value of the param
 The index of the parameter in the `Parameters` list is used for the live-updating the preview in the `SetParameter` function in the file `ExpressionGraphWindow.cs`.
 
 ```cs
-protected override void SetParameter(int index, object value)
+public override void SetParameter(int index, object value)
 {
     // Update the asset value to have nice live preview
     _assetInstance.Parameters.First(p => p.Index == index).Value = value;
@@ -586,7 +584,7 @@ Lastly, the output node, or main node, can be obtained using [`FindNode(MainNode
 
 A simple way to execute a Visject surface at runtime is making a copy of it and running an interpreter over it.
 
-> [!NOTE] 
+> [!NOTE]
 > You cannot reference `SurfaceNode` at runtime, because it is in the Editor assembly. So, you have to copy every single node to your own class if you want to write an interpreter.
 
 To copy a surface, iterate over it in a *depth first* manner. This makes it easy to execute the nodes in a correct order, where every node gets executed *after* the nodes before it have finished. It also conveniently detects cycles in the graph.
