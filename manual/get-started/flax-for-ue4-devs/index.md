@@ -25,7 +25,7 @@ This section contains the most common terms used in UE4 and their Flax equivalen
 | Unreal | Flax |
 |--------|--------|
 | **Actor** | [Actor](../scenes/actors.md) |
-| **Blueprint** | [Prefab](../prefabs/index.md) |
+| **Blueprint** | [Prefab](../prefabs/index.md) + [Visual Script](../../scripting/visual/index.md) |
 | **C++** | [C++ and C#](../../scripting/index.md) |
 |||
 | **World Outliner** | [Scene Window](../../editor/windows/scene-window.md) |
@@ -64,8 +64,8 @@ Also, multiple actors can have the same name and you can also move assets whenev
 ## Scripting
 
 When it comes to game scripting, there is a significant difference between Unreal and Flax.
-Firstly, we support both C\+\+ and C# languages to write game code.
-Using C# helps with rapid game development and simplifies the development while writing parts of the gameplay in C\+\+ can benefit the performance.
+Firstly, we support both C\+\+ and C# languages to write game code and Visual Scripting as an addition.
+Using Visual Scripts or C# helps with rapid game development and simplifies the development while writing parts of the gameplay in C\+\+ can benefit the performance.
 The Flax Engine core itself is written in C++, while Flax Editor is mostly written in C#.
 
 You can create C# and C\+\+ files with script classes that provide a gameplay logic. Then scripts can be attached to the actors and used in a game. Our scripting C# API is an open-source project and can be found [here](https://github.com/FlaxEngine/FlaxAPI). All contributions are welcome.
