@@ -46,6 +46,7 @@ Flax offers two modes for lights fall off. Custom **Exponent** parameter can be 
 | **Fade Distance** | Light shadows fade off distance (in world units). |
 | **Depth Bias** | Controls dynamic shadows depth bias value. Depth bias used for shadow map comparison. |
 | **Normal Offset Scale** | Controls dynamic shadows normal vector offset scale. A factor specifying the offset to add to the calculated shadow map depth with respect to the surface normal. |
+| **Contact Shadows Length** | The length of the rays for contact shadows computed via the screen-space tracing. Set this to values higher than 0 to enable screen-space shadows rendering for this light. This improves the shadowing details. Actual ray distance is based on the pixel distance from the camera. |
 
 > [!Note]
 > To learn more about shadows in Flax see [this page](../shadows.md).
