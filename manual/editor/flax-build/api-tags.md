@@ -81,6 +81,7 @@ Tag attributes tha can be added to the API tags braces to edjust the bindigns lo
 * `NoConstructor` - skips class constructor method generation
 * `Ref` - marks the function parameter to be passed by reference
 * `NoPod` - marks the structure as non-POD type by force (bindings generator will use wrapper structure by force and structure won't be passed by native value in bindings glue code)
+* `NoArray` - marks the fixed-size array to use fixed-size data instead of dynamic memory array allocation in bindings (structure field of that type will be inlined into series of fields instead of array)
 * `Name="..."` - overrides the name of the type to be used in the bindings
 * `Namespace="..."` - overrides the namespace of the type to be used in the bindings
 
