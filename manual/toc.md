@@ -53,6 +53,8 @@
 ### [API Tags](editor/flax-build/api-tags.md)
 ### [Plugins](editor/flax-build/plugins.md)
 ## [Editor Options](editor/options/index.md)
+## [Profiling](editor/profiling/index.md)
+### [Profiler](editor/profiling/profiler.md)
 ## [Advanced](editor/advanced/index.md)
 ### [Extending Flax Editor](editor/advanced/extending-editor.md)
 ### [Command Line Access](editor/advanced/command-line-access.md)
@@ -130,7 +132,6 @@
 ### [Custom Compute Shader](graphics/shaders/custom-compute-shader.md)
 ### [Graphics API](graphics/shaders/graphics-api.md)
 ## [Debugging tools](graphics/debugging-tools/index.md)
-### [Profiler](graphics/debugging-tools/profiler/index.md)
 ### [Debug View](graphics/debugging-tools/debug-view.md)
 ### [View Flags](graphics/debugging-tools/view-flags.md)
 
