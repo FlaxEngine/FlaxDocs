@@ -9,3 +9,4 @@ Follow this documentation section to learn more about measuring and optimizing p
 ## In this section
 
 * [Profiler](profiler.md)
+* [dotTrace](dot-trace.md)
