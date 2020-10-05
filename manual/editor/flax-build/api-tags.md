@@ -62,6 +62,15 @@ API_FUNCTION()
 int32 CalculateSpeedParams(API_PARAM(ref) Vector3& offset);
 ```
 
+## API_EVENT(...)
+
+Use it on the delegate field to expose it as an event to the scripting API.
+Example:
+
+```cpp
+API_EVENT() Delegate<float> SpeedChanged;
+```
+
 ## API_AUTO_SERIALIZATION()
 
 Use it inside class or structure to generate automatic object data serialization code for `ISerializable` interface.
