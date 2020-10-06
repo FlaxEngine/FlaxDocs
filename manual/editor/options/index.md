@@ -98,6 +98,7 @@ Use this section to modify the input shortcuts binding used by the editor. By pr
 | Property | Description |
 |--------|--------|
 | **Source Code Editor** | The source code editing IDE to use for project and source files accessing. |
+| **Auto Generate Scripts Project Files** | Determines whether automatically generate scripts project files when adding/removing/moving scripts in Editor. |
 
 ## Custom options
 
