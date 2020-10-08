@@ -8,7 +8,7 @@ Welcome to the Flax documentation repository. This repository contains all the s
 
 We use [DocFX](https://github.com/dotnet/docfx) tool for building and hosting documentation online. It supports markdown style files (`.md`) as it's very standardized and popular format. Also writing technical documentation using markdown style is easy and efficient.
 
-To edit docs we recommend you to use tools such as [Haroopad](http://pad.haroopress.com/) or [Visual Code](https://code.visualstudio.com/).
+To edit docs we recommend you to use tools such as [Zettlr](https://www.zettlr.com/) or [Typora](https://typora.io/) or [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Building and Testing
 
