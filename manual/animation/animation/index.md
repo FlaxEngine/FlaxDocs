@@ -28,10 +28,11 @@ Then connect the animation pose with the animation output and see the animated m
 
 ## Animation editor window
 
-![Animation Window](media/animation-window.jpg)
+![Animation Editor Window](media/animation-editor.png)
 
 Double-click the animation asset in the *Content* window to show it in teh dedicated editor window.
-You can see the total animation length, amount of animated channels and the total keyframes amount.
-Also it's very easy way to modify the import settings and reimport the source asset.
+The window contains 2 panels: **timeline** and **properties**.
+The timeline allows to inspect and edit imported animation. Each animated node channel contains subtracks for position, rotation or scale.
+The properties panel shwos the general information about asset such as: the total animation length, amount of animated channels and the total keyframes amount. Also it's very easy way to modify the import settings and reimport the source asset.
 
 
