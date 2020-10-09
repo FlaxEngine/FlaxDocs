@@ -59,5 +59,9 @@ Usefull C# API: [InputAxis](https://docs.flaxengine.com/api/FlaxEngine.InputAxis
 | **Scale** | Additional scale parameter applied to the axis value. Allows to invert it or modify the range. |
 | **Snap** | If checked, the axis value will be immediately reset to zero after it receives opposite inputs. Used for keyboard input only. |
 
+## Keyboard Keys selection
 
+![Keyboard Keys enum picking with keyboard](media/keyboard-navigation-context-menu.gif)
+
+Sometimes picking the right key for the action/axis mapping might be problematic because there are so many keyboard keys to scroll. To make this easier **use your keyboard to search** the item in the open context menu popup. You can also **navigate with arrow keys** around the list and **confirm the choice with Enter**. This makes it easier to setup your input settings. This feature works with all long context menu lists across the Editor.
 
