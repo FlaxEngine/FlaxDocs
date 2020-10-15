@@ -92,6 +92,7 @@
 ### [Importing Models](graphics/models/import.md)
 ### [Static Model](graphics/models/static-model.md)
 ### [Model Window](graphics/models/model-window.md)
+### [Vertex Painting](graphics/models/vertex-painting.md)
 ### [How to generate procedural model](graphics/models/generate-model.md)
 ## [Lighting](graphics/lighting/index.md)
 ### [Light Types](graphics/lighting/light-types/index.md)
