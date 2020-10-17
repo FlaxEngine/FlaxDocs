@@ -84,3 +84,11 @@ You can use **right click on the timeline** to edit selected media properties or
 Scene animation editor windows supports previewing the animation playback during the game. The game must be running in Flax Editor for animation playback to work. Simply use the animation player actor picker, start the game in Flax Editor and you will be able to preview its state as well as control playback (via play/pause buttons) and use the seeking.
 
 ![Playback Preview Picker](media/anim-player-pickup.png)
+
+## Rendering animation
+
+![Scene Animation Rendering](media/scene-animation-rendering.png)
+
+Scene Animation window supports **rendering cut-scenes** and in-game sequences. This can be useful to record in-game trailers or marketing materials right in the Editor. This tool supports various options such as animation render framerate and resolution. In that way, you can pre-render your cut-scene in 4K@60FPS. To use it simply click on the toolbar button (image below), adjust options, and click **Render** button. By default the rendered sequence will be located in your project sub-folder `Output/Render` but you can adjust it too.
+
+![Scene Animation Render Button](media/scene-animation-render-buton.png)
