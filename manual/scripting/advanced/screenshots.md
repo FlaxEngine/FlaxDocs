@@ -10,9 +10,13 @@ Here is an example usage code that captures the screenshot of the game viewport 
 // Pick a path to the output file
 var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "screenshot.png");
 
-// Caprute game screen to file (done in async)
+// Capture game screen to file (done in async)
 FlaxEngine.Screenshot.Capture(MainRenderTask.Instance, path);
 ```
+
+You can also use the in-build feature to render targets capturing and save the GPU texture to the file. The capture method will create an async task that will download the data from the GPU texture back to the CPU staging texture and save it to the file. If you're using the staging textures manually the capture methods work immediately on that data.
+
+This feature works both in Editor and at runtime on all su
 
 ## In Editor
 
