@@ -7,7 +7,9 @@ Anim Graph supports extending it by defining and using **custom nodes**. This fe
 
 ## Defining custom node archetype
 
-Every custom node consists of two parts: the *surface node descriptor factor* and the *runtime logic controller*. The first step is to add a new class to you Editor scripts assembly (in `Editor` subdirectory located in `Source` folder).
+Every custom node consists of two parts: the *surface node descriptor factor* and the *runtime logic controller*.
+
+The first step is to add a new C# script inside the `Source/<module_name>` directory and use the target class name with *Editor* postfix. Alternatively, you can use an additional editor-only scripts module as shown in tutorial [here](../../scripting/tutorials/add-scripts-module.md).
 
 Here is an example code that defines a simple node which takes animation pose and scale parameter as inputs and outputs modified animation pose.
 
@@ -43,9 +45,9 @@ public static class MyAnimGraphNodeFactory
             Size = new Vector2(200, 70),
             Elements = new[]
             {
-                NodeElementArchetype.Factory.Input(0, "Input", true, ConnectionType.Impulse, 0),
-                NodeElementArchetype.Factory.Input(1, "Scale", true, ConnectionType.Float, 1, 2),
-                NodeElementArchetype.Factory.Output(0, "Output", ConnectionType.Impulse, 2),
+                NodeElementArchetype.Factory.Input(0, "Input", true, typeof(void), 0),
+                NodeElementArchetype.Factory.Input(1, "Scale", true, typeof(float), 1, 2),
+                NodeElementArchetype.Factory.Output(0, "Output", typeof(void), 2),
             },
         };
     }

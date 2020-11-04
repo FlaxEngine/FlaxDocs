@@ -38,7 +38,7 @@ public class EditAnimGraphParam : Script
 	[Range(0.5f, 2.5f)]
 	public float HeadScale  = 1.0f;
 
-	private AnimationGraphParameter _parameter;
+	private AnimGraphParameter _parameter;
 
 	public override void OnStart()
 	{

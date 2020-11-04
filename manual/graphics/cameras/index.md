@@ -23,7 +23,7 @@ public class MyScript : Script
 	public override void OnStart()
 	{
 		var camera = new Camera();
-		SceneManager.SpawnActor(camera);
+		Level.SpawnActor(camera);
 		camera.Position = new Vector3(0, 100, 0);
 	}
 }

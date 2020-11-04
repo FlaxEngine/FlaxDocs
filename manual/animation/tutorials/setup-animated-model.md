@@ -50,7 +50,7 @@ public class SpawnAnimModel : Script
 			actor.Name = "My animated model";
 			actor.SkinnedModel = Model;
 			actor.AnimationGraph = AnimGraph;
-			SceneManager.SpawnActor(actor);
+			Level.SpawnActor(actor);
 		}
 	}
 }
