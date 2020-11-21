@@ -15,7 +15,7 @@ The first step is to create a dedicated material for the TV object. It will be u
 2. Open it in Material Editor (double-click on an asset)
    ![Material Editor](media/picture-in-picture-2.jpg)
 
-3. Scroll down the *Properties Panel*, select **Render Target** option from the bottom drop down menu and press **Add parameter** button
+3. Scroll down the *Properties Panel*, select **GPU Texture** option from the bottom drop down menu and press **Add parameter** button
    <br>![Material Parameter](media/picture-in-picture-3.jpg)
 
 4. Right-click on created *New parameter*, select option **Rename** and set its name to **Image**
