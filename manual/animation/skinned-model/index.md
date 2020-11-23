@@ -44,6 +44,6 @@ Also assets like [Anim Graph](../anim-graph/index.md) and [Skeleton Mask](../ske
 
 ![Blend Shapes](media/blend-shapes.gif)
 
-Flax supports importing and using Blend Shapes (aka. morph targets) for skinned models. This can be useful to implement chaarcter face emotions or lipsync during dialog scenes. When importing asset check **Import Blend Shapes** option. Then you will be able to preview the blend shapes in the skinned model window (each channel is adjustable under *Blend Shapes* group).
+Flax supports importing and using Blend Shapes (aka. morph targets) for skinned models. This can be useful to implement character face emotions or lipsync during dialog scenes. When importing asset check **Import Blend Shapes** option. Then you will be able to preview the blend shapes in the skinned model window (each channel is adjustable under *Blend Shapes* group).
 Then you can control blend shapes appearance at runtime from code using [AnimatedModel](https://docs.flaxengine.com/api/FlaxEngine.AnimatedModel.html) class methods *SetBlendShapeWeight* / *GetBlendShapeWeight* / *ClearBlendShapeWeights*.
 
