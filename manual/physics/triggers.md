@@ -20,7 +20,6 @@ Triggers don't generate collisions.
 
 Triggers use dedicated trigger events that you can register for:
 * `Trigger.TriggerEnter`
-* `Trigger.TriggerStay`
 * `Trigger.TriggerExit`
 
 To learn more about using triggers see tutorial [How to use a trigger](tutorials/use-trigger.md).
