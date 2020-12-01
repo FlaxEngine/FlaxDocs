@@ -8,12 +8,12 @@ Flax supports storing 4-channel RGBA (32-bit) color *per-vertex*. This color can
 
 ![Toolbox Vertex Painting](media/toolbox-vertex-colors.png)
 
-[Toolbox](../../editor/windows/toolbox.md**) window contains a tab with Vertex Painting utilities. Select it and then pick a model on a scene to paint. Window contains many options to adjust brush and paint options.
+[Toolbox](../../editor/windows/toolbox.md) window contains a tab with Vertex Painting utilities. Select it and then pick a model on a scene to paint. Window contains many options to adjust brush and paint options.
 
 After selecting the model and tab the editor will display its vertex colors. You can preview a single color channel or disable the debug view by using **Preview Mode** option.
 Now, you can use the left-mouse button to paint the vertices with a spherical brush in the editor viewport.
 
-![Vertex Painting in Flax Editor](media/)
+![Vertex Painting in Flax Editor](media/vertex-painting.gif)
 
 ## How to access vertex color in material?
 

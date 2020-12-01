@@ -13,8 +13,6 @@ Flax is compiled for Universal Windows Platform using Microsoft Visual C++ compi
 | **Output** | The builded game output folder (relative to the project). |
 | **Show Output** | If checked, after building the output folder will be shown in an Explorer. |
 | **Configuration Mode** | Game building mode. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Release**</td><td>The release build ready for shipment.</td></tr><tr><td>**Debug**</td><td>The debug build for testing and profiling. Most of the code optimizations are disabled for the best debugging experience.</td></tr><tr><td>**Development**</td><td>The development build for testing and profiling but is more optimized for runtime than Debug build.</td></tr></tbody></table>|
-| **Architecture** | Target platform CPU type. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**x64**</td><td>The 64-bit.</td></tr><tr><td>**x86**</td><td>The 32-bit.</td></tr></tbody></table>|
-| **Defines** | Array of custom script defines to use during source code compilation. |
 
 ## Platform settings
 
