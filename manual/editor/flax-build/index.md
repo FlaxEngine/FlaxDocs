@@ -14,6 +14,7 @@ Major features:
 * high-performance build system
 * rapid iterative builds and fast caching
 * deep integration with Flax
+* extensibility via plugins
 * multi-platform support.
 
 This documentation section covers most of the topics related to Flax.Build tool. To learn more please refer to Flax.Build sources located under `Source\Tools\Flax.Build` and/or use `Binaries\Tools\Flax.Build.exe -help` to learn more about usage. Engine repository contains useful scripts that are wrappers against the build tool and automatically compile its sources.
@@ -99,3 +100,7 @@ Additionally, all build scripts are included in **BuildScripts** C# project whic
 Flax.Build is a **multiplatform** utility thas has been battle-tested on Windows and Linux to build engine and games to the different target platforms including Windows, PS4, XboxOne, XboxScarlett, Linux, UWP. Each target platform implementation is stored in a separate directory under `Source\Tools\Flax.Build\Platforms` and contain **Platform** implementation and **Toolchain** implementation. Different platforms can use external SDKs, toolsets, or custom compilers to build code for a runtime.
 
 Also, engine dependency packages contain automatic build scripts to prepare pre-build deps for development. When adding new platform support many deps packages have to be ported too. The related code can be found in `Source\Tools\Flax.Build\Deps\Dependencies` folder.
+
+## Extensibility
+
+Flax.Build tool is written in modern C# and supports extending with custom **plugins** inside build scripts. To learn how to use them see related documentation [here](plugins.md).

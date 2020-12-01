@@ -27,8 +27,11 @@ You can use the *Content* window to create new settings. Simply right-click in t
 | **Company Name** | The name of your company or organization. |
 | **Copyright Notice** | The copyright note used for content signing (eg. source code header). |
 | **Icon** | The default application icon. Can be overriden per platform. |
+|||
 | **FirstScene** | Reference to the first scene to load on a game startup. |
-| **Defines** | The custom macros used using scripts compilation. |
+| **No Splash Screen** | True if skip showing splash screen image on the game startup. |
+| **Splash Screen** | Reference to the splash screen image to show on a game startup. |
+|||
 | **Time** | Reference to [Time Settings](time-settings.md) asset. Contains initial time manager options. |
 | **Audio** | Reference to [Audio Settings](../../audio/audio-settings.md) asset. Contains initial audio playback engine options. |
 | **Layers And Tags** | Reference to [Layers And Tags Settings](layers-and-tags-settings.md) asset. Contains actors tags and layer names used in your game. |
@@ -40,4 +43,5 @@ You can use the *Content* window to create new settings. Simply right-click in t
 | **Custom Settings** | Collection of custom json assets used by the game and plugins. To learn more see the related documentation [here](custom-settings.md). |
 | **Windows** | Reference to [Windows Settings](../../platforms/windows.md) asset. Contains options used when building game for Windows. |
 | **Universal Windows Platform** | Reference to [Universal Windows Platform Settings](../../platforms/uwp.md) asset. Contains options used when building game for Xbox One and Windows Store. |
-| **PlayStation 4** | Reference to [PlayStation 4 Settings](../../platforms/ps4.md) asset. Contains options used when building game for PlayStation 4. |
+| **PlayStation 4** | Reference to [PlayStation 4 Settings](../../platforms/ps4.md) settings. Contains options used when building game for PlayStation 4. |
+| **Xbox Scarlett** | Reference to [Xbox Scarlett Settings](../../platforms/xbox-scarlett.md) settings. Contains options used when building game for Xbox Scarlett. |

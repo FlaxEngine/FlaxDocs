@@ -14,4 +14,4 @@ You can access and edit this setting using [Time](https://docs.flaxengine.com/ap
 | **Physics FPS** | The target amount of the physics simulation updates per second (also fixed updates frequency). |
 | **Draw FPS** | The target amount of the frames rendered per second (actual game FPS). |
 | **Time Scale** | The game time scale factor. Default is 1. |
-
+| **Max Update Delta Time** | The maximum allowed delta time (in seconds) for the game logic update step. |

@@ -1,8 +1,6 @@
 # Profiler
 
-![Flax Profiler](media/title.jpg)
-
-Profilling game performance is very important aspect in the development process. Flax Editor contains dedicated set of tools for this. **Profiler** window provides various ways of meausing game performance and helps the optimization process.
+**Profiler** window provides various ways of measuring game performance and helps the optimization process. It can be used to collect the data about game performance right in the Editor.
 
 ## Interface
 
@@ -25,8 +23,7 @@ The CPU performance profiling mode.
 
 To add code section to be included in profile blocks use the following code:
 
-```
-// C#
+```cs
 Profiler.BeginEvent("MyFunction");
 // do something
 Profiler.EndEvent();
@@ -38,8 +35,7 @@ The GPU performance profiling mode.
 
 To add code section to be included in profile blocks use the following code:
 
-```
-// C#
+```cs
 Profiler.BeginEventGPU("MyFunction");
 // do something on GPU with GPUContext
 Profiler.EndEventGPU();
@@ -47,5 +43,5 @@ Profiler.EndEventGPU();
 
 ### Memory
 
-The memory profiling mode focused on system memory allocations breakdown.
+The memory profiling mode focused on system memory allocations breakdown. This includes separate stats for native memory allocation and managed C# allocations.
 

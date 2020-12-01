@@ -4,7 +4,7 @@
 
 The most important part of every game are **Scripts**. Creating chunks of code that handle game events, respond to user input, and control objects is an essential ingredient in all games. In short, scripts make games interactive by adding gameplay. It applies to both small and huge production. This documentation section covers the most important parts of the scripting pipeline and helps with starting the game programming.
 
-Flax supports **C#** and **C++** scripting. The mix of those two languages is highly integrated into the engine as it's written in both languages (engine is C++, editor is C#).
+Flax supports **C#**, **C++** and **Visual** scripting. The mix of those three languages is highly integrated into the engine as it's written in those languages (engine is C++, editor is C#).
 
 > [!Note]
 > Explaining C#, C++ and vector math is out of the scope of this documentation.
@@ -32,6 +32,14 @@ Flax supports native **C++** scripting with direct access to whole engine API. C
 
 To start native scripting in C\+\+ see the related documentation [here](cpp/index.md).
 
+## Visual Scripting
+
+Flax supports **Visual** scripting with fully-featured Editor tools for creating, using and debugging Visual Scripts. Visual Scripts can inherit from C++ or C# classes (eg. custom Actor or Script) to provide more logic and data. Visual Scripting is very light-weight and extensible solution for prototyping games especially boosting the rapid development.
+
+Visual Scripts can access to whole engine API and the game code. Visual Scripts can be created side-by-side with C# and C++ scripts to expose own functions/properties. Also, Visual Scripting doesn't requrie any additional tools nor compiler as it's hot-reloading in Editor without any processing to provide even more robust development.
+
+To start visual scripting see the related documentation [here](visual/index.md).
+
 ## In this section
 
 * [Create and use a script](new-script.md)
@@ -42,6 +50,7 @@ To start native scripting in C\+\+ see the related documentation [here](cpp/inde
 * [Attributes](attributes.md)
 * [Scripts debugging](debugging/index.md)
  * [Visual Studio](debugging/visual-studio.md)
+ * [Visual Studio Code](debugging/visual-studio-code.md)
 * [Scripts serialization](serialization/index.md)
 * [Empty Actor](empty-actor.md)
 * [Custom Editors](custom-editors/index.md)
@@ -50,6 +59,7 @@ To start native scripting in C\+\+ see the related documentation [here](cpp/inde
 * [Preprocessor variables](preprocessor.md)
 * [Scripting restrictions](restrictions.md)
 * [C++ Scripting](cpp/index.md)
+* [Visual Scripting](visual/index.md)
 * [Plugins](plugins/index.md)
  * [Plugins Window](plugins/plugins-window.md)
  * [Plugin Project](plugins/plugin-project.md)

@@ -14,17 +14,19 @@ Actor types are grouped into the categories so you can quickly find desire objec
 
 ## Vertex Painting
 
-*Coming soon...*
+![Vertex Painting](../../graphics/models/media/toolbox-vertex-colors.png)
+
+The models vertices painting tab supports painting selected model instance with a colors. To learn more about this tool see the related documentation [here](../../graphics/models/vertex-painting.md)
 
 ## Foliage Painting
 
 ![Foliage](../../foliage/tutorials/media/edit-foliage-type.png)
 
-The foliage editing tab supports different modes for foliage editing including spawning, removing, and managing tools. To learn ore about foliage see the related documentation [here](../../foliage/index.md)
+The foliage editing tab supports different modes for foliage editing including spawning, removing, and managing tools. To learn more about foliage see the related documentation [here](../../foliage/index.md)
 
 ## Terrain Carving
 
 ![Terrain](../../terrain/media/sculpt-tool.png)
 
 The terrain carving tab supports different modes for terrain editing including carving, painting and managing tools.
-To learn ore about terrain see the related documentation [here](../../terrain/index.md)
+To learn more about terrain see the related documentation [here](../../terrain/index.md)

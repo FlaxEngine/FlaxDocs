@@ -47,6 +47,12 @@ Follow those instructions to robust your game development!
 </div>
 
 <div class="frontpage-section">
+<a href="profiling/index.md"><img src="profiling/media/icon.jpg"></a>
+<h3><a href="profiling/index.md">Profiling</a></h3>
+<p>Analyze and optimize your game performance.</p>
+</div>
+
+<div class="frontpage-section">
 <a href="advanced/index.md"><img src="advanced/media/icon.jpg"></a>
 <h3><a href="advanced/index.md">Advanced</a></h3>
 <p>Learn some advanced stuff about using Flax Editor.</p>

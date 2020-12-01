@@ -62,6 +62,15 @@ API_FUNCTION()
 int32 CalculateSpeedParams(API_PARAM(ref) Vector3& offset);
 ```
 
+## API_EVENT(...)
+
+Use it on the delegate field to expose it as an event to the scripting API.
+Example:
+
+```cpp
+API_EVENT() Delegate<float> SpeedChanged;
+```
+
 ## API_AUTO_SERIALIZATION()
 
 Use it inside class or structure to generate automatic object data serialization code for `ISerializable` interface.
@@ -81,6 +90,7 @@ Tag attributes tha can be added to the API tags braces to edjust the bindigns lo
 * `NoConstructor` - skips class constructor method generation
 * `Ref` - marks the function parameter to be passed by reference
 * `NoPod` - marks the structure as non-POD type by force (bindings generator will use wrapper structure by force and structure won't be passed by native value in bindings glue code)
+* `NoArray` - marks the fixed-size array to use fixed-size data instead of dynamic memory array allocation in bindings (structure field of that type will be inlined into series of fields instead of array)
 * `Name="..."` - overrides the name of the type to be used in the bindings
 * `Namespace="..."` - overrides the namespace of the type to be used in the bindings
 
