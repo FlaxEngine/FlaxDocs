@@ -14,6 +14,7 @@ This section covers the specific information for different aspects of each platf
 * [PlayStation 4](ps4.md)
 * [Linux](linux.md)
 * [Xbox Scarlett](xbox-scarlett.md)
+* [Android](android.md)
 
 > [!TIP]
 > To check on which platform game is running use [Platform.Platform](https://docs.flaxengine.com/api/FlaxEngine.Platform.html#FlaxEngine_Application_Platform). You can also use [preprocessor variables](../scripting/preprocessor.md) in your code.
