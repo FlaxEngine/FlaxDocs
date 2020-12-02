@@ -16,5 +16,5 @@ Flax Engine supports importing the following list of file types as sprites:
 - `.raw`
 
 This section contains the following topics:
-* ![Importing Sprites](importing-sprites.md)
-* ![Modifying Sprite Atlas](modifying-sprite-atlas.md)
+* [Importing Sprites](importing-sprites.md)
+* [Modifying Sprite Atlas](modifying-sprite-atlas.md)

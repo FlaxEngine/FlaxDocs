@@ -91,7 +91,7 @@ Shader sources are stored in `.shader` files. Each file can contain one or more 
 
 ## Using shaders
 
-In all Flax projects shader sources are stored in `<project_root>/Source/Shaders` folder and automatically imported to `<project_root>/Content/Shaders`. This also supports hot-reloading shaders at runtime and including them in source project files for editing in IDE (such as Visual Studio). To learn how to create a simple PostFx shader see [this tutorial].
+In all Flax projects shader sources are stored in `<project_root>/Source/Shaders` folder and automatically imported to `<project_root>/Content/Shaders` (as binary assets). This also supports hot-reloading shaders at runtime and including them in source project files for editing in IDE (such as Visual Studio). To learn how to create a simple PostFx shader see [this tutorial](custom-fullscreen-shader.md).
 
 Additionally, shader sources are used only in Editor during design-time. During game cooking all used shaders are precompiled to the target platform graphics APIs. Flax doesn't support compiling shaders at runtime in game.
 

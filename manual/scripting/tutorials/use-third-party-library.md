@@ -19,6 +19,8 @@ options.ScriptingAPI.FileReferences.Add(Path.Combine(FolderPath, "..", "..", "Co
 Then generate scripts projects solution to use types from imported C# module inside game code.
 This will work for scripts build for the editor and cooked game as the referenced assembly will be packaged. Build system will also copy relevant `.pdb` and `.xml` files if provided.
 
+Remember that engine uses .Net Framework 4.5 (.Net Core API is not supported).
+
 ## Using C++ library
 
 To add a reference to the prebuild native library in your game scripts you need to modify the built environment of your game code module. It requires adding library header files location to includes search path and modification of the link environment to reference the given library. Also if you use a dynamic library you need to mark it as a dependency file to deploy during the build. To do so simply edit the build script file (eg. `Source/GameModule/MyGame.Build.cs`) in overridden `Setup` method:

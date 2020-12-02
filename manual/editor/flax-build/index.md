@@ -67,7 +67,8 @@ To modify the build options override `void Setup(BuildOptions options)` method. 
 | *PrivateIncludePaths* | The collection of additional include paths for a source files of this module. |
 | *DependencyFiles* | The dependency files to include with output (additional debug files, dynamic libraries, etc.). |
 | *OptionalDependencyFiles* | The optional dependency files to include with output (additional debug files, dynamic libraries, etc.). |
-| *DelayLoadDLLs* | The list of libraries for delay-load (typically external and third-party plugins). |
+| *Libraries* | The list of libraries to link (typically external and third-party plugins). |
+| *DelayLoadLibraries* | The list of libraries to link for delay-load (typically external and third-party plugins). |
 | *OutputFiles* | The build output files (binaries, object files and static or dynamic libraries). |
 | *IntermediateFolder* | The intermediate build artifacts folder directory. |
 | *OutputFolder* | The output build artifacts folder directory. |
@@ -83,7 +84,7 @@ Flax.Build contains an automatic utility for parsing C++ header files and genera
 
 For modules that have assigned `BinaryModuleName` property, then defines the name of the binary module they should be included in, they build tool generates and compiles C# API. The bindings blue code is automatically generated and contains 2 parts:
 * C++ glue code - stored in *<module_name>.Gen.cpp* in module build intermediate folder and compiled with module sources
-* C# API - stored in *<file>.Gen.cs* files side-by-side with the source header that defines the API types.
+* C# glue code - stored in *<module_name>.Gen.cs* in module build intermediate folder and compiled with module sources
 
 To learn more about using C++ API in C# see the related documentation [here](api-tags.md) (about **API_** tags).
 

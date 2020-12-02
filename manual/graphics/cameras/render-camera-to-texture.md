@@ -32,7 +32,7 @@ The first step is to create a dedicated material for the TV object. It will be u
 
 Now it's time to write a simple script that will use a camera and render it to the texture (which is also called a *render target*).
 
-1. Navigate to *Source* directory of your project and create new C# script with name **CameraTV**
+1. Navigate to *Source/Game* directory of your project and create new C# script with name **CameraTV**
    ![Creating new Script](media/picture-in-picture-6.jpg)
 
 2. Open the script
@@ -51,7 +51,7 @@ public class CameraTV : Script
     [Limit(1, 2000)]
     public Vector2 Resolution
     {
-        get { return _resolution; }
+        get => _resolution;
         set
         {
             value = Vector2.Clamp(value, new Vector2(1), new Vector2(2000));
@@ -74,7 +74,7 @@ public class CameraTV : Script
 
 	private void UpdateOutput()
 	{
-		var desc = GPUTextureDescription.New2D((int) _resolution.X, (int) _resolution.Y, PixelFormat.R8G8B8A8_UNorm);
+		var desc = GPUTextureDescription.New2D((int)_resolution.X, (int)_resolution.Y, PixelFormat.R8G8B8A8_UNorm);
 		_output.Init(ref desc);
 	}
 
@@ -107,7 +107,7 @@ public class CameraTV : Script
             if (Actor is StaticModel staticModel && staticModel.Model)
             {
                 staticModel.Model.WaitForLoaded();
-                staticModel.Entries[0].Material = _material;
+                staticModel.SetMaterial(0, _material);
             }
         }
 
@@ -116,6 +116,10 @@ public class CameraTV : Script
 
     public override void OnDisable()
     {
+        // Unbind temporary material
+        if (Actor is StaticModel staticModel && staticModel.Model && staticModel.Model.IsLoaded)
+            staticModel.SetMaterial(0, Material);
+
         // Ensure to cleanup resources
         Destroy(ref _task);
         Destroy(ref _output);

@@ -28,7 +28,7 @@ The top of the main node defines the basic options of the particles emitter.
 | **Simulation Mode** | Specifies the particles simulation execution context. Use it to explicitly run a simulation on CPU or GPU. The default mode picks the best matching environment based on the emitter capacity and runtime platform. |
 | **Simulation Space** | Defines how to perform particles calculations. **Local** space of the particle effect actor or in **World** space. |
 | **Enable Pooling** | If checked, enables the particles buffers memory pooling to improve performance for particles effects spawned multiple times (eg. explosions, gun fire). |
-| **Use Auto Bounds** | If checked, particle emitter bounds will be computed based on the posit# Particle Emitter
+| **Use Auto Bounds** | If checked, particle emitter bounds will be computed based on the position of the particles (not supported for GPU particles). |
 
 ### Spawn context
 
