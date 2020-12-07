@@ -79,8 +79,8 @@ Now, to understand some basic concepts related to C\+\+ scripting in Flax let's 
 #include "Engine/Content/Assets/MaterialBase.h"
 #include "Engine/Input/Input.h"
 #include "Engine/Level/Level.h"
-#include "Engine/Level/ActorTypes/Camera.h"
-#include "Engine/Level/ActorTypes/Decal.h"
+#include "Engine/Level/Actors/Camera.h"
+#include "Engine/Level/Actors/Decal.h"
 #include "Engine/Serialization/JsonTools.h"
 #include "Engine/Physics/Physics.h"
 
