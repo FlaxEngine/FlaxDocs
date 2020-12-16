@@ -39,6 +39,19 @@ API_PROPERTY()
 void SetUseScale(bool value);
 ```
 
+## API_FIELD(...)
+
+Use it on the field to expose property to the scripting API. You can specify custom attributes in the braces.
+Example:
+
+```cpp
+/// <summary>
+/// The custom scale option.
+/// </summary>
+API_FIELD()
+float Scale = 1.0f;
+```
+
 ## API_FUNCTION(...)
 
 Use it on the function to expose property to the scripting API. You can specify custom attributes in the braces.
@@ -74,6 +87,16 @@ API_EVENT() Delegate<float> SpeedChanged;
 ## API_AUTO_SERIALIZATION()
 
 Use it inside class or structure to generate automatic object data serialization code for `ISerializable` interface.
+Example:
+
+```cpp
+API_STRUCT() struct ToneMappingSettings : ISerializable
+{
+API_AUTO_SERIALIZATION();
+DECLARE_SCRIPTING_TYPE_NO_SPAWN(ToneMappingSettings);
+};
+```
+
 
 ## Tag parameters
 
