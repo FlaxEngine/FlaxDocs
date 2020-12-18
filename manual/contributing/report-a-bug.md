@@ -2,9 +2,9 @@
 
 If you encounter an issue or any bug in Flax Engine or Flax Editor you can report it to the Flax Team. As soon as we will be able to reproduce it we will fix it.
 
-## 1. Navigate to FlaxAPI issues
+## 1. Navigate to Flax Engine issues
 
-Navigate to [https://github.com/FlaxEngine/FlaxAPI/issues](https://github.com/FlaxEngine/FlaxAPI/issues) page and press the **New issue** button.
+Navigate to [https://github.com/FlaxEngine/FlaxEngine/issues](https://github.com/FlaxEngine/FlaxEngine/issues) page and press the **New issue** button.
 
 ![New Issue](media/new-issue.jpg)
 

@@ -68,7 +68,7 @@ Firstly, we support both C\+\+ and C# languages to write game code and Visual Sc
 Using Visual Scripts or C# helps with rapid game development and simplifies the development while writing parts of the gameplay in C\+\+ can benefit the performance.
 The Flax Engine core itself is written in C++, while Flax Editor is mostly written in C#.
 
-You can create C# and C\+\+ files with script classes that provide a gameplay logic. Then scripts can be attached to the actors and used in a game. Our scripting C# API is an open-source project and can be found [here](https://github.com/FlaxEngine/FlaxAPI). All contributions are welcome.
+You can create C# and C\+\+ files with script classes that provide a gameplay logic. Then scripts can be attached to the actors and used in a game. Our scripting C# API is an open-source project and can be found [here](https://github.com/FlaxEngine/FlaxEngine). All contributions are welcome.
 
 Here is an example script that has been written for Unreal and Flax which prints the next number every frame.
 

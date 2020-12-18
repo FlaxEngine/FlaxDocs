@@ -1,6 +1,6 @@
 # Accessing scene objects
 
-One of the most important aspects of the scripts is interaction and accessing other scene objects including of course the actor that script is attached to. For instance, if game wants to spawn a ball in front of the player, it needs to get a player location and a view direction which can be done by using [Flax C# API](https://github.com/FlaxEngine/FlaxAPI).
+One of the most important aspects of the scripts is interaction and accessing other scene objects including of course the actor that script is attached to. For instance, if game wants to spawn a ball in front of the player, it needs to get a player location and a view direction which can be done by using [Flax](https://github.com/FlaxEngine/FlaxEngine).
 
 ## Accessing actors
 

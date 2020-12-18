@@ -1,6 +1,6 @@
 # Extending Flax Editor
 
-Flax Editor runs on top of the Flax Engine and is an open-source project hosted [here](https://github.com/FlaxEngine/FlaxAPI). Any contributions are welcome. However, there are other ways to extend the Editor for your needs. It's very common technique to customize the script editors and provide custom tool windows directly from your game source.
+Flax Editor runs on top of the Flax Engine and is an open-source project hosted [here](https://github.com/FlaxEngine/FlaxEngine). Any contributions are welcome. However, there are other ways to extend the Editor for your needs. It's very common technique to customize the script editors and provide custom tool windows directly from your game source.
 
 ## Custom Editors
 

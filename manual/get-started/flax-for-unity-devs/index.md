@@ -96,7 +96,7 @@ See [Scripting](../../scripting/index.md) documentation to learn more about C# s
 ## Cool things in the C# API
 
 If you're a programmer here is a list of new cool things in Flax C# API that may be useful:
-* C# API and Editor are open-source ([link](https://github.com/FlaxEngine/FlaxAPI))
+* Engine and Editor are open with full source code ([link](https://github.com/FlaxEngine/FlaxEngine))
 * You can edit all input settings at runtime ([link](https://github.com/FlaxEngine/FlaxAPI/blob/master/FlaxEngine/API/Static/Input.cs#L249))
 * You can change the gamepad devices layout at runtime ([link](https://github.com/FlaxEngine/FlaxAPI/blob/master/FlaxEngine/Engine/Gamepad.cs#L203))
 * You can dynamically set Update/Draw/Physics FPS ([link](https://github.com/FlaxEngine/FlaxAPI/blob/master/FlaxEngine/API/Static/Time.Gen.cs#L26))
