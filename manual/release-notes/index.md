@@ -1,5 +1,7 @@
 # Release Notes
 
+* [1.0 release notes](1_0/index.md)
+
 ## Beta
 
 * [0.7 release notes](0_7/index.md)
