@@ -18,7 +18,7 @@ Of course, Flax Engine source can be used just like binaries we distribute via F
 
 ### New licensing
 
-Along side 1.0 update and source code release we've increased the minimum limit for Flax revenue share fron $3,000 to $25,000. Which means that if your game earns $25,000 (or less) per calendar quarter you don't have to pay for using Flax. All sales above it are using 4% revenue share. More info about licensing [here](https://flaxengine.com/licensing).
+Along side 1.0 update and source code release we've increased the minimum limit for Flax revenue share from $3,000 to $25,000. Which means that if your game earns $25,000 (or less) per calendar quarter you don't have to pay for using Flax. All sales above it are using 4% revenue share. More info about licensing [here](https://flaxengine.com/licensing).
 This change makes Flax cheaper for solo and indie developers.
 
 ### Visual Scripting
