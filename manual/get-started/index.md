@@ -2,7 +2,7 @@
 
 ![Flax Engine Logo](media/flax-title.jpg)
 
-Welcome to the official Flax Engine Manual! In this section you will find everything you need to start creating games with Flax from scratch. Let's get started!
+Welcome to the Official Flax Engine Manual! In this section you will find everything you need to start creating games with Flax from scratch. Let's get started!
 
 ## The first steps
 

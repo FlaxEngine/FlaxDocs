@@ -1,6 +1,6 @@
 # Profiler
 
-**Profiler** window provides various ways of measuring game performance and helps the optimization process. It can be used to collect data about game performance right in the Editor.
+The **Profiler** window provides various ways of measuring game performance and helps the optimization process. It can be used to collect data about game performance right in the Editor.
 
 ## Interface
 

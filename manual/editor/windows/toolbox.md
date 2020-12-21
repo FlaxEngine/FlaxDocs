@@ -1,22 +1,22 @@
 # Toolbox
 
-**Toolbox** window helps with rapid objects spawning, level designing and advanced scene editing.
+The **Toolbox** window helps with rapid object spawning, level designing and advanced scene editing.
 It contains several modes, each contained in a separate tab.
-You can switch between them by selecting the buttons with big icons (plus icon, brush icon, etc.).
+You can switch between these modes by clicking on their corresponding icon (plus icon, brush icon, etc.).
 
 ## Spawning
 
 ![Toolbox](media/toolbox-1.png)
 
-The default and the most important toolbox mode is **Spawning**.
+The default and most used toolbox mode is **Spawning**.
 In this mode you can add new actors to the scene by dragging them into the [viewport](viewport.md) or [scene window](scene-window.md).
-Actor types are grouped into the categories so you can quickly find desire object to add.
+Actor types are grouped into categories so you can quickly find the desired object.
 
 ## Vertex Painting
 
 ![Vertex Painting](../../graphics/models/media/toolbox-vertex-colors.png)
 
-The models vertices painting tab supports painting selected model instance with a colors. To learn more about this tool see the related documentation [here](../../graphics/models/vertex-painting.md)
+The vertex painting tab supports painting a selected model instance with a color. To learn more about this tool see the related documentation [here](../../graphics/models/vertex-painting.md)
 
 ## Foliage Painting
 

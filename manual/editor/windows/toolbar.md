@@ -2,7 +2,7 @@
 
 ![Toolbar](media/toolbar.png)
 
-**Toolbar** is a part of the main editor window and contains a set of useful buttons.
+The **Toolbar** is a part of the main editor window and contains a set of useful buttons.
 You can use it to quickly save the project or pause the in-editor simulation.
 
 | Button | Description |
