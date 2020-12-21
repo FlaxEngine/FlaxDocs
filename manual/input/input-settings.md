@@ -1,6 +1,6 @@
 # Input Settings
 
-**Input Settings asset** is used to specify the initial game input configuration. This asset contains description of the virtual actions and axes that are used to map physical input data into the more unified usage. See [Virtual Input](virtual-input.md) to learn more about it.
+**Input Settings asset** is used to specify the initial game input configuration. This asset contains a description of the virtual actions and axes that are used to map physical input data into the more unified usage. See [Virtual Input](virtual-input.md) to learn more about it.
 
 ## Create input settings
 
@@ -9,15 +9,15 @@
 2. Right-click and select option **New -> Settings**, specify the asset name (eg. *Input Settings*) and hit *Enter*
    <br>![Tutorial](media/new-settings.jpg)
 
-3. Choose option **Input Settings** and press **Create** button
+3. Choose option **Input Settings** and press the **Create** button
    <br>![Tutorial](media/input-settings-new.jpg)
 
-4. Double-click on an asset to open it and edit
+4. Double-click on an asset to open and edit it.
    <br>![Tutorial](media/empty-input-settings.jpg)
 
 ## Use input settings
 
-You can create as many input settings as you want (even special versions per platform) but only one can be used during game building. Use **Game Settings** asset (always located in `Content/GameSettings.json`) to link the input options. If your game is using more advanced confgiuration you can edit the game settings from code in your build script (use [GameSettings.Load](https://docs.flaxengine.com/api/FlaxEditor.Content.Settings.GameSettings.html#FlaxEditor_Content_Settings_GameSettings_Load) and [GameSettings.Save](https://docs.flaxengine.com/api/FlaxEditor.Content.Settings.GameSettings.html#FlaxEditor_Content_Settings_GameSettings_Save__1___0_) from C# API).
+You can create as many input settings as you want (even special versions per platform) but only one can be used during game building. Use **Game Settings** asset (always located in `Content/GameSettings.json`) to link the input options. If your game is using a more advanced configuration, you can edit the game settings from code in your build script (use [GameSettings.Load](https://docs.flaxengine.com/api/FlaxEditor.Content.Settings.GameSettings.html#FlaxEditor_Content_Settings_GameSettings_Load) and [GameSettings.Save](https://docs.flaxengine.com/api/FlaxEditor.Content.Settings.GameSettings.html#FlaxEditor_Content_Settings_GameSettings_Save__1___0_) from C# API).
 
 ![Use Input Settings](media/use-input-settings.jpg)
 
@@ -25,9 +25,9 @@ You can create as many input settings as you want (even special versions per pla
 
 ![Action Mappings](media/input-action-mappings.jpg)
 
-**Action Mappings** are used to configure a virtual actions. It's usefull to bind a physical mouse or gamepad buttons to specific actions identified by the name. Later game may track those input events using action names.
+**Action Mappings** are used to configure virtual actions. It's useful to bind a physical mouse or gamepad buttons to specific actions identified by the name. Later the game may track those input events using action names.
 
-Usefull C# API: [InputEvent](https://docs.flaxengine.com/api/FlaxEngine.InputEvent.html), [Input.ActionConfig](https://docs.flaxengine.com/api/FlaxEngine.Input.ActionConfig.html) and [Input.ActionMappings](https://docs.flaxengine.com/api/FlaxEngine.Input.html#FlaxEngine_Input_ActionMappings).
+Useful C# API: [InputEvent](https://docs.flaxengine.com/api/FlaxEngine.InputEvent.html), [Input.ActionConfig](https://docs.flaxengine.com/api/FlaxEngine.Input.ActionConfig.html) and [Input.ActionMappings](https://docs.flaxengine.com/api/FlaxEngine.Input.html#FlaxEngine_Input_ActionMappings).
 
 | Property | Desciption |
 |--------|--------|
@@ -42,9 +42,9 @@ Usefull C# API: [InputEvent](https://docs.flaxengine.com/api/FlaxEngine.InputEve
 
 ![Axis Mappings](media/input-axis-mappings.jpg)
 
-**Axis Mappings** are used to configure a virtual axes. It's usefull to bind a physical gamepad trigger or a mouse movement into a normalized and unified input source. Later game may access those input axes values using a virtual input interface.
+**Axis Mappings** are used to configure virtual axes. It's useful to bind a physical gamepad trigger or a mouse movement into a normalized and unified input source. Later the game may access those input axes values using a virtual input interface.
 
-Usefull C# API: [InputAxis](https://docs.flaxengine.com/api/FlaxEngine.InputAxis.html), [Input.AxisConfig](https://docs.flaxengine.com/api/FlaxEngine.Input.AxisConfig.html) and [Input.AxisMappings](https://docs.flaxengine.com/api/FlaxEngine.Input.html#FlaxEngine_Input_AxisMappingsAxisConfig).
+Useful C# API: [InputAxis](https://docs.flaxengine.com/api/FlaxEngine.InputAxis.html), [Input.AxisConfig](https://docs.flaxengine.com/api/FlaxEngine.Input.AxisConfig.html) and [Input.AxisMappings](https://docs.flaxengine.com/api/FlaxEngine.Input.html#FlaxEngine_Input_AxisMappingsAxisConfig).
 
 | Property | Desciption |
 |--------|--------|
@@ -55,7 +55,7 @@ Usefull C# API: [InputAxis](https://docs.flaxengine.com/api/FlaxEngine.InputAxis
 | **Negative Button** | The button to be pressed for movement in negative direction. Use *None* to ignore it. |
 | **Dead Zone** | Any positive or negative values that are less than this number will register as zero. Useful for gamepads to specify the deadzone. |
 | **Sensitivity** | For keyboard input, a larger value will result in faster response time (in units/s). A lower value will be more smooth. For Mouse delta the value will scale the actual mouse delta. |
-| **Gravity** | For keyboard input describes how fast will the input recenter. Speed (in units/s) that output value will rest to neutral value if not when device at rest. |
+| **Gravity** | For keyboard input, this describes how fast the input recenters. Speed (in units/s) at which the output value resets to the neutral value when the device is at rest. |
 | **Scale** | Additional scale parameter applied to the axis value. Allows to invert it or modify the range. |
 | **Snap** | If checked, the axis value will be immediately reset to zero after it receives opposite inputs. Used for keyboard input only. |
 
