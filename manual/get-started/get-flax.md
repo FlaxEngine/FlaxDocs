@@ -23,7 +23,7 @@ After the login screen go to the **Engine** page. This is where you can download
 > [!Note]
 > The engine version with a blue outline is marked as default to open projects. Use the context menu on it (3 dots) to set another version as default or to modify it's properties.
 
-![Download Flax](media/download-flax.jpg)
+![Download Flax](media/download-flax.png)
 
 From now on you are ready to create great games and experiences. We can't wait to see what great things you're going to create with Flax! Start by creating your [project](create-a-project.md).
 
