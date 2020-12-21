@@ -16,7 +16,7 @@ To install the Flax Engine: Run Flax (By default Flax creates a shortcut on the 
 
 The next step is to **log in** to the Flax Launcher. This step is optional and can be skipped by clicking **Skip Login**.
 
-![Open Launcher](media/launcher-engine.jpg)
+![Open Launcher](media/launcher-engine.png)
 
 After the login screen go to the **Engine** page. This is where you can download and manage engine installations. You can have multiple different versions of Flax installed on your computer. Here you can add new updates and download additional packages. To install Flax use the **Add Version** button to select the Engine version and target installation destination folder. Here is where you can pick a target platform to install the packages required to build and deploy your game for a given platform. Finally, you can press the **Install** button to download the Flax binaries.
 
