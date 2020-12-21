@@ -2,18 +2,18 @@
 
 ![Flax Editor Interface](../get-started/media/flax-layout.png)
 
-Flax Editor interface is made of **dockable windows** which can be rearranged, grouped, detached and docked.
-You can drag and arrange the window by selecting and dragging the window header. It can be very useful when adapting the workspace for your need. Editor saved the windows layout (per project) on closing, and every few seconds, to restore it on relaunch.
+Flax Editor's interface is made of **dockable windows** which can be rearranged, grouped, detached and docked.
+You can drag and arrange a window by selecting and dragging the window header. It can be very useful when adapting the workspace for your need. Flax Editor saves the windows layout (per project) on closing, and every few seconds, to restore it on relaunch.
 
 Useful shortcuts for faster navigation:
 * **Ctrl + Tab** - next tab
-* **Ctrl + Shirt + Tab** - previous tab
+* **Ctrl + Shift + Tab** - previous tab
 * **Ctrl + W** - close tab
 * **Ctrl + O** - finder tool to navigate to anything
 
 ## Main windows
 
-The default layout contains set of the most important elements:
+The default layout contains a set of the most important elements:
 * [Viewport](windows/viewport.md) - shows the game view. Used to navigate and edit scenes.
 * [Content Window](windows/content-window.md) - shows the project assets. Used to create and manage your assets.
 * [Scene Window](windows/scene-window.md) - shows the scene actors hierarchy. Used to view and modify the scene structure.
@@ -25,6 +25,6 @@ The default layout contains set of the most important elements:
 
 ![Flax Editor Layout](media/restore-layout.jpg)
 
-The default windows layout can be always restored by using main menu option **Window -> Restore default layout**.
+The default windows layout can always be restored by using main menu option **Window -> Restore default layout**.
 
 
