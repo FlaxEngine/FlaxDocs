@@ -2,17 +2,17 @@
 
 ![Character Controller](media/physics4.gif)
 
-The **character controller** is an actor type used for the player objects to provide collision-based physics but also to allow to more customizations dedicated for game characters (player or NPCs). It's a common choise for first-person and third-person games.
+The **character controller** is an actor type used for the player objects to provide collision-based physics but also to allow for more customizations dedicated to game characters (player or NPCs). It's a common choice for first-person and third-person games.
 
 ## Character volume
 
-The character uses a **capsule**, defined by a center position, a vertical height and a radius. The height is the distance between the two sphere centers at the end of the capsule. The capsule has a better behavior when climbing stairs, for example.
+The character uses a **capsule**, defined by a center position, a vertical height and a radius. The height is the distance between the two sphere centers at the end of the capsule. For example, the capsule has better behavior when climbing stairs.
 
 ![Character Volume](media/cc-capsule.png)
 
 ## Auto stepping
 
-Without auto-stepping it is easy for a character to get stuck against slight elevations of the ground mesh. It feels unnatural because in the real world a character would just cross this small obstacle without thinking about it.
+Without auto-stepping it is easy for a character to get stuck against slight elevation changes in a ground mesh. It feels unnatural because in the real world a person would just cross over these small obstacles without thinking about it.
 
 You can adjust auto-stepping behaviour by using [CharacterController.SlopeLimit](https://docs.flaxengine.com/api/FlaxEngine.CharacterController.html#FlaxEngine_CharacterController_SlopeLimit) and [CharacterController.StepOffset](https://docs.flaxengine.com/api/FlaxEngine.CharacterController.html#FlaxEngine_CharacterController_StepOffset) properties.
 

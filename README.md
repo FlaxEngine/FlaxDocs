@@ -12,7 +12,7 @@ To edit docs we recommend you to use tools such as [Zettlr](https://www.zettlr.c
 
 ## Building and Testing
 
-Documentation can be builded and hosted on both Linux and Windows. DocFx can run on .Net or Mono. By default site is hosted on `localhost:8080` but this can be easily configured.
+Documentation can be built and hosted on both Linux and Windows. DocFx can run on .Net or Mono. By default site is hosted on `localhost:8080` but this can be easily configured.
 
 ### Windows
 

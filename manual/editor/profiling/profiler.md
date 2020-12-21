@@ -1,6 +1,6 @@
 # Profiler
 
-**Profiler** window provides various ways of measuring game performance and helps the optimization process. It can be used to collect the data about game performance right in the Editor.
+**Profiler** window provides various ways of measuring game performance and helps the optimization process. It can be used to collect data about game performance right in the Editor.
 
 ## Interface
 
@@ -9,7 +9,7 @@
 Profiler window is divided into 3 parts:
 * Toolbar
 * Sections list
-* Detaisl panel
+* Details panel
 
 ## Sections
 
@@ -43,5 +43,5 @@ Profiler.EndEventGPU();
 
 ### Memory
 
-The memory profiling mode focused on system memory allocations breakdown. This includes separate stats for native memory allocation and managed C# allocations.
+The memory profiling mode focused on breaking down system memory allocations. This includes separate stats for native memory allocation and managed C# allocations.
 
