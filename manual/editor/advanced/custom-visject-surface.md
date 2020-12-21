@@ -589,7 +589,7 @@ A simple way to execute a Visject surface at runtime is making a copy of it and 
 
 To copy a surface, iterate over it in a *depth first* manner. This makes it easy to execute the nodes in a correct order, where every node gets executed *after* the nodes before it have finished. It also conveniently detects cycles in the graph.
 
-An example implementation can be found in the [custom Visject surface sample project](https://github.com/stefnotch/flax-custom-visject-plugin).
+An example implementation can be found in the [custom Visject surface sample project](https://github.com/FlaxCommunityProjects/flax-custom-visject-plugin).
 
 ### Preview
 
@@ -647,6 +647,6 @@ A simple idea for going further is to evaluate the same graph multiple times. Fo
 
 So, a simple graphing calculator can be created by adding a custom "Get X-Coordinate" node and then evaluating the graph once for every value on the x-axis. Then, the output can be plotted by drawing line segments through those points.
 
-This can be found in the [graphing-demo](https://github.com/stefnotch/flax-custom-visject-plugin/tree/graphing-demo) branch in the sample project.
+This can be found in the [graphing-demo](https://github.com/FlaxCommunityProjects/flax-custom-visject-plugin/tree/graphing-demo) branch in the sample project.
 
 ![Gif](./media/expression-graph-graphing.gif)
