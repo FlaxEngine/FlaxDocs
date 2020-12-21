@@ -30,9 +30,9 @@ This section covers the specific information for different aspects of each platf
 > [!TIP]
 > To check on which rendering backend game is running use [GPUDevice.Instance.RendererType](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_Rendering_GPUDevice_RendererType). You can also use [GPUDevice.Instance.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_Rendering_GPUDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.
 
-## Builded game logs
+## Built game logs
 
-By default Flax stores the log files inside the project folder in subdirectory `Logs` (as described [here](../get-started/project-structure.md)). Builded game is often installed in a folder with no write-access which means Flax needs to store the log files in a temporary directory located in `%LocalAppData%\<CompanyName>\<ProductName>`. Where `<CompanyName>` and `<ProductName>` are values defined in the *Game Settings*. To debug your game crashes or errors please see the log files.
+By default Flax stores log files inside the project folder in subdirectory `Logs` (as described [here](../get-started/project-structure.md)). However, the built game is often installed in a folder with no write-access which means Flax needs to store the log files in a temporary directory located in `%LocalAppData%\<CompanyName>\<ProductName>`. Where `<CompanyName>` and `<ProductName>` are values defined in the *Game Settings*. Use these log files to debug your built game crashes or errors.
 
 ## Crash logs
 
