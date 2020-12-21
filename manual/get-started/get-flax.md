@@ -8,7 +8,7 @@ After downloading the Flax Launcher, start the installer and follow the installa
 
 To learn more about the software and hardware requirements please visit [this page](requirements.md).
 
-# Installing Flax Engine
+# Installing The Flax Engine
 
 To install the Flax Engine: Run Flax (By default Flax creates a shortcut on the desktop.)
 
