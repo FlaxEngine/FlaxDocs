@@ -6,13 +6,13 @@ Welcome to the Flax documentation repository. This repository contains all the s
 
 ## Editing
 
-We use [DocFX](https://github.com/dotnet/docfx) tool for building and hosting documentation online. It supports markdown style files (`.md`) as it's very standardized and popular format. Also writing technical documentation using markdown style is easy and efficient.
+We use [DocFX](https://github.com/dotnet/docfx) tool for building and hosting documentation online. It supports markdown style files (`.md`) as it's a very standardized and popular format. Writing technical documentation using markdown style is easy and efficient.
 
 To edit docs we recommend you to use tools such as [Zettlr](https://www.zettlr.com/) or [Typora](https://typora.io/) or [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Building and Testing
 
-Documentation can be built and hosted on both Linux and Windows. DocFx can run on .Net or Mono. By default site is hosted on `localhost:8080` but this can be easily configured.
+Documentation can be built and hosted on both Linux and Windows. DocFx can run on .Net or Mono. By default the site is hosted on `localhost:8080` but this can be easily configured.
 
 ### Windows
 

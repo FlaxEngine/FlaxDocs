@@ -2,23 +2,22 @@
 
 ![Scene Window](media/scene.jpg)
 
-**Scene Window** shows a tree control with full hierarchy of the loaded scenes.
-It updates automatically so if you remove or spawn actors at runtime from code all level changes can be seen live.
-Also, it supports muli-scene editing.
+The **Scene Window** shows a tree control with full hierarchy of the loaded scenes that updates automatically and supports multi-scene editing. 
+Actors spawned or removed at runtime and all level changes are updated in real-time.
 
 Every Actor is represented by a tree node (named after the actor).
 Scene actors are the root nodes of the tree.
-You can expand and collapse the scene hierarchy by using arrow icons on the left of the node names.
-To select one or more nodes use **LMB**, **Ctrl + LMB** or **Shift + LMB** to select range of nodes.
+You can expand and collapse the scene hierarchy by using the arrow icons on the left of the node names.
+To select one or more nodes use **LMB**, **Ctrl + LMB** or **Shift + LMB** to select a range of nodes.
 
-If you select and drag the actor or selection of actors you can reorder it or reparent them.
+You can select and drag an actor or selection of actors to reorder and reparent them.
 
 ## Context menu
 
 ![Context Menu](media/scene-context-menu.jpg)
 
-Use **right-click** to show the context menu for the actor node.
-You can copy, paste, cut, duplicate, delete and add new actors using this menu.
+Using **right-click** will display the context menu for the selected actor node. 
+This will allow you to copy, paste, cut, duplicate, delete and add new actors.
 
 ## Shortcuts
 

@@ -1,6 +1,6 @@
 # Input Settings
 
-**Input Settings asset** is used to specify the initial game input configuration. This asset contains a description of the virtual actions and axes that are used to map physical input data into the more unified usage. See [Virtual Input](virtual-input.md) to learn more about it.
+The **Input Settings asset** is used to specify the initial game input configuration. This asset contains a description of the virtual actions and axes that are used to map physical input data into the more unified usage. See [Virtual Input](virtual-input.md) to learn more about it.
 
 ## Create input settings
 
