@@ -67,23 +67,28 @@ public class CameraTV : Script
         }
     }
 
+    public float ViewDistance = 2000;
+
     private Vector2 _resolution = new Vector2(640, 374);
     private GPUTexture _output;
     private SceneRenderTask _task;
     private MaterialInstance _material;
 
-	private void UpdateOutput()
-	{
-		var desc = GPUTextureDescription.New2D((int)_resolution.X, (int)_resolution.Y, PixelFormat.R8G8B8A8_UNorm);
-		_output.Init(ref desc);
-	}
+    private void UpdateOutput()
+    {
+        var desc = GPUTextureDescription.New2D(
+            (int)_resolution.X,
+            (int)_resolution.Y,
+            PixelFormat.R8G8B8A8_UNorm);
+        _output.Init(ref desc);
+    }
 
     public override void OnEnable()
     {
         // Create backbuffer
         if (_output == null)
-            _output = GPUDevice.CreateTexture();
-		UpdateOutput();
+            _output = new GPUTexture();
+        UpdateOutput();
 
         // Create rendering task
         if (_task == null)
@@ -91,6 +96,7 @@ public class CameraTV : Script
         _task.Order = -100;
         _task.Camera = Cam;
         _task.Output = _output;
+        _task.ViewFlags = ViewFlags.Reflections | ViewFlags.Decals | ViewFlags.AO | ViewFlags.GI | ViewFlags.DirectionalLights | ViewFlags.PointLights | ViewFlags.SpotLights | ViewFlags.SkyLights | ViewFlags.Shadows | ViewFlags.SpecularLight | ViewFlags.CustomPostProcess | ViewFlags.ToneMapping;
         _task.Enabled = false;
 
         if (Material && _material == null)
@@ -112,6 +118,11 @@ public class CameraTV : Script
         }
 
         _task.Enabled = true;
+    }
+
+    public override void OnUpdate()
+    {
+        _task.Enabled = Vector3.Distance(Actor.Position, MainRenderTask.Instance.View.Position) <= ViewDistance;
     }
 
     public override void OnDisable()
