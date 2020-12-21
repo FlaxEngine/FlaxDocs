@@ -8,22 +8,29 @@ After downloading the Flax Launcher, start the installer and follow the installa
 
 To learn more about the software and hardware requirements please visit [this page](requirements.md).
 
-# Installing The Flax Engine
+# Running The Flax Launcher
 
 To install the Flax Engine: Run Flax (By default Flax creates a shortcut on the desktop.)
+The next step is to **log in** to the Flax Launcher. 
+> [!Note]
+> This step is optional and can be skipped by clicking **Skip Login**.
 
 ![Login To Flax Launcher](media/flax-launcher-login.png)
 
-The next step is to **log in** to the Flax Launcher. This step is optional and can be skipped by clicking **Skip Login**.
+# Installing The Flax Engine
+
+After the login screen go to the **Engine** page. This is where you can download and manage engine installations. You can have multiple different versions of Flax installed on your computer. Here you can add new updates and download additional packages. 
 
 ![Open Launcher](media/launcher-engine.png)
 
-After the login screen go to the **Engine** page. This is where you can download and manage engine installations. You can have multiple different versions of Flax installed on your computer. Here you can add new updates and download additional packages. To install Flax use the **Add Version** button to select the Engine version and target installation destination folder. Here is where you can pick a target platform to install the packages required to build and deploy your game for a given platform. Finally, you can press the **Install** button to download the Flax binaries.
+To install Flax use the **Add Version** button to select the Engine version and target installation destination folder. Here is where you can pick a target platform to install the packages required to build and deploy your game for a given platform. Finally, you can press the **Install** button to download the Flax binaries.
+
+![Download Flax](media/download-flax.png)
 
 > [!Note]
 > The engine version with a blue outline is marked as default to open projects. Use the context menu on it (3 dots) to set another version as default or to modify it's properties.
 
-![Download Flax](media/download-flax.png)
+![Default Engine Version](media/default-version.png)
 
 From now on you are ready to create great games and experiences. We can't wait to see what great things you're going to create with Flax! Start by creating your [project](create-a-project.md).
 
