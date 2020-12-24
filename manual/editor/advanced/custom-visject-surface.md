@@ -278,15 +278,6 @@ public class ExpressionGraphWindow : VisjectSurfaceWindow<JsonAsset, ExpressionG
 		// Init asset properties and parameters proxy
 		_properties.OnLoad(this);
 
-		// Load surface data from the asset
-		byte[] data = ExpressionGraphSurface.LoadSurface(_asset, _assetInstance, true);
-		if (data == null)
-		{
-			// Error
-			Debug.LogError("Failed to load expression graph surface data.");
-			return true;
-		}
-
 		// Load surface graph
 		if (_surface.Load(data))
 		{
