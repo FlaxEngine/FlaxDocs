@@ -13,7 +13,7 @@ In this tutorial you will learn how to define a custom json asset type and use i
 Implement a class that will define the asset data layout. In this example we store some supported screen resolutions and the default language. Then it will be saved to json and modified in editor. Later game can load asset and use its data.
 
 ```cs
-class MySettings
+public class MySettings
 {
 	public Vector2[] SupportedResolutions =
 	{
