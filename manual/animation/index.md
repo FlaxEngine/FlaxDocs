@@ -2,11 +2,11 @@
 
 ![Animation](media/knight_dance.gif)
 
-One of the most fundamental parts of every game are **animations**. Flax Engine features high quality and performant animations system that helps developers to achieve life-like characters and animations.
-This documentation section describes how to work with Flax animations pipeline. Follow the guidelines and tutorials to create your very own animated characters.
+One of the most fundamental parts of every game are **animations**. Flax Engine features a high quality and performant animation system that helps developers achieve life-like characters and animations.
+This documentation section describes how to work with the Flax animation pipeline. Follow the guidelines and tutorials to create your very own animated characters.
 
 >[!Note]
->For a starting point, we recommend to see tutorial [How to setup animated model](tutorials/setup-animated-model.md).
+>As a starting point, we recommend checking out the following tutorial: [How to setup animated model](tutorials/setup-animated-model.md).
 
 ## In this section
 
