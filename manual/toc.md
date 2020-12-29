@@ -254,6 +254,7 @@
 ### [Tiles Panel](ui/controls/tiles-panel.md)
 ## [Fonts](ui/fonts/index.md)
 ## [Text Render](ui/text-render/index.md)
+## [High DPI](ui/high-dpi/index.md)
 ## [Tutorials](ui/tutorials/index.md)
 ### [How to create UI](ui/tutorials/create-ui.md)
 ### [How to create UI from code](ui/tutorials/create-ui-from-code.md)
