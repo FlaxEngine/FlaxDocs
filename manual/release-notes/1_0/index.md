@@ -14,7 +14,7 @@
 
 We did it! We've released the full source code of the Flax Engine including **C++ core** and **C# editor** with all tools and platforms. The sources are available on [Github here](https://github.com/FlaxEngine/FlaxEngine). This repository is using *Git LFS* and is a mirror of our internal server. From now on, the previous FlaxAPI repo will be deprecated and we encouruge you to report issues on the new FlaxEngine repo. Also, we're open for Pull Requests so **feel free to contribute**!
 
-Of course, Flax Engine source can be used just like binaries we distribute via Flax Store. It's licensed under our [EULA license](https://flaxengine.com/licensing). For teams that want to use a custom version of the engine feel free to fork it and customize it (helper docs [here](../../scripting/advanced/custom-engine.md)).
+Of course, Flax Engine source can be used just like binaries we distribute via Flax Store. It's licensed under our [EULA license](https://flaxengine.com/licensing). For teams that want to use a custom version of the engine feel free to fork it and customize it (helper docs [here](../../editor/advanced/custom-engine.md)).
 
 ### New licensing
 
