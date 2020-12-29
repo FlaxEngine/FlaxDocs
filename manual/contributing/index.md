@@ -17,7 +17,7 @@ Check out the official repositories on a Github:
 
 ## Open Source
 
-![FlaxAPI](media/repo-title.png)
+![Flax Engine](media/repo-title.png)
 
 The main open-source repository [Flax Engine](https://github.com/FlaxEngine/FlaxEngine) contains full source code of the Flax Engine and Flax Editor with all tools and platforms. You can fork it and edit whatever you need. Modified Engine or/and Editor can be used in Flax games production so it can be very handy to have more control over the engine. Also, any pull requests are welcome.
 

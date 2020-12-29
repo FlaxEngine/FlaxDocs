@@ -63,7 +63,7 @@ In Flax, Scene object is also an Actor so you can access it like any other Actor
 
 ## MonoBehaviour vs Script
 
-When it comes to game scripting, Unity and Flax are very similar. The are some differences in C# API (Flax has bigger math library, is more performance-oriented and uses new C# 7.2). In fact, the whole C# API is an open-source project and can be found [here](https://github.com/FlaxEngine/FlaxAPI). All contributions are welcome.
+When it comes to game scripting, Unity and Flax are very similar. The are some differences in C# API (Flax has bigger math library, is more performance-oriented and uses new C# 7.2). In fact, the whole C# editor and C++ engine including scripting API is open and can be found [here](https://github.com/FlaxEngine/FlaxEngine). All contributions are welcome.
 
 Also, Flax support native **[C++](../../scripting/cpp/index.md)** scripting and **[Visual Scripting](../../scripting/visual/index.md)** as an in-build feature. We don't want to limit our developers to just a one programming language for the game development as using C\+\+ and Visual Scripting together with C# can benefit.
 
@@ -97,13 +97,13 @@ See [Scripting](../../scripting/index.md) documentation to learn more about C# s
 
 If you're a programmer here is a list of new cool things in Flax C# API that may be useful:
 * Engine and Editor are open with full source code ([link](https://github.com/FlaxEngine/FlaxEngine))
-* You can edit all input settings at runtime ([link](https://github.com/FlaxEngine/FlaxAPI/blob/master/FlaxEngine/API/Static/Input.cs#L249))
-* You can change the gamepad devices layout at runtime ([link](https://github.com/FlaxEngine/FlaxAPI/blob/master/FlaxEngine/Engine/Gamepad.cs#L203))
-* You can dynamically set Update/Draw/Physics FPS ([link](https://github.com/FlaxEngine/FlaxAPI/blob/master/FlaxEngine/API/Static/Time.Gen.cs#L26))
-* You can serialize/deserialize any objects to json ([link](https://github.com/FlaxEngine/FlaxAPI/blob/master/FlaxEngine/Json/JsonSerializer.cs#L226))
-* You can use a huge math library ([link](https://github.com/FlaxEngine/FlaxAPI/tree/master/FlaxEngine/Math))
-* You can perform custom rendering on GPU ([link](https://github.com/FlaxEngine/FlaxAPI/blob/master/FlaxEngine/Rendering/CustomRenderTask.cs))
-* You can use Custom Editors pipeline to create great editor extensions ([link](https://github.com/FlaxEngine/FlaxAPI/tree/master/FlaxEditor/CustomEditors))
+* You can edit all input settings at runtime ([link](https://docs.flaxengine.com/api/FlaxEngine.Input.html))
+* You can change the gamepad devices layout at runtime ([link](https://docs.flaxengine.com/api/FlaxEngine.Gamepad.html))
+* You can dynamically set Update/Draw/Physics FPS ([link](https://docs.flaxengine.com/api/FlaxEngine.Time.html))
+* You can serialize/deserialize any objects to json ([link](https://docs.flaxengine.com/api/FlaxEngine.Json.JsonSerializer.html))
+* You can use a huge math library ([link](https://github.com/FlaxEngine/FlaxEngine/tree/master/Source/Engine/Core/Math))
+* You can perform custom rendering on GPU ([link](https://docs.flaxengine.com/api/FlaxEngine.RenderTask.html))
+* You can use Custom Editors pipeline to create great editor extensions ([link](https://docs.flaxengine.com/manual/scripting/tutorials/custom-editor.html))
 
 <hr>
 

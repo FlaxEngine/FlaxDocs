@@ -11,7 +11,7 @@ FlaxEditor.exe -project "<project-path>" -headless -mute -null -std -build "Deve
 ```
 
 It will also send the log (including C# API [Debug.Log](https://docs.flaxengine.com/api/FlaxEngine.Debug.html#FlaxEngine_Debug_Log_System_Object_)) to the standard process output so in case of issues they can be easily detected. What is, even more, the editor may start without a window (headless mode) and perform some additional actions like clearing cooker cache or project cache.
-Of course, all those things can be made manually by using Flax Editor C# API and Editor Plugins (see [here](https://github.com/FlaxEngine/FlaxAPI/blob/master/FlaxEditor/API/Static/GameCooker.cs#L110)).
+Of course, all those things can be made manually by using Flax Editor C# API and Editor Plugins (see [here](https://docs.flaxengine.com/api/FlaxEditor.GameCooker.html)).
 
 ## Options
 

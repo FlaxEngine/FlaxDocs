@@ -422,7 +422,7 @@ public ExpressionGraphSurface(IVisjectSurfaceOwner owner, Action onSave, FlaxEdi
 }
 ```
 
-And then we can fill our list of group archetypes with our own ones. We can also use [existing node archetypes](https://github.com/FlaxEngine/FlaxAPI/tree/master/FlaxEditor/Surface/Archetypes).
+And then we can fill our list of group archetypes with our own ones. We can also use [existing node archetypes](https://github.com/FlaxEngine/FlaxEngine/tree/master/Source/Editor/Surface/Archetypes).
 
 ```cs
 // Our own node archetypes

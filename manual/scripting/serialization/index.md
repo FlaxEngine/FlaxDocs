@@ -15,7 +15,7 @@ Flax serializes object field or properties if:
 * It's not `const`
 * Its type can be serialized
 
-[Here](https://github.com/FlaxEngine/FlaxAPI/blob/master/FlaxEngine/Json/JsonCustomSerializers/ExtendedDefaultContractResolver.cs) you can find a open source file that implements serialization rules used by the Flax API.
+[Here](https://github.com/FlaxEngine/FlaxEngine/blob/master/Source/Engine/Serialization/JsonCustomSerializers/ExtendedDefaultContractResolver.cs) you can find a open source file that implements serialization rules used by the Flax.
 
 Flax deserialization works more like `populate` existing object with data rather than `full load`. This reduces amount of data required to save and helps with changing the default values for the fields and properties.
 
