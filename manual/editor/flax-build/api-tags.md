@@ -2,7 +2,7 @@
 
 ## API_CLASS(...)
 
-Use it on class to expose it to the scripting API. You can specify custom attributes in the braces.
+Use it on a class to expose it to the scripting API. You can specify custom attributes in the braces.
 Example:
 
 ```cpp
@@ -10,6 +10,30 @@ Example:
 /// Actor that links to the animated model skeleton node transformation.
 /// </summary>
 API_CLASS(sealed) class BoneSocket : public Actor
+{
+...
+}
+```
+
+## API_STRUCT(...)
+
+Use it on a structure to expose it to the scripting API. You can specify custom attributes in the braces.
+Example:
+
+```cpp
+API_STRUCT() struct MyGameData
+{
+...
+}
+```
+
+## API_INTERFACE(...)
+
+Use it on a class to expose it as class interface for the scripting API. You can specify custom attributes in the braces.
+Example:
+
+```cpp
+API_INTERFACE() class IMyInterface
 {
 ...
 }
