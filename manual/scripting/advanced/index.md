@@ -9,3 +9,4 @@
 * [Multithreading](multithreading.md)
 * [Screenshots](screenshots.md)
 * [Gameplay Globals](gameplay-globals.md)
+* [Refactoring and Renaming](refactoring-renaming.md)
