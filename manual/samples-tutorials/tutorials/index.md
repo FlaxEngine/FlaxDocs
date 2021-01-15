@@ -2,7 +2,7 @@
 
 Flax Documenation contains a various step-by-step tutorials.
 Use them to learn about Flax Engine and implement cool features into your game.
-This page lists all aveliable text tutorials contained by this documentation.
+This page lists all available text tutorials contained by this documentation.
 
 You can use **Ctrl + F** to quickly find what you are looking for.
 
