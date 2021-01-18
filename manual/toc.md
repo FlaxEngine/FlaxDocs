@@ -225,6 +225,7 @@
 # [Navigation](navigation/index.md)
 ## [Nav Mesh Bounds Volume](navigation/nav-mesh-bounds-volume.md)
 ## [Nav Link](navigation/nav-link.md)
+## [Nav Modifier Volume](navigation/nav-modifier-volume.md)
 ## [Navigation Settings](navigation/navigation-settings.md)
 ## [Tutorials](navigation/tutorials/index.md)
 ### [How to create navmesh](navigation/tutorials/create-navmesh.md)
