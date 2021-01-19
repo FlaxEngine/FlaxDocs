@@ -1,10 +1,10 @@
 # Create and use a script
 
-Scripts in Flax are written in **C#** language (source files with extension `.cs`).
-To provide better organization in a project workspace script files are located in `Source/` directory.
+Scripts in Flax are written in the **C#** language (source files with extension `.cs`).
+To provide better organization in a project workspace script files are located in the `Source/` directory.
 In that way scripts are separated from the assets which reduces mess and makes it easier to work with project sources.
 
-Flax Editor creates a solution file (`.sln`) and C# projects (`.csproj`) for game scritps and editor plugins.
+Flax Editor creates a solution file (`.sln`) and C# projects (`.csproj`) for game scripts and editor plugins.
 
 ![Workspace](media/scripts-workspace.jpg)
 
@@ -13,54 +13,58 @@ Flax Editor creates a solution file (`.sln`) and C# projects (`.csproj`) for gam
 
 # Create a script
 
-1. Navigate to 'Source/&lt;game_module_name&gt;' directory in a *Content* window (double ckick on folder)
-   <br>![Step 1](media/new-script-1.jpg)
-2. Right-click and select **New -> Script**
-   <br>![Step 2](media/new-script-2.jpg)
-3. Specify a new script name and confirm using **Enter**
-   <br>![Step 3](media/new-script-3.jpg)
-4. Script is ready
-   <br>![Step 4](media/new-script-4.jpg)
-5. Double-click to open a file
+1. In the *Content* window, Navigate to '&lt;project_name&gt;/Source/&lt;game_module_name&gt;'.
+	<br>![Step 1](media/new-script.gif)
+	
+2. Double-click to open the script. Wait for Flax to open your IDE, which will then open the new script.
 
+Once opened this is what the script file will look like.
 ```cs
 using System;
 using System.Collections.Generic;
 using FlaxEngine;
 
-namespace GraphicsFeaturesTour
+namespace Game
 {
-	public class MyScript : Script
-	{
-		public override void OnStart()
-		{
-			// Here you can add code that needs to be called when script is created
-		}
+    public class MyScript : Script
+    {
+        public override void OnStart()
+        {
+            // Here you can add code that needs to be called when script is created, just before the first game update
+        }
 
-		public override void OnUpdate()
-		{
-			// Here you can add code that needs to be called every frame
-		}
-	}
+        public override void OnEnable()
+        {
+            // Here you can add code that needs to be called when script is enabled (eg. register for events)
+        }
+
+        public override void OnDisable()
+        {
+            // Here you can add code that needs to be called when script is disabled (eg. unregister from events)
+        }
+
+        public override void OnUpdate()
+        {
+            // Here you can add code that needs to be called every frame
+        }
+    }
 }
 ```
 
 # Use a script
 
-Scripts are **attached to actors**. Every actor can contain an unlimited amount of scripts (including multiple instances of the same script type). This means that scripts lifetime is related to actors and scenes lifetime. For instance, if you load a  scene, scripts attached to the objects in that scene also will be loaded.
+Scripts are **attached to actors**. Every actor can contain an unlimited amount of individual scripts (including multiple instances of the same script type). This means that the script's lifetime is related to that of the actor's and the scene's lifetime. For instance, if you load a scene, the scripts attached to the objects in that scene also will be loaded.
 
 1. Select an actor to add script to it (note label *Drag scripts here* in **Scripts** group in *Properties* window)
-   <br>![Step 1](media/use-script-1.jpg)
 2. Drag and drop the script into the **Drag scripts here** area
-   <br>![Step 2](media/use-script-2.jpg)
 3. Script is ready (sample script with 3 public fields)
-   <br>![Step 3](media/use-script-3.jpg)
+   <br>![Step 1](media/attach-script.gif)
 
-Flax Editor shows public script properties and fields using a dedicated group (within `Scripts` group). Each script group header shows a script class type name, **settings button on the right** and **script toggle checkbox on the left**. You can disable or enable script by using this checkbox.
+The Flax Editor shows public script properties and fields using a dedicated group (within `Scripts` group). Each script group header shows a script class type name, **settings button on the right** and **script toggle checkbox on the left**. You can disable or enable the script by using this checkbox.
 
-To **remove**, **edit** or **reorder** script use **settings button** which shows a popup with various options.
+To **remove**, **edit** or **reorder** a script use the **settings button** which shows a popup with various options.
 
-![Script settings](media/script-settings.jpg)
+![Script settings](media/script-settings.png)
 
 You can also easily pick a reference to a script or reorder it. Simply click and drag the **three-bar icon button** as shown on a gif below:
 
