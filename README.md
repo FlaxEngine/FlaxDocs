@@ -17,7 +17,7 @@ Documentation can be built and hosted on both Linux and Windows. DocFx can run o
 ### Windows
 
 * Download repository (or clone with `git clone https://github.com/FlaxEngine/FlaxDocs.git`)
-* Call `call build_manual.bat` to build the Manual or `build_all.bat` to build whole documentation (with API) but it will take more time to finish
+* Call `build_manual.bat` to build the Manual or `build_all.bat` to build whole documentation (with API) but it will take more time to finish
 * Call `run_local_website.bat` to preview the site
 
 ### Linux
