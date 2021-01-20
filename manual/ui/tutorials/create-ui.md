@@ -38,36 +38,40 @@ Open the script file and write the following code:
 using FlaxEngine;
 using FlaxEngine.GUI;
 
-public class PlayerHealth : Script
+namespace Game
 {
-	[Limit(0, 100), Tooltip("The current player health (in range 0-100)")]
-	public float Health { get; set; } = 100.0f;
-
-	[Tooltip("Reference to the player health progress bar control")]
-	public UIControl HealthBar { get; set; }
-
-	public override void OnStart()
+	public class PlayerHealth : Script
 	{
-		if (HealthBar == null || !HealthBar.Is<ProgressBar>())
+		[Limit(0, 100), Tooltip("The current player health (in range 0-100)")]
+		public float Health { get; set; } = 100.0f;
+
+		[Tooltip("Reference to the player health progress bar control")]
+		public UIControl HealthBar { get; set; }
+
+		private ProgressBar _healthBar;
+
+		public override void OnStart()
 		{
-			Debug.LogError("Missing or invalid health bar control");
-			return;
+			if (HealthBar == null || !HealthBar.Is<ProgressBar>())
+			{
+				Debug.LogError("Missing or invalid health bar control");
+				return;
+			}
+
+			_healthBar = HealthBar.Get<ProgressBar>();
 		}
 
-		var progressBar = HealthBar.Get<ProgressBar>();
-		progressBar.Value = Health;
-	}
+		public override void OnUpdate()
+		{
+			if (Input.GetKey(KeyboardKeys.Q))
+				Health -= 5;
 
-	public override void OnUpdate()
-	{
-		var health = Health;
-		if (Input.GetKey(KeyboardKeys.Q))
-			health -= 5;
-		if (Input.GetKey(KeyboardKeys.W))
-			health += 5;
-		Health = Mathf.Clamp(health, 0, 100);
+			if (Input.GetKey(KeyboardKeys.E))
+				Health += 5;
 
-		HealthBar.Get<ProgressBar>().Value = Health;
+			Health = Mathf.Clamp(Health, 0, 100);
+			_healthBar.Value = Health;
+		}
 	}
 }
 ```
@@ -84,7 +88,7 @@ Select the player actor, next drag and drop the `UIControl` actor created in ste
 
 ## 8. Test it out!
 
-Finally, hit the **Play** button (or **F5** key) and test the player health controller by using the **Q** and **W** keys to change it down or up.
+Finally, hit the **Play** button (or **F5** key) and test the player health controller by using the **Q** and **E** keys to change it down or up.
 
 Later you can link your existing gameplay logic to visualize the player's health level or create more of a HUD for your game.
 
