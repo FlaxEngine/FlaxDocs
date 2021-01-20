@@ -28,8 +28,6 @@ In this step you need to create a complete material. You can use the nodes netwo
 
 The last step is to assign the created material asset to the `Image` brush property. To do so, you can drag and drop it or click on the arrow symbol and search for it.
 
-//TODO: Update images!
-
 ![Assign Custom GUI Material](media/set-material-brush.png)
 
 ## 6. See the results!

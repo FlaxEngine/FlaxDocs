@@ -1,10 +1,10 @@
 # Control Transform
 
-Every GUI control contains a set of properties related to transforming the control within the parent container. Every control location can be assigned and fixed or depend on the parent container control dimensions. Use the properties group **Transform** when editing selected **UI Control** in the editor to adjust its appearance. All these options can be also modified at runtime from C# code.
+Every GUI control contains a set of properties related to transforming the control within the parent container. Every control location can be assigned and fixed or depend on the parent container control's dimensions. Use the properties group **Transform** when editing selected **UI Control** in the editor to adjust its appearance. All these options can be also modified at runtime from C# code.
 
 ## Location
 
-The location of the upper-left corner of the control relative to he upper-left corner of its container.
+The location of the upper-left corner of the control relative to the upper-left corner of its container.
 
 ![Location](media/location.jpg)
 
@@ -40,7 +40,7 @@ The control rotation angle (in degrees).
 
 ## Anchor
 
-The control has *anchor min* and *anchor max* properties which can be set manually or via *Anchor Presets* editor. The control anchors are normalized (to range 0-1) position in the parent control that the upper left and bottom right corners.
+The control has *anchor min* and *anchor max* properties which can be set manually or via the *Anchor Presets* editor. The control anchors are normalized (to range 0-1) position in the parent control that the upper left and bottom right corners.
 This can be used to dock control inside the parent container so control location/size can depends on parent container bounds.
 
 ![Anchor Presets](media/anchor_presets.png)

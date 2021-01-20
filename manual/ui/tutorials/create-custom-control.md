@@ -14,23 +14,26 @@ Open the script file and write the following code:
 using FlaxEngine;
 using FlaxEngine.GUI;
 
-public class MyControl : Control
+namespace Game
 {
-	[EditorOrder(0), Tooltip("Rendered texture tin color. Use red as default.")]
-	public Color TintColor { get; set; } = Color.Red;
-
-	[EditorOrder(1), Tooltip("The texture to draw.")]
-	public Texture Image { get; set; }
-
-	/// <inheritdoc />
-	public override void Draw()
+	public class MyControl : Control
 	{
-		base.Draw();
+		[EditorOrder(0), Tooltip("The Tint color for the texture. Uses red as default.")]
+		public Color TintColor { get; set; } = Color.Red;
 
-		//TODO: False arguments! Fix next commit.
-		Render2D.DrawTexture(Image, new Rectangle(Vector2.Zero, Size), TintColor, true);
+		[EditorOrder(1), Tooltip("The texture to be drawn.")]
+		public Texture Image { get; set; }
+
+		/// <inheritdoc />
+		public override void Draw()
+		{
+			base.Draw();
+
+			Render2D.DrawTexture(Image, new Rectangle(Vector2.Zero, Size), TintColor);
+		}
 	}
 }
+
 ```
 
 As you can see it exposes a texture property and the tint color used for rendering. Use [Render2D](https://docs.flaxengine.com/api/FlaxEngine.Render2D.html) to perform custom rendering tasks. Also you can override all control events to provide any other custom logic for your UI. Feel free to experiment.

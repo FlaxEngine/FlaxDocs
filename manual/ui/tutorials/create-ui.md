@@ -12,7 +12,7 @@ To spawn a UI Canvas use the 'Toolbox' window by dragging and dropping the **UI 
 
 ## 2. Create a `UIControl`
 
-Follow the same steps as in the previous steps, except now create a [UI Control](../control/index.md) actor that represents a single GUI control. Add it as a child to the *UI Canvas* (as shown in a picture below).
+Follow the same steps as in the previous step, except now create a [UI Control](../control/index.md) actor that represents a single GUI control. Add it as a child to the *UI Canvas* (as shown in a picture below).
 
 ![Spawn Control](media/spawn-control.png)
 
