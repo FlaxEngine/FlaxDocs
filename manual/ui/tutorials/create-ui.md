@@ -22,9 +22,9 @@ The created GUI will use a `Progress Bar` control to visualize the player's heal
 
 ![Set Type](media/set-progress-bar.png)
 
-Then the `UI Control` actor will link the created conrol to the GUI. Show the **Game** window tab to see the progress bar. You can adjust its properties using the panel below the *Set Type* button.
+Then the `UI Control` actor will link the created control to the GUI. Show the **Game** window tab to see the progress bar. You can adjust its properties using the panel below the *Set Type* button.
 
-![Edit Progress Bar](media/created-progress-bar.png)
+![Edit Progress Bar](media/created-progress-bar.gif)
 
 ## 4. Create a `PlayerHealth` script
 
@@ -84,7 +84,7 @@ Now drag and drop the script to the player actor.
 
 Select the player actor, next drag and drop the `UIControl` actor created in step no. 2 to assign a reference to it for the script.
 
-![Link Progress Bar](media/link-progress-bar.png)
+![Link Progress Bar](media/link-progress-bar.gif)
 
 ## 8. Test it out!
 
@@ -92,5 +92,5 @@ Finally, hit the **Play** button (or **F5** key) and test the player health cont
 
 Later you can link your existing gameplay logic to visualize the player's health level or create more of a HUD for your game.
 
-![Test Health Bar](media/test-progress-bar.png)
+![Test Health Bar](media/test-progress-bar.gif)
 
