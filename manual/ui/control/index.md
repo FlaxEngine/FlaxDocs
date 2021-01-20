@@ -4,7 +4,7 @@
 
 **UI Control** is an actor type that contains a single GUI control. It handles the control linkage to the parent container control or canvas and provides solid data serialization along with the C# API.
 
-## Setting up a control type
+## Setting the control type
 
 In the editor, to set the control type select the UI Control and click on the **Set Type** button. You can pick one type from the list or type to search by class name instead. It supports also custom control types created from code. To learn more about it see the related tutorial [here](../tutorials/create-custom-control.md).
 

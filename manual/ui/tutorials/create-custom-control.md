@@ -1,6 +1,6 @@
 # HOWTO: Create a custom control
 
-In this tutorial, you will learn how to create  a customized User Interface control for your game. Flax Engine uses UI scripted on a C# side so you can add your own controls and container controls as needed.
+In this tutorial, you will learn how to create a customized User Interface control for your game. Flax Engine uses UI scripted on a C# side so you can add your own controls and container controls as needed.
 
 ## 1. Create `MyControl` script
 
