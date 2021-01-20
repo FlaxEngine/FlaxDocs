@@ -37,9 +37,9 @@ The **UI** is one of the most important components of the games. Flax Games UI s
 
 * [How to create UI](tutorials/create-ui.md)
 * [How to create UI from code](tutorials/create-ui-from-code.md)
-* [How to create custom font material](tutorials/create-font-material.md)
-* [How to create custom GUI material](tutorials/create-gui-material.md)
+* [How to create a custom font material](tutorials/create-font-material.md)
+* [How to create a custom GUI material](tutorials/create-gui-material.md)
 * [How to blur UI panel background](tutorials/blur-background.md)
-* [How to create Main Menu](tutorials/create-main-menu.md)
-* [How to create custom control](tutorials/create-custom-control.md)
+* [How to create a Main Menu](tutorials/create-main-menu.md)
+* [How to create a custom control](tutorials/create-custom-control.md)
 

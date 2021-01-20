@@ -1,6 +1,6 @@
-# HOWTO: Create UI from code
+# HOWTO: Creating UI from code
 
-In this tutorial, you will learn how to create a User Interface for your game. Follow these steps to prepare a simple heath bar for your player.
+In this tutorial, you will learn how to create a user interface for your game. Follow these steps to prepare a simple heath bar for your player.
 
 ## 1. Create `PlayerHealthFromCode` script
 
@@ -8,7 +8,7 @@ Add a new script named `PlayerHealthFromCode` that will control the player's hea
 
 ## 2. Edit script
 
-Open script file and write the following code:
+Open the script file and write the following code:
 
 ```cs
 using FlaxEngine;
@@ -51,7 +51,7 @@ public class PlayerHealthFromCode : Script
 }
 ```
 
-As you can see it creates a `ProgressBar` control in `OnEnable` event and disposes it in `OnDisable`. The created GUI control is linked to the `RootControl.GameRoot` container control which is used as a main game UI control (the topmost).
+As you can see it creates a `ProgressBar` control in the `OnEnable` event and disposes it in `OnDisable`. The created GUI control is linked to the `RootControl.GameRoot` container control which is used as a main game UI control (the topmost).
 You can create more UI elements and manage them at runtime but remember to dispose or unlink them when the script is being disabled or removed from the game.
 
 ## 3. Add script to the player
@@ -60,9 +60,9 @@ Now drag and drop the script to the player actor.
 
 ## 4. Test it out!
 
-Finally, hit **Play** button (or **F5** key) and test the player health controller by using **Q** and **W** keys to change it dowm or up.
+Finally, hit the **Play** button (or **F5** key) and test the player health controller by using the **Q** and **W** keys to change it down or up.
 
-Later you can link your existing gameplay logic to visualize the player's health level or create more HUD for your game.
+Later you can link your existing gameplay logic to visualize the player's health level or create more of a HUD for your game.
 
 ![Test Health Bar](media/test-progress-bar.png)
 
