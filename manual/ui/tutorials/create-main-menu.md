@@ -39,7 +39,6 @@ Add a new script named `MainMenu` that will handle the button click events. To l
 ## 6. Edit the script
 
 Open the script file and write the following code:
-//TODO: Update the script to separate the buttons methods, next commit.
 ```cs
 using System.Collections.Generic;
 using FlaxEngine;
