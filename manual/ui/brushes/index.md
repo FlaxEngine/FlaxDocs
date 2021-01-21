@@ -2,7 +2,7 @@
 
 **Brushes** are objects that define the logic used to draw the GUI control area. For instance, [Image](../controls/image.md) control exposes the `Brush` property which can be assigned to describe how to render the image contents.
 
-Brushes can be created and modified via Editor or from C# code (see `IBrush` interface).
+Brushes can be created and modified via the editor or from C# code (see `IBrush` interface).
 To use the brush simply **select the brush type** from the dropdown menu and setup its properties (as shown in a picture below; editing Image control).
 
 ![Edit Brush](media/brush-set-type.png)
@@ -24,10 +24,12 @@ Brush that draws a single sprite from the sprite atlas.
 Brush that draws a render target surface (assigned from code).
 
 ```cs
-var texture = GPUDevice.CreateTexture();
+var texture = new GPUDevice().CreateTexture();
 var desc = GPUTextureDescription.New2D(640, 480, PixelFormat.R8G8B8A8_UNorm);
+
 texture.Init(ref desc);
 
+// Reference to an Image control
 image.Brush = new GPUTextureBrush(texture);
 ```
 
