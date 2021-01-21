@@ -23,7 +23,7 @@ By enabling **Use Dithered LOD Transition** option on model materials you can us
 
 ![Smooth Model LOD switching](media/lod_transition.gif)
 
-In some cases, eg. during the cut-scenes it may be required to bump the visual quality of the scene and ignore the lower LODs. To achive this you can apply the Model LOD Bias per view using the following C# code:
+In some cases, eg. during the cut-scenes it may be required to bump the visual quality of the scene and ignore the lower LODs. To achieve this you can apply the Model LOD Bias per view using the following C# code:
 
 ``
 MainRenderTask.Instance.View.ModelLODBias = 2;
@@ -46,7 +46,7 @@ Model assets are used by the many parts of the engine. The most common case is b
 ## Procedural geometry
 
 Flax provides a C# scripting API to generate procedural mesh geometry offline or at runtime.
-Created model from code can have all the proeprties as the imported one. Althog there are some limitations like no baking lightmaps or reduced amount of LODs. Hovewer procedural models can be saved to the asset file in the editor and then used in a game. This feature can be highly used by the Editor Plugins.
+Model created from code can have all the properties as the imported one. Although there are some limitations like no baking lightmaps or reduced amount of LODs. However procedural models can be saved to the asset file in the editor and then used in a game. This feature can be highly used by the Editor Plugins.
 
 To learn more about creating procedural meshes see the [tutorial here](generate-model.md).
 
@@ -56,7 +56,7 @@ Flax supports hardware geometry instancing out of the box. During scene renderin
 
 ## Vertex Painting
 
-Another important topic related to models is **Vertex Painting**. It is a process of applying custom colors to the model geometry represented by the vertice sof the meshe. This techqnice can be used to customize model instance in the level. For instance, wall material can use red channel of the vertex color to display the wet areas. Then level designer can paint wall vertices to make a certaing part of the model appear wet. To learn more about this process see the related docuemntation [here](vertex-painting.md).
+Another important topic related to models is **Vertex Painting**. It is a process of applying custom colors to the model geometry represented by the vertices of the mesh. This technique can be used to customize model instance in the level. For instance, wall material can use red channel of the vertex color to display the wet areas. Then level designer can paint wall vertices to make a certaing part of the model appear wet. To learn more about this process see the related documentation [here](vertex-painting.md).
 
 ## Vertex properties
 
