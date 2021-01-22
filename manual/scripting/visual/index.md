@@ -6,6 +6,10 @@ Flax Engine supports fully Visual Scripting with lots of great features such as:
 
 Follow this documentation section to learn how to create your own visual scripts and use them in a game. Also, if you see any code examples in the *Flax Documentation* that are written in C# you can similarly use them in visual scripts since the engine uses the same API in all languages.
 
+### In this section
+
+* [Events](events.md)
+
 ## How to create Visual Script?
 
 ### New Visual Script asset
@@ -107,6 +111,10 @@ The last step is to add this script to an actor on the scene, set the Message pr
 
 Feel free to start coding your game logic in Visual Scripting language!
 Also, since Visual Scripting uses C# API of the engine you can use this [API reference](https://docs.flaxengine.com/api/FlaxEngine.html).
+
+## Events in Visual Scripts
+
+When working with physics and gameplay you might want to handle collision or **trigger events** inside VIsual Script. To see how to do it follow this documentation section related to [Events](events.md).
 
 ## Interop with C\+\+
 

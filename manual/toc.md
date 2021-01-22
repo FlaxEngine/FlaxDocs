@@ -156,6 +156,7 @@
 ## [Scripting restrictions](scripting/restrictions.md)
 ## [C++ Scripting](scripting/cpp/index.md)
 ## [Visual Scripting](scripting/visual/index.md)
+### [Events](scripting/visual/events.md)
 ## [Plugins](scripting/plugins/index.md)
 ### [Plugins Window](scripting/plugins/plugins-window.md)
 ### [Plugin Project](scripting/plugins/plugin-project.md)
