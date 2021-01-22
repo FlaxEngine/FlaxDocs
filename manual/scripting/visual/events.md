@@ -18,7 +18,7 @@ Now, add **Bind TriggerEnter** method and connect it to Cast outputs. We will us
 
 ![Bind Trigger Enter Event](media/bind-trigger-enter.png)
 
-As you can see it shows the handler function dropdown menu as disabled which means there ar eno valid functions on a graph to call for event. Let's **use red button** to quickly create new event handler function and use it in that bind node.
+As you can see it shows the handler function dropdown menu as disabled which means there are no valid functions on a graph to call for event. Let's **use red button** to quickly create new event handler function and use it in that bind node.
 
 ![Add Trigger Event Handler Function](media/add-trigger-event-handler.gif)
 
@@ -33,3 +33,6 @@ Finally we can test this script. Create collider (eg. box collider), adjust it's
 Then you can **play game** and see the log print when something enters this trigger.
 
 ![Trigger Event Showcase](media/vs-trigger-event-showcase.gif)
+
+> [!Tip]
+> You can manually unregister function from event by using **Unbind XXX** node. Also, Flax will unregister event automatically when script gets deleted.
