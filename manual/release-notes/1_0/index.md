@@ -87,6 +87,61 @@ To learn more see the detailed changelog (but it's long as always).
 
 ## Changelog
 
+### Version 1.0.6215 - 6 January 2021
+
+Contributors: jb-perrier, DaveTheGameDev, stefnotch, dragonCASTjosh, Galbi3000, bolognatic, klukule, VNNCC, jfaz1, seapulse
+PRs merged: 34
+
+* Add support for Visual Studio Code Insiders
+* Add logging offset for Json parsing errors
+* Add IconsScale to editor interface options
+* Add additional check for twice plugin initialization in case of error
+* Add support for hexadecimal values in editor value fields
+* Add support for using unsigned integer input fields in Visject Surface editor
+* Add `IgnoreMissingDocumentationWarnings` option into generated csproj files
+* Add `Generate collision data` from Model context menu
+* Add returning focus to the previous control when closing a context menu
+* Add support for active logging of the process output on Windows
+* Remove TAA rendering implementation
+* Reimplement Motion Blur
+* Remove deprecated and unused OpenGL graphics backend
+* Change maximum window size to 4096
+* Update DirectXShaderCompiler to 1.6
+* Fix null character at shader sources at during game cooking
+* Fix using AssetRefEditor for editing asset reference on Guid property
+* Fix PlatformSettings typedef on Android
+* Fix PCF shadow uvs vector trunc warning
+* Fix Editor title bar on High DPI
+* Fix compiler errors with Vulkan 1.2
+* Fix crash on scripting reload when using Anim Graph with custom nodes
+* Fix context menu positioning for child menus when flipping the direction over Y axis
+* Fix editing overridden particle emitter parameter in particle system window
+* Fix editor viewport camera glitch on first frame when using camera orbiting
+* Fix flashing tooltips
+* Fix GamePlugin only used in PlayMode/Cooked game
+* Fix undo redo flags in play mode
+* Fix preserving Editor undo actions during play mode
+* Fix link to Github issues page
+* Fix build scenes toolstrip button enabled state
+* Fix inverted Y Gizmo Rotation
+* Fix Editor features usage enable when no scene is loaded
+* Fix crash when in `ScriptingObject::ToString()` when class is missing
+* Fix more dpi issues
+* Fix shortcuts (F5, F6, F11) in play mode in editor
+* Fix removing namespace from nodes in imported model files
+* Fix `GPU timer query detected` warning to be single-time
+* Fix speed change scrolling being wonky
+* Fix preventing loading 'null' style in Editor
+* Fix C# methods lookup for method signatures with output structure parameter passed as reference
+* Fix DockHintWindow drag offset if it was invalid when initializing on initial mouse click
+* Fix comparing String with StringView
+* Fix logging process output on Windows
+* Fix `Length` node in Visual Script
+* Fix renaming files to same name with different case
+* Fix double extensions when user specifies one during asset creation
+* Fix wrong engine path with RegisterEngine script as admin
+* Fix error when running Flax dev scripts without Nuget installed (or in different location)
+
 ### Version 1.0.6214 - 17 December 2020
 
 * Add **Visual Scripting**

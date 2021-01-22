@@ -1,6 +1,6 @@
 # Controls
 
-Games created with Flax build UI using **controls**. Each control is an independant object and implements onlt the most basic conepts like transformation, background color, and visibility. The more specific logic like click event, text drawing, child controls layout can be achived usign a specific control types. Flax Engine offers a solid set of ready to use controls that can be used in a games GUI. To create own control types see a related tutorial [here](../tutorials/create-custom-control.md).
+Games created with Flax build UI using **controls**. Each control is an independant object and implements only the most basic conepts like transformation, background color, and visibility. The more specific logic like click event, text drawing, child controls layout can be achived using a specific control type. Flax offers a solid set of ready to use controls that can be used in a games GUI. To create your own control types see a related tutorial [here](../tutorials/create-custom-control.md).
 
 # Default control types
 

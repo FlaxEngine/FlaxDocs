@@ -2,4 +2,4 @@
 
 ![TextBox](media/textbox.png)
 
-The **TextBox** control lets user to enter a value using a keyboard (as a text).
+The **TextBox** control lets the user enter a value using the keyboard (as text).

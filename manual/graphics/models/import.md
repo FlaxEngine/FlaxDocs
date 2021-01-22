@@ -9,7 +9,7 @@ After choosing the files **Import file settings** dialog shows up. It's used to 
 > [!Note]
 > Using **Import file settings** dialog you can select more than one model at once (or use **Ctrl+A** to select all) and specify import options at once.
 
-Every model can be reimport (relative path to the source file is cached) and import settings modified using [Model Window](model-window.md).
+Every model can be reimported (relative path to the source file is cached) and import settings modified using [Model Window](model-window.md).
 
 ## Supported file types
 
@@ -37,11 +37,11 @@ Example usage (from Blender):
 
 ![Model LODs import example](media/model-lods-example.jpg)
 
-## Model import settigns
+## Model import settings
 
 ![Models](media/imort-model-settigns.jpg)
 
-Flax uses the same import settings data scheme for **models**, **skinned models** and **animations** as they are can be imported from the same source files (eg. `.fbx` or `.dae`).
+Flax uses the same import settings data scheme for **models**, **skinned models** and **animations** as they all can be imported from the same source files (eg. `.fbx` or `.dae`).
 
 | Property | Description |
 |--------|--------|
@@ -71,11 +71,11 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 | **Frames Range End** | Imported animation last frame index. Used only if Duration mode is set to Custom. |
 | **Default Frame Rate** | The imported animation default frame rate. Can specify the default frames per second amount for imported animation. If value is 0 then the original animation frame rate will be used. |
 | **Sampling Rate** | The imported animation sampling rate. If value is 0 then the original animation speed will be used. |
-| **Skip Empty Curves** | If checked, the imported animation will have removed tracks with no keyframes or unspeficied data. Disable it to leave the data as it is. |
+| **Skip Empty Curves** | If checked, the imported animation will have removed tracks with no keyframes or unspecified data. Disable it to leave the data as it is. |
 | **Optimize Keyframes** | If checked, the imported animation channels will be optimized to remove redundant keyframes. This option helps with getting better animation sampling performance. |
 | **Enable Root Motion** | If checked, enables root motion extraction support from this animation. |
 | **Root Node Name** | The custom node name to be used as a root motion source. If not specified the actual root node will be used. |
-| **Animation Index** | The zero-based index for the animation clip to import. If the source file has more than one animation it can be used to pick a desire clip. |
+| **Animation Index** | The zero-based index for the animation clip to import. If the source file has more than one animation it can be used to pick a desired clip. |
 |||
 | **Generate LODs** | If checked, the importer will generate a sequence of LODs based on the base LOD index. |
 | **Base LOD** | The index of the LOD from the source model data to use as a reference for following LODs generation. |

@@ -34,7 +34,7 @@ public class TextureFromCode : Script
         initData.Height = 64;
         initData.ArraySize = 1;
         initData.Format = PixelFormat.R8G8B8A8_UNorm;
-        var data = new byte[initData.Width * initData.Height * initData.Format.SizeInBytes()];
+        var data = new byte[initData.Width * initData.Height * PixelFormatExtensions.SizeInBytes(initData.Format)];
         fixed (byte* dataPtr = data)
         {
             // Generate pixels data (linear gradient)
@@ -71,7 +71,7 @@ public class TextureFromCode : Script
         // Add a model actor and use the dynamic material for rendering
         var staticModel = Actor.GetOrAddChild<StaticModel>();
         staticModel.Model = Model;
-        staticModel.Entries[0].Material = material;
+        staticModel.SetMaterial(0, material);
     }
 
     public override void OnDestroy()
