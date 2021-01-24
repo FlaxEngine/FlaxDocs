@@ -90,6 +90,7 @@ To learn more see the detailed changelog (but it's long as always).
 ### Version 1.0.6215 - 6 January 2021
 
 Contributors: jb-perrier, DaveTheGameDev, stefnotch, dragonCASTjosh, Galbi3000, bolognatic, klukule, VNNCC, jfaz1, seapulse
+
 PRs merged: 34
 
 * Add support for Visual Studio Code Insiders
@@ -136,6 +137,7 @@ PRs merged: 34
 * Fix DockHintWindow drag offset if it was invalid when initializing on initial mouse click
 * Fix comparing String with StringView
 * Fix logging process output on Windows
+* Fix using unsigned integer properties in Visual Script editor
 * Fix `Length` node in Visual Script
 * Fix renaming files to same name with different case
 * Fix double extensions when user specifies one during asset creation
