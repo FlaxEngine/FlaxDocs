@@ -12,6 +12,10 @@ All samples can be downloaded from the store (via Launcher) or from open-source 
 
 ![First Person Shooter Template](media/FirstPersonShooterTemplate.png)
 
+## Third Person Shooter Template
+
+![Third Person Shooter Template](media/ThirdPersonShooterTemplate.png)
+
 ## Graphics Features Tour
 
 ![Graphics Features Tour](media/GraphicsFeaturesTour.png)
@@ -27,6 +31,3 @@ All samples can be downloaded from the store (via Launcher) or from open-source 
 ## Particles Features Tour
 
 ![Particles Features Tour](media/ParticlesFeaturesTour.png)
-
-
-
