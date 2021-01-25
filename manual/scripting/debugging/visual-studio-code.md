@@ -24,7 +24,7 @@ Open Flax Editor, go to **Tools -> Options** in main menu to open editor options
 To debug script code it has to be attached to the actor in the scene.
 Simply drag and drop it into the selected actor properties area.
 
-![Add script](../media/use-script-2.jpg)
+![Add script](../media/attach-script.gif)
 
 ### 4. Open script in Visual Studio Code
 

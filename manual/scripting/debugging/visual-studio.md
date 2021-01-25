@@ -24,7 +24,7 @@ Download and install [Flax Engine Tools for Visual Studio](https://marketplace.v
 To debug script code it has to be attached to the actor in the scene.
 Simply drag and drop it into the selected actor properties area.
 
-![Add script](../media/use-script-2.jpg)
+![Add script](../media/attach-script.gif)
 
 ### 3. Open script in Visual Studio
 
