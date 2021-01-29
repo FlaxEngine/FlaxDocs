@@ -4,6 +4,7 @@ _tocRel: toc.html
 _navPath: toc.html
 _navRel: ../toc.html
 _tocTitle: 'API'
+_disableContribution: true
 ---
 
 # Flax API
