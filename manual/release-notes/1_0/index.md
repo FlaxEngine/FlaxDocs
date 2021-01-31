@@ -87,6 +87,74 @@ To learn more see the detailed changelog (but it's long as always).
 
 ## Changelog
 
+### Version 1.0.6216 - 31 January 2021
+
+Contributors: W2Wizard, jb-perrier, VNNCC, MinhCT, stefnotch, DaruBrub, intolerantape, TalkingWallnut, Evildea, Vizepi, GoaLitiuM
+
+PRs merged: 41
+
+* Add using additional temporary temp param in scripting bindings glue code for array parameters using `BytesContainer`
+* Add Orientation to editor view menu
+* Add golden ratio constant
+* Add **Github Actions** usage for CI
+* Add executable flag for scripts
+* Add more splash screen quotes
+* Add Remap node to all graphs
+* Add contribution guidelines
+* Add `Mesh::UpdateMesh` methods similar to C# API
+* Add material node to mix Normal Maps
+* Add option to Invert Panning in editor viewport
+* Add Sphere Mask node to materials
+* Add docs about the clockwise order of the indices in mesh triangles
+* Add Battery information API
+* Add option to **format Visject nodes**
+* Add rotator node for materials
+* Add DDX/DDY nodes for materials
+* Add modern file dialog for browsing folders on Windows
+* Add inline for float16 compression and add code reference note
+* Add missing `FLAXENGINE_API` expose macro to engine math types
+* Add more utilities to Collisions Helper
+* Split `VectorInt.h` into separate files for Int2, Int3 and Int4
+* Improve Visject Surface connections dragging
+* Improve build times in development configuration
+* Improve Variant typename loading if length is zero
+* Fix BlurPanel crashes due to slider for BlurStrength
+* Fix Editor windows position (on startup) for multi screens
+* Fix missing public empty constructor for UICanvas
+* Fix typos
+* Fix error when opening Anim Graph with node name not existing in skeleton anymore
+* Fix plane model normals
+* Fix Visual Script invoke method node signature check for output params passed by reference
+* Fix Unsigned Integer value field to prevent negative values
+* Fix missing focus for SliderControl
+* Fix open file dialog on Windows
+* Fix Visject Node layout when adding boxes from code
+* Fix missing animated model parameter error
+* Fix to disable terrain and foliage buttons if no scene is present
+* Fix a ton of typos
+* Fix `CTRL+W` issue in play mode in game view in Editor
+* Fix tracking mouse offset on high DPI screens
+* Fix scene animation rendering issue with game window is not selected tab
+* Fix crash in motion blur tile size calculation
+* Fix plane model incorrect rotation in material preview
+* Fix assertion during engine shutdown after crash during rendering
+* Fix crash when using Byte, Int16 or UInt16 as VS parameters
+* Fix loading `VariantType.Blob`
+* Fix crash when creating Empty particle emitter
+* Fix exporting textures in format `R10G10B10A2` and `R11G11B10` on Windows
+* Fix foot offset in Character Controller
+* Fix viewport zooming issues
+* Fix crash when applying changes to prefab
+* Fix ResizeAuto in SurfaceNode to include custom controls
+* Fix `Get Node Transform` size and missing output signal box
+* Fix crash on Android if GPU doesn't support linear sampling of the shadow map
+* Fix crash when resizing existing MaterialSlots collection for model
+* Fix padding in Editor info dialog
+* Fix error when animated model skeleton has duplicated node name
+* Fix crash when reloading scripts with opened custom json asset
+* Fix the crash when slope limit was set to 90 degrees (on Character Controller)
+* Fix fade distance node in materials
+
 ### Version 1.0.6215 - 6 January 2021
 
 Contributors: jb-perrier, DaveTheGameDev, stefnotch, dragonCASTjosh, Galbi3000, bolognatic, klukule, VNNCC, jfaz1, seapulse
