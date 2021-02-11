@@ -16,7 +16,7 @@ Flax Editor and Unity Editor are very similar. You can see the color-coded, high
 ![Flax Editor](../media/flax-layout.png)
 
 > [!Tip]
-> You don't have to pay or buy any *Pro* version to have a *Dark Theme* in the Flax Editor.
+> Flax ships with a nice *Dark Theme* by default. No need to go into your settings to fix that.
 
 ## Terminology
 
