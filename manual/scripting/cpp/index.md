@@ -22,7 +22,7 @@ Flax Editor contains in-build C# compiler for scripts but for C\+\+ scripting th
 
 ## How to create C++ script?
 
-By default, new Flax projects have default game module using C# scripting. You can learn more about modules and targets [here](../../editor/flax-build/index.md). After installing requried tools, open `Scripts/<module_name>/<module_name>.Gen.cs` (i.e. `Scripts/Game/Game.Gen.cs`). This file is a build script for the code module and can specify its build environment and dependencies. It contains overriden **Setup(BuildOptions options)** method which performs the module initialization.
+By default, new Flax projects have default game module using C# scripting. You can learn more about modules and targets [here](../../editor/flax-build/index.md). After installing requried tools, open `Source/<module_name>/<module_name>.Gen.cs` (i.e. `Source/Game/Game.Gen.cs`). This file is a build script for the code module and can specify its build environment and dependencies. It contains overriden **Setup(BuildOptions options)** method which performs the module initialization.
 
 Find the `BuildNativeCode = false` line and change the value to `true` or add the following code at the end of the method:
 
@@ -30,7 +30,7 @@ Find the `BuildNativeCode = false` line and change the value to `true` or add th
 BuildNativeCode = true;
 ```
 
-Now, you can **add new C\+\+ script** to the project and they will be compiled into the binary libraries and loaded by the engine. To do so, navigate in *Content Window* to that module sources folder `Scripts/<module_name>`, *right-click* and choose option **C++ Script**. Specify its name and confirm with *Enter*.
+Now, you can **add new C\+\+ script** to the project and they will be compiled into the binary libraries and loaded by the engine. To do so, navigate in *Content Window* to that module sources folder `Source/<module_name>`, *right-click* and choose option **C++ Script**. Specify its name and confirm with *Enter*.
 
 ![New Native Script C\+\+](media/new-cpp-script.png)
 
