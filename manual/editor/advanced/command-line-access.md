@@ -37,6 +37,7 @@ Of course, all those things can be made manually by using Flax Editor C# API and
 | **-monolog** | Enables advanced debugging for Mono runtime. Can be used to debug problems with managed scripting runtime. Produces lots of logs. |
 | **-mute** | Disables audio playback and uses Null Audio Backend. |
 | **-skipcompile** | Skips the scripts compilation on editor startup, useful when launching engine from IDE. |
+| **-shaderdebug** | Enables debugging data generation for shaders and disables shader compiler optimizations. |
 
 ## Editor-only options
 
