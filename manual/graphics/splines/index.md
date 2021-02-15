@@ -18,8 +18,28 @@ To learn more about splines follow the dedicated tutorials in this section.
 
 ## How to create spline?
 
-To add spline to your scene simply *drag&drop* from the *Toolbox* window into the level viewport or use *right-click* and select option **New -> Other -> SPline**.
+To add spline to your scene simply *drag&drop* from the *Toolbox* window into the level viewport or use *right-click* and select option **New -> Other -> Spline**.
+
+![Selected Spline Editor](media/spline-editor.png)
+
+After selecting created spline *Properties* window will display the spline settings and spline keyframes list. It can be used to manually edit the Bezier curve (value and both tangents per point). You can also use utility buttons to adjust curves to have a linear shape or smooth shape (automatic tangents calculation). Splines support looping which automatically synchronizes the last spline curve point with the first one to make it loop.
+
+The editor supports selecting spline points in the level editor and using gizmo to transform them. After selecting a point it will display its tangent points which can be edited too. You can quickly create curves in the level with gizmo and using *Shift* key to insert new points.
+
+![Spline Points Duplicating Editor](media/spline-duplicating.gif)
 
 ## How to create spline from code?
 
-TODO
+Spline actors have very rich scripting API and support dynamic generation at runtime from code. In the following example script spawn a spline and creates a few points over it.
+
+```cs
+var spline = new Spline
+{
+    Name = "My Spline",
+};
+spline.AddSplineLocalPoint(new Vector3(0, 0, 0), false);
+spline.AddSplineLocalPoint(new Vector3(0, 0, 500), false);
+spline.AddSplineLocalPoint(new Vector3(0, 400, 700), false);
+spline.SetTangentsSmooth();
+Level.SpawnActor(spline);
+```
