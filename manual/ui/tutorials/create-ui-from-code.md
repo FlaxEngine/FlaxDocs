@@ -67,5 +67,5 @@ Finally, hit the **Play** button (or **F5** key) and test the player health cont
 
 Later you can link your existing gameplay logic to visualize the player's health level or create more of a HUD for your game.
 
-![Test Health Bar](media/test-progress-bar.png)
+![Test Health Bar](media/test-progress-bar.gif)
 

@@ -186,17 +186,17 @@
         </member>
         <member name="P:FlaxEngine.SceneAnimationPlayer.IsPlaying">
             <summary>
-            Gets the value that determinates whether the scene animation is playing.
+            Gets the value that determines whether the scene animation is playing.
             </summary>
         </member>
         <member name="P:FlaxEngine.SceneAnimationPlayer.IsPaused">
             <summary>
-            Gets the value that determinates whether the scene animation is paused.
+            Gets the value that determines whether the scene animation is paused.
             </summary>
         </member>
         <member name="P:FlaxEngine.SceneAnimationPlayer.IsStopped">
             <summary>
-            Gets the value that determinates whether the scene animation is stopped.
+            Gets the value that determines whether the scene animation is stopped.
             </summary>
         </member>
         <member name="P:FlaxEngine.SceneAnimationPlayer.Time">
@@ -435,7 +435,7 @@
         </member>
         <member name="P:FlaxEngine.AudioSource.State">
             <summary>
-            Gets the the current state of the audio playback (playing/paused/stopped).
+            Gets the current state of the audio playback (playing/paused/stopped).
             </summary>
         </member>
         <member name="P:FlaxEngine.AudioSource.Time">
@@ -2646,7 +2646,7 @@
             </summary>
             <param name="hexString">The hexadecimal string.</param>
             <param name="value">Output value.</param>
-            <returns>True if value has benn parsed, otherwise false.</returns>
+            <returns>True if value has been parsed, otherwise false.</returns>
         </member>
         <member name="M:FlaxEngine.Color.FromBgra(System.Int32)">
             <summary>
@@ -2722,7 +2722,7 @@
         </member>
         <member name="M:FlaxEngine.Color.FromHSV(FlaxEngine.Vector3,System.Single)">
             <summary>
-            Creates RGB color from Hue[0-360], Saturation[0-1] and Value[0-1] paked to XYZ vector.
+            Creates RGB color from Hue[0-360], Saturation[0-1] and Value[0-1] packed to XYZ vector.
             </summary>
             <param name="hsv">The HSV color.</param>
             <param name="alpha">The alpha value. Default is 1.</param>
@@ -13073,7 +13073,7 @@
             Gets a CPU pointer to the resource by mapping its contents. Denies the GPU access to that resource.
             </summary>
             <param name="mode">The map operation mode.</param>
-            <returns>The pointer ot the mapped CPU buffer with resource data or null if failed.</returns>
+            <returns>The pointer of the mapped CPU buffer with resource data or null if failed.</returns>
         </member>
         <member name="M:FlaxEngine.GPUBuffer.Unmap">
             <summary>
@@ -15426,7 +15426,7 @@
         </member>
         <member name="F:FlaxEngine.ToneMappingSettings.WhiteTint">
             <summary>
-            Adjusts the white balance temperature tint for the scene by adjusting the cyan and magenta color ranges. Ideally, this setting should be used once you've adjusted the white balance temporature to get accurate colors. Under some light temperatures, the colors may appear to be more yellow or blue. This can be used to balance the resulting color to look more natural. The default value is `0`.
+            Adjusts the white balance temperature tint for the scene by adjusting the cyan and magenta color ranges. Ideally, this setting should be used once you've adjusted the white balance temperature to get accurate colors. Under some light temperatures, the colors may appear to be more yellow or blue. This can be used to balance the resulting color to look more natural. The default value is `0`.
             </summary>
         </member>
         <member name="F:FlaxEngine.ToneMappingSettings.Mode">
@@ -17785,7 +17785,7 @@
             Mesh data will be cached and uploaded to the GPU with a delay.
             </summary>
             <param name="vertices">The mesh vertices positions. Cannot be null.</param>
-            <param name="triangles">The mesh index buffer (triangles). Uses 32-bit stride buffer. Cannot be null.</param>
+            <param name="triangles">The mesh index buffer (clockwise triangles). Uses 32-bit stride buffer. Cannot be null.</param>
             <param name="normals">The normal vectors (per vertex).</param>
             <param name="tangents">The normal vectors (per vertex). Use null to compute them from normal vectors.</param>
             <param name="uv">The texture coordinates (per vertex).</param>
@@ -17798,7 +17798,7 @@
             Mesh data will be cached and uploaded to the GPU with a delay.
             </summary>
             <param name="vertices">The mesh vertices positions. Cannot be null.</param>
-            <param name="triangles">The mesh index buffer (triangles). Uses 32-bit stride buffer. Cannot be null.</param>
+            <param name="triangles">The mesh index buffer (clockwise triangles). Uses 32-bit stride buffer. Cannot be null.</param>
             <param name="normals">The normal vectors (per vertex).</param>
             <param name="tangents">The normal vectors (per vertex). Use null to compute them from normal vectors.</param>
             <param name="uv">The texture coordinates (per vertex).</param>
@@ -17811,7 +17811,7 @@
             Mesh data will be cached and uploaded to the GPU with a delay.
             </summary>
             <param name="vertices">The mesh vertices positions. Cannot be null.</param>
-            <param name="triangles">The mesh index buffer (triangles). Uses 16-bit stride buffer. Cannot be null.</param>
+            <param name="triangles">The mesh index buffer (clockwise triangles). Uses 16-bit stride buffer. Cannot be null.</param>
             <param name="normals">The normal vectors (per vertex).</param>
             <param name="tangents">The tangent vectors (per vertex). Use null to compute them from normal vectors.</param>
             <param name="uv">The texture coordinates (per vertex).</param>
@@ -17824,7 +17824,7 @@
             Mesh data will be cached and uploaded to the GPU with a delay.
             </summary>
             <param name="vertices">The mesh vertices positions. Cannot be null.</param>
-            <param name="triangles">The mesh index buffer (triangles). Uses 16-bit stride buffer. Cannot be null.</param>
+            <param name="triangles">The mesh index buffer (clockwise triangles). Uses 16-bit stride buffer. Cannot be null.</param>
             <param name="normals">The normal vectors (per vertex).</param>
             <param name="tangents">The tangent vectors (per vertex). Use null to compute them from normal vectors.</param>
             <param name="uv">The texture coordinates (per vertex).</param>
@@ -17881,7 +17881,7 @@
             Downloads the third vertex buffer that contains mesh vertices data. To download data from GPU set <paramref name="forceGpu"/> to true and call this method from the thread other than main thread (see <see cref="P:FlaxEngine.Platform.IsInMainThread"/>).
             </summary>
             <remarks>
-            If mesh has no vertex colors (stored in vertex buffer 2) the the returned value is null.
+            If mesh has no vertex colors (stored in vertex buffer 2) the returned value is null.
             </remarks>
             <param name="forceGpu">If set to <c>true</c> the data will be downloaded from the GPU, otherwise it can be loaded from the drive (source asset file) or from memory (if cached). Downloading mesh from GPU requires this call to be made from the other thread than main thread. Virtual assets are always downloaded from GPU memory due to lack of dedicated storage container for the asset data.</param>
             <returns>The gathered data or null if mesh has no vertex colors.</returns>
@@ -18156,7 +18156,7 @@
             Mesh data will be cached and uploaded to the GPU with a delay.
             </summary>
             <param name="vertices">The mesh vertices positions. Cannot be null.</param>
-            <param name="triangles">The mesh index buffer (triangles). Uses 32-bit stride buffer. Cannot be null.</param>
+            <param name="triangles">The mesh index buffer (clockwise triangles). Uses 32-bit stride buffer. Cannot be null.</param>
             <param name="blendIndices">The skinned mesh blend indices buffer. Contains indices of the skeleton bones (up to 4 bones per vertex) to use for vertex position blending. Cannot be null.</param>
             <param name="blendWeights">The skinned mesh blend weights buffer (normalized). Contains weights per blend bone (up to 4 bones per vertex) of the skeleton bones to mix for vertex position blending. Cannot be null.</param>
             <param name="normals">The normal vectors (per vertex).</param>
@@ -18170,7 +18170,7 @@
             Mesh data will be cached and uploaded to the GPU with a delay.
             </summary>
             <param name="vertices">The mesh vertices positions. Cannot be null.</param>
-            <param name="triangles">The mesh index buffer (triangles). Uses 16-bit stride buffer. Cannot be null.</param>
+            <param name="triangles">The mesh index buffer (clockwise triangles). Uses 16-bit stride buffer. Cannot be null.</param>
             <param name="blendIndices">The skinned mesh blend indices buffer. Contains indices of the skeleton bones (up to 4 bones per vertex) to use for vertex position blending. Cannot be null.</param>
             <param name="blendWeights">The skinned mesh blend weights buffer (normalized). Contains weights per blend bone (up to 4 bones per vertex) of the skeleton bones to mix for vertex position blending. Cannot be null.</param>
             <param name="normals">The normal vectors (per vertex).</param>
@@ -18246,7 +18246,7 @@
             <summary>
             Gets the vertex shader.
             </summary>
-            <param name="name">Thr shader program name.</param>
+            <param name="name">The shader program name.</param>
             <param name="permutationIndex">The shader permutation index.</param>
             <returns>The shader object.</returns>
         </member>
@@ -18254,7 +18254,7 @@
             <summary>
             Gets the hull shader.
             </summary>
-            <param name="name">Thr shader program name.</param>
+            <param name="name">The shader program name.</param>
             <param name="permutationIndex">The shader permutation index.</param>
             <returns>The shader object.</returns>
         </member>
@@ -18262,7 +18262,7 @@
             <summary>
             Gets domain shader.
             </summary>
-            <param name="name">Thr shader program name.</param>
+            <param name="name">The shader program name.</param>
             <param name="permutationIndex">The shader permutation index.</param>
             <returns>The shader object.</returns>
         </member>
@@ -18270,7 +18270,7 @@
             <summary>
             Gets the geometry shader.
             </summary>
-            <param name="name">Thr shader program name.</param>
+            <param name="name">The shader program name.</param>
             <param name="permutationIndex">The shader permutation index.</param>
             <returns>The shader object.</returns>
         </member>
@@ -18278,7 +18278,7 @@
             <summary>
             Gets the pixel shader.
             </summary>
-            <param name="name">Thr shader program name.</param>
+            <param name="name">The shader program name.</param>
             <param name="permutationIndex">The shader permutation index.</param>
             <returns>The shader object.</returns>
         </member>
@@ -18286,7 +18286,7 @@
             <summary>
             Gets the compute shader.
             </summary>
-            <param name="name">Thr shader program name.</param>
+            <param name="name">The shader program name.</param>
             <param name="permutationIndex">The shader permutation index.</param>
             <returns>The shader object.</returns>
         </member>
@@ -19017,7 +19017,7 @@
         </member>
         <member name="T:FlaxEngine.CursorLockMode">
             <summary>
-            Hardware mouse cursor behaviour.
+            Hardware mouse cursor behavior.
             </summary>
         </member>
         <member name="F:FlaxEngine.CursorLockMode.None">
@@ -25877,6 +25877,46 @@
             Determines the limit of the joint. Limit constrains the motion to the specified angle range. You must enable the limit flag on the joint in order for this to be recognized.
             </remarks>
         </member>
+        <member name="T:FlaxEngine.BatteryInfo">
+            <summary>
+            Contains information about power supply (battery).
+            </summary>
+        </member>
+        <member name="F:FlaxEngine.BatteryInfo.State">
+            <summary>
+            Power supply state.
+            </summary>
+        </member>
+        <member name="F:FlaxEngine.BatteryInfo.BatteryLifePercent">
+            <summary>
+            Battery percentage left (normalized to 0-1 range).
+            </summary>
+        </member>
+        <member name="T:FlaxEngine.BatteryInfo.States">
+            <summary>
+            Power supply status.
+            </summary>
+        </member>
+        <member name="F:FlaxEngine.BatteryInfo.States.Unknown">
+            <summary>
+            Unknown status.
+            </summary>
+        </member>
+        <member name="F:FlaxEngine.BatteryInfo.States.BatteryCharging">
+            <summary>
+            Power supply is connected and battery is charging.
+            </summary>
+        </member>
+        <member name="F:FlaxEngine.BatteryInfo.States.BatteryDischarging">
+            <summary>
+            Device is running on a battery.
+            </summary>
+        </member>
+        <member name="F:FlaxEngine.BatteryInfo.States.Connected">
+            <summary>
+            Device is connected to the stable power supply (AC).
+            </summary>
+        </member>
         <member name="T:FlaxEngine.CPUInfo">
             <summary>
             Contains information about CPU (Central Processing Unit).
@@ -26588,6 +26628,11 @@
         <member name="P:FlaxEngine.Platform.ClockFrequency">
             <summary>
             Gets the system clock frequency.
+            </summary>
+        </member>
+        <member name="P:FlaxEngine.Platform.BatteryInfo">
+            <summary>
+            Gets the battery information.
             </summary>
         </member>
         <member name="P:FlaxEngine.Platform.Dpi">
@@ -28977,6 +29022,16 @@
             <param name="pluginDesc">The plugin description.</param>
             <returns>True if load it, otherwise false.</returns>
         </member>
+        <member name="M:FlaxEngine.PluginManager.InitializeGamePlugins">
+            <summary>
+            Initialize all <see cref="T:FlaxEngine.GamePlugin"/>
+            </summary>
+        </member>
+        <member name="M:FlaxEngine.PluginManager.DeinitializeGamePlugins">
+            <summary>
+            Deinitialize all <see cref="T:FlaxEngine.GamePlugin"/>
+            </summary>
+        </member>
         <member name="M:FlaxEngine.PluginManager.GetPlugin``1">
             <summary>
             Returns the first plugin of the provided type.
@@ -29376,14 +29431,14 @@
         </member>
         <member name="T:FlaxEngine.UICanvas.TestCanvasIntersectionDelegate">
             <summary>
-            Delegate schema for the callback used to perform custom canvas intersection test. Can be used to implement a canvas tha has a holes or non-rectangular shape.
+            Delegate schema for the callback used to perform custom canvas intersection test. Can be used to implement a canvas that has a holes or non-rectangular shape.
             </summary>
             <param name="location">The location of the point to test in coordinates of the canvas root control (see <see cref="P:FlaxEngine.UICanvas.GUI"/>).</param>
             <returns>True if canvas was hit, otherwise false.</returns>
         </member>
         <member name="F:FlaxEngine.UICanvas.TestCanvasIntersection">
             <summary>
-            The callback used to perform custom canvas intersection test. Can be used to implement a canvas tha has a holes or non-rectangular shape.
+            The callback used to perform custom canvas intersection test. Can be used to implement a canvas that has a holes or non-rectangular shape.
             </summary>
         </member>
         <member name="T:FlaxEngine.UICanvas.CalculateRayDelegate">
@@ -29404,6 +29459,11 @@
             </summary>
             <param name="location">The location in screen-space.</param>
             <param name="ray">The output ray in world-space.</param>
+        </member>
+        <member name="M:FlaxEngine.UICanvas.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:FlaxEngine.UICanvas"/> class.
+            </summary>
         </member>
         <member name="P:FlaxEngine.UICanvas.Bounds">
             <summary>
@@ -34471,6 +34531,11 @@
             A value specifying the approximation of π/4 which is 45 degrees.
             </summary>
         </member>
+        <member name="F:FlaxEngine.Mathf.GoldenRatio">
+            <summary>
+            A value specifying the golden mean
+            </summary>
+        </member>
         <member name="M:FlaxEngine.Mathf.Abs(System.Single)">
             <summary>
             Returns the absolute value of f.
@@ -34652,6 +34717,13 @@
             <param name="a"></param>
             <param name="b"></param>
         </member>
+        <member name="M:FlaxEngine.Mathf.Max(System.UInt32,System.UInt32)">
+            <summary>
+            Returns the largest of two or more values.
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+        </member>
         <member name="M:FlaxEngine.Mathf.Max(System.Int32[])">
             <summary>
             Returns the largest of two or more values.
@@ -34693,6 +34765,13 @@
             <param name="values"></param>
         </member>
         <member name="M:FlaxEngine.Mathf.Min(System.Int32,System.Int32)">
+            <summary>
+            Returns the smallest of two or more values.
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+        </member>
+        <member name="M:FlaxEngine.Mathf.Min(System.UInt32,System.UInt32)">
             <summary>
             Returns the smallest of two or more values.
             </summary>
@@ -35190,6 +35269,15 @@
             <returns>The result of clamping a value between min and max</returns>
         </member>
         <member name="M:FlaxEngine.Mathf.Clamp(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Clamps the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="min">The min.</param>
+            <param name="max">The max.</param>
+            <returns>The result of clamping a value between min and max</returns>
+        </member>
+        <member name="M:FlaxEngine.Mathf.Clamp(System.UInt32,System.UInt32,System.UInt32)">
             <summary>
             Clamps the specified value.
             </summary>
@@ -38807,7 +38895,7 @@
             <remarks>
             Current order is resolved runtime, and can change if custom editor class has changed.
             </remarks>
-            <param name="order">The order order.</param>
+            <param name="order">The order.</param>
         </member>
         <member name="T:FlaxEngine.EnumDisplayAttribute">
             <summary>
@@ -39066,7 +39154,7 @@
         </member>
         <member name="T:FlaxEngine.SerializeAttribute">
             <summary>
-            Indicates that a field or a property of a serializable class should be be serialized. This class cannot be inherited.
+            Indicates that a field or a property of a serializable class should be serialized. This class cannot be inherited.
             </summary>
         </member>
         <member name="T:FlaxEngine.UnmanagedAttribute">
@@ -40294,7 +40382,7 @@
         </member>
         <member name="F:FlaxEngine.GUI.Dropdown.DropdownRoot.LostFocus">
             <summary>
-            Occurs when popup losts focus.
+            Occurs when popup lost focus.
             </summary>
         </member>
         <member name="F:FlaxEngine.GUI.Dropdown.DropdownRoot.ItemsContainer">
@@ -41564,7 +41652,7 @@
         </member>
         <member name="M:FlaxEngine.GUI.ContainerControl.IntersectsChildContent(FlaxEngine.GUI.Control,FlaxEngine.Vector2,FlaxEngine.Vector2@)">
             <summary>
-            Checks if given point in thi container control space intersects with the child control content.
+            Checks if given point in this container control space intersects with the child control content.
             Also calculates result location in child control space which can be used to feed control with event at that point.
             </summary>
             <param name="child">The child control to check.</param>
@@ -41609,7 +41697,7 @@
         </member>
         <member name="M:FlaxEngine.GUI.ContainerControl.DrawChildren">
             <summary>
-            Draws the children. Can be overriden to provide some customizations. Draw is performed with applied clipping mask for the client area.
+            Draws the children. Can be overridden to provide some customizations. Draw is performed with applied clipping mask for the client area.
             </summary>
         </member>
         <member name="M:FlaxEngine.GUI.ContainerControl.PerformLayout(System.Boolean)">
@@ -42336,14 +42424,14 @@
             <param name="location">Input location of the point to convert</param>
             <returns>Converted point location in control's space</returns>
         </member>
-        <member name="M:FlaxEngine.GUI.Control.ClientToScreen(FlaxEngine.Vector2)">
+        <member name="M:FlaxEngine.GUI.Control.PointToScreen(FlaxEngine.Vector2)">
             <summary>
             Converts point in the local control's space into screen coordinates
             </summary>
             <param name="location">Input location of the point to convert</param>
             <returns>Converted point location in screen coordinates</returns>
         </member>
-        <member name="M:FlaxEngine.GUI.Control.ScreenToClient(FlaxEngine.Vector2)">
+        <member name="M:FlaxEngine.GUI.Control.PointFromScreen(FlaxEngine.Vector2)">
             <summary>
             Converts point in screen coordinates into the local control's space
             </summary>
@@ -42391,7 +42479,7 @@
         </member>
         <member name="M:FlaxEngine.GUI.Control.OnParentChangedInternal">
             <summary>
-            Action fred when parent control gets changed.
+            Action fired when parent control gets changed.
             </summary>
         </member>
         <member name="M:FlaxEngine.GUI.Control.CacheRootHandle">
@@ -42413,14 +42501,14 @@
         </member>
         <member name="M:FlaxEngine.GUI.Control.SetUpdate(FlaxEngine.GUI.Control.UpdateDelegate@,FlaxEngine.GUI.Control.UpdateDelegate)">
             <summary>
-            Helper utility function to sets the update callback to the root. Does nothing if value has not been modified. Handles if control ahs no root or parent.
+            Helper utility function to sets the update callback to the root. Does nothing if value has not been modified. Handles if control has no root or parent.
             </summary>
-            <param name="onUpdate">The cached update callback delegate (field in teh custom control implementation).</param>
+            <param name="onUpdate">The cached update callback delegate (field in the custom control implementation).</param>
             <param name="value">The value to assign.</param>
         </member>
         <member name="M:FlaxEngine.GUI.Control.OnParentResized">
             <summary>
-            Action fred when parent control gets resized (also when control gets non-null parent).
+            Action fired when parent control gets resized (also when control gets non-null parent).
             </summary>
         </member>
         <member name="M:FlaxEngine.GUI.Control.OnDestroy">
@@ -43460,12 +43548,12 @@
             </summary>
             <seealso cref="T:FlaxEngine.GUI.ContainerControl" />
         </member>
-        <member name="F:FlaxEngine.GUI.SplitPanel.SpliterSize">
+        <member name="F:FlaxEngine.GUI.SplitPanel.SplitterSize">
             <summary>
             The splitter size (in pixels).
             </summary>
         </member>
-        <member name="F:FlaxEngine.GUI.SplitPanel.SpliterSizeHalf">
+        <member name="F:FlaxEngine.GUI.SplitPanel.SplitterSizeHalf">
             <summary>
             The splitter half size (in pixels).
             </summary>
@@ -44296,10 +44384,10 @@
         <member name="M:FlaxEngine.GUI.WindowRootControl.GetMouseButtonUp(FlaxEngine.MouseButton)">
             <inheritdoc />
         </member>
-        <member name="M:FlaxEngine.GUI.WindowRootControl.ScreenToClient(FlaxEngine.Vector2)">
+        <member name="M:FlaxEngine.GUI.WindowRootControl.PointFromScreen(FlaxEngine.Vector2)">
             <inheritdoc />
         </member>
-        <member name="M:FlaxEngine.GUI.WindowRootControl.ClientToScreen(FlaxEngine.Vector2)">
+        <member name="M:FlaxEngine.GUI.WindowRootControl.PointToScreen(FlaxEngine.Vector2)">
             <inheritdoc />
         </member>
         <member name="M:FlaxEngine.GUI.WindowRootControl.Focus">
@@ -44727,6 +44815,13 @@
             <summary>
             String utilities class.
             </summary>
+        </member>
+        <member name="M:FlaxEngine.StringUtils.IsHexDigit(System.Char)">
+            <summary>
+            Checks if given character is valid hexadecimal digit.
+            </summary>
+            <param name="c">The hex character.</param>
+            <returns>True if character is valid hexadecimal digit, otherwise false.</returns>
         </member>
         <member name="M:FlaxEngine.StringUtils.HexDigit(System.Char)">
             <summary>
@@ -45310,6 +45405,11 @@
         <member name="F:FlaxEditor.CodeEditorTypes.VSCode">
             <summary>
             Visual Studio Code
+            </summary>
+        </member>
+        <member name="F:FlaxEditor.CodeEditorTypes.VSCodeInsiders">
+            <summary>
+            Visual Studio Code Insiders
             </summary>
         </member>
         <member name="F:FlaxEditor.CodeEditorTypes.MAX">
@@ -46674,7 +46774,7 @@
         </member>
         <member name="P:FlaxEditor.Content.Import.ModelImportSettings.LODCount">
             <summary>
-            The amount of LODs to include in the model (all reaming ones starting from Base LOD will be generated).
+            The amount of LODs to include in the model (all remaining ones starting from Base LOD will be generated).
             </summary>
         </member>
         <member name="P:FlaxEditor.Content.Import.ModelImportSettings.TriangleReduction">
@@ -48364,6 +48464,12 @@
         <member name="M:FlaxEditor.Content.CollisionDataProxy.Create(System.String,System.Object)">
             <inheritdoc />
         </member>
+        <member name="M:FlaxEditor.Content.CollisionDataProxy.CreateCollisionDataFromModel(FlaxEngine.Model)">
+            <summary>
+            Create collision data from model.
+            </summary>
+            <param name="model">The associated model.</param>
+        </member>
         <member name="T:FlaxEditor.Content.ContentProxy">
             <summary>
             Base class for assets proxy objects used to manage <see cref="T:FlaxEditor.Content.ContentItem"/>.
@@ -48884,6 +48990,9 @@
             <inheritdoc />
         </member>
         <member name="P:FlaxEditor.Content.ModelProxy.AssetType">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Content.ModelProxy.OnContentWindowContextMenu(FlaxEditor.GUI.ContextMenu.ContextMenu,FlaxEditor.Content.ContentItem)">
             <inheritdoc />
         </member>
         <member name="M:FlaxEditor.Content.ModelProxy.OnThumbnailDrawPrepare(FlaxEditor.Content.Thumbnails.ThumbnailRequest)">
@@ -52900,7 +53009,7 @@
             </summary>
             <seealso cref="T:FlaxEditor.CustomEditors.LayoutElement" />
         </member>
-        <member name="F:FlaxEditor.CustomEditors.Elements.EnumElement.EnumComboBox">
+        <member name="F:FlaxEditor.CustomEditors.Elements.EnumElement.ComboBox">
             <summary>
             The combo box used to show enum values.
             </summary>
@@ -55076,7 +55185,7 @@
         </member>
         <member name="T:FlaxEditor.Gizmo.GizmosCollection">
             <summary>
-            Represents collection of Gizmo tools where one is active and in use.
+            Represents collection of gizmo tools where one is active and in use.
             </summary>
             <seealso cref="T:FlaxEditor.Gizmo.GizmoBase" />
         </member>
@@ -55482,7 +55591,7 @@
         </member>
         <member name="P:FlaxEditor.Gizmo.TransformGizmoBase.ActiveMode">
             <summary>
-            Gets or sts the current gizmo mode.
+            Gets or sets the current gizmo mode.
             </summary>
         </member>
         <member name="F:FlaxEditor.Gizmo.TransformGizmoBase.ModeChanged">
@@ -56135,10 +56244,26 @@
             Gets the context menu items container control.
             </summary>
         </member>
+        <member name="F:FlaxEditor.GUI.ContextMenu.ContextMenu._autosort">
+            <summary>
+            The auto sort.
+            </summary>
+        </member>
+        <member name="P:FlaxEditor.GUI.ContextMenu.ContextMenu.AutoSort">
+            <summary>
+            The auto sort property.
+            </summary>
+        </member>
         <member name="M:FlaxEditor.GUI.ContextMenu.ContextMenu.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:FlaxEditor.GUI.ContextMenu.ContextMenu"/> class.
             </summary>
+        </member>
+        <member name="M:FlaxEditor.GUI.ContextMenu.ContextMenu.SortButtons(System.Boolean)">
+            <summary>
+            Sorts all <see cref="T:FlaxEditor.GUI.ContextMenu.ContextMenuButton"/> alphabetically.
+            </summary>
+            <param name="force">Overrides <see cref="P:FlaxEditor.GUI.ContextMenu.ContextMenu.AutoSort"/> property.</param>
         </member>
         <member name="M:FlaxEditor.GUI.ContextMenu.ContextMenu.DisposeAllItems">
             <summary>
@@ -56713,7 +56838,7 @@
         </member>
         <member name="M:FlaxEditor.GUI.CurveEditorBase.ApplyUseModeMask(FlaxEditor.GUI.CurveEditorBase.UseMode,FlaxEngine.Vector2,FlaxEngine.Vector2)">
             <summary>
-            Filters teh given value using the the <see cref="T:FlaxEditor.GUI.CurveEditorBase.UseMode"/>.
+            Filters the given value using the <see cref="T:FlaxEditor.GUI.CurveEditorBase.UseMode"/>.
             </summary>
             <param name="mode">The mode.</param>
             <param name="value">The value to process.</param>
@@ -59420,6 +59545,13 @@
             </summary>
             <param name="limits">The limits.</param>
         </member>
+        <member name="M:FlaxEditor.GUI.Input.LongValueBox.SetLimits(System.Int64,System.Int64)">
+            <summary>
+            Sets the limits at once.
+            </summary>
+            <param name="min">The minimum value.</param>
+            <param name="max">The minimum value.</param>
+        </member>
         <member name="M:FlaxEditor.GUI.Input.LongValueBox.UpdateText">
             <inheritdoc />
         </member>
@@ -59621,6 +59753,67 @@
         <member name="M:FlaxEditor.GUI.Input.SliderControl.OnDestroy">
             <inheritdoc />
         </member>
+        <member name="T:FlaxEditor.GUI.Input.UIntValueBox">
+            <summary>
+            Unsigned Integer value editor.
+            </summary>
+            <seealso cref="T:System.UInt32" />
+        </member>
+        <member name="P:FlaxEditor.GUI.Input.UIntValueBox.Value">
+            <inheritdoc />
+        </member>
+        <member name="P:FlaxEditor.GUI.Input.UIntValueBox.MinValue">
+            <inheritdoc />
+        </member>
+        <member name="P:FlaxEditor.GUI.Input.UIntValueBox.MaxValue">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.GUI.Input.UIntValueBox.#ctor(System.UInt32,System.Single,System.Single,System.Single,System.UInt32,System.UInt32,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FlaxEditor.GUI.Input.UIntValueBox"/> class.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="x">The x location.</param>
+            <param name="y">The y location.</param>
+            <param name="width">The width.</param>
+            <param name="min">The minimum value.</param>
+            <param name="max">The maximum value.</param>
+            <param name="slideSpeed">The slide speed.</param>
+        </member>
+        <member name="M:FlaxEditor.GUI.Input.UIntValueBox.SetLimits(System.UInt32,System.UInt32)">
+            <summary>
+            Sets the value limits.
+            </summary>
+            <param name="min">The minimum value (bottom range).</param>
+            <param name="max">The maximum value (upper range).</param>
+        </member>
+        <member name="M:FlaxEditor.GUI.Input.UIntValueBox.SetLimits(FlaxEngine.RangeAttribute)">
+            <summary>
+            Sets the limits from the attribute.
+            </summary>
+            <param name="limits">The limits.</param>
+        </member>
+        <member name="M:FlaxEditor.GUI.Input.UIntValueBox.SetLimits(FlaxEngine.LimitAttribute)">
+            <summary>
+            Sets the limits from the attribute.
+            </summary>
+            <param name="limits">The limits.</param>
+        </member>
+        <member name="M:FlaxEditor.GUI.Input.UIntValueBox.SetLimits(FlaxEditor.GUI.Input.UIntValueBox)">
+            <summary>
+            Sets the limits from the other <see cref="T:FlaxEditor.GUI.Input.UIntValueBox"/>.
+            </summary>
+            <param name="other">The other.</param>
+        </member>
+        <member name="M:FlaxEditor.GUI.Input.UIntValueBox.UpdateText">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.GUI.Input.UIntValueBox.TryGetValue">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.GUI.Input.UIntValueBox.ApplySliding(System.Single)">
+            <inheritdoc />
+        </member>
         <member name="T:FlaxEditor.GUI.Input.ULongValueBox">
             <summary>
             Unsigned integer (ulong type) value editor.
@@ -59653,6 +59846,13 @@
             Sets the limits from the attribute.
             </summary>
             <param name="limits">The limits.</param>
+        </member>
+        <member name="M:FlaxEditor.GUI.Input.ULongValueBox.SetLimits(System.UInt64,System.UInt64)">
+            <summary>
+            Sets the limits at once.
+            </summary>
+            <param name="min">The minimum value.</param>
+            <param name="max">The minimum value.</param>
         </member>
         <member name="M:FlaxEditor.GUI.Input.ULongValueBox.UpdateText">
             <inheritdoc />
@@ -59953,6 +60153,12 @@
         </member>
         <member name="M:FlaxEditor.GUI.MainMenu.Update(System.Single)">
             <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.GUI.MainMenu.GetRightButton">
+            <summary>
+            Return the rightmost button.
+            </summary>
+            <returns>Rightmost button, null if there is no <see cref="T:FlaxEditor.GUI.MainMenuButton"/></returns>
         </member>
         <member name="M:FlaxEditor.GUI.MainMenu.AddButton(System.String)">
             <summary>
@@ -60579,7 +60785,7 @@
             <summary>
             Draws the column.
             </summary>
-            <param name="rect">The the header area rectangle.</param>
+            <param name="rect">The header area rectangle.</param>
             <param name="columnIndex">The zero-based index of the column.</param>
         </member>
         <member name="M:FlaxEditor.GUI.Table.OnMouseDown(FlaxEngine.Vector2,FlaxEngine.MouseButton)">
@@ -63225,7 +63431,7 @@
         </member>
         <member name="M:FlaxEditor.GUI.Timeline.Tracks.MemberTrack.Evaluate(System.Single)">
             <summary>
-            Evaluates the member value value at the specified time.
+            Evaluates the member value at the specified time.
             </summary>
             <param name="time">The time to evaluate the member at.</param>
             <returns>The member value at provided time.</returns>
@@ -63805,7 +64011,7 @@
         </member>
         <member name="M:FlaxEditor.GUI.KeyframesEditor.Contents.PointToKeyframes(FlaxEngine.Vector2,FlaxEngine.Rectangle@)">
             <summary>
-            Converts the input point from editor editor contents control space into the keyframes time/value coordinates.
+            Converts the input point from editor contents control space into the keyframes time/value coordinates.
             </summary>
             <param name="point">The point.</param>
             <param name="keyframesContentAreaBounds">The keyframes contents area bounds.</param>
@@ -64046,10 +64252,12 @@
             Gets the height for the items.
             </summary>
         </member>
-        <member name="M:FlaxEditor.GUI.ToolStrip.#ctor">
+        <member name="M:FlaxEditor.GUI.ToolStrip.#ctor(System.Single,System.Single)">
             <summary>
             Initializes a new instance of the <see cref="T:FlaxEditor.GUI.ToolStrip"/> class.
             </summary>
+            <param name="height">The toolstrip height.</param>
+            <param name="y">The toolstrip Y position.</param>
         </member>
         <member name="M:FlaxEditor.GUI.ToolStrip.AddButton(FlaxEngine.SpriteHandle,System.Action)">
             <summary>
@@ -64990,6 +65198,14 @@
             <param name="scriptType">The type of the script.</param>
             <returns>Found script or null if cannot find it.</returns>
         </member>
+        <member name="M:FlaxEditor.Modules.ContentDatabaseModule.RenameAsset(FlaxEditor.Content.ContentItem,System.String@)">
+            <summary>
+            Renames a content item
+            </summary>
+            <param name="el">Content item</param>
+            <param name="newPath">New path</param>
+            <returns>True if failed, otherwise false</returns>
+        </member>
         <member name="M:FlaxEditor.Modules.ContentDatabaseModule.Move(System.Collections.Generic.List{FlaxEditor.Content.ContentItem},FlaxEditor.Content.ContentFolder)">
             <summary>
             Moves the specified items to the different location. Handles moving whole directories and single assets.
@@ -65134,7 +65350,7 @@
             <summary>
             Removes a quick action by name.
             </summary>
-            <param name="name">Thr action's name.</param>
+            <param name="name">The action's name.</param>
             <returns>True when it succeed, false if there is no Quick Action with this name.</returns>
         </member>
         <member name="M:FlaxEditor.Modules.ContentFindingModule.Search(System.String)">
@@ -66772,6 +66988,14 @@
             <param name="control">The input providing control.</param>
             <returns>True if input has been processed, otherwise false.</returns>
         </member>
+        <member name="M:FlaxEditor.Options.InputBinding.Process(FlaxEngine.GUI.Control,FlaxEngine.KeyboardKeys)">
+            <summary>
+            Processes this input binding to check if state matches.
+            </summary>
+            <param name="control">The input providing control.</param>
+            <param name="key">The input key.</param>
+            <returns>True if input has been processed, otherwise false.</returns>
+        </member>
         <member name="M:FlaxEditor.Options.InputBinding.ToString">
             <inheritdoc />
         </member>
@@ -66928,6 +67152,11 @@
             Gets or sets the timestamps prefix mode for debug log messages.
             </summary>
         </member>
+        <member name="P:FlaxEditor.Options.InterfaceOptions.IconsScale">
+            <summary>
+            Gets or sets the editor icons scale. Editor restart required.
+            </summary>
+        </member>
         <member name="P:FlaxEditor.Options.InterfaceOptions.OutputLogTimestampsFormat">
             <summary>
             Gets or sets the timestamps prefix mode for output log messages.
@@ -67022,7 +67251,7 @@
         </member>
         <member name="P:FlaxEditor.Options.OptionsModule.CustomSettings">
             <summary>
-            Gets the custom settings factories. Each entry defines the custom settings type identified by teh given key name. The value si a factory function that returns the default options fpr a given type.
+            Gets the custom settings factories. Each entry defines the custom settings type identified by the given key name. The value is a factory function that returns the default options for a given type.
             </summary>
         </member>
         <member name="M:FlaxEditor.Options.OptionsModule.AddCustomSettings(System.String,FlaxEditor.Options.OptionsModule.CreateCustomSettingsDelegate)">
@@ -67149,6 +67378,11 @@
         <member name="P:FlaxEditor.Options.ViewportOptions.DefaultFieldOfView">
             <summary>
             Gets or sets the default field of view angle (in degrees) for the viewport camera.
+            </summary>
+        </member>
+        <member name="P:FlaxEditor.Options.ViewportOptions.DefaultInvertPanning">
+            <summary>
+            Gets or sets if the panning direction is inverted for the viewport camera.
             </summary>
         </member>
         <member name="T:FlaxEditor.Options.VisualOptions">
@@ -67404,7 +67638,7 @@
         </member>
         <member name="M:FlaxEditor.Progress.ProgressHandler.OnUpdate(System.Single,System.String)">
             <summary>
-            Called when progress action gets updated (changed nfo text or progress value).
+            Called when progress action gets updated (changed info text or progress value).
             </summary>
             <param name="progress">The progress (normalized to range [0;1]).</param>
             <param name="infoText">The information text.</param>
@@ -70076,6 +70310,9 @@
         <member name="P:FlaxEditor.States.PlayingState.CanEditScene">
             <inheritdoc />
         </member>
+        <member name="P:FlaxEditor.States.PlayingState.CanUseUndoRedo">
+            <inheritdoc />
+        </member>
         <member name="P:FlaxEditor.States.PlayingState.CanEnterPlayMode">
             <inheritdoc />
         </member>
@@ -71571,7 +71808,7 @@
         </member>
         <member name="F:FlaxEditor.Surface.Archetypes.Parameters.SurfaceNodeParamsGet.DefaultPrototypes">
             <summary>
-            The default prototypes for thr node elements to use for the given parameter type.
+            The default prototypes for the node elements to use for the given parameter type.
             </summary>
         </member>
         <member name="P:FlaxEditor.Surface.Archetypes.Parameters.SurfaceNodeParamsGet.UseNormalMaps">
@@ -73362,6 +73599,44 @@
         <member name="M:FlaxEditor.Surface.Elements.TextView.Draw">
             <inheritdoc />
         </member>
+        <member name="T:FlaxEditor.Surface.Elements.UnsignedIntegerValue">
+            <summary>
+            Unsigned Integer value editing element.
+            </summary>
+            <seealso cref="T:FlaxEditor.GUI.Input.UIntValueBox" />
+            <seealso cref="T:FlaxEditor.Surface.ISurfaceNodeElement" />
+        </member>
+        <member name="P:FlaxEditor.Surface.Elements.UnsignedIntegerValue.ParentNode">
+            <inheritdoc />
+        </member>
+        <member name="P:FlaxEditor.Surface.Elements.UnsignedIntegerValue.Archetype">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Surface.Elements.UnsignedIntegerValue.#ctor(FlaxEditor.Surface.SurfaceNode,FlaxEditor.Surface.NodeElementArchetype)">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Surface.Elements.UnsignedIntegerValue.Draw">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Surface.Elements.UnsignedIntegerValue.OnValueChanged">
+            <inheritdoc />
+        </member>
+        <member name="M:FlaxEditor.Surface.Elements.UnsignedIntegerValue.Get(FlaxEditor.Surface.SurfaceNode,FlaxEditor.Surface.NodeElementArchetype)">
+            <summary>
+            Gets the unsigned integer value from the specified parent node. Handles type casting and components gather.
+            </summary>
+            <param name="parentNode">The parent node.</param>
+            <param name="arch">The node element archetype.</param>
+            <returns>The result value.</returns>
+        </member>
+        <member name="M:FlaxEditor.Surface.Elements.UnsignedIntegerValue.Set(FlaxEditor.Surface.SurfaceNode,FlaxEditor.Surface.NodeElementArchetype,System.UInt32)">
+            <summary>
+            Sets the unsigned integer value of the specified parent node. Handles type casting and components assignment.
+            </summary>
+            <param name="parentNode">The parent node.</param>
+            <param name="arch">The node element archetype.</param>
+            <param name="toSet">The value to set.</param>
+        </member>
         <member name="T:FlaxEditor.Surface.GroupArchetype">
             <summary>
             Surface nodes group archetype description.
@@ -73843,6 +74118,18 @@
             <param name="valueMax">The maximum value range.</param>
             <returns>The archetype.</returns>
         </member>
+        <member name="M:FlaxEditor.Surface.NodeElementArchetype.Factory.UnsignedInteger(System.Single,System.Single,System.Int32,System.Int32,System.UInt32,System.UInt32)">
+            <summary>
+            Creates new Unsigned Integer value element description.
+            </summary>
+            <param name="x">The x location (in node area space).</param>
+            <param name="y">The y location (in node area space).</param>
+            <param name="valueIndex">The index of the node variable linked as the input. Useful to make a physical connection between input box and default value for it.</param>
+            <param name="component">The index of the component to edit. For vectors this can be set to modify only single component of it. Eg. for vec2 value component set to 1 will edit only Y component. Default value -1 will be used to edit whole value.</param>
+            <param name="valueMin">The minimum value range.</param>
+            <param name="valueMax">The maximum value range.</param>
+            <returns>The archetype.</returns>
+        </member>
         <member name="M:FlaxEditor.Surface.NodeElementArchetype.Factory.Float(System.Single,System.Single,System.Int32,System.Int32,System.Single,System.Single)">
             <summary>
             Creates new Float value element description.
@@ -74103,6 +74390,11 @@
         <member name="F:FlaxEditor.Surface.NodeElementType.Actor">
             <summary>
             The actor picker.
+            </summary>
+        </member>
+        <member name="F:FlaxEditor.Surface.NodeElementType.UnsignedIntegerValue">
+            <summary>
+            The unsigned integer value.
             </summary>
         </member>
         <member name="T:FlaxEditor.Surface.NodeFactory">
@@ -75941,7 +76233,7 @@
             Validates the parameter drag operation.
             </summary>
             <param name="parameterName">Name of the parameter.</param>
-            <returns>Tre if can drag that parameter, otherwise false.</returns>
+            <returns>True if can drag that parameter, otherwise false.</returns>
         </member>
         <member name="M:FlaxEditor.Surface.VisjectSurface.HandleDragDropAssets(System.Collections.Generic.List{FlaxEditor.Content.AssetItem},FlaxEditor.Surface.VisjectSurface.DragDropEventArgs)">
             <summary>
@@ -76003,6 +76295,51 @@
         <member name="M:FlaxEditor.Surface.VisjectSurface.Draw">
             <inheritdoc />
         </member>
+        <member name="F:FlaxEditor.Surface.VisjectSurface.NodeFormattingData.Layer">
+            <summary>
+            Starting from 0 at the main nodes
+            </summary>
+        </member>
+        <member name="F:FlaxEditor.Surface.VisjectSurface.NodeFormattingData.Offset">
+            <summary>
+            Position in the layer
+            </summary>
+        </member>
+        <member name="F:FlaxEditor.Surface.VisjectSurface.NodeFormattingData.SubtreeOffset">
+            <summary>
+            How far the subtree needs to be moved additionally
+            </summary>
+        </member>
+        <member name="M:FlaxEditor.Surface.VisjectSurface.FormatGraph(System.Collections.Generic.List{FlaxEditor.Surface.SurfaceNode})">
+            <summary>
+            Formats a graph where the nodes can be disjointed.
+            Uses the Sugiyama method
+            </summary>
+            <param name="nodes">List of nodes</param>
+        </member>
+        <member name="M:FlaxEditor.Surface.VisjectSurface.FormatConnectedGraph(System.Collections.Generic.List{FlaxEditor.Surface.SurfaceNode})">
+            <summary>
+            Formats a graph where all nodes are connected
+            </summary>
+            <param name="nodes">List of connected nodes</param>
+        </member>
+        <member name="M:FlaxEditor.Surface.VisjectSurface.SetLayers(System.Collections.Generic.Dictionary{FlaxEditor.Surface.SurfaceNode,FlaxEditor.Surface.VisjectSurface.NodeFormattingData},System.Collections.Generic.List{FlaxEditor.Surface.SurfaceNode})">
+            <summary>
+            Assigns a layer to every node
+            </summary>
+            <param name="nodeData">The exta node data</param>
+            <param name="endNodes">The end nodes</param>
+            <returns>The number of the maximum layer</returns>
+        </member>
+        <member name="M:FlaxEditor.Surface.VisjectSurface.SetOffsets(System.Collections.Generic.Dictionary{FlaxEditor.Surface.SurfaceNode,FlaxEditor.Surface.VisjectSurface.NodeFormattingData},System.Collections.Generic.List{FlaxEditor.Surface.SurfaceNode},System.Int32)">
+            <summary>
+            Sets the node offsets
+            </summary>
+            <param name="nodeData">The exta node data</param>
+            <param name="endNodes">The end nodes</param>
+            <param name="maxLayer">The number of the maximum layer</param>
+            <returns>The number of the maximum offset</returns>
+        </member>
         <member name="F:FlaxEditor.Surface.VisjectSurface.InputActions">
             <summary>
             The input actions collection to processed during user input.
@@ -76032,12 +76369,6 @@
             <summary>
             Occurs when handling custom mouse wheel event.
             </summary>
-        </member>
-        <member name="M:FlaxEditor.Surface.VisjectSurface.GetNodeUnderMouse">
-            <summary>
-            Gets the node under the mouse location.
-            </summary>
-            <returns>The node or null if no intersection.</returns>
         </member>
         <member name="M:FlaxEditor.Surface.VisjectSurface.GetControlUnderMouse">
             <summary>
@@ -77178,6 +77509,9 @@
         <member name="M:FlaxEditor.Tools.Foliage.FoliageTab.Update(System.Single)">
             <inheritdoc />
         </member>
+        <member name="M:FlaxEditor.Tools.Foliage.FoliageTab.OnDestroy">
+            <inheritdoc />
+        </member>
         <member name="T:FlaxEditor.Tools.Foliage.FoliageTypesTab">
             <summary>
             Foliage types editor tab. Allows to add, remove or modify foliage instance types defined for the current foliage object.
@@ -77646,6 +77980,9 @@
             Updates the active viewport gizmo mode based on the current mode.
             </summary>
         </member>
+        <member name="M:FlaxEditor.Tools.Terrain.CarveTab.OnDestroy">
+            <inheritdoc />
+        </member>
         <member name="T:FlaxEditor.Tools.Terrain.CreateTerrainDialog">
             <summary>
             Terrain creator dialog. Allows user to specify initial terrain properties perform proper setup.
@@ -77853,7 +78190,7 @@
         </member>
         <member name="F:FlaxEditor.Tools.Terrain.Paint.Mode.Strength">
             <summary>
-            The tool strength (normalized to range 0-1). Defines the intensity of the paint operation to make it stronger or mre subtle.
+            The tool strength (normalized to range 0-1). Defines the intensity of the paint operation to make it stronger or more subtle.
             </summary>
         </member>
         <member name="P:FlaxEditor.Tools.Terrain.Paint.Mode.SupportsNegativeApply">
@@ -78332,7 +78669,7 @@
         </member>
         <member name="F:FlaxEditor.Tools.Terrain.Sculpt.Mode.Strength">
             <summary>
-            The tool strength (normalized to range 0-1). Defines the intensity of the sculpt operation to make it stronger or mre subtle.
+            The tool strength (normalized to range 0-1). Defines the intensity of the sculpt operation to make it stronger or more subtle.
             </summary>
         </member>
         <member name="P:FlaxEditor.Tools.Terrain.Sculpt.Mode.SupportsNegativeApply">
@@ -80077,7 +80414,7 @@
             </summary>
             <param name="oper1">The first operator.</param>
             <param name="oper2">The second operator.</param>
-            <returns>The comparision result.</returns>
+            <returns>The comparison result.</returns>
         </member>
         <member name="M:FlaxEditor.Utilities.ShuntingYard.DetermineType(System.Char)">
             <summary>
@@ -80286,7 +80623,7 @@
         </member>
         <member name="F:FlaxEditor.Viewport.Cameras.FPSCamera.TargetPoint">
             <summary>
-            The target point location. It's used to orbit around it whe user clicks Alt+LMB.
+            The target point location. It's used to orbit around it when user clicks Alt+LMB.
             </summary>
         </member>
         <member name="M:FlaxEditor.Viewport.Cameras.FPSCamera.SetView(FlaxEngine.Vector3,FlaxEngine.Vector3)">
@@ -80370,27 +80707,27 @@
             Gets a value indicating whether the viewport camera uses movement speed.
             </summary>
         </member>
-        <member name="M:FlaxEditor.Viewport.Cameras.ViewportCamera.SerArcBallView(FlaxEngine.BoundingBox,System.Single)">
+        <member name="M:FlaxEditor.Viewport.Cameras.ViewportCamera.SetArcBallView(FlaxEngine.BoundingBox,System.Single)">
             <summary>
             Sets view orientation and position to match the arc ball camera style view for the given target object bounds.
             </summary>
             <param name="objectBounds">The target object bounds.</param>
             <param name="marginDistanceScale">The margin distance scale of the orbit radius.</param>
         </member>
-        <member name="M:FlaxEditor.Viewport.Cameras.ViewportCamera.SerArcBallView(FlaxEngine.BoundingSphere,System.Single)">
+        <member name="M:FlaxEditor.Viewport.Cameras.ViewportCamera.SetArcBallView(FlaxEngine.BoundingSphere,System.Single)">
             <summary>
             Sets view orientation and position to match the arc ball camera style view for the given target object bounds.
             </summary>
             <param name="objectBounds">The target object bounds.</param>
             <param name="marginDistanceScale">The margin distance scale of the orbit radius.</param>
         </member>
-        <member name="M:FlaxEditor.Viewport.Cameras.ViewportCamera.SerArcBallView(System.Single)">
+        <member name="M:FlaxEditor.Viewport.Cameras.ViewportCamera.SetArcBallView(System.Single)">
             <summary>
             Sets view orientation and position to match the arc ball camera style view for the given orbit radius.
             </summary>
             <param name="orbitRadius">The orbit radius.</param>
         </member>
-        <member name="M:FlaxEditor.Viewport.Cameras.ViewportCamera.SerArcBallView(FlaxEngine.Quaternion,FlaxEngine.Vector3,System.Single)">
+        <member name="M:FlaxEditor.Viewport.Cameras.ViewportCamera.SetArcBallView(FlaxEngine.Quaternion,FlaxEngine.Vector3,System.Single)">
             <summary>
             Sets view orientation and position to match the arc ball camera style view.
             </summary>
@@ -80703,6 +81040,11 @@
             Gets or sets the camera orthographic mode (otherwise uses perspective projection).
             </summary>
         </member>
+        <member name="P:FlaxEditor.Viewport.EditorViewport.InvertPanning">
+            <summary>
+            Gets or sets if the panning direction is inverted.
+            </summary>
+        </member>
         <member name="F:FlaxEditor.Viewport.EditorViewport.InputActions">
             <summary>
             The input actions collection to processed during user input.
@@ -80736,6 +81078,12 @@
         <member name="M:FlaxEditor.Viewport.EditorViewport.GetInput(FlaxEditor.Viewport.EditorViewport.Input@)">
             <summary>
             Gets the input state data.
+            </summary>
+            <param name="input">The input.</param>
+        </member>
+        <member name="M:FlaxEditor.Viewport.EditorViewport.GetPrevInput(FlaxEditor.Viewport.EditorViewport.Input@)">
+            <summary>
+            Gets the input state data (from the previous update).
             </summary>
             <param name="input">The input.</param>
         </member>
@@ -82351,7 +82699,7 @@
         </member>
         <member name="F:FlaxEditor.Windows.Assets.AssetEditorWindowBase`1._isWaitingForLoaded">
             <summary>
-            Flag set to true if window is is waiting for asset to be loaded (to send <see cref="M:FlaxEditor.Windows.Assets.AssetEditorWindowBase`1.OnAssetLoaded"/> or <see cref="M:FlaxEditor.Windows.Assets.AssetEditorWindowBase`1.OnAssetLoadFailed"/> events).
+            Flag set to true if window is waiting for asset to be loaded (to send <see cref="M:FlaxEditor.Windows.Assets.AssetEditorWindowBase`1.OnAssetLoaded"/> or <see cref="M:FlaxEditor.Windows.Assets.AssetEditorWindowBase`1.OnAssetLoadFailed"/> events).
             </summary>
         </member>
         <member name="F:FlaxEditor.Windows.Assets.AssetEditorWindowBase`1._asset">

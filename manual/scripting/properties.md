@@ -13,7 +13,7 @@ public class MyScript : Script
 ```
 
 * Editor
-<br>![Script Properties](media/use-script-3.jpg)
+<br>![Script Properties](media/script-ui.png)
 
 # Attributes
 
