@@ -55,5 +55,55 @@ By selecting the buttons you can choose a target to build it or even build all t
 It's very easy to use and provides enough functionality for bigger projects where devs need to target many different platforms and support various build modes: test builds, profiling builds and shipping builds.
 All those things can be made with Flax presets using Game Cooker window and Build Settings editor.
 
+## Custom Defines
 
+![Game Cooker Custom Defines](media/custom-defines.png)
 
+When working with more complex game build setups you can use **Custom Defines** feature which allows to inject custom symbols into build system and access them to change the scripts building rules. For instance, you can use it to switch between game client or game server builds.
+
+Game Cooker Preset contains a list of configurable `Custom Defines` (works the same for Game Cooker Build panel Custom Defines). They are injected into `Flax.Build` command when compiling game scripts. Those can be accessed from `.Build.cs` scripts using `Configuration.CustomDefines`.
+
+#### Injecting custom defines into C# scripts compilation
+
+```cs
+/// <inheritdoc />
+public override void Setup(BuildOptions options)
+{
+    base.Setup(options);
+
+    ...
+
+    options.ScriptingAPI.Defines.AddRange(Configuration.CustomDefines);
+}
+```
+
+#### Injecting custom defines into C++ scripts compilation
+
+```cs
+/// <inheritdoc />
+public override void Setup(BuildOptions options)
+{
+    base.Setup(options);
+
+    ...
+
+    options.PrivateDefinitions.AddRange(Configuration.CustomDefines);
+}
+```
+
+#### Conditional game modules compilation based on custom defines
+
+```cs
+/// <inheritdoc />
+public override void Setup(BuildOptions options)
+{
+    base.Setup(options);
+
+    ...
+
+    if (Configuration.CustomDefines.Contains("SERVER"))
+        options.PrivateDependencies.Add("GameServerModule");
+    else
+        options.PrivateDependencies.Add("GameClientModule");
+}
+```
