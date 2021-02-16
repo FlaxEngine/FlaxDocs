@@ -18,3 +18,15 @@ You can use it to quickly save the project or pause the in-editor simulation.
 | ![Pause](media/toolbar-button-8.png) | Pauses the simulation. Game logic and physics simulation will freeze. |
 | ![Step Frame](media/toolbar-button-9.png) | Steps one frame in simulation (only in pause mode). |
 
+## Build button configuration
+
+![Build Button Configuration](media/custom-build-button.png)
+
+By default **Build scenes data** button will run:
+* CSG build
+* Env probes update (pre-GI)
+* Static Lighting build
+* Env probes update (post-GI)
+* NavMesh build.
+
+But it can be adjusted in **Editor Options** to match the desire workflow. For instance you can bind scripts compilation to that button or a custom series of actions to perform.
