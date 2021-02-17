@@ -1,8 +1,8 @@
 # Script events
 
 Scripts in Flax does not work like the traditional programs where code runs continuously in a loop until end.
-Instead, Flax calls declared in script functions to handle speific game events like update or physics collision.
-These functions are called **event functions** because they are executed by Flax in response to events that occur during a gameplay. Using these function allows you to implement a gameplay logic and handle different situations inside a game.
+Instead, Flax calls declared in script functions to handle specific game events like update or physics collision.
+These functions are called **event functions** because they are executed by Flax in response to events that occur during gameplay. Using these function allows you to implement gameplay logic and handle different situations inside your game.
 
 ```cs
 public class MyScript : Script
@@ -57,17 +57,17 @@ Engine main loop update is highly configurable and supports performing the game 
 
 ### Deinitialization
 
-On game end all scripts are disabled and **OnDisable** event is called when removing the object from gameplay. Then during actual object destruction, the **OnDestroy** is invoked. Also, if the script gets inactive (eg. someone disables it or one of its parents in hierarchy) then engine invokes **OnDisable**. The disabled script can be activated again and receive *OnEnable* to begin being part of the gameplay logic.
+On game end all scripts are disabled and **OnDisable** event is called when removing the object from gameplay. Then during actual object destruction, the **OnDestroy** is invoked. Also, if the script becomes inactive (eg. someone disables it or one of its parents in its hierarchy) then the engine invokes **OnDisable**. The disabled script can be activated again and receive *OnEnable* to begin being part of the gameplay logic.
 
-Event OnDestroy can be called only once on a script. Flax does not uses script anymore after OnDestroy event invocation.
+Event OnDestroy can be called only once on a script. Flax does not use the script anymore after OnDestroy event invocation.
 
 ### Events in Editor
 
-Flax does not invoke any script events during `edit-time` (when the scene is loaded and user modifies it) except **OnDebugDraw** and **OnDebugDrawSelected**. Only when in-build play mode starts the actual game logic is being simulated. However, if the game script wants to receive events during editing it can be marked with `[ExecuteInEditMode]` attribute. Then all events will be called normally.
+Flax does not invoke any script events during `edit-time` (when the scene is loaded and the user modifies it) except **OnDebugDraw** and **OnDebugDrawSelected**. Only when in-build play mode starts the actual game logic is being simulated. However, if the game script wants to receive events during editing it can be marked with `[ExecuteInEditMode]` attribute. Then all events will be called normally.
 
 ### Order
 
-Script events invocation order depends on the event type. Gameplay logic events (update, fixed update and debug drawing) are called in non-stable order so gameplay logic should not depend on it. Initialization events (awake, enable, start) and deinitialization events (disable, destroy) are always called for the parent objects first, then deeper into a hierarchy. This means that script in parent actor can query the child actors' objects and scripts but they might not be initialized yet.
+The Script event's invocation order depends on the event type. Gameplay logic events (update, fixed update and debug drawing) are called in non-stable order so gameplay logic should not depend on it. Initialization events (awake, enable, start) and deinitialization events (disable, destroy) are always called for the parent objects first, then further down into the hierarchy. This means that script in parent actor can query the child actors' objects and scripts but they might not be initialized yet.
 
 However, you can still use initialization events to add new objects as child actors/scripts because Flax will invoke initialization for them when required.
 
