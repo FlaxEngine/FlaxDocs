@@ -12,7 +12,7 @@ Flax Editor contains in-build C# compiler for scripts but for C\+\+ scripting th
 
 * Install **Visual Studio 2019** or 2017 or 2015 ([download](https://visualstudio.microsoft.com/en/vs/community/))
 * Install **Windows 10 SDK** (or Windows 8.1 SDK)
-* Install **Microsoft Visual C++ 2015 v140 toolset**
+* Install **Microsoft Visual C++** (v140 toolset or newer)
 
 #### Linux
 
