@@ -14,7 +14,7 @@ Every model can be reimported (relative path to the source file is cached) and i
 ## Supported file types
 
 Flax Engine supports importing the following list of file types as models:
-- `.fbx`
+- `.fbx` - currently recommended format
 - `.gltf`
 - `.glb`
 - `.obj`
