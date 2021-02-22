@@ -2,14 +2,14 @@
 
 ## API_CLASS(...)
 
-Use it on class to expose it to the scripting API. You can specify custom attributes in the braces.
+Use it on a class to expose it to the scripting API. You can specify custom attributes in the braces.
 Example:
 
 ```cpp
 /// <summary>
 /// Actor that links to the animated model skeleton node transformation.
 /// </summary>
-API_CLASS(sealed) class BoneSocket : public Actor
+API_CLASS(Sealed) class BoneSocket : public Actor
 {
 ...
 }
@@ -17,7 +17,7 @@ API_CLASS(sealed) class BoneSocket : public Actor
 
 ## API_PROPERTY(...)
 
-Use it on the property getter/setter methods to expose property to the scripting API. You can specify custom attributes in the braces.
+Use it on the property getter/setter methods to expose the property to the scripting API. You can specify custom attributes in the braces.
 Example:
 
 ```cpp
@@ -41,7 +41,7 @@ void SetUseScale(bool value);
 
 ## API_FIELD(...)
 
-Use it on the field to expose property to the scripting API. You can specify custom attributes in the braces.
+Use it on a field to expose it to the scripting API. You can specify custom attributes in the braces.
 Example:
 
 ```cpp
@@ -54,7 +54,7 @@ float Scale = 1.0f;
 
 ## API_FUNCTION(...)
 
-Use it on the function to expose property to the scripting API. You can specify custom attributes in the braces.
+Use it on a function to expose it to the scripting API. You can specify custom attributes in the braces.
 Example:
 
 ```cpp
@@ -67,7 +67,7 @@ void UpdateTransformation();
 
 ## API_PARAM(...)
 
-Use it on the function parameters to adjust the parameter convertion between scripting and native.
+Use it on the function parameters to adjust the parameter conversion between scripting and native.
 Example:
 
 ```cpp
@@ -86,7 +86,7 @@ API_EVENT() Delegate<float> SpeedChanged;
 
 ## API_AUTO_SERIALIZATION()
 
-Use it inside class or structure to generate automatic object data serialization code for `ISerializable` interface.
+Use it inside a class or structure to generate automatic object data serialization code for `ISerializable` interface.
 Example:
 
 ```cpp
@@ -100,12 +100,12 @@ DECLARE_SCRIPTING_TYPE_NO_SPAWN(ToneMappingSettings);
 
 ## Tag parameters
 
-Tag attributes tha can be added to the API tags braces to edjust the bindigns logic:
+Tag attributes that can be added to the API tags braces to adjust the bindings logic:
 
 * `Static` - marks the method/class/property to not use instance of the object but be static in code
 * `Sealed` - makes the class to be final and blocks inheritance
 * `Abstract` - makes the class to be abstract (cannot create object of it, can be only inherited)
-* `Public`/`Protected`/`Private` - access levels specified for methods/classes/properties to define the visibility in the scritping API
+* `Public`/`Protected`/`Private` - access levels specified for methods/classes/properties to define the visibility in the scripting API
 * `InBuild` - marks type (class, struct, enum) as in-build into scripting API (skips generation by assuming it's already in the bindings API)
 * `Attributes="..."` - adds a custom attributes to the generated type or member that are added to C# types attributes
 * `ReadOnly` - makes the field in class as read-only (only getter will be generated, no setter)
@@ -122,10 +122,11 @@ Tag attributes tha can be added to the API tags braces to edjust the bindigns lo
 ### Array&lt;T&gt;
 
 If property or method uses native Array&lt;T&gt; as input or output it will be interpreted as T[] in scripting.
-Also, the bindings generator will implement atomatic convertion between native and managed object type (including copy operation).
+Also, the bindings generator will implement automatic conversion between native and managed object type (including copy operation).
 If you want to return an array of items from native method you can return it by value (eg. `API_FUNCTION() Array<Guid> GetIds()`). Bindings generator will convert it into managed array (supported types for array elements are value types, enums, strings and scripting objects such as actors, scripts, assets pointers, object references).
 
 ### Dictionary&lt;KeyType, ValueType&gt;
 
 If property or method uses native Dictionary&lt;KeyType, ValueType&gt; as input or output it will be interpreted as System.Collections.Generic.Dictionary&lt;KeyType, ValueType&gt; in scripting.
-Also, the bindings generator will implement atomatic convertion between native and managed object type (including copy operation).
+Also, the bindings generator will implement automatic conversion between native and managed object type (including copy operation).
+
