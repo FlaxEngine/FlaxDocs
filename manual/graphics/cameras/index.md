@@ -43,6 +43,13 @@ To learn more about the C# scripting API see [Camera](http://docs.flaxengine.com
 | **Far Plane** | The furthest point the camera can see (far clipping plane). |
 | **Custom Aspect Ratio** | Custom aspect ratio you specify. Otherwise, automatically adjust the aspect ratio to the render target ratio. Use value 0 to disable it. |
 | **Orthographic Scale** | Additional scale used for the orthographic projection size. This has the effect of zooming in and out. |
+| **Render Layers Mask** | The layers mask used for rendering using this camera. Can be used to include or exclude specific actor layers from the drawing. |
+
+## Masking object layers
+
+![Camera Render Layers Masking](media/render-layers-masking.gif)
+
+Every actor on a scene has **Layer** property assigned. Cameras can use per-layer masking for rendering to include or exclude certain objects from drawing.
 
 ## Perspective and orthographic cameras
 
