@@ -184,4 +184,9 @@ This documentation page contains link to all tutorials related to working with a
 <h3><a href="../../graphics/fog-effects/exponential-height-fog.md">Exponential Height Fog</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="../../ui/sprite-render/index.md"><img src="../../ui/sprite-render/media/icon.jpg"></a>
+<h3><a href="../../ui/sprite-render/index.md">Sprite Render</a></h3>
+</div>
+
 </div>
