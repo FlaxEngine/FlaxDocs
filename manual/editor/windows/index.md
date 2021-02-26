@@ -39,5 +39,10 @@
 <h3><a href="output-log.md">Output Log</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="debug-log.md"><img src="media/debug-log-icon.jpg"></a>
+<h3><a href="debug-log.md">Debug Log</a></h3>
+</div>
+
 </div>
 
