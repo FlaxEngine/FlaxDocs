@@ -45,3 +45,47 @@ You can use the *Content* window to create new settings. Simply right-click in t
 | **Universal Windows Platform** | Reference to [Universal Windows Platform Settings](../../platforms/uwp.md) asset. Contains options used when building game for Xbox One and Windows Store. |
 | **PlayStation 4** | Reference to [PlayStation 4 Settings](../../platforms/ps4.md) settings. Contains options used when building game for PlayStation 4. |
 | **Xbox Scarlett** | Reference to [Xbox Scarlett Settings](../../platforms/xbox-scarlett.md) settings. Contains options used when building game for Xbox Scarlett. |
+
+## Accessing settings at runtime
+
+Example code to access game settings data in game code.
+
+C#:
+
+```cs
+using FlaxEditor.Content.Settings;
+using FlaxEngine;
+
+public class TestSettingsUsage : Script
+{
+    public override void OnEnable()
+    {
+        var gameSettings = GameSettings.Load();
+        Debug.Log("Game name: " + gameSettings.ProductName);
+        var timeSettings = GameSettings.Load<TimeSettings>();
+        Debug.Log("Draw FPS from settings: " + timeSettings.DrawFPS);
+    }
+}
+```
+
+C++:
+
+```cpp
+#include "Engine/Core/Log.h"
+#include "Engine/Core/Config/GameSettings.h"
+#include "Engine/Core/Config/TimeSettings.h"
+#include "Engine/Scripting/Script.h"
+
+class FLAXENGINE_API TestSettingsUsage : public Script
+{
+DECLARE_SCRIPTING_TYPE(TestSettingsUsage);
+public:
+    void OnEnable() override
+    {
+        const auto gameSettings = GameSettings::Get();
+        LOG(Info, "Game name: {0}", gameSettings->ProductName);
+        const auto timeSettings = TimeSettings::Get();
+        LOG(Info, "Draw FPS from settings: {0}", timeSettings->DrawFPS);
+    }
+};
+```
