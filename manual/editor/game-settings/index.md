@@ -76,7 +76,7 @@ C++:
 #include "Engine/Core/Config/TimeSettings.h"
 #include "Engine/Scripting/Script.h"
 
-class FLAXENGINE_API TestSettingsUsage : public Script
+class GAME_API TestSettingsUsage : public Script
 {
 DECLARE_SCRIPTING_TYPE(TestSettingsUsage);
 public:
