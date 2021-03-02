@@ -152,6 +152,7 @@
 ## [Scripts debugging](scripting/debugging/index.md)
 ### [Visual Studio](scripting/debugging/visual-studio.md)
 ### [Visual Studio Code](scripting/debugging/visual-studio-code.md)
+### [Rider](scripting/debugging/rider.md)
 ## [Scripts serialization](scripting/serialization/index.md)
 ## [Empty Actor](scripting/empty-actor.md)
 ## [Custom Editors](scripting/custom-editors/index.md)
