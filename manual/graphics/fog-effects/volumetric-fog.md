@@ -44,3 +44,17 @@ Use [Exponential Height Fog](exponential-height-fog.md) actor and enable **Volum
 ## Showcase
 
 ![Volumetric Fog Flax Engine](media/volumetric_fog_2.gif)
+
+## Local Fog via Volumetric Fog Particles
+
+Exponential Height Fog actor controls the global properties of the fog on the scene such as *Albedo*, *Density*, and *Emission*. To create local-fogging effects such as smoke, dust or mist use particles with  **Volumetric Fog Rendering** module.
+
+![Particle Volumetric Fog Rendering Module](media/particles-fog-render-module.png)
+
+Ensure to assign the material shader to the material created with **Volume Particle** domain. Then use **Color** input to define th albedo color of the fog, **Emissive** input for light emission and **Mask** with **Opacity** to define the fog particle shape (eg. use world-aligned noise texture to add more realistic look to the fog).
+
+![Particle Material Volume Shader](media/particle-volumetric-fog-material.jpg)
+
+Volumetric Fog Particles are rendered using **Sphere** shape so use per-particle **Radius** property to control the size of the particles.
+
+![Volumetric Fog Particles Showcase](media/volumetric-fog-particles.gif)
