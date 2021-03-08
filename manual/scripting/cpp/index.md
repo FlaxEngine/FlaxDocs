@@ -22,7 +22,7 @@ Flax Editor contains in-build C# compiler for scripts but for C\+\+ scripting th
 
 ## How to create C++ script?
 
-By default, new Flax projects have default game module using C# scripting. You can learn more about modules and targets [here](../../editor/flax-build/index.md). After installing requried tools, open `Source/<module_name>/<module_name>.Gen.cs` (i.e. `Source/Game/Game.Gen.cs`). This file is a build script for the code module and can specify its build environment and dependencies. It contains overriden **Setup(BuildOptions options)** method which performs the module initialization.
+By default, new Flax projects have default game module using C# scripting. You can learn more about modules and targets [here](../../editor/flax-build/index.md). After installing required tools, open `Source/<module_name>/<module_name>.Build.cs` (i.e. `Source/Game/Game.Build.cs`). This file is a build script for the code module and can specify its build environment and dependencies. It contains overriden **Setup(BuildOptions options)** method which performs the module initialization.
 
 Find the `BuildNativeCode = false` line and change the value to `true` or add the following code at the end of the method:
 

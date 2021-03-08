@@ -68,7 +68,7 @@ public class TriggerSample : Script
         Actor.As<Collider>().TriggerExit -= OnTriggerExit;
     }
 
-    void OnTriggerEnter(Collider collider)
+    void OnTriggerEnter(PhysicsColliderActor collider)
     {
         // Check for player
         if (collider is CharacterController)
@@ -77,7 +77,7 @@ public class TriggerSample : Script
         }
     }
 
-    void OnTriggerExit(Collider collider)
+    void OnTriggerExit(PhysicsColliderActor collider)
     {
         // Check for player
         if (collider is CharacterController)

@@ -2,12 +2,13 @@
 
 ![Flax.Build build tool](media/title.jpg)
 
-**Flax.Build** is an in-build utility which is a complete build system written in C#. It supports:
+**Flax.Build** is an in-built utility which is a complete build system written in C#. It supports:
+
 * compiling and linking of engine, game and tools projects
 * downloading and pre-building engine dependencies
-* updating 3rd Party libraries
+* updating 3rd party libraries
 * generating project files
-* deploying engine
+* deploying the engine
 * generating C# bindings for native code.
 
 Major features:
@@ -17,13 +18,13 @@ Major features:
 * extensibility via plugins
 * multi-platform support.
 
-This documentation section covers most of the topics related to Flax.Build tool. To learn more please refer to Flax.Build sources located under `Source\Tools\Flax.Build` and/or use `Binaries\Tools\Flax.Build.exe -help` to learn more about usage. Engine repository contains useful scripts that are wrappers against the build tool and automatically compile its sources.
+This documentation section covers most of the topics related to Flax.Build tool. To learn more please refer to Flax.Build sources located under `Source\Tools\Flax.Build` and/or use `Binaries\Tools\Flax.Build.exe -help` to learn more about usage. The engine repository contains useful scripts that are wrappers against the build tool and automatically compile its sources.
 
 ## Build Scripts
 
-The main source of build configuration are **.Build.cs** files located in the project `Source` directory. Written in **C#** scripts can contain targets, modules, SDKs, or other utilities used for building. When generating project scripts files all build scripts are included in **Rules** project which defines the build rules and can be explored with code IDE.
+The main source of build configuration are **.Build.cs** files located in the project `Source` directory. Written in **C#**, scripts can contain targets, modules, SDKs, or other utilities used for building. When generating project scripts files, all build scripts are included in **Rules** project which defines the build rules and can be explored with code IDE.
 
-Build scripts are using C# 7.2 with full .Net 4.5 support. Additionally Flax.Build assembly is referenced with many usefull utilities to use during build setup like:
+Build scripts are using C# 7.2 with full .Net 4.5 support. Additionally Flax.Build assembly is referenced with many useful utilities to use during build setup like:
 * `CommandLine` attribute for command line parsing
 * `Log` utility with info/errors logging capabilities (to log file and to console output)
 * `Tokenizer` class for pasing code as tokens
@@ -35,7 +36,7 @@ Using build scripts you can automate many processes related to game/engine/plugi
 
 ## Targets and Modules
 
-Build **Target** is a script that combines modules to produce a final executable file or composite library. Build **Module** is a script that can be compiled from source and used by other modules and targets. Targets in general define the global build environment (eg. global definitions) and include modules into the binary build. Modules are chunks of code compiled into binaries linked later into a target output binary (eg. game executable file). Modules can have references between each other for example if a game script wants to create GPU Texture resource, the game module needs to reference the Graphics module that implements a GPU texture.
+A build **Target** is a script that combines modules to produce a final executable file or composite library. A [build **Module**](../../scripting/tutorials/add-scripts-module.md) is a script that can be compiled from source and used by other modules and targets. Targets in general define the global build environment (eg. global definitions) and include modules into the binary build. Modules are chunks of code compiled into binaries linked later into a target output binary (eg. game executable file). Modules can have references between each other for example if a game script wants to create GPU Texture resource, the game module needs to reference the Graphics module that implements a GPU texture.
 
 Using modules can greatly improve code readability, allow to split huge codebase into more independent chunks, and they help to organize the structure of the project sources. Modules can be referenced in `Setup` method which means they can have conditional references (eg. Profiler module is not included in Release builds).
 
@@ -98,7 +99,7 @@ Additionally, all build scripts are included in **BuildScripts** C# project whic
 
 ## Platforms Support
 
-Flax.Build is a **multiplatform** utility thas has been battle-tested on Windows and Linux to build engine and games to the different target platforms including Windows, PS4, XboxOne, XboxScarlett, Linux, UWP. Each target platform implementation is stored in a separate directory under `Source\Tools\Flax.Build\Platforms` and contain **Platform** implementation and **Toolchain** implementation. Different platforms can use external SDKs, toolsets, or custom compilers to build code for a runtime.
+Flax.Build is a **multiplatform** utility that has been battle-tested on Windows and Linux to build engine and games to the different target platforms including Windows, PS4, XboxOne, XboxScarlett, Linux, UWP. Each target platform implementation is stored in a separate directory under `Source\Tools\Flax.Build\Platforms` and contain **Platform** implementation and **Toolchain** implementation. Different platforms can use external SDKs, toolsets, or custom compilers to build code for a runtime.
 
 Also, engine dependency packages contain automatic build scripts to prepare pre-build deps for development. When adding new platform support many deps packages have to be ported too. The related code can be found in `Source\Tools\Flax.Build\Deps\Dependencies` folder.
 
