@@ -18,7 +18,7 @@ jobs:
       - name: Checkout live docs repo
         uses: actions/checkout@v2
         with:
-          repository: honzapatCZ/flaxdocs-host
+          repository: FlaxEngine/flaxdocs-host
           path: _site
           fetch-depth: 1
           persist-credentials: false
@@ -58,5 +58,5 @@ jobs:
           github_token: ${{ secrets.API_TOKEN_GITHUB }}
           branch: ${{ github.ref }}
           directory: _site
-          repository: honzapatCZ/flaxdocs-host
+          repository: FlaxEngine/flaxdocs-host
           force: true
