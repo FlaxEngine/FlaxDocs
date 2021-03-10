@@ -1,0 +1,62 @@
+name: Build Documentation
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: Checkout live docs repo
+        uses: actions/checkout@v2
+        with:
+          repository: FlaxEngine/flaxdocs-host
+          path: _site
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Clear live docs repo
+        run: rm -rf _site/*
+
+      - name: Get mono
+        run: |
+          sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+          sudo sh -c 'echo "deb https://download.mono-project.com/repo/ubuntu stable-bionic main" > /etc/apt/sources.list.d/mono-official-stable.list'
+          sudo apt-get update
+          sudo apt-get install mono-complete --yes
+
+      - name: Get docfx
+        run: |
+          curl -L https://github.com/dotnet/docfx/releases/latest/download/docfx.zip -o docfx.zip
+          unzip -d .docfx docfx.zip
+
+      - name: Build docs
+        run: mono .docfx/docfx.exe
+        
+      - name: Commit
+        run: |
+          export GIT_COMMITTER_NAME=$(git show -s --format='%cn')
+          export GIT_COMMITTER_EMAIL=$(git show -s --format='%ce')
+          export GIT_AUTHOR_NAME=$(git show -s --format='%an')
+          export GIT_AUTHOR_EMAIL=$(git show -s --format='%ae')
+          export COMMIT_HASH=$(git show -s --format='%H')
+          export SUBJECT=$(git show -s --format='%s')
+          cd _site
+          git add .
+          git commit -m "$SUBJECT" -m "Original commit: $COMMIT_HASH"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.API_TOKEN_GITHUB }}
+          branch: ${{ github.ref }}
+          directory: _site
+          repository: FlaxEngine/flaxdocs-host
+          force: true
