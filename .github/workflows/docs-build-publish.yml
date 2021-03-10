@@ -18,7 +18,7 @@ jobs:
       - name: Checkout live docs repo
         uses: actions/checkout@v2
         with:
-          repository: FlaxEngine/flaxdocs-host
+          repository: FlaxEngine/FlaxDocsHost
           path: _site
           fetch-depth: 1
           persist-credentials: false
@@ -33,14 +33,13 @@ jobs:
           sudo apt-get update
           sudo apt-get install mono-complete --yes
 
-      - name: Get docfx
-        run: |
-          curl -L https://github.com/dotnet/docfx/releases/latest/download/docfx.zip -o docfx.zip
-          unzip -d .docfx docfx.zip
-
       - name: Build docs
-        run: mono .docfx/docfx.exe
-        
+        run: |
+          mono docfx/docfx.exe
+          cp favicon.ico _site/favicon.ico
+          cp logo.svg _site/logo.svg
+          cp logo.png _site/logo.png
+
       - name: Commit
         run: |
           export GIT_COMMITTER_NAME=$(git show -s --format='%cn')
@@ -58,5 +57,5 @@ jobs:
           github_token: ${{ secrets.API_TOKEN_GITHUB }}
           branch: ${{ github.ref }}
           directory: _site
-          repository: FlaxEngine/flaxdocs-host
+          repository: FlaxEngine/FlaxDocsHost
           force: true
