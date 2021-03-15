@@ -81,4 +81,4 @@ To add attribute to parameter simply **right-click -> Edit attributes**, then us
 
 For instance, Tooltip Attribute can be used to display documentation note about parameter for other users. Range and Slider attributes can help to customize editing scalar values and Ediotr Group and Editor Order can organize the list of parameters. To learn about attribute types see [this page](../../../scripting/attributes.md).
 
-![Parameter Attributes](../../../animation/anim-graPH/media/parameter-attribute.png)
+![Parameter Attributes](../../../animation/anim-graph/media/parameter-attribute.png)
