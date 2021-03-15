@@ -39,6 +39,7 @@ jobs:
           cp favicon.ico _site/favicon.ico
           cp logo.svg _site/logo.svg
           cp logo.png _site/logo.png
+          cp CNAME _site/CNAME
 
       - name: Commit
         run: |
