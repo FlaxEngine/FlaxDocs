@@ -17,7 +17,6 @@ Flax Editor contains in-build C# compiler for scripts but for C\+\+ scripting th
 #### Linux
 
 * Install [Visual Studio Code](https://code.visualstudio.com/)
-* Install [Mono](https://www.mono-project.com/download/stable/)
 * Get compiler `sudo apt-get install clang lldb lld` (Clang 6 or newer)
 
 ## How to create C++ script?
