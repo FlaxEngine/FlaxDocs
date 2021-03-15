@@ -17,3 +17,7 @@ Window space starts in the top left corner of the window, excluding the title-ba
 ## Local Space
 
 Local space starts in the top left corner of the control. It is also DPI-adjusted.
+
+## Game Window Space
+
+Game window space starts in the top left corner of the window, excluding the title bar. This is explicitely not DPI adjusted.
