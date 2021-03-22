@@ -2,8 +2,6 @@ name: Publish Documentation
 
 on:
   push:
-    branches:    
-      - master
     tags: 
       - update-*
 
