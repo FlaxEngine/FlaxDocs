@@ -1,14 +1,16 @@
-name: Build Documentation
+name: Publish Documentation
 
 on:
   push:
-    branches:
+    branches:    
       - master
+    tags: 
+      - update-*
 
 jobs:
   build:
     runs-on: ubuntu-18.04
-
+ 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
@@ -52,6 +54,7 @@ jobs:
           cd _site
           git add .
           git commit -m "$SUBJECT" -m "Original commit: $COMMIT_HASH"
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
