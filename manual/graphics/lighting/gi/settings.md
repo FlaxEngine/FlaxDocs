@@ -9,6 +9,8 @@ Lightmaps can be configured using various parameters:
 
 ![Lightmap Settings](media/lightmap-settings.png)
 
+Select [Scene](../../../get-started/scenes/index.md) actor to edit lightmap settings per-scene.
+
 | Property | Description |
 |--------|--------|
 | **Indirect Lighting Intensity** | Controls how much all lights will contribute indirect lighting. |
