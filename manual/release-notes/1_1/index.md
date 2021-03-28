@@ -73,7 +73,7 @@ Things important to highlight are:
 * **New UI Transformation editor**
 * Script members display based on declaration order (see Editor options)
 * **Live particles preview** in Scene viewport
-* Converting existing actor int odifferent type
+* Converting existing actor into different type
 * **Copy/paste of all script properties**
 * Build button configuration in options
 * Optimized hot-reloading of C#/C++ code performance (via caching scripting API reflection data)
@@ -232,7 +232,7 @@ PRs merged: 68
 * Add WarningOnce, ErrorOnce, InfoOnce, VerboseOnce to Flax.Build logger
 * Add colored icons for Debug Log entries (and adjusted entry height)
 * Add Render2D tint color layering support
-* Add **retoute nodes to Visject**
+* Add **reroute nodes to Visject**
 * Add arrow key navigation to Visject
 * Add support for binary modules with native-code only
 * Add improved dll import/export attributes injection when building binary modules
@@ -255,7 +255,7 @@ PRs merged: 68
 * Add Mouse Wheel Sensitivity option to Editor
 * Add selecting prefab root objects first in Editor
 * Add error check to prevent changing parent of the Scene actor
-* Add focus on acto with `F` key in editor viewpo (improvements)
+* Add focus on acto with `F` key in editor viewport (improvements)
 * Add better support for orthographic projection in Editor viewport controls
 * Add option to order script fields/properties in Editor UI based on declaration order (Editor option)
 * Add splash screen quote
