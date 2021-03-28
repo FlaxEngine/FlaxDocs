@@ -57,7 +57,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.API_TOKEN_GITHUB }}
-          branch: ${{ github.ref }}
+          branch: master
           directory: _site
           repository: FlaxEngine/FlaxDocsHost
           force: true
