@@ -20,6 +20,14 @@ For developers using Flax Editor on Linux platforms the requirements are:
 | Hard drive space | 1 GB minimum |
 | GPU | **Vulkan required** |
 
+Flax Editor needs `curl` lib on the system:
+
+```
+apt-get install -y curl libcurl4-gnutls-dev
+```
+
+*On Fedora you might need additional fix for invalid lib linkage: `sudo ln -s /usr/lib64/libcurl.so.4 /usr/lib64/libcurl-gnutls.so.4`.
+
 ## GPU Drivers
 
 Please ensure to have the latest GPU drivers installed. Helper links:
