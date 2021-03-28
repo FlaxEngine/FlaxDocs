@@ -7,10 +7,14 @@ Flax Engine has specific hardware and software requirements for running the game
 | | Minimum | Recommended |
 |-------|-------|-------|
 | Operating system | Windows Vista SP1 | Windows 10 64-bit |
-| Processor | 2GHz | Quad-core, 2.5 GHz or faster |
-| RAM | 4GB | 8GB |
-| Hard drive space | 1GB | 5GB |
-| GPU | 512MB, DirectX 10+ compatible GPU | 1GB, DirectX 11 |
+| Processor | 2 GHz | Quad-core, 2.5 GHz or faster |
+| RAM | 4 GB | 8 GB |
+| Hard drive space | 1 GB | 5 GB |
+| GPU | 512MB, DirectX 10+ compatible GPU | 2 GB, DirectX 11 |
+
+## Linux
+
+For developers using Flax Editor on Linux platforms the requirements are [here](linux.md).
 
 ## Software
 

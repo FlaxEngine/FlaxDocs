@@ -2,6 +2,7 @@
 # [Get started](get-started/index.md)
 ## [Get Flax](get-started/get-flax.md)
 ### [Requirements](get-started/requirements.md)
+### [Editor on Linux](get-started/linux.md)
 ## [Visual Studio extension](get-started/vs-extension.md)
 ## [Create a project](get-started/create-a-project.md)
 ## [Editor](get-started/editor.md)
