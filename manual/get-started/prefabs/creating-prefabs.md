@@ -16,7 +16,7 @@ Another way to create a new prefab asset is by using the existing actors as an a
 
 ## From code
 
-The last way to create a new prefab is by using an editor script that creates a new prefab asset using Flax C# API.
+The last way to create a new prefab is by using an editor script that creates a new prefab asset using C# or C++.
 
 ### C#
 
