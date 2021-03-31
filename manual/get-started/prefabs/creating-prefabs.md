@@ -18,13 +18,36 @@ Another way to create a new prefab asset is by using the existing actors as an a
 
 The last way to create a new prefab is by using an editor script that creates a new prefab asset using Flax C# API.
 
+### C#
+
 ```cs
 // Setup prefab objects
-var myLight = new PointLight();
-myLight.Color = Color.Red;
-var myDecal = new Decal();
-myDecal.Parent = myLight;
+var myLight = new PointLight
+{
+    Color = Color.Red
+};
+
+new Decal
+{
+    Parent = myLight
+};
 
 // Create a prefab
-Editor.CreatePrefab(StringUtils.CombinePaths(Globals.ProjectContentFolder, "myPrefab.prefab"), myLight, false);
+PrefabManager.CreatePrefab(myLight, StringUtils.CombinePaths(Globals.ProjectContentFolder, "myPrefab.prefab"), false);
+```
+
+### C++
+
+```cs
+// Setup prefab objects
+PointLight* myLight = New<PointLight>();
+myLight->SetName(TEXT("PointLight"));
+myLight->Color = Color::Red;
+
+Decal* myDecal = New<Decal>();
+myDecal->SetName(TEXT("Decal"));
+myDecal->SetParent(myLight);
+
+// Create a prefab
+PrefabManager::CreatePrefab(myLight, Globals::ProjectContentFolder / TEXT("myPrefab.prefab"), false);
 ```
