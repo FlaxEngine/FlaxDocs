@@ -38,7 +38,7 @@ PrefabManager.CreatePrefab(myLight, StringUtils.CombinePaths(Globals.ProjectCont
 
 ### C++
 
-```cs
+```cpp
 // Setup prefab objects
 PointLight* myLight = New<PointLight>();
 myLight->SetName(TEXT("PointLight"));
