@@ -4,7 +4,8 @@ Scene objects lifetime is controlled by the Flax but the game can also access **
 
 ## Spawning objects
 
-Example code that spawn a new point light:
+### C#
+Example code that spawns a new point light:
 
 ```cs
 public override void OnStart()
@@ -25,6 +26,27 @@ public override void OnStart()
 }
 ```
 
+### C++
+
+In C++ the implementation is the same.
+```cpp
+void ScriptExample::OnStart()
+{
+    auto light = New<PointLight>();
+    light->Color = Color::Blue;
+    light->SetParent(GetActor());
+}
+```
+
+In order to add a script you just create a new instance and set the parent.
+```cpp
+void ExampleScript::OnStart()
+{
+    auto script = New<SecondaryScript>();
+    script->SetParent(GetActor());
+}
+```
+
 > [!Note]
 > Scene objects (actors, scripts) should **not use constructors** to prevent issues.
 
@@ -32,6 +54,7 @@ public override void OnStart()
 
 Flax supports immediate and delayed objects removing system. This helps with cleanup up the scene from killed players or unused actors.
 
+### C#
 ```cs
 public class MyScript : Script
 {
@@ -63,4 +86,55 @@ In the same way you can remove scripts:
 
 ```cs
 Destroy(Actor.GetScript<Player>());
+```
+
+### C++
+
+Simple deletion of a referenced object:
+```cpp
+API_CLASS() class EXAMPLE_API MyScript : public Script
+{
+    API_AUTO_SERIALIZATION();
+
+    DECLARE_SCRIPTING_TYPE(MyScript);
+
+public:
+
+    API_FIELD()
+    ScriptingObjectReference<SpotLight> Flashlight;
+
+public:
+
+    void OnEnable() override 
+    {
+        Flashlight.Get()->DeleteObject();
+    }
+};
+```
+
+How to time object deletion:
+```cpp
+API_CLASS() class EXAMPLE_API AutoRemoveObj : public Script
+{
+    API_AUTO_SERIALIZATION();
+
+    DECLARE_SCRIPTING_TYPE(AutoRemoveObj);
+
+public:
+
+    API_FIELD(Attributes = "Tooltip(\"The time left to destroy object (in seconds).\")")
+    float Timeout = 5.0f;
+
+public:
+
+    void OnStart() override 
+    {
+        GetActor()->DeleteObject(Timeout);
+    }
+};
+```
+
+How to delete script:
+```cpp
+GetActor()->GetScript<ExampleScript>()->DeleteObject();
 ```
