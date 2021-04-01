@@ -1,6 +1,6 @@
 # HOWTO: Change scene from script
 
-In this tutorial you will learn how to unload existing scenes and load different a one using a script.
+In this tutorial you will learn how to unload existing scenes and load a different one using a script.
 
 ## 1. Prepare a new script
 
