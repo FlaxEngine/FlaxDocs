@@ -1,15 +1,25 @@
 # Attributes
 
-Flax provides various attributes that are used to extend the default logic or provide metadata about the code (serialization and editing options).
+Flax provides various attributes that are used to extend the default logic or provide metadata about the code (serialization and editing options). These attributes can be used in both C# as well as C++.
 
 Most of the attributes can be used for both: fields and properties:
 
+### C#
 ```cs
 [Limit(0, 10)]
-public float Field1 = 11;
+public float Field1 = 11f;
 
 [Tooltip("Light color")]
 public Color Field2 { get; set; }
+```
+
+### C++
+```cpp
+API_FIELD(Attributes = "Limit(0, 10)")
+float Field1 = 11f;
+
+API_FIELD(Attributes = "Tooltip(\"Light color\")")
+Color ColorVal;
 ```
 
 ## Common attributes
@@ -54,12 +64,14 @@ public class MyGenerator : Script
         {
             for (int z = 0; z < 5; z++)
             {
-                var light = new PointLight();
-                light.Radius = 1000;
-                light.ShadowsMode = ShadowsCastingMode.None;
-                light.Position = new Vector3(x * 100.0f, 0, z * 100.0f);
-                light.Parent = Actor;
-                //light.HideFlags = HideFlags.DontSave; // Uncomment to don't save generated actors
+                var light = new PointLight
+                {
+                    Radius = 1000,
+                    ShadowsMode = ShadowsCastingMode.None,
+                    Position = new Vector3(x * 100.0f, 0, z * 100.0f),
+                    Parent = Actor
+                    //HideFlags = HideFlags.DontSave; // Uncomment to don't save generated actors
+                };
             }
         }
     }

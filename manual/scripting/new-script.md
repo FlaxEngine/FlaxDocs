@@ -1,6 +1,7 @@
 # Create and use a script
 
 Scripts in Flax are written in the **C#** language (source files with extension `.cs`).
+If you want to create a C++ Script you can find out how [here](cpp/index.md).
 To provide better organization in a project workspace script files are located in the `Source/` directory.
 In that way scripts are separated from the assets which reduces mess and makes it easier to work with project sources.
 
