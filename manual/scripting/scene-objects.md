@@ -107,7 +107,7 @@ You can also query all the scripts of the any actor and use them to perform any 
 ```cs
 private void OnTriggerEnter(Collider collider)
 {
-    foreach (var provider in collider.GetScripts<LightPrefab>())
+    foreach (var provider in collider.GetScripts<IAdProvider>())
        provider.ShowAd();
 }
 ```
@@ -129,7 +129,7 @@ void ScriptExample::OnTriggerEnter(Collider* collider)
 ```cpp
 void ScriptExample::OnTriggerEnter(Collider* collider)
 {
-    for each (auto provider in collider->GetScripts<CreatePrefab>())
+    for each (auto provider in collider->GetScripts<IAdProvider>())
         provider.ShowAd();
 }
 ```
