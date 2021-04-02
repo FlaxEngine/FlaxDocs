@@ -328,6 +328,7 @@
 ## [Collisions](physics/collisions.md)
 ## [Physical Material](physics/physical-material.md)
 ## [Physics Settings](physics/physics-settings.md)
+## [Vehicles](physics/vehicles.md)
 ## [Tutorials](physics/tutorials/index.md)
 ### [How to create a bouncing ball](physics/tutorials/bouncing-ball.md)
 ### [How to use a trigger](physics/tutorials/use-trigger.md)
