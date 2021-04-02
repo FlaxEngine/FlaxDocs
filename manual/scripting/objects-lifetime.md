@@ -30,7 +30,7 @@ public override void OnStart()
 
 In C++ the implementation is the same.
 ```cpp
-void ScriptExample::OnStart()
+void ExampleScript::OnStart()
 {
     auto light = New<PointLight>();
     light->Color = Color::Blue;
@@ -55,32 +55,11 @@ void ExampleScript::OnStart()
 Flax supports immediate and delayed objects removing system. This helps with cleanup up the scene from killed players or unused actors.
 
 ### C#
-```cs
-public class MyScript : Script
-{
-    public SpotLight Flashlight;
-
-    public override void OnEnable()
-    {
-        Destroy(ref Flashlight);
-    }
-}
-```
+[!code-csharp[Example1](code-examples/objects-lifetime.cs)]
 
 Here is an example script that will remove object after a specified timeout (in seconds):
 
-```cs
-public class AutoRemoveObj : Script
-{
-    [Tooltip("The time left to destroy object (in seconds).")]
-    public float Timeout = 5.0f;
-
-    public override void OnStart()
-    {
-        Destroy(Actor, Timeout);
-    }
-}
-```
+[!code-csharp[Example2](code-examples/objects-lifetime-2.cs)]
 
 In the same way you can remove scripts:
 
@@ -91,48 +70,10 @@ Destroy(Actor.GetScript<Player>());
 ### C++
 
 Simple deletion of a referenced object:
-```cpp
-API_CLASS() class EXAMPLE_API MyScript : public Script
-{
-    API_AUTO_SERIALIZATION();
-
-    DECLARE_SCRIPTING_TYPE(MyScript);
-
-public:
-
-    API_FIELD()
-    ScriptingObjectReference<SpotLight> Flashlight;
-
-public:
-
-    void OnEnable() override 
-    {
-        Flashlight.Get()->DeleteObject();
-    }
-};
-```
+[!code-cpp[Example3](code-examples/objects-lifetime-2.h)]
 
 How to time object deletion:
-```cpp
-API_CLASS() class EXAMPLE_API AutoRemoveObj : public Script
-{
-    API_AUTO_SERIALIZATION();
-
-    DECLARE_SCRIPTING_TYPE(AutoRemoveObj);
-
-public:
-
-    API_FIELD(Attributes = "Tooltip(\"The time left to destroy object (in seconds).\")")
-    float Timeout = 5.0f;
-
-public:
-
-    void OnStart() override 
-    {
-        GetActor()->DeleteObject(Timeout);
-    }
-};
-```
+[!code-cpp[Example4](code-examples/objects-lifetime.h)]
 
 How to delete script:
 ```cpp
