@@ -25,26 +25,7 @@ See [Actor](https://docs.flaxengine.com/api/FlaxEngine.Actor.html) class referen
 
 You can also print all child actors and rotate the parent actor:
 
-```cs
-public override void OnStart()
-{
-    // Prints all children names
-    var children = Actor.GetChildren();
-    foreach (var a in children)
-        Debug.Log(a.Name);
-
-    // Changes the child point light color (if has)
-    var pointLight = Actor.GetChild<PointLight>();
-    if (pointLight)
-        pointLight.Color = Color.Red;
-}
-
-public override void OnFixedUpdate()
-{
-    // Rotates the parent object
-    Actor.Parent.LocalEulerAngles += new Vector3(0, 2, 0);
-}
-```
+[!code-csharp[Example1](code-examples/scene-objects.cs]
 
 ### C++
 
@@ -63,29 +44,9 @@ DebugLog::Log(GetActor()->GetName());
 ```
 
 Prints all child actors and rotates the parent actor:
-```cpp
-void ScriptExample::OnStart()
-{
-    // Prints all children names
-    Array<Actor*> children = GetActor()->GetChildren<Actor>();
-    for each (auto a in children)
-        DebugLog::Log(a->GetName());
 
-    // Changes the child point light color (if has)
-    auto pointLight = GetActor()->GetChild<PointLight>();
-    if (pointLight)
-        pointLight->Color = Color::Red;
-}
+[!code-csharp[Example2](code-examples/scene-objects.h]
 
-void ScriptExample::OnUpdate()
-{
-    // Rotates the parent object
-   Vector3 targetOrientation = GetActor()->GetParent()->GetLocalOrientation().GetEuler();
-   targetOrientation += {0, 2, 0};
-
-   GetActor()->GetParent()->SetLocalOrientation(Quaternion::Euler(targetOrientation));
-}
-```
 ## Accessing other scripts
 
 Scripts attached to the actors can be queries like the actors using a dedicated methods:
