@@ -5,7 +5,7 @@ public class MyScript : Script
     public override void OnStart()
     {
         // Prints all children names
-        var children = Actor.GetChildren();
+        var children = Actor.Children;
         foreach (var a in children)
             Debug.Log(a.Name);
 

@@ -70,10 +70,10 @@ Destroy(Actor.GetScript<Player>());
 ### C++
 
 Simple deletion of a referenced object:
-[!code-cpp[Example3](code-examples/objects-lifetime-2.h)]
+[!code-cpp[Example3](code-examples/objects-lifetime.h)]
 
 How to time object deletion:
-[!code-cpp[Example4](code-examples/objects-lifetime.h)]
+[!code-cpp[Example4](code-examples/objects-lifetime-2.h)]
 
 How to delete script:
 ```cpp

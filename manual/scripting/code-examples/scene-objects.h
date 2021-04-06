@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Engine/Scripting/Script.h"
+#include "Engine/Debug/DebugLog.h"
 
 API_CLASS()
 class GAME_API ScriptExample : public Script

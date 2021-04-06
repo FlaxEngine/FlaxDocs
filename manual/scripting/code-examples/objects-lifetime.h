@@ -1,23 +1,26 @@
 #pragma once
 
 #include "Engine/Scripting/Script.h"
+#include <Engine/Level/Actors/SpotLight.h>
+#include <Engine/Scripting/ScriptingObjectReference.h>
 
-API_CLASS() class EXAMPLE_API AutoRemoveObj : public Script
+API_CLASS() class EXAMPLE_API MyScript : public Script
 {
 public:
     API_AUTO_SERIALIZATION();
 
-    DECLARE_SCRIPTING_TYPE(AutoRemoveObj);
+    DECLARE_SCRIPTING_TYPE(MyScript);
 
-    API_FIELD(Attributes = "Tooltip(\"The time left to destroy object (in seconds).\")")
-    float Timeout = 5.0f;
+
+    API_FIELD()
+    ScriptingObjectReference<SpotLight> Flashlight;
 
 public:
-    void OnEnable() override;
     void OnDisable() override;
     void OnUpdate() override;
-    void OnStart() override 
+    void OnEnable() override;
+    void OnStart() override
     {
-        GetActor()->DeleteObject(Timeout);
+        Flashlight.Get()->DeleteObject();
     }
 };

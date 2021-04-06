@@ -12,46 +12,11 @@ Here is a sample code that exposes a public variable with a reference to a scene
 
 ### C#
 
-```cs
-public class SceneChanger : Script
-{
-	public SceneReference AnotherScene;
-
-	public override void OnUpdate()
-	{
-		if (Input.GetKeyDown(KeyboardKeys.G))
-			Level.ChangeSceneAsync(AnotherScene);
-	}
-}
-```
+[!code-csharp[Example1](../code-examples/change-scene.cs)]
 
 ### C++
 
-```cpp
-API_CLASS() class EXAMPLE_API SceneChanger : public Script
-{
-    API_AUTO_SERIALIZATION();
-    DECLARE_SCRIPTING_TYPE(SceneChanger);
-
-public:
-
-    API_FIELD(Attributes = "CustomEditorAlias(\"FlaxEditor.CustomEditors.Editors.SceneRefEditor\"), AssetReference(typeof(SceneReference))")
-        Guid AnotherScene;
-
-public:
-    void OnEnable() override;
-    void OnDisable() override;
-    void OnUpdate() override
-    {
-        if (Input::GetKeyDown(KeyboardKeys::G) && AnotherScene.IsValid())
-        {
-			// Does the same as the C# API
-			Level::UnloadAllScenesAsync();
-			Level::LoadSceneAsync(id);
-        }
-    }
-};
-```
+[!code-cpp[Example2](../code-examples/change-scene.h)]
 
 ## 3. Add script
 
