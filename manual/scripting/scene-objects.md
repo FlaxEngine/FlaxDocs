@@ -27,11 +27,15 @@ You can also print all child actors and rotate the parent actor:
 public override void OnStart()
 {
     // Prints all children names
-    var children = Actor.GetChildren();
+    foreach (var a in Actor.Children)
+        Debug.Log(a.Name);
+
+    // Prints the names of all point light children
+    var children = Actor.GetChildren<PointLight>();
     foreach (var a in children)
         Debug.Log(a.Name);
 
-    // Changes the child point light color (if has)
+    // Changes the first child point light color
     var pointLight = Actor.GetChild<PointLight>();
     if (pointLight)
         pointLight.Color = Color.Red;
