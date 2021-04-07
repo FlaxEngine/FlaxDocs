@@ -6,6 +6,8 @@ One of the most important aspects of the scripts is interaction and accessing ot
 
 Every script has inherited property `Actor` that represents an actor the script is attached to. For example you can use it to modify the actor position every frame:
 
+### C#
+
 ```cs
 public override void OnFixedUpdate()
 {
@@ -23,34 +25,33 @@ See [Actor](https://docs.flaxengine.com/api/FlaxEngine.Actor.html) class referen
 
 You can also print all child actors and rotate the parent actor:
 
-```cs
-public override void OnStart()
+[!code-csharp[Example1](code-examples/scene-objects.cs]
+
+### C++
+
+Here is the equivalent of the implemented logic above in C++.
+
+```cpp
+void ScriptExample::OnUpdate()
 {
-    // Prints all children names
-    foreach (var a in Actor.Children)
-        Debug.Log(a.Name);
-
-    // Prints the names of all point light children
-    var children = Actor.GetChildren<PointLight>();
-    foreach (var a in children)
-        Debug.Log(a.Name);
-
-    // Changes the first child point light color
-    var pointLight = Actor.GetChild<PointLight>();
-    if (pointLight)
-        pointLight.Color = Color.Red;
-}
-
-public override void OnFixedUpdate()
-{
-    // Rotates the parent object
-    Actor.Parent.LocalEulerAngles += new Vector3(0, 2, 0);
+    GetActor()->SetPosition(GetActor()->GetPosition() + Vector3(0, 2, 0));
 }
 ```
+
+Prints the name of the owning actor:
+```cpp
+DebugLog::Log(GetActor()->GetName());
+```
+
+Prints all child actors and rotates the parent actor:
+
+[!code-csharp[Example2](code-examples/scene-objects.h]
 
 ## Accessing other scripts
 
 Scripts attached to the actors can be queries like the actors using a dedicated methods:
+
+### C#
 
 ```cs
 private void OnTriggerEnter(Collider collider)
@@ -67,17 +68,38 @@ You can also query all the scripts of the any actor and use them to perform any 
 ```cs
 private void OnTriggerEnter(Collider collider)
 {
-    foreach (var script in collider.Scripts)
-    {
-        if (script is IAdProvider provider)
-            provider.ShowAd();
-    }
+    foreach (var provider in collider.GetScripts<IAdProvider>())
+       provider.ShowAd();
+}
+```
+
+### C++
+
+Same code as above, implemented in C++.
+
+```cpp
+void ScriptExample::OnTriggerEnter(Collider* collider)
+{
+    // Deal damage to the player when enters the trigger
+    auto player = collider->GetScript<Player>();
+    if (player)
+        player->DealDamage(10);
+}
+```
+
+```cpp
+void ScriptExample::OnTriggerEnter(Collider* collider)
+{
+    for each (auto provider in collider->GetScripts<IAdProvider>())
+        provider.ShowAd();
 }
 ```
 
 ## Finding actors
 
 Flax implements API to find objects.
+
+### C#
 
 ```cs
 private void OnTriggerLeave(Collider collider)
@@ -98,5 +120,28 @@ private void OnTriggerLeave(Collider collider)
 }
 ```
 
+### C++
 
+Equal implementation in C++.
 
+```cpp
+void ScriptExample::OnTriggerLeave(Collider* collider)
+{
+    auto obj = GetActor()->GetScene()->FindActor(TEXT("Spaceship"));
+    obj->DeleteObject();
+}
+```
+
+Using a field to store the spaceship.
+
+```cpp
+//.h
+API_FIELD()
+ScriptingObjectReference<Actor> Spaceship;
+
+//.cpp
+void ScriptExample::OnTriggerLeave(Collider* collider)
+{
+    SpaceShip.Get()->DeleteObject();
+}
+```

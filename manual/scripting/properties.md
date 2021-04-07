@@ -2,21 +2,21 @@
 
 Every script can contain various fields and properties. By default Flax shows all **public fields and properties** in the *Properties* window so user may edit them (undo/redo is supported).
 
-* Script
-```cs
-public class MyScript : Script
-{
-	public float Field1 = 11;
-	public Color Field2 = Color.Yellow;
-	public DirectionalLight Field3 { get; set; }
-}
-```
+# Script
 
-* Editor
-<br>![Script Properties](media/script-ui.png)
+## C#
+[!code-csharp[Example1](code-examples/properties.cs)]
+
+## C++
+[!code-cpp[Example2](code-examples/properties.h)]
+
+## Editor
+![Script Properties](media/script-ui.png)
 
 # Attributes
 
+
+## C#
 If you want to **hide** a public property or a field simply use [HideInEditor](https://docs.flaxengine.com/api/FlaxEngine.HideInEditorAttribute.html) attribute.
 
 ```cs
@@ -29,6 +29,19 @@ If you want to **don't serialize** a public property or a field use [NoSerialize
 ```cs
 [NoSerialize]
 public float Field1 = 11;
+```
+
+## C++
+The C++ API supports the exact same attributes which can be used as shown.
+
+```cpp
+API_FIELD(Attributes="HideInEditor")
+float Field1 = 11;
+```
+
+```cpp
+API_FIELD(Attributes="NoSerialize")
+float Field1 = 11;
 ```
 
 To learn more about using attributes see this [page](attributes.md).

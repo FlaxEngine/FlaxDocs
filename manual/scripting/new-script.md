@@ -1,6 +1,7 @@
 # Create and use a script
 
 Scripts in Flax are written in the **C#** language (source files with extension `.cs`).
+If you want to create a C++ Script you can find out how [here](cpp/index.md).
 To provide better organization in a project workspace script files are located in the `Source/` directory.
 In that way scripts are separated from the assets which reduces mess and makes it easier to work with project sources.
 
@@ -19,37 +20,7 @@ Flax Editor creates a solution file (`.sln`) and C# projects (`.csproj`) for gam
 2. Double-click to open the script. Wait for Flax to open your IDE, which will then open the new script.
 
 Once opened this is what the script file will look like.
-```cs
-using System;
-using System.Collections.Generic;
-using FlaxEngine;
-
-namespace Game
-{
-    public class MyScript : Script
-    {
-        public override void OnStart()
-        {
-            // Here you can add code that needs to be called when script is created, just before the first game update
-        }
-
-        public override void OnEnable()
-        {
-            // Here you can add code that needs to be called when script is enabled (eg. register for events)
-        }
-
-        public override void OnDisable()
-        {
-            // Here you can add code that needs to be called when script is disabled (eg. unregister from events)
-        }
-
-        public override void OnUpdate()
-        {
-            // Here you can add code that needs to be called every frame
-        }
-    }
-}
-```
+[!code-csharp[Example1](code-examples/events.cs)]
 
 # Use a script
 

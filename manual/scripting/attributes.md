@@ -1,15 +1,27 @@
 # Attributes
 
-Flax provides various attributes that are used to extend the default logic or provide metadata about the code (serialization and editing options).
+Flax provides various attributes that are used to extend the default logic or provide metadata about the code (serialization and editing options). These attributes can be used in both C# as well as C++.
 
+
+## Using Attributes
 Most of the attributes can be used for both: fields and properties:
 
+### C#
 ```cs
 [Limit(0, 10)]
-public float Field1 = 11;
+public float Field1 = 11f;
 
 [Tooltip("Light color")]
 public Color Field2 { get; set; }
+```
+
+### C++
+```cpp
+API_FIELD(Attributes = "Limit(0, 10)")
+float Field1 = 11f;
+
+API_FIELD(Attributes = "Tooltip(\"Light color\")")
+Color ColorVal;
 ```
 
 ## Common attributes
@@ -44,24 +56,8 @@ The following table lists the most common attributes with usage description.
 
 By using **ExecuteInEditMode** you can enable your scripts to run in Editor. This is useful to generate procedural content for your game from code. Here is an example script that generates a grid of lights in Editor:
 
-```cs
-[ExecuteInEditMode]
-public class MyGenerator : Script
-{
-    public override void OnStart()
-    {
-        for (int x = 0; x < 5; x++)
-        {
-            for (int z = 0; z < 5; z++)
-            {
-                var light = new PointLight();
-                light.Radius = 1000;
-                light.ShadowsMode = ShadowsCastingMode.None;
-                light.Position = new Vector3(x * 100.0f, 0, z * 100.0f);
-                light.Parent = Actor;
-                //light.HideFlags = HideFlags.DontSave; // Uncomment to don't save generated actors
-            }
-        }
-    }
-}
-```
+### C#
+[!code-csharp[Example1](code-examples/attributes.cs)]
+
+### C++
+[!code-cpp[Example2](code-examples/attributes.h)]

@@ -4,7 +4,8 @@ Scene objects lifetime is controlled by the Flax but the game can also access **
 
 ## Spawning objects
 
-Example code that spawn a new point light:
+### C#
+Example code that spawns a new point light:
 
 ```cs
 public override void OnStart()
@@ -25,6 +26,27 @@ public override void OnStart()
 }
 ```
 
+### C++
+
+In C++ the implementation is the same.
+```cpp
+void ExampleScript::OnStart()
+{
+    auto light = New<PointLight>();
+    light->Color = Color::Blue;
+    light->SetParent(GetActor());
+}
+```
+
+In order to add a script you just create a new instance and set the parent.
+```cpp
+void ExampleScript::OnStart()
+{
+    auto script = New<SecondaryScript>();
+    script->SetParent(GetActor());
+}
+```
+
 > [!Note]
 > Scene objects (actors, scripts) should **not use constructors** to prevent issues.
 
@@ -32,35 +54,28 @@ public override void OnStart()
 
 Flax supports immediate and delayed objects removing system. This helps with cleanup up the scene from killed players or unused actors.
 
-```cs
-public class MyScript : Script
-{
-    public SpotLight Flashlight;
-
-    public override void OnEnable()
-    {
-        Destroy(ref Flashlight);
-    }
-}
-```
+### C#
+[!code-csharp[Example1](code-examples/objects-lifetime.cs)]
 
 Here is an example script that will remove object after a specified timeout (in seconds):
 
-```cs
-public class AutoRemoveObj : Script
-{
-    [Tooltip("The time left to destroy object (in seconds).")]
-    public float Timeout = 5.0f;
-
-    public override void OnStart()
-    {
-        Destroy(Actor, Timeout);
-    }
-}
-```
+[!code-csharp[Example2](code-examples/objects-lifetime-2.cs)]
 
 In the same way you can remove scripts:
 
 ```cs
 Destroy(Actor.GetScript<Player>());
+```
+
+### C++
+
+Simple deletion of a referenced object:
+[!code-cpp[Example3](code-examples/objects-lifetime.h)]
+
+How to time object deletion:
+[!code-cpp[Example4](code-examples/objects-lifetime-2.h)]
+
+How to delete script:
+```cpp
+GetActor()->GetScript<ExampleScript>()->DeleteObject();
 ```

@@ -4,20 +4,13 @@ Scripts in Flax does not work like the traditional programs where code runs cont
 Instead, Flax calls declared in script functions to handle specific game events like update or physics collision.
 These functions are called **event functions** because they are executed by Flax in response to events that occur during gameplay. Using these function allows you to implement gameplay logic and handle different situations inside your game.
 
-```cs
-public class MyScript : Script
-{
-	public override void OnStart()
-	{
-		// Here you can add code that needs to be called when script is created
-	}
+## Examples
 
-	public override void OnUpdate()
-	{
-		// Here you can add code that needs to be called every frame
-	}
-}
-```
+### C#
+[!code-csharp[Example1](code-examples/events.cs)]
+
+### C++
+[!code-cpp[Example2](code-examples/events.h)]
 
 ## Event functions
 
