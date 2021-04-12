@@ -19,6 +19,8 @@ LOG(Info, "Connected: {0}", connected); // print to log
 
 For ANSI and UTF-8 strings use `StringAnsi` that holds characters in `char` format (1 byte per-char).
 
+To learn more about string formatting see [this documentation](string-formatting.md).
+
 ## StringView
 
 `StringView` holds information about a text, except it's not allocated inside it (unlike `String` does) but just provided as a view to a characters sequence with it's length. It doesn't have to be null-terminated. It's used in various Engine APIs and gets implicitly created from String or constant strings.

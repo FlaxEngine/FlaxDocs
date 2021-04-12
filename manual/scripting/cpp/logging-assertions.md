@@ -29,9 +29,11 @@ LOG(Warning, "hello there! {0}", info);
 LOG(Error, "player speed: {0}, direction: {1}", 11.0f, Vector3::UnitX);
 ```
 
+Those logs are also redirected to the low-level platform output (via `Platform::Log`) so can be seen when using target platform debugger andor utilities (eg. *Visual Studio* program output, or Android *adb* output).
+
 ## Debug Log
 
-C++ API contains access to `DebugLog` utility used in C# scripts. It displays messages in *Debug Log* window in Editor. It also supports showing the complete stack trace of the log location for easier debugging.
+C++ API contains access to `DebugLog` utility used in C# scripts. It displays messages in *Debug Log* window in Editor. It also supports showing the complete stack trace of the log location for easier debugging (including copying messages with *Ctrl+C*).
 
 Examples:
 
