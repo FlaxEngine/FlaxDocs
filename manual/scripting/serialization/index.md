@@ -25,6 +25,52 @@ Here are listed various hints about Flax serialization:
 
 * References to the scene objects (actors, scripts) are serialized as `Guid` (hex format, inlined). See [Object.ID](https://docs.flaxengine.com/api/FlaxEngine.Object.html#FlaxEngine_Object_ID).
 * Editor uses default serialization rules for Undo
-* Flax deserializes all child scene object before calling `Awake`/`Start` methods on loaded objects (parent object may not be deserialized yet).
+* Flax deserializes all child scene object before calling `OnAwake`/`OnStart` methods on loaded objects (parent object may not be deserialized yet).
 * Avoid recursive references for custom objects types. It's better to use loop-references for scene objects.
+* When performing code refactoring see [this tutorial](../advanced/refactoring-renaming.md) about supporting old data format loading
 
+## Serialization Callbacks
+
+Flax supports serialization callback methods. A callback can be used to manipulate an object before and/or after its serialization and deserialization by the serializer.
+
+* OnSerializing
+* OnSerialized
+* OnDeserializing
+* OnDeserialized
+
+Example:
+
+```cs
+using System.Runtime.Serialization;
+
+public class MyScript : Script
+{
+    [OnSerializing]
+    internal void OnSerializing(StreamingContext context)
+    {
+        Debug.Log("OnSerializing");
+    }
+
+    [OnSerialized]
+    internal void OnSerialized(StreamingContext context)
+    {
+        Debug.Log("OnSerialized");
+    }
+
+    [OnDeserializing]
+    internal void OnDeserializing(StreamingContext context)
+    {
+        Debug.Log("OnDeserializing");
+    }
+
+    [OnDeserialized]
+    internal void OnDeserialized(StreamingContext context)
+    {
+        Debug.Log("OnDeserialized");
+    }
+}
+```
+
+## Native C\+\+ serialization
+
+To learn about C++ objects serialization see related documentation [here](../cpp/serialization.md).
