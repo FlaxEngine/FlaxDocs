@@ -163,7 +163,7 @@
 ## [Scripting restrictions](scripting/restrictions.md)
 ## [C++ Scripting](scripting/cpp/index.md)
 ### [Common Types](scripting/cpp/common-types.md)
-### [Collections](cscripting/cpp/ollections.md)
+### [Collections](scripting/cpp/collections.md)
 ### [String Formatting](scripting/cpp/string-formatting.md)
 ### [Logging and Assertions](scripting/cpp/logging-assertions.md)
 ### [Object References](scripting/cpp/object-references.md)
