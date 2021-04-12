@@ -54,6 +54,7 @@ To start visual scripting see the related documentation [here](visual/index.md).
   * [Rider](debugging/rider.md)
 * [Scripts serialization](serialization/index.md)
 * [Empty Actor](empty-actor.md)
+* [Engine API](engine-api.md)
 * [Custom Editors](custom-editors/index.md)
   * [Custom script editor](tutorials/custom-editor.md)
   * [Attributes](custom-editors/attributes.md)

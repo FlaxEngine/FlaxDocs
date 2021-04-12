@@ -156,6 +156,7 @@
 ### [Rider](scripting/debugging/rider.md)
 ## [Scripts serialization](scripting/serialization/index.md)
 ## [Empty Actor](scripting/empty-actor.md)
+## [Engine API](scripting/engine-api.md)
 ## [Custom Editors](scripting/custom-editors/index.md)
 ### [Custom script editor](scripting/tutorials/custom-editor.md)
 ### [Attributes](scripting/custom-editors/attributes.md)
