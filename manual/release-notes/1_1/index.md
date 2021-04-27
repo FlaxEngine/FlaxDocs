@@ -94,6 +94,60 @@ One of the important aspects of the Volumetric Fog is the ability to adjust its 
 
 ## Changelog
 
+### Version 1.1.6218 - 23 April 2021
+
+Contributors: mafiesto4, stefnotch, jb-perrier, W2Wizard, GoaLitiuM, TaylerMauk
+
+PRs merged: 15
+
+* Add overwrite prompt for SaveDialog on Windows
+* Add sweep and overlap physics queries for capsule shapes
+* Add more C++ docs and examples
+* Add improvements the random byte generation code
+* Add `BoxBrush::SetMaterial`
+* Add drag&drop support for Linux
+* Add `UpDirection` to Character Controller
+* Add automatic destination folder creation when saving Json asset
+* Add path utils to support StringView
+* Add error message box on Editor Options saving error
+* Add support for OnSerializing, OnSerialized, OnDeserializing and OnDeserialized callbacks for C# types serialization with Json
+* Add support for fixed-array fields in scripting
+* Optimize `WriteStream::WriteText`
+* Fix Win32 stack traces issue due to invalid search path for debug symbols
+* Fix diff serialization for C# lists
+* Fix deserialization of C# lists
+* Fix for UWP game build
+* Fix picking game binaries target when EditorTarget is not SetupTargetEnvironment
+* Fix using cross-module references inside C++ game project
+* Fix using references to projects outside the main project
+* Fix selecting spline points
+* Fix initial dock window size on high-dpi screen
+* Fix regression in adding model material slots
+* Fix Dropdown control
+* Fix duplicating spline
+* Fix `AutoFocus` saved in data for controls
+* Fix removing Gameplay Globals
+* Fix using `AssetsCache` in game code
+* Fix render layers mask usage for shadows rendering
+* Fix 3D audio placement for XAudio2 and OpenAL
+* Fix crash on relocation in BitArray
+* Fix using Sorting in C++ game code
+* Fix doc comments
+* Fix natvis for StringBuilder
+* Fix tooltips flicker
+* Fix tooltips to appear across multiple monitors making it hard to read them
+* Fix `PrefabSpritesRenderer` from script list
+* Fix using Camera refs
+* Fix `ContainerControl.GetChildAt` to iterate in reverse order to respect z order
+* Fix crash when using Actor GetScript or GetChild with invalid index
+* Fix compilation of bindings code with `API_EVENT` in some cases
+* Fix crash when using C# script that inherits from C++ script
+* Fix crash on bokeh in dof on d3d12 (NVidia driver issue regression)
+* Fix progress bar drawing precision and stability
+* Fix handling crash when loading scripting api bindings cache during build
+* Fix spline model geometry deformation precision issues
+* Fix DPI regression (use the overrideable `RootWindow` instead of `_root`)
+
 ### Version 1.1.6217 - 28 March 2021
 
 Contributors: mafiesto4, VNNCC, DaruBrub, jb-perrier, stefnotch, honzapatCZ, iliyalesani, SilentCLD, intolerantape, Evildea, Vizepi, GoaLitiuM, MinhCT, W2Wizard, Down-s, Erdroy

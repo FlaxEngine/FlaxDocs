@@ -54,7 +54,7 @@ namespace GraphicsFeaturesTour
 
             layout.Space(20);
             var button = layout.Button("Click me", Color.Green);
-            button.Button.Clicked += () => Debug.Log("Button clicked!");
+            button.Button.Clicked += () => Debug.Log("Button clicked! The speed is " + (IsSingleObject ? (Values[0] as MyScript).Speed : ""));
         }
     }
 }

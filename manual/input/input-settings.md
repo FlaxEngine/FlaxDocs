@@ -27,7 +27,7 @@ You can create as many input settings as you want (even special versions per pla
 
 **Action Mappings** are used to configure virtual actions. It's useful to bind a physical mouse or gamepad buttons to specific actions identified by the name. Later the game may track those input events using action names.
 
-Useful C# API: [InputEvent](https://docs.flaxengine.com/api/FlaxEngine.InputEvent.html), [Input.ActionConfig](https://docs.flaxengine.com/api/FlaxEngine.Input.ActionConfig.html) and [Input.ActionMappings](https://docs.flaxengine.com/api/FlaxEngine.Input.html#FlaxEngine_Input_ActionMappings).
+Useful C# API: [InputEvent](https://docs.flaxengine.com/api/FlaxEngine.InputEvent.html), [Input.ActionConfig](https://docs.flaxengine.com/api/FlaxEngine.ActionConfig.html) and [Input.ActionMappings](https://docs.flaxengine.com/api/FlaxEngine.Input.html#FlaxEngine_Input_ActionMappings).
 
 | Property | Desciption |
 |--------|--------|
@@ -44,7 +44,7 @@ Useful C# API: [InputEvent](https://docs.flaxengine.com/api/FlaxEngine.InputEven
 
 **Axis Mappings** are used to configure virtual axes. It's useful to bind a physical gamepad trigger or a mouse movement into a normalized and unified input source. Later the game may access those input axes values using a virtual input interface.
 
-Useful C# API: [InputAxis](https://docs.flaxengine.com/api/FlaxEngine.InputAxis.html), [Input.AxisConfig](https://docs.flaxengine.com/api/FlaxEngine.Input.AxisConfig.html) and [Input.AxisMappings](https://docs.flaxengine.com/api/FlaxEngine.Input.html#FlaxEngine_Input_AxisMappingsAxisConfig).
+Useful C# API: [InputAxis](https://docs.flaxengine.com/api/FlaxEngine.InputAxis.html), [Input.AxisConfig](https://docs.flaxengine.com/api/FlaxEngine.AxisConfig.html) and [Input.AxisMappings](https://docs.flaxengine.com/api/FlaxEngine.Input.html#FlaxEngine_Input_AxisMappings).
 
 | Property | Desciption |
 |--------|--------|

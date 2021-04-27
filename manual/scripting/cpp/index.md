@@ -1,8 +1,18 @@
 # C++ Scripting
 
-Flax Engine supports fully C++ scripting with even more features than C# scripting. In general, C\+\+ offers more **performance** and allows to **access engine API directly** which comes with many benefits. Flax Engine is mostly written in C\+\+ with C# flavor which means you can easily build the game on top of the engine. Also, Flax uses its own build tool called [Flax.Build](../../editor/flax-build/index.md) to compile both engine and game.
+Flax Engine fully supports C++ scripting with even more features than C# scripting. In general, C\+\+ offers more **performance** and allows to **access engine API directly** which comes with many benefits. Flax Engine is mostly written in C\+\+ with C# flavor which means you can easily build the game on top of the engine. Also, Flax uses its own build tool called [Flax.Build](../../editor/flax-build/index.md) to compile both engine and game.
 
 Follow this documentation section to learn how to write your own C\+\+ scripts and use them in a game. Also, if you see any code examples in the *Flax Documentation* that are written in C# you can similarly use them in C\+\+ scripts since the engine uses the same API in both languages (you can even move your existing game code from C# to C\+\+ quite quickly).
+
+## In this section
+
+* [Common Types](common-types.md)
+* [Collections](collections.md)
+* [String Formatting](string-formatting.md)
+* [Logging and Assertions](logging-assertions.md)
+* [Object References](object-references.md)
+* [Serialization](serialization.md)
+* [Tips & Tricks](tips-tricks.md)
 
 ## Setup
 
@@ -29,11 +39,11 @@ Find the `BuildNativeCode = false` line and change the value to `true` or add th
 BuildNativeCode = true;
 ```
 
-Now, you can **add new C\+\+ script** to the project and they will be compiled into the binary libraries and loaded by the engine. To do so, navigate in *Content Window* to that module sources folder `Source/<module_name>`, *right-click* and choose option **C++ Script**. Specify its name and confirm with *Enter*.
+Now, you can **add a new C\+\+ script** to the project and they will be compiled into the binary libraries and loaded by the engine. To do so, navigate in *Content Window* to that module sources folder `Source/<module_name>`, *right-click* and choose the **C++ Script** option. Specify its name and confirm with *Enter*.
 
 ![New Native Script C\+\+](media/new-cpp-script.png)
 
-Using Editor main menu **generate scripts project files** or right-click on a game project file and choose a similar option.
+Under File, you can select **generate scripts project files** or right-click on the game project file and choose a similar option.
 
 ![Generate Scripts Project Files](media/project-files-generation.png)
 
@@ -126,19 +136,18 @@ inline MouseDecalShoot::MouseDecalShoot(const SpawnParams& params)
 }
 ```
 
-Some important notes to learn:
-* You can use raw pointers to the assets but the safe way is with `AssetReference<T>` or `WeakAssetReference<T>`
-* To reference scene objects and other scripts in a safe way `ScriptingObjectReference<T>` is preferred
-* Scripting classes can be visible in Editor and C# scripting needs to have `API_CLASS()` meta macro before and `DECLARE_SCRIPTING_TYPE(<typename>);` added
-* By default script objects contain a constructor that takes a single parameter `const SpawnParams& params`
-* To expose a field into the editor and C# scripting use `API_FIELD()` prefix macro that can contain additional metadata attributes
-* To expose a function to the editor and C# scripting use `API_FUNCTION` prefix macro
-* You can use engine API similar to C# (eg. Camera, Physics, Input...)
-* The `<module_name>_API` define used between `class` and class name (i.e. `class MYPROJECT_API MouseDecalShoot`) is to export the C++ class to public module symbols so it can be used by other code
-* You can manually override `Serialize`/`Deserialize` method or use `API_AUTO_SERIALIZATION` macro to automatically generate serialziation code for the type (for classes and structures that inherit from `ISerializable`)
-* If your game module uses types from various engine modules (eg. Graphics, Physics) you have to add a reference to the in a build script so build tools can handle modules dependencies and properly link binaries - simply add `options.PublicDependencies.Add("<module_name>");` in you build script (where module name is Physics/Terrain/etc. - see BuildScripts for all modules you can use)
+## C\+\+ scripting documentation
 
-To learn about **API_** tags see [this documentation](../../editor/flax-build/api-tags.md).
+To learn more about specific areas of C\+\+ scripting in Flax see the related sections:
+
+* [Common Types](common-types.md)
+* [Collections](collections.md)
+* [String Formatting](string-formatting.md)
+* [Logging and Assertions](logging-assertions.md)
+* [Object References](object-references.md)
+* [Serialization](serialization.md)
+* [Tips & Tricks](tips-tricks.md)
+* [API_ targs](../../editor/flax-build/api-tags.md)
 
 Also, since C# and C\+\+ API are very similar you can use this [API reference](https://docs.flaxengine.com/api/FlaxEngine.html).
 
@@ -179,3 +188,7 @@ API_FUNCTION() void CallMe()
 NativeScript someCppScript = ...;
 someCppScript.CallMe();
 ```
+
+## Good Luck and Have Fun
+
+![Cpp Oh Boi](media/cpp-oh-boi.jpg)
