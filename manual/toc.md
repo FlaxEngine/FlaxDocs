@@ -58,6 +58,7 @@
 ## [Profiling](editor/profiling/index.md)
 ### [Profiler](editor/profiling/profiler.md)
 ### [dotTrace](editor/profiling/dot-trace.md)
+## [Localization](editor/localization/index.md)
 ## [Advanced](editor/advanced/index.md)
 ### [Extending Flax Editor](editor/advanced/extending-editor.md)
 ### [Command Line Access](editor/advanced/command-line-access.md)

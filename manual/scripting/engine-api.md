@@ -20,3 +20,4 @@ Scripting API list for gameplay programming (available in both C++, C# and Visua
 * `Render2D` - 2D graphics rendering system
 * `Renderer` - 3D graphics rendering system
 * `Scripting` - game scripting manager
+* `Localization` - language and culture localization system

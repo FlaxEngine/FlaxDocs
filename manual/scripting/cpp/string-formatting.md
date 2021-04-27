@@ -1,12 +1,12 @@
 # String Formatting for C\+\+ in Flax
 
-Flax uses [fmt](https://fmt.dev/latest/index.html) lib to format strings. The formatting syntax is similar to the one in C# and is considered as easy to use and quite extensible. The same formatting style can be used also in `LOG` macro to print formatted messages.
+Flax uses [fmt](https://fmt.dev/5.3.0/index.html) lib to format strings. The formatting syntax is similar to the one in C# and is considered as easy to use and quite extensible. The same formatting style can be used also in `LOG` macro to print formatted messages.
 
 ## Syntax
 
 Format strings contain `replacement fields` surrounded by curly braces `{}`. Anything that is not contained in braces is considered literal text, which is copied unchanged to the output. If you need to include a brace character in the literal text, it can be escaped by doubling: `{{` and `}}`.
 
-To learn more see the reference: [fmt syntax](https://fmt.dev/latest/syntax.html).
+To learn more see the reference: [fmt syntax](https://fmt.dev/5.3.0/syntax.html).
 
 ## Examples
 

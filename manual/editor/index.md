@@ -53,6 +53,12 @@ Follow those instructions to robust your game development!
 </div>
 
 <div class="frontpage-section">
+<a href="localization/index.md"><img src="localization/media/icon.jpg"></a>
+<h3><a href="localization/index.md">Localization</a></h3>
+<p>Games internalization and globalization tools.</p>
+</div>
+
+<div class="frontpage-section">
 <a href="advanced/index.md"><img src="advanced/media/icon.jpg"></a>
 <h3><a href="advanced/index.md">Advanced</a></h3>
 <p>Learn some advanced stuff about using Flax Editor.</p>
