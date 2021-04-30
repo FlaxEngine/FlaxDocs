@@ -21,9 +21,9 @@ public:
     {
         if (Input::GetKeyDown(KeyboardKeys::G) && AnotherScene.IsValid())
         {
-			// Does the same as the C# API
-			Level::UnloadAllScenesAsync();
-			Level::LoadSceneAsync(AnotherScene);
+		// Does the same as the C# API
+		Level::UnloadAllScenesAsync();
+		Level::LoadSceneAsync(AnotherScene);
         }
     }
 };
