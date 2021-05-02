@@ -9,4 +9,5 @@ Follow this documentation section to learn more about measuring and optimizing t
 ## In this section
 
 * [Profiler](profiler.md)
+* [Tracy](tracy.md)
 * [dotTrace](dot-trace.md)
