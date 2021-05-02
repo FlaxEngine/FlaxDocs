@@ -2,7 +2,7 @@
 
 ![Triggers](media/triggers.gif)
 
-**Triggers** are colliders used to detect other colliders enter it, which you can use to script events. For example, you can detect when a player character enters a room, and use this in your script to trigger an event.
+**Triggers** are special colliders used to detect when other colliders enter their geometry, this can be used to script events. For example, you can detect when a player character enters a room and use this in your script to trigger an event.
 
 Triggers don't generate collisions.
 
@@ -19,6 +19,7 @@ Triggers don't generate collisions.
 ## Use a trigger
 
 Triggers use dedicated trigger events that you can register for:
+
 * `Trigger.TriggerEnter`
 * `Trigger.TriggerExit`
 
