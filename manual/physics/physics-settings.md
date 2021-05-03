@@ -1,6 +1,6 @@
 # Physics Settings
 
-**Physics Settings asset** is used to specify the initial physics simulation configuration. In fact, some of its options can be set only on physics engine startup so using that asset can be very handy. Hovewer, most of the physics simulation options can be adjusted at runtime using [Physics](https://docs.flaxengine.com/api/FlaxEngine.Physics.html) class.
+**Physics Settings asset** is used to specify the initial physics simulation configuration. In fact, some of its options can be set only on physics engine startup so using that asset may be required. Hovewer, most of the physics simulation options can be adjusted at runtime using [Physics](https://docs.flaxengine.com/api/FlaxEngine.Physics.html) class.
 
 ## Create physics settings
 
@@ -17,7 +17,7 @@
 
 ## Use physics settings
 
-You can create as many physics settings as you want (even special versions per platform) but only one can be used during game building. Use **Game Settings** asset (always located in `Content/GameSettings.json`) to link the physics options. If your game is using more advanced confgiuration you can edit the game settings from code in your build script (use [GameSettings.Load](https://docs.flaxengine.com/api/FlaxEditor.Content.Settings.GameSettings.html#FlaxEditor_Content_Settings_GameSettings_Load) and [GameSettings.Save](https://docs.flaxengine.com/api/FlaxEditor.Content.Settings.GameSettings.html#FlaxEditor_Content_Settings_GameSettings_Save__1___0_) from C# API).
+You can create as many physics settings as you want (even special versions per platform) but only one can be used during game building. Use **Game Settings** asset (always located in `Content/GameSettings.json`) to link the physics options. If your game is using more advanced configuration you can edit the game settings from code in your build script (use [GameSettings.Load](https://docs.flaxengine.com/api/FlaxEditor.Content.Settings.GameSettings.html#FlaxEditor_Content_Settings_GameSettings_Load) and [GameSettings.Save](https://docs.flaxengine.com/api/FlaxEditor.Content.Settings.GameSettings.html#FlaxEditor_Content_Settings_GameSettings_Save__1___0_) from C# API).
 
 ![Use Physics Settings](media/use-physics-settings.jpg)
 
@@ -54,7 +54,7 @@ You can create as many physics settings as you want (even special versions per p
 
 ![Simulation](media/physics-layers-options.jpg)
 
-Flax physics simulation supports layer-based collision detection. You can specify collisions mask for each layer that will be used to describe if objects from that layer can collider with objetcs from the other layers.
+Flax physics simulation supports layer-based collision detection. You can specify collisions mask for each layer that will be used to describe if objects from that layer can collide with objects from the other layers.
 
 This uses the global layers settings and shows them as a layers matrix. Use checkboxes to define the layers collision mask.
 

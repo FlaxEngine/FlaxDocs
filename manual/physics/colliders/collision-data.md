@@ -2,7 +2,7 @@
 
 ![Collision Data](media/collision-data.jpg)
 
-**Collision Data** asset contains a baked mesh collision data used at runtime by the [Mesh Colliders](mesh-collider.md).
+**Collision Data** asset contains a baked mesh collision data used at runtime by [Mesh Colliders](mesh-collider.md).
 It supports **convex meshes** and **triangle meshes** data.
 
 ## Create a collision data
