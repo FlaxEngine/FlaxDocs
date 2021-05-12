@@ -1,6 +1,6 @@
 # Custom Geometry Drawing
 
-In this tutorial you will learn how to implement custom geometry drawing. This technique allows to create custom geometry data, proces sit and display on a screen. It can be used to implement custom rendering for a game.
+In this tutorial you will learn how to implement custom geometry drawing. This technique allows to create custom geometry data, process it and display on a screen. It can be used to implement custom rendering for a game.
 
 ## 1. Create new shader
 
@@ -14,7 +14,7 @@ If you're working with Visual Studio then use **File -> Generate project file** 
 
 ## 2. Write Vertex and Pixel shaders
 
-Now, we want to write a simple Vertex and Pixel shaders that will process our geometry and display it on a screen. To do so we first declare a constant buffer with object transformation (`WorldMatrix`) and camera+screen transformation (`ViewProjectionMatrix`). Those matrices are used to transform the vertex from model local-space to the world-space and then to the screen. This transformation is performed per-vertex in function `VS_Custom`. As you can see it gets `ModelInput` structure data as input (single vertex data) and outputs the processed vertex data in structure `VertexOutput`. Then, this data is processed by GPU which builds triangles, interpolates the triangles, performs the depth-test and calls the pixel shader function `PS_Custom` for every visible pixel on a screen. In this example we simple create a colro gradient based on the pixel `WorldPoition.y` which is a location on Y axis of the pixel in the game world.
+Now, we want to write a simple Vertex and Pixel shaders that will process our geometry and display it on a screen. To do so we first declare a constant buffer with object transformation (`WorldMatrix`) and camera+screen transformation (`ViewProjectionMatrix`). Those matrices are used to transform the vertex from model local-space to the world-space and then to the screen. This transformation is performed per-vertex in function `VS_Custom`. As you can see it gets `ModelInput` structure data as input (single vertex data) and outputs the processed vertex data in structure `VertexOutput`. Then, this data is processed by GPU which builds triangles, interpolates the triangles, performs the depth-test and calls the pixel shader function `PS_Custom` for every visible pixel on a screen. In this example we simple create a color gradient based on the pixel `WorldPoition.y` which is a location on Y axis of the pixel in the game world.
 
 Also, note that vertex shader function contains a `META_VS_IN_ELEMENT(..)` attribute that informs the shader compiler and graphics pipeline backend that this function accepts the single RGB32 data as vertex position. If your ModelInput needs more data, remember to add the attributes there.
 
@@ -29,21 +29,21 @@ META_CB_END
 // Geometry data passed to the vertex shader
 struct ModelInput
 {
-	float3 Position : POSITION;
+    float3 Position : POSITION;
 };
 
 // Interpolants passed from the vertex shader
 struct VertexOutput
 {
-	float4 Position : SV_Position;
-	float3 WorldPosition : TEXCOORD0;
+    float4 Position : SV_Position;
+    float3 WorldPosition : TEXCOORD0;
 };
 
 // Interpolants passed to the pixel shader
 struct PixelInput
 {
-	float4 Position : SV_Position;
-	float3 WorldPosition : TEXCOORD0;
+    float4 Position : SV_Position;
+    float3 WorldPosition : TEXCOORD0;
 };
 
 // Vertex shader function for custom geometry processing
@@ -51,23 +51,23 @@ META_VS(true, FEATURE_LEVEL_ES2)
 META_VS_IN_ELEMENT(POSITION, 0, R32G32B32_FLOAT, 0, 0, PER_VERTEX, 0, true)
 VertexOutput VS_Custom(ModelInput input)
 {
-	VertexOutput output;
-	output.WorldPosition = mul(float4(input.Position.xyz, 1), WorldMatrix).xyz;
-	output.Position = mul(float4(output.WorldPosition.xyz, 1), ViewProjectionMatrix);
-	return output;
+    VertexOutput output;
+    output.WorldPosition = mul(float4(input.Position.xyz, 1), WorldMatrix).xyz;
+    output.Position = mul(float4(output.WorldPosition.xyz, 1), ViewProjectionMatrix);
+    return output;
 }
 
-// Pixel shader fucntion for custom geoemtry drawing on a screen
+// Pixel shader function for custom geoemtry drawing on a screen
 META_PS(true, FEATURE_LEVEL_ES2)
 float4 PS_Custom(PixelInput input) : SV_Target
 {
-	return lerp(float4(1, 0.1, 0, 1), float4(0.2, 0.9, 0.3, 1), frac(input.WorldPosition.y / 400));
+    return lerp(float4(1, 0.1, 0, 1), float4(0.2, 0.9, 0.3, 1), frac(input.WorldPosition.y / 400));
 }
 ```
 
 ## 3. Write rendering code
 
-Next step is to create a geometry buffers and render them with a custom shader.
+Next step is to create geometry buffers and render them with a custom shader.
 Create C# script and add it to the any actor on the scene. You can use [this tutorial](../../scripting/new-script.md) to learn how to do it. Then, write the following code:
 
 ```cs
