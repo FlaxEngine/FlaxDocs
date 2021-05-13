@@ -15,6 +15,32 @@ To learn how to setup and use the animated model please see the dedicated tutori
 
 Animated Model actor exposes a rich C# scripting API. You can modify the anim graph instanced parameters values via [AnimatedModel.Parameters](https://docs.flaxengine.com/api/FlaxEngine.AnimatedModel.html#FlaxEngine_AnimatedModel_Parameters), modify rendered model meshes materials via [AnimatedModel.Entries](https://docs.flaxengine.com/api/FlaxEngine.AnimatedModel.html#FlaxEngine_AnimatedModel_Entries), gather the current skeleton bones pose via [AnimatedModel.GetCurrentPose](https://docs.flaxengine.com/api/FlaxEngine.AnimatedModel.html#FlaxEngine_AnimatedModel_GetCurrentPose_FlaxEngine_AnimatedModel_Pose__), or even manually update animation via [AnimatedModel.UpdateAnimation](https://docs.flaxengine.com/api/FlaxEngine.AnimatedModel.html#FlaxEngine_AnimatedModel_UpdateAnimation).
 
+## Modular Characters
+
+![Modular Characters in Flax Engine Animations ](media/modular-character.gif)
+
+When working with highly customziable characters it's an often practise to split the skinned model into modular parts that use the same skeleton. This allows to build customziable characters (eg. custom player skins or randomized enemies look). Animated Model contains support for linking to other instance for skeleton pose copying instead of evaluating it again. Use `SetMasterPoseModel` method to create such linking as shown in a example script below:
+
+```cs
+using FlaxEngine;
+
+/// <summary>Modular character setup script.</summary>
+public class ModularCharacter : Script
+{
+    public AnimatedModel Master;
+    public AnimatedModel[] Puppets;
+
+    /// <inheritdoc/>
+    public override void OnStart()
+    {
+        if (Master == null || Puppets == null)
+            return;
+        foreach (var e in Puppets)
+            e.SetMasterPoseModel(Master);
+    }
+}
+```
+
 ## Properties
 
 ![Animated Model Properties](media/animated-model-properties.png)
