@@ -10,6 +10,18 @@ Here is an example command that will build game project for Windows platform:
 FlaxEditor.exe -project "<project-path>" -headless -mute -null -std -build "Development.Windows 64bit"
 ```
 
+To run Flax via Windows **Command Prompt** (`cmd.exe`) with logs use `start /w ...` as follows:
+
+```
+start /w FlaxEditor.exe -std -project "<project-path>"
+```
+
+To run Flax via Windows **PowerShell** with logs use `Start-Process -Wait ...` as follows:
+
+```
+Start-Process -Wait FlaxEditor.exe -Args "-std -project `"<project-path>`""
+```
+
 It will also send the log (including C# API [Debug.Log](https://docs.flaxengine.com/api/FlaxEngine.Debug.html#FlaxEngine_Debug_Log_System_Object_)) to the standard process output so in case of issues they can be easily detected. What is, even more, the editor may start without a window (headless mode) and perform some additional actions like clearing cooker cache or project cache.
 Of course, all those things can be made manually by using Flax Editor C# API and Editor Plugins (see [here](https://docs.flaxengine.com/api/FlaxEditor.GameCooker.html)).
 
