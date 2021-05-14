@@ -12,6 +12,13 @@
 * The `<module_name>_API` define used between `class` and class name (i.e. `class MYPROJECT_API MouseDecalShoot`) is to export the C++ class to public module symbols so it can be used by other code
 * You can manually override `Serialize`/`Deserialize` method or use `API_AUTO_SERIALIZATION` macro to automatically generate serialziation code for the type (for classes and structures that inherit from `ISerializable`)
 * If your game module uses types from various engine modules (eg. Graphics, Physics) you have to add a reference to the in a build script so build tools can handle modules dependencies and properly link binaries - simply add `options.PublicDependencies.Add("<module_name>");` in you build script (where module name is Physics/Terrain/etc. - see BuildScripts for all modules you can use)
+* Reference Scene asset with a picker UI for editor:
+
+```cpp
+API_FIELD(Attributes="CustomEditorAlias(\"FlaxEditor.CustomEditors.Editors.SceneRefEditor\"), AssetReference(typeof(SceneReference))")
+Guid SceneAsset = Guid::Empty;
+```
+
 * Custom constructor example for class object:
 
 ```cpp
