@@ -51,3 +51,13 @@ Note: some input configurations can be changed via the Editor Options.
 The Game Window is rendered from the camera(s) in your game.
 It is representative of your final, built game during in-editor simulation.
 You will need to use one or more cameras to control what the player actually sees when they are playing your game.
+
+#### Screenshots
+
+You can use *right-click* on Game window tab to take game viewport screenshot (saved inside *Screenshots* folder in project). To make higher resolution screenshots (eg. for marketing of your game or project) use **Viewport Resolution** and scale up the window backbuffer (eg. by 2-4).
+
+#### Utilities
+
+You can use *right-click* on Game window tab to show or hide game UI or DebugDraw shapes.
+
+![Game Viewport Utilities](media/game-viewport-debug-show.gif)
