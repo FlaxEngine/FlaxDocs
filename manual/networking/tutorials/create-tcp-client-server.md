@@ -124,14 +124,14 @@ API_CLASS() class GAME_API CppClient : public Script
 API_AUTO_SERIALIZATION();
 DECLARE_SCRIPTING_TYPE(CppClient);
 private:
-	NetworkSocket _socket;
+    NetworkSocket _socket;
 
 public:
 
-	// [Script]
-	void OnEnable() override;
-	void OnDisable() override;
-	void OnUpdate() override;
+    // [Script]
+    void OnEnable() override;
+    void OnDisable() override;
+    void OnUpdate() override;
 };
 ```
 
@@ -140,39 +140,39 @@ public:
 #include "Engine/Core/Log.h"
 
 CppClient::CppClient(const SpawnParams& params)
-	: Script(params)
+    : Script(params)
 {
-	_tickUpdate = true;
+    _tickUpdate = true;
 }
 
 void CppClient::OnEnable()
 {
-	LOG(Info, "Setting up client");
-	NetworkEndPoint endPoint;
-	Network::CreateEndPoint(TEXT("localhost"), TEXT("35000"), NetworkIPVersion::IPv4, endPoint);
-	Network::CreateSocket(_socket, NetworkProtocol::Tcp, NetworkIPVersion::IPv4);
-	Network::SetSocketOption(_socket, NetworkSocketOption::ReuseAddr, 1);
-	Network::ConnectSocket(_socket, endPoint);
-	LOG(Info, "Client listening for server...");
+    LOG(Info, "Setting up client");
+    NetworkEndPoint endPoint;
+    Network::CreateEndPoint(TEXT("localhost"), TEXT("35000"), NetworkIPVersion::IPv4, endPoint);
+    Network::CreateSocket(_socket, NetworkProtocol::Tcp, NetworkIPVersion::IPv4);
+    Network::SetSocketOption(_socket, NetworkSocketOption::ReuseAddr, 1);
+    Network::ConnectSocket(_socket, endPoint);
+    LOG(Info, "Client listening for server...");
 }
 
 void CppClient::OnDisable()
 {
-	Network::DestroySocket(_socket);
+    Network::DestroySocket(_socket);
 }
 
 void CppClient::OnUpdate()
 {
-	if (Network::IsReadable(_socket))
-	{
-		byte buf[100];
-		const int32 size = Network::ReadSocket(_socket, buf, ARRAY_COUNT(buf) - 1);
-		if (size > 0)
-		{
-			buf[size] = '\0';
-			LOG(Info, "Message : {0} | Size : {1}", String((char*)buf), size);
-		}
-	}
+    if (Network::IsReadable(_socket))
+    {
+        byte buf[100];
+        const int32 size = Network::ReadSocket(_socket, buf, ARRAY_COUNT(buf) - 1);
+        if (size > 0)
+        {
+            buf[size] = '\0';
+            LOG(Info, "Message : {0} | Size : {1}", String((char*)buf), size);
+        }
+    }
 }
 ```
 
@@ -189,16 +189,16 @@ API_CLASS() class GAME_API CppServer : public Script
 API_AUTO_SERIALIZATION();
 DECLARE_SCRIPTING_TYPE(CppServer);
 private:
-	bool _connected;
-	NetworkSocket _serverSocket;
-	NetworkSocket _clientSocket;
+    bool _connected;
+    NetworkSocket _serverSocket;
+    NetworkSocket _clientSocket;
 
 public:
 
-	// [Script]
-	void OnEnable() override;
-	void OnDisable() override;
-	void OnUpdate() override;
+    // [Script]
+    void OnEnable() override;
+    void OnDisable() override;
+    void OnUpdate() override;
 };
 ```
 
@@ -207,51 +207,52 @@ public:
 #include "Engine/Core/Log.h"
 
 CppServer::CppServer(const SpawnParams& params)
-	: Script(params)
+    : Script(params)
 {
-	_tickUpdate = true;
+    _tickUpdate = true;
 }
 
 void CppServer::OnEnable()
 {
-	LOG(Info, "Setting up server");
-	NetworkEndPoint serverPoint;
-	Network::CreateEndPoint(String::Empty, TEXT("35000"), NetworkIPVersion::IPv4, serverPoint);
-	Network::CreateSocket(_serverSocket, NetworkProtocol::Tcp, NetworkIPVersion::IPv4);
-	Network::SetSocketOption(_serverSocket, NetworkSocketOption::ReuseAddr, 1);
-	Network::BindSocket(_serverSocket, serverPoint);
-	Network::Listen(_serverSocket, 100);
-	LOG(Info, "Server waiting for connection...");
+    LOG(Info, "Setting up server");
+    NetworkEndPoint serverPoint;
+    Network::CreateEndPoint(String::Empty, TEXT("35000"), NetworkIPVersion::IPv4, serverPoint);
+    Network::CreateSocket(_serverSocket, NetworkProtocol::Tcp, NetworkIPVersion::IPv4);
+    Network::SetSocketOption(_serverSocket, NetworkSocketOption::ReuseAddr, 1);
+    Network::BindSocket(_serverSocket, serverPoint);
+    Network::Listen(_serverSocket, 100);
+    LOG(Info, "Server waiting for connection...");
 }
 
 void CppServer::OnDisable()
 {
-	LOG(Info, "Shutting down server");
-	if (_connected)
-	{
-		Network::DestroySocket(_clientSocket);
-		_connected = false;
-	}
-	Network::DestroySocket(_serverSocket);
+    LOG(Info, "Shutting down server");
+    if (_connected)
+    {
+        Network::DestroySocket(_clientSocket);
+        _connected = false;
+    }
+    Network::DestroySocket(_serverSocket);
 }
 
 void CppServer::OnUpdate()
 {
-	if (Network::IsReadable(_serverSocket))
-	{
-		NetworkEndPoint clientPoint;
-		Network::Accept(_serverSocket, _clientSocket, clientPoint);
-		LOG(Info, "Client connected");
-		_connected = true;
-	}
+    if (Network::IsReadable(_serverSocket))
+    {
+        NetworkEndPoint clientPoint;
+        Network::Accept(_serverSocket, _clientSocket, clientPoint);
+        LOG(Info, "Client connected");
+        _connected = true;
+    }
 
-	if (_connected && Network::IsWritable(_clientSocket))
-	{
-		const StringAnsi data("Hello, world! The very first message.");
-		const int32 written = Network::WriteSocket(_clientSocket, (byte*)*data, data.Length());
-		LOG(Info, "Sended : {0}", written);
-		Network::DestroySocket(_clientSocket);
-		_connected = false;
-	}
+    if (_connected && Network::IsWritable(_clientSocket))
+    {
+        const StringAnsi data("Hello, world! The very first message.");
+        const int32 written = Network::WriteSocket(_clientSocket, (byte*)*data, data.Length());
+        LOG(Info, "Sended : {0}", written);
+        Network::DestroySocket(_clientSocket);
+        _connected = false;
+    }
 }
+
 ```
