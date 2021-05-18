@@ -14,6 +14,7 @@ Check out the official repositories on a Github:
 
 * [Feature Requests](feature-requests.md)
 * [Report a bug](report-a-bug.md)
+* [Release Policy](release-policy.md)
 
 ## Open Source
 

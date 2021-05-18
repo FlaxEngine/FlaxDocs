@@ -369,6 +369,7 @@
 # [Contributing](contributing/index.md)
 ## [Feature Requests](contributing/feature-requests.md)
 ## [Report a bug](contributing/report-a-bug.md)
+## [Release Policy](contributing/release-policy.md)
 
 # [Release Notes](release-notes/index.md)
 ## [1.1 release notes](release-notes/1_1/index.md)
