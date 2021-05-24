@@ -57,6 +57,7 @@ Of course, all those things can be made manually by using Flax Editor C# API and
 | Command | Description |
 |--------|--------|
 | **-project <path>** | Startup project path. It must be specified to start the editor. |
+| **-play** | Starts the play-mode in Editor after startup. Can open a certain level if provided with asset id (eg. `-play SCENE_ASSET_ID`). |
 | **-genProjectFiles** | Generates the scripts project files and exits. |
 | **-clearCache** | Clears the project cache before starting the editor. |
 | **-clearCooker** | Clears the project Game Cooker cache before starting the editor. |
