@@ -147,7 +147,7 @@ To learn more about specific areas of C\+\+ scripting in Flax see the related se
 * [Object References](object-references.md)
 * [Serialization](serialization.md)
 * [Tips & Tricks](tips-tricks.md)
-* [API_ targs](../../editor/flax-build/api-tags.md)
+* [API_ tags](../../editor/flax-build/api-tags.md)
 
 Also, since the C# and C\+\+ API are very similar you can use this [API reference](https://docs.flaxengine.com/api/FlaxEngine.html).
 
