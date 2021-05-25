@@ -1,21 +1,34 @@
 # Plugins
 
-Plugins are standalone chunks of code added to your Flax project that can be used to implement persistent game or utility classes, the custom engine features, or to extend the editor by adding custom tools with UI representation. This documentation section explains the basics of creating and using plugins. Follow these notes to learn more about the plugins system in Flax.
+Plugins are collection of source code added to your Flax project that can be used to implement persistent game or utility classes, custom engine features, or to extend the editor by adding custom tools with UI representation. This documentation section explains the basics of creating and using plugins. Follow these notes to learn more about the plugin system in Flax.
 
-Example plugin project can be found [here](https://github.com/FlaxEngine/ExamplePlugin). Use it as a reference.
+Example plugin project can be found [here](https://github.com/FlaxEngine/ExamplePlugin), use this as a reference.
 
 ## Introduction
 
-Flax supports loading C# libraries (from *.dll* files) and adding references to game scripts. Many Flax Engine systems are designed to be extensible, enabling developers to add entire new features and to modify built-in functionality without modifying Engine Core code directly.
+Flax supports loading native .dll files, C# libraries from *.dll* files and adding references to game projects for use in scripts. Many Flax Engine systems are designed to be extensible, enabling developers to add new features and to modify built-in functionality without modifying engine source code directly.
 
-Using plugins allows the use of external .Net libraries to be used within a game. For instance, the developer can use custom game classes, custom networking libraries, or a social media plugin. To reference .Net module in your game scripts simply modify the build script file (eg. `Source/GameModule/MyGame.Build.cs`) by adding the file reference in overridden `Setup` method:
+Using plugins allows the use of external .Net libraries to be used within a game. For instance, the developer can use custom game classes, custom networking libraries, or a social media plugin. To reference .Net module in your game scripts modify the build script file (eg. `Source/GameModule/MyGame.Build.cs`) by adding a file reference in overridden `Setup` method:
 
 ```cs
 // Reference C# DLL placed Content folder
 options.ScriptingAPI.FileReferences.Add(Path.Combine(FolderPath, "..", "..", "Content", "JetBrains.Annotations.dll"));
 ```
 
-This will work for scripts build for the editor and cooked game as the referenced assembly will be packaged.
+After this entry has been added and the .dll file is available on the filesystem at this path you will need to *generate project script files*. Generating project script files can be done by accessing a context menu option when right-clicking the .flaxproj file in the game project root directory.
+
+To add a native .dll to your project, for example if your .Net dll wraps a native .dll, you can add an option to copy the native .dll to the output directory by adding the following to the `Setup` method:
+
+```cs
+// Copy native DLL placed in Content folder to output directory
+options.DependencyFiles.Add(Path.Combine(FolderPath, "..", "..", "Content", "native.dll"));
+```
+
+Remember to generate project script files anytime you modify the Game.Build.cs file.
+
+
+
+Build scripts work for both the editor and cooked game as the referenced assembly will be packaged.
 
 > [!IMPORTANT]
 > If your plugin collects the C# types information (eg. methods cache or attributes) always remember to release them in Editor on [FlaxEditor.ScriptsBuilder.ScriptsReloadBegin](https://docs.flaxengine.com/api/FlaxEditor.ScriptsBuilder.html#FlaxEditor_Scripting_ScriptsBuilder_ScriptsReloadBegin) event to prevent crashes during scripts reload in Editor.
@@ -24,23 +37,24 @@ This will work for scripts build for the editor and cooked game as the reference
 
 Every plugin has to export its description structure that defines the basic plugin properties. Plugin description is used to show the plugin information in [Plugins Window](plugins-window.md). Contents of the plugin description and related comment are listed below:
 
-| Property | Info |
-|--------|--------|
-| **Name** | The name of the plugin. |
-| **Version** | The version of the plugin. |
-| **Author** | The name of the author of the plugin. |
-| **AuthorUrl** | The plugin author website URL. |
-| **HomepageUrl** | The homepage URL for the plugin. |
-| **RepositoryUrl** | The plugin repository URL (for open-source plugins). |
-| **Description** | The plugin description. |
-| **Category** |  The plugin category (eg. `Rendering`).|
-| **IsBeta** | True if plugin is during Beta tests (before release). |
-| **IsAlpha** | True if plugin is during Alpha tests (early version). |
-| **SupportedPlatforms** | The supported deploy platforms by this plugin. |
+| Property               | Info                                                  |
+| ---------------------- | ----------------------------------------------------- |
+| **Name**               | The name of the plugin.                               |
+| **Version**            | The version of the plugin.                            |
+| **Author**             | The name of the author of the plugin.                 |
+| **AuthorUrl**          | The plugin author website URL.                        |
+| **HomepageUrl**        | The homepage URL for the plugin.                      |
+| **RepositoryUrl**      | The plugin repository URL (for open-source plugins).  |
+| **Description**        | The plugin description.                               |
+| **Category**           | The plugin category (eg. `Rendering`).                |
+| **IsBeta**             | True if plugin is during Beta tests (before release). |
+| **IsAlpha**            | True if plugin is during Alpha tests (early version). |
+| **SupportedPlatforms** | The supported deploy platforms by this plugin.        |
 
 # Types of Plugins
 
 There are two types of plugins:
+
 * Game plugins
 * Editor plugins
 
@@ -52,7 +66,7 @@ There are two types of plugins:
 public class MyPlugin : GamePlugin
 {
     /// <inheritdoc />
-	public override PluginDescription Description => new PluginDescription
+    public override PluginDescription Description => new PluginDescription
     {
         Name = "My Plugin",
         Category = "Other",
@@ -60,8 +74,8 @@ public class MyPlugin : GamePlugin
         Author = "Someone Inc.",
     };
 
-	/// <inheritdoc />
-	public override void Initialize()
+    /// <inheritdoc />
+    public override void Initialize()
     {
         base.Initialize();
 
