@@ -50,3 +50,11 @@ Brush that fill the area with a single, solid color.
 Brush that draws a linear, two-color gradient between top and bottom edges of the area.
 
 ![Linear Gradient Brush](media/brush-linear-gradient.png)
+
+# 9-Slicing Brush
+
+9-slicing is a technique used in 2D graphics that splits a single image into 9 areas which are scaled individually in order to prevent stretching when the image is displayed at different sizes and with different aspect ratios. In most cases, it's useful to prevent image borders from stretching for panels and buttons.
+
+![9 Slicing Brush](media/9slicing.gif)
+
+9-slicing is used by *Texture 9-Slicing* brush and *Sprite 9-Slicing* brush. To set up those brushes adjust the **Border** property that defines the image borders in texture space (0-1 range). **Border Size** defines the pixel size of the borders. You can use debug checkbox **Show Borders** to display a 9-slicing borders rectangle. It helps when adjusting the settings.
