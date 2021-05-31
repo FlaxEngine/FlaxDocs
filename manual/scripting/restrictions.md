@@ -28,3 +28,4 @@ Platforms that use AOT:
 * Xbox Scarlett
 * UWP
 * PlayStation 4
+* Switch

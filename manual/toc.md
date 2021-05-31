@@ -365,6 +365,7 @@
 ## [Linux](platforms/linux.md)
 ## [Xbox Scarlett](platforms/xbox-scarlett.md)
 ## [Android](platforms/android.md)
+## [Switch](platforms/switch.md)
 
 # [Contributing](contributing/index.md)
 ## [Feature Requests](contributing/feature-requests.md)

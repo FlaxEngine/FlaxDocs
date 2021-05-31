@@ -26,6 +26,7 @@ public override void OnStart()
 | **PLATFORM_LINUX** | Compile for Linux. |
 | **PLATFORM_XBOX_SCARLETT** | Compile for Xbox Scarlett. |
 | **PLATFORM_ANDROID** | Compile for Android. |
+| **PLATFORM_SWITCH** | Compile for Switch. |
 | **FLAX_X** | Used to detect Flax version during compilation. X=major version of Flax. eg. `FLAX_1` |
 | **FLAX_X_Y** | Used to detect Flax version during compilation. X=major version of Flax. Y=minor version of Flax. eg. `FLAX_1_2` |
 | **BUILD_DEBUG** | Compile in `Debug` mode. Full code debugging support without code optimizations. Worst performance but the best debugging experiance. All code checking assertions are enabled. Build intended for programmers to test bugs in code. |
