@@ -85,7 +85,7 @@ public class FoliageFromCode : Script
 
             for (int i = 0; i < instancesCount; i++)
             {
-                var instance = new Foliage.Instance();
+                var instance = new FoliageInstance();
                 instance.Type = typeIndex;
                 instance.Transform.Translation = new Vector3(rand.NextFloat() * Bounds.X, 0, rand.NextFloat() * Bounds.Y);
                 instance.Transform.Scale = new Vector3(rand.NextFloat(0.7f, 1.3f));
