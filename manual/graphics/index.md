@@ -31,3 +31,4 @@ This section explains all you need to know about working with materials pipeline
 * [Post effects](post-effects/index.md)
 * [Shaders](shaders/index.md)
 * [Debugging tools](debugging-tools/index.md)
+* [Tutorials](tutorials/index.md)

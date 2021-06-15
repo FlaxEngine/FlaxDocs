@@ -1,4 +1,4 @@
-# HOWTO: Create a custom Actor type
+# HOWTO: Create a custom actor type
 
 ### 1. Create script
 

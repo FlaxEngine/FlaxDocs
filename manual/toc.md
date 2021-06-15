@@ -143,6 +143,8 @@
 ## [Debugging tools](graphics/debugging-tools/index.md)
 ### [Debug View](graphics/debugging-tools/debug-view.md)
 ### [View Flags](graphics/debugging-tools/view-flags.md)
+## [Tutorials](graphics/tutorials/index.md)
+### [How to render object outline](graphics/tutorials/render-object-outline.md)
 
 # [Scripting](scripting/index.md)
 ## [Create and use a script](scripting/new-script.md)
