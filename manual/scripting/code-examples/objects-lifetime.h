@@ -6,16 +6,13 @@
 
 API_CLASS() class EXAMPLE_API MyScript : public Script
 {
-public:
     API_AUTO_SERIALIZATION();
-
     DECLARE_SCRIPTING_TYPE(MyScript);
-
 
     API_FIELD()
     ScriptingObjectReference<SpotLight> Flashlight;
 
-public:
+    // [Script]
     void OnDisable() override;
     void OnUpdate() override;
     void OnEnable() override;

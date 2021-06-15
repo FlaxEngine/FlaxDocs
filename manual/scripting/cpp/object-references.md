@@ -16,7 +16,7 @@ API_CLASS() class GAME_API MyCppScript : public Script
 {
 API_AUTO_SERIALIZATION();
 DECLARE_SCRIPTING_TYPE(MyCppScript);
-public:
+
 	API_FIELD() AssetReference<Texture> AssetRef;
 
 	// [Script]
@@ -59,7 +59,7 @@ API_CLASS() class GAME_API MyCppScript : public Script
 {
 API_AUTO_SERIALIZATION();
 DECLARE_SCRIPTING_TYPE(MyCppScript);
-public:
+
 	API_FIELD() ScriptingObjectReference<PointLight> LightRef;
 
 	// [Script]

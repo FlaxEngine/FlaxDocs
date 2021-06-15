@@ -93,7 +93,7 @@ Now, to understand some basic concepts related to C\+\+ scripting in Flax let's 
 #include "Engine/Serialization/JsonTools.h"
 #include "Engine/Physics/Physics.h"
 
-API_CLASS() class MYPROJECT_API MouseDecalShoot : public Script
+API_CLASS() class GAME_API MouseDecalShoot : public Script
 {
 API_AUTO_SERIALIZATION();
 DECLARE_SCRIPTING_TYPE(MouseDecalShoot);

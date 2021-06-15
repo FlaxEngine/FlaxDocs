@@ -5,12 +5,9 @@
 
 API_CLASS(Attributes = "ExecuteInEditMode") class GAME_API MyGenerator : public Script
 {
-public:
     API_AUTO_SERIALIZATION();
-
     DECLARE_SCRIPTING_TYPE(MyGenerator);
 
-public:
     // [Script]
     void OnEnable() override;
     void OnDisable() override;

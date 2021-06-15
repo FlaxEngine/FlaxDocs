@@ -6,16 +6,12 @@
 API_CLASS()
 class GAME_API ScriptExample : public Script
 {
-public:
     API_AUTO_SERIALIZATION();
-
     DECLARE_SCRIPTING_TYPE(ScriptExample);
 
-public:
     // [Script]
     void OnEnable() override;
     void OnDisable() override;
-
     void OnStart() override
     {
         // Prints all children names
@@ -28,7 +24,6 @@ public:
         if (pointLight)
             pointLight->Color = Color::Red;
     }
-
     void OnUpdate() override
     {
         // Rotates the parent object
