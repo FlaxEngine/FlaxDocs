@@ -190,6 +190,7 @@
 ### [How to create a custom editor window](scripting/tutorials/custom-window.md)
 ### [How to create a custom editor plugin](scripting/tutorials/custom-plugin.md)
 ### [How to create a custom asset type](scripting/tutorials/custom-asset.md)
+### [How to create a custom actor](scripting/tutorials/custom-actor.md)
 ### [How to use custom settings](scripting/tutorials/custom-settings.md)
 ### [How to import asset from code](scripting/tutorials/import-asset-from-code.md)
 ### [How to spawn decal on mouse click](scripting/tutorials/decal-on-mouse-click.md)

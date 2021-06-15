@@ -85,6 +85,7 @@ To start visual scripting see the related documentation [here](visual/index.md).
   * [How to create a custom editor window](tutorials/custom-window.md)
   * [How to create a custom editor plugin](tutorials/custom-plugin.md)
   * [How to create a custom asset type](tutorials/custom-asset.md)
+  * [How to create a custom actor](tutorials/custom-actor.md)
   * [How to change scene from script](tutorials/change-scene.md)
   * [How to use custom settings](tutorials/custom-settings.md)
   * [How to import asset from code](tutorials/import-asset-from-code.md)
