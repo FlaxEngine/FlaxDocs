@@ -39,5 +39,6 @@ Here is a sample material that can be used for a simple **2-gradient sky**:
 
 ![Sky Material Example](media/sky-material.jpg)
 
+Here is a sample material that can be used for a simple **cubemap-sky**:
 
-
+![Sky Material Example](media/sky-material-2.jpg)
