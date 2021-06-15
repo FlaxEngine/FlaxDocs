@@ -12,7 +12,7 @@ API_CLASS() class EXAMPLE_API SceneChanger : public Script
 public:
 
     API_FIELD(Attributes = "CustomEditorAlias(\"FlaxEditor.CustomEditors.Editors.SceneRefEditor\"), AssetReference(typeof(SceneReference))")
-        Guid AnotherScene;
+    Guid AnotherScene;
 
 public:
     void OnEnable() override;
@@ -21,9 +21,9 @@ public:
     {
         if (Input::GetKeyDown(KeyboardKeys::G) && AnotherScene.IsValid())
         {
-			// Does the same as the C# API
-			Level::UnloadAllScenesAsync();
-			Level::LoadSceneAsync(AnotherScene);
+            // Does the same as the C# API
+            Level::UnloadAllScenesAsync();
+            Level::LoadSceneAsync(AnotherScene);
         }
     }
 };
