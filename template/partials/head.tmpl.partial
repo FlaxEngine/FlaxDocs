@@ -15,7 +15,11 @@
   {{#_noindex}}<meta name="searchOption" content="noindex">{{/_noindex}}
   {{#_enableSearch}}<meta property="docfx:rel" content="{{_rel}}">{{/_enableSearch}}
   {{#_enableNewTab}}<meta property="docfx:newtab" content="true">{{/_enableNewTab}}
-  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@flaxengine">
+  <meta name="og:title" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}} {{#_appTitle}}| {{_appTitle}} {{/_appTitle}}">
+  <meta property="og:image" content="https://docs.flaxengine.com/media/social-image.jpg" />
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88357703-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
