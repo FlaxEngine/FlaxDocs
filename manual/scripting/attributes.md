@@ -51,6 +51,7 @@ The following table lists the most common attributes with usage description.
 | **VisibleIf** | Shows property/field in the editor only if the specified member has a given value. Can be used to hide properties based on other properties (also private properties). The given member has to be bool type. |
 | **DefaultValue** | Can be used to specify the default value for the field or the property. The editor will highlight the modified properties and add an option to restore value to default. You can use it on basic types like: `[DefaultValue(3.14f)] public float MyValue;` or on complex types: `[DefaultValue(typeof(Vector2), "1,2")] public Vector2 StartPosition;`. |
 | **ReadOnly** | Properties and fields marked with this attribute won't be editable in the inspector. This allows to show object proeprties values in the editor but without option to modify the value which can be handy in some cases. |
+| **Category** | Describes the category name for a type. Can be used to group script, asset or actor types for editor pickers to organize types. |
 
 ## Script execution in editor
 
