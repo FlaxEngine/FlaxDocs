@@ -9,10 +9,13 @@
 | **Never Stream** | If checked, dynamic resource streaming will be disabled for this texture. |
 | **Compress** | If checked, texture data will be comrpessed to use less memory. |
 | **Independent Channels** | If checked, texture channels have independent data (used for compression methods). Should be used for masks or packed textures.|
-| **Is sRGB** | If checked, texture contains colors in sRGB format data. |
-| **Flip Y** | If checked, texture Y coordinate will be flipped. |
+| **sRGB** | If checked, texture contains colors in sRGB format data. |
 | **Generate Mip Maps** | If checked, full mip maps chain will be generated for the texture. |
+| **Flip Y** | If checked, texture Y coordinate will be flipped. |
 | **Scale** | Custom scale parameter. Allows to increase or decrese imported texture resolution. The default value is 1. |
 | **Max Size** | The maximum size of imported texture. Used to clip too big textures. |
 | **Resize** | If checked, importer will resize texture. Use Size property to define texture width and height. Texture scale property will be ignored. |
 | **Size** | The size of the imported texture. If *Resize* property is checked then texture will be resized during the import to this value. Otherwise it will be ignored. |
+| **Preserve Alpha Coverage** | Check to preserve alpha coverage in generated mips for alpha test reference. Scales mipmap alpha values to preserve alpha coverage based on an alpha test reference value. |
+| **Preserve Alpha Coverage Reference** | The reference value for the alpha coverage preserving. Used only if *Preserve Alpha Coverage* is checked. |
+| **Texture Group** | Texture group for streaming (optional). See [Texture Groups](texture-groups.md). |

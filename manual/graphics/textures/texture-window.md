@@ -20,9 +20,9 @@ The following table lists the options in the toolstrip and what they do.
 
 | Icon | Description |
 |--------|--------|
-| ![icon](media/texture-editor-ui-toolstrip-1.png) | Shows and selects the asset in the *Content* window |
-| ![icon](media/texture-editor-ui-toolstrip-2.png) | Reimports texture |
-| ![icon](media/texture-editor-ui-toolstrip-3.png) | Shows the whole material graph on the surface |
+| ![icon](../../../media/editor-icons/search.png) | Shows and selects the asset in the *Content* window |
+| ![icon](../../../media/editor-icons/import.png) | Reimports texture |
+| ![icon](../../../media/editor-icons/center-view.png) | Shows the whole material graph on the surface |
 
 ### Viewport
 
@@ -32,11 +32,12 @@ In the upper left corner the viewport contains a widget buttons. By pressing `R/
 
 ### Properties panel
 
-![Properties](media/texture-properties.jpg)
+![Properties](media/texture-properties.png)
 
-This panel shows texture properties.
+This panel shows texture info and settings.
 
 - **General** group contains information about texture data format, size and memory usage.
+- **Properties** group contains texture options to adjust (ensure to save asset after editing).
 - **Import Settings** group contains texture import options (restored from last import). You can modify them and press **Reimport** button to update the asset from the source image file
 
 To learn more about texture import options see dedicated [Texture Import Settings](import-settings.md) page.
