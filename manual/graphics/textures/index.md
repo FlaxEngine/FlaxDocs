@@ -66,3 +66,6 @@ To learn more about materials and using textures for rendering go to [Materials 
 
 Flax API exposes several methods that enable you to create and use procedural textures from your code. To learn how to use it see the related tutorial here: [How to create a procedural texture](generate-texture.md).
 
+## Texture Groups
+
+Flax supports groupping textures inside Streaming settings for easier textures streaming configuration and quality options. Soo dedicated documentation page to learn more about [Texture Groups](texture-groups.md).

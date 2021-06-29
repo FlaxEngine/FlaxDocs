@@ -40,6 +40,7 @@ You can use the *Content* window to create new settings. Simply right-click in t
 | **Graphics** | Reference to [Graphics Settings](graphics-settings.md) asset. Contains initial rendering options. |
 | **Navigation** | Reference to [Navigation Settings](../../navigation/navigation-settings.md) asset. Contains initial navmesh building options. |
 | **Game Cooking** | Reference to [Build Settings](build-settings.md) asset. Contains Game Cooker profiles and additional options used during games building. |
+| **Streaming** | Reference to [Streaming Settings](streaming-settings.md) asset. Contains resources streaming configuration such as Texture Groups options. |
 | **Custom Settings** | Collection of custom json assets used by the game and plugins. To learn more see the related documentation [here](custom-settings.md). |
 | **Windows** | Reference to [Windows Settings](../../platforms/windows.md) asset. Contains options used when building game for Windows. |
 | **Universal Windows Platform** | Reference to [Universal Windows Platform Settings](../../platforms/uwp.md) asset. Contains options used when building game for Xbox One and Windows Store. |
