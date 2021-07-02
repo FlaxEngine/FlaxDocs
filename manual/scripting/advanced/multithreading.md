@@ -9,6 +9,9 @@ Except for general computing, the multithreading can be used to work with Flax o
 
 There is no *great rule* whether use main thread or custom jobs. In most cases, ensure to profile your code and optimize it when you find bottlenecks. Keep in mind that engine internally extensively uses multi-threading for content streaming, assets loading, physics simulation, etc.
 
+> [!TIP]
+> To profile asynchronous code use in-built [Profiler](../../editor/profiling/profiler.md) or [Tracy](../../editor/profiling/tracy.md) profiler.
+
 ## Synchronziation
 
 One of the key elements of multi-threaded programming is synchronization. Work submissions and results fetching are important aspects of this area. Always try to implement your algorithms starting from designing the data that you want to process. For instance, if you generate voxel terrain, then you can generate geometry in async but the created model can be added to the scene only on the main thread, then you can use something like this: `Scripting.InvokeOnUpdate(() => model.Parent = mainScene)`.
@@ -23,6 +26,102 @@ Thread-safe concurrent collections you can use in C#
 * `ConcurrentQueue`
 * `ConcurrentDictionary`
 * `ConcurrentStack`
+
+## Job System
+
+Flax contains own **Job System** which is used by the engine to pararellize systems like particles, animations, content, etc. It can be also used by the game to execute code in paraller. It makes easier to optimize large data sets processing using multi-core. Job System uses one thread per CPU. Example usage of the job system that will trigger two async job dispatches and wait for the second one to finish before continuing.
+
+```cs
+using System;
+using FlaxEngine;
+
+class JobSystemTest : Script
+{
+    /// <inheritdoc />
+    public override void OnEnable()
+    {
+        // Run example jobs in async on all CPUs
+        Debug.Log("Start");
+        var label = JobSystem.Dispatch(i => Debug.Log($"FactorialRecursion({i + 1}) = {FactorialRecursion(i + 1)}"), 30);
+        JobSystem.Wait(label);
+        Debug.Log("End");
+    }
+
+    public double FactorialRecursion(int number)
+    {
+        if (number == 1)
+            return 1;
+        return number * FactorialRecursion(number - 1);
+    }
+}
+```
+
+## Task Graph
+
+For more advanced gameplay systems that need to use dependencies and aim to improve CPU performance (better scheduling without gaps) the **Task Graph** is preferred. It's used by the engine to parallarize animations, particles, streaming and other systems update and can be used by the gameplay code. For instance, you can create own Task Graph System for a game that will calculate AI paths or perform player visibility checks or anything your project needs. The advantage of using Task Graph is that your async jobs will overlap with other jobs including engine async task which gives significant performance boost over traditional single-threaded gameplay programming.
+
+**TaskGraph** is a graph-based asynchronous tasks scheduler for high-performance computing and processing. It contains a list of systems to execute. You can create own graphs or use in-built ones to share CPU with engine systems.
+
+**TaskGraphSystem** represents a system that can generate work into Task Graph for asynchronous execution. Each system has list of dependencies to be executed before running given system (systems can be also sorted by *Order*). Before execution all systems receive `PreExecute` call and `PostExecute` call for custom data setup/cleanup before actual async execution. `Execute` method is used to schedule async jobs by using `graph.DispatchJob` (via *Job System*).
+
+The following code creates custom *Task Graph System* and adds it to the engine *Update* to be scheduled automatically.
+
+```cs
+using System;
+using FlaxEngine;
+
+class TaskGraphTest : Script
+{
+    private class MyGameplaySystem : TaskGraphSystem
+    {
+        /// <inheritdoc />
+        public override void PreExecute(TaskGraph graph)
+        {
+            Debug.Log("PreExecute");
+        }
+
+        /// <inheritdoc />
+        public override void Execute(TaskGraph graph)
+        {
+            // Run example jobs in async on all CPUs
+            graph.DispatchJob(i => Debug.Log($"FactorialRecursion({i + 1}) = {FactorialRecursion(i + 1)}"), 30);
+        }
+
+        /// <inheritdoc />
+        public override void PostExecute(TaskGraph graph)
+        {
+            Debug.Log("PostExecute");
+        }
+    }
+
+    private MyGameplaySystem _system;
+
+    /// <inheritdoc />
+    public override void OnEnable()
+    {
+        _system = new MyGameplaySystem();
+        Engine.UpdateGraph.AddSystem(_system);
+
+        // You can add dependencies on engine systems to run async jobs after/before them
+        //_system.AddDependency(Animations.System);
+        //Particles.System.AddDependency(_system);
+    }
+
+    /// <inheritdoc />
+    public override void OnDisable()
+    {
+        Engine.UpdateGraph.RemoveSystem(_system);
+        Destroy(ref _system);
+    }
+
+    static double FactorialRecursion(int number)
+    {
+        if (number == 1)
+            return 1;
+        return number * FactorialRecursion(number - 1);
+    }
+}
+```
 
 ## Async
 
