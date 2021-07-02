@@ -58,6 +58,7 @@
 ## [Editor Options](editor/options/index.md)
 ## [Profiling](editor/profiling/index.md)
 ### [Profiler](editor/profiling/profiler.md)
+### [Tracy](editor/profiling/tracy.md)
 ### [dotTrace](editor/profiling/dot-trace.md)
 ## [Localization](editor/localization/index.md)
 ## [Advanced](editor/advanced/index.md)

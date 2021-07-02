@@ -12,7 +12,7 @@ The character uses a **capsule**, defined by a center position, a vertical heigh
 
 ## Auto stepping
 
-Without auto-stepping it is easy for a character to get stuck against slight elevation changes in a ground mesh. It feels unnatural because in the real world a person would just cross over these small obstacles without thinking about it.
+Without auto-stepping it is easy for a character to get stuck against slight elevation changes in a ground mesh. It feels unnatural because in the real world a person would just cross over these small obstacles.
 
 You can adjust auto-stepping behaviour by using [CharacterController.SlopeLimit](https://docs.flaxengine.com/api/FlaxEngine.CharacterController.html#FlaxEngine_CharacterController_SlopeLimit) and [CharacterController.StepOffset](https://docs.flaxengine.com/api/FlaxEngine.CharacterController.html#FlaxEngine_CharacterController_StepOffset) properties.
 

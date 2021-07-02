@@ -2,9 +2,10 @@
 
 Both Flax Engine and builded game (Flax executable) support various input command line arguments.
 Using this feature can help with games development and can be involved in testing various scenarios.
+
 It’s very common technique to build games on the separate machines or even in the cloud. For example, [Jenkins](https://jenkins-ci.org/) server can be used to invoke Flax Game Cooker to build game for a QA team so it will be ready right in the morning to test it.
 
-Here is an example command that will build game project for Windows platform:
+Here is an example command that will build the game project in the Output folder for the Windows platform:
 
 ```
 FlaxEditor.exe -project "<project-path>" -headless -mute -null -std -build "Development.Windows 64bit"

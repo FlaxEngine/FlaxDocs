@@ -31,7 +31,7 @@ public override void OnUpdate()
 }
 ```
 
-## Example with ignoring colliders
+## Example Using Layer Mask
 
 Frequently you want a raycast to start from the player's position, however, such a raycast will instantly detect the player's collider. The correct way of solving this is to use the [layers feature](../editor/game-settings/layers-and-tags-settings.md).
 

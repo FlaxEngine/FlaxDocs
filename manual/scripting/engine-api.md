@@ -21,3 +21,11 @@ Scripting API list for gameplay programming (available in both C++, C# and Visua
 * `Renderer` - 3D graphics rendering system
 * `Scripting` - game scripting manager
 * `Localization` - language and culture localization system
+
+## Objects Hierarchy
+
+Diagram with a hierarchy of the main object types used in Flax.
+
+In C# and Visual Scripting API `FlaxEngine.Object` type is mapped into `ScriptingObject`.
+
+![Flax Object Hierarchy Diagram](media/objects-hierarchy.png)

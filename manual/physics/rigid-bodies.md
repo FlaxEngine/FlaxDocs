@@ -2,15 +2,15 @@
 
 ![Rigidbodies](media/rigidbodies.gif)
 
-**Rigidbodies** are dynamic objects that can collide and provide physical behaviour. Their movement is based on physical forces, such as gravity. In general rigidbodies are good choise for objects that can be moved or pushes like boxes, furniture, and obstacles. Rigidbodies use attached [Colliders](colliders/index.md) to define their physical *shape*.
+**Rigidbodies** are dynamic objects that can collide and provide physical behaviour. Their movement is based on physical forces, such as gravity. In general, rigidbodies are good choice for objects that can be moved or pushed like boxes, furniture, and obstacles. Rigidbodies use attached [Colliders](colliders/index.md) to define their physical *shape*.
 
 ## Create a rigidbody
 
-You can easily spawn a rigidbody actor right inside the editor using a *Toolbox* window or a context menu i the *Scene* window.
+You can easily spawn a rigidbody actor right inside the editor using a *Toolbox* window or a context menu in the *Scene* window.
 
 ![Add Rigidbody](tutorials/media/spawn-rigidbody.jpg)
 
-You can also spawn rigidbodies from C# code at runtime. Here is an example that spawns a bullet and shoots it:
+You can also spawn rigidbodies from C# code at runtime. Here is an example that spawns and shoots a bullet:
 
 ```cs
 var ball = new RigidBody();
@@ -47,7 +47,7 @@ Destroy(ball, 5.0f);
 
 ## Rigidbody Constraints
 
-Dynamic rigidbodies movement and rotation can be locked using the constraints. They can be used to provide a mechanism to lock motion along/around a specific axis or set of axes to constrain object motion.
+Dynamic rigidbody movement and rotation can be locked using constraints. They can be used to provide a mechanism to lock motion along/around a specific axis or set of axes to constrain object motion. This is often used to create "hinge" or "swivel" effects.
 
 | Constraints | Description |
 |--------|--------|
@@ -62,11 +62,11 @@ Dynamic rigidbodies movement and rotation can be locked using the constraints. T
 | **Lock Rotation** | Freeze rotation along all axes. |
 | **Lock All** | Freeze rotation and motion along all axes. |
 
-## Kinematic rigidbodies
+## Kinematic Rigidbodies
 
-Kinematic rigidbodies are special dynamic actors that are not influenced by forces (such as gravity), and have no momentum. They are considered to have infinite mass and can push regular dynamic actors out of the way.Kinematics will not collide with static or other kinematic objects.
+Kinematic rigidbody are special dynamic actors that are not influenced by forces (such as gravity), and have no momentum. They are considered to have infinite mass and can push regular dynamic actors out of the way. Kinematics will not collide with static or other kinematic objects.
 
-Kinematic rigidbodies are great for moving platforms or characters, where direct motion control is desired.
+Kinematic rigidbodies are great for moving platforms, doors, or characters, where direct motion control is desired.
 
 > [!NOTE]
 > Kinematic rigidbodies are incompatible with CCD.
