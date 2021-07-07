@@ -92,3 +92,4 @@ To start visual scripting see the related documentation [here](visual/index.md).
   * [How to control PostFx from code](tutorials/control-postfx-from-code.md)
   * [How to use third-party library](tutorials/use-third-party-library.md)
   * [How to add scripts module](tutorials/add-scripts-module.md)
+  * [How to create loading screen](tutorials/loading-screen.md)

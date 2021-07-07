@@ -57,6 +57,7 @@ You can use **Ctrl + F** to quickly find what you are looking for.
 * [How to blur UI panel background](../../ui/tutorials/blur-background.md)
 * [How to create Main Menu](../../ui/tutorials/create-main-menu.md)
 * [How to use third-party library](../../scripting/tutorials/use-third-party-library.md)
+* [How to create loading screen](../../scripting/tutorials/loading-screen.md)
 * [How to create custom control](../../ui/tutorials/create-custom-control.md)
 * [How to create navmesh](../../navigation/tutorials/create-navmesh.md)
 * [How to create path following agent](../../navigation/tutorials/path-following.md)
