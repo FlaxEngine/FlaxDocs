@@ -35,6 +35,44 @@ public class MyScript : Script
 }
 ```
 
+- From C++ code
+
+```cpp
+#pragma once
+
+#include "Engine/Core/Types/Variant.h"
+#include "Engine/Scripting/Script.h"
+#include "Engine/Content/AssetReference.h"
+#include "Engine/Content/Assets/MaterialInstance.h"
+#include "Engine/Level/Actors/StaticModel.h"
+
+API_CLASS() class GAME_API MyScript : public Script
+{
+API_AUTO_SERIALIZATION();
+DECLARE_SCRIPTING_TYPE(MyScript);
+
+    // Base material asset to override its properties
+    API_FIELD() AssetReference<MaterialBase> BaseMaterial;
+
+    // [Script]
+    void OnStart() override
+    {
+        // Create dynamic material instance and modify parameter
+        CHECK(BaseMaterial);
+        auto instance = BaseMaterial->CreateVirtualInstance();
+        instance->SetParameterValue(TEXT("Color"), Color::FromRGB(0xff00ff));
+
+        // Assign instance to the material slot
+        ((StaticModel*)GetActor())->SetMaterial(0, instance);
+    }
+};
+
+inline MyScript::MyScript(const SpawnParams& params)
+    : Script(params)
+{
+}
+```
+
 To learn more about using material instances from code go to the C# scripting API [here](http://docs.flaxengine.com/api/FlaxEngine.MaterialInstance.html).
 
 ## Editing parameters
