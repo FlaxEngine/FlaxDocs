@@ -16,6 +16,14 @@ Static colliders are used for level geometry which always stays at the same plac
 If collider has [Rigidbody](../rigid-bodies.md) parent, then it will be a used to define its shape.
 Rigidbody colliders are fully simulated by the physics engine and can react to collisions and forces applied from a script. They can collide with other objects (including static colliders) and are the most commonly used Collider configuration in games that use physics.
 
+## Debug view
+
+![Physics Colliders Debug View](media/physics-colliders-debug-view.png)
+
+In Editor viewport use widget option **View -> Debug View -> Physics Colliders** to enable drawing collisions shapes geometry. It can be sued to profile the physics scene. Static colliders are blue, dynamic colliders are pink, terrain is green, and characters are yellow.
+
+Alternatively, you can use widget option **View -> View Flags -> Physics Debug** to profile physical shapes and physics simulation.
+
 ## In this section
 
 * [Box Collider](box-collider.md)
@@ -23,4 +31,3 @@ Rigidbody colliders are fully simulated by the physics engine and can react to c
 * [Capsule Collider](capsule-collider.md)
 * [Mesh Collider](mesh-collider.md)
   * [Collision Data](collision-data.md)
-
