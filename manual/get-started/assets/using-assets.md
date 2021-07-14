@@ -39,7 +39,7 @@ public class SetMaterial : Script
 
     public override void OnStart()
     {
-        ((StaticModel)Actor).Entries[0].Material = Material;
+        Actor.As<StaticModel>().SetMaterial(0, Material);
     }
 }
 ```

@@ -29,8 +29,8 @@ public class MyScript : Script
 		var instance = BaseMaterial.CreateVirtualInstance();
 		instance.SetParameterValue("Color", new Color(0xff00ff));
 
-		// Assign instance to the material slot
-		((StaticModel)Actor).Entries[0].Material = instance;
+		// Assign instance to the material
+        Actor.As<StaticModel>().SetMaterial(0, instance);
 	}
 }
 ```
