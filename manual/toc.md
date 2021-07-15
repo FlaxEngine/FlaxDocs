@@ -238,6 +238,7 @@
 ### [How to blend two animations](animation/tutorials/blend-anims.md)
 ### [How to use Skeleton Mask](animation/tutorials/use-skeleton-mask.md)
 ### [How to setup State Machine](animation/tutorials/setup-state-machine.md)
+### [How to play animation from code](animation/tutorials/play-animation-from-code.md)
 
 # [Audio](audio/index.md)
 ## [Importing audio](audio/importing.md)

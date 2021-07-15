@@ -40,6 +40,7 @@ You can use **Ctrl + F** to quickly find what you are looking for.
 * [How to use Anim Graph](../../animation/tutorials/use-anim-graph.md)
 * [How to setup State Machine](../../animation/tutorials/setup-state-machine.md)
 * [How to change Anim Graph parameter from code](../../animation/tutorials/change-anim-graph-param.md)
+* [How to play animation from code](../../animation/tutorials/play-animation-from-code.md)
 * [How to blend two animations](../../animation/tutorials/blend-anims.md)
 * [How to use Skeleton Mask](../../animation/tutorials/use-skeleton-mask.md)
 * [How to animate actor](../../animation/scene-animations/tutorials/animate-actor.md)

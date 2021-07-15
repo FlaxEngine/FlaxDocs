@@ -42,3 +42,4 @@ This documentation section describes how to work with the Flax animation pipelin
  * [How to blend two animations](tutorials/blend-anims.md)
  * [How to use Skeleton Mask](tutorials/use-skeleton-mask.md)
  * [How to setup State Machine](tutorials/setup-state-machine.md)
+ * [How to play animation from code](tutorials/play-animation-from-code.md)
