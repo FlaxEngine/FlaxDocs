@@ -24,9 +24,7 @@ To add a native .dll to your project, for example if your .Net dll wraps a nativ
 options.DependencyFiles.Add(Path.Combine(FolderPath, "..", "..", "Content", "native.dll"));
 ```
 
-Remember to generate project script files anytime you modify the Game.Build.cs file.
-
-
+Remember to generate project script files anytime you modify the `Game.Build.cs` file.
 
 Build scripts work for both the editor and cooked game as the referenced assembly will be packaged.
 
@@ -94,7 +92,30 @@ public class MyPlugin : GamePlugin
 
 Your game can also use a Game Plugins within a code to implement various gameplay features because plugins don't rely on loaded scenes or scene objects and are created before the scenes loading (compared to the normal scripts).
 
+### Game Plugin Settings
+
 If you need to include custom settings for your plugin see [this tutorial](../tutorials/custom-settings.md) to learn more.
+
+### Game Plugin Assets
+
+If you want to bundle custom assets used in code-only plugin (eg. shader or debug model) override `OnCollectAssets` method as follows and provide IDs of the assets to include:
+
+```cs
+#if FLAX_EDITOR
+/// <inheritdoc />
+public override void OnCollectAssets(System.Collections.Generic.List<Guid> assets)
+{
+    base.OnCollectAssets(assets);
+
+    // Add asset ID to the list
+    assets.Add(ShaderId);
+
+    // Add asset ID based on asset path
+    var path = Path.Combine(Globals.ProjectFolder, "Plugins/MyPlugin/Content/MyCustomDebugModel.flax");
+    Content.GetAssetInfo(path, out var info);
+    assets.Add(info.ID);
+#endif
+```
 
 ## Editor Plugins
 
