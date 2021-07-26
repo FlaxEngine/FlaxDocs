@@ -34,7 +34,7 @@ public struct SurfaceOptions
 }
 public SurfaceOptions Surface;
 
-[Serialize, Obsolete]
+[Serialize, Obsolete, NoUndo]
 private float WalkableRadius
 {
     get => throw new Exception();
