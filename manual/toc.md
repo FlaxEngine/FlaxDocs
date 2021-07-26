@@ -365,6 +365,7 @@
 
 # [Networking](networking/index.md)
 ## [Network API](networking/network-api.md)
+## [Network Sample](networking/network-sample.md)
 ## [Tutorials](networking/tutorials/index.md)
 ### [How to create TCP client-server](networking/tutorials/create-tcp-client-server.md)
 

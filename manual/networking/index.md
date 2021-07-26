@@ -5,6 +5,7 @@ Flax supports networking that can be used across various types of games. You can
 ## In this section
 
 * [Network API](network-api.md)
+* [Network Sample](network-sample.md)
 
 ## Tutorials
 
