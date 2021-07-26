@@ -55,6 +55,7 @@ You can use **Ctrl + F** to quickly find what you are looking for.
 * [How to create UI from code](../../ui/tutorials/create-ui-from-code.md)
 * [How to create custom font material](../../ui/tutorials/create-font-material.md)
 * [How to create custom GUI material](../../ui/tutorials/create-gui-material.md)
+* [How to create TCP client-server](../../networking/tutorials/create-tcp-client-server.md)
 * [How to create networking server and client](../../networking/tutorials/network-client-server.md)
 * [How to blur UI panel background](../../ui/tutorials/blur-background.md)
 * [How to create Main Menu](../../ui/tutorials/create-main-menu.md)

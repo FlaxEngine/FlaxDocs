@@ -1,6 +1,8 @@
 # Network API
 
-Flax implements a low-level networking interface with Berkeley sockets. It's exposed to scripting API and can be used in C++, C#, or Visual Scripting.
+Flax implements a low-level networking interface with Berkeley sockets (cross-platform). It's exposed to scripting API and can be used in C++, C#, or Visual Scripting.
+
+Here is a [server-client example](tutorials/create-tcp-client-server.md) using low-level network.
 
 ## API
 
