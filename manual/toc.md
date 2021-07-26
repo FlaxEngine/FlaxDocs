@@ -368,6 +368,7 @@
 ## [Network Sample](networking/network-sample.md)
 ## [Tutorials](networking/tutorials/index.md)
 ### [How to create TCP client-server](networking/tutorials/create-tcp-client-server.md)
+### [How to create networking server and client](tutorials/network-client-server.md)
 
 # [Platforms](platforms/index.md)
 ## [Windows](platforms/windows.md)
