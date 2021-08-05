@@ -386,6 +386,7 @@
 ## [Release Policy](contributing/release-policy.md)
 
 # [Release Notes](release-notes/index.md)
+## [1.2 release notes](release-notes/1_2/index.md)
 ## [1.1 release notes](release-notes/1_1/index.md)
 ## [1.0 release notes](release-notes/1_0/index.md)
 ## [Beta](release-notes/index.md#beta)
