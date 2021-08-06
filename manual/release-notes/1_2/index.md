@@ -77,7 +77,7 @@ It can be used to strip textures resolution when cooking for mobile/Switch or to
 Every update brings many large features but also tons of smaller things that matter. We continued working on **improving quality** and **usability** of the Editor. Here is a list of notable ones:
 
 * **9-slicing support for UI** (gif above)
-* New C++ docs and tutorials (see docs in [this section](scripting/cpp/index.md))
+* New C++ docs and tutorials (see docs in [this section](../../scripting/cpp/index.md))
 * Ability to show/hide GUI and DebugDraw shapes inside Game viewport
 * **Daily source builds** from `master` branch ([here](https://github.com/FlaxEngine/FlaxEngine/actions/workflows/cd.yml) or via Launcher)
 * Optimized editor/game CPU usage when idle
