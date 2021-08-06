@@ -44,9 +44,9 @@ The very first thing that you will probably notice after launching 1.2 update is
 
 ![Flax Engine Preformance Job System Task Graph](media/animated-models-5k.gif)
 
-The latest 1.2 update brings a **massive performance boost for large worlds**. Here is an example of 5,000 animated models playing animation and being rendered at stable 60 FPS (tested on mid-price i5 CPU). To achieve this level of performance we've created a **Job System** that runs a worker thread per CPU core to run extensive computations in asynchronous. For more advanced calculations used by gameplay systems or engine systems, we're implemented **Task Graph**. It can be used to paralyze game even better plus it supports dependencies between async systems.
+The latest 1.2 update brings a **massive performance boost for large worlds**. Here is an example of 5,000 animated models playing animation and being rendered at stable 60 FPS (tested on mid-price i5 CPU). To achieve this level of performance we've created a **Job System** that runs a worker thread per CPU core to run extensive computations in asynchronous. For more advanced calculations used by gameplay systems or engine systems, we're implemented **Task Graph**. It can be used to parallelize  game even better plus it supports dependencies between async systems.
 
-During this update, we've converted all major engine systems into async Task Graph Systems to ensure the higher paralyzation of the engine code (streaming, animations, particles, etc.). It can be further extended by game-specific systems in your code. To see how to do it see [this tutorial](../../scripting/advanced/multithreading.md). Both Job System and Task Graph can be used in C#, C++, or Visual Scripting.
+During this update, we've converted all major engine systems into async Task Graph Systems to ensure the higher parallelization of the engine code (streaming, animations, particles, etc.). It can be further extended by game-specific systems in your code. To see how to do it see [this tutorial](../../scripting/advanced/multithreading.md). Both Job System and Task Graph can be used in C#, C++, or Visual Scripting.
 
 ### Tracy Profiler
 
