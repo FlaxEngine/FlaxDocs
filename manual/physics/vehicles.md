@@ -12,7 +12,7 @@ Flax supports creation of physical-based vehicles such as cars and boats based o
 
 ![Car Properties](media/wheeled-vehicle-properties.png)
 
-To confgiurate car driving experiance use properties grouped under **Engine**, **Differential**, and **Gearbox** catogoeires. See tooltips for the property labels to learn more about each setting and it's units.
+To configure car driving experience use properties grouped under **Engine**, **Differential**, and **Gearbox** categories. See tooltips for the property labels to learn more about each setting and it's units.
 
 Additionally, you can specify **Drive Type**, **Use Reverse As Brake** and other RigidBody properties including vehicle **Mass** and **Center Of Mass Offset**.
 
