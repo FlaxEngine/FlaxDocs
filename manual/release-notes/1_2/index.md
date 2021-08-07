@@ -212,7 +212,7 @@ PRs merged: 62
 * Add logging Windows build number
 * Add `RingBuffer` template
 * Add support for allocator type in `Dictionary`
-* * Add `Stopwatch` instead of` DateTime.Now` for increased accuracy in *Flax.Build* profiling tools
+* Add `Stopwatch` instead of` DateTime.Now` for increased accuracy in *Flax.Build* profiling tools
 * Add keyboard shortcuts to viewpoints (numpad)
 * Add `PLATFORM_THREADS_LIMIT` for maximum concurrency limiting
 * Add MemoryCompare, MemoryClear and MemoryCopy for direct memory access in C#

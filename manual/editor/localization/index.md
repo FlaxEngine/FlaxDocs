@@ -32,12 +32,19 @@ To create it use *Content* window, *right-click* and select **New -> Settings**.
 Example workflow for using localization during game production.
 
 1) *Levels and UI setup* - game developers create game maps and setup UI (on scenes or in prefabs). Various game objects and assets contains UI display strings. Programmers use `LocalizedString` type for texts (in scripts/assets) that will be localized in future.
+
 2) *Localization setup* - add new localization settings to the project. Setup Locales that will be used in game (include default `en` language).
+
 3) *Mark localizable texts* - use Localized String editor `+` button to generate localized string entry for all used UI texts.
+
 4) *Find localized string* - use dashboard to find all localized strings in code and assets. It won't add duplicates but just new entries.
+
 5) *Export* - export all localized string keys to `.pot` file for translation.
+
 6) *Translate* - perform translation of all used texts (in external tool or by editing string table assets).
+
 7) *Import translations* - import back translated `.po` files as `Localized String Table` (Localization Settings contains list of used tables)
+
 8) *Test* - verify that translations are working fine. Use language preview utility to change language.
 
 Depending on game production size and team experience the localization can be performed very early during production or later in production. Whatever works best for you.

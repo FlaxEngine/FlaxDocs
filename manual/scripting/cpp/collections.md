@@ -156,7 +156,7 @@ for (int32 i = 0; i < 10; i++)
 // do sth with myItens...
 ```
 
-If the array is more likely to contain up to 10 items but i can be resized to be bigger for a given case the `InlinedAllocation<>` can be used:
+If the array is more likely to contain up to 10 items but it can be resized to be bigger then the `InlinedAllocation<>` can be used as it supports growing above predefined fixed capacity:
 
 ```cpp
 Array<int32, InlinedAllocation<10>> myItens;
