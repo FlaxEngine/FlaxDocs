@@ -96,6 +96,30 @@ Every update brings many large features but also tons of smaller things that mat
 
 ## Changelog
 
+### Version 1.2.6223 - 8 August 2021
+
+Contributors: mafiesto4, Erdroy, thallard, marynate, blep
+
+PRs merged: 3
+
+* Add warnings when cooking collision with empty mesh data
+* Add `CookingData` for C# editor to extend the cooking process
+* Add build preset and target names to access for Game Cooker extending
+* Add option to change order of items in Content View
+* Add support for creating custom BoxVolume type in C#
+* Add creating Scene Graph nodes for actors inheriting from some shared custom types
+* Fix compiling C#-only game scripts without native platform tools installed
+* Fix editor crash on startup when Rider 2021.1 is installed
+* Fix CharacterController minimum size checks to prevent crashes if values are too small
+* Fix startup failure on older CPUs that don't support invariant TSC
+* Fix potential runtime error from `locale::global`
+* Fix creating prefab in Editor from selection in Prefab window
+* Fix undo for missing actor children and scripts when doing Convert action
+* Fix crash when spawning C# object that inherits from abstract C++ class
+* Fix crash when cooking collision data for multi-mesh models
+* Fix missing mesh collider vertices transformation for navmesh building
+* Fix crash on startup when 2 Rider installations are detected
+
 ### Version 1.2.6222 - 5 August 2021
 
 Contributors: mafiesto4, honzapatCZ, GoaLitiuM, W2Wizard, jb-perrier, stefnotch, Crawcik, Vizepi, MiheevN, LCRW, VarvatosVex, herocrab, artkez, Erdroy, brbrmensch, thallard
