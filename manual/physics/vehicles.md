@@ -156,3 +156,7 @@ public class CarScript : Script
 ```
 
 7) Play & Test
+
+## Car Template
+
+If you want to get started with cars quickly get this [Default Car prefab](https://github.com/FlaxEngine/FlaxDocs/blob/master/manual/physics/media/DefaultCar.prefab), add it to you project, spawn on a map and setup the `CarScript` into it.
