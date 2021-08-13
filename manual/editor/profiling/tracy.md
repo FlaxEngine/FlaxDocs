@@ -4,6 +4,9 @@
 
 Tracy supports profiling CPU, threading, memory, locks, context switches, and more. It's integrated into Flax and can be used to profile both game and engine in Editor or in cooked build (Debug or Development configurations).
 
+> [!TIP]
+> Profiling Editor with Tracy after scripting hot-reload is not supported. Can be optionally enabled in custom engine build with `PROFILE_CPU_USE_TRANSIENT_DATA` set to `1` (see `ProfilerCPU.h`).
+
 ## Setup
 
 ![Tracy Profiler Flax Engine](media/tracy-connected.png)
