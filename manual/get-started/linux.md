@@ -20,10 +20,10 @@ For developers using Flax Editor on Linux platforms the requirements are:
 | Hard drive space | 1 GB minimum |
 | GPU | **Vulkan required** |
 
-Flax Editor needs `curl` lib on the system:
+Flax Editor needs `curl` and `mono` libs on the system:
 
 ```
-apt-get install -y curl libcurl4-gnutls-dev
+apt-get install -y curl libcurl4-gnutls-dev mono-devel
 ```
 
 *On Fedora you might need additional fix for invalid lib linkage: `sudo ln -s /usr/lib64/libcurl.so.4 /usr/lib64/libcurl-gnutls.so.4`.
@@ -53,6 +53,10 @@ Example command line to run Editor with custom options:
 ```
 ./FlaxEditor -project "<project-path>" -std -nvidia
 ```
+
+## New project
+
+To create a new project to run Flax Editor executable as follows `./FlaxEditor -new -project <new_project_path>` to create a new project inside a specified folder. Editor will generate a project template and open it.
 
 ## Sample projects
 

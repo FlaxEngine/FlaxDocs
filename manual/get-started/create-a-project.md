@@ -14,6 +14,9 @@ To create a new project use the **New Project** button in the upper right corner
 
 Now it's time to [learn about Flax Editor](editor.md)...
 
+### Project from command line
+
+An alternative way to create a new project without using Flax Launcher is to run Flax Editor executable with `-new -project <new_project_path>` to create a new project inside a specified folder.
 
 <div class="frontpage">
 
