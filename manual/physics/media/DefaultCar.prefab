@@ -10,10 +10,10 @@
 		"StaticFlags": 0,
 		"Layer": 3,
 		"OverrideMass": true,
-		"Mass": 1000.0,
+		"Mass": 1500.0,
 		"CenterOfMassOffset": {
 			"X": 0.0,
-			"Y": -26.0,
+			"Y": -50.0,
 			"Z": 0.0
 		},
 		"Wheels": [
@@ -21,48 +21,78 @@
 				"Type": 0,
 				"Mass": 20.0,
 				"Radius": 35.0,
-				"Width": 10.0,
+				"Width": 20.0,
 				"MaxSteerAngle": 70.0,
 				"DampingRate": 0.25,
-				"MaxBrakeTorque": 1800.0,
+				"MaxBrakeTorque": 1500.0,
 				"MaxHandBrakeTorque": 0.0,
-				"Collider": "576f3be44f19f8f322278e90b9c81b69"
+				"Collider": "576f3be44f19f8f322278e90b9c81b69",
+				"SuspensionDampingRate": 1.0,
+				"SuspensionMaxRaise": 10.0,
+				"SuspensionMaxDrop": 10.0,
+				"SuspensionForceOffset": 0.0,
+				"TireLateralStiffness": 17.0,
+				"TireLateralMax": 2.0,
+				"TireLongitudinalStiffness": 1000.0
 			},
 			{
 				"Type": 1,
 				"Mass": 20.0,
 				"Radius": 35.0,
-				"Width": 10.0,
+				"Width": 20.0,
 				"MaxSteerAngle": 70.0,
 				"DampingRate": 0.25,
-				"MaxBrakeTorque": 1800.0,
+				"MaxBrakeTorque": 1500.0,
 				"MaxHandBrakeTorque": 0.0,
-				"Collider": "0e8560e941ac862c06978f9822f92278"
+				"Collider": "0e8560e941ac862c06978f9822f92278",
+				"SuspensionDampingRate": 1.0,
+				"SuspensionMaxRaise": 10.0,
+				"SuspensionMaxDrop": 10.0,
+				"SuspensionForceOffset": 0.0,
+				"TireLateralStiffness": 17.0,
+				"TireLateralMax": 2.0,
+				"TireLongitudinalStiffness": 1000.0
 			},
 			{
 				"Type": 2,
 				"Mass": 20.0,
 				"Radius": 35.0,
-				"Width": 10.0,
+				"Width": 20.0,
 				"MaxSteerAngle": 0.0,
 				"DampingRate": 0.25,
 				"MaxBrakeTorque": 1500.0,
 				"MaxHandBrakeTorque": 2000.0,
-				"Collider": "5409cebd4638eee5c4badda066955355"
+				"Collider": "5409cebd4638eee5c4badda066955355",
+				"SuspensionDampingRate": 1.0,
+				"SuspensionMaxRaise": 10.0,
+				"SuspensionMaxDrop": 10.0,
+				"SuspensionForceOffset": 0.0,
+				"TireLateralStiffness": 17.0,
+				"TireLateralMax": 2.0,
+				"TireLongitudinalStiffness": 1000.0
 			},
 			{
 				"Type": 3,
 				"Mass": 20.0,
 				"Radius": 35.0,
-				"Width": 10.0,
+				"Width": 20.0,
 				"MaxSteerAngle": 0.0,
 				"DampingRate": 0.25,
 				"MaxBrakeTorque": 1500.0,
 				"MaxHandBrakeTorque": 2000.0,
-				"Collider": "953406e04dbcbe4e2d8f72b9d4ae5d95"
+				"Collider": "953406e04dbcbe4e2d8f72b9d4ae5d95",
+				"SuspensionDampingRate": 1.0,
+				"SuspensionMaxRaise": 10.0,
+				"SuspensionMaxDrop": 10.0,
+				"SuspensionForceOffset": 0.0,
+				"TireLateralStiffness": 17.0,
+				"TireLateralMax": 2.0,
+				"TireLongitudinalStiffness": 1000.0
 			}
 		],
-		"Engine": {},
+		"Engine": {
+			"MaxRotationSpeed": 4000.0
+		},
 		"Differential": {},
 		"Gearbox": {}
 	},
@@ -190,7 +220,7 @@
 		"Transform": {
 			"Scale": {
 				"X": 0.699999988079071,
-				"Y": 0.12999999523162843,
+				"Y": 0.20000000298023225,
 				"Z": 0.699999988079071
 			}
 		},
@@ -238,7 +268,7 @@
 		"Transform": {
 			"Scale": {
 				"X": 0.699999988079071,
-				"Y": 0.12999999523162843,
+				"Y": 0.20000000298023225,
 				"Z": 0.699999988079071
 			}
 		},
@@ -286,7 +316,7 @@
 		"Transform": {
 			"Scale": {
 				"X": 0.699999988079071,
-				"Y": 0.12999999523162843,
+				"Y": 0.20000000298023225,
 				"Z": 0.699999988079071
 			}
 		},
@@ -334,7 +364,7 @@
 		"Transform": {
 			"Scale": {
 				"X": 0.699999988079071,
-				"Y": 0.12999999523162843,
+				"Y": 0.20000000298023225,
 				"Z": 0.699999988079071
 			}
 		},
