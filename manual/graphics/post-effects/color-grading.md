@@ -2,7 +2,7 @@
 
 ![Color Grading](media/color-grading.png)
 
-**Color Grading**, or **color correction** , is an effect is used to enhance the overall scene colors. Flax Engine provides solid color grading tools that enable artists to color correct cut-scenes and gameplay look right inside the editor with live preview. This means a huge step forward in good looking games production.
+**Color Grading**, or **color correction**, is an effect is used to enhance the overall scene colors. Flax Engine provides solid color grading tools that enable artists to color correct cut-scenes and gameplay look right inside the editor with live preview. This means a huge step forward in good looking games production.
 
 To use custom color grading LUTs see a section below to learn how to import and apply Lookup Table texture.
 
@@ -48,7 +48,7 @@ Each group controls a selected part of the range (except *Master* which affects 
 
 **Lookup Table (LUT)** is used to perform color correction for the final rendered image. The blending is performed in LDR and is applied after tonemapping, procedural color correction and exposure control.
 
-**LUT** textures used in Flax must be unwrapped **256x16** textures imported without compression, without mipmaps and with RGB channels usd only.
+**LUT** textures used in Flax must be unwrapped **256x16** textures imported without compression, without mipmaps and with RGB channels used only.
 
 Example LUT texture:
 ![LUT Texture](media/LUT_LateSunsetTable.png)
@@ -56,7 +56,7 @@ Example LUT texture:
 To apply the LUT simply add PostFx Volume actor and asssing the texture and weight in the *Color Grading* category.
 ![LUT Texture Example](media/lut-example.png)
 
-To make own LUT texture you can take a screenshot of the game viewport, then perform a custom color correction to achieve the desire look. Then apply the same colro grading to the neutral LUT and use it for colro grading in engine.
+To make own LUT texture you can take a screenshot of the game viewport, then perform a custom color correction to achieve the desire look. Then apply the same color grading to the neutral LUT and use it for color grading in engine.
 Here you can download the neutral LUT:
 ![Neutral LUT Texture](media/LUT_Neutral.png)
 
