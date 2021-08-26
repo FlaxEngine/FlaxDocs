@@ -96,6 +96,52 @@ Every update brings many large features but also tons of smaller things that mat
 
 ## Changelog
 
+### Version 1.2.6224 - 26 August 2021
+
+Contributors: mafiesto4, Erdroy
+
+PRs merged: 0
+
+
+* Add `Engine.HasGameViewportFocus` to C# API
+* Add `SuspensionForceOffset` to vehicle wheel config
+* Add check to prevent double-free from native event in C#
+* Add option to select scene asset from Scene tree window
+* Add option to Scene context menu to unload it
+* Add support for changing scenes via Editor during play mode
+* Add better timeline UI positioning for improved viewport navigation
+* Add helper tooltips for Scene Animation actions UI
+* Add Zoom value box to timeline view context menu
+* Add timeline view panning with right mouse button
+* Add options for vehicle wheel suspension configuration and state
+* Add digital steering option for a vehicle
+* Add vehicle telemetry logging debug option
+* Add wheeled vehicle tire options
+* Add `-new` command line arg to create a new project
+* Increase fog properties limits
+* Increase default maximum window width limit to 8k
+* Optimize ticking disabled vehicles
+* Refactor Tracy source locations to be static
+* Fix decal material normal vector blending
+* Fix issue with `MapTrack` for actors
+* Fix actor renaming on paste to keep previous name if can
+* Fix car wheel location by applying compression of the suspension spring
+* Fix WheeledVehicle driving and suspension raycasts
+* Fix suspension force offset location
+* Fix pasting actors if cannot spawn a object (eg. type missing) to still paste valid objects
+* Fix rare crashes due to selection not being empty on play mode start
+* Fix some memory leaks
+* Fix ENet driver crash
+* Fix invalid navmesh build for triggers
+* Fix invalid rigidbody center of mass location
+* Fix materials parameters display issues after editing
+* Fix context menu keyboard arrows navigation to skip disabled items
+* Fix UI with list of null items when layout gets rebuilt at item level
+* Fix some problems with LocalizedString serialization in C#
+* Fix timeline background stops drawing to be more readable
+* Fix snap to the ground to use scene graph query instead of physics only raycast
+* Fix window focus issue when removing actors
+
 ### Version 1.2.6223 - 8 August 2021
 
 Contributors: mafiesto4, Erdroy, thallard, marynate, blep
