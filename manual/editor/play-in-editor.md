@@ -14,7 +14,7 @@ The simplest way to play your game in the editor is to hit **F5** button or use 
 
 ![Play in editor button](media/play-in-editor-button.jpg)
 
-As soon as you game starts you can easily debug scripts and inspect the objects. To learn more about scripts development and debugging see [Scripts debugging](../scripting/debugging/index.md) page.
+As soon as your game starts you can easily debug scripts and inspect the objects. To learn more about scripts development and debugging see [Scripts debugging](../scripting/debugging/index.md) page.
 
 ![Scripts debugging](../scripting/debugging/media/editor_debug_scripts.gif)
 
