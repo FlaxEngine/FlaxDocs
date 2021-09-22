@@ -20,7 +20,7 @@ Rigidbody colliders are fully simulated by the physics engine and can react to c
 
 ![Physics Colliders Debug View](media/physics-colliders-debug-view.png)
 
-In Editor viewport use widget option **View -> Debug View -> Physics Colliders** to enable drawing collisions shapes geometry. It can be sued to profile the physics scene. Static colliders are blue, dynamic colliders are pink, terrain is green, and characters are yellow.
+In Editor viewport use widget option **View -> Debug View -> Physics Colliders** to enable drawing collisions shapes geometry. It can be used to profile the physics scene. Static colliders are blue, dynamic colliders are pink, terrain is green, and characters are yellow.
 
 Alternatively, you can use widget option **View -> View Flags -> Physics Debug** to profile physical shapes and physics simulation.
 
