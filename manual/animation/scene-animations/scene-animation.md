@@ -28,6 +28,14 @@ Editor window provides various functionalities to view and edit animation. The l
 
 Timeline uses the concept of **frame** to represent the time. Whole timeline animation uses a given frames per second factor (FPS) to define the playback speed (the speed of animation frames to play per second). You can edit timeline time axis labels by using **View -> Show time as**. The timeline FPS can be changed using the dedicated toolstrip button (default is *60 fps*). You can use one of the common, predefined values or set the custom fps.
 
+Mouse controls:
+* **Left-click + move** - select keyframes or move selection
+* **Right-click + move** - navigate
+* **Right-click** - open context menu
+* **Scroll wheel** - scroll
+* **Scroll wheel + Shift** - scroll time
+* **Scroll wheel + Ctrl** - zoom in/out
+
 Keyboard shortcuts:
 * **Arrow Left** - sets time to the previous frame
 * **Arrow Right** - sets time to the next frame
@@ -35,7 +43,9 @@ Keyboard shortcuts:
 * **End** - sets time to last frame
 * **Page Up** - sets time to frame of the next keyframe
 * **Page Down** - sets time to frame of the previous keyframe
-* **Ctrl + S** - saves the asset
+* **Ctrl + S** - saves the assett
+* **Spacebar** - pauses or plays the playback
+* **S** - splits the media events at the current frame (if possible)
 
 ## Editing scene animation
 
@@ -73,11 +83,19 @@ You can use **right click on the timeline** to edit selected media properties or
 
 #### Actor
 
-**Actor** track contains a reference to the actor object. You can use it to animate its properties and child scripts. Use **+** button to add subtracks.
+**Actor** track contains a reference to the actor object. You can use it to animate its properties and child scripts. Use **+** button to add subtracks. Right-click on track header to change the animated actor.
 
 #### Camera Cut
 
-**Camera Cut** it a special type of Actor track that is used for Camera shots animations. It contains a media event that defines the camera shot with the preview thumbnails. Use **+** button to animate camera properties during the cut. For camera shots editing use **camera icon** that starts the camera actor pilot mode which enables you to move and orient camera to the editor viewport. Then use the viewport widget to stop acotr piloting and add keyframes for the camera shot location.
+**Camera Cut** it a special type of Actor track that is used for Camera shots animations. It contains a media event that defines the camera shot with the preview thumbnails. Use **+** button to animate camera properties during the cut. For camera shots editing use **camera icon** that starts the camera actor pilot mode which enables you to move and orient camera to the editor viewport. Then use the viewport widget to stop acotr piloting and add keyframes for the camera shot location. Right-click on track header to change the animated camera.
+
+## Live-preview
+
+Scene Animation Editor allows to playback and preview the asset while editing. To enable this feature simply check the live-preview icon on the toolbar.
+
+![Scene Animation Live-Preview Button](media/scene-animation-live-preview-button.png)
+
+Then you will be able to seek the timeline and see the animation preview on a scene. You can also play the animation. This improves the editing process and can help when working with more complex cut-scenes.
 
 ## Playback preview
 

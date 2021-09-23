@@ -8,6 +8,10 @@
 
 Scene Animation Player supports caching the animated objects state on play start and restoring it on the end. This can be useful in certain gameplay situations. To enable it simply check the *Restore State On Stop* option. If used the playback start will take longer since the state has to be cached (additional memory allocation and the processing of the data).
 
+## Objects and Tracks mapping
+
+In some cases, such as prefab object animation or instanced animation you might want to change the animated object to something else. To do that you can use `MapObject(Guid from, Guid to)` or `MapTrack(string from, Guid to)` function from player. Both can be used to redirect the animated object in the asset to an other object.
+
 ## Properties
 
 ![Scene Animation Player Properties](media/scene-animation-player-properties.png)
@@ -22,3 +26,4 @@ Scene Animation Player supports caching the animated objects state on play start
 | **Play On Start** | Determines whether the scene animation should auto play on game start. |
 | **Random Start Time** | Determines whether the scene animation should randomize the start time on play begin. |
 | **Restore State On Stop** | Determines whether the scene animation should restore initial state on playback stop. State is cached when animations stats play after being stopped (not paused). |
+| **Update Mode** | The animation update mode that describes the scene animation updates frequency. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Every Update**</td><td>Animation will be updated every game logic update.</td></tr><tr><td>**Manual**</td><td>Animation can be updated manually by the user scripts.</td></tr></tbody></table> |
