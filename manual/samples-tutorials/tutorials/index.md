@@ -50,6 +50,7 @@ You can use **Ctrl + F** to quickly find what you are looking for.
 * [How to create scene animation from code](../../animation/scene-animations/tutorials/scene-anim-from-code.md)
 * [How to animate object over spline](../../graphics/splines/animate-object.md)
 * [How to create road from spline](../../graphics/splines/create-road.md)
+* [How to use anisotropic texture sampler](../../graphics/tutorials/anisotropic-texture-sampler.md)
 * [How to create dynamic chain from spline](../../graphics/splines/create-chain.md)
 * [How to create UI](../../ui/tutorials/create-ui.md)
 * [How to create UI from code](../../ui/tutorials/create-ui-from-code.md)

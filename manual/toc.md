@@ -149,6 +149,7 @@
 ### [View Flags](graphics/debugging-tools/view-flags.md)
 ## [Tutorials](graphics/tutorials/index.md)
 ### [How to render object outline](graphics/tutorials/render-object-outline.md)
+### [How to use anisotropic texture sampler](graphics/tutorials/anisotropic-texture-sampler.md)
 
 # [Scripting](scripting/index.md)
 ## [Create and use a script](scripting/new-script.md)

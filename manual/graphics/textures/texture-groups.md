@@ -13,9 +13,9 @@ Follow this documentation section to learn how to use Texture Groups.
 The first step is to create new *Streaming Settings* asset (or use existing one). To learn how to do it see this [tutorial](../../editor/game-settings/index.md).
 Ensure the Streaming settings asset is set in *Game Settings*.
 
-Then, add first texture group to the list. Each texture group contains several properties that can be modified at runtime (eg. from game scripts). Ensure to **preserve order of groups** as assets reference groups btexture-window.mdy index (rather than by *Name*).
+Then, add first texture group to the list. Each texture group contains several properties that can be modified at runtime (eg. from game scripts). Ensure to **preserve order of groups** as assets reference groups by index (rather than by *Name*).
 
-To assign texture to a particual Texture Group use [Texture Window](texture-window.md) editor (*Properties* group) or assign it when [importing new textures](import-settings.md). Use a texture group picker for this that shows the lsit of texture groups in a project. For very specific scenarios you can also change the texture group from script at runtime.
+To assign texture to a particual Texture Group use [Texture Window](texture-window.md) editor (*Properties* group) or assign it when [importing new textures](import-settings.md). Use a texture group picker for this that shows the list of texture groups in a project. For very specific scenarios you can also change the texture group from script at runtime.
 
 ## Properties
 
