@@ -7,4 +7,5 @@ This section contains more advanced topic about games development with Flax Engi
 * [Custom Visject Surfaces](custom-visject-surface.md)
 * [Editor Style](style.md)
 * [Custom Engine Build](custom-engine.md)
+* [Game and Engine Flow](game-engine-flow.md)
 
