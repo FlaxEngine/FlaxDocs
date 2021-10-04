@@ -15,8 +15,8 @@ API_INTERFACE() class GAME_API IMyInterface
 {
 DECLARE_SCRIPTING_TYPE_MINIMAL(IMyInterface);
 
-	// Interface virtual method
-	API_FUNCTION() virtual float GetSpeed(const Vector3& v) = 0;
+    // Interface virtual method
+    API_FUNCTION() virtual float GetSpeed(const Vector3& v) = 0;
 };
 ```
 
@@ -40,10 +40,10 @@ API_CLASS() class GAME_API InterfaceInCpp : public Script, public IMyInterface
 API_AUTO_SERIALIZATION();
 DECLARE_SCRIPTING_TYPE(InterfaceInCpp);
 
-	float GetSpeed(const Vector3& v) override
+    float GetSpeed(const Vector3& v) override
     {
-		// Implement interface method
-		return v.Length();
+        // Implement interface method
+        return v.Length();
     }
 };
 ```
@@ -55,7 +55,7 @@ public class InterfaceInCSharp : Script, IMyInterface
 {
     public float GetSpeed(Vector3 v)
     {
-		// Implement interface method
+        // Implement interface method
         return v.Length;
     }
 }
@@ -75,17 +75,17 @@ API_CLASS() class GAME_API InterfaceInCpp : public Script
 API_AUTO_SERIALIZATION();
 DECLARE_SCRIPTING_TYPE(InterfaceInCpp);
 
-	// Pointer to object with interface implementation (can be set from other script in C++ or C# or VS)
-	API_FIELD() ScriptingObject* MyInterface = nullptr;
+    // Pointer to object with interface implementation (can be set from other script in C++ or C# or VS)
+    API_FIELD() ScriptingObject* MyInterface = nullptr;
 
     void OnUpdate() override
     {
-    	// Cast object into interface
+        // Cast object into interface
         auto interface = ToInterface<IMyInterface>(MyInterface);
         if (interface)
         {
-        	// Call interface method (with with both C++ and C# interface implementations)
-        	interface->GetSpeed(Vector3::One);
+            // Call interface method (with with both C++ and C# interface implementations)
+            interface->GetSpeed(Vector3::One);
         }
     }
 };
