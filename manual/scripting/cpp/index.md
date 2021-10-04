@@ -12,6 +12,7 @@ Follow this documentation section to learn how to write your own C\+\+ scripts a
 * [Logging and Assertions](logging-assertions.md)
 * [Object References](object-references.md)
 * [Serialization](serialization.md)
+* [Interfaces](interfaces.md)
 * [Tips & Tricks](tips-tricks.md)
 
 ## Setup
@@ -146,6 +147,7 @@ To learn more about specific areas of C\+\+ scripting in Flax see the related se
 * [Logging and Assertions](logging-assertions.md)
 * [Object References](object-references.md)
 * [Serialization](serialization.md)
+* [Interfaces](interfaces.md)
 * [Tips & Tricks](tips-tricks.md)
 * [API_ tags](../../editor/flax-build/api-tags.md)
 

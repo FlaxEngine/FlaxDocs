@@ -67,6 +67,7 @@ To start visual scripting see the related documentation [here](visual/index.md).
   * [Logging and Assertions](cpp/logging-assertions.md)
   * [Object References](cpp/object-references.md)
   * [Serialization](cpp/serialization.md)
+  * [Interfaces](cpp/interfaces.md)
   * [Tips & Tricks](cpp/tips-tricks.md)
 * [Visual Scripting](visual/index.md)
 * [Plugins](plugins/index.md)

@@ -177,6 +177,7 @@
 ### [Logging and Assertions](scripting/cpp/logging-assertions.md)
 ### [Object References](scripting/cpp/object-references.md)
 ### [Serialization](scripting/cpp/serialization.md)
+### [Interfaces](scripting/cpp/interfaces.md)
 ### [Tips & Tricks](scripting/cpp/tips-tricks.md)
 ## [Visual Scripting](scripting/visual/index.md)
 ### [Events](scripting/visual/events.md)
