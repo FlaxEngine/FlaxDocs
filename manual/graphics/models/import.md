@@ -85,3 +85,6 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 | **Import Materials** | If checked, the importer will create materials for model meshes as specified in the file. |
 | **Import Textures** | If checked, the importer will import texture files used by the model and any embedded texture resources. |
 | **Restore Materials On Reimport** | If checked, the importer will try to restore the assigned materials to the model slots. |
+
+## Tips - Something is not working?
+If the model appears to be missing something or there is more than you expected make sure the model you imported is in fact what you believe it is. For example Blender defaults to export everything unless you tick the "selection only" box. An easy way to check that is to import the file back in your modeller.
