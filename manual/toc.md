@@ -68,6 +68,7 @@
 ### [Editor Style](editor/advanced/style.md)
 ### [Custom Engine Build](editor/advanced/custom-engine.md)
 ### [Game and Engine Flow](editor/advanced/game-engine-flow.md)
+### [Asset References](editor/advanced/asset-references.md)
 
 # [Graphics](graphics/index.md)
 ## [Rendering overview](graphics/overview/index.md)
