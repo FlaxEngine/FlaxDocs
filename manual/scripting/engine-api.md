@@ -24,8 +24,15 @@ Scripting API list for gameplay programming (available in both C++, C# and Visua
 
 ## Objects Hierarchy
 
-Diagram with a hierarchy of the main object types used in Flax.
+The diagram with a hierarchy of the main object types used in Flax.
 
 In C# and Visual Scripting API `FlaxEngine.Object` type is mapped into `ScriptingObject`.
 
 ![Flax Object Hierarchy Diagram](media/objects-hierarchy.png)
+
+## Engine Architecture
+
+The diagram below shows the simplified architecture of the engine and editor.
+
+![Flax Engine Architecture](media/engine-architecture.png)
+
