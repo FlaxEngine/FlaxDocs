@@ -84,7 +84,7 @@ DECLARE_SCRIPTING_TYPE(InterfaceInCpp);
         auto interface = ToInterface<IMyInterface>(MyInterface);
         if (interface)
         {
-            // Call interface method (with with both C++ and C# interface implementations)
+            // Call interface method (works with both C++ and C# interface implementations)
             interface->GetSpeed(Vector3::One);
         }
     }
@@ -104,7 +104,7 @@ public class InterfaceInCSharp : Script, IMyInterface
         var inter = MyInterface as IMyInterface;
         if (inter != null)
         {
-            // Call interface method (with with both C++ and C# interface implementations)
+            // Call interface method (works with both C++ and C# interface implementations)
             inter.GetSpeed(Vector3.One);
         }
     }
