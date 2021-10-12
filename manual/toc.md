@@ -364,6 +364,7 @@
 ## [Particle Effect](particles/particle-effect.md)
 ## [Particle Parameters](particles/particle-parameters.md)
 ## [Particle Materials](particles/particle-materials.md)
+## [Particle Optimization](particles/particle-optimization.md)
 ## [Tutorials](particles/tutorials/index.md)
 ### [How to fade particles near camera](particles/tutorials/fade-near-camera.md)
 ### [How to make soft particles](particles/tutorials/soft-particles.md)
