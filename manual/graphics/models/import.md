@@ -79,7 +79,7 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 |||
 | **Generate LODs** | If checked, the importer will generate a sequence of LODs based on the base LOD index. |
 | **Base LOD** | The index of the LOD from the source model data to use as a reference for following LODs generation. |
-| **LOD Count** | The amount of LODs to include in the model (all reaming ones starting from Base LOD will be generated). |
+| **LOD Count** | The amount of LODs to include in the model (all remaining ones starting from Base LOD will be generated). |
 | **Triangle Reduction** | The target amount of triangles for the generated LOD (based on the higher LOD). Normalized to range 0-1. For instance 0.4 cuts the triangle count to 40%. |
 |||
 | **Import Materials** | If checked, the importer will create materials for model meshes as specified in the file. |
