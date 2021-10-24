@@ -2,7 +2,7 @@
 
 Flax Engine offers very wide range of customization that can be made to extend the rendering pipeline. One of them is rendering scene using the custom camera right to the render target. Then presenting it on an object surface.
 
-In this tutorial you will learn how to achive picture-in-picture effect:
+In this tutorial you will learn how to achieve picture-in-picture effect:
 
 ![Render to Texture](media/picture-in-picture.png)
 
