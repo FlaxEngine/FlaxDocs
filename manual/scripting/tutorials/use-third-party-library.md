@@ -9,7 +9,7 @@ In this documentation section, you will learn how to use a third-party library i
 
 ## Using C# library
 
-To add a reference to prebuild .Net DLL file in your game scripts simply modify the build script file (eg. `Source/GameModule/MyGame.Build.cs`) by adding the file reference in overridden `Setup` method:
+To add a reference to prebuild .Net DLL file in your game scripts simply modify the build script file (eg. `Source/GameModule/GameModule.Build.cs`) by adding the file reference in overridden `Setup` method:
 
 ```cs
 // Reference C# DLL placed Content folder
@@ -23,7 +23,7 @@ Remember that engine uses .Net Framework 4.5 (.Net Core API is not supported).
 
 ## Using C++ library
 
-To add a reference to the prebuild native library in your game scripts you need to modify the built environment of your game code module. It requires adding library header files location to includes search path and modification of the link environment to reference the given library. Also if you use a dynamic library you need to mark it as a dependency file to deploy during the build. To do so simply edit the build script file (eg. `Source/GameModule/MyGame.Build.cs`) in overridden `Setup` method:
+To add a reference to the prebuild native library in your game scripts you need to modify the built environment of your game code module. It requires adding library header files location to includes search path and modification of the link environment to reference the given library. Also if you use a dynamic library you need to mark it as a dependency file to deploy during the build. To do so simply edit the build script file (eg. `Source/GameModule/GameModule.Build.cs`) in overridden `Setup` method:
 
 ```cs
 var bcryptPath = Path.Combine(FolderPath, "..", "bcrypt");
@@ -49,7 +49,7 @@ Firstly, copy library files into the project workspace so we can use them. You c
 
 ![ThirdParty Library Code Use Example](media/steamworks-files.png)
 
-Next step is to modify the game code build script (eg. `Source/GameModule/MyGame.Build.cs`) to reference the library in overridden `Setup` method:
+Next step is to modify the game code build script (eg. `Source/GameModule/GameModule.Build.cs`) to reference the library in overridden `Setup` method:
 
 ```cs
 var steamworksPath = Path.Combine(FolderPath, "..", "..", "Content", "Steamworks.NET");
