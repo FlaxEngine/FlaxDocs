@@ -151,6 +151,7 @@
 ## [Tutorials](graphics/tutorials/index.md)
 ### [How to render object outline](graphics/tutorials/render-object-outline.md)
 ### [How to use anisotropic texture sampler](graphics/tutorials/anisotropic-texture-sampler.md)
+### [How to use dynamic texture](graphics/tutorials/use-dynamic-texture.md)
 
 # [Scripting](scripting/index.md)
 ## [Create and use a script](scripting/new-script.md)
