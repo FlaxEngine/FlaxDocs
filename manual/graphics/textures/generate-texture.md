@@ -29,7 +29,7 @@ public class TextureFromCode : Script
         // Create new texture asset
         var texture = Content.CreateVirtualAsset<Texture>();
         _tempTexture = texture;
-        TextureBase.InitData initData;
+        var initData = new TextureBase.InitData();
         initData.Width = 64;
         initData.Height = 64;
         initData.ArraySize = 1;
