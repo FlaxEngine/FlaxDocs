@@ -140,6 +140,7 @@ Tag attributes that can be added to the API tags braces to adjust the bindings l
 * `NoArray` - marks the fixed-size array to use fixed-size data instead of dynamic memory array allocation in bindings (structure field of that type will be inlined into series of fields instead of array)
 * `Name="..."` - overrides the name of the type to be used in the bindings
 * `Namespace="..."` - overrides the namespace of the type to be used in the bindings
+* `Hidden` - marks the method/field/property to be hidden in scripting API (skips C# and Visual Script access but allows to serialize it by auto)
 
 ## Special cases
 
