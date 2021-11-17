@@ -2,7 +2,7 @@
 
 ![Visual Studio Extension](../../get-started/media/vs.jpg)
 
-You can download Visual Studio [here](https://www.visualstudio.com). We support **Visual Studio 2017, Visual Studio 2019**.
+You can download Visual Studio [here](https://www.visualstudio.com). We support **Visual Studio 2017, Visual Studio 2019, Visual Studio 2022**.
 
 Flax requries the following components to be installed in order to support C# scripts debugging:
 * C# and Visual Basic Roslyn Compilers
