@@ -14,6 +14,7 @@
 | **Break Force** | Determines the maximum force the joint can apply before breaking. Broken joints no longer participate in physics simulation. |
 | **Break Torque** | Determines the maximum torque the joint can apply before breaking. Broken joints no longer participate in physics simulation. |
 | **Enable Collision** | Determines whether a collision between the two bodies managed by the joint is enabled. |
+| **Enable Auto Anchor** | Determines whether use automatic target anchor position and rotation based on the joint world-space frame (computed when creating joint). |
 | **Target Anchor** | This is the relative pose which locates the joint frame relative to the target actor. |
 | **Target Anchor Rotation** | This is the relative pose rotation which locates the joint frame relative to the target actor. |
 | **Flags** | Controls joint behaviour. |
