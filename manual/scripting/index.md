@@ -70,6 +70,8 @@ To start visual scripting see the related documentation [here](visual/index.md).
   * [Interfaces](cpp/interfaces.md)
   * [Tips & Tricks](cpp/tips-tricks.md)
 * [Visual Scripting](visual/index.md)
+  * [Events](visual/events.md)
+  * [Arrays](visual/arrays.md)
 * [Plugins](plugins/index.md)
   * [Plugins Window](plugins/plugins-window.md)
   * [Plugin Project](plugins/plugin-project.md)

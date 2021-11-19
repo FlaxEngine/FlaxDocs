@@ -9,6 +9,7 @@ Follow this documentation section to learn how to create your own visual scripts
 ### In this section
 
 * [Events](events.md)
+* [Arrays](arrays.md)
 
 ## How to create Visual Script?
 

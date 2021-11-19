@@ -183,6 +183,7 @@
 ### [Tips & Tricks](scripting/cpp/tips-tricks.md)
 ## [Visual Scripting](scripting/visual/index.md)
 ### [Events](scripting/visual/events.md)
+### [Arrays](scripting/visual/arrays.md)
 ## [Plugins](scripting/plugins/index.md)
 ### [Plugins Window](scripting/plugins/plugins-window.md)
 ### [Plugin Project](scripting/plugins/plugin-project.md)
