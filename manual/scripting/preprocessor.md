@@ -22,9 +22,10 @@ public override void OnStart()
 | **PLATFORM_WINDOWS** | Compile for Windows. |
 | **PLATFORM_UWP** | Compile for Universal Windows Platform (UWP). |
 | **PLATFORM_XBOX_ONE** | Compile for Xbox One. |
-| **PLATFORM_PS4** | Compile for PlayStation 4. |
-| **PLATFORM_LINUX** | Compile for Linux. |
 | **PLATFORM_XBOX_SCARLETT** | Compile for Xbox Scarlett. |
+| **PLATFORM_PS4** | Compile for PlayStation 4. |
+| **PLATFORM_PS5** | Compile for PlayStation 4. |
+| **PLATFORM_LINUX** | Compile for Linux. |
 | **PLATFORM_ANDROID** | Compile for Android. |
 | **PLATFORM_SWITCH** | Compile for Switch. |
 | **FLAX_X** | Used to detect Flax version during compilation. X=major version of Flax. eg. `FLAX_1` |

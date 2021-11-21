@@ -11,9 +11,10 @@ This section covers the specific information for different aspects of each platf
 * [Windows Desktop 7, 8, 10](windows.md)
 * [Universal Windows (UWP)](uwp.md)
 * [Xbox One](xbox-one.md)
-* [PlayStation 4](ps4.md)
-* [Linux](linux.md)
 * [Xbox Scarlett](xbox-scarlett.md)
+* [PlayStation 4](ps4.md)
+* [PlayStation 5](ps5.md)
+* [Linux](linux.md)
 * [Android](android.md)
 * [Switch](switch.md)
 

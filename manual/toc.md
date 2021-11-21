@@ -383,9 +383,10 @@
 ## [Windows](platforms/windows.md)
 ## [UWP](platforms/uwp.md)
 ## [Xbox One](platforms/xbox-one.md)
-## [PlayStation 4](platforms/ps4.md)
-## [Linux](platforms/linux.md)
 ## [Xbox Scarlett](platforms/xbox-scarlett.md)
+## [PlayStation 4](platforms/ps4.md)
+## [PlayStation 5](platforms/ps5.md)
+## [Linux](platforms/linux.md)
 ## [Android](platforms/android.md)
 ## [Switch](platforms/switch.md)
 

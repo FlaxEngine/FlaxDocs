@@ -45,6 +45,7 @@ You can use the *Content* window to create new settings. Simply right-click in t
 | **Windows** | Reference to [Windows Settings](../../platforms/windows.md) asset. Contains options used when building game for Windows. |
 | **Universal Windows Platform** | Reference to [Universal Windows Platform Settings](../../platforms/uwp.md) asset. Contains options used when building game for Xbox One and Windows Store. |
 | **PlayStation 4** | Reference to [PlayStation 4 Settings](../../platforms/ps4.md) settings. Contains options used when building game for PlayStation 4. |
+| **PlayStation 5** | Reference to [PlayStation 5 Settings](../../platforms/ps5.md) settings. Contains options used when building game for PlayStation 5. |
 | **Xbox Scarlett** | Reference to [Xbox Scarlett Settings](../../platforms/xbox-scarlett.md) settings. Contains options used when building game for Xbox Scarlett. |
 | **Switch** | Reference to [Switch Settings](../../platforms/switch.md) settings. Contains options used when building game for Switch. |
 
