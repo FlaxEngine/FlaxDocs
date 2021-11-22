@@ -46,3 +46,28 @@ Primitives::Primitives(const SpawnParams& params, int32 pt)
 int32 pt = 11;
 auto obj = New<Primitives>(SpawnParams(Guid::New(), Primitives::TypeInitializer), pt);
 ```
+
+* You can convert scripting enum values to string (eg. for logging) or parse it back (eg. from console command input):
+
+```cpp
+API_ENUM()
+enum class PlayerStates
+{
+    Idle,
+    Running,
+    Swimming,
+    Attacking,
+    Died,
+};
+
+#include "Engine/Core/Log.h"
+#include "Engine/Scripting/Enums.h"
+
+PlayerStates playerState = PlayerStates::Attacking;
+LOG(Info, "Player state: {0} = {1}", ScriptingEnum::ToString(playerState), playerState);
+String stateName = ScriptingEnum::ToString(PlayerStates::Running);
+PlayerStates state = ScriptingEnum::FromString<PlayerStates>(stateName);
+LOG(Info, "Player state: {0} = {1}", stateName, state);
+```
+
+See `ScriptingEnum` for more.
