@@ -20,6 +20,7 @@
 ## [Assets](get-started/assets/index.md)
 ### [Creating Assets](get-started/assets/creating-assets.md)
 ### [Using Assets](get-started/assets/using-assets.md)
+### [Searching Assets](get-started/assets/searching-assets.md)
 ## [Prefabs](get-started/prefabs/index.md)
 ### [Prefab Editor](get-started/prefabs/prefab-editor.md)
 ### [How to create a prefab](get-started/prefabs/creating-prefabs.md)
