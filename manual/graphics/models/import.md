@@ -75,7 +75,6 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 | **Optimize Keyframes** | If checked, the imported animation channels will be optimized to remove redundant keyframes. This option helps with getting better animation sampling performance. |
 | **Enable Root Motion** | If checked, enables root motion extraction support from this animation. |
 | **Root Node Name** | The custom node name to be used as a root motion source. If not specified the actual root node will be used. |
-| **Animation Index** | The zero-based index for the animation clip to import. If the source file has more than one animation it can be used to pick a desired clip. |
 |||
 | **Generate LODs** | If checked, the importer will generate a sequence of LODs based on the base LOD index. |
 | **Base LOD** | The index of the LOD from the source model data to use as a reference for following LODs generation. |
@@ -85,7 +84,12 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 | **Import Materials** | If checked, the importer will create materials for model meshes as specified in the file. |
 | **Import Textures** | If checked, the importer will import texture files used by the model and any embedded texture resources. |
 | **Restore Materials On Reimport** | If checked, the importer will try to restore the assigned materials to the model slots. |
+|||
+| **Split Objects** | If checked, the imported mesh/animations are splitted into separate assets. Used if *Object Index* is set to -1. |
+| **Object Index** | The zero-based index for the mesh/animation clip to import. If the source file has more than one mesh/animation it can be used to pick a desire object. The default `-1` imports all objects. |
 
 ## Tips
 
 If the model appears to be missing something or there is more than you expected make sure the model you imported is in fact what you believe it is. For example Blender defaults to export everything unless you tick the "selection only" box. An easy way to check that is to import the file back in your modeller.
+
+If you want to import all animation clips from the source file or import all model meshes as separate assets use **Split Objects** option. It will split the source objects from the model file and import them as separate assets. It will support reimporting them easily with as each splited object gets own **Object Index** auto-assigned.
