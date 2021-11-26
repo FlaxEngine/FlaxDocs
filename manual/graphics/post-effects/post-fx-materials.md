@@ -45,6 +45,21 @@ Enter camera into the volume to see the final effect result.
 
 When extending the rendering pipeline with C# scripts and using [render tasks](http://docs.flaxengine.com/api/FlaxEngine.RenderTask.html) you can use [GPUContext.DrawPostFxMaterial](http://docs.flaxengine.com/api/FlaxEngine.GPUContext.html#FlaxEngine_Rendering_GPUContext_DrawPostFxMaterial_FlaxEngine_MaterialBase_FlaxEngine_Rendering_GPUTexture_FlaxEngine_Rendering_GPUTexture_) method. This allows to extend rendering and use custom drawing with [GPUTextures](http://docs.flaxengine.com/api/FlaxEngine.GPUTexture.html).
 
+## Post process inputs
+
+![PostFx Material Input Textures](media/postfx-material-nodes.png)
+
+As a main input post process materials receive **Scene Color** which contains the pixels with the currently passed input buffer to the postprocessing. By defualt it's final rendered frame but if you change material location it can contains rendered scene before applying any AA or transparency and be in HDR format.
+
+Usefull nodes:
+* **Scene Color** - the input texture passed to the postfx material by the renderer (see material location options).
+* **Scene Texture** - the general purpose access to common scene rendering buffers such as: Diffuse Color, Roughness, World Normal, Base Color, Metalness, etc. It can be used to implement custom effects such as normal-vector- based edge detection filter.
+* **Scene Depth** - the depth buffer. Can be used to implement depth-based effects such as outlines rendering. *Depth* output of this node returns the linear depth value (in `0-1` range). To access hardware depth sample texture manually (eg. with Sample Texture node with Point Clamp filter).
+* **Linearize Depth** - converts the hardwere depth buffer value (from current camera view) into the linear depth value (in `0-1` range). You can multiply output by *Far Plane* from *View* node to get depth in world units.
+
+> [!Note]
+> If you are experienced with Unreal then **PostProcessInput0** is **Scene Color** node in Flax for postprocess materials input.
+
 ## Post process material location
 
 ![PostFx Material Location](../materials/media/properties-misc.png)
