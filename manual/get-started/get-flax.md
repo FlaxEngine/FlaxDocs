@@ -25,6 +25,8 @@ After the login screen go to the **Engine** page. This is where you can download
 
 To install Flax use the **Add Version** button to select the Engine version and target installation destination folder. Here is where you can pick a target platform to install the packages required to build and deploy your game for a given platform. Finally, you can press the **Install** button to download the Flax binaries.
 
+By using *Version* dropdown menu you can pick the engine version to install. By default it selects the latest version but you can change it to get older engine version (eg. that your team is using). Also, it allows to download and use daily builds from Github master branch (named `master branch (daily)`). You will be able to download updates every day and enjoy frequent features and bug fixes.
+
 ![Download Flax](media/download-flax.png)
 
 > [!Note]
