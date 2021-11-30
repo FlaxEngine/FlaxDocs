@@ -10,9 +10,9 @@
 
 The fastest way to create a ragdoll is to use an **in-built generator tool** that is available in Editor by using *right-click* in scene tree on **Animated Model** and selecting option **Create ragdoll**. It will generate a ragdoll as a child to it with the full hierarchy of physical bones.
 
-Now, you can just press play and test it out. It will automatically override the skeleton pose with simulated bones (no matter if Anim Graph is used). You can set `BonesWeight` to 0 by default and switch it to `1` from code when needed to enable physical simulation for a character. Ragdoll can also blend between animated and simulated state or use just partial simulation for a specified set of bones. Also, if the certain bone is using only animation it will be animated accordingly so you can use ragdoll collision shapes for hit-testing via raycasts.
+Now, you can just press play and test it out. It will automatically override the skeleton pose with simulated bones (no matter if Anim Graph is used). You can set `BonesWeight` to `0` by default and switch it to `1` from code when needed to enable physical simulation for a character. Ragdoll can blend between animated and simulated state or use just partial simulation for a specified set of bones. Also, if the certain bone is using only animation it will be animated accordingly so you can use ragdoll collision shapes for hit-testing via raycasts.
 
-It's possible to use prefab for ragdoll to make it reusable or even add multiple ragdoll setups to the same model (just ensure to have enabled just one).
+It's possible to use prefab for ragdoll to make it reusable or even add multiple ragdoll setups to the same model (only ensure to have enabled just one at the time). Flax ragdolls system doesn't assume that character is a humanoid but is generic and works with all skeletal meshes which means it's possible to use it for animals or monsters.
 
 ## Editor
 
