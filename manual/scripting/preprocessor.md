@@ -1,6 +1,6 @@
 # Preprocessor variables
 
-If you're developing for multiple platforms, you often need to write custom code for each platform. In most cases, the best way to do this is to use [Platform.Platform](https://docs.flaxengine.com/api/FlaxEngine.Platform.html#FlaxEngine_Application_Platform) and [GPUDevice.RendererType](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_Rendering_GPUDevice_RendererType). Alternatively, you can use preprocessor variables which come heandy when you need to add editor-only code or compiled for selected platforms.
+If you're developing for multiple platforms, you often need to write custom code for each platform. In most cases, the best way to do this is to use [Platform.Platform](https://docs.flaxengine.com/api/FlaxEngine.Platform.html#FlaxEngine_Application_Platform) and [GPUDevice.RendererType](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_GPUDevice_RendererType). Alternatively, you can use preprocessor variables which come heandy when you need to add editor-only code or compiled for selected platforms.
 
 ## Example
 

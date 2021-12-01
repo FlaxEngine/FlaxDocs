@@ -30,7 +30,7 @@ This section covers the specific information for different aspects of each platf
 * Platform native (eg. on PS4)
 
 > [!TIP]
-> To check on which rendering backend game is running use [GPUDevice.Instance.RendererType](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_Rendering_GPUDevice_RendererType). You can also use [GPUDevice.Instance.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_Rendering_GPUDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.
+> To check on which rendering backend game is running use [GPUDevice.Instance.RendererType](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_GPUDevice_RendererType). You can also use [GPUDevice.Instance.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_GPUDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.
 
 ## Built game logs
 

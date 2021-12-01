@@ -62,8 +62,7 @@
       "_appFooter": "Copyright © 2012-2021 Wojciech Figat",
       "_enableSearch": true,
       "_enableNewTab": true,
-      "_disableContribution": false,
-      //"_gitUrlPattern": "github",
+      "_gitUrlPattern": "github",
       //"_gitContribute": {
       //		"repo ": "https://github.com/FlaxEngine/FlaxDocs",
       //		"branch": "master"
@@ -72,8 +71,8 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-    "default",
-    "template"
+      "default",
+      "template"
     ],
     "postProcessors": [],
     "noLangKeyword": false
