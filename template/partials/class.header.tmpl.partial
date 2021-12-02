@@ -49,8 +49,13 @@
 </div>
 {{/inheritedMembers.0}}
 
+{{#namespace.specName.0.value}}
 <h6><strong>{{__global.namespace}}</strong>: {{{namespace.specName.0.value}}}</h6>
+{{/namespace.specName.0.value}}
 <h6><strong>{{__global.assembly}}</strong>: {{assemblies.0}}.dll</h6>
+{{#filepath}}
+<h6><strong>File</strong>: {{filepath}}</h6>
+{{/filepath}}
 
 <h5 id="{{id}}_syntax">{{__global.syntax}}</h5>
 <div class="codewrapper">

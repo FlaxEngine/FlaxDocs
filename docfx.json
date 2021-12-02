@@ -1,7 +1,7 @@
 {
   "metadata": [
     {
-      "src": "src/*.dll",
+      "src": "FlaxEngine/Binaries/Editor/Win64/Development/FlaxEngine.CSharp.dll",
       "dest": "api"
     }
   ],
@@ -10,7 +10,8 @@
       {
         "files": [
           "api/**.yml",
-          "api/index.md"
+          "api/index.md",
+          "api-cpp/**.yml"
         ]
       },
       {
@@ -19,6 +20,8 @@
           "manual/**/toc.yml",
           "api/*.md",
           "api/*.yml",
+          "api-cpp/*.md",
+          "api-cpp/*.yml",
           "toc.yml",
           "*.md"
         ],

@@ -4,6 +4,8 @@ Flax Engine fully supports C++ scripting with even more features than C# scripti
 
 Follow this documentation section to learn how to write your own C\+\+ scripts and use them in a game. Also, if you see any code examples in the *Flax Documentation* that are written in C# you can similarly use them in C\+\+ scripts since the engine uses the same API in both languages (you can even move your existing game code from C# to C\+\+ quite quickly).
 
+Visit **[C++ API Reference](../../../api-cpp/index.md)** to learn about scripting types.
+
 ## In this section
 
 * [Common Types](common-types.md)
@@ -151,7 +153,7 @@ To learn more about specific areas of C\+\+ scripting in Flax see the related se
 * [Tips & Tricks](tips-tricks.md)
 * [API_ tags](../../editor/flax-build/api-tags.md)
 
-Also, since the C# and C\+\+ API are very similar you can use this [API reference](https://docs.flaxengine.com/api/FlaxEngine.html).
+Also, you can use Flax [C++ API reference](../../../api-cpp/index.md) to browse the engine types.
 
 ## Interop with C# #
 

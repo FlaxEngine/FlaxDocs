@@ -1,0 +1,20 @@
+{
+  "input_paths": [
+    "FlaxEngine/Source/Editor",
+    "FlaxEngine/Source/Engine"
+  ],
+  "output_path": "api-cpp",
+  "exclude_paths": [
+    "FlaxEngine/Source/Platforms",
+    "FlaxEngine/Source/Tools"
+  ],
+  "exclude_types": [
+    "\\bTIsPODType\\b"
+  ],
+  "repo_remap": {
+    "https://gitlab.flaxengine.com/flax/flaxengine.git": "https://github.com/FlaxEngine/FlaxEngine.git"
+  },
+  "doxygen_template_file": "doxyfile",
+  "assembly": "FlaxEngine",
+  "language": "cplusplus"
+}

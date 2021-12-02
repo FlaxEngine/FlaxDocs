@@ -3,5 +3,9 @@
 - name: Manual
   href: manual/
   homepage: manual/index.md
-- name: API
+- name: C# API
   href: api/
+  homepage: api/index.md
+- name: C++ API
+  href: api-cpp/
+  homepage: api-cpp/index.md

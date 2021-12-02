@@ -7,4 +7,3 @@ xcopy /Y logo.svg _site
 xcopy /Y logo.png _site
 
 echo Done!
-pause

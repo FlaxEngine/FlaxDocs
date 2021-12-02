@@ -19,4 +19,17 @@ jobs:
           sudo apt-get install mono-complete --yes
 
       - name: Build docs
-        run: mono docfx/docfx.exe
+        run: |
+          git lfs version
+          git clone https://github.com/FlaxEngine/FlaxEngine.git FlaxEngine
+          cd FlaxEngine
+          git reset --hard $(cat commit.txt)
+          git lfs pull
+          ./Development/Scripts/Linux/CallBuildTool.sh -log -arch=x64 -configuration=Development -platform=Windows -buildtargets=FlaxEditor -build -BuildBindingsOnly
+          cd ..
+          mono docfx/docfx.exe metadata
+          mono code2yaml/code2yaml.exe code2yaml.json
+          mono docfx/docfx.exe build
+          ls _site
+          ls _site/api
+          ls api-cpp
