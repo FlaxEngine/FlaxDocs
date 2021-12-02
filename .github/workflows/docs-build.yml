@@ -30,6 +30,5 @@ jobs:
           mono docfx/docfx.exe metadata
           mono code2yaml/code2yaml.exe code2yaml.json
           mono docfx/docfx.exe build
-          ls _site
-          ls _site/api
+          ls _site/api-cpp
           ls api-cpp

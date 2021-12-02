@@ -17,6 +17,6 @@ Flax uses *GPUPipelineState* objects that wrap the whole graphics pipeline state
 * Platform native (eg. on PS4)
 
 > [!TIP]
-> To check on which rendering backend game is running use [GPUDevice.Instance.RendererType](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_Rendering_GPUDevice_RendererType). You can also use [GPUDevice.Instance.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_Rendering_GPUDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.
+> To check on which rendering backend game is running use [GPUDevice.Instance.RendererType](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_GPUDevice_RendererType). You can also use [GPUDevice.Instance.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_GPUDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.
 
 You can also force to use a specific graphics backend API or even specific GPU (if multiple adapters available). To learn how see the engine [command line documentation](../../editor/advanced/command-line-access.md).
