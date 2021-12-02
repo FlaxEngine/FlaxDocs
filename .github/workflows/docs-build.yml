@@ -29,6 +29,8 @@ jobs:
           cd ..
           mono docfx/docfx.exe metadata
           mono code2yaml/code2yaml.exe code2yaml.json
+          mono code2yaml/tools/doxygen-flax-filter.exe FlaxEngine/Source/Engine/Audio/Audio.h
+          cat code2yaml/.inter/Doxyfile
+          ls api-cpp
           mono docfx/docfx.exe build
           ls _site/api-cpp
-          ls api-cpp
