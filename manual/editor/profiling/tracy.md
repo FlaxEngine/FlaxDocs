@@ -22,22 +22,20 @@ Download latest Tracy from [Github releases](https://github.com/wolfpld/tracy/re
 
 Use Flax API to inject profile blocks:
 
-### C++
-
+# [C#](#tab/code-csharp)
+```cs
+Profiler.BeginEvent("MyFunc");
+// do some stuff
+Profiler.EndEvent();
+```
+# [C++](#tab/code-cpp)
 ```cpp
 #include "Engine/Profiler/ProfilerCPU.h"
 
 PROFILE_CPU();
 // do some stuff
 ```
-
-### C#
-
-```cs
-Profiler.BeginEvent("MyFunc");
-// do some stuff
-Profiler.EndEvent();
-```
+***
 
 ## Automated data collection
 

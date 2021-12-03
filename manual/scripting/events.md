@@ -6,11 +6,11 @@ These functions are called **event functions** because they are executed by Flax
 
 ## Examples
 
-### C#
+# [C#](#tab/code-csharp)
 [!code-csharp[Example1](code-examples/events.cs)]
-
-### C++
+# [C++](#tab/code-cpp)
 [!code-cpp[Example2](code-examples/events.h)]
+***
 
 ## Event functions
 

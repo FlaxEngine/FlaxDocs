@@ -13,9 +13,6 @@ API_CLASS() class EXAMPLE_API MyScript : public Script
     ScriptingObjectReference<SpotLight> Flashlight;
 
     // [Script]
-    void OnDisable() override;
-    void OnUpdate() override;
-    void OnEnable() override;
     void OnStart() override
     {
         Flashlight.Get()->DeleteObject();

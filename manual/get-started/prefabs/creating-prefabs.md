@@ -18,8 +18,7 @@ Another way to create a new prefab asset is by using the existing actors as an a
 
 The last way to create a new prefab is by using an editor script that creates a new prefab asset using C# or C++.
 
-### C#
-
+# [C#](#tab/code-csharp)
 ```cs
 // Setup prefab objects
 var myLight = new PointLight
@@ -35,9 +34,7 @@ new Decal
 // Create a prefab
 PrefabManager.CreatePrefab(myLight, StringUtils.CombinePaths(Globals.ProjectContentFolder, "myPrefab.prefab"), false);
 ```
-
-### C++
-
+# [C++](#tab/code-cpp)
 ```cpp
 // Setup prefab objects
 PointLight* myLight = New<PointLight>();
@@ -51,3 +48,4 @@ myDecal->SetParent(myLight);
 // Create a prefab
 PrefabManager::CreatePrefab(myLight, Globals::ProjectContentFolder / TEXT("myPrefab.prefab"), false);
 ```
+***

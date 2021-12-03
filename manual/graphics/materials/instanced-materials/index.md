@@ -15,8 +15,7 @@ There are two ways to create `MaterialInstance` asset.
 
 ![New Material Instance](../media/new-material-instance.png)
 
-- From C# code
-
+# [C#](#tab/code-csharp)
 ```cs
 public class MyScript : Script
 {
@@ -34,9 +33,7 @@ public class MyScript : Script
 	}
 }
 ```
-
-- From C++ code
-
+# [C++](#tab/code-cpp)
 ```cpp
 #pragma once
 
@@ -72,6 +69,7 @@ inline MyScript::MyScript(const SpawnParams& params)
 {
 }
 ```
+***
 
 To learn more about using material instances from code go to the C# scripting API [here](http://docs.flaxengine.com/api/FlaxEngine.MaterialInstance.html).
 

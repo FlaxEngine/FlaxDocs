@@ -7,6 +7,7 @@ Scene objects lifetime is controlled by the Flax but the game can also access **
 ### C#
 Example code that spawns a new point light:
 
+# [C#](#tab/code-csharp)
 ```cs
 public override void OnStart()
 {
@@ -15,20 +16,7 @@ public override void OnStart()
     light.Parent = Actor;
 }
 ```
-
-You can add new scripts to any objects by using [AddScript](https://docs.flaxengine.com/api/FlaxEngine.Actor.html#FlaxEngine_Actor_AddScript_FlaxEngine_Script_) method:
-
-```cs
-public override void OnStart()
-{
-    var player = Actor.AddScript<Player>();
-    player.HP = 100;
-}
-```
-
-### C++
-
-In C++ the implementation is the same.
+# [C++](#tab/code-cpp)
 ```cpp
 void ExampleScript::OnStart()
 {
@@ -37,15 +25,28 @@ void ExampleScript::OnStart()
     light->SetParent(GetActor());
 }
 ```
+***
 
-In order to add a script you just create a new instance and set the parent.
+You can add new scripts to any objects by using [AddScript](https://docs.flaxengine.com/api/FlaxEngine.Actor.html#FlaxEngine_Actor_AddScript_FlaxEngine_Script_) method:
+
+# [C#](#tab/code-csharp)
+```cs
+public override void OnStart()
+{
+    var player = Actor.AddScript<Player>();
+    player.HP = 100;
+}
+```
+# [C++](#tab/code-cpp)
 ```cpp
 void ExampleScript::OnStart()
 {
-    auto script = New<SecondaryScript>();
+    auto script = New<Player>();
     script->SetParent(GetActor());
+    script->HP = 100;
 }
 ```
+***
 
 > [!Note]
 > Scene objects (actors, scripts) should **not use constructors** to prevent issues.
@@ -54,28 +55,28 @@ void ExampleScript::OnStart()
 
 Flax supports immediate and delayed objects removing system. This helps with cleanup up the scene from killed players or unused actors.
 
-### C#
+# [C#](#tab/code-csharp)
 [!code-csharp[Example1](code-examples/objects-lifetime.cs)]
+# [C++](#tab/code-cpp)
+[!code-cpp[Example3](code-examples/objects-lifetime.h)]
+***
 
 Here is an example script that will remove object after a specified timeout (in seconds):
 
+# [C#](#tab/code-csharp)
 [!code-csharp[Example2](code-examples/objects-lifetime-2.cs)]
+# [C++](#tab/code-cpp)
+[!code-cpp[Example4](code-examples/objects-lifetime-2.h)]
+***
 
 In the same way you can remove scripts:
 
+# [C#](#tab/code-csharp)
 ```cs
 Destroy(Actor.GetScript<Player>());
 ```
-
-### C++
-
-Simple deletion of a referenced object:
-[!code-cpp[Example3](code-examples/objects-lifetime.h)]
-
-How to time object deletion:
-[!code-cpp[Example4](code-examples/objects-lifetime-2.h)]
-
-How to delete script:
+# [C++](#tab/code-cpp)
 ```cpp
 GetActor()->GetScript<ExampleScript>()->DeleteObject();
 ```
+***

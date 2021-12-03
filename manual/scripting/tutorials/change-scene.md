@@ -10,13 +10,11 @@ Navigate to `Source` directory, **right-click**, and select the option **New -> 
 
 Here is a sample code that exposes a public variable with a reference to a scene asset that it should load. It checks in the Update function if the `G` key was pressed, it then changes the current scene into the selected one.
 
-### C#
-
+# [C#](#tab/code-csharp)
 [!code-csharp[Example1](../code-examples/change-scene.cs)]
-
-### C++
-
+# [C++](#tab/code-cpp)
 [!code-cpp[Example2](../code-examples/change-scene.h)]
+***
 
 ## 3. Add script
 

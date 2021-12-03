@@ -13,8 +13,6 @@ API_CLASS() class GAME_API SceneChanger : public Script
     Guid AnotherScene;
 
     // [Script]
-    void OnEnable() override;
-    void OnDisable() override;
     void OnUpdate() override
     {
         if (Input::GetKeyDown(KeyboardKeys::G) && AnotherScene.IsValid())

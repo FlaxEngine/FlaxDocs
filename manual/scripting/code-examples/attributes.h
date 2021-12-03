@@ -9,9 +9,6 @@ API_CLASS(Attributes = "ExecuteInEditMode") class GAME_API MyGenerator : public 
     DECLARE_SCRIPTING_TYPE(MyGenerator);
 
     // [Script]
-    void OnEnable() override;
-    void OnDisable() override;
-    void OnUpdate() override;
     void OnStart() override
     {
         for (int x = 0; x < 5; x++)

@@ -21,9 +21,8 @@ public float Speed;
 
 In this example, asset had field named `WalkableRadius` but it was removed and refactored into structure `SurfaceOptions`. By adding property you can use its setter method to perform data upgrade on deserialization. Make it `private`, add `Serialize` attribute so it will be using serialization and mark as `Obsolete` so it won't be saved anymore.
 
+# [C#](#tab/code-csharp)
 ```cs
-// C#
-
 // Before:
 public float WalkableRadius;
 
@@ -45,10 +44,8 @@ private float WalkableRadius
     }
 }
 ```
-
+# [C++](#tab/code-cpp)
 ```cpp
-// C++
-
 // If your type is using API_AUTO_SERIALIZATION() then remove it and manually implement ISerializable interface
 void MyType::Deserialize(DeserializeStream& stream, ISerializeModifier* modifier)
 {
@@ -58,3 +55,4 @@ void MyType::Deserialize(DeserializeStream& stream, ISerializeModifier* modifier
     // ...then deserialize other properties/fields
 }
 ```
+***

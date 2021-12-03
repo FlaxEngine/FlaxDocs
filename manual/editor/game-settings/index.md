@@ -53,8 +53,7 @@ You can use the *Content* window to create new settings. Simply right-click in t
 
 Example code to access game settings data in game code.
 
-C#:
-
+# [C#](#tab/code-csharp)
 ```cs
 using FlaxEditor.Content.Settings;
 using FlaxEngine;
@@ -70,9 +69,7 @@ public class TestSettingsUsage : Script
     }
 }
 ```
-
-C++:
-
+# [C++](#tab/code-cpp)
 ```cpp
 #include "Engine/Core/Log.h"
 #include "Engine/Core/Config/GameSettings.h"
@@ -92,3 +89,4 @@ public:
     }
 };
 ```
+***

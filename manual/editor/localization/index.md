@@ -71,16 +71,13 @@ In Editor *Id* textfield contains utility button that shows a localized string p
 
 `Localization` contains scripting API for string localization gather and implements values formatting handling for current culture.
 
-### C#
-
+# [C#](#tab/code-csharp)
 ```cs
 var myStr = Localization.GetString("localized_id", "Fallback value");
 var myStrPlural = Localization.GetPluralString("localized_id_n", 2, "Count: {}");
 var number =  string.Format("{0:n}", 1234);
 ```
-
-### C\+\+
-
+# [C++](#tab/code-cpp)
 ```cpp
 #include "Engine/Localization/Localization.h"
 
@@ -90,10 +87,11 @@ auto number =  String::Format(TEXT("{0:n}"), 1234);
 ```
 
 To learn more about string formatting in C++ see [this documentation](../../scripting/cpp/string-formatting.md).
-
-### Visual Script
-
+# [Visual Script](#tab/code-vs)
 ![Visual Script Localization String Formatting](media/localization-vs-format.png)
+***
+
+### 
 
 ## Changing current language
 
@@ -105,8 +103,7 @@ Use Localization Settings asset editor dashboard for current language preview.
 
 ![Localization Preview](media/localization-preview.gif)
 
-### C#
-
+# [C#](#tab/code-csharp)
 ```cs
 using System.Globalization;
 
@@ -115,9 +112,7 @@ Debug.Log("Current culture: " + Localization.CurrentCulture);
 Localization.LocalizationChanged += () => { Debug.Log("Localization changed!"); };
 Localization.SetCurrentLanguageCulture(new CultureInfo("en-US"));
 ```
-
-### C\+\+
-
+# [C++](#tab/code-cpp)
 ```cpp
 #include "Engine/Localization/Localization.h"
 
@@ -131,7 +126,6 @@ LOG(Info, "Current culture: {}", Localization::GetCurrentCulture());
 Localization::LocalizationChanged.Bind(&::OnLocalizationChanged);
 Localization::SetCurrentLanguageCulture(CultureInfo("en-US"));
 ```
-
-### Visual Script
-
+# [Visual Script](#tab/code-vs)
 ![Localization Visual Script](media/localization-vs-language.png)
+***

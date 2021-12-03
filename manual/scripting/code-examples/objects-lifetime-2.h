@@ -11,9 +11,6 @@ API_CLASS() class GAME_API AutoRemoveObj : public Script
     float Timeout = 5.0f;
 
     // [Script]
-    void OnEnable() override;
-    void OnDisable() override;
-    void OnUpdate() override;
     void OnStart() override 
     {
         GetActor()->DeleteObject(Timeout);

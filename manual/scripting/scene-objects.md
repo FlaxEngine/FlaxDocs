@@ -6,53 +6,49 @@ One of the most important aspects of the scripts is interaction and accessing ot
 
 Every script has inherited property `Actor` that represents an actor the script is attached to. For example you can use it to modify the actor position every frame:
 
-### C#
-
+# [C#](#tab/code-csharp)
 ```cs
 public override void OnFixedUpdate()
 {
 	Actor.Position += new Vector3(0, 2, 0);
 }
 ```
+# [C++](#tab/code-cpp)
+```cpp
+void ScriptExample::OnFixedUpdate()
+{
+    GetActor()->SetPosition(GetActor()->GetPosition() + Vector3(0, 2, 0));
+}
+```
+***
 
 You can also print its name:
 
+# [C#](#tab/code-csharp)
 ```cs
 Debug.Log(Actor.Name);
 ```
+# [C++](#tab/code-cpp)
+```cpp
+DebugLog::Log(GetActor()->GetName());
+```
+***
 
 See [Actor](https://docs.flaxengine.com/api/FlaxEngine.Actor.html) class reference to learn more.
 
 You can also print all child actors and rotate the parent actor:
 
-[!code-csharp[Example1](code-examples/scene-objects.cs]
-
-### C++
-
-Here is the equivalent of the implemented logic above in C++.
-
-```cpp
-void ScriptExample::OnUpdate()
-{
-    GetActor()->SetPosition(GetActor()->GetPosition() + Vector3(0, 2, 0));
-}
-```
-
-Prints the name of the owning actor:
-```cpp
-DebugLog::Log(GetActor()->GetName());
-```
-
-Prints all child actors and rotates the parent actor:
-
-[!code-csharp[Example2](code-examples/scene-objects.h]
+# [C#](#tab/code-csharp)
+[!code-csharp[Example1](code-examples/scene-objects.cs)]
+# [C++](#tab/code-cpp)
+[!code-cpp[Example2](code-examples/scene-objects.h)]
+***
 
 ## Accessing other scripts
 
 Scripts attached to the actors can be queries like the actors using a dedicated methods:
 
-### C#
-
+# [C#](#tab/code-csharp)
 ```cs
 private void OnTriggerEnter(Collider collider)
 {
@@ -62,21 +58,7 @@ private void OnTriggerEnter(Collider collider)
         player.DealDamage(10);
 }
 ```
-
-You can also query all the scripts of the any actor and use them to perform any action:
-
-```cs
-private void OnTriggerEnter(Collider collider)
-{
-    foreach (var provider in collider.GetScripts<IAdProvider>())
-       provider.ShowAd();
-}
-```
-
-### C++
-
-Same code as above, implemented in C++.
-
+# [C++](#tab/code-cpp)
 ```cpp
 void ScriptExample::OnTriggerEnter(Collider* collider)
 {
@@ -86,7 +68,19 @@ void ScriptExample::OnTriggerEnter(Collider* collider)
         player->DealDamage(10);
 }
 ```
+***
 
+You can also query all the scripts of the any actor and use them to perform any action:
+
+# [C#](#tab/code-csharp)
+```cs
+private void OnTriggerEnter(Collider collider)
+{
+    foreach (var provider in collider.GetScripts<IAdProvider>())
+       provider.ShowAd();
+}
+```
+# [C++](#tab/code-cpp)
 ```cpp
 void ScriptExample::OnTriggerEnter(Collider* collider)
 {
@@ -94,13 +88,13 @@ void ScriptExample::OnTriggerEnter(Collider* collider)
         provider.ShowAd();
 }
 ```
+***
 
 ## Finding actors
 
 Flax implements API to find objects.
 
-### C#
-
+# [C#](#tab/code-csharp)
 ```cs
 private void OnTriggerLeave(Collider collider)
 {
@@ -108,9 +102,19 @@ private void OnTriggerLeave(Collider collider)
     Destroy(obj);
 }
 ```
+# [C++](#tab/code-cpp)
+```cpp
+void ScriptExample::OnTriggerLeave(Collider* collider)
+{
+    auto obj = GetActor()->GetScene()->FindActor(TEXT("Spaceship"));
+    obj->DeleteObject();
+}
+```
+***
 
 However, in most cases, the best solution is to expose a field with reference to the object and set it in the editor to improve game performance.
 
+# [C#](#tab/code-csharp)
 ```cs
 public Actor Spaceship;
 
@@ -119,21 +123,7 @@ private void OnTriggerLeave(Collider collider)
     Destroy(ref Spaceship);
 }
 ```
-
-### C++
-
-Equal implementation in C++.
-
-```cpp
-void ScriptExample::OnTriggerLeave(Collider* collider)
-{
-    auto obj = GetActor()->GetScene()->FindActor(TEXT("Spaceship"));
-    obj->DeleteObject();
-}
-```
-
-Using a field to store the spaceship.
-
+# [C++](#tab/code-cpp)
 ```cpp
 //.h
 API_FIELD()
@@ -142,6 +132,8 @@ ScriptingObjectReference<Actor> Spaceship;
 //.cpp
 void ScriptExample::OnTriggerLeave(Collider* collider)
 {
-    SpaceShip.Get()->DeleteObject();
+    CHECK(Spaceship);
+    Spaceship->DeleteObject();
 }
 ```
+***
