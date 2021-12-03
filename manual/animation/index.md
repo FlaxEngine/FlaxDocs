@@ -18,6 +18,7 @@ This documentation section describes how to work with the Flax animation pipelin
  * [Graph Parameters](anim-graph/parameters.md)
  * [State Machines](anim-graph/state-machine.md)
  * [Inverse Kinematics](anim-graph/inverse-kinematics.md)
+ * [Functions](anim-graph/functions.md)
  * [Custom Nodes](anim-graph/custom-nodes.md)
 * [Animated Model](animated-model.md)
 * [Skeleton Mask](skeleton-mask.md)
