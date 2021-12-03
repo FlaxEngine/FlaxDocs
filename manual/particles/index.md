@@ -39,6 +39,7 @@ In addition, GPU particles are not supported if emitter uses ribbons or lights. 
 * [Particle Effect](particle-effect.md)
 * [Particle Parameters](particle-parameters.md)
 * [Particle Materials](particle-materials.md)
+* [Particle Functions](particle-functions.md)
 * [Particle Optimization](particle-optimization.md)
 
 ## Tutorials
