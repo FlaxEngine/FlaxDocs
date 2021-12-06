@@ -22,6 +22,10 @@ To learn how to build editor from source see **README.md** documentation file lo
 
 You can use *Flax.Build* for automated editor building with a custom engine for your team members. In that case, the distribution flow is similar to binaries distributed via Flax Store except the engine is located and installed manually. To use it further follow the Engine Registration and Engine Nickname sections.
 
+* `PackagePlatforms.bat`/`PackagePlatforms.sh` - runs build tool to compile and package platforms data (executable files and platform data/tools). You can use Flax.Build arguments to specify the build parameters such as `-platform=Windows -arch=x64`.
+* `PackageEditor.bat`/`PackageEditor.sh` - runs build tool to compile and package Editor (executable files and  content). You can use Flax.Build arguments to specify the build parameters such as `-deployOutput=Output -arch=x64`.
+* `GenerateProjectFiles.bat`/`GenerateProjectFiles.sh` - generates the script project files for the engine. You can run it with custom parameters to override some options such as: `-commpiler=v140 -vscode`.
+
 ## Engine Registration
 
 **Flax Launcher** manages a small registry of installed engine versions on a system. When installing or removing the engine from Flax Store it gets updated. To use custom engine build from any location on a drive use **RegisterEngineLocation.bat** script (engine repo root). It will register the engine location so the engine build can be used to open projects via Flax Launcher (or shell integration).
