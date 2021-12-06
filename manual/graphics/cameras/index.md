@@ -90,3 +90,79 @@ Adjusting near and far planes affects rendering precision and scene depth qualit
 ## Render a camera to a texture
 
 Flax Engine offers very wide range of customization that can be made to extend the rendering pipeline. One of them is rendering scene using the custom camera right to the render target. Then presenting it on an object surface. To create such effect check out the tutorial: [How to render a camera to a texture](render-camera-to-texture.md).
+
+## Override view
+
+Flax uses extensible RenderTask system for high-level rendering achitecture. By default game uses `MainRenderTask.Instance` to drive the scene rendering into the main game viewport. You can use it to plug into rendering pipeline for custom effects, rendering or view override.
+
+# [C#](#tab/code-csharp)
+```cs
+class MyScript : Script
+{
+    public override void OnEnable()
+    {
+        MainRenderTask.Instance.PreRender += OnPreRender;
+    }
+
+    public override void OnDisable()
+    {
+        MainRenderTask.Instance.PreRender -= OnPreRender;
+    }
+
+    private void OnPreRender(GPUContext context, ref RenderContext renderContext)
+    {
+        // Here you can modify the render View
+        float fov = 120.0f;
+        renderContext.View.Near = 100.0f;
+        Viewport viewport = renderContext.Buffers.Viewport;
+        Matrix view = renderContext.View.View;
+        Matrix proj;
+        Matrix.PerspectiveFov(fov * Mathf.DegreesToRadians, viewport.AspectRatio, renderContext.View.Near, renderContext.View.Far, out proj);
+        renderContext.View.SetUp(ref view, ref proj);
+    }
+}
+```
+# [C++](#tab/code-cpp)
+```cpp
+#pragma once
+
+#include "Engine/Scripting/Script.h"
+#include "Engine/Core/Log.h"
+#include "Engine/Graphics/RenderBuffers.h"
+#include "Engine/Graphics/RenderTask.h"
+
+API_CLASS() class GAME_API MyScript : public Script
+{
+    API_AUTO_SERIALIZATION();
+    DECLARE_SCRIPTING_TYPE(MyScript);
+
+    void OnPreRender(GPUContext* context, RenderContext& renderContext)
+    {
+        // Here you can modify the render View
+        float fov = 120.0f;
+        renderContext.View.Near = 100.0f;
+        const Viewport viewport(renderContext.Buffers->GetViewport());
+        Matrix view = renderContext.View.View;
+        Matrix proj;
+        Matrix::PerspectiveFov(fov * DegreesToRadians, viewport.GetAspectRatio(), renderContext.View.Near, renderContext.View.Far, proj);
+        renderContext.View.SetUp(view, proj);
+    }
+
+    // [Script]
+    void OnEnable() override
+    {
+        MainRenderTask::Instance->PreRender.Bind<MyScript, &MyScript::OnPreRender>(this);
+    }
+
+    void OnDisable() override
+    {
+        MainRenderTask::Instance->PreRender.Unbind<MyScript, &MyScript::OnPreRender>(this);
+    }
+};
+
+inline MyScript::MyScript(const SpawnParams& params)
+    : Script(params)
+{
+}
+```
+***
