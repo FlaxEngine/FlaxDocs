@@ -12,6 +12,7 @@ In this tutorial you will learn how to define a custom json asset type and use i
 
 Implement a class that will define the asset data layout. In this example we store some supported screen resolutions and the default language. Then it will be saved to json and modified in editor. Later game can load asset and use its data.
 
+# [C#](#tab/code-csharp)
 ```cs
 public class MySettings
 {
@@ -24,6 +25,27 @@ public class MySettings
 	public string DefaultLanguage = "en";
 }
 ```
+# [C++](#tab/code-cpp)
+```cpp
+#pragma once
+
+#include "Engine/Core/ISerializable.h"
+#include "Engine/Core/Math/Vector2.h"
+#include "Engine/Scripting/ScriptingType.h"
+
+API_CLASS() class GAME_API MySettings : public ISerializable
+{
+    API_AUTO_SERIALIZATION();
+    DECLARE_SCRIPTING_TYPE_NO_SPAWN(MySettings);
+
+    API_FIELD()
+	Array<Vector2> SupportedResolutions = { Vector2(1280, 720), Vector2(1920, 1080) };
+
+    API_FIELD()
+	String DefaultLanguage = TEXT("en");
+};
+```
+***
 
 Add this class to game scripts assembly. It can be in editor scripts assembly but then it will be design-time only.
 
@@ -102,6 +124,7 @@ Using json asset works the same in editor and in builded game. The difference is
 
 To use this asset simply add [JsonAsset](https://docs.flaxengine.com/api/FlaxEngine.JsonAsset.html) reference to your script and drag and drop the `mySettings.json` asset to it.
 
+# [C#](#tab/code-csharp)
 ```cs
 public class MyScript : Script
 {
@@ -117,5 +140,37 @@ public class MyScript : Script
 	}
 }
 ```
+# [C++](#tab/code-cpp)
+```cpp
+#pragma once
+
+#include "Engine/Scripting/Script.h"
+#include "Engine/Core/Log.h"
+#include "Engine/Content/AssetReference.h"
+
+API_CLASS() class GAME_API MyScript : public Script
+{
+    API_AUTO_SERIALIZATION();
+    DECLARE_SCRIPTING_TYPE(MyScript);
+
+    API_FIELD() AssetReference<JsonAsset> MySettings;
+
+    // [Script]
+    void OnStart() override
+    {
+        const auto obj = MySettings ? MySettings->GetInstance<::MySettings>() : nullptr;
+        if (obj)
+        {
+            LOG(Info, "Default language: {0}", obj->DefaultLanguage);
+        }
+    }
+};
+
+inline MyScript::MyScript(const SpawnParams& params)
+    : Script(params)
+{
+}
+```
+***
 
 ![Tutorial](media/custom-asset-tutorial-3.jpg)
