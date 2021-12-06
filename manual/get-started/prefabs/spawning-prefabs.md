@@ -12,6 +12,14 @@ The easiest way to create a new prefab object instance is by using dragging the 
 
 Another way to create a new prefab object instance is by using a spawning method from the Flax C# API. You can spawn prefab to the scene and specify its transform or a parent actor. The following script spawns a prefab.
 
+# [C#](#tab/code-csharp)
 ```cs
 PrefabManager.SpawnPrefab(myPrefab, new Vector3(0, 10, 0));
 ```
+# [C++](#tab/code-cpp)
+```cpp
+#include "Engine/Level/Prefabs/PrefabManager.h"
+
+PrefabManager::SpawnPrefab(myPrefab, Vector3(0, 10, 0));
+```
+***

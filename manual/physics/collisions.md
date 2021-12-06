@@ -18,6 +18,7 @@ To access information about the collision use [Collision](https://docs.flaxengin
 
 Here is an example script which registers collision detection for a given input collider in the scene.
 
+# [C#](#tab/code-csharp)
 ```cs
 public class MyScript : Script
 {
@@ -39,6 +40,46 @@ public class MyScript : Script
 	}
 }
 ```
+# [C++](#tab/code-cpp)
+```cpp
+#pragma once
+
+#include "Engine/Scripting/Script.h"
+#include "Engine/Core/Log.h"
+#include "Engine/Physics/Colliders/Collider.h"
+#include "Engine/Scripting/ScriptingObjectReference.h"
+
+API_CLASS() class GAME_API MyScript : public Script
+{
+    API_AUTO_SERIALIZATION();
+    DECLARE_SCRIPTING_TYPE(MyScript);
+
+    API_FIELD() ScriptingObjectReference<Collider> TargetCollider;
+
+    void OnCollisionEnter(const Collision& c)
+    {
+        LOG(Info, "We got the collision sir! With: {0}", c.OtherActor->ToString());
+    }
+
+    // [Script]
+    void OnEnable() override
+    {
+        if (TargetCollider)
+            TargetCollider->CollisionEnter.Bind<MyScript, &MyScript::OnCollisionEnter>(this);
+    }
+    void OnDisable() override
+    {
+        if (TargetCollider)
+            TargetCollider->CollisionEnter.Unbind<MyScript, &MyScript::OnCollisionEnter>(this);
+    }
+};
+
+inline MyScript::MyScript(const SpawnParams& params)
+    : Script(params)
+{
+}
+```
+***
 
 Please keep in mind that not only Colliders may be a source of collision but also other actor types eg. Terrain. To handle this use properties **ThisActor** and **OtherActor**.
 
