@@ -43,4 +43,4 @@ The **UI** is one of the most important components of the games. Flax Games UI s
 * [How to blur UI panel background](tutorials/blur-background.md)
 * [How to create a Main Menu](tutorials/create-main-menu.md)
 * [How to create a custom control](tutorials/create-custom-control.md)
-
+* [How to create UI animation in prefab](tutorials/ui-prefab-animation.md)
