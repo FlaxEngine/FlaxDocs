@@ -26,6 +26,7 @@ After that connect your parameter outputs with the other nodes to implement the 
 
 Created Anim Graph parameters can be accessed from C# script. You can cache the graph parameters, iterate over them and access from any part of your code. Here is an example code that updates the single graph parameter.
 
+# [C#](#tab/code-csharp)
 ```cs
 using FlaxEngine;
 
@@ -49,6 +50,38 @@ public class EditAnimGraphParam : Script
 	}
 }
 ```
+# [C++](#tab/code-cpp)
+```cpp
+#include "Engine/Scripting/Script.h"
+#include "Engine/Animations/Graph/AnimGraph.h"
+#include "Engine/Level/Actors/AnimatedModel.h"
+
+API_CLASS() class GAME_API EditAnimGraphParam : public Script
+{
+    API_AUTO_SERIALIZATION(EditAnimGraphParam);
+    DECLARE_SCRIPTING_TYPE(EditAnimGraphParam);
+
+private:
+    AnimGraphParameter* _parameter;
+
+public:
+    API_FIELD(Attributes="Range(0.5f, 2.5f)")
+    float HeadScale = 1.0f;
+
+public:
+    void OnStart() override
+    {
+        // Cache the parameter handle
+        _parameter = Cast<AnimatedModel>(GetActor())->GetParameter(TEXT("Head Scale"));
+    }
+    void OnUpdate() override
+    {
+        // Update the value
+        _parameter->Value = HeadScale;
+    }
+};
+```
+***
 
 Result:
 
