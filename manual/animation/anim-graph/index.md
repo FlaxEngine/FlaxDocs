@@ -13,6 +13,7 @@ This documentation section explains the basics and shows how to create and use t
 * [State Machines](state-machine.md)
 * [Inverse Kinematics](inverse-kinematics.md)
 * [Functions](functions.md)
+* [Animation Slots](animation-slots.md)
 * [Custom Ndes](custom-nodes.md)
 
 ## Creating Anim Graph
