@@ -21,3 +21,11 @@
 | **Ignore Depth** | If checked, scene depth will be ignored when rendering the GUI (scene objects won't cover the interface). *Used only by 3D canvas (World Space or Camera Space).* |
 | **Render Camera** | Camera used to place the GUI. *Used only by Camera Space canvas.* |
 | **Distance** | Distance from the RenderCamera to place the plane with GUI. If the screen is resized, changes resolution, or the camera frustum changes then the canvas will automatically change size to match as well. Value is in world units. |
+|||
+| **Input Repeat Delay** | The delay (in seconds) before a navigation input event starts repeating if input control is held down (Input Action mode is set to *Pressing*). |
+| **Input Repeat Rate** | The delay (in seconds) between successive repeated navigation input events after the first one. |
+| **Navigate Up** | The name of the input action for performing UI navigation Up (from Input Settings). |
+| **Navigate Down** | The name of the input action for performing UI navigation Down (from Input Settings). |
+| **Navigate Left** | The name of the input action for performing UI navigation Left (from Input Settings). |
+| **Navigate Right** | The name of the input action for performing UI navigation Right (from Input Settings). |
+| **Navigate Submit** | The name of the input action for performing UI navigation Submit (from Input Settings). |

@@ -32,6 +32,7 @@ The **UI** is one of the most important components of the games. Flax Games UI s
 * [Text Render](text-render/index.md)
 * [Sprite Render](sprite-render/index.md)
 * [High DPI](high-dpi/index.md)
+* [UI Navigation](ui-navigation.md)
 * [Tutorials](tutorials/index.md)
 
 ## Tutorials
