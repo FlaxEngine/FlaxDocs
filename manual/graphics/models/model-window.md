@@ -32,7 +32,7 @@ In the upper left corner, the viewport contains a widget **View ** button with m
 
 #### Level Of Detail
 
-When working with static models level of details you can preview a custom LOD by setting **View** -> **PReview LOD** (value -1 uses default LOD). To preview current LOD stats in the viewport use **View** -> **Show** -> **Current LOD**.
+When working with static models level of details you can preview a custom LOD by setting **View** -> **Preview LOD** (value -1 uses default LOD). To preview current LOD stats in the viewport use **View** -> **Show** -> **Current LOD**.
 
 ![Current LOD Stats](media/preview-current-lod.jpg)
 
