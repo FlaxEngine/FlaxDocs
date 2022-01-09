@@ -217,6 +217,7 @@
 ## [Skinned Model](animation/skinned-model/index.md)
 ### [Editor Interface](animation/skinned-model/interface.md)
 ## [Animation](animation/animation/index.md)
+### [Animation Events](animation/animation/anim-events.md)
 ## [Anim Graph](animation/anim-graph/index.md)
 ### [Editor Interface](animation/anim-graph/interface.md)
 ### [Graph Parameters](animation/anim-graph/parameters.md)

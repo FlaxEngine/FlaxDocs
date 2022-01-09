@@ -30,7 +30,7 @@ Then connect the animation pose with the animation output and see the animated m
 
 ![Animation Editor Window](media/animation-editor.png)
 
-Double-click the animation asset in the *Content* window to show it in teh dedicated editor window.
+Double-click the animation asset in the *Content* window to show it in the dedicated editor window.
 The window contains 2 panels: **timeline** and **properties**.
 The timeline allows to inspect and edit imported animation. Each animated node channel contains subtracks for position, rotation or scale.
 The properties panel shwos the general information about asset such as: the total animation length, amount of animated channels and the total keyframes amount. Also it's very easy way to modify the import settings and reimport the source asset.
@@ -40,3 +40,7 @@ The properties panel shwos the general information about asset such as: the tota
 ![Animation Editor Preview Timeline and Playback](media/animation-debugging.gif)
 
 To preview animation on a model set the **Preview Model** property. It will display the preview panel and synchronize the timeline current frame position with the  animation preview. It can be used to analyze and debug animation. Animation preview contains widgets to play/pause (F5/F6 keys) or to change the playback speed (via **View -> Playback Speed**). You can also control playback with timeline position handle and keyboraed (Space to play/pause, Arrows to navigate).
+
+## Animation events
+
+Animation timeline supports special **Animation Event** tracks that can contain custom single-shot or continuous events. Those can be used to play footsteps sounds, spawn footstep decals or apply other animation-based effects into the gameplay. To learn more see the dedicated documentation [here](anim-events.md).
