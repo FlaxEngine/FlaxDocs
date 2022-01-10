@@ -17,6 +17,7 @@ This section covers the specific information for different aspects of each platf
 * [Linux](linux.md)
 * [Android](android.md)
 * [Switch](switch.md)
+* [macOS](mac.md)
 
 > [!TIP]
 > To check on which platform game is running use [Platform.Platform](https://docs.flaxengine.com/api/FlaxEngine.Platform.html#FlaxEngine_Application_Platform). You can also use [preprocessor variables](../scripting/preprocessor.md) in your code.

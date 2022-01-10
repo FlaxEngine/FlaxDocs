@@ -32,6 +32,10 @@ Flax Editor contains a build-in C# compiler for scripts but for C\+\+ scripting 
 * Install [Visual Studio Code](https://code.visualstudio.com/)
 * Get the compiler `sudo apt-get install clang lldb lld` (Clang 6 or newer)
 
+### Mac
+
+* Install XCode (and optionally [Visual Studio Code](https://code.visualstudio.com/))
+
 ## How to create C++ script?
 
 By default, new Flax projects have a game module using C# scripting. You can learn more about modules and targets [here](../../editor/flax-build/index.md). After installing the required tools, open `Source/<module_name>/<module_name>.Build.cs` (i.e. `Source/Game/Game.Build.cs`). This file is a build script for the code module and can specify its build environment and dependencies. It contains a overriden **Setup(BuildOptions options)** method which performs the module initialization.

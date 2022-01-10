@@ -3,6 +3,7 @@
 ## [Get Flax](get-started/get-flax.md)
 ### [Requirements](get-started/requirements.md)
 ### [Editor on Linux](get-started/linux.md)
+### [Editor on Mac](get-started/mac.md)
 ## [Visual Studio extension](get-started/vs-extension.md)
 ## [Create a project](get-started/create-a-project.md)
 ## [Editor](get-started/editor.md)
@@ -396,6 +397,7 @@
 ## [Linux](platforms/linux.md)
 ## [Android](platforms/android.md)
 ## [Switch](platforms/switch.md)
+## [macOS](platforms/mac.md)
 
 # [Contributing](contributing/index.md)
 ## [Feature Requests](contributing/feature-requests.md)

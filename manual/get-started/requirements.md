@@ -16,6 +16,10 @@ Flax Engine has specific hardware and software requirements for running the game
 
 For developers using Flax Editor on Linux platforms the requirements are [here](linux.md).
 
+## Mac
+
+For developers using Flax Editor on Mac platforms the requirements are [here](mac.md).
+
 ## Software Requirements
 
 Flax Engine requires **Visual C++ Redistributable for Visual Studio 2015** to be installed on Windows in order to start.\
