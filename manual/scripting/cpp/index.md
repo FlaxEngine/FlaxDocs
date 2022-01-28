@@ -34,7 +34,7 @@ Flax Editor contains a build-in C# compiler for scripts but for C\+\+ scripting 
 
 ### Mac
 
-* Install XCode (and optionally [Visual Studio Code](https://code.visualstudio.com/))
+* Install XCode or XCode Command Line Tools (and optionally [Visual Studio Code](https://code.visualstudio.com/))
 
 ## How to create C++ script?
 

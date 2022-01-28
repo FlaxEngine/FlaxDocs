@@ -1,10 +1,14 @@
 # Editor on Mac
 
+![Flax Editor on Mac](media/flax-editor-mac.png)
+
 ## Download
 
-Compile manually from the official [source code repository](https://github.com/FlaxEngine/FlaxEngine) (follow instructions from readme file).
+Use the latest [Continuous Deployment](https://github.com/FlaxEngine/FlaxEngine/actions/workflows/cd.yml) build from Github Actions by downloading and extracting `Mac-Editor` package (**Artifacts** section). 
 
 The Editor executable is in folder `Binaries/Editor/Mac/Development/FlaxEditor` (you can use also Debug or Release configuration if you want).
+
+Also, you can compile it manually from the official [source code repository](https://github.com/FlaxEngine/FlaxEngine) (follow instructions from readme file).
 
 ## Requirements
 
@@ -12,7 +16,7 @@ For developers using Flax Editor on Mac platforms the requirements are:
 
 | | Recommended |
 |-------|-------|-------|
-| Tested operating systems | macOS Big Sur 11 |
+| Minimum supported version | **macOS 10.14 or higher** |
 | Processor | Quad-core or more, 2 GHz or faster |
 | RAM | 4 GB or more |
 | Hard drive space | 1 GB minimum |
