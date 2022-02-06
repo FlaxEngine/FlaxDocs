@@ -37,6 +37,16 @@ Example usage (from Blender):
 
 ![Model LODs import example](media/model-lods-example.jpg)
 
+## Importing collision mesh
+
+Flax supports automatic collision mesh importing from a source model. To import it use a custom name prefix for collision meshes in the model file (eg. `COLL_` or `UCX_` prefix) and specify that prefix in the import option **Collision Meshes Prefix**. The engine will extract those collision meshes and create a separate collision data asset
+
+Example usage:
+
+![Model Collsion import engine](media/collision-mesh.png)
+
+For ease of use after you add a model on a scene you can use *Right-click* and select option **Add mesh collider**. Then the editor will automatically pick up the imported collision mesh (or generate a new one) and add it to the model on a scene so it has a collision for physics.
+
 ## Model import settings
 
 ![Models](media/imort-model-settigns.jpg)
@@ -58,6 +68,7 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 | **Import Vertex Colors** | If checked, vertex colors will be imported (channel 0 only, if exists). |
 | **Import Blend Shapes** | If checked, blend shapes will be imported (morph targets). |
 | **Lightmap UVs Source** | Specifies model lightmap texture coordinates source. Can import them from the source model or generate them with in-build tool. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Disable**</td><td>Don't use lightmap UVs.</td></tr><tr><td>**Generate**</td><td>Generate lightmap UVs from model geometry. Requires proper normal/tangent vectors. Highly increases the importing time.</td></tr><tr><td>**Channel 0**</td><td>Use input mesh texture coordinates channel 0.</td></tr><tr><td>**Channel 1**</td><td>Use input mesh texture coordinates channel 1.</td></tr><tr><td>**Channel 2**</td><td>Use input mesh texture coordinates channel 2.</td></tr><tr><td>**Channel 3**</td><td>Use input mesh texture coordinates channel 3.</td></tr></table></tbody>|
+| **Collision Meshes Prefix** | If specified, all meshes which name starts with this prefix will be imported as a separate collision data (excluded used for rendering). |
 |||
 | **Transform** ||
 | **Scale** | Custom uniform scale applied to the imported model data. |
