@@ -46,3 +46,13 @@ MyStruct data = { Vector2(1, 2), 10.0f };
 auto str1 = String::Format(TEXT("{0}"), data);
 LOG_STR(Info, str1);
 ```
+
+## Named Arguments
+
+String format text can can contain ordered arguments such as `{0}`, `{1}`, `{2}`, `{}`, etc. but also named arguments like `{PlayerName}`, `{Currency}`, etc. This can be implemented by using `fmt::arg(argName, argValue)` passed to the string format function.
+
+```cpp
+String text1 = String::Format(TEXT("text: {0}, {1}"), TEXT("one"), TEXT("two"));
+String text2 = String::Format(TEXT("text: {arg0}, {arg1}"), fmt::arg(TEXT("arg0"), TEXT("one")), fmt::arg(TEXT("arg1"), TEXT("two")));
+ASSERT(text1 == text2);
+```
