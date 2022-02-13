@@ -2,7 +2,7 @@
 
 ![Text Render](media/title.jpg)
 
-The **Text Render** is an actor type that renders a 3D text. The text can use a custom font and material to perform rendering. Shadows casting and receiving is also supported.
+The **Text Render** is an actor type that renders a 3D text. It is *not* one of the UI controls and does not require a UI canvas. The text can use a custom font and material to perform rendering. Shadows casting and receiving is also supported.
 
 In the editor, if you select the text render actor it displays the debug bounds which are:
 * `Orange` - axis-aligned bounding box of the text glyphs characters positions (vertices AABB, see **Local Box** property)
@@ -14,7 +14,7 @@ In the editor, if you select the text render actor it displays the debug bounds 
 
 | Property | Description |
 |--------|--------|
-| **Text** | Text to render. |
+| **Text** | Text to render. [Localization](../../editor/localization/index.md) is supported. |
 | **Color** | Color of the text. |
 | **Material** | Material to use for rendering. It **must** contain a texture parameter named 'Font' used to sample the font texture itself. |
 | **Font** | Font to use for rendering. |
