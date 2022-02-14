@@ -54,6 +54,9 @@ namespace GraphicsFeaturesTour
 
             layout.Space(20);
             var button = layout.Button("Click me", Color.Green);
+            
+            // Use Values[] to access the script or value being edited.
+            // It is an array, because custom editors can edit multiple selected scripts simultaneously.
             button.Button.Clicked += () => Debug.Log("Button clicked! The speed is " + (IsSingleObject ? (Values[0] as MyScript).Speed : ""));
         }
     }
