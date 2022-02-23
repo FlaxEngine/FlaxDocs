@@ -6,6 +6,8 @@ You can also use it for your own purposes which can range from a simple graphing
 
 These tutorials will go over the process of creating your own Visject surface for an expression graph. Something very simple that takes a few numbers, performs a few calculations and outputs a number. It is recommended to first check out the [custom plugin tutorials](./../../scripting/plugins/index.md).
 
+The full code for this tutorial can be found [here](https://github.com/FlaxCommunityProjects/flax-custom-visject-plugin).
+
 ![Graphing Calculator](./media/expression-graph-advanced.png)
 
 ## Asset
