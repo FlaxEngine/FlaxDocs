@@ -8,7 +8,7 @@
 
 This release includes initial support on **macOS** for both Editor and games publishing! Now, you can run Flax on macOS 10.14 or higher. All engine features are implemented including running Vulkan graphics on top of the Metal with the power of MoltenVK.
 
-We're preapred a documentation and tutorial how to use [Flax on Mac](../../get-started/mac.md).
+We're prepared documentation and tutorial on how to use [Flax on Mac](../../get-started/mac.md).
 
 > [!Warning]
 > We're just started to support macOS so it might include some bugs. Feel free to report them on our [Github](https://github.com/FlaxEngine/FlaxEngine/issues).
@@ -61,7 +61,7 @@ Checkout it [here](../../../api-cpp/index.md).
 
 #### Interfaces
 
-`API_INTERFACE` is now fully supported in C# and Visual Script. This allows to declare an interface in C++ and use it in-game scripting for greater extensibility in your code. What's so great about it is that an interface can be implemented in C++ or C# and used cross-language (eg. C++ can call C# interface methods - works the opposite way too, including overriding C++ interface implementation in C#). Learn more [here](../../scripting/cpp/interfaces.md).
+`API_INTERFACE` is now fully supported in C# and Visual Script. This allows you to declare an interface in C++ and use it in-game scripting for greater extensibility in your code. What's so great about it is that an interface can be implemented in C++ or C# and used cross-language (eg. C++ can call C# interface methods - works the opposite way too, including overriding C++ interface implementation in C#). Learn more [here](../../scripting/cpp/interfaces.md).
 
 ```cpp
 #pragma once
@@ -116,11 +116,11 @@ Docs about [arrays in Visual Script](../../scripting/visual/arrays.md).
 
 ![Flax User Interface UI Navigation](media/ui-navigation.gif)
 
-Flax UI systems gets **UI Navigation** to perform focus navigation around the user interface with input actions such as keyboard arrows or gamepad keys. This feature is essential for console games or others with gamepad support which aim to give full UI usability without mouse input nor touch input from the user. This has been implemented as well in Editor to provide `Tab` key navigation. Learn more [here](../../ui/ui-navigation.md).
+Flax UI system gets **UI Navigation** to perform focus navigation around the user interface with input actions such as keyboard arrows or gamepad keys. This feature is essential for console games or others with gamepad support which aims to give full UI usability without mouse input nor touch input from the user. This has been implemented as well in Editor to provide `Tab` key navigation. Learn more [here](../../ui/ui-navigation.md).
 
 ### Online Platforms
 
-One of the main new features in the latest 1.3 update is **Online Platforms support**. This makes a notable step towards making your games more connected with the online services. Inside the engine we've added a new `IOnlinePlatform` interface designed for online platform providers for communicating with various multiplayer services such as **player info, achievements, game lobby or in-game store**. Each Online Platform implements this interface and is provided via plugin which can be used by your game project:
+One of the main new features in the latest 1.3 update is **Online Platforms support**. This makes a notable step towards making your games more connected with the online services. Inside the engine we've added a new `IOnlinePlatform` interface designed for online platform providers for communicating with various multiplayer services such as **player info, achievements, game lobby, or in-game store**. Each Online Platform implements this interface and is provided via plugin that can be used by your game project:
 * [Steam](https://github.com/FlaxEngine/OnlinePlatformSteam)
 * [Xbox Live](https://github.com/FlaxEngine/OnlinePlatformXboxLive)
 * Platform-specific (PlayStation, Switch) for registered developers
@@ -129,41 +129,41 @@ Learn more [here](../../networking/online/index.md).
 
 ### Multiple Physics Scenes
 
-Physics system got a significant refactor under the hood and a new `PhysicsScene` feature that allows to create **multiple physics scenes and simulate them separately** as submited in [this Pull Request](https://github.com/FlaxEngine/FlaxEngine/pull/673). Now, PhysX implementation is hidden behind `PhysicsBackend` interface so it will be easy to plug-in another physics engine (eg. Havok or JoltPhysics).
+Physics system got a significant refactor under the hood and a new `PhysicsScene` feature that allows to create **multiple physics scenes and simulate them separately** as submitted in [this Pull Request](https://github.com/FlaxEngine/FlaxEngine/pull/673). Now, PhysX implementation is hidden behind `PhysicsBackend` interface so it will be easy to plug-in another physics engine (eg. Havok or JoltPhysics).
 
 ### Editor Tools
 
-Literally every update brings tons of improvements to the Flax Editor. This time it happened again.
+Literally, every update brings tons of improvements to the Flax Editor. This time it happened again.
 
 #### Asset References
 
 ![Flax Asset References Viewer Content Profile](media/asset-references-graph.png)
 
-**Asset References Viewer** window (via context menu in *Content Window*) shows the graph with assets that reference this asset and it's own dependencies structure. Can be used to analyze content usage in a project (eg. check what textures given model uses, or what models are used on a scene).
+**Asset References Viewer** window (via context menu in *Content Window*) shows the graph with assets that reference this asset and its own dependencies structure. Can be used to analyze content usage in a project (eg. check what textures the given model uses, or what models are used on a scene).
 
 #### Debug View
 
 ![Flax Debug View Mode Quad Overdraw](media/quuad-overdraw-debug.png)
 
-New **Quad Overdraw** debug view mode (as shown above) colors pixels based on the overdraw of the triangles rendered with 2x2 quads on a GPU. Another new mode **Material Complexity** colors the screen pixels based on the approximated rendering cost (shader size, textures usage, tess or depth usage, etc.). Both view modes be used to profile and optimize scenes.
+New **Quad Overdraw** debug view mode (as shown above) colors pixels based on the overdraw of the triangles rendered with 2x2 quads on a GPU. Another new mode **Material Complexity** colors the screen pixels based on the approximated rendering cost (shader size, textures usage, tess or depth usage, etc.). Both view modes can be used to profile and optimize scenes.
 
 #### Visual Studio 2022
 
-After Microsoft launched Visual Studio 20222 we've added support for using it in Flax Editor and in our build system. Go ahead and use it for your games development. Keep in mind that due to heavy breaking changes compared to previous versions we were unable to provide [Flax.VS](https://marketplace.visualstudio.com/items?itemName=Flax.FlaxVS) plugin for C# debugging in VS2022 yet (the latest version works with VS17 and VS19).
+After Microsoft launched Visual Studio 20222 we've added support for using it in Flax Editor and in our build system. Go ahead and use it for your game's development. Keep in mind that due to heavy breaking changes compared to previous versions we were unable to provide [Flax.VS](https://marketplace.visualstudio.com/items?itemName=Flax.FlaxVS) plugin for C# debugging in VS2022 yet (the latest version works with VS17 and VS19).
 
 #### Timeline and Curve Editors Improvements
 
-We've added significant amount of improvements to increase usability and stability of timeline and curve editors. Now, creating cut-scenes and animations is even easier and faster.
+We've added a significant amount of improvements to increase the usability and stability of timeline and curve editors. Now, creating cut-scenes and animations is even easier and faster. You can select keyframes from multiple tracks at once and work with nested curves with ease.
 
 ### Platform Updates
 
 Flax 1.3 adds **initial PlayStation 5 support** (unofficial, private port). We've added many improvements to other platforms as well. Such as:
 * **gamepads support on Linux**,
-* added user profiles API on Switch,
-* added login API with GDK (Xbox One and Series X/S),
-* updated Xbox Scarlett and Xbox One support to ver *GDK 2021.04 QFE5*,
-* added Vulkan in Githib daily builds,
-* added automated unit tests running with Github Actions (or push or PR).
+* user profiles API on Switch,
+* login API with GDK (Xbox One and Series X/S),
+* Xbox Scarlett and Xbox One updated to ver *GDK 2021.04 QFE5*,
+* Vulkan in Githib daily builds,
+* automated unit tests running with Github Actions (or push or PR).
 
 ## Changelog
 
