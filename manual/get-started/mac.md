@@ -6,6 +6,9 @@
 
 Use the latest [Continuous Deployment](https://github.com/FlaxEngine/FlaxEngine/actions/workflows/cd.yml) build from Github Actions by downloading and extracting `Mac-Editor` package (**Artifacts** section). 
 
+> [!TIP]
+> We're planning to add officially signed `.dmg` packages distribution with Editor soon.
+
 The Editor executable is in folder `Binaries/Editor/Mac/Development/FlaxEditor` (you can use also Debug or Release configuration if you want).
 
 Also, you can compile it manually from the official [source code repository](https://github.com/FlaxEngine/FlaxEngine) (follow instructions from readme file).
