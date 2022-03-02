@@ -167,7 +167,7 @@ Flax 1.3 adds **initial PlayStation 5 support** (unofficial, private port). We'v
 
 ## Changelog
 
-### Version 1.3.6224 - 2 March 2022
+### Version 1.3.6228 - 2 March 2022
 
 Contributors: mafiesto4,  jb-perrier, Zbyl, ScottLongley, stefnotch, honzapatCZ, nove1398, intolerantape, Vittek1978, ricochhet, GoaLitiuM, Erdroy, nothingTVatYT, stefnotch, xKamuna, iainmckay
 
