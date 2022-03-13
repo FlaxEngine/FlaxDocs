@@ -149,7 +149,7 @@ New **Quad Overdraw** debug view mode (as shown above) colors pixels based on th
 
 #### Visual Studio 2022
 
-After Microsoft launched Visual Studio 20222 we've added support for using it in Flax Editor and in our build system. Go ahead and use it for your game's development. Keep in mind that due to heavy breaking changes compared to previous versions we were unable to provide [Flax.VS](https://marketplace.visualstudio.com/items?itemName=Flax.FlaxVS) plugin for C# debugging in VS2022 yet (the latest version works with VS17 and VS19).
+After Microsoft launched Visual Studio 2022 we've added support for using it in Flax Editor and in our build system. Go ahead and use it for your game's development. Keep in mind that due to heavy breaking changes compared to previous versions we were unable to provide [Flax.VS](https://marketplace.visualstudio.com/items?itemName=Flax.FlaxVS) plugin for C# debugging in VS2022 yet (the latest version works with VS17 and VS19).
 
 #### Timeline and Curve Editors Improvements
 
