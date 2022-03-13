@@ -54,6 +54,7 @@
 ### [Streaming Settings](editor/game-settings/streaming-settings.md)
 ### [Custom Settings](editor/game-settings/custom-settings.md)
 ## [Game Cooker](editor/game-cooker/index.md)
+### [Game Data Security](editor/game-cooker/security.md)
 ## [Flax.Build](editor/flax-build/index.md)
 ### [API Tags](editor/flax-build/api-tags.md)
 ### [Plugins](editor/flax-build/plugins.md)

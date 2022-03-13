@@ -11,6 +11,10 @@ Using game cooker can be described as the last step of game creation process whe
 > [!NOTE]
 > Game Cooker window can be opened by selecting the main menu option **Window -> Game Cooker** or **Tools -> Game Cooker**.
 
+## In this section
+
+* [Game Data Security](security.md)
+
 ## Features
 
 Game Cooker features:
