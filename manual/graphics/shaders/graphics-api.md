@@ -1,12 +1,12 @@
 # Graphics API
 
-Flax supports graphics programming via C++ and/or C# API that wraps the underlaying graphics beckend API with a thin abstraction layer. By using single API game and engine code can perform rendering and support multiple platforms such as DirectX, Vulkan and more. The API is **low-level and object-oriented**, as it contains most common types such as *GPUDevice*, *GPUContext*, *GPUTexture*, *GPUBuffer*, *GPUShader*, *GPUPipelineState*, etc.
+Flax supports graphics programming via C++ and/or C# API that wraps the underlaying graphics backend API with a thin abstraction layer. By using single API game and engine code can perform rendering and support multiple platforms such as DirectX, Vulkan and more. The API is **low-level and object-oriented**, as it contains most common types such as *GPUDevice*, *GPUContext*, *GPUTexture*, *GPUBuffer*, *GPUShader*, *GPUPipelineState*, etc.
 
-GPU pipeline uses **slot-based binding model** which is explicit and has low-overhead characteristic. When performing drawing or compute work dispatching the GPU resources such as textures and buffers are binded using resource views to the explicit bipeline slots - SRV/UAV/CB. The binding slots are global to all shader stages (vertex, pixel, compute, etc.) so texture view assigned to Shader Resource View slot can be used in binded pipeline state vertex/pixel/compute shaders. The engine implements shaders reflections and optimizes the direct stages binding under the hood.
+GPU pipeline uses **slot-based binding model** which is explicit and has low-overhead characteristic. When performing drawing or compute work dispatching the GPU resources such as textures and buffers are bound using resource views to the explicit pipeline slots - SRV/UAV/CB. The binding slots are global to all shader stages (vertex, pixel, compute, etc.) so texture view assigned to Shader Resource View slot can be used in binded pipeline state vertex/pixel/compute shaders. The engine implements shaders reflections and optimizes the direct stages binding under the hood.
 
 ## Pipeline State
 
-Flax uses *GPUPipelineState* objects that wrap the whole graphics pipeline state into a single descriptor representation used by the GPU driver to optimzie the render state switches. When creating new pipeline states fill up the *Description* structure with shaders and rendering stages features to use. Ensure to dispose pipeline states when shader asset that is used in it gets reloaded in editor.
+Flax uses *GPUPipelineState* objects that wrap the whole graphics pipeline state into a single descriptor representation used by the GPU driver to optimize the render state switches. When creating new pipeline states fill up the *Description* structure with shaders and rendering stages features to use. Ensure to dispose pipeline states when shader asset that is used in it gets reloaded in editor.
 
 ## Supported graphics backends
 
