@@ -134,7 +134,7 @@ public class MyScript : Script
 	{
 		if (MySettings)
 		{
-			var obj = (MySettings)MySettings.CreateInstance();
+			var obj = (MySettings)MySettings.Instance;
 			Debug.Log("Default language: " + obj.DefaultLanguage);
 		}
 	}
