@@ -187,6 +187,7 @@
 ## [Visual Scripting](scripting/visual/index.md)
 ### [Events](scripting/visual/events.md)
 ### [Arrays](scripting/visual/arrays.md)
+### [Dictionaries](scripting/visual/dictionaries.md)
 ## [Plugins](scripting/plugins/index.md)
 ### [Plugins Window](scripting/plugins/plugins-window.md)
 ### [Plugin Project](scripting/plugins/plugin-project.md)

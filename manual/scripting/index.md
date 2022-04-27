@@ -72,6 +72,7 @@ To start visual scripting see the related documentation [here](visual/index.md).
 * [Visual Scripting](visual/index.md)
   * [Events](visual/events.md)
   * [Arrays](visual/arrays.md)
+  * [Dictionaries](visual/dictionaries.md)
 * [Plugins](plugins/index.md)
   * [Plugins Window](plugins/plugins-window.md)
   * [Plugin Project](plugins/plugin-project.md)

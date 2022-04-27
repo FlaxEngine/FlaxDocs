@@ -10,6 +10,7 @@ Follow this documentation section to learn how to create your own visual scripts
 
 * [Events](events.md)
 * [Arrays](arrays.md)
+* [Dictionaries](dictionaries.md)
 
 ## How to create Visual Script?
 
