@@ -46,6 +46,7 @@
 ### [Toolbox](editor/windows/toolbox.md)
 ### [Output Log](editor/windows/output-log.md)
 ### [Debug Log](editor/windows/debug-log.md)
+### [Content Search](editor/windows/content-search.md)
 ## [Game Settings](editor/game-settings/index.md)
 ### [Time Settings](editor/game-settings/time-settings.md)
 ### [Layers And Tags Settings](editor/game-settings/layers-and-tags-settings.md)

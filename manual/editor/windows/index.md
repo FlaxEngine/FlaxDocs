@@ -44,5 +44,10 @@
 <h3><a href="debug-log.md">Debug Log</a></h3>
 </div>
 
+<div class="frontpage-section">
+<a href="content-search.md"><img src="media/content-search-icon.png"></a>
+<h3><a href="content-search.md">Content Search</a></h3>
+</div>
+
 </div>
 
