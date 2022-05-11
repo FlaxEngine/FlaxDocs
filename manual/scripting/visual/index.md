@@ -59,7 +59,14 @@ Controls in the Visual Script Editor generally match the controls of other tools
 |--------|--------|
 | **Ctrl + S** | Save the asset |
 | **Ctrl + A** | Select all nodes |
+| **Ctrl + C** | Copy selected nodes to the clipboard |
+| **Ctrl + V** | Paste nodes from the clipboard |
+| **Ctrl + X** | Cuts the selected nodes to the clipboard |
+| **Ctrl + D** | Duplicate selected nodes |
 | **Delete** | Delete selected nodes |
+| **Escape** | Deselect nodes |
+| **Arrow keys** | Move selected nodes |
+| **//** | Create comment around selected nodes |
 
 ### Adding new node
 
