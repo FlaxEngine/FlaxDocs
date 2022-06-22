@@ -160,7 +160,7 @@ Contributors: stefnotch, Sauler
 * Fix duplicated content item when selecting with shift
 * Fix auto-detecting workspace modification for scripts recompilation
 * Fix `PostFxVolume` blending with blend radius set to 0
-* Fix issue with material instance params not syncing layout in builded game
+* Fix issue with material instance params not syncing layout in built game
 * Fix Get Parameter node width based on param name
 * Fix crash when disabling script without a parent actor (eg. created from code)
 * Fix crash when using parameter getter spawned with Visject context menu
@@ -285,7 +285,7 @@ Contributors: klukule
 * Fix Animated Model update when offscreen (better sync and stable looping)
 * Fix RayCast with layer specified
 * Fix ShadowsMode deserialization for the meshes
-* Fix black screen issue in a builded game
+* Fix black screen issue in a built game
 * Fix error when trying to create a new folder in a project root folder
 * Fix Game Cooker progress reporting to be more thread-safe
 * Serialize Sky.SunDiscScale

@@ -120,7 +120,7 @@ Json asset file contents:
 
 ### 4. Use asset in game
 
-Using json asset works the same in editor and in builded game. The difference is that during game cooking json assets are compressed and encrypted so data is secure.
+Using json asset works the same in editor and in built game. The difference is that during game cooking json assets are compressed and encrypted so data is secure.
 
 To use this asset simply add [JsonAsset](https://docs.flaxengine.com/api/FlaxEngine.JsonAsset.html) reference to your script and drag and drop the `mySettings.json` asset to it.
 

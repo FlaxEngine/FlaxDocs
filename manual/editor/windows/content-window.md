@@ -4,7 +4,7 @@
 
 The **Content Window** displays your project assets and scripts. You can create new assets using the New Asset button or by dragging and dropping source files into the asset view. You can also drag and drop assets from the asset view to the different editors or the [properties window](properties-window.md) to add a reference to it.
 
-The Left part of the window shows the project folders tree structure (*Editor* and *Engine* folders used by Flax are visible only in development builds). The main asset view panel shows the current location contents including all valid assets, scripts and subdirectories. You can adjust the size of these areas by using the splitter control visible in the middle.
+The left part of the window shows the project folders tree structure (*Editor* and *Engine* folders used by Flax are visible only in development builds). The main asset view panel shows the current location contents including all valid assets, scripts and subdirectories. You can adjust the size of these areas by using the splitter control visible in the middle.
 
 ## Toolstrip
 

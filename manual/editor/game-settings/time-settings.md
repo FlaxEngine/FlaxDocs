@@ -1,7 +1,7 @@
 # Time Settings
 
 Time settings asset describes the initial values for the time manager.
-By adjusting those values you can adapt a proper FPS or physics simulation quality for your game.
+By adjusting these values you can adapt a proper FPS or physics simulation quality for your game.
 You can access and edit this setting using [Time](https://docs.flaxengine.com/api/FlaxEngine.Time.html) service.
 
 ## Properties

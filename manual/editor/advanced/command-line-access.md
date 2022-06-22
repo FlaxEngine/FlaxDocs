@@ -1,6 +1,6 @@
 # Command line access
 
-Both Flax Engine and builded game (Flax executable) support various input command line arguments.
+Both Flax Engine and built game (Flax executable) support various input command line arguments.
 Using this feature can help with games development and can be involved in testing various scenarios.
 
 It’s very common technique to build games on the separate machines or even in the cloud. For example, [Jenkins](https://jenkins-ci.org/) server can be used to invoke Flax Game Cooker to build game for a QA team so it will be ready right in the morning to test it.
@@ -30,8 +30,8 @@ Of course, all those things can be made manually by using Flax Editor C# API and
 
 | Command | Description |
 |--------|--------|
-| **-windowed** | Starts the game in windowed mode (even if default builded game setting was fullscreen). |
-| **-fullscreen** | Starts the game in fullscreen mode (even if default builded game setting was windowed). |
+| **-windowed** | Starts the game in windowed mode (even if default built game setting was fullscreen). |
+| **-fullscreen** | Starts the game in fullscreen mode (even if default built game setting was windowed). |
 | **-vsync** | Forces to enable vertical synchronization when presenting the frame on screen. |
 | **-novsync** | Forces to disable vertical synchronization when presenting the frame on screen. |
 | **-nolog** | Disables output log file. |

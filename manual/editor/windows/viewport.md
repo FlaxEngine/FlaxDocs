@@ -5,11 +5,11 @@
 **Viewport** term refers to **Editor Window** and **Game Window**.
 Both are used to preview the level.
 * **Game** window - shows the current game camera view with GUI and game input control logic
-* **Editor** window - an interactive view into your level.
+* **Editor** window - an interactive view into your level
 
 ## Editor window
 
-This view allows navigating the camera through the scene as well as selecting, transforming and editing scene objects
+This view allows navigating the camera through the scene as well as selecting, transforming and editing scene objects.
 
 #### Widgets
 

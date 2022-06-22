@@ -5,7 +5,7 @@
 The **Scene Window** shows a tree control with full hierarchy of the loaded scenes that updates automatically and supports multi-scene editing. 
 Actors spawned or removed at runtime and all level changes are updated in real-time.
 
-Every Actor is represented by a tree node (named after the actor).
+Every actor is represented by a tree node (named after the actor).
 Scene actors are the root nodes of the tree.
 You can expand and collapse the scene hierarchy by using the arrow icons on the left of the node names.
 To select one or more nodes use **LMB**, **Ctrl + LMB** or **Shift + LMB** to select a range of nodes.

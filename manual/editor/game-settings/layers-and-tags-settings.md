@@ -6,7 +6,7 @@ For example, a player actor can have a `Player` tag and when a box trigger, whic
 
 Flax allows defining unlimited amount of tags and up to 32 different layers.
 
-Layers are also used by the physics engine to filter objects collisions and by rendering system to draw objects using a layer mask filter.
+Layers are also used by the physics engine to filter object collisions and by the rendering system to draw objects using a layer mask filter.
 
 ## Set actor tag/layer
 
@@ -25,5 +25,5 @@ It can be done in-editor (by using *Properties* window) or at runtime using [Act
 | **Layers** | Array of 32 layers. |
 
 > [!NOTE]
-> If you edit tags/layers names, a restart of the editor is required to see the changes.
+> If you edit tag/layer names, a restart of the editor is required to see the changes.
 
