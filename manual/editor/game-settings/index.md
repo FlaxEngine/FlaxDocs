@@ -1,12 +1,12 @@
 # Game Settings
 
-**Game Settings** infrastructure is used to prepare the Flax options for the builded game.
+**Game Settings** infrastructure is used to prepare the Flax options for the built game.
 By using game settings you can set the initial game scene, link your plugin runtime options or more.
 This section covers the main concept of game settings and documents the related asset types.
 
 ## Root asset
 
-In order to provide more universal design and unify the [projects structure](../../get-started/project-structure.md) game settings asset is **always located** in `Content/GameSettings.json`. This file is in json format and contains the basic game description (product name, company, etc.) and references other assets (time settings, layers and tags, etc.).
+In order to provide more universal design and unify the [project's structure](../../get-started/project-structure.md), the game settings asset is **always located** in `Content/GameSettings.json`. This file is in json format and contains the basic game description (product name, company, etc.) and references other assets (time settings, layers and tags, etc.).
 Example game settings file can be found [here](https://github.com/FlaxEngine/FlaxSamples/blob/master/BasicTemplate/Content/GameSettings.json). By default all Flax samples and templates contain a proper game settings to use.
 
 ## Creating settings

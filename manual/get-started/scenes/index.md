@@ -20,7 +20,7 @@ To open a scene, simply double-click on it. You can also drag and drop it to the
 
 ![Scene Properties](media/scene-properties.jpg)
 
-You an select a **Scene** actor like the other scene objects using the *Scene* window and edit it properties with the *Properties* window. You can change static flags for all scene objects at once or transform whole scene at once.
+You can select a **Scene** actor like the other scene objects using the *Scene* window and edit it properties with the *Properties* window. You can change static flags for all scene objects at once or transform whole scene at once.
 Also scene actor contains options for lightmaps baking for this scene.
 
 ## In this section

@@ -34,7 +34,7 @@ By using *Version* dropdown menu you can pick the engine version to install. By 
 
 ![Default Engine Version](media/default-version.png)
 
-From now on you are ready to create great games and experiences. We can't wait to see what great things you're going to create with Flax! Start by creating your [project](create-a-project.md).
+Now you are ready to create great games and experiences. We can't wait to see what great things you're going to create with Flax! Start by creating your [project](create-a-project.md).
 
 <div class="frontpage">
 

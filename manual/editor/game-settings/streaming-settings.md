@@ -1,10 +1,10 @@
 # Streaming Settings
 
-Streaming settings asset contains resources configuration for streaming system such as Texture Groups list used for textures streaming.
+The streaming settings asset contains resource configurations for streaming systems such as Texture Groups, a list used for texture streaming.
 
 ## Properties
 
-![Flax Textures Streaming Settings](media/build-settings.jpg)
+![Flax Textures Streaming Settings](media/streaming-settings.jpg)
 
 | Property | Description |
 |--------|--------|

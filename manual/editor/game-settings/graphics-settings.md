@@ -1,7 +1,7 @@
 # Graphics Settings
 
-Graphics settings asset specified the initial rendering quality and related options.
-You can change most of those values at runtime using [GraphicsQuality](https://docs.flaxengine.com/api/FlaxEngine.GraphicsQuality.html) service or use dedicated editor window for editing the graphics quality in the editor (select option from *main menu* **Window -> Graphics Quality**).
+The graphics settings asset specifies the initial rendering quality and other graphics-related options.
+You can change most of these values at runtime using the [GraphicsQuality](https://docs.flaxengine.com/api/FlaxEngine.GraphicsQuality.html) service or by using the dedicated window to edit the graphics quality in the editor (select option from *main menu* **Window -> Graphics Quality**).
 
 ## Properties
 
