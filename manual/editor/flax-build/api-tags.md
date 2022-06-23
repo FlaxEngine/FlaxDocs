@@ -108,6 +108,19 @@ Example:
 API_EVENT() Delegate<float> SpeedChanged;
 ```
 
+## API_TYPEDEF(...)
+
+Use it on the type alias to expose it to the scripting API.
+Example:
+
+```cpp
+// Introduces `Float3` type from template `Vector3Base<T>`
+API_TYPEDEF() typedef Vector3Base<float> Float3;
+
+// Aliases `Real` type to `float`
+API_TYPEDEF(Alias) typedef float Real;
+```
+
 ## API_AUTO_SERIALIZATION()
 
 Use it inside a class or structure to generate automatic object data serialization code for `ISerializable` interface.
@@ -120,7 +133,6 @@ API_AUTO_SERIALIZATION();
 DECLARE_SCRIPTING_TYPE_NO_SPAWN(ToneMappingSettings);
 };
 ```
-
 
 ## Tag parameters
 
@@ -141,6 +153,8 @@ Tag attributes that can be added to the API tags braces to adjust the bindings l
 * `Name="..."` - overrides the name of the type to be used in the bindings
 * `Namespace="..."` - overrides the namespace of the type to be used in the bindings
 * `Hidden` - marks the method/field/property to be hidden in scripting API (skips C# and Visual Script access but allows to serialize it by auto)
+* `Template` - marks the structure/class/interface as generic type to be used as template for other types (eg. via `API_TYPEDEF`).
+* `Alias` - marks typedef to alias typename instead of inflating template type.
 
 ## Special cases
 

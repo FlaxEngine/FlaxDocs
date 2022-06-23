@@ -34,6 +34,7 @@ public override void OnStart()
 | **BUILD_DEBUG** | Compile in `Debug` mode. Full code debugging support without code optimizations. Worst performance but the best debugging experiance. All code checking assertions are enabled. Build intended for programmers to test bugs in code. |
 | **BUILD_DEVELOPMENT** | Compile in `Development` mode. Better performance than Debug as code gets optimizations but debugging is still available with most of the assertions and checks. Build intended for developers team to have good ratio between code validation/verification and performance.  |
 | **BUILD_RELEASE** | Compile in `Release` mode. The best performance as code gets all optimizations. Build intended for shipping. |
+| **FLAX_BUILD_BINDINGS** | Define used in C++ header files added by  Scripting API parser to be used if needed to differ code for the parser. |
 
 To specify custom compilation macros see [Game Cooker](../editor/flax-build/index.md) documentation.
 

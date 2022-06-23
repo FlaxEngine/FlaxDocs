@@ -15,19 +15,27 @@ Create and implement the following script:
 ```cs
 public class Agent007 : Script
 {
-    [Tooltip("The target object to follow.")]
+    /// <summary>
+    /// The target object to follow.
+    /// </summary>
     public Actor MoveToTarget;
 
-    [Tooltip("The offset applied to the actor position on moving it.")]
+    /// <summary>
+    /// The offset applied to the actor position on moving it.
+    /// </summary>
     public Vector3 Offset = new Vector3(0, 100, 0);
 
-    public float Speed = 10.0f;
+    /// <summary>
+    /// Agent movement speed (units/second).
+    /// </summary>
+    public float Speed = 500.0f;
 
     private Vector3 _targetPos;
     private Vector3[] _path;
     private float _pathLength;
     private float _pathPosition;
 
+    /// <inheritdoc />
     public override void OnUpdate()
     {
         if (!MoveToTarget)
@@ -40,7 +48,7 @@ public class Agent007 : Script
         var targetPos = MoveToTarget.Position;
 
         // Check if reached target location
-        if (Vector3.DistanceSquared(currentPos, targetPos) < 2)
+        if (Vector3.Distance(ref currentPos, ref targetPos) < 2)
             return;
 
         // Check if need to build a new path
@@ -51,7 +59,7 @@ public class Agent007 : Script
             _pathLength = 0;
             if (!Navigation.FindPath(currentPos, targetPos, out _path))
             {
-                Debug.LogError("Failed to find path to the target.");
+                Debug.LogWarning("Failed to find path to the target.");
                 return;
             }
 
@@ -62,11 +70,8 @@ public class Agent007 : Script
                 Navigation.ProjectPoint(_path[_path.Length - 1], out _path[_path.Length - 1]);
 
             // Compute path length
-            for (int i = 0; i < _path.Length - 1; i++)
-            {
-                var segmentLength = Vector3.Distance(_path[i], _path[i + 1]);
-                _pathLength += segmentLength;
-            }
+            for (int i = 1; i < _path.Length; i++)
+                _pathLength += Vector3.Distance(ref _path[i - 1], ref _path[i]);
         }
 
         // Skip if has no path
@@ -81,11 +86,12 @@ public class Agent007 : Script
         float segmentsSum = 0;
         for (int i = 0; i < _path.Length - 1; i++)
         {
-            var segmentLength = Vector3.Distance(_path[i], _path[i + 1]);
+            var segmentLength = Vector3.Distance(ref _path[i], ref _path[i + 1]);
             if (segmentsSum <= pathProgress && segmentsSum + segmentLength >= pathProgress)
             {
                 float t = (pathProgress - segmentsSum) / segmentLength;
-                Actor.Position = Vector3.Lerp(_path[i], _path[i + 1], t) + Offset;
+                targetPos = Vector3.Lerp(_path[i], _path[i + 1], t) + Offset;
+                Actor.AddMovement(targetPos - currentPos);
                 break;
             }
 
