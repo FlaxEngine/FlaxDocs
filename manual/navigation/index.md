@@ -35,6 +35,7 @@ public class TestFindDistanceToWall : Script
 
 * [Nav Mesh Bounds Volume](nav-mesh-bounds-volume.md)
 * [Nav Link](nav-link.md)
+* [Nav Crowd](nav-crowd.md)
 * [Nav Modifier Volume](nav-modifier-volume.md)
 * [Navigation Settings](navigation-settings.md)
 
