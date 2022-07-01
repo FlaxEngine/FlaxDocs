@@ -18,10 +18,10 @@ Use the following tutorial steps to create simple distortion with coloring effec
 2. Change the **Domain** to **Post Process** (see [Material Properties](../materials/material-properties/index.md) to learn more).
     <br>![PostFx Material Tutorial](media/post-fx-material-tutorial-0.jpg)
 
-3. Add **Color** (*Color* type) and **Chromatic** (*Vector3* type) parameters.
+3. Add **Color** (*Color* type) and **Chromatic** (*Float3* type) parameters.
     <br>![PostFx Material Tutorial](media/post-fx-material-tutorial-1.jpg)
 
-4. Create three **Scene Color** nodes, use single channel from each one (pack to *RGB* using **Pack Vector3** node) and multiply it by the **Color** (use constant or parameter). Connect output to the **Emissive** input.
+4. Create three **Scene Color** nodes, use single channel from each one (pack to *RGB* using **Pack Float3** node) and multiply it by the **Color** (use constant or parameter). Connect output to the **Emissive** input.
     <br>![PostFx Material Tutorial](media/post-fx-material-tutorial-2.jpg)
 
 5. Recreate the following graph that offset the color samples (in screen space) regarding to the **Chromatic** parameter value divided by the screen size.

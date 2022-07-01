@@ -20,18 +20,18 @@ private void UpdateMesh(Mesh mesh)
     const float N = 0.0f;
     var vertices = new[]
     {
-        new Vector3(-X, N, Z),
-        new Vector3(X, N, Z),
-        new Vector3(-X, N, -Z),
-        new Vector3(X, N, -Z),
-        new Vector3(N, Z, X),
-        new Vector3(N, Z, -X),
-        new Vector3(N, -Z, X),
-        new Vector3(N, -Z, -X),
-        new Vector3(Z, X, N),
-        new Vector3(-Z, X, N),
-        new Vector3(Z, -X, N),
-        new Vector3(-Z, -X, N)
+        new Float3(-X, N, Z),
+        new Float3(X, N, Z),
+        new Float3(-X, N, -Z),
+        new Float3(X, N, -Z),
+        new Float3(N, Z, X),
+        new Float3(N, Z, -X),
+        new Float3(N, -Z, X),
+        new Float3(N, -Z, -X),
+        new Float3(Z, X, N),
+        new Float3(-Z, X, N),
+        new Float3(Z, -X, N),
+        new Float3(-Z, -X, N)
     };
     var triangles = new[]
     {
@@ -63,7 +63,7 @@ public override void OnStart()
 	// Create or reuse child model
     var childModel = Actor.GetOrAddChild<StaticModel>();
     childModel.Model = model;
-    childModel.LocalScale = new Vector3(100);
+    childModel.LocalScale = new Float3(100);
     childModel.SetMaterial(0, Material);
 }
 

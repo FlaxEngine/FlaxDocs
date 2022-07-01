@@ -18,7 +18,7 @@ To access this parameter in the graph spawn the **Get Parameter** node and then 
 
 ![Anim Graph Get Param](../tutorials/media/get-param-node-add.jpg)
 
-After that connect your parameter outputs with the other nodes to implement the desired usage. In this example, the **Head Scale** parameter is used to scale the skeleton bone using the **Transform Bone (local space)** node. Note that Anim Graph supports implicit type casting so the value type **float** gets converted into the **Vector3** type which is used for the bone transformation scale.
+After that connect your parameter outputs with the other nodes to implement the desired usage. In this example, the **Head Scale** parameter is used to scale the skeleton bone using the **Transform Bone (local space)** node. Note that Anim Graph supports implicit type casting so the value type **float** gets converted into the **Float3** type which is used for the bone transformation scale.
 
 ![Anim Graph Get Param](../tutorials/media/get-param-node-use.png)
 

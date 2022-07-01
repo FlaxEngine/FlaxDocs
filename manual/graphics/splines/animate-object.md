@@ -50,7 +50,7 @@ public class SplineAnimation : Script
         var transform = _spline.GetSplineTransform(_time);
 
         // Place object on the spline and make it oriented along the spline direction
-        transform.Orientation = Quaternion.LookRotation(direction, Vector3.Up) * transform.Orientation;
+        transform.Orientation = Quaternion.LookRotation(direction, Float3.Up) * transform.Orientation;
         ObjectToMove.Transform = transform;
     }
 }

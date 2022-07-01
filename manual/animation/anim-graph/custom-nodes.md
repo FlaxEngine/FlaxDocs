@@ -42,7 +42,7 @@ public static class MyAnimGraphNodeFactory
             },
 
             // Define node visuals and elements
-            Size = new Vector2(200, 70),
+            Size = new Float2(200, 70),
             Elements = new[]
             {
                 NodeElementArchetype.Factory.Input(0, "Input", true, typeof(void), 0),

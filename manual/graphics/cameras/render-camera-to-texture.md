@@ -49,12 +49,12 @@ public class CameraTV : Script
     public MaterialBase Material;
 
     [Limit(1, 2000)]
-    public Vector2 Resolution
+    public Float2 Resolution
     {
         get => _resolution;
         set
         {
-            value = Vector2.Clamp(value, new Vector2(1), new Vector2(2000));
+            value = Float2.Clamp(value, new Float2(1), new Float2(2000));
             if (_resolution != value)
             {
                 _resolution = value;
@@ -69,7 +69,7 @@ public class CameraTV : Script
 
     public float ViewDistance = 2000;
 
-    private Vector2 _resolution = new Vector2(640, 374);
+    private Float2 _resolution = new Float2(640, 374);
     private GPUTexture _output;
     private SceneRenderTask _task;
     private MaterialInstance _material;
@@ -122,7 +122,9 @@ public class CameraTV : Script
 
     public override void OnUpdate()
     {
-        _task.Enabled = Vector3.Distance(Actor.Position, MainRenderTask.Instance.View.Position) <= ViewDistance;
+        // Optimize by disabling rendering if main game view is far too far
+        var mainView = MainRenderTask.Instance.View;
+        _task.Enabled = Vector3.Distance(Actor.Position, mainView.Origin + mainView.Position) <= ViewDistance;
     }
 
     public override void OnDisable()

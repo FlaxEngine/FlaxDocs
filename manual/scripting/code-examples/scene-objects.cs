@@ -18,6 +18,6 @@ public class MyScript : Script
     public override void OnFixedUpdate()
     {
         // Rotates the parent object
-        Actor.Parent.LocalEulerAngles += new Vector3(0, 2, 0);
+        Actor.Parent.LocalEulerAngles += new Float3(0, 2, 0);
     }
 }

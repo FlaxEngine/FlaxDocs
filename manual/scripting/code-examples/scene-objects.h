@@ -27,7 +27,7 @@ class GAME_API ScriptExample : public Script
     void OnUpdate() override
     {
         // Rotates the parent object
-        Vector3 targetOrientation = GetActor()->GetParent()->GetLocalOrientation().GetEuler();
+        Float3 targetOrientation = GetActor()->GetParent()->GetLocalOrientation().GetEuler();
         targetOrientation += {0, 2, 0};
 
         GetActor()->GetParent()->SetLocalOrientation(Quaternion::Euler(targetOrientation));

@@ -29,7 +29,7 @@ namespace Game
 		{
 			base.Draw();
 
-			Render2D.DrawTexture(Image, new Rectangle(Vector2.Zero, Size), TintColor);
+			Render2D.DrawTexture(Image, new Rectangle(Float2.Zero, Size), TintColor);
 		}
 	}
 }

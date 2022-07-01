@@ -109,7 +109,7 @@ DECLARE_SCRIPTING_TYPE(MouseDecalShoot);
 	API_FIELD() AssetReference<MaterialBase> DecalMaterial;
 
 	// Spawns the decal at the given mouse screen position.
-	API_FUNCTION() void SpawnDecal(const Vector2& mousePos)
+	API_FUNCTION() void SpawnDecal(const Float2& mousePos)
 	{
 		// Convert mouse position into the world-space ray and perform the raycast in physics scene
 		const auto ray = Camera::GetMainCamera()->ConvertMouseToRay(mousePos);

@@ -171,7 +171,7 @@ public class BlurComputeShader : PostProcessEffect
     [StructLayout(LayoutKind.Sequential)]
     private struct Data
     {
-        public Vector2 Dummy0;
+        public Float2 Dummy0;
         public float BlurStrength;
         public float BlurRadius;
     }

@@ -65,7 +65,7 @@ Flax uses fixed model data format. Although index buffer can use 16 or 32-bit fo
 Here are listed vertex structures used by the engine:
 
 **Vertex Buffer 0**:
-* Vector3 Position
+* Float3 Position
 
 **Vertex Buffer 1**:
 * Half2 TexCoord

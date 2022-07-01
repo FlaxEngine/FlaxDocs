@@ -8,7 +8,7 @@ Not all material inputs are used all the time. For instance, *Unlit* material us
 
 ## Color
 
-The **Color** input defines material surface base color. It's a `Vector3` value (*RGB* format).
+The **Color** input defines material surface base color. It's a `Float3` value (*RGB* format).
 For non-metal materials it defines diffuse color. For metals, it's used as a specular color of the surface.
 
 ![Material Color](media/material-color.png)
@@ -22,7 +22,7 @@ The default value is 1.
 
 ## Emissive
 
-The **Emissive** input defines material surface light emission. It's a HDR `Vector3` value (*RGB* format) so values greater  than 1 are allowed as HDR lighting is supported.
+The **Emissive** input defines material surface light emission. It's a HDR `Float3` value (*RGB* format) so values greater  than 1 are allowed as HDR lighting is supported.
 Materials using this property may appear to glow because they are emitting light. Also if object using emissive material is marked as static (see [StaticFlags](http://docs.flaxengine.com/api/FlaxEngine.StaticFlags.html)) then light emission will be handled properly in static lighting.
 
 ![Material Emissive](media/material-emissive.png)

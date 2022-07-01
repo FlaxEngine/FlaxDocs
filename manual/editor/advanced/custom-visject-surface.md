@@ -367,7 +367,7 @@ public static byte[] LoadSurface(JsonAsset asset, ExpressionGraph assetInstance,
             return null;
         }
         surfaceContext.Nodes.Add(node);
-        node.Location = Vector2.Zero;
+        node.Location = Float2.Zero;
         surfaceContext.Save();
         return surfaceContext.Context.SurfaceData;
     }
@@ -437,7 +437,7 @@ public static readonly NodeArchetype[] ExpressionGraphNodes =
         Title = "ExpressionGraph",
         Description = "Main number graph node",
         Flags = NodeFlags.AllGraphs | NodeFlags.NoRemove | NodeFlags.NoSpawnViaGUI | NodeFlags.NoCloseButton,
-        Size = new Vector2(150, 300),
+        Size = new Float2(150, 300),
         Elements = new[]
         {
             NodeElementArchetype.Factory.Input(0, "Float", true, typeof(float), 0),
@@ -452,7 +452,7 @@ public static readonly NodeArchetype[] ExpressionGraphNodes =
         Title = "Random float",
         Description = "A random float",
         Flags = NodeFlags.AllGraphs,
-        Size = new Vector2(150, 30),
+        Size = new Float2(150, 30),
         Elements = new[]
         {
             NodeElementArchetype.Factory.Output(0, "Float", typeof(float), 0),
@@ -615,7 +615,7 @@ public class ExpressionGraphPreview : AssetPreview
         Render2D.DrawText(
             Style.Current.FontLarge,
             $"Float: {ExpressionGraph.OutputFloat}\n",
-            new Rectangle(Vector2.Zero, Size),
+            new Rectangle(Float2.Zero, Size),
             Color.Wheat,
             TextAlignment.Near,
             TextAlignment.Far);

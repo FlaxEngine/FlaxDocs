@@ -122,7 +122,7 @@ public class CarScript : Script
             Screen.CursorLock = CursorLockMode.Locked;
 
             // Mouse
-            Vector2 mouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+            var mouseDelta = new Float2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
             _pitch = Mathf.Clamp(_pitch + mouseDelta.Y, -88, 88);
             _yaw += mouseDelta.X;
         }
@@ -144,7 +144,7 @@ public class CarScript : Script
         _horizontal = 0;
         _vertical = 0;
 
-        var velocity = new Vector3(inputH, 0.0f, inputV);
+        var velocity = new Float3(inputH, 0.0f, inputV);
         velocity.Normalize();
         //velocity = CameraTarget.Transform.TransformDirection(velocity);
 

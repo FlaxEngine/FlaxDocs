@@ -87,16 +87,16 @@ public class CustomGeometryDrawing : PostProcessEffect
         public Matrix ViewProjectionMatrix;
     }
 
-    private static readonly Vector3[] _vertices =
+    private static readonly Float3[] _vertices =
     {
-        new Vector3(0, 0, 0),
-        new Vector3(100, 0, 0),
-        new Vector3(100, 100, 0),
-        new Vector3(0, 100, 0),
-        new Vector3(0, 100, 100),
-        new Vector3(100, 100, 100),
-        new Vector3(100, 0, 100),
-        new Vector3(0, 0, 100),
+        new Float3(0, 0, 0),
+        new Float3(100, 0, 0),
+        new Float3(100, 100, 0),
+        new Float3(0, 100, 0),
+        new Float3(0, 100, 100),
+        new Float3(100, 100, 100),
+        new Float3(100, 0, 100),
+        new Float3(0, 0, 100),
     };
 
     private static readonly uint[] _triangles =
@@ -137,9 +137,9 @@ public class CustomGeometryDrawing : PostProcessEffect
     {
         // Create vertex buffer for custom geometry drawing
         _vertexBuffer = new GPUBuffer();
-        fixed (Vector3* ptr = _vertices)
+        fixed (Float3* ptr = _vertices)
         {
-            var desc = GPUBufferDescription.Vertex(sizeof(Vector3), _vertices.Length, new IntPtr(ptr));
+            var desc = GPUBufferDescription.Vertex(sizeof(Float3), _vertices.Length, new IntPtr(ptr));
             _vertexBuffer.Init(ref desc);
         }
 

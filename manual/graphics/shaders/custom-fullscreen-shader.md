@@ -166,7 +166,7 @@ Add the following code in the script class (eg. instead of the *Color* field).
 [StructLayout(LayoutKind.Sequential)]
 private struct Data
 {
-    public Vector2 TexelSize;
+    public Float2 TexelSize;
     public float Sharpness;
     public float Dummy0;
 }
@@ -184,7 +184,7 @@ if (cb != IntPtr.Zero)
 {
     var data = new Data
     {
-        TexelSize = Vector2.One / input.Size,
+        TexelSize = Float2.One / input.Size,
         Sharpness = Sharpness,
     };
     context.UpdateCB(cb, new IntPtr(&data));
