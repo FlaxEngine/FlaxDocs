@@ -411,6 +411,7 @@
 ## [Release Policy](contributing/release-policy.md)
 
 # [Release Notes](release-notes/index.md)
+## [1.4 release notes](release-notes/1_4/index.md)
 ## [1.3 release notes](release-notes/1_3/index.md)
 ## [1.2 release notes](release-notes/1_2/index.md)
 ## [1.1 release notes](release-notes/1_1/index.md)
