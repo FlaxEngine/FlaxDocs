@@ -15,7 +15,7 @@ class GAME_API ScriptExample : public Script
     void OnStart() override
     {
         // Prints all children names
-        Array<Actor *> children = GetActor()->GetChildren<Actor>();
+        Array<Actor*> children = GetActor()->GetChildren<Actor>();
         for each (auto a in children)
             DebugLog::Log(a->GetName());
 
