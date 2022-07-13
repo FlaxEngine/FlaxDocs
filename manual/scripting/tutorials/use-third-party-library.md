@@ -19,7 +19,7 @@ options.ScriptingAPI.FileReferences.Add(Path.Combine(FolderPath, "..", "..", "Co
 Then generate scripts projects solution to use types from imported C# module inside game code.
 This will work for scripts build for the editor and cooked game as the referenced assembly will be packaged. Build system will also copy relevant `.pdb` and `.xml` files if provided.
 
-Remember that engine uses .Net Framework 4.5 (.Net Core API is not supported).
+Remember that engine uses .Net Framework 4.5.2 (.Net Core API is not supported).
 
 ## Using C++ library
 
