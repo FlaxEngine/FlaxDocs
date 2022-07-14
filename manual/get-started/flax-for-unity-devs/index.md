@@ -61,6 +61,9 @@ Just instead of using `GetComponent<T>()` in your scripts, write `GetChild<T>()`
 
 In Flax, Scene object is also an Actor so you can access it like any other Actor. This means that Scenes can have their own scripts and be transformed like other objects.
 
+> [!Tip]
+> Flax's coordinate system's base unit is centimeters instead of meters, meaning a Flax Actor placed at <100,100,100> is in the equivalent position of a Unity Transform placed at <1,1,1>.
+
 ## MonoBehaviour vs Script
 
 When it comes to game scripting, Unity and Flax are very similar. There are some differences in C# API (Flax has bigger math library, is more performance-oriented and uses new C# 7.2). In fact, the whole C# editor and C++ engine including scripting API is open and can be found [here](https://github.com/FlaxEngine/FlaxEngine). All contributions are welcome.
