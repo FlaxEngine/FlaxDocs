@@ -236,9 +236,9 @@ public class BlurComputeShader : PostProcessEffect
         int groupCountY = desc.Height;
         context.Dispatch(csBlurH, (uint) groupCountX, (uint) groupCountY, 1);
 
-        // Clean output slot
-        context.BindUA(0, null);
-        context.FlushState();
+        // Clean slots
+        context.ResetUA();
+        context.ResetSR();
 
         // Dispatch the Compute Shader to blur blurH image vertically to blurV
         context.BindCB(0, cb);
@@ -250,9 +250,8 @@ public class BlurComputeShader : PostProcessEffect
         context.Dispatch(csBlurV, (uint) groupCountX, (uint) groupCountY, 1);
 
         // Clean slots
-        context.BindSR(0, (GPUTexture) null);
-        context.BindUA(0, null);
-        context.FlushState();
+        context.ResetUA();
+        context.ResetSR();
 
         // Copy blurred image to the output
         context.Draw(output, blurV);
