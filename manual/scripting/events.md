@@ -21,7 +21,7 @@ The following table lists all the available event functions to override from the
 
 | Event | Description |
 |--------|--------|
-| **void OnAwake()** | Called after the object is loaded. Before the enabling it or calling start. |
+| **void OnAwake()** | Called after the object is loaded to initialize it. Before the enabling it or calling start (including any other scene objects). |
 | **void OnEnable()** | Called when object becomes enabled and active. |
 | **void OnDisable()** | Called when object becomes disabled and inactive. |
 | **void OnDestroy()** | Called before the object will be destroyed. |
@@ -42,7 +42,7 @@ Script events are invoked in the following order:
 
 Every created and added to *Actor* script receives **OnAwake**. If Script and its parent are active in the hierarchy then **OnStart** and **OnEnable** are being called (on game start or object spawn). Otherwise, this call is postponed until someone enables that script.
 
-Events OnAwake and OnStart can be called only once on a script. OnStart is always called before the first OnEnable.
+Events OnAwake and OnStart can be called only once on a script. OnStart is always called before the first OnEnable. All scripts receive OnAwake first, before BeginPlay-phrase starts that enables the scripts. In general, OnAwake should be used to initialize the object itself (eg. setup game system manager or pre-allocate memory). Then OnStart/OnEnable should be utilized for cross-object interactions (eg. register to a game manager, cache player scripts, etc.).
 
 ### Game Logic
 
@@ -64,4 +64,4 @@ The Script event's invocation order depends on the event type. Gameplay logic ev
 
 However, you can still use initialization events to add new objects as child actors/scripts because Flax will invoke initialization for them when required.
 
-All script events are called when a script is already deserialized and has valid data ready to use.
+All script events are called when a script is already deserialized and has valid data ready to use (exception is OnAwake which relies to a single object readiness - other objects might be not initialized yet).
