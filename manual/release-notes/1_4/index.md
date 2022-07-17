@@ -6,6 +6,10 @@
 
 ## Migration Guide
 
+### Scripts initialization order
+
+We refactored actors' `PostLoad`/`PostSpawn` methods into `Initialize` and changed the script `OnAwake` event to be called during this initialization phase - before any `OnStart`/`OnEnable` logic. This helps to create gameplay systems in a scheme of manager+objects where the manager can use `OnAwake` to initialize properly, and `OnEnable` can be used to register objects to the manager. This change has no performance impact but might be important to address in existing Flax projects.
+
 ### Large Worlds
 
 Adding 64-bit precision to the world coordinates to the Flax was a challenge. Both Engine and Editor have very complex and mature systems with tooling thus we wanted to make this transition seamless and stable. One of the goals was to don't bloat memory by just doubling every floating-point value but instead upgrade world-coordinates-related data to support very large worlds. For instance, 32-bit float gives us enough precision to represent object rotation and scale thus we upgraded only `Translation` (aka `Position`) of the `Transform` to a 64-bit double vector. Also, the UI system, mesh data, textures converter, and other engine features were changed to keep explicitly *Float* vectors for performance reasons.
