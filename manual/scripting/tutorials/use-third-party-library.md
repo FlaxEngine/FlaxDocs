@@ -109,3 +109,11 @@ public class Steam : Script
 ```
 
 To learn more see the libary [website](https://github.com/rlabrecque/Steamworks.NET).
+
+## External module with scripting
+
+If your project references a custom code module that contains Flax Scripts (eg. F# library or custom native lib) you can include it with your game module binaries by modifying the build script (inside `Setup` method):
+
+```cs
+options.ExternalModules.Add(new BuildOptions.ExternalModule(BuildOptions.ExternalModule.Types.CSharp, System.IO.Path.Combine(FolderPath, "../../External/MyScripts.dll")));
+```
