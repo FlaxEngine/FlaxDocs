@@ -157,6 +157,7 @@
 ### [How to render object outline](graphics/tutorials/render-object-outline.md)
 ### [How to use anisotropic texture sampler](graphics/tutorials/anisotropic-texture-sampler.md)
 ### [How to use dynamic texture](graphics/tutorials/use-dynamic-texture.md)
+### [How to setup time of the day simulation](graphics/tutorials/time-of-the-day.md)
 
 # [Scripting](scripting/index.md)
 ## [Create and use a script](scripting/new-script.md)
