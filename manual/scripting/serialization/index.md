@@ -8,7 +8,7 @@ Flax uses **Json** format to store scripts and objects state. It's a lightweight
 
 Flax serializes object field or properties if:
 
-* It's `public` or has [Serialize](https://docs.flaxengine.com/api/FlaxEngine.SerializeAttribute.html) attribute
+* It's `public` or has [Serialize](https://docs.flaxengine.com/api/FlaxEngine.SerializeAttribute.html) attribute (inherited `private` members are not saved - but `protected` are)
 * It has no [NoSerialize](https://docs.flaxengine.com/api/FlaxEngine.NoSerializeAttribute.html) attribute
 * It's not `static`
 * It's not `readonly`
