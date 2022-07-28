@@ -10,6 +10,13 @@
 
 We refactored actors' `PostLoad`/`PostSpawn` methods into `Initialize` and changed the script `OnAwake` event to be called during this initialization phase - before any `OnStart`/`OnEnable` logic. This helps to create gameplay systems in a scheme of manager+objects where the manager can use `OnAwake` to initialize properly, and `OnEnable` can be used to register objects to the manager. This change has no performance impact but might be important to address in existing Flax projects.
 
+### Plugins scripting changes
+
+For this update, we've added support for implementing Game Plugins in C++ scripts - previously it was C#-only feature. For this change, both `GamePlugin` and `EditorPlugin` has been slightly modified:
+* `Description` getter is read-only and your plugin can fill `_description` field in the constructor to set up plugin info.
+* `OnCollectAssets` has been renamed to `GetReferences` and returns the list of Guids with referenced assets.
+We've updated docs and code examples to reflect those changes.
+
 ### Large Worlds
 
 Adding 64-bit precision to the world coordinates to the Flax was a challenge. Both Engine and Editor have very complex and mature systems with tooling thus we wanted to make this transition seamless and stable. One of the goals was to don't bloat memory by just doubling every floating-point value but instead upgrade world-coordinates-related data to support very large worlds. For instance, 32-bit float gives us enough precision to represent object rotation and scale thus we upgraded only `Translation` (aka `Position`) of the `Transform` to a 64-bit double vector. Also, the UI system, mesh data, textures converter, and other engine features were changed to keep explicitly *Float* vectors for performance reasons.

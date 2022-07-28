@@ -40,15 +40,18 @@ public sealed class CertStore : GamePlugin
 {
     // Reference: https://github.com/mono/mono/blob/main/mcs/tools/security/mozroots.cs
 
-    /// <inheritdoc />
-    public override PluginDescription Description => new PluginDescription
+    public CertStore()
     {
-        Name = "Cert Store",
-        Category = "Other",
-        Description = "Trusted certificates store utility.",
-        Author = "Flax",
-        AuthorUrl = "https://flaxengine.com/",
-    };
+        // Initialize plugin description
+        _description = new PluginDescription
+        {
+            Name = "Cert Store",
+            Category = "Other",
+            Description = "Trusted certificates store utility.",
+            Author = "Flax",
+            AuthorUrl = "https://flaxengine.com/",
+        };
+    }
 
     /// <inheritdoc />
     public override void Initialize()
@@ -119,13 +122,11 @@ public sealed class CertStore : GamePlugin
 
 #if FLAX_EDITOR
     /// <inheritdoc />
-    public override void OnCollectAssets(System.Collections.Generic.List<Guid> assets)
+    public override Guid[] GetReferences()
     {
-        base.OnCollectAssets(assets);
-
         // Reference cached certificates asset
         var asset = InitAsset();
-        assets.Add(asset.ID);
+        return new Guid[1] { asset.ID };
     }
 #endif
 

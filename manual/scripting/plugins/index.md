@@ -60,17 +60,21 @@ There are two types of plugins:
 
 **Game Plugins** are type of plugin that can be used at runtime. Game plugins are deployed with the game and can extend the engine by adding new features. Plugins can contain custom scripts that can be used in a game. To create a simple game plugin use the following code example:
 
+# [C#](#tab/code-csharp)
 ```cs
 public class MyPlugin : GamePlugin
 {
-    /// <inheritdoc />
-    public override PluginDescription Description => new PluginDescription
+    public MyPlugin()
     {
-        Name = "My Plugin",
-        Category = "Other",
-        Description = "This is my custom plugin made for Flax.",
-        Author = "Someone Inc.",
-    };
+        // Initialize plugin description
+        _description = new PluginDescription
+        {
+            Name = "My Plugin",
+            Category = "Other",
+            Description = "This is my custom plugin made for Flax.",
+            Author = "Someone Inc.",
+        };
+    }
 
     /// <inheritdoc />
     public override void Initialize()
@@ -89,6 +93,47 @@ public class MyPlugin : GamePlugin
     }
 }
 ```
+# [C++](#tab/code-cpp)
+```cpp
+// .h
+#pragma once
+
+#include "Engine/Scripting/Plugins/GamePlugin.h"
+
+API_CLASS() class GAME_API MyPlugin : public GamePlugin
+{
+    DECLARE_SCRIPTING_TYPE(MyPlugin);
+
+    void Initialize() override;
+    void Deinitialize() override;
+};
+
+// .cpp
+#include "MyPlugin.h"
+#include "Engine/Core/Log.h"
+
+MyPlugin::MyPlugin(const SpawnParams& params)
+    : GamePlugin(params)
+{
+    // Initialize plugin description
+    _description.Name = TEXT("My Plugin");
+    _description.Category = TEXT("Other");
+    _description.Description = TEXT("This is my custom plugin made for Flax.");
+    _description.Author = TEXT("Someone Inc.");
+}
+
+void MyPlugin::Initialize()
+{
+    LOG(Info, "Plugin initialization!");
+}
+
+void MyPlugin::Deinitialize()
+{
+    LOG(Info, "Plugin cleanup!");
+}
+
+```
+***
 
 Your game can also use a Game Plugins within a code to implement various gameplay features because plugins don't rely on loaded scenes or scene objects and are created before the scenes loading (compared to the normal scripts).
 
@@ -98,14 +143,14 @@ If you need to include custom settings for your plugin see [this tutorial](../tu
 
 ### Game Plugin Assets
 
-If you want to bundle custom assets used in code-only plugin (eg. shader or debug model) override `OnCollectAssets` method as follows and provide IDs of the assets to include:
+If you want to bundle custom assets used in code-only plugin (eg. shader or debug model) override `GetReferences` method as follows and provide IDs of the assets to include:
 
 ```cs
 #if FLAX_EDITOR
 /// <inheritdoc />
-public override void OnCollectAssets(System.Collections.Generic.List<Guid> assets)
+public override Guid[] GetReferences()
 {
-    base.OnCollectAssets(assets);
+    var assets = new System.Collections.Generic.List<Guid>();
 
     // Add asset ID to the list
     assets.Add(ShaderId);
@@ -114,6 +159,9 @@ public override void OnCollectAssets(System.Collections.Generic.List<Guid> asset
     var path = Path.Combine(Globals.ProjectFolder, "Plugins/MyPlugin/Content/MyCustomDebugModel.flax");
     Content.GetAssetInfo(path, out var info);
     assets.Add(info.ID);
+
+    return assets.ToArray();
+}
 #endif
 ```
 
