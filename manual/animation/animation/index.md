@@ -44,3 +44,9 @@ To preview animation on a model set the **Preview Model** property. It will disp
 ## Animation events
 
 Animation timeline supports special **Animation Event** tracks that can contain custom single-shot or continuous events. Those can be used to play footsteps sounds, spawn footstep decals or apply other animation-based effects into the gameplay. To learn more see the dedicated documentation [here](anim-events.md).
+
+## Nested Animations
+
+![Nested Animation](media/nested-anim.png)
+
+Animation timeline can contain nested animation clips which allow compositing of multiple clips into a larger animation. This technique could be used to split animation clips into smaller animations or for building more complex cut-scene animations from multiple clips (eg. different idle animations for a character). To use nested animation simply drag&drop the Animation asset into the timeline tracks panel or use **Add -> Nested Animation** button to spawn a new nested animation track.
