@@ -204,6 +204,7 @@
 ### [Gameplay Globals](scripting/advanced/gameplay-globals.md)
 ### [Refactoring and Renaming](scripting/advanced/refactoring-renaming.md)
 ### [Cert Store](scripting/advanced/cert-store.md)
+### [Noise](scripting/advanced/noise.md)
 ## [Tutorials](scripting/tutorials/index.md)
 ### [How to create a custom editor](scripting/tutorials/custom-editor.md)
 ### [How to create a custom editor window](scripting/tutorials/custom-window.md)
