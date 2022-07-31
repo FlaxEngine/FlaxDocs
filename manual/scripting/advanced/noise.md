@@ -12,6 +12,12 @@ Flax contains various utilities for sampling different noise functions such as:
 
 Those can be accessed via scripting `FlaxEngine.Utilities.Noise` static class and used to enrich procedurally generated worlds and content.
 
+## Noise in Materials/Particles
+
+![Material Graph Noise Nodes](media/noise-shader.png)
+
+All visual graphs (materials, particles, animations) can sample noise functions both on CPU and GPU to enrich the content. All noise functions return normalized results in the range 0-1. Some of them return more noise components, such as Voronoi Noise where `X=minDistToCell`, `Y=randomColor`, `Z=minEdgeDistance`. Depending on the context only one or even all components can be used. Follow the tooltip with documentation for every node.
+
 ## Noise preview control
 
 Below is a sample code for custom UI Control that can be added to the scene for debugging or testing different noise types visually. Simply create `UI Canvas`, add `UI Control` to it, set control type to `NoisePreview`, and use `NoiseType` with `NoiseScale` properties to analyze noises.
