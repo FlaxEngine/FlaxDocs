@@ -56,7 +56,7 @@ public class DynamicTextureFromCode : Script
         FlaxEngine.Object.Destroy(ref _tempMaterialInstance);
     }
 
-    private unsafe void OnPreRender(GPUContext context, RenderContext renderContext)
+    private unsafe void OnPreRender(GPUContext context, ref RenderContext renderContext)
     {
         if (!Enabled || !Actor.IsActiveInHierarchy)
             return;
@@ -86,7 +86,7 @@ public class DynamicTextureFromCode : Script
             uint rowPitch = (uint)size / (uint)desc.Height;
             uint slicePitch = (uint)size;
             context.UpdateTexture(_tempTexture, 0, 0, new IntPtr(dataPtr), rowPitch, slicePitch);
-            _tempTexture.ResidentMipLevels = 1; // Mark mip-map as available (required for normal textures only)
+            _tempTexture.ResidentMipLevels = 1; // Mark mip-map as available (required for standard textures only - other than render textures)
         }
     }
 }
