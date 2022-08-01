@@ -91,6 +91,16 @@ Adjusting near and far planes affects rendering precision and scene depth qualit
 
 Flax Engine offers very wide range of customization that can be made to extend the rendering pipeline. One of them is rendering scene using the custom camera right to the render target. Then presenting it on an object surface. To create such effect check out the tutorial: [How to render a camera to a texture](render-camera-to-texture.md).
 
+## Alpha output
+
+Renderer supports including an alpha channel in the output image. It might be required for games that want to composite draw output over other images (eg. minimap or game character preview over game UI). It can be enabled per-SceneRenderTask by setting `UseAlpha` property on the render buffers used by that task:
+
+```cs
+MainRenderTask.Instance.Buffers.UseAlpha = true;
+```
+
+Then, the renderer will use `R16G16B16A16` format for the image textures and passthrough the alpha channel. This affects game performance, as the default `R11G11B10` format is more optimized for lower memory bandwidth. When using alpha in output try to disable unused PostFx features to reduce memory pressure and improve performance.
+
 ## Override view
 
 Flax uses extensible RenderTask system for high-level rendering achitecture. By default game uses `MainRenderTask.Instance` to drive the scene rendering into the main game viewport. You can use it to plug into rendering pipeline for custom effects, rendering or view override.
