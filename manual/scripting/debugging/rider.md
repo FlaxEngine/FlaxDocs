@@ -44,7 +44,7 @@ This informs about the Mono debugger server running on a local machine and the g
 
 ### 6. Add configuration
 
-Once you know the port you can create configuration of type **Mono Remote**. Use *Edit Contiuration* button and select `+` plus button to create new confgiuration for Mono Remote debugging.
+Once you know the port you can create configuration of type **Mono Remote**. Use *Edit Configuration* button and select `+` plus button to create new confgiuration for Mono Remote debugging.
 
 ![Rider Edit Configuration](media/rider-edit-configuration.png)
 
