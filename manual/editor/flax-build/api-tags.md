@@ -134,6 +134,14 @@ DECLARE_SCRIPTING_TYPE_NO_SPAWN(ToneMappingSettings);
 };
 ```
 
+## API_INJECT_CODE
+
+Custom macro to insert code into generated C#/C++ bindings code. Can be used to overlap type with `typedef`/`using` or to include an additional file. Very rarely used.
+
+```cpp
+API_INJECT_CODE(cpp, "#include \"Engine/Platform/Platform.h\"");
+```
+
 ## Tag parameters
 
 Tag attributes that can be added to the API tags braces to adjust the bindings logic:
