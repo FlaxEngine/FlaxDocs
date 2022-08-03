@@ -28,3 +28,7 @@ PostFx Volume supports *"per option"* value override which means, only selected 
 To override the setting, simply select the checkbox dedicated to it and adjust the value as shown in a picture below.
 
 ![Properties](media/post-fx-volumes-edit.jpg)
+
+## Default Settings
+
+Use [Graphics Settings](../../editor/game-settings/graphics-settings.md) to edit default Post Process Settings.
