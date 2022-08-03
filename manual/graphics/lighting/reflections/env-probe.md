@@ -20,9 +20,10 @@ Alternatively you can use a *Toolbox* window and drag and drop environment probe
 
 | Property | Description |
 |--------|--------|
+| **Cubemap Resolution** | The reflections texture resolution. Can use graphics settings or custom resolution. |
 | **Brightness** | Controls intensity of the reflection color from the probe. Can be used to fade in or out reflection. |
 | **Radius** | Reflection probe influence range. |
-| **Auto Update** | If checked, probe will be baked by auto every time actor is transformed (moved, rotated, or scaled). |
+| **Update Mode** | The probe update mode. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Manual**</td><td>Probe can be updated manually (eg. in Editor or from script).</td></tr><tr><td>**When Moved**</td><td>Probe will be automatically updated when is moved.</td></tr><tr><td>**Realtime**</td><td>Probe will be automatically updated in real-time (only if in view and frequency depending on distance to the camera).</td></tr></tbody></table> |
 | **Capture Near Plane** | Defines a near clipping plane used for rendering probe. Use higher value to clip geometry near the probe. |
 | **Custom Probe** | If specified, environment probe will use custom [CubeTexture](http://docs.flaxengine.com/api/FlaxEngine.CubeTexture.html) as a reflections source. |
 
@@ -41,3 +42,7 @@ Flax Engine renders reflection probes using a dedicated pass using screen space 
 By default Flax uses a dedicated content directory for **scene data assets**. It's used by the lightmaps, CSG meshes and also Environment Probes. Reflection probes cube textures are located in: **Content/SceneData/'scene_name'/EnvProbes**. If you want to reuse baked reflection probe or modify it you can access textures in there. Also Environment Probe actor contains a dedicated public property [EnvironmentProbe.Probe](http://docs.flaxengine.com/api/FlaxEngine.EnvironmentProbe.html#FlaxEngine_EnvironmentProbe_Probe) which can be used to access the cube texture being in use.
 
 To learn more about the scene assets see [Scene Data Storage](../../../get-started/scenes/scene-data.md) page.
+
+## Realtime probes
+
+Probes can be used at runtime from a script or automatically every frame. This can be used to implement dynamic environment reflections at cost of performance. Ensure to limit the amount of probes that are updated frequently and adjust the resolution to keep stable performance.
