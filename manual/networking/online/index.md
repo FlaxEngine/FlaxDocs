@@ -33,7 +33,7 @@ Online::Initialize(platform);
 
 ## Online Platform Usage
 
-Once `Online` system is setup it exposes the current online platform to be used across whole game project. Here is an example script that gets some basic information from online platform:
+Once `Online` system is setup it exposes the current online platform to be used across the whole game project. Here is an example script that gets some basic information from online platform:
 
 # [C#](#tab/code-csharp)
 ```cs
