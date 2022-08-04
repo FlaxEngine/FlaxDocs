@@ -14,6 +14,10 @@ By default Animation System uses the Job System to update all animated models as
 
 To learn more about multithreading see [this documentation](../../scripting/advanced/multithreading.md).
 
+### Data and cache
+
+Engine creates `AnimEvent` object instances within `Animation` asset during loading. Those are reused by animated models when playing the animation thus caching any data or state within a custom animation event needs to be done with caution. For example, `AnimContinuousEvent` can store data in `OnBegin` and clear in `OnEnd` (guaranteed to be always called). But keep in mind that a single `AnimEvent` object can receive multiple different callbacks from different animated objects at the same time - literally at the same time because Animation System schedules Anim Graph updates with async Job System. This means that data stored in Anim Event or reused globally (eg. character state accessed via `AnimatedModel`) needs to be accessed cautiously (see Multithreading section above).
+
 ## How to create Anim Event type?
 
 Game and plugins can define custom anim event types with instanced data and custom gameplay logic. Here is an example of custom anim event which plays a sound clip on event at the given skeleton node location. It can be sued to play character footsteps sounds or be extended to spawn VFX and Decal too.
