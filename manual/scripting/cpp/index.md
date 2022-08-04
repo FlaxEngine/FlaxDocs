@@ -143,6 +143,16 @@ inline MouseDecalShoot::MouseDecalShoot(const SpawnParams& params)
 }
 ```
 
+### OnUpdate/OnLateUpdate/OnFixedUpdate
+
+As an optimization, the engine by default doesn't call the tick function for all scripts. Script types that want to receive this need to see appropriate flag: `_tickUpdate`, `_tickLateUpdate` or/and `_tickFixedUpdate` to `true` in constructor. This informs the engine that the script wants to be updated at a certain stage.
+
+Also, you can manually register custom tick function in `OnEnable` (or when script is active):
+
+```cpp
+GetActor()->GetScene()->Ticking.Update.AddTick<MyScript, &MyScript::Tick>(this);
+```
+
 ## C\+\+ scripting documentation
 
 To learn more about specific areas of C\+\+ scripting in Flax see the related sections:
