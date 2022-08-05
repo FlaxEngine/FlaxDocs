@@ -31,9 +31,12 @@ This page breaks down all the available material properties. These options are a
 
 | Property | Description |
 |--------|--------|
+| **Transparent Lighting Mode** | Transparent material lighting mode. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Surface**</td><td>Default directional lighting evaluated per-pixel at the material surface. Use it for semi-transparent surfaces - with both diffuse and specular lighting component active.</td></tr><tr><td>**Surface Non-Directional**</td><td>Non-directional lighting evaluated per-pixel at material surface. Use it for volumetric objects such as smoke, rain or dust - only diffuse lighting term is active (no specular highlights).</td></tr></tbody></table>|
 | **Enable Reflections** | If checked, enables reflections when rendering material. |
+| **Enable Screen Space Reflections** | If checked, enables Screen Space Reflections when rendering material. |
 | **Enable Fog** | If checked, enables fog effect when rendering material. |
 | **Enable Distortion** | If checked, enables distortion effect when rendering material. |
+| **Enable Global Illumination** | If checked, enables sampling Global Illumination in material (eg. light probes or volumetric lightmap). |
 | **Pixel Normal Offset Refraction** | Enables refraction offset based on the difference between the per-pixel normal and the per-vertex normal. Useful for large water-like surfaces. |
 | **Opacity Threshold** | Controls opacity values clipping point. |
 
@@ -52,12 +55,11 @@ This page breaks down all the available material properties. These options are a
 
 | Property | Description |
 |--------|--------|
-| **Disable Depth Write** | If checked, disables depth buffer write when rendering material.|
 | **Use Input World Space Normal** | If checked, material input normal will be assumed as world-space rather than tangent-space. |
 | **Use Dithered LOD Transition** | If checked, material uses dithered model LOD transition for smoother LODs switching. |
 | **Mask Threshold** | Controls mask values clipping point. |
 | **Decal Blending Mode** | Specifies decal material blending mode. Applies only to materials with *Domain* set to *Decal*. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Translucent**</td><td>Decal will be fully blended with the material surface.</td></tr><tr><td>**Stain**</td><td>Decal color will be blended with the material surface color (using multiplication).</td></tr><tr><td>**Normal**</td><td>Decal will blend the normal vector only.</td></tr><tr><td>**Emissive**</td><td>Decal will apply the emissive light only.</td></tr></tbody></table>|
-| **PostFx Location** | Specifies when render post effect material. Applies only to materials with *Domain* set to *Post Process*.Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**After Post Processing Pass**</td><td>Render material after post processing pass using *LDR* input frame.</td></tr><tr><td>**Before Post Processing Pass**</td><td>Render material before post processing pass using *HDR* input frame.</td></tr><tr><td>**Before Forward Pass**</td><td>Render material before forward pass but after *GBuffer* with *HDR* input frame.</td></tr><tr><td>**After Custom Post Effects**</td><td>Render material after custom post effects (scripted).</td></tr><tr><td>**Before Reflections Pass **</td><td>Render material before Reflections pass. After the Light pass. Can be used to implement a custom light types that accumulate lighting to the light buffer.</td></tr><tr><td>**After Anti-Aliasing Pass **</td><td>Render material The after AA filter pass. Rendering is done to the output backbuffer.</td></tr></tbody></table>|
+| **PostFx Location** | Specifies when render post effect material. Applies only to materials with *Domain* set to *Post Process*.Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**After Post Processing Pass**</td><td>Render material after post processing pass using *LDR* input frame.</td></tr><tr><td>**Before Post Processing Pass**</td><td>Render material before post processing pass using *HDR* input frame.</td></tr><tr><td>**Before Forward Pass**</td><td>Render material before forward pass but after *GBuffer* with *HDR* input frame.</td></tr><tr><td>**After Custom Post Effects**</td><td>Render material after custom post effects (scripted).</td></tr><tr><td>**Before Reflections Pass**</td><td>Render material before Reflections pass. After the Light pass. Can be used to implement a custom light types that accumulate lighting to the light buffer.</td></tr><tr><td>**After Anti-Aliasing Pass**</td><td>Render material The after AA filter pass. Rendering is done to the output backbuffer.</td></tr></tbody></table>|
 
 ## Parameters
 
