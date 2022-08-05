@@ -36,6 +36,8 @@ The top of the main node defines the basic options of the particles emitter.
 
 Before any particles simulation can take place, particles have to be spawned. **Spawn context** contains a list of modules that can spawn particles based on custom rules.
 
+When using *Simulation Space* in mode *World* particles' default position at `0,0,0` will be placed at a world origin - unlike *Local* which uses origin at Particle Effect local space. To overcome this use **Effect Position** if need to place newly spawned particles nearby particle effect (including **Effect Rotation** and **Effect Scale**). Also, camera-relative, mesh-based, or Depth Buffer-based placement can be used to handle independent particles' location from the effect position.
+
 ### Initialize context
 
 ![Particle Emitter Initialize context](media/particle-emitter-initialize.png)
@@ -68,5 +70,3 @@ Every particle emitter can contain a list of parameters. By using them you can e
 var effect = Actor.As<ParticleEffect>();
 effect.SetParameterValue("Emitter 0", "FlareColor", Color.Red);
 ```
-
-

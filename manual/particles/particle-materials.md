@@ -17,3 +17,11 @@ Particle materials can easily access any attribute of the rendered particle. You
 Many particle systems such as smoke, fire, and explosions use sprite sheet to animate the particle texture over time. To do so simply use **Flipbook** node that implements sampling the sprite sheet.
 
 ![Sprite Sheet](media/sprite-sheet.png)
+
+## Volumetric particles lighting
+
+![Volumetric Particles Lighting](media/volumetric-particles-lighting.gif)
+
+When creating volumetric particles such as smoke, dust, or fog, lighting should be calculated without directional specular component to make an impression of diffusive volumetric media. To do it change **Transparent Lighting Mode** to **Surface Non Directional**. This will disable specular lighting and remove directionality from shadowing thus making particles look like a volume.
+
+Also, you can check **Enable Global Illumination** to apply indirect lighting (if used) to the particles.

@@ -21,8 +21,6 @@ Particle System editor window contains:
 3. Properties editor
 4. Timeline editor
 
-To add new trakc use **Add** button and select **Emitter**. Then you can assign the particle emitter asset to play. Select created track label area to edit its properties in the editor and tweak parameters in live preview.
+To add new track use **Add** button and select **Emitter**. Then you can assign the particle emitter asset to play. Select created track label area to edit its properties in the editor and tweak parameters in live preview.
 
 Each particle emitter track contains a single media event that represents the emitter update time. You can move it and adjust its duration via mouse and dragging event edges. Each track can be muted via a dedicated checkbox. To rename or delete tracks right-click on its label.
-
-To navigate around the preview use rig
