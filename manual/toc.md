@@ -411,6 +411,7 @@
 ## [Feature Requests](contributing/feature-requests.md)
 ## [Report a bug](contributing/report-a-bug.md)
 ## [Release Policy](contributing/release-policy.md)
+## [Public Projects](contributing/public-projects.md)
 
 # [Release Notes](release-notes/index.md)
 ## [1.4 release notes](release-notes/1_4/index.md)
