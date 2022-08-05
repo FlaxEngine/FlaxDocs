@@ -25,4 +25,6 @@ List with all supported tags (games and/or plugins can provide custom tags as we
 | `<size=X>` | `Here is <size=50>larger</size> text.` | Controls the text size. `X` - font size (value or percentage). |
 | `<font=X size=Y>` | `Here is <font size=50>larger</font> text with <font=font1>style</font>.` | Controls the text font. `X` - font asset name, `Y` - font size (value or percentage). |
 | `<style=X>` | `Here is text with <style=style1>style</style>.` | Controls the text style. `X` - style name from `Styles` property of `RichTextBox`. |
+| `<align=left/center/right>` | `Here is centered text <align=center>text</align>.` | Controls the horizontal alignment of the contents. |
 | `<valign=top/bottom/middle/baseline>` | `Here is centered image <valign=middle><img=icon1></valign>.` | Controls the vertical alignment of the contents. |
+| `<center>` | `Here is centered text <center>text</center>.` | Centers the contents horizontally. |
