@@ -1,5 +1,7 @@
 # RichTextBox
 
+![Rich Text Box](media/rich-text-box.png)
+
 The **RichTextBox** control allows display formatted text using advanced styling options.
 
 ## Tags
