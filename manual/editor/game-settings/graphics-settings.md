@@ -26,7 +26,6 @@ You can change most of these values at runtime using the [GraphicsQuality](https
 | **Generate SDF On Model Import** | If checked, the `Generate SDF` option will be checked on model import options by default. Use it if your project uses Global SDF (eg. for Global Illumination or particles). |
 |||
 | **GI Quality** | The Global Illumination quality. Controls the quality of the GI effect. |
-|||
 | **GI Probes Spacing** | The Global Illumination probes spacing distance (in world units). Defines the quality of the GI resolution. Adjust to 200-500 to improve performance and lower frequency GI data. |
 | **Global Surface Atlas Resolution** | The Global Surface Atlas resolution. Adjust it if atlas `flickers` due to overflow (eg. to 4096). |
 |||
