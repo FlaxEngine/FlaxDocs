@@ -4,6 +4,10 @@
 
 When creating large worlds or dynamic environment where lighting conditions are constantly changing (eg. time of the day) you can use **Realtime Global Illumination** to render indirect light passing though the scene. This documentation page explains how to use GI in your projects.
 
+## Tutorial
+
+To learn how to quickly setup Realtime Global Illumination see [this tutorial](how-to-setup-gi.md).
+
 ## Dynamic Diffuse Global Illumination
 
 ![DDGI in Flax Engine](media/ddgi.png)

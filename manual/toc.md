@@ -127,6 +127,7 @@
 #### [Environment Probe](graphics/lighting/reflections/env-probe.md)
 ### [Global Illumination](graphics/lighting/gi/index.md)
 #### [Realtime Global Illumination](graphics/lighting/gi/realtime.md)
+#### [How to setup Realtime Global Illumination](graphics/lighting/gi/how-to-setup-gi.md)
 #### [Lightmap UVs](graphics/lighting/gi/lightmap-uvs.md)
 #### [Lightmapping](graphics/lighting/gi/lightmapping.md)
 #### [Lightmap Settings](graphics/lighting/gi/settings.md)

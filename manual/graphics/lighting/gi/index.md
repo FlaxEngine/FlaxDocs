@@ -9,6 +9,7 @@ Follow this documentation section to learn more about how to use global illumina
 ## In this section
 
 * [Realtime Global Illumination](realtime.md)
+* [How to setup Realtime Global Illumination](how-to-setup-gi.md)
 * [Lightmap UVs](lightmap-uvs.md)
 * [Lightmapping](lightmapping.md)
 * [Lightmap Settings](settings.md)

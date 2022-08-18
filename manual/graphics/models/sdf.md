@@ -30,6 +30,10 @@ When importing model assets you can check **Generate SDF** option to automatical
 
 ![Model SDF option in Game Settings](media/model-sdf-option-setting.png)
 
+You can also use small utility in Editor under **Tools -> Build all meshes SDF** which will compute SDF for all meshes on the scene. It might take some time and freeze your computer due to large amount of data needed to process.
+
+![Model SDF utility](media/build-all-meshes-sdf.png)
+
 ## Global SDF
 
 ![Global SDF Preview](media/global-sdf-preview.png)
