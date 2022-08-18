@@ -2,7 +2,7 @@
 
 ![Signed Distance Fields in Flax](media/global-sdf-preview2.png)
 
-**Signed Distance Fields**, shorten as **SDF**, are 3D textures where each texel contains the signed distance to the closes surface of an object. If this distance is negative, then the texel is inside the object. SDFs can rouchgly represent mesh geometry and allows to efficently approaximate compelx meshes. By having ability to quickly sample distance to the closest surface (and direction via SDF derivative) SDFs can be used for:
+**Signed Distance Fields**, shorten as **SDF**, are 3D textures where each texel contains the signed distance to the closes surface of an object. If this distance is negative, then the texel is inside the object. SDFs can roughly represent mesh geometry and allows to efficently approaximate compelx meshes. By having ability to quickly sample distance to the closest surface (and direction via SDF derivative) SDFs can be used for:
 * procedural content creation (eg. foam in river material nearby river banks, dirt/moss in room corners),
 * lighting, reflections and shadowing (eg. raytracing though SDF volume to determinate intersections),
 * particle collisions and forces (eg. snow/rain falling on world surfaces, birds floc vfx avoiding objects).

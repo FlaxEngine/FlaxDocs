@@ -40,4 +40,4 @@ public override void OnUpdate()
 }
 ```
 
-When creating pause menu or game main menu you can use `Engine.FocusGameViewport()` method which focuses the game window and allows player to use UI Navigation (eg. with gamepad or Tab) within the opened UI panel
+When creating pause menu or game main menu you can use `Engine.FocusGameViewport()` method which focuses the game window and allows player to use UI Navigation (eg. with gamepad or Tab) within the opened UI panel.
