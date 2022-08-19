@@ -51,7 +51,7 @@ Additional relevant options in [Graphics Settings](../../../editor/game-settings
 
 ![DDGI Ray Traced Reflections](media/ddgi-reflections.png)
 
-Additionally to diffuse lighting the specular lighting can be improved with Global Illumination by changing **Trace Mode** to **Software Tracing** in Screen Space Reflections settings (in Graphics Settings or in PostFx Volume). This uses our custom Software Tracing of Global Surface Atlas as a fallback to the default *Screen Tracing* which is screen-space depth buffer tracing with scene color sampling. Only visible on-screen pixels can be used in reflections. With software raytracing using Global SDF and Global Surface Atlas  full-scene raytracing is used  that provides reflections of the objects off-screen. Using this can significant performance impact (between 0.5-1ms of GPU time) but drastically enhances the look of the scenes by making the lighting more realistic and complete.
+Additionally to diffuse lighting the specular lighting can be improved with Global Illumination by changing **Trace Mode** to **Software Tracing** in Screen Space Reflections settings (in Graphics Settings or in PostFx Volume). This uses our custom Software Tracing of Global Surface Atlas as a fallback to the default *Screen Tracing* which is screen-space depth buffer tracing with scene color sampling. Only visible on-screen pixels can be used in reflections. With software raytracing using Global SDF and Global Surface Atlas  full-scene raytracing is used  that provides reflections of the objects off-screen. Using this feature can have significant performance impact (between 0.5-1ms of GPU time) but drastically enhances the look of the scenes by making the lighting more realistic and complete.
 
 ### Software Ray Tracing
 
