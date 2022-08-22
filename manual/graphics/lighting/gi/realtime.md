@@ -94,4 +94,4 @@ Use **View -> Debug View -> Global Illumination** to preview DDGI probes in a vi
 * Global Surface Atlas uses around 49 MB of GPU memory (or more when using higher resolution)
 * Global SDF uses up to 130 MB of GPU memory (depending on quality)
 * Models SDFs can use several MBs of GPU memory
-* Total GPU memory usage of DDGI is between 200-400 MB (dependong on quality and content)
+* Total GPU memory usage of DDGI is between 200-400 MB (depending on quality and content)
