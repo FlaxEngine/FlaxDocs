@@ -110,3 +110,14 @@ Scene animation editor windows supports previewing the animation playback during
 Scene Animation window supports **rendering cut-scenes** and in-game sequences. This can be useful to record in-game trailers or marketing materials right in the Editor. This tool supports various options such as animation render framerate and resolution. In that way, you can pre-render your cut-scene in 4K@60FPS. To use it simply click on the toolbar button (image below), adjust options, and click **Render** button. By default the rendered sequence will be located in your project sub-folder `Output/Render` but you can adjust it too.
 
 ![Scene Animation Render Button](media/scene-animation-render-buton.png)
+
+To create a video clip (eg. `.mp4` file) from captured cut-scene stills you can use the tool [FFmpeg](https://ffmpeg.org/) tool with the command line (inside the output folder):
+
+```
+ffmpeg -framerate 60 -i %d.png vid.mp4
+```
+
+Where:
+* `-framerate 60` - specifies the frame rate of the movie (eg. 60 frames per second),
+* `-i %d.png` - specifies the rendered stills name (eg. `%d.png` will work if you set *Filename* to `{frame}` in Output options and set *Video Output Type* to `Image (.png)`),
+* `vid.mp4` - specifies the name of the output file.
