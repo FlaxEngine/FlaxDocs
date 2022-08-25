@@ -114,7 +114,7 @@ Scene Animation window supports **rendering cut-scenes** and in-game sequences. 
 To create a video clip (eg. `.mp4` file) from captured cut-scene stills you can use the tool [FFmpeg](https://ffmpeg.org/) tool with the command line (inside the output folder):
 
 ```
-ffmpeg -framerate 60 -i %d.png vid.mp4
+ffmpeg -i %d.png -r 60 -c:v libx264 -pix_fmt yuv420p -movflags +faststart vid.mp4
 ```
 
 Where:
