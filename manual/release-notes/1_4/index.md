@@ -36,7 +36,7 @@ By default, the engine still uses 32-bit floats precision which can be upgraded 
 
 ### Global SDF
 
-![Global SDF](media/global-sdf.jpeg)
+![Global SDF](media/global-sdf.jpg)
 
 In order to implement real-time GI, we needed a **way of tracing through the scene to simulate light transport** for diffuse light bounces and specular light with reflections. Nowadays, the most common way to do it is through hardware raytracing which is limited to high-end GPUs only. We decided to use **Sign Distance Fields** which provide an efficient way for ray tracing. To do it, we rasterize model SDFs into an array of volume textures (called *Global SDF*) to provide up to 10cm precision nearby the camera at a distance of 200m or more. This gives a rough approximation of the scene geometry and can be used for **software raytracing**.
 
