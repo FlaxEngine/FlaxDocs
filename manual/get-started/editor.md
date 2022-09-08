@@ -5,7 +5,7 @@
 
 The **Flax Editor** is a standalone, all-in-one application used to develop games with the Flax Engine.
 Flax documentation covers the most important topics and describes how to use the editor tools.
-Follow thesee instructions to further your game development!
+Follow these instructions to further your game development!
 
 ## Topics
 
