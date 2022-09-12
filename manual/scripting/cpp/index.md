@@ -31,6 +31,7 @@ Flax Editor contains a build-in C# compiler for scripts but for C\+\+ scripting 
 
 * Install [Visual Studio Code](https://code.visualstudio.com/)
 * Get the compiler `sudo apt-get install clang lldb lld` (Clang 6 or newer)
+* Install required dependencies `libxcursor-dev libxinerama-dev libx11-dev`
 
 ### Mac
 
