@@ -46,7 +46,20 @@ private float WalkableRadius
 ```
 # [C++](#tab/code-cpp)
 ```cpp
-// If your type is using API_AUTO_SERIALIZATION() then remove it and manually implement ISerializable interface
+// If your type is using API_AUTO_SERIALIZATION() then add deprecated property upgrader:
+private:
+API_PROPERTY(Attributes="Serialize, Obsolete, NoUndo") float GetWalkableRadius() const
+{
+    return Surface.WalkRadius;
+}
+
+API_PROPERTY(Attributes="Serialize, Obsolete, NoUndo") void SetWalkableRadius(float value)
+{
+    // Upgrade value
+    Surface.WalkRadius = value;
+}
+
+// If you manually serialize your type, then read the old json entry during deserialization:
 void MyType::Deserialize(DeserializeStream& stream, ISerializeModifier* modifier)
 {
     const auto e = SERIALIZE_FIND_MEMBER(stream, "WalkableRadius");
