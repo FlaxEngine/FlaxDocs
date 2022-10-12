@@ -6,6 +6,8 @@
 It's used in [Anim Graph](anim-graph/index.md) to blend between two poses uing the specified mask.
 For example, you can blend the run and shoot animations for the separate parts of the character body so the legs and hips are animated by run animation clip and the upper-body is using the shooting animation. You can mask any set of skeleton bones.
 
+For faster editing, use *shift* key to check/uncheck all child bones of the clicked bone.
+
 ## Using skeleton mask
 
 1. To create a new skeleton mask asset, simply navigate to the Content directory in the *Content* window, then right-click and choose option **New -> Skeleton Mask**. Specify its name and press *Enter*.
