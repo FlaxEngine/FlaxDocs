@@ -208,6 +208,7 @@
 ### [Refactoring and Renaming](scripting/advanced/refactoring-renaming.md)
 ### [Cert Store](scripting/advanced/cert-store.md)
 ### [Noise](scripting/advanced/noise.md)
+### [Run code on module load](scripting/advanced/code-on-load.md)
 ## [Tutorials](scripting/tutorials/index.md)
 ### [How to create a custom editor](scripting/tutorials/custom-editor.md)
 ### [How to create a custom editor window](scripting/tutorials/custom-window.md)

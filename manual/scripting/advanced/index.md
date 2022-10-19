@@ -12,3 +12,4 @@
 * [Refactoring and Renaming](refactoring-renaming.md)
 * [Cert Store](cert-store.md)
 * [Noise](noise.md)
+* [Run code on module load](code-on-load.md)

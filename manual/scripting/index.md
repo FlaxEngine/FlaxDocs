@@ -87,6 +87,7 @@ To start visual scripting see the related documentation [here](visual/index.md).
   * [Refactoring and Renaming](advanced/refactoring-renaming.md)
   * [Cert Store](advanced/cert-store.md)
   * [Noise](advanced/noise.md)
+  * [Run code on module load](advanced/code-on-load.md)
 * [Access Game Window](advanced/access-game-window.md)
   * [Multithreading](advanced/multithreading.md)
   * [Screenshots](advanced/screenshots.md)
