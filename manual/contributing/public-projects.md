@@ -13,6 +13,7 @@ Flax Engine is very extensible which allows developers to create custom solution
 * [Network Sample](https://github.com/FlaxEngine/NetworkSample) - Multiplayer game lobby sample with player synchronization and chat
 * [Flax Samples](https://github.com/FlaxEngine/FlaxSamples) - Collection of example projects for Flax Engine
 * [Example Plugin](https://github.com/FlaxEngine/ExamplePlugin) - Example Plugin for Flax
+* [Dear ImGui](https://github.com/FlaxEngine/ImGui) - Dear ImGui for Flax Engine
 
 ## Community Projects
 
