@@ -53,7 +53,7 @@ public class SimplePostFx : PostProcessEffect
 #endif
 
         // Register postFx to game view
-        MainRenderTask.Instance.CustomPostFx.Add(this);
+        MainRenderTask.Instance.AddCustomPostFx(this);
     }
 
 #if FLAX_EDITOR
@@ -68,7 +68,7 @@ public class SimplePostFx : PostProcessEffect
     public override void OnDisable()
     {
         // Remember to unregister from events and release created resources (it's gamedev, not webdev)
-        MainRenderTask.Instance.CustomPostFx.Remove(this);
+        MainRenderTask.Instance.RemoveCustomPostFx(this);
 #if FLAX_EDITOR
         Content.AssetReloading -= OnAssetReloading;
 #endif
@@ -81,7 +81,10 @@ public class SimplePostFx : PostProcessEffect
         Destroy(ref _psFullscreen);
     }
 
-    public override bool CanRender => base.CanRender && Shader && Shader.IsLoaded;
+    public override bool CanRender()
+    {
+        return base.CanRender() && Shader && Shader.IsLoaded;
+    }
 
     public override unsafe void Render(GPUContext context, ref RenderContext renderContext, GPUTexture input, GPUTexture output)
     {

@@ -135,6 +135,9 @@ public class CustomGeometryDrawing : PostProcessEffect
 
     public override unsafe void OnEnable()
     {
+        UseSingleTarget = true; // This postfx overdraws the input buffer without using output
+        Location = PostProcessEffectLocation.BeforeForwardPass; // Custom draw location in a pipeline
+
         // Create vertex buffer for custom geometry drawing
         _vertexBuffer = new GPUBuffer();
         fixed (Float3* ptr = _vertices)
@@ -157,7 +160,7 @@ public class CustomGeometryDrawing : PostProcessEffect
 #endif
 
         // Register postFx to all game views (including editor)
-        SceneRenderTask.GlobalCustomPostFx.Add(this);
+        SceneRenderTask.AddGlobalCustomPostFx(this);
     }
 
 #if FLAX_EDITOR
@@ -172,7 +175,7 @@ public class CustomGeometryDrawing : PostProcessEffect
     public override void OnDisable()
     {
         // Remember to unregister from events and release created resources (it's gamedev, not webdev)
-        SceneRenderTask.GlobalCustomPostFx.Remove(this);
+        SceneRenderTask.RemoveGlobalCustomPostFx(this);
 #if FLAX_EDITOR
         Content.AssetReloading -= OnAssetReloading;
 #endif
@@ -187,11 +190,10 @@ public class CustomGeometryDrawing : PostProcessEffect
         Destroy(ref _psCustom);
     }
 
-    public override bool CanRender => base.CanRender && Shader && Shader.IsLoaded;
-
-    public override bool UseSingleTarget => true; // This postfx overdraws the input buffer without using output
-
-    public override PostProcessEffectLocation Location => PostProcessEffectLocation.BeforeForwardPass;
+    public override bool CanRender()
+    {
+        return base.CanRender() && Shader && Shader.IsLoaded;
+    }
 
     public override unsafe void Render(GPUContext context, ref RenderContext renderContext, GPUTexture input, GPUTexture output)
     {

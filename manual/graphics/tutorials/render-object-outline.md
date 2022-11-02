@@ -40,9 +40,6 @@ public class OutlineRenderer : PostProcessEffect
     /// </summary>
     public MaterialBase Material;
 
-    /// <inheritdoc />
-    public override bool CanRender => Enabled && _material && Actors?.Count != 0;
-
     /// <inheritdoc/>
     public override void OnEnable()
     {
@@ -53,6 +50,12 @@ public class OutlineRenderer : PostProcessEffect
     public override void OnDisable()
     {
         Destroy(ref _material);
+    }
+
+    /// <inheritdoc />
+    public override bool CanRender()
+    {
+        return base.CanRender() && _material && Actors?.Count != 0;
     }
 
     /// <inheritdoc/>

@@ -191,16 +191,19 @@ public class BlurComputeShader : PostProcessEffect
         _isComputeSupported = GPUDevice.Instance.Limits.HasCompute;
 
         // Register postFx to game view
-        MainRenderTask.Instance.CustomPostFx.Add(this);
+        MainRenderTask.Instance.AddCustomPostFx(this);
     }
 
     public override void OnDisable()
     {
         // Remember to unregister from drawing
-        MainRenderTask.Instance?.CustomPostFx.Remove(this);
+        MainRenderTask.Instance?.RemoveCustomPostFx(this);
     }
 
-    public override bool CanRender => base.CanRender && _isComputeSupported && Shader && Shader.IsLoaded;
+    public override bool CanRender()
+    {
+        return base.CanRender() && _isComputeSupported && Shader && Shader.IsLoaded;
+    }
 
     public override unsafe void Render(GPUContext context, ref RenderContext renderContext, GPUTexture input, GPUTexture output)
     {
