@@ -17,7 +17,7 @@ Flax Engine by default uses `32-bit` precision (single precision, `float` type) 
 
 ### Enabling Large Worlds
 
-Use [Custom Engine build](custom-engine.md) and modify `Flax.flaxproj` file by setting `"UseLargeWorlds": true`. Then build the engine. It will overlap all Vector2/3/4 components from `float` into `double` and store object coordinates with higher precision.
+Use [Custom Engine build](../advanced/custom-engine.md) and modify `Flax.flaxproj` file by setting `"UseLargeWorlds": true`. Then build the engine. It will overlap all Vector2/3/4 components from `float` into `double` and store object coordinates with higher precision.
 
 The engine supports loading and saving projects with both `UseLargeWorlds` enabled and disabled without any compatibility issues. Which means that you can still open project with default engine version, even if it was edited with Large Worlds support enabled.
 
