@@ -52,3 +52,25 @@ Create new Visual Script and use **Actor** as a base class. Then override method
 ### 2. Use actor
 
 The next step is to drahg&drop actor from *Content* window into scene or scene tree. You can also use **Toolbox* window to search for actor type and spawn it from there. You can also create your actor from code in other scripts.
+
+### Actor creation utility
+
+If you develop 3rd Party SDK plugin or commonly used actor type then you can use `ActorContextMenu` attribute to link it into the Editor's scene/prefab editors.
+
+# [C#](#tab/code-csharp)
+```cs
+[ActorContextMenu("New/My Actor")]
+public class MyActor : Actor
+{
+...
+}
+```
+# [C++](#tab/code-cpp)
+```cpp
+API_CLASS(Attributes="ActorContextMenu(\"New/My Actor\")")
+class GAME_API MyActor : public Actor
+{
+...
+};
+```
+***
