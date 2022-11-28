@@ -7,11 +7,15 @@ You can download Visual Studio [here](https://www.visualstudio.com). We support 
 Flax requries the following components to be installed in order to support C# scripts debugging:
 * C# and Visual Basic Roslyn Compilers
 * C# and Visual Basic
-* .NET Framework 4.8 targeting pack (or any other .Net 4.5.2 or newer framework)
+* .NET Framework 4.5.2 targeting pack (or any other newer framework)
 
-![Visual Studio Components](media/vs-components.png)
+![Visual Studio Components for C#](media/vs-components-cs.png)
 
-For C++ scripts debugging platform-dependant toolset is required (eg. Win10 SDK and v141 toolset on Windows).
+For C++ scripts debugging platform-dependant toolset is required:
+* Windows 10 SDK (or any other newer SDK)
+* MSVC C++ 2015 v140 toolset (or any other newer toolset)
+
+![Visual Studio Components for C++](media/vs-components-cpp.png)
 
 ### 1. Install Visual Studio plugin
 
