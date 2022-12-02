@@ -6,4 +6,4 @@ Flax Editor uses Custom Editors to show selected actors properties in the *Prope
 
 You can also use custom attributes right insiide your code. See [this documentation page](attributes.md).
 
-Implementation of th Custom Editors is open source (as a part of *FlaxAPI*) and can be found [here](https://github.com/FlaxEngine/FlaxAPI/tree/master/FlaxEditor/CustomEditors).
+Implementation of the Custom Editors is open source (as a part of *Flax Engine*) and can be found [here](https://github.com/FlaxEngine/FlaxEngine/tree/master/Source/Editor/CustomEditors).

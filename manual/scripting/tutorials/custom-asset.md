@@ -174,3 +174,25 @@ inline MyScript::MyScript(const SpawnParams& params)
 ***
 
 ![Tutorial](media/custom-asset-tutorial-3.jpg)
+
+### Asset creation utility
+
+If you develop 3rd Party SDK plugin or commonly used asset type then you can use `ContentContextMenu` attribute to link it into the Editor's Content window.
+
+# [C#](#tab/code-csharp)
+```cs
+[ContentContextMenu("New/My Settings")]
+public class MySettings
+{
+...
+}
+```
+# [C++](#tab/code-cpp)
+```cpp
+API_CLASS(Attributes="ContentContextMenu(\"New/My Settings\")")
+class GAME_API MySettings : public ISerializable
+{
+...
+};
+```
+***

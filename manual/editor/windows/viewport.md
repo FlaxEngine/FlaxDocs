@@ -35,6 +35,7 @@ To learn more about using a transform gizmo see [this page](../../get-started/sc
 | **RMB + Mouse Wheel** | Change camera speed up/down |
 | **Alt + LMB** | Orbit camera (around last viewed object center, translated) |
 | **F** | Show selected actor (focus on it) |
+| **R** | Rotate selected actors (by 45 degrees) |
 | **Delete** | Delete selected objects |
 | **End** | Snap selected objects to the ground |
 | **1** | Set gizmo mode to *Translate* |
