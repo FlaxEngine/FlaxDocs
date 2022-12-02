@@ -45,3 +45,7 @@ Profiler.EndEventGPU();
 
 The memory profiling mode focused on breaking down system memory allocations. This includes separate stats for native memory allocation and managed C# allocations.
 
+### Network
+
+The network data transfer send/receive charts over game time.
+

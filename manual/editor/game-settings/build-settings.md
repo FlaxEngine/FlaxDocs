@@ -16,6 +16,7 @@ For editing and using presets see [Game Cooker window](../game-cooker/index.md) 
 | **Skip Packaging** | If checked, the output build files won't be packaged for the destination platform. Useful when debugging build from local PC. |
 |||
 | **Additional Assets** | The additional assets to include into build (into root assets set). |
+| **Additional Scenes** | The additional scenes to include into build (into root assets set). |
 | **Additional Asset Folders** | The additional folders with assets to include into build (into root assets set). List of paths relative to the project directory or absolute paths. |
 |||
 | **Shaders No Optimize** | Disables shader compiler optimizations in the cooked game. Can be used to debug shaders on a target platform or to speed up the shaders compilation time. |

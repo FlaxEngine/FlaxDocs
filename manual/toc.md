@@ -394,6 +394,8 @@
 # [Networking](networking/index.md)
 ## [Network API](networking/network-api.md)
 ## [Network Sample](networking/network-sample.md)
+## [Low-Level Networking](networking/low-level.md)
+## [High-Level Networking](networking/high-level.md)
 ## [Online](networking/online/index.md)
 ## [Tutorials](networking/tutorials/index.md)
 ### [How to create TCP client-server](networking/tutorials/create-tcp-client-server.md)
