@@ -73,4 +73,5 @@ class GAME_API MyActor : public Actor
 ...
 };
 ```
+# [Visual Script](#tab/code-vs)
 ***
