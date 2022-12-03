@@ -1,5 +1,11 @@
 # Universal Windows Platform (UWP)
 
+<center>
+<p style="color:red; font-weight: bold">
+UWP (Windows Store) platform has been deprecated and soon will be removed!
+</p>
+</center>
+
 ## Technical information
 
 Flax is compiled for Universal Windows Platform using Microsoft Visual C++ compiler. It uses **v141** (VC\+\+ 2017) toolset and **Windows 10 SDK** with Multi-threaded DLL runtime. All dependent libraries are used via static linking by the Flax Engine binary.
