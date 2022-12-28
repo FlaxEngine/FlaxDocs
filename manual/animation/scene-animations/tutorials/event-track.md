@@ -8,7 +8,7 @@ Scene Animations support calling custom C# methods using a dedicated event track
 
 ### 1. Create scene animation
 
-Also preapre the script with the events you want to call.
+Also prepare the script with the events you want to call.
 Example:
 
 ```cs
