@@ -4,7 +4,7 @@ In this tutorial, you will learn how to implement a simple script that uses path
 
 ## 1. Setup a scene
 
-Firstly you will need to preapre you level, setup the navmesh and the object to move (our agent).
+Firstly you will need to prepare you level, setup the navmesh and the object to move (our agent).
 
 ![Example Scene](media/sample-scene.jpg)
 
