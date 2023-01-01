@@ -175,7 +175,7 @@ inline MyScript::MyScript(const SpawnParams& params)
 
 ![Tutorial](media/custom-asset-tutorial-3.jpg)
 
-### Asset creation utility
+## Asset creation utility
 
 If you develop 3rd Party SDK plugin or commonly used asset type then you can use `ContentContextMenu` attribute to link it into the Editor's Content window.
 
@@ -196,3 +196,41 @@ class GAME_API MySettings : public ISerializable
 };
 ```
 ***
+
+## Asset extenion in Editor
+
+Flax Editor supports extending editing and usage experience per-asset type. For example, you can override the default asset icon, generate a thumbnail based on contents or provide additional actions executable from *Content* window.
+
+Example C# code for Editor extending the `MySettings` asset:
+
+```cs
+public class MySettingsItem : JsonAssetItem
+{
+    /// <inheritdoc />
+    public MySettingsItem(string path, Guid id, string typeName)
+    : base(path, id, typeName)
+    {
+        // Use custom icon (Sprite)
+        _thumbnail = Editor.Instance.Icons.Document128;
+    }
+}
+
+[ContentContextMenu("New/My Settings")]
+public class MySettingsProxy : SpawnableJsonAssetProxy<MySettings>
+{
+    /// <inheritdoc />
+    public override AssetItem ConstructItem(string path, string typeName, ref Guid id)
+    {
+        // Use custom type of the Asset Item for editor
+        return new MySettingsItem(path, id, typeName);
+    }
+}
+```
+
+You can easily customizable proxy methods by overriding them.
+
+Then register custom asset proxy within [Editor plugin](custom-plugin.md) initialization (ensure to remove it on game code unloading - eg. during script hot-reload in Editor):
+
+```cs
+Editor.Instance.ContentDatabase.Proxy.Add(new MySettingsProxy());
+```
