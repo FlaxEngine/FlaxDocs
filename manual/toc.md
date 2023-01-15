@@ -210,6 +210,7 @@
 ### [Noise](scripting/advanced/noise.md)
 ### [Tags](scripting/advanced/tags.md)
 ### [Run code on module load](scripting/advanced/code-on-load.md)
+### [File Reference](scripting/advanced/file-reference.md)
 ## [Tutorials](scripting/tutorials/index.md)
 ### [How to create a custom editor](scripting/tutorials/custom-editor.md)
 ### [How to create a custom editor window](scripting/tutorials/custom-window.md)

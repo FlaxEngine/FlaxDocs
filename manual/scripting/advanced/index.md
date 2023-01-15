@@ -14,3 +14,5 @@
 * [Noise](noise.md)
 * [Tags](tags.md)
 * [Run code on module load](code-on-load.md)
+* [File Reference](file-reference.md)
+

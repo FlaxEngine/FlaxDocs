@@ -89,6 +89,7 @@ To start visual scripting see the related documentation [here](visual/index.md).
   * [Noise](advanced/noise.md)
   * [Tags](advanced/tags.md)
   * [Run code on module load](advanced/code-on-load.md)
+  * [File Reference](advanced/file-reference.md)
 * [Access Game Window](advanced/access-game-window.md)
   * [Multithreading](advanced/multithreading.md)
   * [Screenshots](advanced/screenshots.md)
