@@ -62,3 +62,9 @@ You can use *right-click* on Game window tab to take game viewport screenshot (s
 You can use *right-click* on Game window tab to show or hide game UI or DebugDraw shapes.
 
 ![Game Viewport Utilities](media/game-viewport-debug-show.gif)
+
+#### Game viewport sizing
+
+*Right-click* on Game window tab to use **Viewport Size** submenu to override viewport aspect ratio or resolution. For example, it can be used to test cut-scene animation in 16:9 aspect ratio or to test mobile game viewport on iPhone or Android devices. You can use predefined viewport sizes or add custom ones.
+
+![Game Viewport Sizing](media/game-viewport-sizing.png)
