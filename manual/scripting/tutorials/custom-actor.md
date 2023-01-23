@@ -53,6 +53,10 @@ Create new Visual Script and use **Actor** as a base class. Then override method
 
 The next step is to drahg&drop actor from *Content* window into scene or scene tree. You can also use **Toolbox* window to search for actor type and spawn it from there. You can also create your actor from code in other scripts.
 
+### 3. Extend actor
+
+Editor offers various ways to customize or extend custom actor type.
+
 ### Actor creation utility
 
 If you develop 3rd Party SDK plugin or commonly used actor type then you can use `ActorContextMenu` attribute to link it into the Editor's scene/prefab editors.
@@ -75,3 +79,59 @@ class GAME_API MyActor : public Actor
 ```
 # [Visual Script](#tab/code-vs)
 ***
+
+### Actor with an icon
+
+If you want to attach a simple icon to the actor so it's more visible and usable in Editor viewport then use similar code as follows:
+
+```cs
+using FlaxEngine;
+#if FLAX_EDITOR
+using FlaxEditor;
+using FlaxEditor.SceneGraph;
+#endif
+
+public class MyActorType : Actor
+{
+#if FLAX_EDITOR
+    static MyActorType()
+    {
+        ViewportIconsRenderer.AddCustomIcon(typeof(MyActorType), Content.LoadAsync<Texture>("Content/Path/To/TextureAsset.flax"));
+        SceneGraphFactory.CustomNodesTypes.Add(typeof(MyActorType), typeof(MyActorTypeNode));
+    }
+#endif
+
+    /// <inheritdoc />
+    public override void OnEnable()
+    {
+        base.OnEnable();
+
+#if FLAX_EDITOR
+        ViewportIconsRenderer.AddActor(this);
+#endif
+    }
+    
+    /// <inheritdoc />
+    public override void OnDisable()
+    {
+#if FLAX_EDITOR
+        ViewportIconsRenderer.RemoveActor(this);
+#endif
+
+        base.OnDisable();
+    }
+}
+
+#if FLAX_EDITOR
+/// <summary>Custom actor node for Editor.</summary>
+[HideInEditor]
+public sealed class MyActorTypeNode : ActorNodeWithIcon
+{
+    /// <inheritdoc />
+    public MyActorTypeNode(Actor actor)
+        : base(actor)
+    {
+    }
+}
+#endif
+```
