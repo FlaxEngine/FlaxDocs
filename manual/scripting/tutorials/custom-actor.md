@@ -96,7 +96,7 @@ public class MyActorType : Actor
 #if FLAX_EDITOR
     static MyActorType()
     {
-        ViewportIconsRenderer.AddCustomIcon(typeof(MyActorType), Content.LoadAsync<Texture>("Content/Path/To/TextureAsset.flax"));
+        ViewportIconsRenderer.AddCustomIcon(typeof(MyActorType), Content.LoadAsync<Texture>(System.IO.Path.Combine(Globals.ProjectContentFolder, "Path/To/TextureAsset.flax")));
         SceneGraphFactory.CustomNodesTypes.Add(typeof(MyActorType), typeof(MyActorTypeNode));
     }
 #endif
