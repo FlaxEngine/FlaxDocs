@@ -163,6 +163,7 @@ Tag attributes that can be added to the API tags braces to adjust the bindings l
 * `Hidden` - marks the method/field/property to be hidden in scripting API (skips C# and Visual Script access but allows to serialize it by auto)
 * `Template` - marks the structure/class/interface as generic type to be used as template for other types (eg. via `API_TYPEDEF`).
 * `Alias` - marks typedef to alias typename instead of inflating template type.
+* `DefaultValue="..."` - injects custom default value for the `API_PARAM`
 * `Tag="..."` - adds a custom tag to the type or member which can be used by custom extensions and build system plugins. Tags can have value in format `name=value`. Multiple tags can be added at once.
 
 ## Special cases
