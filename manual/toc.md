@@ -309,6 +309,7 @@
 ### [Vertical Panel](ui/controls/vertical-panel.md)
 ### [Tiles Panel](ui/controls/tiles-panel.md)
 ### [Render To Texture Control](ui/controls/render-to-texture-control.md)
+### [Canvas Scaler](ui/controls/canvas-scaler.md)
 ## [Fonts](ui/fonts/index.md)
 ## [Text Render](ui/text-render/index.md)
 ## [Sprite Render](ui/sprite-render/index.md)
