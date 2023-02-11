@@ -32,6 +32,7 @@
 
 # [Samples and Tutorials](samples-tutorials/index.md)
 ## [Samples](samples-tutorials/samples/index.md)
+## [Arizona Framework Sample](samples-tutorials/samples/arizona.md)
 ## [Tutorials](samples-tutorials/tutorials/index.md)
 
 # [Editor](editor/index.md)

@@ -1,5 +1,11 @@
 # Networking
 
+<center>
+
+![Networking with Arizona Framework](../samples-tutorials/samples/media/shooter-sample.gif)
+
+</center>
+
 Flax supports networking that can be used across various types of games. You can use it to create multiplayer games or to extend the gameplay by using an Internet connection.
 
 To integrate your game into various online platforms such as Steam, Xbox Live or PlayStation Network use [Online](online/index.md) system which provides the access to player user profile, friends list, achievements, online presence, cloud saves and more.
@@ -25,3 +31,8 @@ The high-level wraps over low-level and provides more features for multiplayer g
 
 * [How to create TCP client-server](tutorials/create-tcp-client-server.md)
 * [How to create networking server and client](tutorials/network-client-server.md)
+
+## Sample projects
+
+* [Arizona Framework Sample](../samples-tutorials/samples/arizona.md)
+* [Network Sample](network-sample.md)
