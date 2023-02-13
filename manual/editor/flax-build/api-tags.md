@@ -165,6 +165,7 @@ Tag attributes that can be added to the API tags braces to adjust the bindings l
 * `Alias` - marks typedef to alias typename instead of inflating template type.
 * `DefaultValue="..."` - injects custom default value for the `API_PARAM`
 * `Tag="..."` - adds a custom tag to the type or member which can be used by custom extensions and build system plugins. Tags can have value in format `name=value`. Multiple tags can be added at once.
+* `this` - marks static method parameter as extension method (C#).
 
 ## Special cases
 
