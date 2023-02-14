@@ -10,11 +10,23 @@ Flax is compiled for Linux platform using **Android NDK** and build with **Andro
 
 Follow these steps to setup your development PC for building game for Android platform. In case of problems, please follow official documentation of Android platform.
 
-* Install **Open JDK** ([https://jdk.java.net/15](https://jdk.java.net/15) and set `JAVA_HOME` to jdk root folder)
 * Download and install **Android Studio** ([https://developer.android.com/studio](https://developer.android.com/studio))
-* Open Android Studio and complete the setup (install it to the default location or custom one and set `ANDROID_SDK` to SDK root folder)
-* Install **NDK** (via Android SDK side-by-side or manually via [https://developer.android.com/ndk/downloads/index.html](https://developer.android.com/ndk/downloads/index.html) and set `ANDROID_NDK` to install location)
+  * Install **Android SDK** within Android Studio setup.
+  * Set `ANDROID_HOME` env var to SDK location (typically `C:\Users\USERNAME\AppData\Local\Android\android-studio\sdk` on Windows)
+* Install **NDK**
+  * via Android SDK Manager: *Android SDK -> SDK Tools -> NDK (side by side)*
+  * or manually via [https://developer.android.com/ndk/downloads/index.html](https://developer.android.com/ndk/downloads/index.html) and set `ANDROID_NDK` env var to install location) 
+* Install **Java**
+  * use in-built from Android Studio: set `JAVA_HOME` env var to `<android-studio>\jbr`
+  * or download manually from [https://jdk.java.net/19](https://jdk.java.net/19) and set env var `JAVA_HOME` to jdk root folder
 * (when using Flax from Launcher) Install Android Platform Tools for Editor installation via Flax Launcher
+
+### Troubleshooting
+
+* Ensure to [accept software licenses](https://stackoverflow.com/questions/39760172/you-have-not-accepted-the-license-agreements-of-the-following-sdk-components) from Android SDK
+* Verify that environment variables are properly set:
+  * On Windows: `echo %ANDROID_HOME%`, `echo %JAVA_HOME%`
+  * On Linux/Mac: `echo $ANDROID_HOME`, `echo $JAVA_HOME`
 
 ## Build options
 
