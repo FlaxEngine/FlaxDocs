@@ -8,7 +8,7 @@
 
 This release includes support for **Vehicles**. Now, you can create cars with a custom physical shape, wheels, and engine setup. We're using Nvidia PhysX to drive the simulation and expose lots of highly configurable properties to tweak the vehicle. It can be used to make simple cars or even advanced realistic racing games. Also, unofficially cars in Flax drive better than in Cyberpunk 2077.
 
-As always we're preapred a complete documentation and tutorial how to use this new feature [here](../../physics/vehicles.md).
+As always we've prepared a complete documentation and tutorial how to use this new feature [here](../../physics/vehicles.md).
 
 ### Nintendo Switch Support
 

@@ -69,8 +69,11 @@ This shader is used to calculate per pixel lighting for spot lights (tooltip: **
 The problem is that we have to create a set of different **variations of this shader**.
 
 1) With specular, without IES Profile.
+
 2) Without specular, without IES Profile.
+
 3) With specular, with IES Profile.
+
 4) Without specular, with IES Profile.
 
 However we don’t want to write 4 shaders but single one and just permutate it.

@@ -2,7 +2,7 @@
 
 In this tutorial you will learn how to extend the default editor settings.
 
-### 1. Preapre
+### 1. Prepare
 
 In most cases, additional editor settings are used by the editor plugins. To learn how to create own see [this tutorial](custom-plugin.md). However, you can access the editor options from any C# code running in the editor (including scripts). Using `FLAX_EDITOR` define can help you to include editor-related code into the game scripts.
 
