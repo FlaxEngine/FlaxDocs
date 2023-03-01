@@ -97,7 +97,7 @@ Contributors: mafiesto4, GoaLitiuM, Tryibion
 
 PRs merged: 4
 
-* Ad `FLAXENGINE_API` to platform specific classes for C++ scripting usage
+* Add `FLAXENGINE_API` to platform specific classes for C++ scripting usage
 * Add *Ragdoll* actor to toolbox
 * Add better C++ standard library version detection on Linux
 * Add `LinuxFileSystem::ShowBrowseFolderDialog`
