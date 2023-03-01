@@ -91,6 +91,24 @@ UWP (Windows Store) platform has been deprecated and soon will be removed. As a 
 
 ## Changelog
 
+### Version 1.5.6339 - 1 March 2023
+
+Contributors: mafiesto4, GoaLitiuM, Tryibion
+
+PRs merged: 4
+
+* Ad `FLAXENGINE_API` to platform specific classes for C++ scripting usage
+* Add *Ragdoll* actor to toolbox
+* Add better C++ standard library version detection on Linux
+* Add `LinuxFileSystem::ShowBrowseFolderDialog`
+* Add `BC4`, `BC5` and `BC7` formats decompression support on non-Windows platforms
+* Add support for building Android app on Linux or Mac
+* Fix `Tag` natvis debugger print
+* Fix `Level::FindActors`  with `Tag`
+* Fix using Vulkan SDK header from system when cross-compiling
+* Fix cursor not changing from `IBeam` to default when hovering over cancel button in *SearchBox*
+* Fix stability of Global Surface Atlas to smooth objects culling buffer capacity over time
+
 ### Version 1.5.6338 - 19 February 2023
 
 Contributors: mafiesto4, realDLPS, mlavik1, iainmckay, Tryibion, Crawcik, cristhofermarques, RuanLucasGD, PrecisionRender, plemsoft, GoaLitiuM, Withaust, envision3d, Swiggies, pacyfist, W2Wizard
