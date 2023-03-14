@@ -163,18 +163,36 @@ Examples of network object data serialization with fields/properties marked with
 // Automatic replication of custom structures
 public struct CustomStruct
 {
-    [NetworkReplicated] int MyVar;
+    [NetworkReplicated] public int MyVar;
 };
 
 // Automatic replication of object properties
 public class MyScript :  Script
 {
-    [NetworkReplicated] float MyFloat = 0.0f;
-    [NetworkReplicated] CustomStruct MyStruct;
-    [NetworkReplicated] PlatformType MyEnum = PlatformType.Windows;
-    [NetworkReplicated] string MyString = "text";
-    [NetworkReplicated] int[] MyArray = new []{ 1, 2, 3 };
-    [NetworkReplicated] Dictionary<int, string> MyMap;
+    [NetworkReplicated] public float MyFloat = 0.0f;
+    [NetworkReplicated] public CustomStruct MyStruct;
+    [NetworkReplicated] public PlatformType MyEnum = PlatformType.Windows;
+    [NetworkReplicated] public string MyString = "text";
+    [NetworkReplicated] public int[] MyArray = new []{ 1, 2, 3 };
+    [NetworkReplicated] public Dictionary<int, string> MyMap;
+};
+
+// Custom network serialization of custom structures
+public struct CustomStructManual : INetworkSerializable
+{
+    public float MyVar;
+
+    public void Serialize(NetworkStream stream)
+    {
+        // Custom data replication
+        stream.WriteSingle(Val);
+    }
+
+    public void Deserialize(NetworkStream stream)
+    {
+        // Custom data replication
+        Val = stream.ReadSingle();
+    }
 };
 ```
 # [C++](#tab/code-cpp)
@@ -199,6 +217,29 @@ API_CLASS() class GAME_API MyScript : public Script
     API_FIELD(NetworkReplicated) String MyString = TEXT("text");
     API_FIELD(NetworkReplicated) Array<int32> MyArray = { 1, 2, 3 };
     API_FIELD(NetworkReplicated) Dictionary<int32, String> MyMap;
+};
+
+#include "Engine/Networking/INetworkSerializable.h"
+#include "Engine/Networking/NetworkStream.h"
+
+// Custom network serialization of custom structures
+API_STRUCT() struct GAME_API CustomStructManual : INetworkSerializable
+{
+    DECLARE_SCRIPTING_TYPE_STRUCTURE(CustomStructManual);
+
+    API_FIELD() float Val;
+
+    void Serialize(NetworkStream* stream) override
+    {
+        // Custom data replication
+        stream->Write(Val);
+    }
+
+    void Deserialize(NetworkStream* stream) override
+    {
+        // Custom data replication
+        stream->Read(Val);
+    }
 };
 ```
 ***
