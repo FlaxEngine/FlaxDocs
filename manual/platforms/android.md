@@ -19,6 +19,9 @@ Follow these steps to setup your development PC for building game for Android pl
 * Install **Java**
   * use in-built from Android Studio: set `JAVA_HOME` env var to `<android-studio>\jbr`
   * or download manually from [https://jdk.java.net/19](https://jdk.java.net/19) and set env var `JAVA_HOME` to jdk root folder
+* Install **.Net Android Workload**
+  * Run `dotnet workload install android` via command line
+  * More info: [https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-workload-install](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-workload-install)
 * (when using Flax from Launcher) Install Android Platform Tools for Editor installation via Flax Launcher
 
 ### Troubleshooting
@@ -27,6 +30,7 @@ Follow these steps to setup your development PC for building game for Android pl
 * Verify that environment variables are properly set:
   * On Windows: `echo %ANDROID_HOME%`, `echo %JAVA_HOME%`
   * On Linux/Mac: `echo $ANDROID_HOME`, `echo $JAVA_HOME`
+* If you're getting the error `Missing NET SDK runtime for Android ARM64.` then install Android workload for dotnet (as mentioned above). It contains .Net libs and runtime for Android required to run C#.
 
 ## Build options
 
