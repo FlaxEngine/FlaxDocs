@@ -65,6 +65,14 @@ Optionally you can install apk manually and attach to it with
 * Use `Debug -> Attach to Android Process`
 * Once debugger is attached you can insert breakpoints and debug the game code
 
+To fix some problems with `gdb` debugger inside Visual Studio do:
+* Add environment variable on Windows `HOME=C:/Users/yourusername` where `yourusername` is your Windows username
+* Restart Visual Studio (if opened)
+* Create `.gdbinit` file in that `HOME` directory with the contents:
+```
+handle SIGXCPU SIG33 SIG35 SIG36 SIGPWR nostop noprint
+```
+
 ## Android adb logs collecting
 
 Debug and Devlopment builds are using low-level Android logger to output engine and game logs directly to the `adb`.
