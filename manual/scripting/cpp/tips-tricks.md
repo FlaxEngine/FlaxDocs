@@ -16,8 +16,7 @@
 * Reference Scene asset with a picker UI for editor:
 
 ```cpp
-API_FIELD(Attributes="CustomEditorAlias(\"FlaxEditor.CustomEditors.Editors.SceneRefEditor\"), AssetReference(typeof(SceneReference))")
-Guid SceneAsset = Guid::Empty;
+API_FIELD() SceneReference Scene;
 ```
 
 * Custom constructor example for class object:
