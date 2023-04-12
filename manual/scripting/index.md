@@ -21,8 +21,8 @@ To learn more about build tools and infrastructure see [Flax.Build](../editor/fl
 
 You can write scripts in **C#** and add them to scene objects. To learn more about it see the pages in this section. Most of the documentation related to scripting covers C# to implement various gameplay logic. If you need help with learning C# see [this page](http://www.letmegooglethat.com/?q=C%23+tutorial).
 
-Flax uses [Mono](https://www.mono-project.com) to load, compile and execute C# scripts.
-Currently the newest **C# 7.3** version is fully supported (with .Net Framework 4.5.2). Flax Editor ships with C# Roslyn  Compiler - no need to install any external tools to compile and run C# code.
+Flax uses [.NET](https://dotnet.microsoft.com/en-us) to load, compile and execute C# scripts.
+Currently the newest **C# 11** version is fully supported. Flax Editor requires [.NET SDK 7](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) to be installed on a system.
 
 If you want to use custom .NET libraries use build scripts to reference them as [shown here](tutorials/use-third-party-library.md).
 

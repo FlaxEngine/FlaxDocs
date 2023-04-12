@@ -4,7 +4,6 @@
 ### [Requirements](get-started/requirements.md)
 ### [Editor on Linux](get-started/linux.md)
 ### [Editor on Mac](get-started/mac.md)
-## [Visual Studio extension](get-started/vs-extension.md)
 ## [Create a project](get-started/create-a-project.md)
 ## [Editor](get-started/editor.md)
 ### [Flax for UE4® developers](get-started/flax-for-ue4-devs/index.md)

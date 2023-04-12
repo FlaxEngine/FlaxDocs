@@ -24,7 +24,7 @@ This documentation section covers most of the topics related to Flax.Build tool.
 
 The main source of build configuration are **.Build.cs** files located in the project `Source` directory. Written in **C#**, scripts can contain targets, modules, SDKs, or other utilities used for building. When generating project scripts files, all build scripts are included in **Rules** project which defines the build rules and can be explored with code IDE.
 
-Build scripts are using C# 7.3 with full .Net 4.5.2 support. Additionally Flax.Build assembly is referenced with many useful utilities to use during build setup like:
+Build scripts are using C# 11 with full .NET 7 support. Additionally Flax.Build assembly is referenced with many useful utilities to use during build setup like:
 * `CommandLine` attribute for command line parsing
 * `Log` utility with info/errors logging capabilities (to log file and to console output)
 * `Tokenizer` class for pasing code as tokens

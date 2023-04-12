@@ -20,10 +20,18 @@ For developers using Flax Editor on Linux platforms the requirements are:
 | Hard drive space | 1 GB minimum |
 | GPU | **Vulkan required** |
 
-Flax Editor needs `curl` and `mono` libs on the system:
+Flax Editor needs:
+
+* `curl` lib on the system:
 
 ```
-apt-get install -y curl libcurl4-gnutls-dev mono-devel
+apt-get install -y curl libcurl4-gnutls-dev
+```
+
+*  `.Net 7 SDK` ([https://dotnet.microsoft.com/en-us/download/dotnet/7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)). Setup can be verified with:
+
+```
+dotnet --version
 ```
 
 *On Fedora you might need additional fix for invalid lib linkage: `sudo ln -s /usr/lib64/libcurl.so.4 /usr/lib64/libcurl-gnutls.so.4`.

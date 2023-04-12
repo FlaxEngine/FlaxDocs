@@ -27,7 +27,9 @@ The launcher will check and begin installation if it is missing, however if your
 
 Flax Launcher requires [Microsoft .NET Framework 4.5.2](https://www.microsoft.com/en-us/download/details.aspx?id=42642) or higher.
 
-We also recommend using Visual Studio 2019 or 2022 for writing code.
+Flax Editor requires [.NET SDK 7](ttps://dotnet.microsoft.com/en-us/download/dotnet/7.0).
+
+We also recommend using Visual Studio 2022 for writing code.
 You can download the free community edition [here](https://www.visualstudio.com/downloads/).
 
 ## GPU Drivers
