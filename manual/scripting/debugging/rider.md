@@ -29,9 +29,33 @@ Click on a left side of the code editor to assign a breakpoint to the line. Red 
 
 ![Add a breakpoint](media/rider-breakpoint.png)
 
-### 5. Find debugger port
+### 5. Attach to Flax
 
-To attach with C# debugger to Flax you will need to know the **debugger port**. This can be checked in the log file of the engine from `<project>\Logs` - see the latest file and find the line similar to the following:
+Now, use **Run -> Attach to Process** option.
+
+![Rider debugger attach](media/rider-debug-attach-1.png)
+
+Then, select `FlaxEditor` process (or cooked Flax Game executable) to attach with .NET Core Debugger (you can attach with native C++ debugger too for native scripts).
+
+![Rider debugger attach](media/rider-debug-attach-2.png)
+
+### 6. Start a game
+
+Go back to the Flax Editor and press the `Play` button to start a game. Then script *OnUpdate()* function will be called and assigned breakpoint hit.
+
+![Script in Rider](media/debug-vs-4.jpg)
+
+### 7. Debug your code
+
+Now you can use all Rider debugging features to verify state of the variables and test your code.
+
+![Debuggign C# Script in Rider](media/rider-debugging-csharp.png)
+
+For more information about C# in Rider, see the [Rider documentation](https://www.jetbrains.com/help/rider/Languages_CSharp.html).
+
+## Mono debugging
+
+In past, Flax used mono for C# runtime (version 1.5 and older). Mobile and Console platforms still use mono for .NET hosting (including Mono AOT feature). To debug such builds use to attach with C# Mono debugger by identifying the debugger server port from Log:
 
 ```
 ...
@@ -40,9 +64,7 @@ To attach with C# debugger to Flax you will need to know the **debugger port**. 
 ...
 ```
 
-This informs about the Mono debugger server running on a local machine and the given port. It's calculated from expression `41000 + process_id % 1000`. You can also run Flax Editor with specified ip and port with a command-line argument such as `-debug 127.0.0.1:55555`.
-
-### 6. Add configuration
+This informs about the Mono debugger server running on a local machine and the given port. It's calculated from expression `41000 + process_id % 1000`. You can also run Flax with specified ip and port with a command-line argument such as `-debug 127.0.0.1:55555`.
 
 Once you know the port you can create configuration of type **Mono Remote**. Use *Edit Configuration* button and select `+` plus button to create new confgiuration for Mono Remote debugging.
 
@@ -54,24 +76,6 @@ Then name it eg. to `Debug C# Game` and set **Port** to the value from the edito
 
 ![Rider Mono Remote](media/rider-edit-mono-remote.png)
 
-You can run Editor from command line eg. `FlaxEditor.exe -project project_path -debug 127.0.0.1:50000` to use fixed Mono debugger port.
-
-### 7. Attach to Flax
-
 Once you've set the port you can launch this configuration and attach with debugger.
 
 ![Rider Debug C# Start](media/rider-start-debug.png)
-
-### 8. Start a game
-
-Go back to the Flax Editor and press the `Play` button to start a game. Then script *OnUpdate()* function will be called and assigned breakpoint hit.
-
-![Script in Rider](media/debug-vs-4.jpg)
-
-### 8. Debug your code
-
-Now you can use all Rider debugging features to verify state of the variables and test your code.
-
-![Debuggign C# Script in Rider](media/rider-debugging-csharp.png)
-
-For more information about C# in Rider, see the [Rider documentation](https://www.jetbrains.com/help/rider/Languages_CSharp.html).
