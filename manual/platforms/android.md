@@ -15,7 +15,7 @@ Follow these steps to setup your development PC for building game for Android pl
   * Set `ANDROID_HOME` env var to SDK location (typically `C:\Users\USERNAME\AppData\Local\Android\android-studio\sdk` on Windows)
 * Install **NDK**
   * via Android SDK Manager: *Android SDK -> SDK Tools -> NDK (side by side)*
-  * or manually via [https://developer.android.com/ndk/downloads/index.html](https://developer.android.com/ndk/downloads/index.html) and set `ANDROID_NDK` env var to install location) 
+  * or manually via [https://developer.android.com/ndk/downloads/index.html](https://developer.android.com/ndk/downloads/index.html) and set `ANDROID_NDK` env var to install location
 * Install **Java**
   * use in-built from Android Studio: set `JAVA_HOME` env var to `<android-studio>\jbr`
   * or download manually from [https://jdk.java.net/19](https://jdk.java.net/19) and set env var `JAVA_HOME` to jdk root folder

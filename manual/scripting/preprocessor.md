@@ -20,11 +20,10 @@ public override void OnStart()
 | **FLAX** | Always defined. Can be used to detect code compiled for Flax environment. |
 | **FLAX_EDITOR** | Compile for editor (play in-edior). |
 | **PLATFORM_WINDOWS** | Compile for Windows. |
-| **PLATFORM_UWP** | Compile for Universal Windows Platform (UWP). |
 | **PLATFORM_XBOX_ONE** | Compile for Xbox One. |
 | **PLATFORM_XBOX_SCARLETT** | Compile for Xbox Scarlett. |
 | **PLATFORM_PS4** | Compile for PlayStation 4. |
-| **PLATFORM_PS5** | Compile for PlayStation 4. |
+| **PLATFORM_PS5** | Compile for PlayStation 5. |
 | **PLATFORM_LINUX** | Compile for Linux. |
 | **PLATFORM_ANDROID** | Compile for Android. |
 | **PLATFORM_SWITCH** | Compile for Switch. |
@@ -40,4 +39,3 @@ public override void OnStart()
 | **USE_AOT** | Defined when compiling C# with [AOT mode](restrictions.md) enabled. |
 
 To specify custom compilation macros see [Game Cooker](../editor/flax-build/index.md) documentation.
-

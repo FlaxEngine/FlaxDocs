@@ -26,6 +26,7 @@ C# scripting runtime and tools have been updated to use the latest .NET 7 SDK on
 * Mobile and Consoles use new [mono](https://github.com/dotnet/runtime/tree/main/src/mono) with Mono AOT but with the latest class library (feature compatible with CoreCLR)
 * Visual Studio 2019 (and older) are unsupported by .NET 7 SDK (still can be used for programming but with less tooling)
 * [Flax.VS](https://marketplace.visualstudio.com/items?itemName=Flax.FlaxVS) extension is not required anymore for C# debugging in Visual Studio - VS 2022 has inbuilt .NET 7 debugger
+* Android platform requires Android .NET Workload installation via `dotnet workload install android`
 * Old Mono runtime hosting code is still available in Flax codebase but is disabled and will be removed in future
 
 We've updated docs, code examples, and all official plugins to reflect those changes.

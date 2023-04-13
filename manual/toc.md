@@ -407,7 +407,6 @@
 
 # [Platforms](platforms/index.md)
 ## [Windows](platforms/windows.md)
-## [UWP](platforms/uwp.md)
 ## [Xbox One](platforms/xbox-one.md)
 ## [Xbox Scarlett](platforms/xbox-scarlett.md)
 ## [PlayStation 4](platforms/ps4.md)
@@ -416,6 +415,7 @@
 ## [Android](platforms/android.md)
 ## [Switch](platforms/switch.md)
 ## [macOS](platforms/mac.md)
+## [iOS](platforms/ios.md)
 
 # [Contributing](contributing/index.md)
 ## [Feature Requests](contributing/feature-requests.md)

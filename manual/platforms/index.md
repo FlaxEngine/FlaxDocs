@@ -8,8 +8,7 @@ This section covers the specific information for different aspects of each platf
 
 ## Supported platforms
 
-* [Windows Desktop 7, 8, 10](windows.md)
-* [Universal Windows (UWP)](uwp.md)
+* [Windows Desktop 7, 8, 10, 11](windows.md)
 * [Xbox One](xbox-one.md)
 * [Xbox Scarlett](xbox-scarlett.md)
 * [PlayStation 4](ps4.md)
@@ -18,6 +17,7 @@ This section covers the specific information for different aspects of each platf
 * [Android](android.md)
 * [Switch](switch.md)
 * [macOS](mac.md)
+* [iOS](ios.md)
 
 > [!TIP]
 > To check on which platform game is running use [Platform.Platform](https://docs.flaxengine.com/api/FlaxEngine.Platform.html#FlaxEngine_Application_Platform). You can also use [preprocessor variables](../scripting/preprocessor.md) in your code.
