@@ -95,6 +95,11 @@ GameSettings.LoadAsset<NetworkSettings>().SetInstance(networkSettings);
 
 To register object (script or actor) for network call `NetworkReplicator.AddObject` (eg. in `OnEnable` method). It will be automatically added to replication and will be able to invoke or execute RPCs. If you want to register dynamically spawned scene object (eg. player prefab) then call `NetworkReplicator.SpawnObject` (`DespawnObject` to remove it).
 
+Statically placed objects on a level (eg. door actor) can register themselves (eg. in `OnEnable`/`BeginPlay` method) so when the network is online those objects will be properly replicated with RPCs support since they exist on server and clients (assuming all of them loaded that level).
+
+> [!Tip]
+> `NetworkReplicator` APIs are ignored when `NetworkManager` is offline.
+
 ```cs
 public class MyPlayer : Script
 {
