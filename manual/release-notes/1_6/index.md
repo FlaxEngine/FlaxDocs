@@ -28,6 +28,7 @@ C# scripting runtime and tools have been updated to use the latest .NET 7 SDK on
 * [Flax.VS](https://marketplace.visualstudio.com/items?itemName=Flax.FlaxVS) extension is not required anymore for C# debugging in Visual Studio - VS 2022 has inbuilt .NET 7 debugger
 * Android platform requires Android .NET Workload installation via `dotnet workload install android`
 * Old Mono runtime hosting code is still available in Flax codebase but is disabled and will be removed in future
+* If you're using `Regex` in your code then add `options.ScriptingAPI.SystemReferences.Add("System.Text.RegularExpressions");` to `Game.Build.cs` to properly reference System Library (not used by default now)
 
 We've updated docs, code examples, and all official plugins to reflect those changes.
 
