@@ -38,3 +38,7 @@ Key configuration files:
 * `commit.txt` - contains commit hash of the [FlaxEngine](https://github.com/FlaxEngine/FlaxEngine) revision to use for the API building.
 * `.github\workflows\docs-publish.yml` - Github Actions workflow triggered on git tag `update-<version>` that builds whole docs with api and publishes them to [FlaxDocsHost](https://github.com/FlaxEngine/FlaxDocsHost) for static hosting on Github Pages.
 * `.github\workflows\docs-build.yml` - Github Actions workflow triggered on push/pr that builds manual without api to verify the integrity of the modified docs (eg. warns about invalid links or missing files).
+
+## Licensing
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">FlaxDocs</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
