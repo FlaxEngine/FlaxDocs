@@ -14,7 +14,7 @@ For developers using Flax Editor on Linux platforms the requirements are:
 
 | | Recommended |
 |-------|-------|-------|
-| Tested operating systems | Ubuntu 18 LTS, Ubuntu 20 LTS |
+| Tested operating systems | Ubuntu 22 LTS |
 | Processor | Quad-core or more, 2 GHz or faster |
 | RAM | 4 GB or more |
 | Hard drive space | 1 GB minimum |
@@ -54,7 +54,7 @@ Ig you're using laptop with integrated GPU and you want Flax to run on dedicated
 | `-amd` | Selects AMD GPU. |
 | `-intel` | Selects Intel GPU. |
 
-You can also specify the C# Mono debugger port eg. `-debug 127.0.0.1:55555`. To learn more about command line switches see [this documentation page](../editor/advanced/command-line-access.md).
+To learn more about command line switches see [this documentation page](../editor/advanced/command-line-access.md).
 
 Example command line to run Editor with custom options:
 

@@ -26,7 +26,7 @@ For developers using Flax Editor on Mac platforms the requirements are:
 
 ## Command line access
 
-You can specify the C# Mono debugger port eg. `-debug 127.0.0.1:55555`. To learn more about command line switches see [this documentation page](../editor/advanced/command-line-access.md).
+To learn more about command line switches see [this documentation page](../editor/advanced/command-line-access.md).
 
 ## New project
 

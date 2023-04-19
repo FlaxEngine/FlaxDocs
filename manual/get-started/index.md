@@ -87,12 +87,6 @@ Welcome to the Official Flax Engine Manual! In this section you will find everyt
 </div>
 
 <div class="frontpage-section">
-<a href="vs-extension.md"><img src="media/vs-icon.jpg"></a>
-<h3><a href="vs-extension.md">Visual Studio extension</a></h3>
-<p>Install our plugin for Visual Studio for programmers.</p>
-</div>
-
-<div class="frontpage-section">
 <a href="glossary.md"><img src="media/glossary-icon.jpg"></a>
 <h3><a href="glossary.md">Glossary</a></h3>
 <p>See the most common terms used in Flax Engine.</p>
