@@ -232,6 +232,7 @@
 ### [Editor Interface](animation/skinned-model/interface.md)
 ## [Animation](animation/animation/index.md)
 ### [Animation Events](animation/animation/anim-events.md)
+### [Animation Retargeting](animation/animation/retargeting.md)
 ## [Anim Graph](animation/anim-graph/index.md)
 ### [Editor Interface](animation/anim-graph/interface.md)
 ### [Graph Parameters](animation/anim-graph/parameters.md)

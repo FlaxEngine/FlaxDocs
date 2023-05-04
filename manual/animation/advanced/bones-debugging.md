@@ -11,3 +11,7 @@ All the windows that show the animated model including:
 
 contain a dedicated button in a toolbar that shows/hides the skeleton bones structure.
 Simply check it to see the character bones. It supports live updating so bones will match the animated model movement.
+
+You can also use option to display bones nodes in 3D:
+
+![Skeleton Nodes Debugging](media/skeleton-names-debug.png)

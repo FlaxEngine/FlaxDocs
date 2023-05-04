@@ -14,6 +14,7 @@ This documentation section describes how to work with the Flax animation pipelin
  * [Editor Interface](skinned-model/interface.md)
 * [Animation](animation/index.md)
  * [Animation Events](animation/anim-events.md)
+ * [Animation Retargeting](animation/retargeting.md)
 * [Anim Graph](anim-graph/index.md)
  * [Editor Interface](anim-graph/interface.md)
  * [Graph Parameters](anim-graph/parameters.md)

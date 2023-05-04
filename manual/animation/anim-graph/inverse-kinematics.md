@@ -28,5 +28,4 @@ The node takes animated pose and adjusts the specified *node*, *parent node* and
 The input property *Joint Target* specifies the target location for the middle node (joint) to target to and can be used to orient the middle node into a specific direction (eg. make player elbows move ouside the spline, instead of penetrate body).
 If the target cannot be reached (eg. target is too far) the node can strech bones up to specified *Max Stretch Scale*. You can enable it by checking *Allow Stretching*.eached (eg. target is too far) the node can strech bones up to specified *Max Stretch Scale*. You can enable it by checking *Allow Stretching*.
 
-
 ![Two Bone IK](media/two-bone-ik.gif)

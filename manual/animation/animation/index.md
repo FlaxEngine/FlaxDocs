@@ -4,6 +4,11 @@
 
 **Animation** asset contains a set of bone animation channels and curves. It's used to animate [skinned model](../skinned-model/index.md) skeleton bones.
 
+## In this section
+
+* [Animation Events](anim-events.md)
+* [Animation Retargeting](retargeting.md)
+
 ## Importing animations
 
 Importing animation files works in the same way as for other asset types. Simple drag and drop the model files from *Explorer* into the *Content* window or use the *Import* button.
