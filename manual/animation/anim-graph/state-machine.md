@@ -27,7 +27,8 @@ Each transition has a set of various properties that you can define. Disabled tr
 | **Use Default Rule** | If checked, animation graph will perform automatic transition based on the state animation pose (single shot animation play). |
 | **Order** | The transition order. Transitions with the higher order are handled before the ones with the lower order. |
 | **Blend Duration** | Transition blend duration (in seconds). |
-| **BlendMode** | Transition blending mode for blend alpha. |
+| **Blend Mode** | Transition blending mode for blend alpha. |
+| **Interruption** | Transition interruption options (flags). Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**None**</td><td>Nothing.</td></tr><tr><td>**Rule Rechecking**</td><td>Transition rule will be rechecked during active transition with option to interrupt transition.</td></tr><tr><td>**Instant**</td><td>Interrupted transition is immediately stopped without blending out.</td></tr></tbody></table>|
 
 ## Transition Rule
 
@@ -40,3 +41,14 @@ Also, remember about using special **Transition Source State Anim** node that ca
 
 ![Transition Source State Anim](../tutorials/media/transition-source-state-anim.png)
 
+## Entry State
+
+![Entry State in State Machine](media/entry-state.png)
+
+**Entry** state is a special node (always created) that can have a single transition (instant) to the initial state inside the state machine. It points to the state that should be selected when the state machine becomes relevant.
+
+## Any State
+
+![Any State in State Machine](media/any-state.png)
+
+**Any** state is a special node that can define transitions to states that will be always checked during state machine updates. It can be used to improve the workflow when creating more complex character animations.
