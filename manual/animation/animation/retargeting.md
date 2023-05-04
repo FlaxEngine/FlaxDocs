@@ -27,3 +27,8 @@ Skinned models can have any amount of setups created for different skeletons and
 | ![Animation Retargeting](media/animation-retargeting-before.gif) | ![Animation Retargeting Flax](media/animation-retargeting-after.gif) |
 
 The animations retargeting system uses the reference pose of the source skeleton (known as *T-pose* or *A-pose*) to calculate the animated node motion relative to that ref pose. Then this motion is transformed into the target skeleton and applied. This assumes the animation is being played proportionally to the skeleton hierarchy and thus looks proper. Above, on the left gif, you can see 4 pairs of characters that are playing the same animation but created for different skeletons. After retargeting is applied the animations pose is properly applied as shown on the right gif.
+
+### Tips
+
+- Use the same T-Pose or A-Pose for both animation skeleton and target model pose so retargeting can work properly (eg. use Import Rotation on the imported model and animation to match the source and target skeletons)
+- If you have only animation file you can import it as Animation and then as Skinned Model to use its skeleton for retargeting (Skinned Model doesn't need to have geometry as it can be skeleton-only container for retargeting)
