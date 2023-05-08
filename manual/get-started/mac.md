@@ -19,7 +19,7 @@ For developers using Flax Editor on Mac platforms the requirements are:
 
 | | Recommended |
 |-------|-------|-------|
-| Minimum supported version | **macOS 10.14 or higher** |
+| Minimum supported version | **macOS 10.15 or higher** |
 | Processor | Quad-core or more, 2 GHz or faster |
 | RAM | 4 GB or more |
 | Hard drive space | 1 GB minimum |

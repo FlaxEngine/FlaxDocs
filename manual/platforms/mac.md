@@ -2,7 +2,7 @@
 
 ## Technical information
 
-Flax supports **macOS 10.14 or newer**. For graphics rendering Vulkan is used via MoltenVK to run on Metal.
+Flax supports **macOS 10.15 or newer**. For graphics rendering Vulkan is used via MoltenVK to run on Metal.
 
 ## Build options
 
