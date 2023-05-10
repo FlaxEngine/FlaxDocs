@@ -240,6 +240,7 @@
 ### [Inverse Kinematics](animation/anim-graph/inverse-kinematics.md)
 ### [Functions](animation/anim-graph/functions.md)
 ### [Animation Slots](animation/anim-graph/animation-slots.md)
+### [Instance Data](animation/anim-graph/instance-data.md)
 ### [Custom Nodes](animation/anim-graph/custom-nodes.md)
 ## [Animated Model](animation/animated-model.md)
 ## [Skeleton Mask](animation/skeleton-mask.md)

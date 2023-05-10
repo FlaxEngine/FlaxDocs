@@ -14,6 +14,7 @@ This documentation section explains the basics and shows how to create and use t
 * [Inverse Kinematics](inverse-kinematics.md)
 * [Functions](functions.md)
 * [Animation Slots](animation-slots.md)
+* [Instance Data](instance-data.md)
 * [Custom Ndes](custom-nodes.md)
 
 ## Creating Anim Graph
