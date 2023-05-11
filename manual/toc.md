@@ -221,6 +221,7 @@
 ### [How to use custom settings](scripting/tutorials/custom-settings.md)
 ### [How to import asset from code](scripting/tutorials/import-asset-from-code.md)
 ### [How to spawn decal on mouse click](scripting/tutorials/decal-on-mouse-click.md)
+### [How to create Spring Arm camera](scripting/tutorials/spring-arm-camera.md)
 ### [How to control PostFx from code](scripting/tutorials/control-postfx-from-code.md)
 ### [How to use third-party library](scripting/tutorials/use-third-party-library.md)
 ### [How to add scripts module](scripting/tutorials/add-scripts-module.md)
