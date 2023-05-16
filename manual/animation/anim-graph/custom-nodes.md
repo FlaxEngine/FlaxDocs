@@ -9,7 +9,7 @@ Anim Graph supports extending it by defining and using **custom nodes**. This fe
 
 Every custom node consists of two parts: the *surface node descriptor factor* and the *runtime logic controller*.
 
-The first step is to add a new C# script inside the `Source/<module_name>` directory and use the target class name with *Editor* postfix. Alternatively, you can use an additional editor-only scripts module as shown in tutorial [here](../../scripting/tutorials/add-scripts-module.md).
+The first step is to add a new C# script inside the `Source/<module_name>` directory and use the target class name with *NodeFactory* postfix. Alternatively, you can use an additional editor-only scripts module as shown in tutorial [here](../../scripting/tutorials/add-scripts-module.md).
 
 Here is an example code that defines a simple node which takes animation pose and scale parameter as inputs and outputs modified animation pose.
 
