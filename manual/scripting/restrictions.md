@@ -25,7 +25,7 @@ Because code generation is disabled in AOT mode (scripting backend throws an exc
 * When using generic types you need to declare generic attributes types to precompile them.
 * C# debugger is not available - but debug symbols are available for native debugger (eg. full Stack Traces).
 
-When compiling with AOT mode enabled C# scripts have a preprocessor defined `USE_AOT`. It can be sued to redirect different API usage depending o the target platform build.
+When compiling with AOT mode enabled C# scripts have a preprocessor defined `USE_AOT`. It can be used to redirect different API usage depending o the target platform build.
 
 Platforms that use AOT:
 * Xbox One

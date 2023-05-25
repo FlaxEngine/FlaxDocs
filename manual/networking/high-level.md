@@ -135,7 +135,7 @@ Each object can query own role and ownership via `GetObjectRole`/`GetObjectOwner
 
 ## Replication Hierarchy
 
-`NetworkReplicationHierarchy` is a feature that allows the game to configure objects replication mechanism. It's an optional extension to `NetworkReplicator` accessible via `Hierarchy` property and can be set by game to a custom nodes hierarchy. It's used to store objects for replication in a more optimized structure (eg. grid or hierarchical tree) and it can be sued to control the replication rate and target clients for each object individually.
+`NetworkReplicationHierarchy` is a feature that allows the game to configure objects replication mechanism. It's an optional extension to `NetworkReplicator` accessible via `Hierarchy` property and can be set by game to a custom nodes hierarchy. It's used to store objects for replication in a more optimized structure (eg. grid or hierarchical tree) and it can be used to control the replication rate and target clients for each object individually.
 
 For example, when a large game level contains 10k networked objects (eg. POIs) then replicating all of them to all connected clients would kill the performance. To solve this problem a simple replication hierarchy can be created that would control Replication FPS for each object and call unnecessary replications for clients that are too far from the objects. Below is the sample code:
 
