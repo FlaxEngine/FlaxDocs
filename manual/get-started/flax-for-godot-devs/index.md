@@ -50,7 +50,7 @@ See [Assets](../assets/index.md) page to learn more about importing and using ga
 
 ## Node vs Actor
 
-Flax uses similar conpet to describe the scene contents. Instead of using Nodes we use [Actors](../scenes/actors.md). Each Actor has its own type (e.g. point light, box collider) and a collection of attached scripts.
+Flax uses a similar concept to describe the scene contents. Instead of using Nodes we use [Actors](../scenes/actors.md). Each Actor has its own type (e.g. point light, box collider) and a collection of attached scripts.
 
 In Flax, Scene object is also an Actor so you can access it like any other Actor. This means that Scenes can have their own scripts and be transformed like other objects.
 
