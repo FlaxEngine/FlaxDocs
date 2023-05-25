@@ -137,10 +137,12 @@ Each object can query own role and ownership via `GetObjectRole`/`GetObjectOwner
 
 `NetworkReplicationHierarchy` is a feature that allows the game to configure objects replication mechanism. It's an optional extension to `NetworkReplicator` accessible via `Hierarchy` property and can be set by game to a custom nodes hierarchy. It's used to store objects for replication in a more optimized structure (eg. grid or hierarchical tree) and it can be used to control the replication rate and target clients for each object individually.
 
-For example, when a large game level contains 10k networked objects (eg. POIs) then replicating all of them to all connected clients would kill the performance. To solve this problem a simple replication hierarchy can be created that would control Replication FPS for each object and call unnecessary replications for clients that are too far from the objects. Below is the sample code:
+`NetworkReplicationHierarchy` runs on both server and client but contains only objects that are *owned locally* - no need to manage objects that should not be replicated by remote clients.
+
+For example, when a large game level contains 10k networked objects (eg. POIs) then replicating all of them to all connected clients would kill the performance. To solve this problem a simple replication hierarchy can be created that would control Replication FPS for each object and skip unnecessary replications for clients that are too far away. Below is the sample code:
 
 > [!Tip]
-> `NetworkReplicationHierarchy` runs on both server and client but contains only objects that are *owned locally* - no need to manage objects that should not be replicated by remote clients.
+> Use `NetworkReplicator.DirtyObject(obj)` to mark object as modified for immediate replication (eg. when an object has low Replication FPS but needs to replicate state quickly).
 
 # [C#](#tab/code-csharp)
 ```cs
