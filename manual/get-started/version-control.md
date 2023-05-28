@@ -11,16 +11,24 @@ Here is an example `.gitignore` file for the **Git** repository with Flax projec
 
 ```
 # Ignore Flax project files
-Binaries/
-Cache/
-Logs/
-Output/
-Screenshots/
+/Binaries/
+/Cache/
+/Logs/
+/Output/
+/Screenshots/
 *.HotReload.*
+Source/*.Gen.*
 
 # Ignore Visual Studio project files (generated locally)
 *.csproj
 *.sln
+
+# Ignore Visual Code project files (generated locally)
+*.code-workspace
+*.vscode/
+
+# Ignore Rider project files (generated locally)
+*.idea/
 
 # Ignore thumbnails created by Windows
 Thumbs.db
@@ -44,11 +52,9 @@ Thumbs.db
 *.ilk
 *.log
 [Bb]in
-[Dd]ebug*/
 *.lib
 *.sbr
-obj/
-[Rr]elease*/
+/Source/obj/
 _ReSharper*/
 [Tt]est[Rr]esult*
 .vs/
