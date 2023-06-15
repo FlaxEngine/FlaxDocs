@@ -232,5 +232,22 @@ You can easily customizable proxy methods by overriding them.
 Then register custom asset proxy within [Editor plugin](custom-plugin.md) initialization (ensure to remove it on game code unloading - eg. during script hot-reload in Editor):
 
 ```cs
-Editor.Instance.ContentDatabase.Proxy.Add(new MySettingsProxy());
+public class MyEditorPlugin : EditorPlugin
+{
+    private MySettingsProxy _proxy;
+
+    public override void InitializeEditor()
+    {
+        _proxy = new MySettingsProxy();
+        Editor.ContentDatabase.AddProxy(_proxy);
+    }
+
+    public override void DeinitializeEditor()
+    {
+        Editor.ContentDatabase.RemoveProxy(_proxy);
+        _proxy = null;
+
+        base.DeinitializeEditor();
+    }
+}
 ```

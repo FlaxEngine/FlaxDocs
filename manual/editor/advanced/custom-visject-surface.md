@@ -87,14 +87,14 @@ public class ExpressionGraphPlugin : EditorPlugin
         _expressionGraphProxy = new ExpressionGraphProxy();
 
         // Register the proxy
-        Editor.ContentDatabase.Proxy.Insert(0, _expressionGraphProxy);
+        Editor.ContentDatabase.AddProxy(_expressionGraphProxy);
     }
 
     /// <inheritdoc />
     public override void Deinitialize()
     {
     	// Cleanup on plugin deinit
-        Editor.ContentDatabase.Proxy.Remove(_expressionGraphProxy);
+        Editor.ContentDatabase.RemoveProxy(_expressionGraphProxy);
 
         base.Deinitialize();
     }
