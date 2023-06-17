@@ -236,17 +236,17 @@ public class MyEditorPlugin : EditorPlugin
 {
     private MySettingsProxy _proxy;
 
+    /// <inheritdoc />
     public override void InitializeEditor()
     {
         _proxy = new MySettingsProxy();
-        Editor.Instance.ContentDatabase.AddProxy(_proxy);
-        // Rebuild content database after adding proxies
-        Editor.Instance.ContentDatabase.Rebuild();
+        Editor.ContentDatabase.AddProxy(_proxy, true);
     }
 
+    /// <inheritdoc />
     public override void DeinitializeEditor()
     {
-        Editor.Instance.ContentDatabase.RemoveProxy(_proxy);
+        Editor.ContentDatabase.RemoveProxy(_proxy, true);
         _proxy = null;
 
         base.DeinitializeEditor();
