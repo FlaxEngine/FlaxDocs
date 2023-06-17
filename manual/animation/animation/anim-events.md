@@ -20,7 +20,7 @@ Engine creates `AnimEvent` object instances within `Animation` asset during load
 
 ## How to create Anim Event type?
 
-Game and plugins can define custom anim event types with instanced data and custom gameplay logic. Here is an example of custom anim event which plays a sound clip on event at the given skeleton node location. It can be sued to play character footsteps sounds or be extended to spawn VFX and Decal too.
+Game and plugins can define custom anim event types with instanced data and custom gameplay logic. Here is an example of custom anim event which plays a sound clip on event at the given skeleton node location. It can be used to play character footsteps sounds or be extended to spawn VFX and Decal too.
 
 # [C#](#tab/code-csharp)
 ```cs

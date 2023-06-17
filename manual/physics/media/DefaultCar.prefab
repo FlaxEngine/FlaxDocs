@@ -1,7 +1,7 @@
 {
 	"ID": "56b8bc1444c5f2d29c89cd9398d73d5a",
 	"TypeName": "FlaxEngine.Prefab",
-	"EngineBuild": 6223,
+	"EngineBuild": 6341,
 	"Data": [
 	{
 		"ID": "701dc46c4f8ee62ab4301d9e2fc9159f",
@@ -33,7 +33,8 @@
 				"SuspensionForceOffset": 0.0,
 				"TireLateralStiffness": 17.0,
 				"TireLateralMax": 2.0,
-				"TireLongitudinalStiffness": 1000.0
+				"TireLongitudinalStiffness": 1000.0,
+				"TireFrictionScale": 1.0
 			},
 			{
 				"Type": 1,
@@ -51,7 +52,8 @@
 				"SuspensionForceOffset": 0.0,
 				"TireLateralStiffness": 17.0,
 				"TireLateralMax": 2.0,
-				"TireLongitudinalStiffness": 1000.0
+				"TireLongitudinalStiffness": 1000.0,
+				"TireFrictionScale": 1.0
 			},
 			{
 				"Type": 2,
@@ -69,7 +71,8 @@
 				"SuspensionForceOffset": 0.0,
 				"TireLateralStiffness": 17.0,
 				"TireLateralMax": 2.0,
-				"TireLongitudinalStiffness": 1000.0
+				"TireLongitudinalStiffness": 1000.0,
+				"TireFrictionScale": 1.0
 			},
 			{
 				"Type": 3,
@@ -87,7 +90,8 @@
 				"SuspensionForceOffset": 0.0,
 				"TireLateralStiffness": 17.0,
 				"TireLateralMax": 2.0,
-				"TireLongitudinalStiffness": 1000.0
+				"TireLongitudinalStiffness": 1000.0,
+				"TireFrictionScale": 1.0
 			}
 		],
 		"Engine": {
@@ -103,9 +107,15 @@
 		"Name": "Cam Target",
 		"Transform": {
 			"Translation": {
-				"X": -3.5439114570617677,
+				"X": 4.76837158203125e-7,
 				"Y": 38.09867477416992,
-				"Z": 0.0
+				"Z": -3.543911933898926
+			},
+			"Orientation": {
+				"X": 0.0,
+				"Y": -0.70710688829422,
+				"Z": 0.0,
+				"W": 0.7071067094802856
 			}
 		},
 		"StaticFlags": 0,
@@ -119,9 +129,15 @@
 		"Name": "BoxCollider 0",
 		"Transform": {
 			"Translation": {
-				"X": -16.44647216796875,
+				"X": 0.0000019073486328125,
 				"Y": 24.043792724609376,
-				"Z": 0.0
+				"Z": -16.446474075317384
+			},
+			"Orientation": {
+				"X": 0.0,
+				"Y": -0.70710688829422,
+				"Z": 0.0,
+				"W": 0.7071067094802856
 			},
 			"Scale": {
 				"X": 1.2783974409103394,
@@ -162,6 +178,12 @@
 				"Y": -28.1876220703125,
 				"Z": 0.0
 			},
+			"Orientation": {
+				"X": 0.0,
+				"Y": -0.70710688829422,
+				"Z": 0.0,
+				"W": 0.7071067094802856
+			},
 			"Scale": {
 				"X": 3.4000000953674318,
 				"Y": 0.6000000238418579,
@@ -197,15 +219,15 @@
 		"Name": "Wheel_RR",
 		"Transform": {
 			"Translation": {
-				"X": -110.23990631103516,
+				"X": 73.14820098876953,
 				"Y": -61.28427505493164,
-				"Z": -73.14817810058594
+				"Z": -110.23991394042969
 			},
 			"Orientation": {
-				"X": 0.7071067690849304,
-				"Y": 9.313223525708736e-10,
-				"Z": 9.313223525708736e-10,
-				"W": 0.7071067690849304
+				"X": 0.5,
+				"Y": -0.5,
+				"Z": 0.5,
+				"W": 0.5
 			}
 		},
 		"StaticFlags": 0,
@@ -245,15 +267,15 @@
 		"Name": "Wheel_FR",
 		"Transform": {
 			"Translation": {
-				"X": 112.38439178466797,
+				"X": 73.1481704711914,
 				"Y": -61.28428268432617,
-				"Z": -73.14817810058594
+				"Z": 112.38441467285156
 			},
 			"Orientation": {
-				"X": 0.7071067690849304,
-				"Y": 9.313223525708736e-10,
-				"Z": 9.313223525708736e-10,
-				"W": 0.7071067690849304
+				"X": 0.5,
+				"Y": -0.5,
+				"Z": 0.5,
+				"W": 0.5
 			}
 		},
 		"StaticFlags": 0,
@@ -293,15 +315,15 @@
 		"Name": "Wheel_RL",
 		"Transform": {
 			"Translation": {
-				"X": -110.23990631103516,
+				"X": -73.13993072509766,
 				"Y": -61.28427505493164,
-				"Z": 73.13993835449219
+				"Z": -110.23992919921875
 			},
 			"Orientation": {
-				"X": 0.7071067690849304,
-				"Y": 9.313223525708736e-10,
-				"Z": 9.313223525708736e-10,
-				"W": 0.7071067690849304
+				"X": 0.5,
+				"Y": -0.5,
+				"Z": 0.5,
+				"W": 0.5
 			}
 		},
 		"StaticFlags": 0,
@@ -341,15 +363,15 @@
 		"Name": "Wheel_FL",
 		"Transform": {
 			"Translation": {
-				"X": 112.38439178466797,
+				"X": -73.13996124267578,
 				"Y": -61.28428268432617,
-				"Z": 73.13993835449219
+				"Z": 112.3843994140625
 			},
 			"Orientation": {
-				"X": 0.7071067690849304,
-				"Y": 9.313223525708736e-10,
-				"Z": 9.313223525708736e-10,
-				"W": 0.7071067690849304
+				"X": 0.5,
+				"Y": -0.5,
+				"Z": 0.5,
+				"W": 0.5
 			}
 		},
 		"StaticFlags": 0,

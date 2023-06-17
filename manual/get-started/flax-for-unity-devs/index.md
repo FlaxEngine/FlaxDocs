@@ -66,7 +66,7 @@ In Flax, Scene object is also an Actor so you can access it like any other Actor
 
 ## MonoBehaviour vs Script
 
-When it comes to game scripting, Unity and Flax are very similar. There are some differences in C# API (Flax has bigger math library, is more performance-oriented and uses new C# 7.2). In fact, the whole C# editor and C++ engine including scripting API is open and can be found [here](https://github.com/FlaxEngine/FlaxEngine). All contributions are welcome.
+When it comes to game scripting, Unity and Flax are very similar. There are some differences in C# API (Flax has bigger math library, is more performance-oriented and uses new C# 11 via .NET 7). In fact, the whole C# editor and C++ engine including scripting API is open and can be found [here](https://github.com/FlaxEngine/FlaxEngine). All contributions are welcome.
 
 Also, Flax support native **[C++](../../scripting/cpp/index.md)** scripting and **[Visual Scripting](../../scripting/visual/index.md)** as an in-build feature. We don't want to limit our developers to just a one programming language for the game development as using C\+\+ and Visual Scripting together with C# can benefit.
 

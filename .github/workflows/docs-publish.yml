@@ -5,6 +5,10 @@ on:
     tags: 
       - update-*
 
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: false
+
 jobs:
   build:
     runs-on: ubuntu-22.04
@@ -32,6 +36,17 @@ jobs:
           sudo sh -c 'echo "deb https://download.mono-project.com/repo/ubuntu stable-bionic main" > /etc/apt/sources.list.d/mono-official-stable.list'
           sudo apt-get update
           sudo apt-get install mono-complete --yes
+
+    - name: Get .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+    - name: Print .NET info
+      run: |
+        dotnet --info
+        dotnet workload --info
+
+    - name: Checkout LFS
 
       - name: Build docs
         run: |

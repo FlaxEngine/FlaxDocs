@@ -2,7 +2,7 @@
 
 ## Technical information
 
-Flax is compiled for Linux platform using **Clang** compiler and uses **X11** for UI. Binaries are tested on Ubuntu 18 and 20.
+Flax is compiled for Linux platform using **Clang** compiler and uses **X11** for UI. Binaries are tested on Ubuntu `22.04`.
 
 If your device has multiple GPUs installed you can select one using the cmd line argument: `-nvidia`, `-intel`, or `-amd`. Flax uses **Vulkan** for rendering.
 

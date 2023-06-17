@@ -133,6 +133,139 @@ public class MyGameManager : Script
 
 Each object can query own role and ownership via `GetObjectRole`/`GetObjectOwnerClientId` including utilities such as `IsObjectOwned`/`IsObjectSimulated`/`IsObjectReplicated`. Object owner can also update its ownership via `SetObjectOwnership`.
 
+## Replication Hierarchy
+
+`NetworkReplicationHierarchy` is a feature that allows the game to configure objects replication mechanism. It's an optional extension to `NetworkReplicator` accessible via `Hierarchy` property and can be set by game to a custom nodes hierarchy. It's used to store objects for replication in a more optimized structure (eg. grid or hierarchical tree) and it can be used to control the replication rate and target clients for each object individually.
+
+`NetworkReplicationHierarchy` runs on both server and client but contains only objects that are *owned locally* - no need to manage objects that should not be replicated by remote clients.
+
+For example, when a large game level contains 10k networked objects (eg. POIs) then replicating all of them to all connected clients would kill the performance. To solve this problem a simple replication hierarchy can be created that would control Replication FPS for each object and skip unnecessary replications for clients that are too far away. Below is the sample code:
+
+> [!Tip]
+> Use `NetworkReplicator.DirtyObject(obj)` to mark object as modified for immediate replication (eg. when an object has low Replication FPS but needs to replicate state quickly).
+
+# [C#](#tab/code-csharp)
+```cs
+// Custom replication hierarchy type
+public class MyReplicationHierarchy : NetworkReplicationHierarchy
+{
+    private NetworkReplicationGridNode _grid = new NetworkReplicationGridNode();
+
+    ~MyReplicationHierarchy()
+    {
+        // Cleanup memory
+        Destroy(_grid);
+    }
+
+    // Called by NetworkReplicator to insert object into hierarchy
+    public override void AddObject(NetworkReplicationHierarchyObject obj)
+    {
+        // Scale down update rate (it can be setup per-object type or from object interface method)
+        obj.ReplicationFPS = 30;
+
+        var actor = obj.Actor;
+        if (actor != null && actor.HasStaticFlag(StaticFlags.Transform))
+        {
+            // Insert static objects into a grid for faster replication
+            _grid.AddObject(obj);
+            return;
+        }
+
+        base.AddObject(obj);
+    }
+
+    // Called by NetworkReplicator to remove object from hierarchy
+    public override bool RemoveObject(Object obj)
+    {
+        if (_grid.RemoveObject(obj))
+            return true;
+        return base.RemoveObject(obj);
+    }
+
+    // Called every network update to gather objects for replication
+    public override void Update(NetworkReplicationHierarchyUpdateResult result)
+    {
+        // Setup players locations for distance culling
+        var clients = NetworkManager.Clients;
+        for (var i = 0; i < clients.Length; i++)
+        {
+            var client = clients[i];
+            // TODO: use real-life location of the player
+            result.SetClientLocation(i, Vector3.Zero);
+        }
+
+        // Update hierarchy
+        _grid.Update(result);
+        base.Update(result);
+    }
+}
+
+// Then in your game code before starting the multiplayer:
+NetworkReplicator.SetHierarchy(new MyReplicationHierarchy());
+```
+# [C++](#tab/code-cpp)
+```cpp
+
+#include "Engine/Networking/NetworkReplicationHierarchy.h"
+#include "Engine/Networking/NetworkManager.h"
+#include "Engine/Level/Actor.h"
+
+// Custom replication hierarchy type
+API_CLASS() class FLAXENGINE_API MyReplicationHierarchy : public NetworkReplicationHierarchy
+{
+    DECLARE_SCRIPTING_TYPE_WITH_CONSTRUCTOR_IMPL(MyReplicationHierarchy, NetworkReplicationHierarchy);
+private:
+    NetworkReplicationGridNode _grid;
+
+public:
+    // Called by NetworkReplicator to insert object into hierarchy
+    void AddObject(NetworkReplicationHierarchyObject obj) override
+    {
+        // Scale down update rate (it can be setup per-object type or from object interface method)
+        obj.ReplicationFPS = 30;
+
+        const Actor* actor = obj.GetActor();
+        if (actor && actor->HasStaticFlag(StaticFlags::Transform))
+        {
+            // Insert static objects into a grid for faster replication
+            _grid.AddObject(obj);
+            return;
+        }
+
+        NetworkReplicationHierarchy::AddObject(obj);
+    }
+
+    // Called by NetworkReplicator to remove object from hierarchy
+    bool RemoveObject(ScriptingObject* obj) override
+    {
+        if (_grid.RemoveObject(obj))
+            return true;
+        return NetworkReplicationHierarchy::RemoveObject(obj);
+    }
+
+    // Called every network update to gather objects for replication
+    void Update(NetworkReplicationHierarchyUpdateResult* result) override
+    {
+        // Setup players locations for distance culling
+        const auto& clients = NetworkManager::Clients;
+        for (int32 i = 0; i < clients.Count(); i++)
+        {
+            NetworkClient* client = clients[i];
+            // TODO: use real-life location of the player
+            result->SetClientLocation(i, Vector3::Zero);
+        }
+
+        // Update hierarchy
+        _grid.Update(result);
+        NetworkReplicationHierarchy::Update(result);
+    }
+};
+
+// Then in your game code before starting the multiplayer:
+NetworkReplicator::SetHierarchy(New<MyReplicationHierarchy>());
+```
+***
+
 ## Object Ownership
 
 In a fully-authoritative setup server owns all gameplay objects replicated over the network thus clients cannot enforce property changes on other clients directly. Hoverwer, the game might want to retain overship for local client pawns/characters and let servers do the sync or validation only. This might simplify gameplay simulation of the player inputs (players control local pawns) but still allows the server to validate state before replicating it to other clients.

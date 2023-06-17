@@ -18,6 +18,7 @@ You can use **Ctrl + F** to quickly find what you are looking for.
 * [How to create a custom actor type](../../scripting/tutorials/custom-actor.md)
 * [How to change scene from script](../../scripting/tutorials/change-scene.md)
 * [How to spawn decal on mouse click](../../scripting/tutorials/decal-on-mouse-click.md)
+* [How to create Spring Arm camera](../../scripting/tutorials/spring-arm-camera.md)
 * [How to create a prefab](../../get-started/prefabs/creating-prefabs.md)
 * [How to spawn a prefab](../../get-started/prefabs/spawning-prefabs.md)
 * [How to create a bouncing ball](../../physics/tutorials/bouncing-ball.md)

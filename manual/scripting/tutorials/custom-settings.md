@@ -44,10 +44,10 @@ You can also inject custom settings asset proxy controller for Editor which allo
 
 ```cs
 var assetProxy = new CustomSettingsProxy(typeof(MySettings), "My Settings");
-Editor.ContentDatabase.Proxy.Add(assetProxy);
+Editor.ContentDatabase.AddProxy(assetProxy);
 
 // then ensure to cleanup on deinitialization (eg. of the plugin)
-// Editor.ContentDatabase.Proxy.Remove(assetProxy);
+// Editor.ContentDatabase.RemoveProxy(assetProxy);
 ```
 
 ### 3. Edit settings in Editor

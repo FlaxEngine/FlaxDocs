@@ -23,11 +23,20 @@ The CPU performance profiling mode.
 
 To add code section to be included in profile blocks use the following code:
 
+# [C#](#tab/code-csharp)
 ```cs
 Profiler.BeginEvent("MyFunction");
 // do something
 Profiler.EndEvent();
 ```
+# [C++](#tab/code-cpp)
+```cpp
+#include "Engine/Profiler/Profiler.h"
+
+PROFILE_CPU_NAMED("MyFunction"); // or PROFILE_CPU to use auto-name of the current function
+// do something
+```
+***
 
 ### GPU
 
@@ -35,11 +44,20 @@ The GPU performance profiling mode.
 
 To add code section to be included in profile blocks use the following code:
 
+# [C#](#tab/code-csharp)
 ```cs
 Profiler.BeginEventGPU("MyFunction");
 // do something on GPU with GPUContext
 Profiler.EndEventGPU();
 ```
+# [C++](#tab/code-cpp)
+```cpp
+#include "Engine/Profiler/Profiler.h"
+
+PROFILE_GPU("MyFunction"); // or PROFILE_GPU_CPU to inject both CPU and GPU profile event
+// do something on GPU with GPUContext
+```
+***
 
 ### Memory
 

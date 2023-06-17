@@ -20,15 +20,15 @@ public override void OnStart()
 | **FLAX** | Always defined. Can be used to detect code compiled for Flax environment. |
 | **FLAX_EDITOR** | Compile for editor (play in-edior). |
 | **PLATFORM_WINDOWS** | Compile for Windows. |
-| **PLATFORM_UWP** | Compile for Universal Windows Platform (UWP). |
 | **PLATFORM_XBOX_ONE** | Compile for Xbox One. |
 | **PLATFORM_XBOX_SCARLETT** | Compile for Xbox Scarlett. |
 | **PLATFORM_PS4** | Compile for PlayStation 4. |
-| **PLATFORM_PS5** | Compile for PlayStation 4. |
+| **PLATFORM_PS5** | Compile for PlayStation 5. |
 | **PLATFORM_LINUX** | Compile for Linux. |
 | **PLATFORM_ANDROID** | Compile for Android. |
 | **PLATFORM_SWITCH** | Compile for Switch. |
 | **PLATFORM_MAC** | Compile for macOS. |
+| **PLATFORM_IOS** | Compile for iOS. |
 | **FLAX_X** | Used to detect Flax version during compilation. X=major version of Flax. eg. `FLAX_1`. |
 | **FLAX_X_Y** | Used to detect Flax version during compilation. X=major version of Flax. Y=minor version of Flax. eg. `FLAX_1_2`. |
 | **FLAX_X_Y_OR_NEWER** | Used to detect Flax version during compilation. X=major version of Flax. Y=minor version of Flax. eg. `FLAX_1_6_OR_NEWER`. Can be used to distinguish API usage between old and new versions. |
@@ -36,6 +36,6 @@ public override void OnStart()
 | **BUILD_DEVELOPMENT** | Compile in `Development` mode. Better performance than Debug as code gets optimizations but debugging is still available with most of the assertions and checks. Build intended for developers team to have good ratio between code validation/verification and performance.  |
 | **BUILD_RELEASE** | Compile in `Release` mode. The best performance as code gets all optimizations. Build intended for shipping. |
 | **FLAX_BUILD_BINDINGS** | Define used in C++ header files added by  Scripting API parser to be used if needed to differ code for the parser. |
+| **USE_AOT** | Defined when compiling C# with [AOT mode](restrictions.md) enabled. |
 
 To specify custom compilation macros see [Game Cooker](../editor/flax-build/index.md) documentation.
-

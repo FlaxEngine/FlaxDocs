@@ -6,9 +6,15 @@ With dotTrace you can detect performance bottlenecks in a game. It can get accur
 
 ## Setup
 
-![dotTrace setup for Flax](media/dot-trace-setup.png)
+![dotTrace setup for Flax](media/dot-trace-profiler-step-1.png)
 
-Open dotTrace and select option **Profile Local App** -> **Mono Application**. Then pick game executable. When launching Flax Editor fill also the command line arguments with your project path. Optionally, under Advanced options you can Enable native profiling to get C++ code statistics. Then hit **Run** button and use profiler session window to capture the snapshots.
+Open dotTrace and **add New Process Run** with **.NET Core Application** type (as shown above).
+
+![dotTrace setup for Flax](media/dot-trace-profiler-step-2.png)
+
+Then pick game executable (as shown above) to **Path** field. When launching Flax Editor fill also the command line arguments with your project path (if needed). Click **Save** and then you can use **Start** button to run the Flax with profilering tools attached.
+
+![dotTrace setup for Flax](media/dot-trace-profiler-step-3.png)
 
 ## Profiling Snapshots
 
