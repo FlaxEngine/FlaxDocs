@@ -91,12 +91,12 @@ public class ExpressionGraphPlugin : EditorPlugin
     }
 
     /// <inheritdoc />
-    public override void Deinitialize()
+    public override void DeinitializeEditor()
     {
     	// Cleanup on plugin deinit
         Editor.ContentDatabase.Proxy.Remove(_expressionGraphProxy);
 
-        base.Deinitialize();
+        base.DeinitializeEditor();
     }
 }
 ```
