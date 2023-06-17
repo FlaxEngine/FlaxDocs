@@ -52,13 +52,13 @@ public class MyCustomPlugin : EditorPlugin
     }
 
     /// <inheritdoc />
-    public override void Deinitialize()
+    public override void DeinitializeEditor()
     {
         // Ensure to cleanup on plugin shutdown
         Editor.Options.OptionsChanged -= OnOptionsChanged;
         Editor.Options.RemoveCustomSettings(SettingsType);
 
-        base.Deinitialize();
+        base.DeinitializeEditor();
     }
 }
 ```

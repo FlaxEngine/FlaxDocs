@@ -50,12 +50,12 @@ public class TestPlugin : EditorPlugin
         Debug.Log("Editor options: " + options.TimerName + ", " + options.TimerValue);
     }
 
-    public override void Deinitialize()
+    public override void DeinitializeEditor()
     {
     	// Cleanup on end
         Editor.Options.RemoveCustomSettings(SettingsName);
 
-        base.Deinitialize();
+        base.DeinitializeEditor();
     }
 }
 ```

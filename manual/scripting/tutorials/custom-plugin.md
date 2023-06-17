@@ -40,7 +40,7 @@ namespace ExamplePlugin
         }
 
         /// <inheritdoc />
-        public override void Deinitialize()
+        public override void DeinitializeEditor()
         {
             if (_button != null)
             {
@@ -48,7 +48,7 @@ namespace ExamplePlugin
                 _button = null;
             }
 
-            base.Deinitialize();
+            base.DeinitializeEditor();
         }
     }
 }
@@ -57,7 +57,7 @@ namespace ExamplePlugin
 
 
 
-Flax plugins use two main methods for the lifetime: `Initialize` and `Deinitialize`. However for Editor plugins when `Initialize` is called the Editor may still be uninitialized so it's better to use `InitializeEditor` to add custom GUI to the Editor.
+Flax plugins use two main methods for the lifetime: `InitializeEditor` and `DeinitializeEditor`.
 
 ### 3. Test it out
 
