@@ -142,7 +142,7 @@ Each object can query own role and ownership via `GetObjectRole`/`GetObjectOwner
 For example, when a large game level contains 10k networked objects (eg. POIs) then replicating all of them to all connected clients would kill the performance. To solve this problem a simple replication hierarchy can be created that would control Replication FPS for each object and skip unnecessary replications for clients that are too far away. Below is the sample code:
 
 > [!Tip]
-> Use `NetworkReplicator.DirtyObject(obj)` to mark object as modified for immediate replication (eg. when an object has low Replication FPS but needs to replicate state quickly).
+> Use `NetworkReplicator.DirtyObject(obj)` to mark object as modified for immediate replication (eg. when an object has low Replication FPS but needs to replicate state quickly). You can also set `ReplicationFPS` of an object to be less than `0` if you only want it to be replicated on spawn.
 
 # [C#](#tab/code-csharp)
 ```cs
