@@ -211,7 +211,7 @@ NetworkReplicator.SetHierarchy(new MyReplicationHierarchy());
 #include "Engine/Level/Actor.h"
 
 // Custom replication hierarchy type
-API_CLASS() class FLAXENGINE_API MyReplicationHierarchy : public NetworkReplicationHierarchy
+API_CLASS() class GAME_API MyReplicationHierarchy : public NetworkReplicationHierarchy
 {
     DECLARE_SCRIPTING_TYPE_WITH_CONSTRUCTOR_IMPL(MyReplicationHierarchy, NetworkReplicationHierarchy);
 private:
