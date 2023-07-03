@@ -38,3 +38,4 @@ Flax Engine is very extensible which allows developers to create custom solution
 * [Flax Space Fighter Demo](https://github.com/FlaxCommunityProjects/FlaxSpaceFighterDemo) - Space fighter demo for Flax Engine
 * [FlaxCustomAttributes](https://github.com/FlaxCommunityProjects/FlaxCustomAttributes) - Custom C# attributes usage utility for Editor
 * [HeroCrab Plugin](https://github.com/herocrab/HeroCrabPlugin) - Authoritative network messaging framework for use in multi-player games
+* [RmlUi](https://github.com/GoaLitiuM/RmlUi) - HTML/CSS user interface library `RmlUi` wrapper ([samples](https://github.com/GoaLitiuM/FlaxRmlUiSamples))
