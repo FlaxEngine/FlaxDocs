@@ -1,5 +1,4 @@
 name: Publish Documentation
-
 on:
   push:
     tags: 
@@ -37,16 +36,15 @@ jobs:
           sudo apt-get update
           sudo apt-get install mono-complete --yes
 
-    - name: Get .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 7.0.x
-    - name: Print .NET info
-      run: |
-        dotnet --info
-        dotnet workload --info
+      - name: Get .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 7.0.x
 
-    - name: Checkout LFS
+      - name: Print .NET info
+        run: |
+          dotnet --info
+          dotnet workload --info
 
       - name: Build docs
         run: |
