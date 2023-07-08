@@ -1,6 +1,6 @@
 # iOS
 
-![iOS](media/iOS.jpg)
+![iOS](media/ios.jpg)
 
 ## Technical information
 
