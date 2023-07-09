@@ -46,7 +46,7 @@ Animation Retargeting is a feature that allows **playing the same animation on d
 |--------|--------|
 | ![Animation Retargeting](media/animation-retargeting-before.gif) | ![Animation Retargeting Flax](media/animation-retargeting-after.gif) |
 
-### Any State in to Anim Graph
+### Any State in Anim Graph
 
 ![Any State in State Machine](media/any-state.png)
 
