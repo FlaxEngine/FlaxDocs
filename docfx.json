@@ -2,7 +2,8 @@
   "metadata": [
     {
       "src": "FlaxEngine/Binaries/Editor/Win64/Development/FlaxEngine.CSharp.dll",
-      "dest": "api"
+      "dest": "api",
+      "filter": "api-filter.yml"
     }
   ],
   "build": {
