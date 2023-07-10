@@ -129,7 +129,7 @@ PRs merged: 148
 * Add `NetworkReplicator::HasObject`
 * Add network debugging panel to actors and scripts
 * Add `INetworkObject::OnNetworkSync`
-* Add default empty implementations to `INetworkObject` for easier suage in game scripting
+* Add default empty implementations to `INetworkObject` for easier usage in game scripting
 * Add `SoftTypeReference<T>` to scripting API for lazy-load type references (via typename)
 * Add **input action phases**
 * Add `Camera.UnprojectPoint` method
@@ -146,7 +146,7 @@ PRs merged: 148
 * Add preferring high-performance discrete GPUs when enumerating adapters
 * Add `Utilities::HertzToText` via new `Utilities::UnitsToText`
 * Add `LineCast` and `LineCastAll` to physics scripting
-* Add default new script name to `MyScript` and avoid namign it as `Script` to make it easier for use
+* Add default new script name to `MyScript` and avoid naming it as `Script` to make it easier for use
 * Add `Platform::GetMousePosition`/`WindowsPlatform::SetMousePosition` for unified access to screen-space mouse position on all platforms
 * Add **eyedropper color picker** for Editor on Windows and Linux
 * Add better usability when duplicating points of a spline
