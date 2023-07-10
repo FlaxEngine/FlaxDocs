@@ -268,7 +268,7 @@ NetworkReplicator::SetHierarchy(New<MyReplicationHierarchy>());
 
 ## Object Ownership
 
-In a fully-authoritative setup server owns all gameplay objects replicated over the network thus clients cannot enforce property changes on other clients directly. Hoverwer, the game might want to retain overship for local client pawns/characters and let servers do the sync or validation only. This might simplify gameplay simulation of the player inputs (players control local pawns) but still allows the server to validate state before replicating it to other clients.
+In a fully-authoritative setup server owns all gameplay objects replicated over the network thus clients cannot enforce property changes on other clients directly. However, the game might want to retain overship for local client pawns/characters and let servers do the sync or validation only. This might simplify gameplay simulation of the player inputs (players control local pawns) but still allows the server to validate state before replicating it to other clients.
 
 Objects might rely on the ownership thus can be split into:
 * **server only** - objects only exist on the server,

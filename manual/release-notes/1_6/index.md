@@ -84,7 +84,7 @@ We've updated docs, code examples, and all official plugins to reflect those cha
 
 ### Vehicles drive direction
 
-Vehicles has been updated to use `Z` axis as forward instead of `X` which matches the engine [coordinates system](../../get-started/scenes/world-units.md) now. Engine will automatically rotate old vehicles around the origin to match the current layout (when loading old scene or prefabs). Hoverwer, please update any cars objects and driving scripts to properly work after the version upgrade.
+Vehicles has been updated to use `Z` axis as forward instead of `X` which matches the engine [coordinates system](../../get-started/scenes/world-units.md) now. Engine will automatically rotate old vehicles around the origin to match the current layout (when loading old scene or prefabs). However, please update any cars objects and driving scripts to properly work after the version upgrade.
 
 ## Changelog
 

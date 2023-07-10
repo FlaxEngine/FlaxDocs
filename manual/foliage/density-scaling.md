@@ -1,6 +1,6 @@
 # Foliage Density Scaling
 
-Foliage actor can contain hundreds of thousands of foliage instances. In order to keep its performance fine, it uses some advanced algorithms to optimize the rendering. Hoverwer in many cases when shipping your game into consoles or mobile devices it is requried to tweak the foliage density.
+Foliage actor can contain hundreds of thousands of foliage instances. In order to keep its performance fine, it uses some advanced algorithms to optimize the rendering. However in many cases when shipping your game into consoles or mobile devices it is requried to tweak the foliage density.
 
 ## Using density scaling
 
