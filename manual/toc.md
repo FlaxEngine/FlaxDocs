@@ -428,6 +428,7 @@
 ## [Public Projects](contributing/public-projects.md)
 
 # [Release Notes](release-notes/index.md)
+## [1.7 release notes](release-notes/1_7/index.md)
 ## [1.6 release notes](release-notes/1_6/index.md)
 ## [1.5 release notes](release-notes/1_5/index.md)
 ## [1.4 release notes](release-notes/1_4/index.md)
