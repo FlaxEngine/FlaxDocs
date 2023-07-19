@@ -382,6 +382,7 @@
 ## [Physics Settings](physics/physics-settings.md)
 ## [Vehicles](physics/vehicles.md)
 ## [Ragdolls](physics/ragdolls.md)
+## [Cloth](physics/cloth.md)
 ## [Tutorials](physics/tutorials/index.md)
 ### [How to create a bouncing ball](physics/tutorials/bouncing-ball.md)
 ### [How to use a trigger](physics/tutorials/use-trigger.md)
