@@ -39,7 +39,7 @@ File::WriteAllBytes(TEXT("Output.json"), (byte*)buffer.GetString(), (int32)buffe
 
 BytesContainer data;
 File::ReadAllBytes(TEXT("Output.json"), data);
-SerializeDocument document;
+ISerializable::SerializeDocument document;
 document.Parse(data.Get<char>(), data.Length());
 if (!document.HasParseError())
     object->Deserialize(document, nullptr);
