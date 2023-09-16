@@ -17,13 +17,13 @@ Flax Engine by default uses `32-bit` precision (single precision, `float` type) 
 
 ### Enabling Large Worlds
 
-Use [Custom Engine build](../advanced/custom-engine.md) and modify `Flax.flaxproj` file by setting `"UseLargeWorlds": true`. Then build the engine. It will overlap all Vector2/3/4 components from `float` into `double` and store object coordinates with higher precision.
+Use [Custom Engine build](../advanced/custom-engine.md) and modify the `Flax.flaxproj` file by setting `"UseLargeWorlds": true`. Then build the engine. It will overlap all Vector2/3/4 components from `float` into `double` and store object coordinates with higher precision.
 
-The engine supports loading and saving projects with both `UseLargeWorlds` enabled and disabled without any compatibility issues. Which means that you can still open project with default engine version, even if it was edited with Large Worlds support enabled.
+The engine supports loading and saving projects with both `UseLargeWorlds` enabled and disabled without any compatibility issues. Which means that you can still open your project with the default engine version, even if it was edited with Large Worlds support enabled.
 
 ### Real type
 
-When using large worlds various in-built types get converted into higher precision format, such as:
+When using large worlds, various in-built types get converted into higher precision format, such as:
 * `Vector2`, `Vector3`, `Vector4`
 * `BoundingBox`
 * `BoundingSphere`
@@ -56,11 +56,11 @@ Real coordinate = GetActor()->GetPosition().X;
 Flax contains relative-to-camera rendering which allows to shift the `Origin` of the whole scene when rendering. It's automatically calculated when rendering a scene with `LargeWorlds.UpdateOrigin` based on the current camera location. It can be disabled with `LargeWorlds.Enable`.
 
 > [!TIP]
-> Even when using 64-bit precision, the whole rendering still uses 32-bits as using larger data has high-performance impact.
+> Even when using 64-bit precision, the whole rendering still uses 32-bits as using larger data has a high performance impact.
 
 ## Physics origin
 
-A physical simulation system supports adjusting the origin of the simulation world. This can be used to improve collisions and forces simulation because the underlying PhysX library uses 32-bit precision and won't achieve high-quality simulation in large worlds scenario.
+A physical simulation system supports adjusting the origin of the simulation world. This can be used to improve the simulation of collisions and forces, because the underlying PhysX library uses 32-bit precision and won't achieve high-quality simulation in a large worlds scenario.
 
 You can easily synchronize the current main game view origin with physics origin (or manually calculate it with `LargeWorlds.UpdateOrigin`):
 
