@@ -38,7 +38,7 @@ This section contains the most common terms used in Unity and their Flax equival
 
 ![Flax Project](../media/project-structure.png)
 
-Flax projects structure is similar to Unity projects. Instead of **Library** folder, editor uses **Cache** folder. Also **Assets** folder from Unity is splited into two separate parts: **Content** and **Source**. All C# script files are located in source directory so there is less mess with assets and scripts.
+Flax projects structure is similar to Unity projects. Instead of **Library** folder, editor uses **Cache** folder. Also **Assets** folder from Unity is splitted into two separate parts: **Content** and **Source**. All C# script files are located in the source directory so there is less mess with assets and scripts.
 
 Flax also generates a solution and project files for your game C# scripts.
 
@@ -46,9 +46,9 @@ See [Flax projects structure](../project-structure.md) page to learn more about 
 
 ## Assets
 
-Flax doesn't use `.meta` files. Instead of it, every asset contains all required metadata information and is a self contained file. Files with extension `.flax` are using our own binary format that is well optimized for scalability and streaming. Other assets are usually stored in `Json` format (scenes, settings, etc.).
+Flax doesn't use `.meta` files. Instead, every asset contains all required metadata information and is a self contained file. Files with the extension `.flax` are using our own binary format that is well optimized for scalability and streaming. Other assets are usually stored in `Json` format (scenes, settings, etc.).
 
-Flax supports the most popular asset files formats (for 3D models and textures) so you can import your game content.
+Flax supports the most popular asset file formats (for 3D models and textures) so you can import your game content.
 
 See [Assets](../assets/index.md) page to learn more about importing and using game assets.
 
@@ -59,7 +59,7 @@ Flax doesn't use components to build scene objects logic. We use [Actors](../sce
 However, you can still use the entity-component design with your scripts because every actor can have scripts like in Unity.
 Just instead of using `GetComponent<T>()` in your scripts, write `GetChild<T>()`/`GetScript<T>()`.
 
-In Flax, Scene object is also an Actor so you can access it like any other Actor. This means that Scenes can have their own scripts and be transformed like other objects.
+In Flax, a Scene object is also an Actor so you can access it like any other Actor. This means that Scenes can have their own scripts and be transformed like other objects.
 
 > [!Tip]
 > Flax's coordinate system's base unit is centimeters instead of meters, meaning a Flax Actor placed at <100,100,100> is in the equivalent position of a Unity Transform placed at <1,1,1>.
@@ -68,7 +68,7 @@ In Flax, Scene object is also an Actor so you can access it like any other Actor
 
 When it comes to game scripting, Unity and Flax are very similar. There are some differences in C# API (Flax has bigger math library, is more performance-oriented and uses new C# 11 via .NET 7). In fact, the whole C# editor and C++ engine including scripting API is open and can be found [here](https://github.com/FlaxEngine/FlaxEngine). All contributions are welcome.
 
-Also, Flax support native **[C++](../../scripting/cpp/index.md)** scripting and **[Visual Scripting](../../scripting/visual/index.md)** as an in-build feature. We don't want to limit our developers to just a one programming language for the game development as using C\+\+ and Visual Scripting together with C# can benefit.
+Also, Flax support native **[C++](../../scripting/cpp/index.md)** scripting and **[Visual Scripting](../../scripting/visual/index.md)** as a built-in feature. We don't want to limit our developers to just one programming language for the game development as using C\+\+ and Visual Scripting together with C# can benefit.
 
 If you write C# scripts simply replace `MonoBehaviour` with `Script` as it makes more sense (and is shorter to write).
 
