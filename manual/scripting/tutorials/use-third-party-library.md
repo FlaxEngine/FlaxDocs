@@ -16,6 +16,11 @@ To add a reference to prebuild .Net DLL file in your game scripts simply modify 
 options.ScriptingAPI.FileReferences.Add(Path.Combine(FolderPath, "..", "..", "Content", "JetBrains.Annotations.dll"));
 ```
 
+Additionally, if the DLL is going to be used by an editor module, the same dll needs to be added as an external dependency:
+```cs
+options.ExternalModules.Add(new BuildOptions.ExternalModule(BuildOptions.ExternalModule.Types.CSharp, path));
+``` 
+
 Then generate scripts projects solution to use types from imported C# module inside game code.
 This will work for scripts build for the editor and cooked game as the referenced assembly will be packaged. Build system will also copy relevant `.pdb` and `.xml` files if provided.
 
