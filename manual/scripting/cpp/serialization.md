@@ -26,10 +26,23 @@ Example:
 
 ```cpp
 #include "Engine/Serialization/JsonWriters.h"
+#include "Engine/Serialization/JsonSerializer.h"
+#include "Engine/Platform/File.h"
 
 rapidjson_flax::StringBuffer buffer;
+// PrettyJsonWriter can be also used here for better JSON formatting
 CompactJsonWriter writer(buffer);
-writer.SceneObject(this);
+writer.StartObject();
+object->Serialize(writer, nullptr);
+writer.EndObject();
+File::WriteAllBytes(TEXT("Output.json"), (byte*)buffer.GetString(), (int32)buffer.GetSize());
+
+BytesContainer data;
+File::ReadAllBytes(TEXT("Output.json"), data);
+ISerializable::SerializeDocument document;
+document.Parse(data.Get<char>(), data.Length());
+if (!document.HasParseError())
+    object->Deserialize(document, nullptr);
 ```
 
 ### Custom types

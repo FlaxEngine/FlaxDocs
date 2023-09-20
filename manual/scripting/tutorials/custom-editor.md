@@ -64,6 +64,9 @@ namespace GraphicsFeaturesTour
 #endif
 ```
 
+> [!TIP]
+> GenericEditor should be usually used for Script inherited objects, while for custom actors you should be using ActorEditor.
+
 If your script is in editor-only module then you can skip `#if FLAX_EDITOR / #endif` pair.
 
 ### 5. See the results

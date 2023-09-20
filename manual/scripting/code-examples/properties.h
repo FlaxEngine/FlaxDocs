@@ -10,7 +10,7 @@ API_CLASS() class GAME_API MyScript : public Script
     API_AUTO_SERIALIZATION();
     DECLARE_SCRIPTING_TYPE(MyScript);
 
-    API_FIELD() bool Field1 = 11;
+    API_FIELD() float Field1 = 11;
     API_FIELD() Color Field2 = Color::Yellow;
     API_FIELD() ScriptingObjectReference<DirectionalLight> Field3;
 

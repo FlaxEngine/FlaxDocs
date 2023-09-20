@@ -83,7 +83,7 @@ GameSettings.LoadAsset<NetworkSettings>().SetInstance(networkSettings);
 |--------|--------|
 | **Max Clients** | Maximum amount of active network clients in a game session. Used by server or host to limit amount of players and spectators. |
 | **Protocol Version** | Network protocol version of the game. Network clients and server can use only the same protocol version (verified upon client joining). |
-| **Network FPS** | The target amount of the network system updates per second. Higher values provide better network synchronization (eg. *60* for shooters), lower values reduce network usage and performance impact (eg. *30* for strategy games). Can be used to tweak networking performance impact on game. Cannot be higher that UpdateFPS (from [Time Settings](../editor/game-settings/time-settings.md)). Use 0 to run every game update. |
+| **Network FPS** | The target amount of the network system updates per second. Higher values provide better network synchronization (eg. *60* for shooters), lower values reduce network usage and performance impact (eg. *30* for strategy games). Can be used to tweak networking performance impact on game. Cannot be higher that UpdateFPS (from [Time Settings](../editor/game-settings/time-settings.md)). Use 0 to run every game update. Use value lower than 0 if you want to disable automatic field replication. |
 |||
 | **Address** | Address of the server (server/host always runs on *localhost*). Only `IPv4` is supported. |
 | **Port** | The port for the network peer. |
