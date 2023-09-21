@@ -6,3 +6,17 @@
 * [Input.GetKeyDown](https://docs.flaxengine.com/api/FlaxEngine.Input.html#FlaxEngine_Input_GetKeyDown_FlaxEngine_KeyboardKeys_)
 * [Input.GetKeyUp](https://docs.flaxengine.com/api/FlaxEngine.Input.html#FlaxEngine_Input_GetKeyUp_FlaxEngine_KeyboardKeys_)
 
+## Usage
+
+In your C# script you can handle keyboard inputs:
+
+```cs
+public override void OnUpdate()
+{
+	if (Input.GetKey(KeyboardKeys.E))
+	{
+		Debug.Log("E key is pressed.");
+	}
+}
+```
+

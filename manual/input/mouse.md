@@ -14,3 +14,17 @@ Some games may want to lock the mouse position. For instance, first-person shoot
 
 You can lock the mouse movement by using [Screen.CursorLock](https://docs.flaxengine.com/api/FlaxEngine.Screen.html#FlaxEngine_Screen_CursorLock), and modify the cursor visibility by using [Screen.CursorVisible](https://docs.flaxengine.com/api/FlaxEngine.Screen.html#FlaxEngine_Screen_CursorVisible).
 
+## Usage
+
+In your C# script you can handle mouse inputs:
+
+```cs
+public override void OnUpdate()
+{
+	if (Input.GetMouseButton(MouseButton.Left))
+    {
+        Debug.Log("Left mouse button is pressed.");
+    }
+}
+```
+
