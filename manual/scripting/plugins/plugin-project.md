@@ -8,10 +8,10 @@ Flax supports the concept of plugin projects. A plugin project is a separate Fla
 > Internet access is required for the first plugin project created using this tool.
 
 Open the Plugin Window **Tools -> Plugins**.
-![Plugin Menu](../media/plugin-menu.png)
+![Plugin Menu](media/plugin-menu.png)
 
 Click the create plugin project button and fill out the name, version, and company of the plugin project.
-![Plugin Create Menu](../media/plugin-create-menu.png)
+![Plugin Create Menu](media/plugin-create-menu.png)
 
 Click the submit button.
 
@@ -23,10 +23,10 @@ Restart the editor for the changes to take effect.
 > Internet access and Git are required for this tool.
 
 Open the Plugin Window **Tools -> Plugins**.
-![Plugin Menu](../media/plugin-menu.png)
+![Plugin Menu](media/plugin-menu.png)
 
 Click the clone plugin project button and enter the Git address of the plugin project. Entering a name is optional and will only rename the folder that contains the plugin project, otherwise the repository name will be used.
-![Plugin Clone Menu](../media/plugin-clone-menu.png)
+![Plugin Clone Menu](media/plugin-clone-menu.png)
 
 Click the submit button.
 
