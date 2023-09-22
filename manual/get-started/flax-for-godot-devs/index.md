@@ -5,7 +5,7 @@
 Flax and Godot have many similarities and share many concepts, however, there are a few differences. This page helps Godot Engine developers to translate their existing Godot experience into the world of Flax Engine.
 
 > [!Warning]
-> Warning! Once you switch from Godot to Flax you will love this engine!
+> Warning! You will love the direction and development speed of this engine.
 
 ## Editor
 
@@ -16,7 +16,7 @@ Flax Editor and Godot Editor are very similar. You can see the color-coded, high
 ![Flax Editor](../media/flax-layout.png)
 
 > [!Tip]
-> With Flax, you can create huuuge 3D games and get great performance compared to Godot.
+> Flax is working on providing large 3D worlds with great performance.
 
 ## Terminology
 

@@ -5,7 +5,7 @@
 Flax and Unity have many similarities (C# scripting, physics engine) and share many concepts, however there are a few differences. This page helps Unity Engine developers to translate their existing Unity experience into the world of Flax Engine.
 
 > [!Warning]
-> Warning! Once you switch from Unity to Flax you will love this engine!
+> Warning! You will love the direction and development speed of this engine!
 
 ## Editor
 
@@ -16,7 +16,7 @@ Flax Editor and Unity Editor are very similar. You can see the color-coded, high
 ![Flax Editor](../media/flax-layout.png)
 
 > [!Tip]
-> Flax ships with a nice *Dark Theme* by default. No need to go into your settings to fix that.
+> With the Flax Editor, enjoy instant play mode.
 
 ## Terminology
 

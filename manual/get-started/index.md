@@ -35,19 +35,19 @@ Welcome to the Official Flax Engine Manual! In this section you will find everyt
 <div class="frontpage-section">
 <a href="flax-for-ue4-devs/index.md"><img src="flax-for-ue4-devs/media/icon.jpg"></a>
 <h3><a href="flax-for-ue4-devs/index.md">Flax for UE4® devs</a></h3>
-<p>Move your project and team from UE4 to Flax.</p>
+<p>Migrating from UE4 to Flax.</p>
 </div>
 
 <div class="frontpage-section">
 <a href="flax-for-unity-devs/index.md"><img src="flax-for-unity-devs/media/icon.jpg"></a>
 <h3><a href="flax-for-unity-devs/index.md">Flax for Unity® devs</a></h3>
-<p>Move your project and team from Unity to Flax.</p>
+<p>Migrating from Unity to Flax.</p>
 </div>
 
 <div class="frontpage-section">
 <a href="flax-for-godot-devs/index.md"><img src="flax-for-godot-devs/media/icon.jpg"></a>
 <h3><a href="flax-for-godot-devs/index.md">Flax for Godot devs</a></h3>
-<p>Move your project and team from Godot to Flax.</p>
+<p>Migrating from Godot to Flax.</p>
 </div>
 
 </div>

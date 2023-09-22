@@ -5,7 +5,7 @@
 Flax and Unreal have many similarities (materials pipeline, physics engine) and share many concepts, however there are a few differences. This page helps Unreal Engine 4 developers to translate their existing experience into the world of Flax Engine.
 
 > [!Warning]
-> Warning! Once you switch from Unreal to Flax you will love this engine!
+> Warning! Guaranteed speed ahead!
 
 ## Editor
 
@@ -16,7 +16,7 @@ Flax Editor and Unreal Editor are very similar. You can see the color-coded, hig
 ![Flax Editor](../media/flax-layout.png)
 
 > [!TIP]
-> With Flax Editor, you don't have to wait for 15 minutes before the project opens like in UE4. We are sorry that you had to waste so much time.
+> With Flax Editor, fast compile times and project opening are a main focus.
 
 ## Terminology
 
