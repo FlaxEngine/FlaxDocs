@@ -4,7 +4,7 @@ In this tutorial, you will learn how to create and use a custom terrain material
 
 ## 1. Create new material
 
-In *Content* window use **Right-click** and select option **New -> Material**, then specify its name and hit **Enter**.
+In *Content* window use **Right-click** and select option **New -> Material -> Material**, then specify its name and hit **Enter**.
 
 ![New Material](media/new-material.png)
 

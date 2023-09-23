@@ -4,7 +4,7 @@ Some asset types can be imported from the external file (models, textures, etc.)
 
 ## Creating assets
 
-For example to create a new [physical material](../../physics/physical-material.md) asset, simply navigate to the Content directory in the *Content* window, then right-click and choose option **New -> Physical Material**. Specify its name and press *Enter*.
+For example to create a new [physical material](../../physics/physical-material.md) asset, simply navigate to the Content directory in the *Content* window, then right-click and choose option **New -> Physics -> Physical Material**. Specify its name and press *Enter*.
 
 ![Create New Physical Material](../../physics/media/new-physical-material.jpg)
 

@@ -6,7 +6,7 @@
 
 ![New Anim Graph Function](media/anim-graph-function-new.png)
 
-The first step is to *right-click* in *Content* window and choose option **New -> Animation Graph Function**. Then specify its name and confirm with *Enter*. Open the asset editor by double-clicking on it.
+The first step is to *right-click* in *Content* window and choose option **New -> Animartion -> Animation Graph Function**. Then specify its name and confirm with *Enter*. Open the asset editor by double-clicking on it.
 
 ![Empty Anim Graph Function](media/anim-graph-function-empty.png)
 

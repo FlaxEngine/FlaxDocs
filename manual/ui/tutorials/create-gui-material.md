@@ -8,7 +8,7 @@ The first step is to add a [Image](../controls/image.md) control (with a [UI Con
 
 ## 2. Create a new material asset
 
-**Right click** in the **content window** and select option **New -> Material**. Then specify its name and confirm by pressing enter. Double-click on the created asset and start editing the material.
+**Right click** in the **content window** and select option **New -> Material -> Material**. Then specify its name and confirm by pressing enter. Double-click on the created asset and start editing the material.
 
 ![New Material](../../graphics/materials/media/new-material.jpg)
 

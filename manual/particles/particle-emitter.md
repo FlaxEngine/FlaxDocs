@@ -8,7 +8,7 @@
 
 ![Create Particle Emitter](media/particle-emitter-create-new.jpg)
 
-The first step is to create a new asset. It's a binary file and contains the nodes graph data as well as a set of graph parameters description. Use the `Content` window to create a new asset. Right-click and select option **New -> Particle Emitter**. Specify its name and hit Enter to confirm. Then you can select the template for the emitter to create. Select the one for you needs to start working on content faster. You can also choose the blank emitter to start up from scratch.
+The first step is to create a new asset. It's a binary file and contains the nodes graph data as well as a set of graph parameters description. Use the `Content` window to create a new asset. Right-click and select option **New -> Particles -> Particle Emitter**. Specify its name and hit Enter to confirm. Then you can select the template for the emitter to create. Select the one for you needs to start working on content faster. You can also choose the blank emitter to start up from scratch.
 
 ![Create Particle Emitter](media/particle-emitter-create-template.jpg)
 

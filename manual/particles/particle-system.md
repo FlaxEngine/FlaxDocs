@@ -8,7 +8,7 @@
 
 ![Create Particle System](media/particle-system-create-new.jpg)
 
-The first step is to create a new asset. It's a binary file and contains the timeline data. Use the `Content` window to create a new asset. Right-click and select option **New -> Particle System**. Specify its name and hit Enter to confirm. 
+The first step is to create a new asset. It's a binary file and contains the timeline data. Use the `Content` window to create a new asset. Right-click and select option **New -> Particles -> Particle System**. Specify its name and hit Enter to confirm. 
 Double-click the created asset to modify it.
 
 ## Editor Window

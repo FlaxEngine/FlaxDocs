@@ -4,7 +4,7 @@ The **Physical Material** asset is used to define the response of a physical obj
 
 ## Create physical material
 
-To create a new physical material asset, simply navigate to the Content directory in the *Content* window, then right-click and choose option **New -> Physical Material**. Specify its name and press *Enter*.
+To create a new physical material asset, simply navigate to the Content directory in the *Content* window, then right-click and choose option **New -> Physics -> Physical Material**. Specify its name and press *Enter*.
 
 ![Create New Physical Material](media/new-physical-material.jpg)
 

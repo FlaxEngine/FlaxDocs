@@ -6,7 +6,7 @@
 
 ![New Particle Function](media/particle-function-create.png)
 
-The first step is to *right-click* in *Content* window and choose option **New -> Particle Emitter Function**. Then specify its name and confirm with *Enter*. Open the asset editor by double-clicking on it.
+The first step is to *right-click* in *Content* window and choose option **New -> Particles -> Particle Emitter Function**. Then specify its name and confirm with *Enter*. Open the asset editor by double-clicking on it.
 
 ![Empty Particle Function](media/particle-function-empty.png)
 

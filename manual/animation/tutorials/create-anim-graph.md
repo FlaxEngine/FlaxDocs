@@ -6,7 +6,7 @@ In this tutorial you will learn how to quickly create a new [Anim Graph](../anim
 
 ![New Anim Graph](media/new-anim-graph.jpg)
 
-Use the *Content* window to create a new Anim Graph asset. Right-click and select option **New -> Animation Graph**. Specify its name and hit Enter to confirm.
+Use the *Content* window to create a new Anim Graph asset. Right-click and select option **New -> Animartion -> Animation Graph**. Specify its name and hit Enter to confirm.
 
 ## 2. Open Anim Graph window
 

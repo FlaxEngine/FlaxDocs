@@ -26,7 +26,7 @@ To do so use *Toolbox* window and drag and drop into the Rigidbody actor in a *S
 
 ## 3. Create a physical material
 
-Use the *Content* window to create a new physical material asset. Right-click and select option **New -> Physical Material**. Specify its name and hit *Enter* to confirm.
+Use the *Content* window to create a new physical material asset. Right-click and select option **New -> Physics -> Physical Material**. Specify its name and hit *Enter* to confirm.
 
 ![New Physical Material](media/new-physical-material-1.jpg)
 
