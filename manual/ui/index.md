@@ -2,7 +2,7 @@
 
 ![UI](media/title.jpg)
 
-The **UI** is one of the most important components of the games. Flax Games UI system allows to create user interfaces fast and intuitively right in the Editor or from code. Follow this documentation section to learn how to work with UI controls and use them in your games.
+The **UI** is one of the most important components of a game. The UI system in Flax allows you to create user interfaces fast and intuitively, right in the Editor or from code. Follow this documentation section to learn how to work with UI controls and use them in your games.
 
 ## In this section
 
