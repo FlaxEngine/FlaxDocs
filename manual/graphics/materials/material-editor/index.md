@@ -73,7 +73,7 @@ Controls in the Material Editor generally match the controls of other tools in t
 
 | Control | Action |
 |--------|--------|
-| **RMB** drag on background  | Pan material nodes graph  |
+| **RMB** drag on background | Pan nodes graph  |
 | **RMB** on background | Show node creation menu |
 | **RMB** on node | Show node edit menu |
 | **LMB** drag on background | Select nodes with rectangle tool |

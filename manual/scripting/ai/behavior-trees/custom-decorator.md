@@ -62,7 +62,7 @@ public class MyHasTagDecorator : BehaviorTreeDecorator
 /// <summary>
 /// Simple node decorator.
 /// </summary>
-API_CLASS() class MYPROJECT_API MyHasTagDecorator : public BehaviorTreeDecorator
+API_CLASS() class GAME_API MyHasTagDecorator : public BehaviorTreeDecorator
 {
     DECLARE_SCRIPTING_TYPE(MyHasTagDecorator);
     API_AUTO_SERIALIZATION();

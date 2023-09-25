@@ -76,5 +76,6 @@ You can use **Ctrl + F** to quickly find what you are looking for.
 * [How to create terrain from code](../../terrain/tutorials/terrain-from-code.md)
 * [How to create holes in terrain](../../terrain/tutorials/terrain-holes.md)
 * [How to add tessallation to terrain](../../terrain/tutorials/tessellation-and-terrain.md)
-
-
+* [How to create a custom Behavior Tree node](../../scripting/ai/behavior-trees/custom-node.md)
+* [How to create a custom Behavior Tree decorator](../../scripting/ai/behavior-trees/custom-decorator.md)
+* [How to create a custom Move To node](../../scripting/ai/behavior-trees/custom-move-to.md)

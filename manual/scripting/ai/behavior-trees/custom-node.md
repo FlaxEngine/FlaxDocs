@@ -2,10 +2,13 @@
 
 ![Custom Behavior Tree Delay Node](media/custom-delay-node.png)
 
-Behavior Trees are very extensible meaning you can create own node tpyes in your game project or use the ones from engine and plugins. Each node can define custom logic, contain properties and store runtime state (per-instance).
+Behavior Trees are very extensible meaning you can create own node types in your game project or use the ones from engine and plugins. Each node can define custom logic, contain properties and store runtime state (per-instance).
 
 > [!Warning]
 > Please keep in mind that Behavior execution is done in async via Job System (`Behavior.System`).
+
+> [!Warning]
+> Don't store any Behavior state in node properties but custom Node State data container (nodes are not instanced per behavior).
 
 ## Custom delay node
 
@@ -108,7 +111,7 @@ public class MyDelayNode : BehaviorTreeNode
 /// <summary>
 /// Simple delay node.
 /// </summary>
-API_CLASS() class MYPROJECT_API MyDelayNode : public BehaviorTreeNode
+API_CLASS() class GAME_API MyDelayNode : public BehaviorTreeNode
 {
     DECLARE_SCRIPTING_TYPE(MyDelayNode);
     API_AUTO_SERIALIZATION();
