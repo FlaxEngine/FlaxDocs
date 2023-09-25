@@ -36,12 +36,12 @@ namespace Game
 
 ```
 
-As you can see it exposes a texture property and the tint color used for rendering. Use [Render2D](https://docs.flaxengine.com/api/FlaxEngine.Render2D.html) to perform custom rendering tasks. Also you can override all control events to provide any other custom logic for your UI. Feel free to experiment.
+As you can see, it exposes a texture property and the tint color used for rendering. Use [Render2D](https://docs.flaxengine.com/api/FlaxEngine.Render2D.html) to perform custom rendering tasks. You can also override all control events to provide any other custom logic for your UI. Feel free to experiment.
 
 ## 3. Spawning the `UI Control`
 
 Now spawn a new *UI Control* to the scene and set its type to **MyControl** as shwon in a picture below.
-To learn more how to do so see the related [tutorial here](create-ui.md).
+To learn how to do so, see the related [tutorial here](create-ui.md).
 
 ![Set Control type to MyControl](media/set-control-to-my-control.png)
 
