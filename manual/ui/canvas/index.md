@@ -2,10 +2,10 @@
 
 ![UI Canvas](media/title.jpg)
 
-**UI Canvas** is an actor type that renders UI. It's the root of the UI structure and performs GUI drawing with input events handling. A canvas can be placed in 3D level (as world-space or camera-space object) or rendered directly on a screen (as screen-space mode).
+**UI Canvas** is an actor type that renders UI. It's the root of the UI structure and performs GUI drawing with input events handling. A canvas can be placed in 3D space (as world-space or camera-space object) or rendered directly on a screen (as screen-space mode).
 
 > [!Note]
-> After creating a UI Canvas in the editor, it is rotated by default. This is because the GUI coordinates system uses the upper-left corner of the container as a origin for its transformations.
+> After creating a UI Canvas in the editor, it is rotated by default. This is because the GUI coordinate system uses the upper-left corner of the container as a origin for its transformations.
 
 ## Properties
 

@@ -6,7 +6,7 @@
 
 ## Setting the control type
 
-In the editor, to set the control type select the UI Control and click on the **Set Type** button. You can pick one type from the list or type to search by class name instead. It supports also custom control types created from code. To learn more about it see the related tutorial [here](../tutorials/create-custom-control.md).
+In the editor, to set the control type select the UI Control and click on the **Set Type** button. You can pick one type from the list or type to search by class name instead. It also supports custom control types created from code. To learn more about it, see the related tutorial [here](../tutorials/create-custom-control.md).
 
 ![Set Type](media/set-type.png)
 
