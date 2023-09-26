@@ -65,5 +65,6 @@ The memory profiling mode focused on breaking down system memory allocations. Th
 
 ### Network
 
-The network data transfer send/receive charts over game time.
+![Network Profiler in Editor](media/network-profiler.png)
 
+The network data transfer sends/receives charts over game time. When using high-level networking it displays RPC methods and replication packets sent from the Editor to other peers.
