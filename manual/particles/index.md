@@ -46,3 +46,4 @@ In addition, GPU particles are not supported if emitter uses ribbons or lights. 
 
 * [How to fade particles near camera](tutorials/fade-near-camera.md)
 * [How to make soft particles](tutorials/soft-particles.md)
+* [How to rotate particle position shape](tutorials/rotate-particles.md)
