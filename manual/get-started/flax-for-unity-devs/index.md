@@ -33,6 +33,7 @@ This section contains the most common terms used in Unity and their Flax equival
 | **Inspector** | [Properties Window](../../editor/windows/properties-window.md) |
 | **Project Browser** | [Content Window](../../editor/windows/content-window.md) |
 | **Scene View** | [Viewport](../../editor/windows/viewport.md) |
+| **SRP**/**HDRP** | [Graphics](../../graphics/index.md) |
 
 ## Project
 
@@ -99,6 +100,7 @@ See [Scripting](../../scripting/index.md) documentation to learn more about C# s
 ## Cool things in the C# API
 
 If you're a programmer here is a list of new cool things in Flax C# API that may be useful:
+* You can use the latest .NET 7 and new C# 11
 * Engine and Editor are open with full source code ([link](https://github.com/FlaxEngine/FlaxEngine))
 * You can edit all input settings at runtime ([link](https://docs.flaxengine.com/api/FlaxEngine.Input.html))
 * You can change the gamepad devices layout at runtime ([link](https://docs.flaxengine.com/api/FlaxEngine.Gamepad.html))

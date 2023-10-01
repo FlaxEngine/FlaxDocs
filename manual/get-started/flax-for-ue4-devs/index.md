@@ -27,6 +27,7 @@ This section contains the most common terms used in UE4 and their Flax equivalen
 | **Actor** | [Actor](../scenes/actors.md) |
 | **Blueprint** | [Prefab](../prefabs/index.md) + [Visual Script](../../scripting/visual/index.md) |
 | **C++** | [C++ and C#](../../scripting/index.md) |
+| **Lumen** | [DDGI](../../graphics/lighting/gi/realtime.md) |
 |||
 | **World Outliner** | [Scene Window](../../editor/windows/scene-window.md) |
 | **Details Panel** | [Properties Window](../../editor/windows/properties-window.md) |
