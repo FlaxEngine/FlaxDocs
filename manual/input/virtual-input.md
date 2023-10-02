@@ -33,7 +33,7 @@ public InputAxis MouseX = new InputAxis("MouseX");
 public MyScript()
 {
 	// Register for input action event
-	FireEvent.Triggered += ShootBall;
+	FireEvent.Pressed += ShootBall;
 }
 
 public override void OnUpdate()
@@ -47,6 +47,7 @@ public override void OnDestroy()
 {
 	// Remember to dispose the action object (it holds reference to your methods)
 	FireEvent.Dispose();
+	MouseX.Dispose();
 }
 ```
 
