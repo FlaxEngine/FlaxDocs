@@ -397,6 +397,7 @@
 ## [Tutorials](particles/tutorials/index.md)
 ### [How to fade particles near camera](particles/tutorials/fade-near-camera.md)
 ### [How to make soft particles](particles/tutorials/soft-particles.md)
+### [How to rotate particle position shape](particles/tutorials/rotate-particles.md)
 
 # [Networking](networking/index.md)
 ## [Network API](networking/network-api.md)
