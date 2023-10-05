@@ -197,7 +197,7 @@ class GAME_API MySettings : public ISerializable
 ```
 ***
 
-## Asset extenion in Editor
+## Asset extension in Editor
 
 Flax Editor supports extending editing and usage experience per-asset type. For example, you can override the default asset icon, generate a thumbnail based on contents or provide additional actions executable from *Content* window.
 
