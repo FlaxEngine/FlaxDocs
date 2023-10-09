@@ -7,7 +7,7 @@ It supports **convex meshes** and **triangle meshes** data.
 
 ## Create a collision data
 
-To create a new collision data asset use the *Content* window. Right-click in the Content directory and select option **New -> Collision Data**. Then specify the name and press *Enter* to confirm.
+To create a new collision data asset use the *Content* window. Right-click in the Content directory and select option **New -> Physics -> Collision Data**. Then specify the name and press *Enter* to confirm.
 
 ![New Collision Data](media/new-collision-data.jpg)
 

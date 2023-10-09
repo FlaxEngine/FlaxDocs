@@ -10,7 +10,7 @@ For faster editing, use *shift* key to check/uncheck all child bones of the clic
 
 ## Using skeleton mask
 
-1. To create a new skeleton mask asset, simply navigate to the Content directory in the *Content* window, then right-click and choose option **New -> Skeleton Mask**. Specify its name and press *Enter*.
+1. To create a new skeleton mask asset, simply navigate to the Content directory in the *Content* window, then right-click and choose option **New -> Animartion -> Skeleton Mask**. Specify its name and press *Enter*.
 
 	![Create New Skeleton Mask](media/skeleton-mask-create.jpg)
 

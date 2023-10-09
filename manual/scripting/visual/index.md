@@ -31,10 +31,10 @@ Confirm dialog with **Create** button and *double-click* on the asset icon to op
 ![Visual Script Editor Layout](media/visual-script-window-layout.png)
 
 Visual Script editor window contains:
-1) **Toolstrip** - utility buttons such as saving or undo control
-2) **Visual Surface** - the nodes graph editor
-3) **Class Properties** - visual script class settings
-4) **Class Members** - visual script functions and properties.
+1. **Toolstrip** - utility buttons such as saving or undo control
+2. **Visual Surface** - the nodes graph editor
+3. **Class Properties** - visual script class settings
+4. **Class Members** - visual script functions and properties.
 
 ### Navigation controls
 
@@ -44,7 +44,7 @@ Controls in the Visual Script Editor generally match the controls of other tools
 
 | Control | Action |
 |--------|--------|
-| **RMB** drag on background  | Pan material nodes graph |
+| **RMB** drag on background | Pan nodes graph |
 | **RMB** on background | Show node creation menu |
 | **RMB** on node | Show node edit menu |
 | **LMB** drag on background | Select nodes with rectangle tool |

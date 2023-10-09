@@ -95,7 +95,7 @@ public class TextureFromCode : Script
 #include "Engine/Content/Assets/Model.h"
 #include "Engine/Content/Assets/Material.h"
 
-API_CLASS() class MYPROJECT_API TextureFromCodeCpp : public Script
+API_CLASS() class GAME_API TextureFromCodeCpp : public Script
 {
     API_AUTO_SERIALIZATION();
     DECLARE_SCRIPTING_TYPE(TextureFromCodeCpp);

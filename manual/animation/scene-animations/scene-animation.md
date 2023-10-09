@@ -6,7 +6,7 @@
 
 ## Create a scene animation
 
-To create a new animation asset use the *Content* window. Right-click in the Content directory and select option **New -> Scene Animation**. Then specify the name and press Enter to confirm.
+To create a new animation asset use the *Content* window. Right-click in the Content directory and select option **New -> Animartion -> Scene Animation**. Then specify the name and press Enter to confirm.
 
 ![New Scene Animation](media/new-scene-animation.png)
 

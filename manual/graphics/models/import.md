@@ -69,6 +69,7 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 | **Import Blend Shapes** | If checked, blend shapes will be imported (morph targets). |
 | **Lightmap UVs Source** | Specifies model lightmap texture coordinates source. Can import them from the source model or generate them with in-build tool. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Disable**</td><td>Don't use lightmap UVs.</td></tr><tr><td>**Generate**</td><td>Generate lightmap UVs from model geometry. Requires proper normal/tangent vectors. Highly increases the importing time.</td></tr><tr><td>**Channel 0**</td><td>Use input mesh texture coordinates channel 0.</td></tr><tr><td>**Channel 1**</td><td>Use input mesh texture coordinates channel 1.</td></tr><tr><td>**Channel 2**</td><td>Use input mesh texture coordinates channel 2.</td></tr><tr><td>**Channel 3**</td><td>Use input mesh texture coordinates channel 3.</td></tr></table></tbody>|
 | **Collision Meshes Prefix** | If specified, all meshes which name starts with this prefix will be imported as a separate collision data (excluded used for rendering). |
+| **Collision Type** | The type of collision that should be generated if has collision prefix specified. |
 |||
 | **Transform** ||
 | **Scale** | Custom uniform scale applied to the imported model data. |
@@ -93,8 +94,10 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 | **Triangle Reduction** | The target amount of triangles for the generated LOD (based on the higher LOD). Normalized to range 0-1. For instance 0.4 cuts the triangle count to 40%. |
 |||
 | **Import Materials** | If checked, the importer will create materials for model meshes as specified in the file. |
+| **Import Materials As Instances** | If checked, the importer will create the model's materials as instances of a base material. |
+| **Instance To Import As** | The material to import the model's materials as an instance of. |
 | **Import Textures** | If checked, the importer will import texture files used by the model and any embedded texture resources. |
-| **Restore Materials On Reimport** | If checked, the importer will try to restore the assigned materials to the model slots. |
+| **Keep Material Slots on Reimport** | If checked, the importer will try to keep the model's current material slots, instead of importing materials from the source file. |
 |||
 | **Split Objects** | If checked, the imported mesh/animations are splitted into separate assets. Used if *Object Index* is set to -1. |
 | **Object Index** | The zero-based index for the mesh/animation clip to import. If the source file has more than one mesh/animation it can be used to pick a desire object. The default `-1` imports all objects. |

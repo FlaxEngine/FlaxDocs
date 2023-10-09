@@ -10,7 +10,7 @@ The first step is to add a [Text Render](../text-render/index.md) actor or [Labe
 
 ## 2. Create a new material asset
 
-**Right click** in the **Content Window** and select option **New -> Material**. Type a name and confirm with Enter. Double-click on created asset and start editing material.
+**Right click** in the **Content Window** and select option **New -> Material -> Material**. Type a name and confirm with Enter. Double-click on created asset and start editing material.
 
 ![New Material](../../graphics/materials/media/new-material.jpg)
 
