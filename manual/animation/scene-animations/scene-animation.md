@@ -71,7 +71,7 @@ You can use **right click on the timeline** to edit selected media properties or
 
 #### Nested Timeline
 
-**Nested Timeline** is a track that can be used to play another timeline. This can because very handy when doing more advanced scene animations or cut-scenes. For instance, big cut-scene for the final boss fight can be split into sections that are composited together in the master sequence.
+**Nested Timeline** is a track that can be used to play another timeline. This can become very handy when doing more advanced scene animations or cut-scenes. For instance, big cut-scene for the final boss fight can be split into sections that are composited together in the master sequence.
 
 #### Screen Fade
 
