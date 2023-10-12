@@ -43,6 +43,9 @@ To learn more about using holes in your terrain see [this tutorial](tutorials/te
 
 To learn more about using terrain brushes see the related documentation page [here](brushes.md).
 
+> [!Note]
+> Hold **Shift** key and use `Mouse Scroll Wheel` to control brush size.
+
 ## Edit Mode
 
 ![Edit Tool](media/edit-tool.png)

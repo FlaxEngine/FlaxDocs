@@ -2,6 +2,9 @@
 
 Flax supports editing and painting terrain using various brushes to easily achieve desired effects right in the editor. Use this documentation page to learn more about brush types supported by Flax.
 
+> [!Note]
+> Hold **Shift** key and use `Mouse Scroll Wheel` to control brush size.
+
 ## Circle Brush
 
 **Circle Brush** is a default terrain brush that has circle shape and uses radial falloff. It supports various falloff modes to create interesting results with it.
