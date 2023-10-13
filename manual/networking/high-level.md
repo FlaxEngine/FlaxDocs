@@ -551,3 +551,15 @@ To extend networking for more custom case you can use `INetworkObject` interface
 
 To analyze network transfer use Network tab in [Profiler window](../editor/profiling/profiler.md) in Editor.
 To quickly profile networking with lag simulation (eg. due to bad network ocnnection) you can use `NetworkLagDriver` (set it in `Network Settings`) which can delay network messages sending to fake the lag between server and client.
+
+To access objects **replication logs** use:
+
+# [C#](#tab/code-csharp)
+```cs
+NetworkReplicator.EnableLog = true;
+```
+# [C++](#tab/code-cpp)
+```cpp
+NetworkReplicator::EnableLog = true;
+```
+***
