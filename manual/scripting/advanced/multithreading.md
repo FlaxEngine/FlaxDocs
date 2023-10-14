@@ -248,6 +248,9 @@ class ThreadTest : Script
 
 If your game requires multiple jobs execution, then it might be worth to try using in-build C# `ThreadPool` to enqueue tasks:
 
+> [!Tip]
+> Add `options.ScriptingAPI.SystemReferences.Add("System.Threading.ThreadPool");` in `Setup` function inside your `Game.Build.cs` to properly reference threading lib.
+
 ```cs
 using System;
 using System.IO;

@@ -30,6 +30,7 @@ Now open the asset (double-click on it) and assign the model to use for a collid
 Flax supports creating most of the asset types in Editor using C# scripts (with editor plugins). The same applies to the collision data asset. Here is an example code that bakes the asset:
 
 ```cs
+// Cooks collision for existing model asset
 var path = "Content/MyModel";
 var model = Content.LoadAsync<Model>(path);
 FlaxEditor.Editor.CookMeshCollision(path + "_Collision", CollisionDataType.ConvexMesh, model);

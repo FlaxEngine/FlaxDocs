@@ -39,8 +39,8 @@ public class CrowdSystem : GamePlugin
         }
 
         // Add agent to the crowd
-        agent.ID = _crowd.AddAgent(agent.Actor.Position, agent.Properties);
-        if (agent.ID == -1)
+        agent.AgentID = _crowd.AddAgent(agent.Actor.Position, agent.Properties);
+        if (agent.AgentID == -1)
             throw new Exception("Failed to add agent to the crowd");
         agent.Crowd = _crowd;
     }
@@ -48,9 +48,9 @@ public class CrowdSystem : GamePlugin
     internal void RemoveAgent(Agent007 agent)
     {
         // Remove agent from the crowd
-        _crowd.RemoveAgent(agent.ID);
+        _crowd.RemoveAgent(agent.AgentID);
         agent.Crowd = null;
-        agent.ID = -1;
+        agent.AgentID = -1;
     }
 
     /// <inheritdoc />
@@ -65,7 +65,7 @@ public class CrowdSystem : GamePlugin
     }
     
     /// <summary>
-    /// Custom Task Graph System that updates crowd durign async job.
+    /// Custom Task Graph System that updates crowd during async job.
     /// </summary>
     private sealed class CrowdTaskGraphSystem : TaskGraphSystem
     {
@@ -93,7 +93,7 @@ Create path following agent script that will be attached to the actor (eg. `Char
 public class Agent007 : Script
 {
     internal NavCrowd Crowd = null;
-    internal int ID = -1;
+    internal int AgentID = -1;
     private Vector3 _targetPos;
 
     /// <summary>
