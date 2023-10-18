@@ -45,7 +45,18 @@ Example usage:
 
 ![Model Collsion import engine](media/collision-mesh.png)
 
-For ease of use after you add a model on a scene you can use *Right-click* and select option **Add mesh collider**. Then the editor will automatically pick up the imported collision mesh (or generate a new one) and add it to the model on a scene so it has a collision for physics.
+For ease of use after you add a model on a scene you can use *Right-click* and select option **Add mesh collider**. Then the editor will automatically pick up the imported collision mesh (or generate a new one) and add it to the model on a scene so it has a collision for physics. You can change `Collision Type` between convex and triangle mesh - convex is more optimized but less accurate.
+
+## Reusing material when importing multiple models
+
+When importing large set of models importer will create materials for each one of them which might not be efficent. To optimize it you can:
+* select all models (eg. with `Ctrl+A`) to edit them in batch,
+* check `Import Materials As Instances` to create material instances rather than materials,
+* assign `Instance To Import As` material to be used as base (it can contain common parameters like `Color` to be overriden by importer in instances),
+* set `Sub Asset Folder` to folder name where imported materials and textures will be placed for all of models (eg. `mat`)
+* import.
+
+![Reusing material when importing multiple models](media/import-models-with-shared-mat-instances.png)
 
 ## Model import settings
 
@@ -101,6 +112,8 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 |||
 | **Split Objects** | If checked, the imported mesh/animations are splitted into separate assets. Used if *Object Index* is set to -1. |
 | **Object Index** | The zero-based index for the mesh/animation clip to import. If the source file has more than one mesh/animation it can be used to pick a desire object. The default `-1` imports all objects. |
+|||
+| **Sub Asset Folder** | If specified, will be used as sub-directory name for automatically imported sub assets such as textures and materials. Set to whitespace (single space) to import to the same directory. |
 
 ## Tips
 
