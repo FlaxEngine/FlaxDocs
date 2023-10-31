@@ -8,7 +8,7 @@ Before you can publish your game you must first ideally have a developed game an
 
 ## 2. Follow the guidelines
 
-All commercial games made using the Flax Engine must follow various guidelines. It's required by the [EULA](http://flaxengine.com/licensing/) which has to be accepted before installing the engine. It does not affect truly uncommercial products (educational, totally free). Please visit [Commercial Product Release Guidelines](http://flaxengine.com/release/) page to learn more.
+All commercial games made using the Flax Engine must follow various guidelines. It's required by the [EULA](https://flaxengine.com/licensing/) which has to be accepted before installing the engine. It does not affect truly uncommercial products (educational, totally free). Please visit [Commercial Product Release Guidelines](https://flaxengine.com/release/) page to learn more.
 
 ## 3. Build a game
 

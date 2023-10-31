@@ -3,8 +3,7 @@
 ![Flax Engine](media/Screen5.png)
 
 We always welcome collaborative participation and community development.
-We believe that open source projects have huge potential and provide many opportunities to develop better software.
-With that in mind, we open-source many components of the Flax Engine. This includes editor, C# scripting API, and even this documentation.
+We believe that open projects have huge potential and provide many opportunities to develop better software.
 
 Check out the official repositories on a Github:
 

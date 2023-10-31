@@ -2,9 +2,9 @@
 
 ![Installing Flax](media/installing-flax.png)
 
-To get Flax: Visit the [download page](http://flaxengine.com/download) to download the Flax Launcher installer.
+To get Flax: visit the [download page](https://flaxengine.com/download) to access Flax Launcher installer.
 
-After downloading the Flax Launcher, start the installer and follow the installation wizard steps. In order to install Flax you will be asked to accept the *EULA* that defines the engine licensing terms. You can learn more about legal regulations [here](http://flaxengine.com/licensing).
+After downloading the Flax Launcher, start the installer and follow the installation wizard steps. In order to install Flax you will be asked to accept the *EULA* that defines the engine licensing terms. You can learn more about legal regulations [here](https://flaxengine.com/licensing).
 
 To learn more about the software and hardware requirements please visit [this page](requirements.md).
 

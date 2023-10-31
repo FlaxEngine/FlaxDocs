@@ -62,12 +62,12 @@ Example command line to run Editor with custom options:
 ./FlaxEditor -project "<project-path>" -std -nvidia
 ```
 
-## New project
-
-To create a new project to run Flax Editor executable as follows `./FlaxEditor -new -project <new_project_path>` to create a new project inside a specified folder. Editor will generate a project template and open it.
-
 ## Sample projects
 
 To help you start using Flax pick the latest Flax Samples from [https://github.com/FlaxEngine/FlaxSamples](https://github.com/FlaxEngine/FlaxSamples). This collection contains various example projects that showcase the engine features and can be used as a foundation for your future Flax projects. Have fun!
 
 ![Flax Editor Play Mode on Linux with Vulkan](media/editor-playing-on-linux-vulkan.gif)
+
+## New project
+
+To create a new project to run Flax Editor executable as follows `./FlaxEditor -new -project <new_project_path>` to create a new project inside a specified folder. Editor will generate a project template and open it.

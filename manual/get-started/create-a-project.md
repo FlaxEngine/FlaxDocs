@@ -4,7 +4,7 @@
 
 After you [get Flax](get-flax.md), navigate to the **Projects** page in the Flax Launcher. Here you can view your projects library. You can open existing projects by double clicking on them (the default engine version) and you can use the context menu (3 dots near its name label) to delete, unlink or view project location.
 
-If it's your first time with Flax we recommend you click **Get Flax Samples** to download a collection of free projects that showcase various engine features and can be used as a base for your journey with Flax. Flax Samples are free and open-source [available here](https://github.com/FlaxEngine/FlaxSamples).
+If it's your first time with Flax we recommend you click **Get Flax Samples** to download a collection of free projects that showcase various engine features and can be used as a base for your journey with Flax. Flax Samples are free and [available here](https://github.com/FlaxEngine/FlaxSamples).
 
 You can also add an existing project from your drive using the **Add Project** button. Simply pick the folder that contains the project and it will appear in your project's library.
 

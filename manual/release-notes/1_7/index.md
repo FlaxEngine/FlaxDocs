@@ -12,7 +12,7 @@ Section `Term and Termination` has been removed. We won't be able to cancel the 
 
 * *Added limitation on a maximum of one license modification per calendar quarter.*
 
-Section `Amendments to this Agreement` has been updated to limit possible EULA modifications to once per calendar quarter (as opposed to an unlimited amount of amendments before). For the past 3 years, we've updated EULA only twice: both in favor of our users. We're committed to stable licensing terms that bring more trust to our clients.
+Section `Amendments to this Agreement` has been updated to limit possible EULA modifications to once per calendar quarter (as opposed to an unlimited amount of amendments before). For the past 3 years, we've updated EULA only twice: both times in favor of our users. We're committed to stable licensing terms that bring more trust to our clients.
 
 * *Added ability to keep using previous EULA version when it's amended.*
 
