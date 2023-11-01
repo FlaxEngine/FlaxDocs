@@ -81,7 +81,7 @@ Every update brings many large features but also tons of smaller things that mat
 
 ![Editor for macOS](../1_6/media/mac-arm64.png)
 
-Flax userbase on macOS is growing fast!  In order to smooth the usability on that platform we've fixed many bugs related to .NET SDK detection, input, dockable windows usage, and much more. Starting from now **we will provide code signed Flax Editor for macOS amr64** (`.dmg` binary). It will include an engine built for macOS and iOS to easily cook games for those platforms.
+Flax userbase on macOS is growing fast!  In order to smooth the usability on that platform we've fixed many bugs related to .NET SDK detection, input, dockable windows usage, and much more. Starting from now **we will provide code signed Flax Editor for macOS arm64** (`.dmg` binary). It will include an engine built for macOS and iOS to easily cook games for those platforms.
 
 We've added file watcher support to handle the hot-reloading of scripts and shaders. The graphics backend will handle proper MoltenVK runtime with the latest Vulkan SDK.
 
