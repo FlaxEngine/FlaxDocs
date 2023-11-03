@@ -4,13 +4,13 @@ In this tutorial, you will learn how to create a new prefab asset. Follow the in
 
 ## New Prefab
 
-The easiest option to create an empty prefab is by using *Content Window*. **Right-click** and choose option **New -> Prefab**. Then double-click and edit your new asset.
+The easiest option to create an empty prefab is by using the *Content Window*. **Right-click** and choose the option **New -> Prefab**. Then double-click and edit your new asset.
 
 ![New Prefab Asset](media/new-prefab1.png)
 
 ## Drag and Drop
 
-Another way to create a new prefab asset is by using the existing actors as an archetype. To do it simply select the actor on a scene that you want to turn into a prefab and drag it into the *Content Window*. Specify its name and hit enter to confirm. Then double-click and edit your new asset.
+Another way to create a new prefab asset is by using the existing actors as an archetype. To do this simply select the actor on a scene that you want to turn into a prefab and drag it into the *Content Window*. Specify its name and hit enter to confirm. Then double-click and edit your new asset.
 
 ![New Prefab Asset](media/new-prefab2.png)
 

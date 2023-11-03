@@ -4,7 +4,7 @@ When you're ready to publish your game, create a release build with [Game Cooker
 
 ## 1. Create a game and run it through Quality Assurance
 
-Before you can publish your game you must first ideally have a developed game and perform enough QA to deliver a high-quality product.
+Before you can publish your game ideally you must first have a developed game and perform enough QA to deliver a high-quality product.
 
 ## 2. Follow the guidelines
 
@@ -19,7 +19,7 @@ Now to prepare the final build. Remember to use **Release** mode and remove any 
 ## 4. Distribute your game
 
 Every platform has it's own building process and custom output data format but in most cases simply grab the files from the *Output* directory. 
-How you distribute it is up to you.
+How you distribute the game is up to you.
 
 ![Game Output](media/build-output.jpg)
 
