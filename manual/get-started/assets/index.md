@@ -2,9 +2,9 @@
 
 ![Assets](media/title.jpg)
 
-**Asset** is a file that holds a resource data.
-For instance, texture, model or scene file are assets.
-An asset can be imported from file created outside of Flax, such as a 3D model, an audio file or a texture.
+An **Asset** is a file that holds resource data.
+For instance, textures, models or scene files are assets.
+An asset can be imported from a file created outside of Flax, such as a 3D model, an audio file or a texture.
 There are also some asset types that can be created inside the Flax Editor, such as a Physical Material, or a Scene.
 
 This section covers the basic principles of working with assets in Flax.
@@ -16,13 +16,13 @@ This section covers the basic principles of working with assets in Flax.
 <div class="frontpage-section">
 <a href="creating-assets.md"><img src="media/creating-assets-icon.jpg"></a>
 <h3><a href="creating-assets.md">Creating assets</a></h3>
-<p>Learn how to create and import assets in editor.</p>
+<p>Learn how to create and import assets in the editor.</p>
 </div>
 
 <div class="frontpage-section">
 <a href="using-assets.md"><img src="media/using-assets-icon.jpg"></a>
 <h3><a href="using-assets.md">Using assets</a></h3>
-<p>Learn how to use assets in editor and scripts.</p>
+<p>Learn how to use assets in the editor and scripts.</p>
 </div>
 
 <div class="frontpage-section">

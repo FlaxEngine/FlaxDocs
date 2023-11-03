@@ -6,7 +6,7 @@ Selecting actors in your scene is one of the most essential parts of the level d
 
 ![Pick selection](media/select1.gif)
 
-To select an object simply click **left mouse button** on it in a *Editor* window. Clicking on an actor will deselect any currently selected actors and select the new one instead. If you hold down the **Ctrl** key while you click on a new (unselected) object, the new object is added to the selection. If you hold down the **Ctrl** key while clicking on an already selected object, the object is removed from the selection.
+To select an object simply click on it with the **left mouse button** in an *Editor* window. Clicking on an actor will deselect any currently selected actors and select the new one instead. If you hold down the **Ctrl** key while you click on a new (unselected) object, the new object is added to the selection. If you hold down the **Ctrl** key while clicking on an already selected object, the object is removed from the selection.
 
 ## Scene tree selection
 

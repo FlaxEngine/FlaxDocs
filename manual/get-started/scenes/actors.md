@@ -2,9 +2,9 @@
 
 ![Actors](media/actors.png)
 
-**Actors** are the essential objects of the scenes. You can place them into a level to build game environment, setup a lighting and create a gameplay. Every [Actor](https://docs.flaxengine.com/api/FlaxEngine.Actor.html) is linked to the parent actor (except the Scene actors which are root of the hierarchy) and can have child actors (tree hierarchy). Actors have own 3D transformation (translation, rotation and scale) and inherit the parent actor transformation. You can attach C# scripts to the actors and spawn/destroy them at runtime.
+**Actors** are the essential objects of the scenes. You can place them into a level to build game environment, setup a lighting and create a gameplay. Every [Actor](https://docs.flaxengine.com/api/FlaxEngine.Actor.html) is linked to the parent actor (except the Scene actors which are the root of the hierarchy) and can have child actors (tree hierarchy). Actors have their own 3D transformation (translation, rotation and scale) and inherit the parent actor transformation. You can attach C# scripts to the actors and spawn/destroy them at runtime.
 
-This documentation page contains link to all tutorials related to working with actors and references to all actor types.
+This documentation page contains links to all tutorials related to working with actors and references to all actor types.
 
 ## Using actors
 
@@ -13,19 +13,19 @@ This documentation page contains link to all tutorials related to working with a
 <div class="frontpage-section">
 <a href="placing-actors.md"><img src="media/placing-actors-icon.jpg"></a>
 <h3><a href="placing-actors.md">Placing actors</a></h3>
-<p>Learn how to create and remove actors in editor.</p>
+<p>Learn how to create and remove actors in the editor.</p>
 </div>
 
 <div class="frontpage-section">
 <a href="selecting-actors.md"><img src="media/selecting-actors-icon.jpg"></a>
 <h3><a href="selecting-actors.md">Selecting actors</a></h3>
-<p>Learn how to select actors in editor.</p>
+<p>Learn how to select actors in the editor.</p>
 </div>
 
 <div class="frontpage-section">
 <a href="transforming-actors.md"><img src="media/transforming-actors-icon.jpg"></a>
 <h3><a href="transforming-actors.md">Transforming actors</a></h3>
-<p>Learn how to move, rotate and scale your objects in editor.</p>
+<p>Learn how to move, rotate and scale your objects in the editor.</p>
 </div>
 
 </div>

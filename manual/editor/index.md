@@ -2,9 +2,9 @@
 
 ![Flax Editor](media/title.jpg)
 
-**Flax Editor** is an all-in-one application used to develop games with Flax Engine.
-This documentation section covers the most important topics and describes how to use all editor tools.
-Follow those instructions to robust your game development!
+The **Flax Editor** is an all-in-one application used to develop games with Flax Engine.
+This documentation section covers the most important topics and describes how to use all the editor tools.
+Follow these instructions to make your game development more robust!
 
 ## Topics
 
@@ -13,7 +13,7 @@ Follow those instructions to robust your game development!
 <div class="frontpage-section">
 <a href="interface.md"><img src="media/layout-icon.jpg"></a>
 <h3><a href="interface.md">Interface</a></h3>
-<p>Learn about Flax Editor interface and using dockable windows.</p>
+<p>Learn about the Flax Editor interface and using dockable windows.</p>
 </div>
 
 <div class="frontpage-section">
@@ -25,7 +25,7 @@ Follow those instructions to robust your game development!
 <div class="frontpage-section">
 <a href="windows/index.md"><img src="windows/media/icon.jpg"></a>
 <h3><a href="windows/index.md">Windows</a></h3>
-<p>See the detailed documentation about editor windows.</p>
+<p>See detailed documentation about editor windows.</p>
 </div>
 
 <div class="frontpage-section">
@@ -55,7 +55,7 @@ Follow those instructions to robust your game development!
 <div class="frontpage-section">
 <a href="localization/index.md"><img src="localization/media/icon.jpg"></a>
 <h3><a href="localization/index.md">Localization</a></h3>
-<p>Games internalization and globalization tools.</p>
+<p>Game internalization and globalization tools.</p>
 </div>
 
 <div class="frontpage-section">

@@ -13,19 +13,19 @@ Simply select the actor type category and drag and drop it into your scene.
 
 ## Placing actors using a Context Menu
 
-You can also add new actors using a Context Menu in a *Scene* window. Right-click on scene or other actor, select submenu **New** and spawn one of the actor types.
+You can also add new actors using a Context Menu in a *Scene* window. Right-click on scene or other actor, select the **New** submenu and spawn one of the actor types.
 
 ![Scene Window Spawn Actor](media/context-menu-spawning.jpg)
 
 ## Placing actors using Drag and Drop
 
-The fastest way to add new model into the level is by using *drag and drop* feature. In that way you can add models, prefabs, mesh colliders and even scenes.
+The fastest way to add new model into the level is by using the *drag and drop* feature. In that way you can add models, prefabs, mesh colliders and even scenes.
 
 ![Drag and Drop Spawn Model](media/drag-drop-spawn-model.jpg)
 
 ## Placing actors from code
 
-You can also spawn new actors from C# code. To learn more about it see [Scripting](../../scripting/index.md) documentation.
+You can also spawn new actors from C# code. To learn more about it see the [Scripting](../../scripting/index.md) documentation.
 
 ```cs
 var light = new PointLight();

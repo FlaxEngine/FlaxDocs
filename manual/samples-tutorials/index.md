@@ -13,7 +13,7 @@
 <div class="frontpage-section">
 <a href="samples/arizona.md"><img src="samples/media/arizona-icon.jpg"></a>
 <h3><a href="samples/arizona.md">Arizona Framework</a></h3>
-<p>If you want to develop multiplayer games or shooters use Arizona Framework.</p>
+<p>If you want to develop multiplayer games or shooters use the Arizona Framework.</p>
 </div>
 
 <div class="frontpage-section">

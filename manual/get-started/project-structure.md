@@ -4,7 +4,7 @@
 
 All Flax projects have a unified structure. This strict organization helps with development and provides better standardization across all Flax games.
 
-The Flax Editor can load projects located in any location on your drive. It's only required to place a valid **.flaxproj** file that describes the project (name, metadata). Flax Editor will generate all project folders if missing (Cache, Content, Logs and Source directories) as well as C# projects and solution file.
+The Flax Editor can load projects located in any location on your drive. It's only required to place a valid **.flaxproj** file that describes the project (name, metadata). The Flax Editor will generate all project folders if they are missing (Cache, Content, Logs and Source directories) as well as C# projects and solution files.
 
 ## Example .flaxproj
 
@@ -40,7 +40,7 @@ To learn more about project file properties see the [reference](https://docs.fla
    * **Shaders** - auto-improted shaders assets (from source)
    * **GameSettings.json** - fixed location for the game settings asset
  * **Logs** - contains editor log files (and crash dumps)
- * **Screenshots** - contains screenshot files (`.png` format) you took in editor (use `F12` key)
+ * **Screenshots** - contains screenshot files (`.png` format) you took in editor (use the `F12` key)
  * **Source** - contains all game script files (C++ and C# scripts) organized into modules
    * **Shaders** - shader source files
    * **&lt;GameModule&gt;** - subfolder with game module code
