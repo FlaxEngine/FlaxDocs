@@ -107,6 +107,8 @@ public class MyDelayNode : BehaviorTreeNode
 #include "Engine/AI/BehaviorTreeNode.h"
 #include "Engine/AI/BehaviorKnowledgeSelector.h"
 #include "Engine/Scripting/ScriptingObjectReference.h"
+#include "Engine/AI/Behavior.h"
+#include "Engine/Level/Actor.h"
 
 /// <summary>
 /// Simple delay node.
