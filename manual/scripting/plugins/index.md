@@ -4,6 +4,13 @@ Plugins are collection of source code added to your Flax project that can be use
 
 Example plugin project can be found [here](https://github.com/FlaxEngine/ExamplePlugin), use this as a reference.
 
+## In this section
+
+* [Plugins Window](plugins-window.md)
+* [Plugin Project](plugin-project.md)
+* [How to create a custom editor plugin](../tutorials/custom-plugin.md)
+* [How to use custom settings](../tutorials/custom-settings.md)
+
 ## Introduction
 
 Flax supports loading native .dll files, C# libraries from *.dll* files and adding references to game projects for use in scripts. Many Flax Engine systems are designed to be extensible, enabling developers to add new features and to modify built-in functionality without modifying engine source code directly.
@@ -172,9 +179,10 @@ public override Guid[] GetReferences()
 > [!Note]
 > Note: if your plugin uses both **Game Plugin** and **Editor Plugin** types the remember to implement `EditorPlugin.GamePluginType` to point the type of the game plugin.
 
-## In this section
+## Plugins Order
 
-* [Plugins Window](plugins-window.md)
-* [Plugin Project](plugin-project.md)
-* [How to create a custom editor plugin](../tutorials/custom-plugin.md)
-* [How to use custom settings](../tutorials/custom-settings.md)
+`PluginLoadOrder` attribute allows for specifying the order of the plugin initialization:
+
+```
+[PluginLoadOrder(InitializeAfter = typeof(TestPlugin4), DeinitializeBefore = typeof(TestPlugin4))]
+```
