@@ -78,6 +78,7 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 | **Import LODs** | If checked, model importer will try to find LODs and import them. See *Importing model LODs* section to learn more. |
 | **Import Vertex Colors** | If checked, vertex colors will be imported (channel 0 only, if exists). |
 | **Import Blend Shapes** | If checked, blend shapes will be imported (morph targets). |
+| **Calculate Bone Offset Matrices** | Enable skeleton bones offset matrices recalculating. |
 | **Lightmap UVs Source** | Specifies model lightmap texture coordinates source. Can import them from the source model or generate them with in-build tool. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Disable**</td><td>Don't use lightmap UVs.</td></tr><tr><td>**Generate**</td><td>Generate lightmap UVs from model geometry. Requires proper normal/tangent vectors. Highly increases the importing time.</td></tr><tr><td>**Channel 0**</td><td>Use input mesh texture coordinates channel 0.</td></tr><tr><td>**Channel 1**</td><td>Use input mesh texture coordinates channel 1.</td></tr><tr><td>**Channel 2**</td><td>Use input mesh texture coordinates channel 2.</td></tr><tr><td>**Channel 3**</td><td>Use input mesh texture coordinates channel 3.</td></tr></table></tbody>|
 | **Collision Meshes Prefix** | If specified, all meshes which name starts with this prefix will be imported as a separate collision data (excluded used for rendering). |
 | **Collision Type** | The type of collision that should be generated if has collision prefix specified. |
@@ -86,6 +87,7 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 | **Scale** | Custom uniform scale applied to the imported model data. |
 | **Rotation** | Custom import geometry rotation applied to the imported model data. |
 | **Translation** | Custom import geometry offset applied to the imported model data. |
+| **Use Local Origin** | If checked, the imported geometry will be shifted to its local transform origin. |
 | **Center Geometry** | If checked, the imported geometry will be shifted to the center of mass. |
 |||
 | **Animation** ||
