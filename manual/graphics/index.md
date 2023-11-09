@@ -2,9 +2,9 @@
 
 ![Graphics](media/title.jpg)
 
-Flax offers a wide variety of graphics pipeline features as well as solid renderer that includes deferred shading, global illumination, reflective environment and post-processing.
+Flax offers a wide variety of graphics pipeline features as well as a solid renderer that includes deferred shading, global illumination, reflective environment and post-processing.
 
-This section explains all you need to know about working with materials pipeline, importing textures, lighting the environment and much more.
+This section explains all you need to know about working with the materials pipeline, importing textures, lighting the environment and much more.
 
 ## Supported graphics backends
 
@@ -15,7 +15,7 @@ This section explains all you need to know about working with materials pipeline
 * Platform native (eg. on PS4)
 
 > [!TIP]
-> To check on which rendering backend game is running use [GPUDevice.Instance.RendererType](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_GPUDevice_RendererType). You can also use [GPUDevice.Instance.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_GPUDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.
+> To check which rendering backend the game is running use [GPUDevice.Instance.RendererType](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_GPUDevice_RendererType). You can also use [GPUDevice.Instance.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_GPUDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.
 
 ## In this section
 
