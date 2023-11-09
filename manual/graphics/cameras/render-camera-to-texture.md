@@ -1,29 +1,29 @@
 ## HOWTO: Render a camera to a texture
 
-Flax Engine offers very wide range of customization that can be made to extend the rendering pipeline. One of them is rendering scene using the custom camera right to the render target. Then presenting it on an object surface.
+Flax Engine offers a very wide range of customization that can be made to extend the rendering pipeline. One of them is rendering a scene using a custom camera right to the render target. Then presenting it on an object surface.
 
-In this tutorial you will learn how to achieve picture-in-picture effect:
+In this tutorial you will learn how to achieve the picture-in-picture effect:
 
 ![Render to Texture](media/picture-in-picture.png)
 
-## Creating material
+## Creating the material
 
-The first step is to create a dedicated material for the TV object. It will be used to show rendered scane picture on a surface so player could see it. To do that follow these simple steps:
+The first step is to create a dedicated material for the TV object. It will be used to show the rendered scene picture on a surface so the player can see it. To do that follow these simple steps:
 
-1. Create new empty material, and name it `TV Material` (see [Materials Basics](../materials/basics/index.md) page to learn how to do it)
+1. Create a new empty material and name it `TV Material` (see the [Materials Basics](../materials/basics/index.md) page to learn how to do it)
 
-2. Open it in Material Editor (double-click on an asset)
+2. Open it in the Material Editor (double-click on the asset)
    ![Material Editor](media/picture-in-picture-2.jpg)
 
-3. Scroll down the *Properties Panel*, select **GPU Texture** option from the bottom drop down menu and press **Add parameter** button
+3. Scroll down in the *Properties Panel*, select the **GPU Texture** option from the bottom drop down menu and press the **Add parameter** button
    <br>![Material Parameter](media/picture-in-picture-3.jpg)
 
-4. Right-click on created *New parameter*, select option **Rename** and set its name to **Image**
+4. Right-click on the newly created *New parameter*, select the option **Rename** and set its name to **Image**
 
-5. Right-click on a Surface background and create **Get Parameter** node (to learn more about creating nodes see [Material Editor](../materials/material-editor/index.md) page)
+5. Right-click on a Surface background and create a **Get Parameter** node (to learn more about creating nodes see the [Material Editor](../materials/material-editor/index.md) page)
    ![Material Get Parameter](media/picture-in-picture-4.jpg)
 
-6. Select **Image** parameter from the dropdown menu of that node and connect it's **Color** box with Material **Emissive** input.
+6. Select the **Image** parameter from the dropdown menu of that node and connect its **Color** box with the Material **Emissive** input.
    <br>![Material Parameter Usage](media/picture-in-picture-5.jpg)
 
 7. **Save** the material asset
@@ -32,7 +32,7 @@ The first step is to create a dedicated material for the TV object. It will be u
 
 Now it's time to write a simple script that will use a camera and render it to the texture (which is also called a *render target*).
 
-1. Navigate to *Source/Game* directory of your project and create new C# script with name **CameraTV**
+1. Navigate to the *Source/Game* directory of your project and create new C# script named **CameraTV**
    ![Creating new Script](media/picture-in-picture-6.jpg)
 
 2. Open the script
@@ -158,14 +158,14 @@ public class CameraTV : Script
 
 The final step is to set up a scene and link all this stuff together.
 
-1. Create new **Camera** object and place it in your scene
-2. Add object that will present a camera image. You can use **Cube** model from the *Toolbox* window
+1. Create a new **Camera** object and place it in your scene
+2. Add an object that will present a camera image. You can use a **Cube** model from the *Toolbox* window
    ![Tutorial](media/picture-in-picture-7.jpg)
 
-3. Select spawned object and add **CameraTV** script to it by simply draging it
+3. Select the spawned object and add the **CameraTV** script to it by simply draging it
    ![Tutorial](media/picture-in-picture-8.jpg)
 
-4. Set reference to the camera and material for script properties **Cam** and **Material**. You can also adjust the resolution (in pixels).
+4. Set a reference to the camera and material for the script properties **Cam** and **Material**. You can also adjust the resolution (in pixels).
    <br>![Tutorial ](media/picture-in-picture-9.jpg)
 
 5. Hit **Play** and see the results!

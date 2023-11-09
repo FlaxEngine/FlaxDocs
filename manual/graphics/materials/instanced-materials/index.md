@@ -9,9 +9,9 @@ With that being said *instanced materials* can be dynamically modified at runtim
 
 ## Creating Material Instance
 
-There are two ways to create `MaterialInstance` asset.
+There are two ways to create a `MaterialInstance` asset.
 
-- By using *Content* window
+- By using the *Content* window
 
 ![New Material Instance](../media/new-material-instance.png)
 
@@ -75,12 +75,12 @@ To learn more about using material instances from code go to the C# scripting AP
 
 ## Editing parameters
 
-After creating new *Material Instance* asset, double-click on it in a *Content* window.
-In shown Material instance editor window you can pick a base material for the instance and customize its properties.
-All your changes will be visible live in both editor window and in the game.
-This makes parameters adjusting easier.
+After creating a new *Material Instance* asset, double-click on it in a *Content* window.
+In the Material instance editor window you can pick a base material for the instance and customize its properties.
+All your changes will be visible live in both the editor window and in the game.
+This makes adjusting parameters easier.
 
-To set base material, simply drag & drop it from the Content window or any asset picker right to the *Base Material* property.
+To set the base material, simply drag & drop it from the Content window or any asset picker right to the *Base Material* property.
 
 ![Set Material Instance Base Material](../media/set-material-instance-base-material.jpg)
 

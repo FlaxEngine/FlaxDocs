@@ -2,11 +2,11 @@
 
 ![Layered Materials](../media/layered.png)
 
-**Layered Materials** can be described as *"materials inside the material"*. This feature provides a way to mix multiple materials into a single one. This technique allows to create a material of many *layers* which gives many oportunities when creating complex surfaces or using shared assets database for larger project.
+**Layered Materials** can be described as *"materials inside the material"*. This feature provides a way to mix multiple materials into a single one. This technique allows creating a material of many *layers* which gives many oportunities when creating complex surfaces or using a shared assets database for larger projects.
 
 ## Layers
 
-The easiest way to create a layered material is to use *Sample Layer* nodes to get the other material properties (white arrow connection type). Then blend it using for e.g. *Linear Layer Blend* node which interpolates all material attributes between bottom and top layers using the given alpha parameter.
+The easiest way to create a layered material is to use *Sample Layer* nodes to get the other material properties (white arrow connection type). Then blend it using for example, a *Linear Layer Blend* node which interpolates all material attributes between bottom and top layers using the given alpha parameter.
 Using dedicated surface mask textures helps with blending between layers.
 
 ![Layered Materials](../media/layered-graph.jpg)
@@ -15,8 +15,8 @@ Using dedicated surface mask textures helps with blending between layers.
 
 - Reduce complexity for more advanced materials
 - Easier workflow
-- Can be used to create materials database for the game (archetypes)
-- Can reduce draw calls (e.g. use single material with blending per character)
+- Can be used to create a materials database for the game (archetypes)
+- Can reduce draw calls (e.g. use a single material with blending per character)
 
 ## Caveats
 
