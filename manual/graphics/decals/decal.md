@@ -2,11 +2,11 @@
 
 ![Decal](media/decals.png)
 
-**Decal** is an actor type that projects and renders the material on top of the other objects. Decal uses a oriented bounding box to define its volume.
+**Decal** is an actor type that projects and renders the material on top of the other objects. A Decal uses an oriented bounding box to define its volume.
 
 ## Usage
 
-To learn how to setup and use the decal please see the dedicated tutorial: [How to create decal](create-decal.md).
+To learn how to setup and use the decal please see the dedicated tutorial: [How to create a decal](create-decal.md).
 
 ## Properties
 
@@ -14,8 +14,7 @@ To learn how to setup and use the decal please see the dedicated tutorial: [How 
 
 | Option | Description |
 |--------|--------|
-| **Material** | The decal material. Must have domain mode to *Decal* type. |
-| **Sort Order** | The decal rendering order. The higher values are render later (on top). |
+| **Material** | The decal material. Must have the domain mode set to *Decal* type. |
+| **Sort Order** | The decal rendering order. Higher values are rendered later (on top). |
 | **Size** | The decal bounds size (in local space). |
 | **Draw Min Screen Size** | The minimum screen size for the decal drawing. If the decal size on the screen is smaller than this value then decal will be culled. Set it to higher value to make culling more aggressive. |
-
