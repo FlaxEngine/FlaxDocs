@@ -1,18 +1,18 @@
 # HOWTO: Animate object over spline
 
-In the following tutorial, you will learn how to move an object over the spline.
+In the following tutorial, you will learn how to move an object over a spline.
 
 ## Tutorial
 
-### 1. Create spline
+### 1. Create a spline
 
-Follow [this](index.md) tutorial. Alternatively, set it to **Loop** to have continuous animation.
+Follow [this](index.md) tutorial. Alternatively, the spline can be set to **Loop** to have continuous animation.
 
 ![Create Spline Editor](media/create-spline.gif)
 
-### 2. Create script
+### 2. Create the script
 
-Follow [scripting documentation](../../scripting/index.md) about creating new scripts and make a new script named **SplineAnimation** and write the following contents:
+Follow the [scripting documentation](../../scripting/index.md) for information about creating new scripts and make a new script named **SplineAnimation** then write the following code:
 
 ```cs
 using System;
@@ -26,7 +26,7 @@ public class SplineAnimation : Script
     [Tooltip("The speed of the object animation over the spline.")]
     public float Speed = 1.0f;
 
-    [Tooltip("The actor to move it over the spline.")]
+    [Tooltip("The actor to move over the spline.")]
     public Actor ObjectToMove;
 
     public override void OnEnable()
@@ -58,14 +58,14 @@ public class SplineAnimation : Script
 
 ### 3. Setup
 
-Select Spline and click **Add script** button. Then pick your new script to attach it to the spline.
-Finally, choose the actor to move over the spline by setting **Object To Move** property on the script.
+Select the spline and click the **Add script** button. Next, pick your new script and attach it to the spline.
+Finally, choose the actor to move over the spline by setting the **Object To Move** property on the script.
 
 ![Spline Animate Setup Editor](media/spline-animate-object-setup.png)
 
 ### 4. Test it out!
 
-Now, hit *play* button and see the object moving along the spline. You can even edit spline while it moves over it.
+Now, hit the *play* button and see the object moving along the spline. You can even edit the spline while it moves over it.
 
 ![Animate Object Over Spline](media/animate-object-over-spline.gif)
 
