@@ -1,16 +1,16 @@
-# HOWTO: Generate procedural texture
+# HOWTO: Generate a procedural texture
 
 ![Texture](media/cubeResult.png)
 
 In this tutorial, you will learn how to create a simple texture from C# script code.
 
-This sample uses C# API method [Content.CreateVirtualAsset<T>](http://docs.flaxengine.com/api/FlaxEngine.Content.html#FlaxEngine_Content_CreateVirtualAsset__1) to generate procedural texture resource which can be modified at runtime from code.
+This sample uses the C# API method [Content.CreateVirtualAsset<T>](http://docs.flaxengine.com/api/FlaxEngine.Content.html#FlaxEngine_Content_CreateVirtualAsset__1) to generate a procedural texture resource which can be modified at runtime from code.
 
 ## Tutorial
 
-### 1. Create new C# script `TextureFromCode`
+### 1. Create a new C# script named `TextureFromCode`
 
-### 2. Write texture data generating code
+### 2. Write the texture data generating code
 
 # [C#](#tab/code-csharp)
 ```cs
@@ -104,7 +104,7 @@ private:
     MaterialInstance* _tempMaterialInstance = nullptr;
 
 public:
-    // The custom material to set it's texture.
+    // The custom material to set its texture.
     API_FIELD() AssetReference<Material> Material;
     // The custom model to set its material.
     API_FIELD() AssetReference<Model> Model;
@@ -191,15 +191,15 @@ void TextureFromCodeCpp::OnDestroy()
 ```
 ***
 
-### 3. Create material
+### 3. Create the material
 
-Create a sample material that contains a public texture parameter named `tex`. It's used by the script to assign a texture to draw.
+Create a simple material that contains a public texture parameter named `tex`. It's used by the script to assign a texture to draw.
 
 ![Material](media/material1.png)
 
-### 4. Link material and model
+### 4. Link the material and model
 
-Add created script `TextureFromCode` to an actor in your scene (or create a new one for it). Then select it and assign the model and created material (as shown in a picture below).
+Add created script `TextureFromCode` to an actor in your scene (or create a new one for it). Then select the actor and assign the model and created material (as shown in a picture below).
 
 ![Link Material and Model](media/textureFromCode1.png)
 

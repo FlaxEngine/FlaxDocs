@@ -2,7 +2,7 @@
 
 ![Textures](media/texture-window.jpg)
 
-**Texture Window** is the main tool to preview and reimport texture assets. To show it simply double-click on a texture in a *Content* window.
+The **Texture Window** is the main tool to preview and re-import texture assets. To access it simply double-click on a texture in a *Content* window.
 
 ## Interface
 
@@ -21,23 +21,23 @@ The following table lists the options in the toolstrip and what they do.
 | Icon | Description |
 |--------|--------|
 | ![icon](../../../media/editor-icons/search.png) | Shows and selects the asset in the *Content* window |
-| ![icon](../../../media/editor-icons/import.png) | Reimports texture |
+| ![icon](../../../media/editor-icons/import.png) | Re-imports the texture |
 | ![icon](../../../media/editor-icons/center-view.png) | Shows the whole material graph on the surface |
 
 ### Viewport
 
-The viewport panel shows the preview of the texture. You can navigate in the viewport by using the **mouse buttons** or zoom in/out using **mouse scroll wheel**.
+The viewport panel shows a preview of the texture. You can navigate in the viewport by using the **mouse buttons** or zoom in/out using the **mouse scroll wheel**.
 
-In the upper left corner the viewport contains a widget buttons. By pressing `R/G/B/A` buttons you can toggle texture channels visibility. This is useful for debugging mask textures contents. You can also use buttons for changing the texture filtering in the preview between *Point* and *Linear*. Also, **Mip** button can be used to preview any texture mip map contents.
+In the upper left corner the viewport contains widget buttons. By pressing the `R/G/B/A` buttons you can toggle the visibility of individual texture channels. This is useful for debugging mask texture contents. You can also use buttons for changing the texture filtering in the preview between *Point* and *Linear*. Also, the **Mip** button can be used to preview any texture mip map contents.
 
 ### Properties panel
 
 ![Properties](media/texture-properties.png)
 
-This panel shows texture info and settings.
+This panel shows texture information and settings.
 
-- **General** group contains information about texture data format, size and memory usage.
-- **Properties** group contains texture options to adjust (ensure to save asset after editing).
-- **Import Settings** group contains texture import options (restored from last import). You can modify them and press **Reimport** button to update the asset from the source image file
+- The **General** group contains information about the texture's data format, size and memory usage.
+- The **Properties** group contains texture options that can be adjusted (ensure to save asset after editing).
+- The **Import Settings** group contains texture import options (restored from last import). You can modify them and press the **Reimport** button to update the asset from the source image file
 
-To learn more about texture import options see dedicated [Texture Import Settings](import-settings.md) page.
+To learn more about texture import options see the dedicated [Texture Import Settings](import-settings.md) page.
