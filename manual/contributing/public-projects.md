@@ -3,7 +3,7 @@
 Flax Engine is very extensible which allows developers to create custom solutions within any area of the engine. You can see many of those projects highlighted under the Community Projects section. Also, below is the list of officially maintained plugins and projects to use for quicker startup.
 
 > [!Tip]
-> If you're creating a plugin or an open project with Flax let us know by creating PR with addition to this page!
+> If you're creating a plugin or an open project with Flax let us know by creating a PR with additions to this page!
 
 ## Official Projects
 
@@ -24,7 +24,7 @@ Flax Engine is very extensible which allows developers to create custom solution
 * [Flax Voxels](https://github.com/Erdroy/FlaxVoxels) - Voxel terrain for Flax Engine
 * [Auto Import Resources Plugin](https://github.com/FlaxCommunityProjects/flax-auto-import-resources-plugin) - Automagically imports everything from the `Assets` folder into `Content/Imported`
 * [Flax Unit Testing](https://github.com/FlaxCommunityProjects/FlaxUnitTesting) - Simple unit testing plugin for the FlaxEngine
-* [Flax Collaborate](https://github.com/FlaxCommunityProjects/FlaxCollaborate) - Plugin for multiple people edit the same scene simultaneously
+* [Flax Collaborate](https://github.com/FlaxCommunityProjects/FlaxCollaborate) - Plugin for multiple people to edit the same scene simultaneously
 * [Flax Custom Visject Plugin](https://github.com/FlaxCommunityProjects/flax-custom-visject-plugin) - Custom Visject surfaces with plugins
 * [Volumetric Clouds](https://github.com/lb2110/VolumetricClouds) - Basic Volumetric Clouds shader and Worley Noise generator for FlaxEngine
 * [FTween](https://github.com/honzapatCZ/FTween/) - Simple to use tweening library for Flax
@@ -33,7 +33,7 @@ Flax Engine is very extensible which allows developers to create custom solution
 * [Flax Plugin Manager](https://github.com/Crawcik/FlaxPluginManager) - Flax plugins manager and utility
 * [Flax Csgjs](https://github.com/FlaxCommunityProjects/FlaxCsgjs/) - A `csg.js` and `earcut` port for the FlaxEngine
 * [Flax VR](https://github.com/FlaxCommunityProjects/FlaxVR) - Basic VR Module for the FlaxEngine
-* [Flax CLI](https://github.com/W2Wizard/FlaxCLI) - Provides a command-line interface tools
+* [Flax CLI](https://github.com/W2Wizard/FlaxCLI) - Provides command-line interface tools
 * [Flax Voxel Terrain](https://github.com/FlaxCommunityProjects/FlaxVoxelTerrain) - Basic voxel terrain project
 * [Flax Space Fighter Demo](https://github.com/FlaxCommunityProjects/FlaxSpaceFighterDemo) - Space fighter demo for Flax Engine
 * [Flax Object Pool](https://github.com/DevHrytsan/FlaxObjectPool) - recycling and reusing objects for better performance
