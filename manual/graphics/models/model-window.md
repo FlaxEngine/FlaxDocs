@@ -2,7 +2,7 @@
 
 ![Model](media/model-window.png)
 
-**Model Window** is the main tool to preview and reimport model assets. To show it simply double-click on a model in a *Content* window.
+The **Model Window** is the main tool to preview and reimport model assets. To show it simply double-click on a model in a *Content* window.
 
 ## Interface
 
@@ -21,18 +21,18 @@ The following table lists the options in the toolstrip and what they do.
 | Icon | Description |
 |--------|--------|
 | ![icon](media/model-editor-ui-toolstrip-1.png) | Shows and selects the asset in the *Content* window |
-| ![icon](media/model-editor-ui-toolstrip-2.png) | Saves edited model asset |
-| ![icon](media/model-editor-ui-toolstrip-3.png) | Opens documentation |
+| ![icon](media/model-editor-ui-toolstrip-2.png) | Saves an edited model asset |
+| ![icon](media/model-editor-ui-toolstrip-3.png) | Opens the documentation |
 
 ### Viewport
 
-The viewport panel shows the preview of the model. You can navigate in the viewport by using the **mouse buttons** and **WSAD** keys using the first-person view camera.
+The viewport panel shows a preview of the model. You can navigate in the viewport by using the **mouse buttons** and **WSAD** keys using the first-person view camera.
 
-In the upper left corner, the viewport contains a widget **View ** button with many options for the viewport customization and model debugging (LOD preview, camera settings and more).
+In the upper left corner, the viewport contains a widget **View ** button with many options for viewport customization and model debugging (LOD preview, camera settings and more).
 
 #### Level Of Detail
 
-When working with static models level of details you can preview a custom LOD by setting **View** -> **Preview LOD** (value -1 uses default LOD). To preview current LOD stats in the viewport use **View** -> **Show** -> **Current LOD**.
+When working with a static models level of details, you can preview a custom LOD by setting **View** -> **Preview LOD** (value -1 uses default LOD). To preview current LOD stats in the viewport use **View** -> **Show** -> **Current LOD**.
 
 ![Current LOD Stats](media/preview-current-lod.jpg)
 
@@ -44,9 +44,9 @@ When working with static models level of details you can preview a custom LOD by
 
 This panel shows model asset properties organized into separate tabs.
 
-- **Meshes** - properties of every model Level Of Detail (*LOD*). This includes LOD triangles/vertices stats, bounds, material slot binding for meshes and option to isolate or highlight mesh.
+- **Meshes** - properties of every model Level Of Detail (*LOD*). This includes LOD triangles/vertices stats, bounds, material slot binding for meshes and options to isolate or highlight the mesh.
 - **Materials** - list of material slots used by this model.
 - **UVs** - model texture coordinate channels debug visualizer including lightmap UVs.
-- **Import** - model import options (restored from last import). You can modify them and press **Reimport** button to update the asset from the source image file
+- **Import** - model import options (restored from last import). You can modify them and press the **Reimport** button to update the asset from the source image file
 
-To learn more about model import options see dedicated [Model Import Settings](import.md) page.
+To learn more about model import options see the dedicated [Model Import Settings](import.md) page.

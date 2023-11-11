@@ -1,16 +1,16 @@
-# HOWTO: Generate procedural model
+# HOWTO: Generate procedural models
 
 ![Model](media/sample-model-1.jpg)
 
 In this tutorial you will learn how to create a simple icosahedron mesh.
 
-This sample uses C# API method [Content.CreateVirtualAsset<T>](http://docs.flaxengine.com/api/FlaxEngine.Content.html#FlaxEngine_Content_CreateVirtualAsset__1) to generate procedural model resource which can be modified at runtime from code.
+This sample uses the C# API method [Content.CreateVirtualAsset<T>](http://docs.flaxengine.com/api/FlaxEngine.Content.html#FlaxEngine_Content_CreateVirtualAsset__1) to generate a procedural model resource which can be modified at runtime from code.
 
 ## Tutorial
 
 ### 1. Create new C# script `ModelGenerator`
 
-### 2. Write mesh data generating function
+### 2. Write a mesh data generating function
 
 ```cs
 private void UpdateMesh(Mesh mesh)
@@ -45,7 +45,7 @@ private void UpdateMesh(Mesh mesh)
 }
 ```
 
-### 3. Create model asset and model actor in `OnStart` function
+### 3. Create a model asset and model actor in the `OnStart` function
 
 ```cs
 private Model _tempModel;
@@ -73,7 +73,7 @@ public override void OnDestroy()
 }
 ```
 
-Remember to dispose all the created at runtime resources to prevent memory leaks.
+Remember to dispose of all of the resources created at runtime to prevent memory leaks.
 
 ### 4. Add the script and set the material
 

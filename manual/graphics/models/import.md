@@ -1,15 +1,15 @@
 # Importing models
 
-Importing model files works in the same way as for other asset types. Simply drag and drop the model files from *Explorer* into the *Content* window or use the *Import* button.
+Importing model files works in the same way as importing other asset types. Simply drag and drop model files from a file *Explorer* window (*Finder* on MacOS) into the *Content* window or use the *Import* button.
 
 ![Importing Model](media/import-model.jpg)
 
-After choosing the files **Import file settings** dialog shows up. It's used to specify import options per model. In most cases the default values are fine and you can just press the **Import** button.
+After choosing the files an **Import file settings** dialog is displayed. It's used to specify import options per model. In most cases the default values are acceptable and you can just press the **Import** button.
 
 > [!Note]
-> Using **Import file settings** dialog you can select more than one model at once (or use **Ctrl+A** to select all) and specify import options at once.
+> Using the **Import file settings** dialog you can select more than one model at once (or use **Ctrl+A** to select all) and specify import options at once.
 
-Every model can be reimported (relative path to the source file is cached) and import settings modified using [Model Window](model-window.md).
+Every model can be re-imported (the relative path to the source file is cached) and import settings modified using the [Model Window](model-window.md).
 
 ## Supported file types
 
@@ -31,7 +31,7 @@ Flax Engine supports importing the following list of file types as models:
 
 ## Importing model LODs
 
-Flax supports up to 6 model level of details. To import them use `LODx` (where `x` is a LOD index, zero-based) postfix for object nodes in model file. Also when importing model ensure to check the **Import LODs** option.
+Flax supports up to 6 model levels of detail. To import them use `LODx` (where `x` is an LOD index, zero-based) postfix for object nodes in the model file. Also when importing a model ensure to check the **Import LODs** option.
 
 Example usage (from Blender):
 
@@ -39,30 +39,30 @@ Example usage (from Blender):
 
 ## Importing collision mesh
 
-Flax supports automatic collision mesh importing from a source model. To import it use a custom name prefix for collision meshes in the model file (eg. `COLL_` or `UCX_` prefix) and specify that prefix in the import option **Collision Meshes Prefix**. The engine will extract those collision meshes and create a separate collision data asset
+Flax supports automatic collision mesh importing from a source model. To import a collision mesh use a custom name prefix for collision meshes in the model file (eg. `COLL_` or `UCX_` prefix) and specify that prefix in the import option **Collision Meshes Prefix**. The engine will extract those collision meshes and create a separate collision data asset
 
 Example usage:
 
 ![Model Collsion import engine](media/collision-mesh.png)
 
-For ease of use after you add a model on a scene you can use *Right-click* and select option **Add mesh collider**. Then the editor will automatically pick up the imported collision mesh (or generate a new one) and add it to the model on a scene so it has a collision for physics. You can change `Collision Type` between convex and triangle mesh - convex is more optimized but less accurate.
+For ease of use after you add a model to a scene you can use *Right-click* and select the option **Add mesh collider**. The editor will automatically pick up the imported collision mesh (or generate a new one) and add it to the model in the scene so it has a collision for physics. You can change the `Collision Type` between convex and triangle mesh - convex is more optimized but less accurate.
 
-## Reusing material when importing multiple models
+## Reusing materials when importing multiple models
 
-When importing large set of models importer will create materials for each one of them which might not be efficent. To optimize it you can:
+When importing a large set of models importer will create materials for each one of them which might not be efficent. To optimize it you can:
 * select all models (eg. with `Ctrl+A`) to edit them in batch,
 * check `Import Materials As Instances` to create material instances rather than materials,
-* assign `Instance To Import As` material to be used as base (it can contain common parameters like `Color` to be overriden by importer in instances),
-* set `Sub Asset Folder` to folder name where imported materials and textures will be placed for all of models (eg. `mat`)
+* assign the `Instance To Import As` material to be used as a base (it can contain common parameters like `Color` to be overriden by the importer in instances),
+* set `Sub Asset Folder` to the folder name where imported materials and textures will be placed for all of the models (eg. `mat`)
 * import.
 
-![Reusing material when importing multiple models](media/import-models-with-shared-mat-instances.png)
+![Reusing materials when importing multiple models](media/import-models-with-shared-mat-instances.png)
 
 ## Model import settings
 
 ![Models](media/imort-model-settigns.jpg)
 
-Flax uses the same import settings data scheme for **models**, **skinned models** and **animations** as they all can be imported from the same source files (eg. `.fbx` or `.dae`).
+Flax uses the same import settings data schemes for **models**, **skinned models** and **animations** because they can all be imported from the same source files (eg. `.fbx` or `.dae`).
 
 | Property | Description |
 |--------|--------|
@@ -70,18 +70,18 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 |||
 | **Geometry** ||
 | **Calculate Normals** | If checked, model normal vectors will be recalculated. |
-| **Smoothing Normals Angle** | Specifies the maximum angle (in degrees) that may be between two face normals at the same vertex position that their are smoothed together. Used only if *Calculate Normals* is checked. The default value is 175. |
-| **Calculate Tangents** | If checked, model tangent vectors will be recalculated. |
-| **Smoothing Tangents Angle** | Specifies the maximum angle (in degrees) that may be between two vertex tangents that their tangents and bi-tangents are smoothed. Used only if *Calculate Tangents* is checked. The default value is 45. |
-| **Optimize Meshes** | If checked, model meshes geometry will be optimized. Duplicated or invalid vertices will be removed. Index buffer will be reordered to improve performance and other modification will be applied. However, importing time will be increased. |
+| **Smoothing Normals Angle** | Specifies the maximum angle (in degrees) that may be between two face normals at the same vertex position before they are smoothed together. Used only if *Calculate Normals* is checked. The default value is 175. |
+| **Calculate Tangents** | If checked, model tangent vectors will be re-calculated. |
+| **Smoothing Tangents Angle** | Specifies the maximum angle (in degrees) that may be between two vertex tangents before their tangents and bi-tangents are smoothed. Used only if *Calculate Tangents* is checked. The default value is 45. |
+| **Optimize Meshes** | If checked, model meshes geometry will be optimized. Duplicated or invalid vertices will be removed. Index buffer will be reordered to improve performance and other modifications will be applied. However, importing time will be increased. |
 | **Merge Meshes** | If checked, meshes with the same materials will be merged. Helps with rendering performance. |
-| **Import LODs** | If checked, model importer will try to find LODs and import them. See *Importing model LODs* section to learn more. |
+| **Import LODs** | If checked, the model importer will try to find LODs and import them. See the *Importing model LODs* section to learn more. |
 | **Import Vertex Colors** | If checked, vertex colors will be imported (channel 0 only, if exists). |
 | **Import Blend Shapes** | If checked, blend shapes will be imported (morph targets). |
 | **Calculate Bone Offset Matrices** | Enable skeleton bones offset matrices recalculating. |
-| **Lightmap UVs Source** | Specifies model lightmap texture coordinates source. Can import them from the source model or generate them with in-build tool. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Disable**</td><td>Don't use lightmap UVs.</td></tr><tr><td>**Generate**</td><td>Generate lightmap UVs from model geometry. Requires proper normal/tangent vectors. Highly increases the importing time.</td></tr><tr><td>**Channel 0**</td><td>Use input mesh texture coordinates channel 0.</td></tr><tr><td>**Channel 1**</td><td>Use input mesh texture coordinates channel 1.</td></tr><tr><td>**Channel 2**</td><td>Use input mesh texture coordinates channel 2.</td></tr><tr><td>**Channel 3**</td><td>Use input mesh texture coordinates channel 3.</td></tr></table></tbody>|
-| **Collision Meshes Prefix** | If specified, all meshes which name starts with this prefix will be imported as a separate collision data (excluded used for rendering). |
-| **Collision Type** | The type of collision that should be generated if has collision prefix specified. |
+| **Lightmap UVs Source** | Specifies model lightmap texture coordinates source. Can import them from the source model or generate them with built-in tool. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Disable**</td><td>Don't use lightmap UVs.</td></tr><tr><td>**Generate**</td><td>Generate lightmap UVs from model geometry. Requires proper normal/tangent vectors. Highly increases the importing time.</td></tr><tr><td>**Channel 0**</td><td>Use input mesh texture coordinates channel 0.</td></tr><tr><td>**Channel 1**</td><td>Use input mesh texture coordinates channel 1.</td></tr><tr><td>**Channel 2**</td><td>Use input mesh texture coordinates channel 2.</td></tr><tr><td>**Channel 3**</td><td>Use input mesh texture coordinates channel 3.</td></tr></table></tbody>|
+| **Collision Meshes Prefix** | If specified, all meshes that starts with this prefix in the name will be imported as a separate collision data asset (excluded used for rendering). |
+| **Collision Type** | The type of collision that should be generated if the mesh has a collision prefix specified. |
 |||
 | **Transform** ||
 | **Scale** | Custom uniform scale applied to the imported model data. |
@@ -91,12 +91,12 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 | **Center Geometry** | If checked, the imported geometry will be shifted to the center of mass. |
 |||
 | **Animation** ||
-| **Duration** | Specifies the imported animation duration mode. Can use the original value or overriden by settings. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Imported**</td><td>The imported duration.</td></tr><tr><td>**Custom**</td><td>The custom duration specified via keyframes range.</td></tr></table></tbody>|
+| **Duration** | Specifies the imported animation duration mode. Can use the original value or be overriden by settings. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Imported**</td><td>The imported duration.</td></tr><tr><td>**Custom**</td><td>The custom duration specified via keyframes range.</td></tr></table></tbody>|
 | **Frames Range Start** | Imported animation first frame index. Used only if Duration mode is set to Custom. |
 | **Frames Range End** | Imported animation last frame index. Used only if Duration mode is set to Custom. |
-| **Default Frame Rate** | The imported animation default frame rate. Can specify the default frames per second amount for imported animation. If value is 0 then the original animation frame rate will be used. |
+| **Default Frame Rate** | The imported animation default frame rate. Can specify the default frames per second amount for imported animations. If the value is 0 then the original animation frame rate will be used. |
 | **Sampling Rate** | The imported animation sampling rate. If value is 0 then the original animation speed will be used. |
-| **Skip Empty Curves** | If checked, the imported animation will have removed tracks with no keyframes or unspecified data. Disable it to leave the data as it is. |
+| **Skip Empty Curves** | If checked, the imported animation will have tracks with no keyframes or unspecified data removed. Disable it to leave the data as it is. |
 | **Optimize Keyframes** | If checked, the imported animation channels will be optimized to remove redundant keyframes. This option helps with getting better animation sampling performance. |
 | **Enable Root Motion** | If checked, enables root motion extraction support from this animation. |
 | **Root Node Name** | The custom node name to be used as a root motion source. If not specified the actual root node will be used. |
@@ -108,17 +108,17 @@ Flax uses the same import settings data scheme for **models**, **skinned models*
 |||
 | **Import Materials** | If checked, the importer will create materials for model meshes as specified in the file. |
 | **Import Materials As Instances** | If checked, the importer will create the model's materials as instances of a base material. |
-| **Instance To Import As** | The material to import the model's materials as an instance of. |
+| **Instance To Import As** | The material used as the base material that will be instanced as the imported model's material. |
 | **Import Textures** | If checked, the importer will import texture files used by the model and any embedded texture resources. |
 | **Keep Material Slots on Reimport** | If checked, the importer will try to keep the model's current material slots, instead of importing materials from the source file. |
 |||
-| **Split Objects** | If checked, the imported mesh/animations are splitted into separate assets. Used if *Object Index* is set to -1. |
-| **Object Index** | The zero-based index for the mesh/animation clip to import. If the source file has more than one mesh/animation it can be used to pick a desire object. The default `-1` imports all objects. |
+| **Split Objects** | If checked, the imported mesh/animations are split into separate assets. Used if *Object Index* is set to -1. |
+| **Object Index** | The zero-based index for the mesh/animation clip to import. If the source file has more than one mesh/animation it can be used to pick a desired object. The default `-1` imports all objects. |
 |||
-| **Sub Asset Folder** | If specified, will be used as sub-directory name for automatically imported sub assets such as textures and materials. Set to whitespace (single space) to import to the same directory. |
+| **Sub Asset Folder** | If specified, the specified folder will be used as a sub-directory name for automatically imported sub assets such as textures and materials. Set to whitespace (single space) to import to the same directory. |
 
 ## Tips
 
-If the model appears to be missing something or there is more than you expected make sure the model you imported is in fact what you believe it is. For example Blender defaults to export everything unless you tick the "selection only" box. An easy way to check that is to import the file back in your modeller.
+If the model appears to be missing something or there is more than you expected, make sure the model you imported is in fact what you believe it is. For example Blender defaults to export everything unless you tick the "selection only" box. An easy way to check that is to import the file back in your modeller.
 
-If you want to import all animation clips from the source file or import all model meshes as separate assets use **Split Objects** option. It will split the source objects from the model file and import them as separate assets. It will support reimporting them easily with as each splited object gets own **Object Index** auto-assigned.
+If you want to import all animation clips from the source file or import all model meshes as separate assets use the **Split Objects** option. It will split the source objects from the model file and import them as separate assets. It will support reimporting them easily because each split object gets own **Object Index** auto-assigned.
