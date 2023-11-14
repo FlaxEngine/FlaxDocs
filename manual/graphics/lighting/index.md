@@ -3,7 +3,7 @@
 ![Lighting](media/title.png)
 
 In this section you can learn more about the advanced lighting features available in Flax Engine.
-All subpages breakdown the major aspects of the lighting the environment. Follow these instructions to create realistic looking scenes.
+All subpages break down the major aspects of the lighting the environment. Follow these instructions to create realistic looking scenes.
 
 ## In this section
 
