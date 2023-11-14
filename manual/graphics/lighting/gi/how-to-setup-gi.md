@@ -26,7 +26,7 @@ It's recommended to enable the **Generate SDF On Model Import** option in Graphi
 
 ![Model SDF option in Game Settings](../../models/media/model-sdf-option-setting.png)
 
-The next time a model is importedto the project, the Generate SDF option will be selected by default:
+The next time a model is imported to the project, the Generate SDF option will be selected by default:
 
 ![Model Import SDF Generate Option](../../models/media/model-sdf-import-settings.png)
 
