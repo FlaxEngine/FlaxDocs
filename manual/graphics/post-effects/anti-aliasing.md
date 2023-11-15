@@ -2,7 +2,7 @@
 
 ![Anti-Aliasing](media/anti-aliasing.png)
 
-**Anti-Aliasing** effect is one of the most common way to reduce pixels aliasing and smooth jagged geometry edges. Flax offers various AA implementation that are suitable for various types of games. The active antialiasing mode can be specified in PostFx Volume per-level, per-camera or per game.
+The **Anti-Aliasing** effect is one of the most common ways to reduce pixel aliasing and smooth jagged geometry edges. Flax offers various AA implementations that are suitable for various types of games. The active anti-aliasing mode can be specified in a PostFx Volume per-level, per-camera or per game.
 
 ## Fast Approximate Anti-Aliasing
 
@@ -12,14 +12,14 @@ For more information, see: [FXAA Whitepaper](http://developer.download.nvidia.co
 
 ## Temporal Anti-Aliasing
 
-Temporal Anti-Aliasing (**TAA**) is advanced effect where frames are accumulated over time in a dedicated history buffer to be used to smooth jiterring edges. It applies sub-pixel jitter to projection matrix and requires motion vectors.
+Temporal Anti-Aliasing (**TAA**) is an advanced effect where frames are accumulated over time in a dedicated history buffer to be used to smooth jittering edges. It applies sub-pixel jitter to a projection matrix and requires motion vectors.
 
 | Property | Description |
 |--------|--------|
 | **Jitter Spread** | The diameter (in texels) inside which jitter samples are spread. Smaller values result in crisper but more aliased output, whilst larger values result in more stable but blurrier output. |
 | **Sharpness** | Controls the amount of sharpening applied to the color buffer. TAA can induce a slight loss of details in high frequency regions. Sharpening alleviates this issue. High values may introduce dark-border artifacts. |
-| **Stationary Blending** | The blend coefficient for stationary fragments. Controls the percentage of history sample blended into final color for fragments with minimal active motion. |
-| **Motion Blending** | The blending coefficient for moving fragments. Controls the percentage of history sample blended into the final color for fragments with significant active motion. |
+| **Stationary Blending** | The blend coefficient for stationary fragments. Controls the percentage of history samples blended into the final color for fragments with minimal active motion. |
+| **Motion Blending** | The blending coefficient for moving fragments. Controls the percentage of history samples blended into the final color for fragments with significant active motion. |
 
 ## Subpixel Morphological Anti-Aliasing
 

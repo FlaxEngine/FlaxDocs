@@ -3,7 +3,7 @@
 ![Post Process Effects](media/postFx.png)
 
 **Post effects** (or **PostFx**) are usually applied to the rendered scene image but before UI drawing.
-You can use post-effects to establish look of your scenes and add more realism to them.
+You can use post-effects to establish the look of your scenes and add more realism to them.
 
 ## In this section
 
@@ -23,6 +23,6 @@ You can use post-effects to establish look of your scenes and add more realism t
 
 ## Using post effects
 
-As you can see in a picture below using postFx can dramatically change look of the game.
+As you can see in the picture below, using postFx can dramatically change look of the game.
 
 ![Post Process Effects](media/postFx-compare.png)

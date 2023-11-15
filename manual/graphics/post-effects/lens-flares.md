@@ -2,9 +2,9 @@
 
 ![Lens Flares](media/lens-flares.png)
 
-**Lens Flares** effect simulates the artifacts that are produced by the internal light transport inside a real-world camera lens. This includes light reflection and scattering.
+The **Lens Flare** effect simulates artifacts that are produced by the internal light transport inside a real-world camera lens. This includes light reflection and scattering.
 
-The artifacts are generally aligned along the line defined by the original bright spot and the center of the screen. The most noticeable artifact is often exactly symmetrical to the real spot light with respect to the center of the screen.
+The artifacts are generally aligned along the line defined by the original bright spot and the center of the screen. The most noticeable artifact is often exactly symmetrical to a real spot light with respect to the center of the screen.
 
 ## Properties
 
@@ -12,7 +12,7 @@ The artifacts are generally aligned along the line defined by the original brigh
 
 | Property | Description |
 |--------|--------|
-| **Intensity** | Strength of the effect. Value 0 disabled it. |
+| **Intensity** | Strength of the effect. A value of 0 disables it. |
 | **Ghosts** | Amount of *ghost* samples. |
 | **Halo Width** | Lens flares halo width. |
 | **Halo Intensity** | Lens flares halo intensity. |
@@ -21,6 +21,6 @@ The artifacts are generally aligned along the line defined by the original brigh
 | **Threshold Bias** | Input image brightness threshold. Added to input pixels.  |
 | **Threshold Scale** | Input image brightness threshold scale. Used to multiply input pixels. |
 | **Lens Dirt** | Fullscreen lens dirt texture. |
-| **Lens Dirt Intensity** | Fullscreen lens dirt intensity parameter. Allows to tune dirt visibility. |
+| **Lens Dirt Intensity** | Fullscreen lens dirt intensity parameter. Allows tuning dirt visibility. |
 | **Lens Color** | Custom lens color texture (1D) used for lens color spectrum. |
 | **Lens Star** | Custom lens star texture sampled by lens flares. |
