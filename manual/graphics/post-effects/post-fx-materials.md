@@ -73,4 +73,6 @@ The same applies to post process materials. Every material contains a property c
 | **Before Post Processing Pass** | Render the material before the post processing pass using *HDR* input frame. |
 | **Before Forward Pass** | Render the material before the forward pass but after *GBuffer* with *HDR* input frame. |
 | **After Custom Post Effects** | Render the material after custom post effects (scripted). |
-
+| **Before Reflections Pass** | Render the material before the reflections pass but after the lighting pass using *HDR* input frame. It can be used to implement a custom light types that accumulate lighting to the light buffer. |
+| **After Anti-Aliasing Pass** | Render the material after anti-aliasing into the output backbuffer. |
+| **After Forward Pass** | Render the material after the forward pass but before any post processing. |
