@@ -9,6 +9,7 @@ For editing and using presets see [Game Cooker window](../game-cooker/index.md) 
 
 | Property | Description |
 |--------|--------|
+| **Output Name** | Name of the output app created by the build system. Used to rename main executable (eg. MyGame.exe) or final package name (eg. MyGame.apk). Custom tokens: `${PROJECT_NAME}`, `${COMPANY_NAME}`. |
 | **Max assets per package** | The maximum amount of assets to include into a single assets package. Assets will be split into several packages if needed. |
 | **Max package size (in MB)** | The maximum size of the single assets package (in megabytes). Assets will be spli into several packages if need to. |
 | **Content Key** | The game content cooking keys. Use the same value for a game and DLC packages to support loading them by the built game. Use 0 to randomize it during building. |
