@@ -162,6 +162,7 @@
 ### [How to use anisotropic texture sampler](graphics/tutorials/anisotropic-texture-sampler.md)
 ### [How to use dynamic texture](graphics/tutorials/use-dynamic-texture.md)
 ### [How to setup time of the day simulation](graphics/tutorials/time-of-the-day.md)
+### [How to draw custom set of actors or scenes](graphics/tutorials/custom-actors-scenes-drawing.md)
 
 # [Scripting](scripting/index.md)
 ## [Create and use a script](scripting/new-script.md)
