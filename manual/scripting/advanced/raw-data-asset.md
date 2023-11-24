@@ -22,12 +22,18 @@ Debug.Log("Data size: " + myAsset.Data.Length);
 Here is an example usage code in C++ that creates a virtual assets, sets its data and saves it to file while also assigning it to a field member.
 
 ```cpp
+#include <Engine/Scripting/Script.h>
+#include <Engine/Content/Content.h>
+#if COMPILE_WITH_ASSETS_IMPORTER
+#include <Engine/ContentImporters/AssetsImportingManager.h>
+#endif
+
 API_CLASS() class GAME_API Test : public Script
 {
     API_AUTO_SERIALIZATION();
     DECLARE_SCRIPTING_TYPE(Test);
 public:
-    API_FIELD() AssetReference<RawDataAsset>> Data;
+    API_FIELD() AssetReference<RawDataAsset> Data;
     API_FUNCTION() void Save()
     {
         // This code only works with assets imported compiled
