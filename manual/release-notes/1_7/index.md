@@ -126,7 +126,7 @@ Due to the recent rapid growth of Flax users we've worked on improving the onboa
 
 ## Changelog
 
-### Version 1.7.6404.1 - 25 November 2023
+### Version 1.7.6406.1 - 25 November 2023
 
 Contributors: mafiesto4, Tryibion, GoaLitiuM, mrunion, MineBill, RuanLucasGD, Tryibion, Chikinsupu, NoriteSC, Menotdan, SinnersSum, Radiangames, schmidt-florian, HydrogenC, nothingTVatYT
 
