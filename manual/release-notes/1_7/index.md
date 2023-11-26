@@ -126,6 +126,135 @@ Due to the recent rapid growth of Flax users we've worked on improving the onboa
 
 ## Changelog
 
+### Version 1.7.6406.1 - 25 November 2023
+
+Contributors: mafiesto4, Tryibion, GoaLitiuM, mrunion, MineBill, RuanLucasGD, Tryibion, Chikinsupu, NoriteSC, Menotdan, SinnersSum, Radiangames, schmidt-florian, HydrogenC, nothingTVatYT
+
+PRs merged: 43
+
+* Add SetThreadAffinityMask and SetThreadPriority and thread name for Apple platforms
+* Add storing shader asset includes paths in compact format for portability
+* Add unit test for `HashSet` and `Dictionary` collection types
+* Add debug drawing contact offset for selected collider
+* Add **custom model picker in material preview**
+* Add `CustomScenes` feature to draw a fixed set of scenes within `SceneRenderTask`
+* Add minor improvements to reference properties
+* Add more alternative titles to Surface nodes
+* Add order and ordering options to comments in Surface graph
+* Add `SortScore` to Visject node archetypes and use it to favor method overrides in Visual Script
+* Add **Convert to Parameter** for Surface constant nodes
+* Add support for unlimited window size if `MaximumSize` is set to zero
+* Add spawning UI Canvas Scaler when adding new UI Canvas
+* Add handling `ViewLayersMask` from camera when rendering UI Canvas
+* Add copying old UI Control data to new UI Control when changing type
+* Add option to limit number of items in Dropdown popup
+* Add optional scrollbar to Dropdown popup list
+* Add immediate game viewport sync after aspect ratio change in Editor
+* Add new **light theme to Editor UI**
+* Add better formatting for automatic tooltips in Editor from xml comments
+* Add input bindings for game window mouse unlock and toggle fullscreen
+* Add button to reload scenes via Editor menu
+* Add short delay before auto-selecting editor tab on drag over header
+* Add rebuilding navigation mesh after apply changes in Navigation asset
+* Add dragging items support into lists and arrays in the Properties window
+* Add `CalculateBoneOffsetMatrices` option to fix some animated model skeletons rendering
+* Add `GetRotationFromTo` and `FindBetween` utilities to C# `Quaternion` API
+* Add `GetSplineSegmentLength` to get spline segment length
+* Add new material nodes: `Rectangle Mask`, `FWidth`, and `AA Step`
+* Add default value for material `Sphere Mask` node to create blob gradient around UV center
+* Add `SetNodeTransform` to Animated Model
+* Add waking up rigidbodies when changing kinematic state
+* Add name to Android main thread
+* Add limits to cloth brush values
+* Add support for including global configs in engine configuration options
+* Add .NET SDK version `7` as forced to be used during game cooking (dotnet8 can be sued with Editor)
+* Add clearing BT memory in non-release builds to make issues spotting easier
+* Add better errors logging to BT nodes in case of issues
+* Add soft check for null managed object value for unboxing
+* Add `Style` property getter to `FontAsset` to access its style flags
+* Add engine version in Editor main window title
+* Add security lockers for managed typeinfo access
+* Add git submodule init to git project cloning
+* Add support for getter-only properties in blackboard selector access
+* Add automatic show of skeleton when entering skeleton tab in skinned model editor 
+* Add extended buttons support for Linux
+* Add `XDG_DATA_HOME` env var usage the approved default as per specification on Linux
+* Add `GetStackFrames` and `IsDebuggerPresent` on Linux
+* Add `GetStackFrames` on Android
+* Add decoding stack trace function names on Apple platforms
+* Add always logging unhandled C# exception
+* Add better support for .NET SDK and .NET 8
+* Add `-dotnet=ver` command arg to `Flax.Build` to specify .NET SDK version to use for build
+* Add better project files generation for Rider
+* Optimize `Control.UpdateTransform` for faster UI math
+* Improve Cloth usage
+* Use soft asset ref to graphics settings
+* Update Tracy Profiler to `0.10`
+* Continue `Delegate` refactor to use single memory allocation and atomic operations for data access
+* Remove `SHADOW_MAPS_FORMAT` and support fallback formats for shadow maps
+* Remove actor layer auto apply via message box dialog during Play Mode
+* Remove unsupported material parameter types `Quaternion` and `Transform`
+* Reduce `LargeWorlds::ChunkSize` to `8192`
+* Refactor `GPUResourceProperty` to cleanup code
+* Refactor main editor viewport and prefab viewport to share dragging handling code
+* Refactor default `ContactOffset` for `Collider` to be `2` (keep `10` for `CharacterController`)
+* Refactor `HashSet` and `Dictionary` collections capacity to handle rehashing when too many elements were deleted
+* Fix `DeepClone()` when used on object of different runtime type
+* Fix CultureInfo to handle missing country code and fallback to outer language code
+* Fix various typos and wording in docs
+* Fix incorrect tabs selection handling when tab gets removed
+* Fix various cases of closing window tabs when using Dock Windows in Editor
+* Fix color picker dialog not staying inside the current screen
+* Fix custom editor layout rebuilding when it has more editors in use
+* Fix error during new json asset creation via `ContentContextMenu` if the class is missing empty constructor
+* Fix various cases of closing window tabs when using Dock Windows in Editor
+* Fix Output Log window to scroll log on startup properly
+* Fix `CollectionEditor` to properly support editing multiple arrays
+* Fix Dropdown popup to properly scale when using Canvas Scaler
+* Fix common Editor tooltips with hardcoded keybindings
+* Fix color editing control to properly handle mouse event
+* Fix anim slot from playing animations more than 1 time based on speed
+* Fix `NetworkTransform` to properly reject local simulation deltas on incoming authoritative transform data
+* Fix BehaviorTree node UI after adding decorator that was already there
+* Fix `BitArray::SetAll()` when the item is not multiple of `8`
+* Fix some Center geometry import issues and add option to be able to shift mesh to local origin
+* Fix generic types including to be recursive in C++ bindings codegen
+* Fix content storage usage with relative paths
+* Fix issue involving stale scripting assemblies in `FlaxEngine.Json` dynamic type resolution
+* Fix incorrect directional light shadows influence on secondary render views
+* Fix incorrect spline length calculation if first point is not at spline origin
+* Fix missing interfaces support in `Actor::FindScript`
+* Fix missing initialization of scene objects added from prefab
+* Fix marking scene as dirty when creating prefab from existing actor
+* Fix unpacking `Float3` and other inbuilt `Variant` types via Unpack node in Visual Script
+* Fix issue with asset loading to be properly canceled when reimporting file
+* Fix loading delay-loaded-dll on Windows when using project plugin with native dependencies
+* Fix bug when spawning new prefab objects during scene load due to regression in async scene init
+* Fix memory leak while doing drag&drop with Debug Draw in use
+* Fix Visual Script parameter setter node to accept multiple input flows
+* Fix scenes reload feature to check if can do it, properly use async in play mode and ask for save if scene is modified
+* Fix missing script replacement if data has object id that doesn't match current parent
+* Fix Mono GC threads suspend to not deadlock when attaching native threads to managed runtime
+* Fix Steam AppId if settings asset is missing and force keep it in sync with `steam_appid.txt` file (Steam Online Platform)
+* Fix PostFx settings in Graphics Settings to be only used when checked as override
+* Fix BT logic flow when start/stopping behavior
+* Fix deadlock regression when saving Visual Script in Editor with active instance objects
+* Fix deadlock in editor when using snap to the group with actor that has empty bounds
+* Fix `Win32CriticalSection` to use spin count of `4000` instead of just `100`
+* Fix crashes in various dictionary usages caused by duplicated keys
+* Fix crash when creating empty cloth
+* Fix crash when trying to build navmesh with null scene
+* Fix crash on negative collection capacity due to `int32` maximum value limit
+* Fix crash when not clearing Online Platform in Editor before hot-reload
+* Fix crash when rigidbody gets deleted during physical collision
+* Fix crash on editor startup without code editor selected
+* Fix crash on hot-reload in Editor due to leftover scripting events in `ScriptingEvents::EventsTable`
+* Fix crash in Global Surface Atlas when dirty object is missing
+* Fix crash in Multi Blend 2D node in Anim Graph when using single animation on a triangle
+* Fix crash during asset loading due to potential threading issue when 2 threads load the same asset
+* Fix crash when debugging BT node state while tree is not running
+* Fix crash when reading`BehaviorKnowledgeSelector` value in C# when type doesn't match exactly
+
 ### Version 1.7.6404 - 31 October 2023
 
 Contributors: mafiesto4, Tryibion, Withaust, GoaLitiuM, Rayumie, mtszkarbowiak, NoriteSC, envision3d, RuanLucasGD, wackoisgod, Walrusking16, eLeSTRaGo-Dev, FREEZX, M-3-H, MineBill, Crawcik, dector, Chikinsupu, Radiangames, stefnotch, solnem, AndrejStojkovic, Zode, davevanegdom, Arcnor, RedTheKitsune, Swiggies, Menotdan, nothingTVatYT, GasimoCodes, ontrigger, Muzz, meabefir, Vizepi
