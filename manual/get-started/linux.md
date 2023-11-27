@@ -28,7 +28,7 @@ Flax Editor needs:
 apt-get install -y curl libcurl4-gnutls-dev
 ```
 
-*  `.Net 7 SDK` ([https://dotnet.microsoft.com/en-us/download/dotnet/7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)). Setup can be verified with:
+*  `.Net 8 SDK` ([https://dotnet.microsoft.com/en-us/download/dotnet/8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)). Setup can be verified with:
 
 ```
 dotnet --version

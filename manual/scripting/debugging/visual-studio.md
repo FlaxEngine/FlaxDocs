@@ -7,7 +7,7 @@ You can download Visual Studio [here](https://www.visualstudio.com). We support 
 Flax requries the following components to be installed in order to support C# scripts debugging:
 * C# and Visual Basic Roslyn Compilers
 * C# and Visual Basic
-* .NET 7.0 Runtime (already required by Flax Editor)
+* .NET 8.0 Runtime (already required by Flax Editor)
 * .NET SDK (already required by Flax Editor)
 
 ![Visual Studio Components for C#](media/vs-components-cs.png)
