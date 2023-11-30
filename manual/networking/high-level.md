@@ -65,7 +65,7 @@ Network Manager running as server or host receives new client connections which 
 
 After performing initial handshake with a new client it's added to `NetworkManager.Clients` list and `NetworkManager.ClientConnected` event is being called (as opposted to `NetworkManager.ClientDisconnected` event upon connection end or timeout). Network state can be checked with `State` property (`NetworkConnectionState` enum) and responsed to changes on `NetworkManager.StateChanged` event.
 
-Each client has own unique `uint32 ClientId` used to identify it within a newtowkr session. Network manager in mode Server or Host always uses `NetworkManager.ServerClientId = 0` to distinguish from other peers.
+Each client has own unique `uint32 ClientId` used to identify it within a network session. Network manager in mode Server or Host always uses `NetworkManager.ServerClientId = 0` to distinguish from other peers.
 
 ## Network Settings
 
@@ -91,7 +91,7 @@ GameSettings.LoadAsset<NetworkSettings>().SetInstance(networkSettings);
 
 ## Network Replicator
 
-`NetworkReplicator` is system responsible for replicating networked objects and sending/receiving RPCs. It supports objects network role and ownership concepts but also cotains API to spawn/despawn objects at runtime.
+`NetworkReplicator` is system responsible for replicating networked objects and sending/receiving RPCs. It supports network role and ownership concepts for objects but also cotains API to spawn/despawn objects at runtime.
 
 To register object (script or actor) for network call `NetworkReplicator.AddObject` (eg. in `OnEnable` method). It will be automatically added to replication and will be able to invoke or execute RPCs. If you want to register dynamically spawned scene object (eg. player prefab) then call `NetworkReplicator.SpawnObject` (`DespawnObject` to remove it).
 
@@ -139,7 +139,7 @@ Each object can query own role and ownership via `GetObjectRole`/`GetObjectOwner
 
 `NetworkReplicationHierarchy` runs on both server and client but contains only objects that are *owned locally* - no need to manage objects that should not be replicated by remote clients.
 
-For example, when a large game level contains 10k networked objects (eg. POIs) then replicating all of them to all connected clients would kill the performance. To solve this problem a simple replication hierarchy can be created that would control Replication FPS for each object and skip unnecessary replications for clients that are too far away. Below is the sample code:
+For example, when a large game level contains 10k networked objects (eg. POIs) then replicating all of them to all connected clients would sacrifice the performance. To solve this problem a simple replication hierarchy can be created that would control Replication FPS for each object and skip unnecessary replications for clients that are too far away. Below is the sample code:
 
 > [!Tip]
 > Use `NetworkReplicator.DirtyObject(obj)` to mark object as modified for immediate replication (eg. when an object has low Replication FPS but needs to replicate state quickly). You can also set `ReplicationFPS` of an object to be less than `0` if you only want it to be replicated on spawn.
@@ -201,7 +201,7 @@ public class MyReplicationHierarchy : NetworkReplicationHierarchy
 }
 
 // Then in your game code before starting the multiplayer:
-NetworkReplicator.SetHierarchy(new MyReplicationHierarchy());
+NetworkReplicator.Hierarchy = new MyReplicationHierarchy();
 ```
 # [C++](#tab/code-cpp)
 ```cpp
