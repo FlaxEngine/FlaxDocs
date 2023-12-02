@@ -13,6 +13,7 @@ The **UI** is one of the most important components of a game. The UI system in F
 * [Controls](controls/index.md)
  * [Button](controls/button.md)
  * [CheckBox](controls/checkbox.md)
+ * [Slider](controls/slider.md)
  * [Image](controls/image.md)
  * [Label](controls/label.md)
  * [Dropdown](controls/dropdown.md)

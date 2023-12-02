@@ -304,6 +304,7 @@
 ## [Controls](ui/controls/index.md)
 ### [Button](ui/controls/button.md)
 ### [CheckBox](ui/controls/checkbox.md)
+### [Slider](ui/controls/slider.md)
 ### [Image](ui/controls/image.md)
 ### [Label](ui/controls/label.md)
 ### [Dropdown](ui/controls/dropdown.md)
