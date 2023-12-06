@@ -6,6 +6,7 @@ Games created with Flax build UI using **controls**. Each control is an independ
 
 * [Button](button.md)
 * [CheckBox](checkbox.md)
+* [Slider](slider.md)
 * [Image](image.md)
 * [Label](label.md)
 * [Dropdown](dropdown.md)
