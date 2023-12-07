@@ -67,7 +67,7 @@ In Flax, a Scene object is also an Actor so you can access it like any other Act
 
 ## MonoBehaviour vs Script
 
-When it comes to game scripting, Unity and Flax are very similar. There are some differences in C# API (Flax has bigger math library, is more performance-oriented and uses new C# 11 via .NET 7). In fact, the whole C# editor and C++ engine including scripting API is open and can be found [here](https://github.com/FlaxEngine/FlaxEngine). All contributions are welcome.
+When it comes to game scripting, Unity and Flax are very similar. There are some differences in C# API (Flax has bigger math library, is more performance-oriented and uses new C# 12 via .NET 8). In fact, the whole C# editor and C++ engine including scripting API is open and can be found [here](https://github.com/FlaxEngine/FlaxEngine). All contributions are welcome.
 
 Also, Flax support native **[C++](../../scripting/cpp/index.md)** scripting and **[Visual Scripting](../../scripting/visual/index.md)** as a built-in feature. We don't want to limit our developers to just one programming language for the game development as using C\+\+ and Visual Scripting together with C# can benefit.
 
@@ -100,7 +100,7 @@ See [Scripting](../../scripting/index.md) documentation to learn more about C# s
 ## Cool things in the C# API
 
 If you're a programmer here is a list of new cool things in Flax C# API that may be useful:
-* You can use the latest .NET 7 and new C# 11
+* You can use the latest .NET 8 and new C# 12
 * Engine and Editor are open with full source code ([link](https://github.com/FlaxEngine/FlaxEngine))
 * You can edit all input settings at runtime ([link](https://docs.flaxengine.com/api/FlaxEngine.Input.html))
 * You can change the gamepad devices layout at runtime ([link](https://docs.flaxengine.com/api/FlaxEngine.Gamepad.html))

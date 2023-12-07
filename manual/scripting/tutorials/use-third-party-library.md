@@ -24,7 +24,7 @@ options.ExternalModules.Add(new BuildOptions.ExternalModule(BuildOptions.Externa
 Then generate scripts projects solution to use types from imported C# module inside game code.
 This will work for scripts build for the editor and cooked game as the referenced assembly will be packaged. Build system will also copy relevant `.pdb` and `.xml` files if provided.
 
-Remember that engine uses .NET 7.
+Remember that engine uses .NET 8.
 
 ## Using C++ library
 
