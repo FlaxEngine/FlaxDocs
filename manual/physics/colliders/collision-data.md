@@ -26,21 +26,24 @@ Now open the asset (double-click on it) and assign the model to use for a collid
 | **Vertex Limit** | The convex mesh vertex limit. Use values in range [8;255]. |
 
 ### Collision data type
+
 Flax allows you to generate a convex or a triangle mesh for your collision data.
 
 #### Convex
-A convex mesh is a simplified representation of a 3D object in which all internal angles are less than 180 degrees. This simplification results in a mesh with a uniform shape, and it's particularly well-suited for certain collision scenarios.
 
-![Convex](media/convex.png)
+A convex mesh is a simplified representation of a 3D object in which all internal angles are less than `180` degrees. This simplification results in a mesh with a uniform shape, and it's particularly well-suited for certain collision scenarios.
+
+![Convex Collider](media/convex.png)
 
 #### Triangle mesh
-A triangle mesh is a more detailed representation of a 3D object, consisting of interconnected triangles. This mesh type is capable of accurately representing complex and concave shapes, making it valuable for accurate collisions.
 
-![Convex](media/triangle-mesh.png)
+A triangle mesh is a more detailed representation of a 3D object, consisting of interconnected triangles. This mesh type is capable of accurately representing complex and concave shapes, making it valuable for accurate collisions (at cost of performance).
 
-As you can see, a triangle mesh offers much more granularity and better represents the mesh but it comes at a cost:
+![Triangle Mesh Collider](media/triangle-mesh.png)
+
+A triangle mesh offers much more granularity and better represents the mesh but it comes at a cost:
 - More expensive both in terms of memory and calculations.
-- **Cannot** be used with a Rigidbody. This means they can only be used to collide against them.
+- **Triangle Mesh cannot be used with a Rigidbody**. This means they can only be used to collide against them.
 
 ## Create collision data from code
 
