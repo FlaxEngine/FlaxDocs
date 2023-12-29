@@ -1,4 +1,4 @@
-# Flax projects structure
+# Flax Project Structure
 
 ![Project Structure](media/project-structure.png)
 
@@ -33,19 +33,19 @@ To learn more about project file properties see the [reference](https://docs.fla
 ## Folders structure
 
 * **&lt;root&gt;**
- * **Binaries** - compiled game scripts binaries
- * **Cache** - editor local cache folder, buid cache, used for thumbnails, game cooker cache and other temporary files
- * **Content** - contains all the game assets (models, textures, settings, etc.)
-   * **SceneData** - dedicated directory for the [private scene assets](scenes/scene-data.md)
-   * **Shaders** - auto-improted shaders assets (from source)
-   * **GameSettings.json** - fixed location for the game settings asset
- * **Logs** - contains editor log files (and crash dumps)
- * **Screenshots** - contains screenshot files (`.png` format) you took in editor (use the `F12` key)
- * **Source** - contains all game script files (C++ and C# scripts) organized into modules
-   * **Shaders** - shader source files
-   * **&lt;GameModule&gt;** - subfolder with game module code
-     * **&lt;GameModule&gt;.Build.cs** - game module build script
-   * **GameTarget.Build.cs** - game target build configuration script
-   * **GameEditorTarget.Build.cs** - editor target build configuration script
- * **&lt;project_name&gt;.sln** - project scripts solution file, open it with Visual Studio
- * **&lt;project_name&gt;.flaxproj** - project description and metadata file (used by editor and launcher)
+	* **Binaries** - compiled game scripts binaries
+	* **Cache** - editor local cache folder, build cache, used for thumbnails, game cooker cache and other temporary files
+	* **Content** - contains all the game assets (models, textures, settings, etc.)
+	* **SceneData** - dedicated directory for the [private scene assets](scenes/scene-data.md)
+	* **Shaders** - auto-imported shaders assets (from source)
+	* **GameSettings.json** - fixed location for the game settings asset
+	* **Logs** - contains editor log files (and crash dumps)
+	* **Screenshots** - contains screenshot files (`.png` format) you took in editor (use the `F12` key)
+	* **Source** - contains all game script files (C++ and C# scripts) organized into modules
+	* **Shaders** - shader source files
+	* **&lt;GameModule&gt;** - subfolder with game module code
+		* **&lt;GameModule&gt;.Build.cs** - game module build script
+	* **GameTarget.Build.cs** - game target build configuration script
+	* **GameEditorTarget.Build.cs** - editor target build configuration script
+	* **&lt;project_name&gt;.sln** - project scripts solution file, open it with Visual Studio
+	* **&lt;project_name&gt;.flaxproj** - project description and metadata file (used by editor and launcher)

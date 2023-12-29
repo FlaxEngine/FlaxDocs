@@ -6,14 +6,14 @@
 
 To get Flax for Mac: visit the [download page](https://flaxengine.com/download).
 
-After downloading the `FlaxEditor.dmg` file, open a disk image and run the Flax Editor application. Also, you can install it on your drive by dragging it into the Application.
+After downloading the `FlaxEditor.dmg` file, open a disk image and run the Flax Editor application. Also, you can install it on your drive by dragging it into Applications.
 
 ## Requirements
 
 For developers using Flax Editor on Mac platforms the requirements are:
 
 | | Recommended |
-|-------|-------|-------|
+|-------|-------|
 | Minimum supported version | **macOS 11.7 or higher** |
 | Processor | **arm64** (M1/M2/M3) |
 | RAM | 4 GB or more |
@@ -21,7 +21,7 @@ For developers using Flax Editor on Mac platforms the requirements are:
 
 ## Sample projects
 
-To help you start using Flax pick the latest Flax Samples from [https://github.com/FlaxEngine/FlaxSamples](https://github.com/FlaxEngine/FlaxSamples). This collection contains various example projects that showcase the engine features and can be used as a foundation for your future Flax projects. Have fun!
+To help you start using Flax pick up the latest Flax Samples from [https://github.com/FlaxEngine/FlaxSamples](https://github.com/FlaxEngine/FlaxSamples). This collection contains various example projects that showcase the engine features and can be used as a foundation for your future Flax projects. Have fun!
 
 ## New project
 

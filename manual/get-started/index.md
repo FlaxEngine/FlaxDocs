@@ -11,7 +11,7 @@ Welcome to the Official Flax Engine Manual! In this section you will find everyt
 <div class="frontpage-section">
 <a href="get-flax.md"><img src="media/get-flax-icon.jpg"></a>
 <h3><a href="get-flax.md">Get Flax</a></h3>
-<p>Start using the Flax.</p>
+<p>Start using the Flax Engine.</p>
 </div>
 
 <div class="frontpage-section">
@@ -23,7 +23,7 @@ Welcome to the Official Flax Engine Manual! In this section you will find everyt
 <div class="frontpage-section">
 <a href="../samples-tutorials/index.md"><img src="../samples-tutorials/media/icon.jpg"></a>
 <h3><a href="../samples-tutorials/index.md">Samples and Tutorials</a></h3>
-<p>Collection of sample projects and tutorials.</p>
+<p>A collection of sample projects and tutorials.</p>
 </div>
 
 </div>
@@ -93,4 +93,3 @@ Welcome to the Official Flax Engine Manual! In this section you will find everyt
 </div>
 
 </div>
-
