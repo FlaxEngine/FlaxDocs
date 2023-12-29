@@ -2,11 +2,11 @@
 
 ![Prefabs](media/nested_prefabs.gif)
 
-A **Prefab** is an asset that contains serialized **actors hierarchy including scripts** and data. The prefab acts like a template or an archetype which you can spawn in the scene. Any edits made to a prefab asset are immediately reflected in all instances produced from it, but you can also override components and settings for each instance individually.
+A **Prefab** is an asset that contains serialized **actors hierarchy, including scripts and data**. The prefab acts like a template or an archetype which you can spawn in the scene. Any edits made to a prefab asset are immediately reflected in all instances produced from it, but you can also override components and settings for each instance individually.
 
 Flax supports creating **Nested Prefabs** which means you can use objects from prefabs inside other prefabs. This helps with creating advanced gameplay content.
 
-Creating and applying changes to prefabs is only supported in the Editor. However, spawning prefabs is dedicated to being used at runtime right in your game. Use this documentation section to learn more about creating and using prefabs.
+Creating and applying changes to prefabs is only supported in the Editor. However, spawning prefabs can be done at game runtime, and can be done using game scripts. Use this documentation section to learn more about creating and using prefabs.
 
 ## Topics
 
@@ -51,4 +51,3 @@ The **View Changes** button shows a popup with any modified actor and scripts pr
 You can also see per-property modifications applied to the prefab instance. The Editor shows them by highlighting the label of the changed property as shown in the picture below. You can right click on it and revert the changes applied to this property (with undo support).
 
 ![Prefab Instance Diff Popup](media/prefab-instance-property-diff.png)
-
