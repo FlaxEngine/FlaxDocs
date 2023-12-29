@@ -8,15 +8,15 @@ If you select one or more actors you can modify their properties in a *Propertie
 
 ![Actor Transform](media/edit-actor-local-transform.jpg)
 
-You can also use sliders near the transform properties to edit an object quicker.
+You can also use sliders near the transform properties to edit an object more quickly.
 
 ![Actor Transform](media/local-transform-usage.gif)
 
-## Transform gizmo
+## Transform gizmos
 
 The most common way to transform objects is by using transform/rotate/scale gizmos.
-Using those widgets is one of the most essential parts of level design because it allows you to place the objects using your mouse.
-
+Using these widgets is convenient as it allows you to manipulate the objects in the editor window with your mouse.  
+  
 To change the transform gizmo widget mode use keys **1**, **2** and **3** or the toolbar buttons:
 
 ![Toolbar Buttons](media/transform-gizmo-mode.jpg)
@@ -26,22 +26,22 @@ You can use them to adjust the gizmo settings.
 
 ![Editor Viewport Widgets](media/gizmo-widgets.png)
 
-### Translation widget
+### Translation gizmo
 
 ![Translation widget](media/gizmo-translate.gif)
 
 The **Translation** gizmo moves selected objects along a particular axis (or plane).
-To use it click on an axis (red, green or blue) and drag it.
-You can also move objects along the plane (use gray quads).
+To use it, click on an axis (red, green or blue) and drag it.  
+You can also move objects along a plane by using the squares between the axis arrows.
 
-### Rotation widget
+### Rotation gizmo
 
 ![Rotation widget](media/gizmo-rotate.gif)
 
 The **Rotation** gizmo rotates selected objects along a particular axis.
 To use it click on an axis circle (red, green or blue) and drag it.
 
-### Scale widget
+### Scale gizmo
 
 ![Scale widget](media/gizmo-scale.gif)
 
@@ -51,9 +51,9 @@ You can also uniform scale objects by using a gray box in the center of the gizm
 
 ## World and Local transformation space
 
-The Transformation widget can transform objects in two modes: world and local. In world mode, the gizmo widget is aligned to the world coorinates (left-handed unit X, Y and Z). In local mode, the gizmo widget is aligned to the object transformation frame. In local mode editing local transformation of the objects is easier.
-
-You can toggle the active transformation space with a widget:
+The Transformation gizmo can transform objects in two modes: world and local. In world mode, the gizmo is aligned to the world coordinates (left-handed unit X, Y and Z). In local mode, the gizmo is aligned to the object transformation frame.  
+  
+You can toggle the active transformation space of a gizmo:
 
 ![Toggle Transformation Space](media/transformation-space-toggle.png)
 
@@ -66,7 +66,7 @@ You can toggle the active transformation space with a widget:
 You can **snap** transformations to the grid. This means that the degree of transformation you apply to actors is rounded to the closest multiple of the number you specify. For example, if you set the rotation snap value to 10, actors rotate in multiples of 10 (0, 10, 20, 30, etc).
 
 When you transform objects hold the **Ctrl** key to snap the values.
-Snapping can be configured using a widget buttons:
+Snapping can be configured using a widget button:
 
 ![Snapping Options](media/widget-spanning.jpg)
 
@@ -75,6 +75,3 @@ Snapping can be configured using a widget buttons:
 You can duplicate selected objects with a transform gizmo if you hold the **Shift** key and start transforming objects.
 
 ![Duplicate actors](media/duplicate-actors.gif)
-
-
-

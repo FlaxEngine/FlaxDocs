@@ -19,6 +19,7 @@ Another way to create a new prefab asset is by using existing actors as an arche
 The last way to create a new prefab is by using an editor script that creates a new prefab asset using C# or C++.
 
 ### [C#](#tab/code-csharp)
+
 ```cs
 // Setup prefab objects
 var myLight = new PointLight
