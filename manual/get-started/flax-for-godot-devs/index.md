@@ -22,13 +22,13 @@ Flax Editor and Godot Editor are very similar. You can see the color-coded, high
 
 This section contains the most common terms used in Godot and their Flax equivalents (or rough equivalents). Flax keywords link directly to more in-depth information inside the documentation.
 
-| Godot | Flax |
-|--------|--------|
-| **Node** | [Actor](../scenes/actors.md) |
-| **Script** | [Script](../../scripting/index.md) |
-| **Scene** | [Scene Window](../../editor/windows/scene-window.md) |
-| **Inspector** | [Properties Window](../../editor/windows/properties-window.md) |
-| **FileSystem** | [Content Window](../../editor/windows/content-window.md) |
+| Godot          | Flax                                                           |
+| -------------- | -------------------------------------------------------------- |
+| **Node**       | [Actor](../scenes/actors.md)                                   |
+| **Script**     | [Script](../../scripting/index.md)                             |
+| **Scene**      | [Scene Window](../../editor/windows/scene-window.md)           |
+| **Inspector**  | [Properties Window](../../editor/windows/properties-window.md) |
+| **FileSystem** | [Content Window](../../editor/windows/content-window.md)       |
 
 ## Project
 
@@ -59,11 +59,12 @@ If you want to create multiple instances of compound object you can use [Prefabs
 ## Scripting
 
 > [!Tip]
-> Scripting in C# and C\+\+ is feature-complete and production-ready in Flax (compared to Godot). Also, Visual Scripting offers far more tools and features.
+> Scripting in C# and C\+\+ is fully feature-complete and production-ready in Flax (in contrast to Godot). Also, Visual Scripting offers far more tools and features.
 
 When it comes to game scripting, Flax supports Visual, C# and C\+\+ scripts (similar to Godot). The are some differences in C# API. In fact, the whole C# API is an open-source project and can be found [here](https://github.com/FlaxEngine/FlaxEngine). All contributions are welcome.
 
 * Godot
+
 ```cs
 public class MyScript : Node
 {
@@ -75,6 +76,7 @@ public class MyScript : Node
 ```
 
 * Flax
+
 ```cs
 public class MyScript : Script
 {
