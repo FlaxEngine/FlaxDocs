@@ -28,7 +28,7 @@ If you want to use custom .NET libraries use build scripts to reference them as 
 
 ## C++ Scripting
 
-Flax supports native **C++** scripting with direct access to whole engine API. C++ scripts can be created side-by-side with C# scripts and expose own types/functions/properties via automatic bindings as decscribed [here](../editor/flax-build/api-tags.md). To write and use C\+\+ code engine headers and platform toolset are requried.
+Flax supports native **C++** scripting with direct access to whole engine API. C++ scripts can be created side-by-side with C# scripts and expose own types/functions/properties via automatic bindings as described [here](../editor/flax-build/api-tags.md). To write and use C\+\+ code engine headers and platform toolset are required.
 
 To start native scripting in C\+\+ see the related documentation [here](cpp/index.md).
 
@@ -36,7 +36,7 @@ To start native scripting in C\+\+ see the related documentation [here](cpp/inde
 
 Flax supports **Visual** scripting with fully-featured Editor tools for creating, using and debugging Visual Scripts. Visual Scripts can inherit from C++ or C# classes (eg. custom Actor or Script) to provide more logic and data. Visual Scripting is very light-weight and extensible solution for prototyping games especially boosting the rapid development.
 
-Visual Scripts can access to whole engine API and the game code. Visual Scripts can be created side-by-side with C# and C++ scripts to expose own functions/properties. Also, Visual Scripting doesn't requrie any additional tools nor compiler as it's hot-reloading in Editor without any processing to provide even more robust development.
+Visual Scripts can access to whole engine API and the game code. Visual Scripts can be created side-by-side with C# and C++ scripts to expose own functions/properties. Also, Visual Scripting doesn't require any additional tools nor compiler as it's hot-reloading in Editor without any processing to provide even more robust development.
 
 To start visual scripting see the related documentation [here](visual/index.md).
 
