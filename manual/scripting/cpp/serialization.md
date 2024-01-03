@@ -50,11 +50,18 @@ if (!document.HasParseError())
 To implement data serialization for custom native type or custom data container add 3 methods in `Serialization` namespace as in an example shown below. It can be used for defining specialization implementation for template types too.
 
 ```cpp
-struct MyCustomNativeData
+API_STRUCT(NoDefault) struct MyCustomNativeData
 {
-    Vector3 Direction;
-    float Length;
+    // This, combined with API_STRUCT(NoDefault) allows this type
+    // to be used in scripting environment (C#, Visual Script, etc)
+    DECLARE_SCRIPTING_TYPE_STRUCTURE(MyCustomNativeData);
+    // Expose all the fields to the scripting api with API_FIELD()
+    API_FIELD() Vector3 Direction;
+    API_FIELD() float Length;
 };
+
+// C++ doesnt allow us to implement automatic serialization for structs with something convenient like API_AUTO_SERIALIZATION();,
+// so in this case we have to manually tell it how to serialize and deserialize our data.
 
 #include "Engine/Serialization/Serialization.h"
 namespace Serialization
@@ -66,6 +73,7 @@ namespace Serialization
     }
     inline void Serialize(ISerializable::SerializeStream& stream, const MyCustomNativeData& v, const void* otherObj)
     {
+        // Populate stream with the struct data
         stream.JKEY("Direction");
         Serialize(stream, v.Direction, nullptr);
         stream.JKEY("Length");
@@ -78,6 +86,16 @@ namespace Serialization
         DESERIALIZE_MEMBER(Length, v.Length);
     }
 }
+
+// If you want your struct to be compatible with automatic binary serialization (you would need that if you are planning
+// to mark your struct with NetworkReplicated tag, as an example), then you should also add this template. This helps
+// Read/WriteStream in deducting which binary serialization strategy to use for your struct (in our case we would want it as a POD struct).
+
+template<>
+struct TIsPODType<MyCustomNativeData>
+{
+    enum { Value = true };
+};
 ```
 
 If your code needs to auto-serialize the custom data type field or property but it should be not exposed to scripting (as it can be C++-only) use `Hidden` attribute.
