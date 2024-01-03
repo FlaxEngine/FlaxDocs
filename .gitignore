@@ -6,3 +6,11 @@
 _site
 /Docs.zip
 /FlaxEngine/
+
+# Local files
+*.vs/
+*.vscode/
+*.idea/
+packages/
+Thumbs.db
+.DS_Store
