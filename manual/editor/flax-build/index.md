@@ -27,7 +27,7 @@ The main source of build configuration are **.Build.cs** files located in the pr
 Build scripts are using C# 11 with full .NET 7 support. Additionally Flax.Build assembly is referenced with many useful utilities to use during build setup like:
 * `CommandLine` attribute for command line parsing
 * `Log` utility with info/errors logging capabilities (to log file and to console output)
-* `Tokenizer` class for pasing code as tokens
+* `Tokenizer` class for passing code as tokens
 * `Utilities` class with many usefull tools (eg. `WriteFileIfChanged`, `ReplaceInFiles`, `Run`, `GetFileSize`..)
 * `Sdk` searching and caching tools (used for ex. `PS4Sdk`, `GDK`, `VulkanSdk`)
 * `VCEnvironment` tool that can invoke *MSBuild* tool (works on Windows, Linux and Mac).
