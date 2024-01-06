@@ -11,7 +11,7 @@ To see changes please restart editor.
 
 ## Theme
 
-Open **Theme** tab and under *Styles* subgroup add new item. Thne double click on the label and rename it from *Key* to you name. Then save asset click on the theme preview to edit it.
+Open **Theme** tab and under *Styles* subgroup add new item. Then double click on the label and rename it from *Key* to you name. Then save asset click on the theme preview to edit it.
 
 ![Theme Editor](media/editor-theme-preview.png)
 
