@@ -10,7 +10,7 @@ For editing and using presets see [Game Cooker window](../game-cooker/index.md) 
 | Property | Description |
 |--------|--------|
 | **Max assets per package** | The maximum amount of assets to include into a single assets package. Assets will be split into several packages if needed. |
-| **Max package size (in MB)** | The maximum size of the single assets package (in megabytes). Assets will be spli into several packages if need to. |
+| **Max package size (in MB)** | The maximum size of the single assets package (in megabytes). Assets will be split into several packages if need to. |
 | **Content Key** | The game content cooking keys. Use the same value for a game and DLC packages to support loading them by the built game. Use 0 to randomize it during building. |
 | **For Distribution** | If checked, the builds produced by the Game Cooker will be treated as for final game distribution (eg. for game store upload). Builds done this way cannot be tested on console devkits (eg. Xbox One, Xbox Scarlett). |
 | **Skip Packaging** | If checked, the output build files won't be packaged for the destination platform. Useful when debugging build from local PC. |

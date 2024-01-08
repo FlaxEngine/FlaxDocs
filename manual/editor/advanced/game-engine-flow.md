@@ -8,7 +8,7 @@ Game scripts or plugins code is executed when all engine services are ready and 
 
 * **Scripts** - initialized during scene initialization, during loading. See [script events execution order](../../scripting/events.md).
 * **Game Plugins** - initialized when game starts but always before any scene is loaded.
-* **Editor Plugins** - initialized when editer is opened.
+* **Editor Plugins** - initialized when editor is opened.
 
 ## Engine Flow
 
@@ -63,7 +63,7 @@ The list below shows the flow of the engine with all services initialization ord
 * Application initialization *(editor or game)*
 * Main window creation
 * **Main loop**
-  * Idle if unatended
+  * Idle if unattended
   * Sleep if app paused *(platform specific)*
   * Update
   * Fixed Update

@@ -36,7 +36,7 @@ Of course, all those things can be made manually by using Flax Editor C# API and
 | **-novsync** | Forces to disable vertical synchronization when presenting the frame on screen. |
 | **-nolog** | Disables output log file. |
 | **-std** | Redirects log to the standard process output (std). |
-| **-debug <ip:port>** | Sets the Mono debugger adress and port (or just port) used for the remote debugging. The default Mono debugger IP=127.0.0.1, Port=41000+(process_id%1000). Can be just port number to use *localhost*. |
+| **-debug <ip:port>** | Sets the Mono debugger address and port (or just port) used for the remote debugging. The default Mono debugger IP=127.0.0.1, Port=41000+(process_id%1000). Can be just port number to use *localhost*. |
 | **-debugwait** | Instructs Mono debugger to wait for client attach for 5 seconds. Can be used to debug initialization code when a standalone game starts. |
 | **-headless** | Starts without windows, used by CL. Can be also used in cooked game on desktop platforms. |
 | **-lowdpi** | Disables High DPI awareness support. |
