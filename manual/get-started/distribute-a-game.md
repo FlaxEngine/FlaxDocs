@@ -18,18 +18,7 @@ Now to prepare the final build. Remember to use **Release** mode and remove any 
 
 ## 4. Distribute your game
 
-Every platform has it's own building process and custom output data format but in most cases simply grab the files from the *Output* directory. 
+Every platform has it's own building process and custom output data format but in most cases simply grab the files from the *Output* directory.  
 How you distribute the game is up to you.
 
 ![Game Output](media/build-output.jpg)
-
-
-
-
-
-
-
-
-
-
-

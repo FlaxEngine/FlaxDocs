@@ -1,14 +1,16 @@
 # Script events
 
-Scripts in Flax does not work like the traditional programs where code runs continuously in a loop until end.
-Instead, Flax calls declared in script functions to handle specific game events like update or physics collision.
-These functions are called **event functions** because they are executed by Flax in response to events that occur during gameplay. Using these function allows you to implement gameplay logic and handle different situations inside your game.
+Scripts in Flax does not work like traditional programs where code runs continuously in a loop until end.  
+Instead, Flax calls functions declared in scripts to handle specific game events like update or physics collision.  
+These functions are called **event functions** because they are executed by Flax in response to events that occur during gameplay. Using these functions allows you to implement gameplay logic and handle different situations inside your game.
 
 ## Examples
 
-# [C#](#tab/code-csharp)
+### [C#](#tab/code-csharp)
+
 [!code-csharp[Example1](code-examples/events.cs)]
-# [C++](#tab/code-cpp)
+
+### [C++](#tab/code-cpp)
 [!code-cpp[Example2](code-examples/events.h)]
 ***
 
@@ -17,15 +19,15 @@ These functions are called **event functions** because they are executed by Flax
 The following table lists all the available event functions to override from the base **Script** class.
 
 > [!TIP]
-> You don't have to call the base class methods if you script inherits directly from Script type. The default implementations are empty.
+> You don't have to call the base class methods if your script inherits directly from `Script` type. The default implementations are empty.
 
 | Event | Description |
 |--------|--------|
-| **void OnAwake()** | Called after the object is loaded to initialize it. Before the enabling it or calling start (including any other scene objects). |
+| **void OnAwake()** | Called after the object is loaded to initialize it. This occurs before the object is enabled and before calling start (including any other scene objects). |
 | **void OnEnable()** | Called when object becomes enabled and active. |
 | **void OnDisable()** | Called when object becomes disabled and inactive. |
 | **void OnDestroy()** | Called before the object will be destroyed. |
-| **void OnStart()** | Called when a script is enabled just before any of the Update methods is called for the first time. |
+| **void OnStart()** | Called when a script is enabled, and just before any of the Update methods is called for the first time. |
 | **void OnUpdate()** | Called every frame if object is enabled (C++ scripts need to set `_tickUpdate=true` in constructor). |
 | **void OnLateUpdate()** | Called every frame (after *Update*) if object is enabled (C++ scripts need to set `_tickLateUpdate=true` in constructor). |
 | **void OnFixedUpdate()** | Called every fixed framerate frame if object is enable (C++ scripts need to set `_tickFixedUpdate=true` in constructor)d. |

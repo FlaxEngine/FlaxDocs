@@ -1,6 +1,6 @@
 # Selecting Actors
 
-Selecting actors in your scene is one of the most essential parts of the level design. There are different ways to select objects. Each of these is detailed below.
+Selecting actors in your scene is one of the most essential parts of creating a scene. There are different ways to select objects. Each of these is detailed below.
 
 ## Pick selection
 

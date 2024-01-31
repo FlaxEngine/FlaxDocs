@@ -17,7 +17,7 @@ If you're working with Visual Studio then use **File -> Generate project file** 
 
 ## 2. Writing compute shader
 
-Now, let's write the compute shader. In this example we use two functions: one will blur the input image horizotnally (`CS_BlurH`), second one will perform a vertical blur (`CS_BlurV`). The blur will use a configurable radius (in range 0-10) and blending intensity.
+Now, let's write the compute shader. In this example we use two functions: one will blur the input image horizontally (`CS_BlurH`), second one will perform a vertical blur (`CS_BlurV`). The blur will use a configurable radius (in range 0-10) and blending intensity.
 
 Here is an example code used in this tutorial. Follow code comments to better understand how it works.
 

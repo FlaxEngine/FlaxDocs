@@ -2,7 +2,7 @@
 
 Flax Engine has specific hardware and software requirements for running the game or developing with the engine.
 
-### Hardware Requirements
+## Windows Hardware Requirements
 
 | | Minimum | Recommended |
 |-------|-------|-------|
@@ -12,11 +12,11 @@ Flax Engine has specific hardware and software requirements for running the game
 | Hard drive space | 1 GB | 5 GB |
 | GPU | 512MB, DirectX 10+ compatible GPU | 2 GB, DirectX 11 |
 
-## Linux
+## Linux Hardware Requirements
 
 For developers using Flax Editor on Linux platforms the requirements are [here](linux.md).
 
-## Mac
+## Mac Hardware Requirements
 
 For developers using Flax Editor on Mac platforms the requirements are [here](mac.md).
 
@@ -35,6 +35,7 @@ You can download the free community edition [here](https://www.visualstudio.com/
 ## GPU Drivers
 
 Please ensure that you have the latest GPU drivers installed:
+
 - [NVIDIA drivers](https://www.nvidia.com/Download/index.aspx)
 - [AMD drivers](https://www.amd.com/support)
 

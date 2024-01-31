@@ -2,9 +2,9 @@
 
 ![Actors](media/actors.png)
 
-**Actors** are the essential objects of the scenes. You can place them into a level to build game environment, setup a lighting and create a gameplay. Every [Actor](https://docs.flaxengine.com/api/FlaxEngine.Actor.html) is linked to the parent actor (except the Scene actors which are the root of the hierarchy) and can have child actors (tree hierarchy). Actors have their own 3D transformation (translation, rotation and scale) and inherit the parent actor transformation. You can attach C# scripts to the actors and spawn/destroy them at runtime.
+**Actors** are the essential objects of a scene. You can place them into a scene to build a game environment, setup lighting and create gameplay. Every [Actor](https://docs.flaxengine.com/api/FlaxEngine.Actor.html) is linked to the parent actor (except the Scene actors which are the root of the hierarchy) and can have child actors (tree hierarchy). Actors have their own 3D transformation (translation, rotation and scale) and inherit the parent actor transformation. You can attach C# scripts to the actors and spawn/destroy them at runtime.
 
-This documentation page contains links to all tutorials related to working with actors and references to all actor types.
+This documentation page contains links to all tutorials related to working with actors and references to actor types.
 
 ## Using actors
 

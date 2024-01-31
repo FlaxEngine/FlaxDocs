@@ -37,11 +37,11 @@ This section contains the most common terms used in UE4 and their Flax equivalen
 
 ![Flax Project](../media/project-structure.png)
 
-Flax projects structure is similar to UE4 projects. The editor uses **Cache** folder to keep temporary data. Also, **Content** folder works the same way as in Unreal (assets-only), while **Source** directory is used to keep all C# and C\+\+ scripts.
+Flax projects structure is similar to UE4 projects. The editor uses the **Cache** folder to keep temporary data. Also, **Content** folder works the same way as in Unreal (assets-only), while **Source** directory is used to keep all C# and C\+\+ scripts.
 
-Flax also generates a solution and project files for your game scripts.
+Flax also generates a solution file and project files for your game scripts.
 
-See [Flax projects structure](../project-structure.md) page to learn more about the projects in Flax Engine.
+See the [Flax projects structure](../project-structure.md) page to learn more about the projects in Flax Engine.
 
 ## Assets
 
@@ -49,27 +49,27 @@ Flax also uses binary asset files with extension `.flax` (instead of `.uasset`).
 
 Flax supports the most popular asset files formats (for 3D models and textures) so you can import your game content.
 
-See [Assets](../assets/index.md) page to learn more about importing and using game assets.
+See the [Assets](../assets/index.md) page to learn more about importing and using game assets.
 
 ## Scenes and Actors
 
-Flax doesn't use components to build scene objects logic. We only use [Actors](../scenes/actors.md). Each Actor has its own type (e.g. point light, box collider) and a collection of attached scripts. This means, in Flax the scene object hierarchy is created with Actors.
+Flax doesn't use components to build scene objects logic. We only use [Actors](../scenes/actors.md). Each Actor has its own type (e.g. point light, box collider) and a collection of attached scripts. This mean that in Flax, the scene object hierarchy is created with Actors.
 
 However, you can still use the entity-component design with your scripts because every actor can have scripts.
 You can use `GetChild<T>()`/`GetScript<T>()` methods in your scripts to access the other objects.
 
 In Flax, Scene object is also an Actor so you can access it like any other Actor. This means that Scenes can have their own scripts and be transformed like other objects.
 
-Also, multiple actors can have the same name and you can also move assets whenever you like because Flax uses unique IDs of the objects for tracking. This unlocks your development speed. We don't want to constrain your development to some ancient-design but to allow you to iterate faster and create beautiful games even easier.
+Also, multiple actors can have the same name and you can also move assets whenever you like because Flax uses unique IDs of the objects for tracking. This unlocks your development speed. We don't want to constrain your development to some ancient design but to allow you to iterate faster and create beautiful games even easier.
 
 ## Scripting
 
 When it comes to game scripting, there is a significant difference between Unreal and Flax.
-Firstly, we support both C\+\+ and C# languages to write game code and Visual Scripting as an addition.
-Using Visual Scripts or C# helps with rapid game development and simplifies the development while writing parts of the gameplay in C\+\+ can benefit the performance.
+Firstly, we support both C\+\+ and C# languages to write game code, as well as Visual Scripting.
+Using Visual Scripts or C# helps with rapid game development and simplifies development while writing parts of the gameplay in C\+\+ can benefit performance.
 The Flax Engine core itself is written in C++, while Flax Editor is mostly written in C#.
 
-You can create C# and C\+\+ files with script classes that provide a gameplay logic. Then scripts can be attached to the actors and used in a game. Our scripting C# API is an open-source project and can be found [here](https://github.com/FlaxEngine/FlaxEngine). All contributions are welcome.
+You can create C# and C\+\+ files with script classes that provide gameplay logic. Then, scripts can be attached to the actors and used in a game. Our scripting C# API is an open-source project and can be found [here](https://github.com/FlaxEngine/FlaxEngine). All contributions are welcome.
 
 Here is an example script that has been written for Unreal and Flax which prints the next number every frame.
 

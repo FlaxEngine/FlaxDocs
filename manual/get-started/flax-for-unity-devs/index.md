@@ -2,7 +2,7 @@
 
 ![Unity to Flax](media/title.jpg)
 
-Flax and Unity have many similarities (C# scripting, physics engine) and share many concepts, however there are a few differences. This page helps Unity Engine developers to translate their existing Unity experience into the world of Flax Engine.
+Flax and Unity have many similarities (such as C# scripting, physics engine) and share many concepts, however there are a few differences. This page helps Unity Engine developers to translate their existing Unity experience into the world of Flax Engine.
 
 > [!Warning]
 > Warning! You will love the direction and development speed of this engine!
@@ -39,11 +39,11 @@ This section contains the most common terms used in Unity and their Flax equival
 
 ![Flax Project](../media/project-structure.png)
 
-Flax projects structure is similar to Unity projects. Instead of **Library** folder, editor uses **Cache** folder. Also **Assets** folder from Unity is splitted into two separate parts: **Content** and **Source**. All C# script files are located in the source directory so there is less mess with assets and scripts.
+Flax projects structure is similar to Unity projects. Instead of a **Library** folder, editor uses the **Cache** folder. Also the **Assets** folder from Unity is split into two separate parts: **Content** and **Source**. All C# script files are located in the source directory so there is less mess with assets and scripts.
 
-Flax also generates a solution and project files for your game C# scripts.
+Flax also generates a solution file and project files for your game C# scripts.
 
-See [Flax projects structure](../project-structure.md) page to learn more about the projects in Flax Engine.
+See the [Flax projects structure](../project-structure.md) page to learn more about the projects in Flax Engine.
 
 ## Assets
 
@@ -51,11 +51,11 @@ Flax doesn't use `.meta` files. Instead, every asset contains all required metad
 
 Flax supports the most popular asset file formats (for 3D models and textures) so you can import your game content.
 
-See [Assets](../assets/index.md) page to learn more about importing and using game assets.
+See the [Assets](../assets/index.md) page to learn more about importing and using game assets.
 
 ## GameObject vs Actor
 
-Flax doesn't use components to build scene objects logic. We use [Actors](../scenes/actors.md). Each Actor has its own type (e.g. point light, box collider) and a collection of attached scripts. Also there is no *TransformComponent* but Actors have built-in transformation (less objects, more optimized design for bigger games). This means, in Flax the scene objects hierarchy is created with Actors, not by Transforms like in Unity.
+Flax doesn't use components to build scene objects logic. We use [Actors](../scenes/actors.md). Each Actor has its own type (e.g. point light, box collider) and a collection of attached scripts. Also there is no *TransformComponent*, but Actors have built-in transformation (less objects, more optimized design for bigger games). This means that in Flax, the scene object hierarchy is created with Actors, not by Transforms like in Unity.
 
 However, you can still use the entity-component design with your scripts because every actor can have scripts like in Unity.
 Just instead of using `GetComponent<T>()` in your scripts, write `GetChild<T>()`/`GetScript<T>()`.
@@ -67,13 +67,14 @@ In Flax, a Scene object is also an Actor so you can access it like any other Act
 
 ## MonoBehaviour vs Script
 
-When it comes to game scripting, Unity and Flax are very similar. There are some differences in C# API (Flax has bigger math library, is more performance-oriented and uses new C# 11 via .NET 7). In fact, the whole C# editor and C++ engine including scripting API is open and can be found [here](https://github.com/FlaxEngine/FlaxEngine). All contributions are welcome.
+When it comes to game scripting, Unity and Flax are very similar. There are some differences in C# API (Flax has a bigger math library, is more performance-oriented and uses new C# 11 via .NET 7). In fact, the whole C# editor and C++ engine including scripting API is open and can be found [here](https://github.com/FlaxEngine/FlaxEngine). All contributions are welcome.
 
-Also, Flax support native **[C++](../../scripting/cpp/index.md)** scripting and **[Visual Scripting](../../scripting/visual/index.md)** as a built-in feature. We don't want to limit our developers to just one programming language for the game development as using C\+\+ and Visual Scripting together with C# can benefit.
+Also, Flax support native **[C++](../../scripting/cpp/index.md)** scripting and **[Visual Scripting](../../scripting/visual/index.md)** as built-in features. We don't want to limit our developers to just one programming language for game development as using C\+\+ and Visual Scripting together with C# can be beneficial.
 
-If you write C# scripts simply replace `MonoBehaviour` with `Script` as it makes more sense (and is shorter to write).
+If you write C# scripts simply replace `MonoBehaviour` with `Script`. It makes more sense (and is shorter to write).
 
 * Unity
+
 ```cs
 public class MyScript : MonoBehaviour
 {
@@ -85,6 +86,7 @@ public class MyScript : MonoBehaviour
 ```
 
 * Flax
+
 ```cs
 public class MyScript : Script
 {
@@ -100,6 +102,7 @@ See [Scripting](../../scripting/index.md) documentation to learn more about C# s
 ## Cool things in the C# API
 
 If you're a programmer here is a list of new cool things in Flax C# API that may be useful:
+
 * You can use the latest .NET 7 and new C# 11
 * Engine and Editor are open with full source code ([link](https://github.com/FlaxEngine/FlaxEngine))
 * You can edit all input settings at runtime ([link](https://docs.flaxengine.com/api/FlaxEngine.Input.html))

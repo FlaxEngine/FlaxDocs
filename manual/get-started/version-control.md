@@ -9,7 +9,7 @@ By default, all Flax project data is split into two parts: **Content** and **Sou
 
 Here is an example `.gitignore` file for a **Git** repository with a Flax project ([download link](https://github.com/FlaxEngine/FlaxSamples/blob/master/.gitignore)).
 
-```
+```.gitignore
 # Ignore Flax project files
 /Binaries/
 /Cache/
@@ -69,7 +69,7 @@ packages/
 
 Here is an example `.gitattributes` file for the **Git LFS** repository with a Flax project. By using [Large Files Storage](https://github.com/git-lfs/git-lfs/wiki/Tutorial) you can improve repository performance for asset files that are using binary format and tend to be big (models, textures, etc.).
 
-```
+```.gitattributes
 # Flax Engine files
 *.flax filter=lfs diff=lfs merge=lfs -text
 
