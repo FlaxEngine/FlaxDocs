@@ -54,21 +54,21 @@ public MaterialBase Material;
 
 public override void OnStart()
 {
-	// Create dynamic model with a single LOD with one mesh
-	_model = Content.CreateVirtualAsset<Model>();
-	_model.SetupLODs(new[] { 1 });
-	UpdateMesh(_model.LODs[0].Meshes[0]);
+    // Create dynamic model with a single LOD with one mesh
+    _model = Content.CreateVirtualAsset<Model>();
+    _model.SetupLODs(new[] { 1 });
+    UpdateMesh(_model.LODs[0].Meshes[0]);
 
-	// Create or reuse child model
-	var childModel = Actor.GetOrAddChild<StaticModel>();
-	childModel.Model = _model;
-	childModel.LocalScale = new Float3(100);
-	childModel.SetMaterial(0, Material);
+    // Create or reuse child model
+    var childModel = Actor.GetOrAddChild<StaticModel>();
+    childModel.Model = _model;
+    childModel.LocalScale = new Float3(100);
+    childModel.SetMaterial(0, Material);
 }
 
 public override void OnDestroy()
 {
-       FlaxEngine.Object.Destroy(ref _model);
+    FlaxEngine.Object.Destroy(ref _model);
 }
 ```
 
