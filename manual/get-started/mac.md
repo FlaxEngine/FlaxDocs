@@ -13,7 +13,7 @@ After downloading the `FlaxEditor.dmg` file, open a disk image and run the Flax 
 For developers using Flax Editor on Mac platforms the requirements are:
 
 | | Recommended |
-|-------|-------|-------|
+|-------|-------|
 | Minimum supported version | **macOS 11.7 or higher** |
 | Processor | **arm64** (M1/M2/M3) |
 | RAM | 4 GB or more |
