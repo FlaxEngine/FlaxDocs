@@ -13,7 +13,7 @@ The Editor executable is in folder `Binaries/Editor/Linux/Development/FlaxEditor
 For developers using Flax Editor on Linux platforms the requirements are:
 
 | | Recommended |
-|-------|-------|-------|
+|-------|-------|
 | Tested operating systems | Ubuntu 22 LTS |
 | Processor | Quad-core or more, 2 GHz or faster |
 | RAM | 4 GB or more |
