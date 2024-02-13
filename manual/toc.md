@@ -267,6 +267,7 @@
 #### [How to create scene animation from code](animation/scene-animations/tutorials/scene-anim-from-code.md)
 ## [Advanced](animation/advanced/index.md)
 ### [Root motion](animation/advanced/root-motion.md)
+### [Anim Graph Debugging](animation/advanced/anim-graph-debugging.md)
 ### [Bones debugging](animation/advanced/bones-debugging.md)
 ## [Tutorials](animation/tutorials/index.md)
 ### [How to setup animated model](animation/tutorials/setup-animated-model.md)

@@ -38,6 +38,7 @@ This documentation section describes how to work with the Flax animation pipelin
    * [How to create scene animation from code](scene-animations/tutorials/scene-anim-from-code.md)
 * [Advanced](advanced/index.md)
  * [Root motion](advanced/root-motion.md)
+ * [Anim Graph Debugging](advanced/anim-graph-debugging.md)
  * [Bones debugging](advanced/bones-debugging.md)
 * [Tutorials](tutorials/index.md)
  * [How to setup animated model](tutorials/setup-animated-model.md)
