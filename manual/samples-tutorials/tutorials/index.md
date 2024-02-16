@@ -23,6 +23,7 @@ You can use **Ctrl + F** to quickly find what you are looking for.
 * [How to spawn a prefab](../../get-started/prefabs/spawning-prefabs.md)
 * [How to create a bouncing ball](../../physics/tutorials/bouncing-ball.md)
 * [How to use a trigger](../../physics/tutorials/use-trigger.md)
+* [How to play footsteps on different surfaces](../../physics/tutorials/footsteps.md)
 * [How to create a decal](../../graphics/decals/create-decal.md)
 * [How to report a bug](../../contributing/report-a-bug.md)
 * [How to use raycasting](../../physics/raycasting.md)

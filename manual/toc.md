@@ -398,6 +398,7 @@
 ## [Tutorials](physics/tutorials/index.md)
 ### [How to create a bouncing ball](physics/tutorials/bouncing-ball.md)
 ### [How to use a trigger](physics/tutorials/use-trigger.md)
+### [How to play footsteps on different surfaces](physics/tutorials/footsteps.md)
 
 # [Particles](particles/index.md)
 ## [Particle Emitter](particles/particle-emitter.md)
