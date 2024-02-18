@@ -19,12 +19,14 @@ Alternatively, you can use the **Import** button in the *Content Window* toolbar
 
 ## Font Window
 
+![Font Window](media/font-window.png)
+
 **Double-click** on an imported font asset in the *Content Window* to open the dedicated font asset tool window.
 You can use it to type text and preview the font.
 
-![Font Window](media/font-window.png)
-
 ## Font Properties
+
+![Font Window](media/font-tools.gif)
 
 The font window can be used to preview and edit the font rasterization options:
 
@@ -35,4 +37,12 @@ The font window can be used to preview and edit the font rasterization options:
 | **Bold** | Enables an artificial embolden effect. |
 | **Italic** | Enables a slant effect, emulating italic style. |
 
-![Font Window](media/font-tools.gif)
+## Fallback fonts
+
+When font used to draw text doesn't contains certain characters (eg. non-Latin set, emoji or icon) then fallback fonts can be used. Flax supports using one or more fallbacks when the primary font lacks a glyph to be displayed.
+
+To setup this feature assign `Fallback Fonts` property in [Graphics Settings](../../editor/game-settings/graphics-settings.md):
+
+![Fallback Fonts](media/fallback-fonts.png)
+
+In Editor, in-built font is used as a fallback by default - can be configured in Editor Options. Leave that empty to use the ones from Graphics Settings.

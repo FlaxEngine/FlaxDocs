@@ -59,6 +59,7 @@ You can modify the properties and press **Save** icon on a toolstrip to apply th
 | **Large Font** | The large font for editor UI. |
 | **Medium Font** | The medium font for editor UI. |
 | **Small Font** | The small font for editor UI. |
+| **Fallback Fonts** | The list of fallback fonts to use when main text font is missing certain characters. Empty to use fonts from GraphicsSettings. |
 
 ## Input options
 

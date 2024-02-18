@@ -29,4 +29,6 @@ You can change most of these values at runtime using the [GraphicsQuality](https
 | **GI Probes Spacing** | The Global Illumination probes spacing distance (in world units). Defines the quality of the GI resolution. Adjust to 200-500 to improve performance and lower frequency GI data. |
 | **Global Surface Atlas Resolution** | The Global Surface Atlas resolution. Adjust it if atlas `flickers` due to overflow (eg. to 4096). |
 |||
+| **Fallback Fonts** | The list of fallback fonts used for text rendering. Ignored if empty. |
+|||
 | **Post Process Settings** | The default Post Process settings. Can be overriden by PostFxVolume on a level locally, per camera or for a whole map. |
