@@ -47,6 +47,8 @@ The following table lists the most common attributes with usage description.
 | **CustomEditorAlias** | Works the same as *CustomEditor* attribute, except uses a typename that can be located in different assembly (not referenced). |
 | **ExecuteInEditMode** | Makes a script execute in edit mode. |
 | **RequireChildActor** | Automatically adds required child actor as dependencies if not added yet. |
+| **RequireActor** | Requires specific Actor type. |
+| **RequireScript** | Requires specific Script type. |
 | **VisibleIf** | Shows property/field in the editor only if the specified member has a given value. Can be used to hide properties based on other properties (also private properties). The given member has to be bool type. |
 | **DefaultValue** | Can be used to specify the default value for the field or the property. The editor will highlight the modified properties and add an option to restore value to default. You can use it on basic types like: `[DefaultValue(3.14f)] public float MyValue;` or on complex types: `[DefaultValue(typeof(Vector2), "1,2")] public Vector2 StartPosition;`. |
 | **ReadOnly** | Properties and fields marked with this attribute won't be editable in the inspector. This allows to show object proeprties values in the editor but without option to modify the value which can be handy in some cases. |
