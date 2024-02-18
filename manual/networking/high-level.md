@@ -65,7 +65,7 @@ Network Manager running as server or host receives new client connections which 
 
 After performing initial handshake with a new client it's added to `NetworkManager.Clients` list and `NetworkManager.ClientConnected` event is being called (as opposted to `NetworkManager.ClientDisconnected` event upon connection end or timeout). Network state can be checked with `State` property (`NetworkConnectionState` enum) and responsed to changes on `NetworkManager.StateChanged` event.
 
-Each client has own unique `uint32 ClientId` used to identify it within a newtowkr session. Network manager in mode Server or Host always uses `NetworkManager.ServerClientId = 0` to distinguish from other peers.
+Each client has own unique `uint32 ClientId` used to identify it within a network session. Network manager in mode Server or Host always uses `NetworkManager.ServerClientId = 0` to distinguish from other peers.
 
 ## Network Settings
 
