@@ -47,6 +47,16 @@ Note: some input configurations can be changed via the Editor Options.
 
 ![Editor Widgets 2](media/viewport-widgets2.jpg)
 
+### Vertex Snapping
+
+![Vertex Snapping](media/vertex-snapping.gif)
+
+**Vertex Snapping** allows quickly building scenes by taking advantage of automatic precise transformation origin placement based on the mesh's vertices locations. This allows using the vertex as a transformation origin (eg. to rotate an object around it) or to snap an object to the vertex of another mesh.
+
+This includes two actions:
+* Holding `V` key to pick the vertex nearby the mouse cursor to use as an origin.
+* Using translation gizmo while holding `V` key to snap the gizmo origin to the nearby objects vertices.
+
 ## Game window
 
 The Game Window is rendered from the camera(s) in your game.
