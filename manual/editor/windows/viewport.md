@@ -45,7 +45,7 @@ To learn more about using a transform gizmo see [this page](../../get-started/sc
 All key shortcuts related to level editing windows (viewport, scene window, properties, etc.) are available. For instance, use **Ctrl + S** to save all changes.
 Note: some input configurations can be changed via the Editor Options.
 
-![Editor Widgets 2](media/viewport-widgets2.jpg)
+![Editor Widgets 2](media/viewport-widgets2.png)
 
 ### Vertex Snapping
 
