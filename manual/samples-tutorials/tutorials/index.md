@@ -61,6 +61,7 @@ You can use **Ctrl + F** to quickly find what you are looking for.
 * [How to create TCP client-server](../../networking/tutorials/create-tcp-client-server.md)
 * [How to create a networking server and client](../../networking/tutorials/network-client-server.md)
 * [How to blur UI panel background](../../ui/tutorials/blur-background.md)
+* [How to raycast UI](../../ui/tutorials/raycast-ui.md)
 * [How to create a Main Menu](../../ui/tutorials/create-main-menu.md)
 * [How to use a third-party library](../../scripting/tutorials/use-third-party-library.md)
 * [How to create a loading screen](../../scripting/tutorials/loading-screen.md)
