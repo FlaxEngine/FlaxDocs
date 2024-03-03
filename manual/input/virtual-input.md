@@ -6,13 +6,13 @@ This documentation covers the usage and important parts of the virtual input int
 
 ## Settings and usage
 
-The first step to use the virtual input is preparing a proper configuration. This is done via the **Input Settings** asset. You can learn more about creating and using these settings on the [Input Settings](input-settings.md) page. If you're using one of the *Flax Templates* it should already contain a proper configuration file in `Content/Settings/Input Settings.json`. Open this asset in the Editor.
+The first step to using the virtual input is preparing a proper configuration. This is done via the **Input Settings** asset. You can learn more about creating and using these settings on the [Input Settings](input-settings.md) page. If you're using one of the *Flax Templates* it should already contain a proper configuration file in `Content/Settings/Input Settings.json`. Open this asset in the Editor.
 
 ![Virtual Input Config](media/virtual-input-config.jpg)
 
-As you can see in the above image there are several configurations in that file. For instance, `Left Mouse Button` and `Gamepad button A` are configured to trigger the input action named `Fire` (even triggered on `Press`).
+As you can see in the image above, there can be many virtual inputs, and there can be multiple inputs bound to each one. For instance, the `Fire` Action is set to trigger on both `Left Mouse Button` and `Gamepad Button A`. This Action is set to `Press` mode, which means it will trigger an event when the action is activated.
 
-Then in your C# script you can handle this action:
+In your C# script you can read the state of the action directly:
 
 ```cs
 public override void OnUpdate()
@@ -24,7 +24,7 @@ public override void OnUpdate()
 }
 ```
 
-Also you can use [InputEvent](https://docs.flaxengine.com/api/FlaxEngine.InputEvent.html) and [InputAxis](https://docs.flaxengine.com/api/FlaxEngine.InputEvent.html) classes to configure it further:
+You can also use the [InputEvent](https://docs.flaxengine.com/api/FlaxEngine.InputEvent.html) and [InputAxis](https://docs.flaxengine.com/api/FlaxEngine.InputEvent.html) classes to configure your script further, directly subscribing a method to the `Pressed` Event:
 
 ```cs
 public InputEvent FireEvent = new InputEvent("Fire");
@@ -51,7 +51,7 @@ public override void OnDestroy()
 }
 ```
 
-Then if you select the object with this script in Editor you can modify the `FireEvent` and `MouseX` mapping's names so they can be modified without editing the code.
+If you select the Actor with this script in the Editor, you can modify the `FireEvent` and `MouseX` names without editing the code.
 
 ![Virtual Input Script](media/virtual-input-script-example.jpg)
 

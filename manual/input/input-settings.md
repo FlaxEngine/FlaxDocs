@@ -1,6 +1,6 @@
 # Input Settings
 
-The **Input Settings asset** is used to specify the initial game input configuration. This asset contains a description of the virtual actions and axes that are used to map physical input data into the more unified usage. See [Virtual Input](virtual-input.md) to learn more about it.
+The **Input Settings asset** is used to set the default input configuration for your game. This asset contains a description of the Action Mappings and Axis Mappings that are used to map physical inputs into a more unified configuration. See the [Virtual Input](virtual-input.md) page to learn more.
 
 ## Create input settings
 
@@ -17,7 +17,7 @@ The **Input Settings asset** is used to specify the initial game input configura
 
 ## Use input settings
 
-You can create as many input settings as you want (even special versions per platform) but only one can be used during game building. Use **Game Settings** asset (always located in `Content/GameSettings.json`) to link the input options. If your game is using a more advanced configuration, you can edit the game settings from code in your build script (use [GameSettings.Load](https://docs.flaxengine.com/api/FlaxEditor.Content.Settings.GameSettings.html#FlaxEditor_Content_Settings_GameSettings_Load) and [GameSettings.Save](https://docs.flaxengine.com/api/FlaxEditor.Content.Settings.GameSettings.html#FlaxEditor_Content_Settings_GameSettings_Save__1___0_) from C# API).
+You can create as many input settings assets as you want, (even special versions per platform) but only one can be used when building your game. Use the **Game Settings** asset (always located in `Content/GameSettings.json`) to specify which input settings asset you would like to use. If your game is using a more advanced configuration, you can edit the game settings from code in your build script (use [GameSettings.Load](https://docs.flaxengine.com/api/FlaxEditor.Content.Settings.GameSettings.html#FlaxEditor_Content_Settings_GameSettings_Load) and [GameSettings.Save](https://docs.flaxengine.com/api/FlaxEditor.Content.Settings.GameSettings.html#FlaxEditor_Content_Settings_GameSettings_Save__1___0_) from the C# API).
 
 ![Use Input Settings](media/use-input-settings.jpg)
 
@@ -25,14 +25,14 @@ You can create as many input settings as you want (even special versions per pla
 
 ![Action Mappings](media/input-action-mappings.jpg)
 
-**Action Mappings** are used to configure virtual actions. It's useful to bind a physical mouse or gamepad buttons to specific actions identified by the name. Later the game may track those input events using action names.
+**Action Mappings** are used to configure virtual actions. It's useful to bind physical mouse or gamepad buttons to specific actions identified by the name. Later the game may track those input events using the action names.
 
 Useful C# API: [InputEvent](https://docs.flaxengine.com/api/FlaxEngine.InputEvent.html), [Input.ActionConfig](https://docs.flaxengine.com/api/FlaxEngine.ActionConfig.html) and [Input.ActionMappings](https://docs.flaxengine.com/api/FlaxEngine.Input.html#FlaxEngine_Input_ActionMappings).
 
 | Property | Desciption |
 |--------|--------|
 | **Name** | The action *"friendly name"* used to access it from code. |
-| **Mode** | The trigger mode. Allows to specify when input event should be fired. See [InputActionMode](https://docs.flaxengine.com/api/FlaxEngine.InputActionMode.html). |
+| **Mode** | The trigger mode. Allows the user to specify when input events should be fired. See [InputActionMode](https://docs.flaxengine.com/api/FlaxEngine.InputActionMode.html). |
 | **Key** | The [keyboard key](https://docs.flaxengine.com/api/FlaxEngine.KeyboardKeys.html) to map for this action. Use *None* to ignore it. |
 | **Mouse Button** | The [mouse button](https://docs.flaxengine.com/api/FlaxEngine.MouseButton.html) to map for this action. Use *None* to ignore it. |
 | **Gamepad Button** | The [gamepad button](https://docs.flaxengine.com/api/FlaxEngine.GamepadButton.html) to map for this action. Use *None* to ignore it. |
@@ -63,5 +63,5 @@ Useful C# API: [InputAxis](https://docs.flaxengine.com/api/FlaxEngine.InputAxis.
 
 ![Keyboard Keys enum picking with keyboard](media/keyboard-navigation-context-menu.gif)
 
-Sometimes picking the right key for the action/axis mapping might be problematic because there are so many keyboard keys to scroll. To make this easier **use your keyboard to search** the item in the open context menu popup. You can also **navigate with arrow keys** around the list and **confirm the choice with Enter**. This makes it easier to setup your input settings. This feature works with all long context menu lists across the Editor.
+Sometimes picking the right key for the action/axis mapping can be problematic because there are so many keyboard keys to scroll through. To make this easier, you can **use your keyboard to search** for the item in the open context menu popup. By pressing a key multiple times, it will take you through each key starting with that letter. You can also **navigate with arrow keys** through the list and **confirm the choice with Enter**. This makes it easier to setup your input settings. This feature works with all long context menu lists across the Editor.
 
