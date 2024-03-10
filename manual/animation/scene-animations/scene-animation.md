@@ -43,7 +43,7 @@ Keyboard shortcuts:
 * **End** - sets time to last frame
 * **Page Up** - sets time to frame of the next keyframe
 * **Page Down** - sets time to frame of the previous keyframe
-* **Ctrl + S** - saves the assett
+* **Ctrl + S** - saves the asset
 * **Spacebar** - pauses or plays the playback
 * **S** - splits the media events at the current frame (if possible)
 
