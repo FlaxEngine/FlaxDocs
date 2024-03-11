@@ -6,7 +6,7 @@
 
 ## Create a scene animation
 
-To create a new animation asset use the *Content* window. Right-click in the Content directory and select option **New -> Animartion -> Scene Animation**. Then specify the name and press Enter to confirm.
+To create a new animation asset use the *Content* window. Right-click in the Content directory and select option **New -> Animation -> Scene Animation**. Then specify the name and press Enter to confirm.
 
 ![New Scene Animation](media/new-scene-animation.png)
 
@@ -24,7 +24,7 @@ Scene animation editor interface is divided into several parts as shown in the p
 
 ![Interface](media/timeline-interface.png)
 
-Editor window provides various functionalities to view and edit animation. The left panel contains a hierarhical list of tracks. You can use it to organize them, rename, edit, mute or remove. The right side of window contains a timeline that matches the vertical hierarchy of the tracks and contains their media events. You can select and drag media with left mouse button or use right click to open context menu.
+Editor window provides various functionalities to view and edit animation. The left panel contains a hierarchical list of tracks. You can use it to organize them, rename, edit, mute or remove. The right side of window contains a timeline that matches the vertical hierarchy of the tracks and contains their media events. You can select and drag media with left mouse button or use right click to open context menu.
 
 Timeline uses the concept of **frame** to represent the time. Whole timeline animation uses a given frames per second factor (FPS) to define the playback speed (the speed of animation frames to play per second). You can edit timeline time axis labels by using **View -> Show time as**. The timeline FPS can be changed using the dedicated toolstrip button (default is *60 fps*). You can use one of the common, predefined values or set the custom fps.
 
@@ -43,7 +43,7 @@ Keyboard shortcuts:
 * **End** - sets time to last frame
 * **Page Up** - sets time to frame of the next keyframe
 * **Page Down** - sets time to frame of the previous keyframe
-* **Ctrl + S** - saves the assett
+* **Ctrl + S** - saves the asset
 * **Spacebar** - pauses or plays the playback
 * **S** - splits the media events at the current frame (if possible)
 
@@ -87,7 +87,7 @@ You can use **right click on the timeline** to edit selected media properties or
 
 #### Camera Cut
 
-**Camera Cut** it a special type of Actor track that is used for Camera shots animations. It contains a media event that defines the camera shot with the preview thumbnails. Use **+** button to animate camera properties during the cut. For camera shots editing use **camera icon** that starts the camera actor pilot mode which enables you to move and orient camera to the editor viewport. Then use the viewport widget to stop acotr piloting and add keyframes for the camera shot location. Right-click on track header to change the animated camera.
+**Camera Cut** it a special type of Actor track that is used for Camera shots animations. It contains a media event that defines the camera shot with the preview thumbnails. Use **+** button to animate camera properties during the cut. For camera shots editing use **camera icon** that starts the camera actor pilot mode which enables you to move and orient camera to the editor viewport. Then use the viewport widget to stop actor piloting and add keyframes for the camera shot location. Right-click on track header to change the animated camera.
 
 ## Live-preview
 
