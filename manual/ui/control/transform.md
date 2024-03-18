@@ -4,6 +4,12 @@
 
 Every GUI control contains a set of properties related to transforming the control within the parent container. Every control location can be assigned and fixed, or depend on the parent container controls dimensions. Use the properties group **Transform** when editing selected **UI Control** in the editor to adjust its appearance. All these options can also be modified at runtime from C# code.
 
+## Visual Editor
+
+![UI Editor](media/ui_editor.gif)
+
+**Prefab editor** window displays the **UI Editing tools** when opening **UI Control or UI Canvas** (in *Screen-Space*). Left mouse click can select or move controls (hold *Control* to add/remove to selection). Right mouse or middle mouse can pan the view. Mouse wheel can zoom in or out. Control under mouse cursor is outlined. Selected controls are outlined as well, including sizing widgets.
+
 ## Anchor
 
 ![Anchor Presets](media/anchor-presets.png)
