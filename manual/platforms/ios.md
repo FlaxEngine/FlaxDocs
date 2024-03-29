@@ -51,6 +51,7 @@ To learn how to set up Apple Developer for the app building, testing, and distri
 | **App Team Id** | The app developer name - App Store Team ID. For example: `VG6K6HT8B`. |
 | **App Version** | The app version number (matches `CURRENT_PROJECT_VERSION` in XCode). |
 | **Export Method** | The app export mode (if automatic packaging is not disabled via Build Settings, otherwise export app manually via XCode project). |
+| **Textures Quality** | The output textures quality (compression). |
 | **Supported Interface Orientations (iPhone)** | The UI interface orientation modes supported on iPhone devices. |
 | **Supported Interface Orientations (iPad)** | The UI interface orientation modes supported on iPad devices. |
 | **Override Icon** | Custom icon texture to use for the application (overrides the default one). |
