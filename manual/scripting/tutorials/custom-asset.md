@@ -128,13 +128,13 @@ To use this asset simply add [JsonAsset](https://docs.flaxengine.com/api/FlaxEng
 ```cs
 public class MyScript : Script
 {
-	public JsonAsset MySettings;
+	public JsonAssetReference<MySettings> MySettings;
 
 	public override void OnStart()
 	{
 		if (MySettings)
 		{
-			var obj = (MySettings)MySettings.Instance;
+			var obj = MySettings.Instance;
 			Debug.Log("Default language: " + obj.DefaultLanguage);
 		}
 	}
@@ -146,19 +146,19 @@ public class MyScript : Script
 
 #include "Engine/Scripting/Script.h"
 #include "Engine/Core/Log.h"
-#include "Engine/Content/AssetReference.h"
+#include "Engine/Content/JsonAssetReference.h"
 
 API_CLASS() class GAME_API MyScript : public Script
 {
     API_AUTO_SERIALIZATION();
     DECLARE_SCRIPTING_TYPE(MyScript);
 
-    API_FIELD() AssetReference<JsonAsset> MySettings;
+    API_FIELD() JsonAssetReference<::MySettings> MySettings;
 
     // [Script]
     void OnStart() override
     {
-        const auto obj = MySettings ? MySettings->GetInstance<::MySettings>() : nullptr;
+        const auto obj = MySettings.GetInstance();
         if (obj)
         {
             LOG(Info, "Default language: {0}", obj->DefaultLanguage);

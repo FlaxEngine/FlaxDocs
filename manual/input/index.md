@@ -1,14 +1,14 @@
 # Input
 
-Reading the game input is the most essential part of providing user interactions in games. Every application must support at least one input device.
+To handle user interactions effectively, games need constant access to input data. In Flax, you can read player inputs by utilizing the Input class.
 
 ## Input handling
 
 Flax supports two types of input:
-* **Low-level** API used to read the state from the input devices directly (eg. mouse position, gamepad buttons)
-* **High-level** API using the [virtual input](virtual-input.md) layer to provide more unified input events and data across different platforms and input devices
+* **Low-level** API: This gives you direct access to the state of connected input devices. (eg. mouse position, gamepad buttons)
+* **High-level** API: This uses the [virtual input](virtual-input.md) feature to provide more intuitive and unified input data across different platforms and input devices. (eg. "Move X" axis, "Jump" event)
 
-Games use C# scripting API to access the input data. The most of it can be done by using [Input](https://docs.flaxengine.com/api/FlaxEngine.Input.html) service. It provides input data in both, at runtime and in-editor playmode.
+Games will need to use the C# scripting API to access input data. This can be done by using the [Input](https://docs.flaxengine.com/api/FlaxEngine.Input.html) class. It provides Low Level and High Level input data at runtime and in-editor playmode.
 
 ## In this section
 

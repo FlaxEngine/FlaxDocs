@@ -37,6 +37,14 @@ Example usage (from Blender):
 
 ![Model LODs import example](media/model-lods-example.jpg)
 
+## Importing into Prefab
+
+The models importing system supports importing all source file contents (meshes, nodes, animations, materials, textures, etc.) into a prefab scene inside the engine. This allows to customize the imported objects easily and is especially useful for more complex scenes. When importing a file select type to **Prefab**, then you can customize other import options (each mesh can override settings after import).
+
+![Model Prefab Importing](media/model-prefab.png)
+
+Imported prefab can be opened and customized. After adding it to a scene any changes in the prefab will be synced in all instances across the whole project. The root object of the created prefab contains `ModelPrefab` script that stores saved import options and source file path (relative to the project folder or absolute). You can use it to reimport the source asset (eg. to sync with the source file or with different import options).
+
 ## Importing collision mesh
 
 Flax supports automatic collision mesh importing from a source model. To import a collision mesh use a custom name prefix for collision meshes in the model file (eg. `COLL_` or `UCX_` prefix) and specify that prefix in the import option **Collision Meshes Prefix**. The engine will extract those collision meshes and create a separate collision data asset
@@ -66,7 +74,7 @@ Flax uses the same import settings data schemes for **models**, **skinned models
 
 | Property | Description |
 |--------|--------|
-| **Type** | The type of the imported asset. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Model**</td><td>The model asset.</td></tr><tr><td>**Skinned Model**</td><td>The skinned model asset.</td></tr><tr><td>**Animation**</td><td>The animation asset.</td></tr></table></tbody> |
+| **Type** | The type of the imported asset. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Model**</td><td>The model asset.</td></tr><tr><td>**Skinned Model**</td><td>The skinned model asset.</td></tr><tr><td>**Animation**</td><td>The animation asset.</td></tr><tr><td>**Prefab**</td><td>The prefab scene.</td></tr></table></tbody> |
 |||
 | **Geometry** ||
 | **Calculate Normals** | If checked, model normal vectors will be recalculated. |

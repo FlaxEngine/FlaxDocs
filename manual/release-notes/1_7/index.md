@@ -126,6 +126,100 @@ Due to the recent rapid growth of Flax users we've worked on improving the onboa
 
 ## Changelog
 
+### Version 1.7.6407.2 - 20 December 2023
+
+Contributors: mafiesto4, Tryibion, GoaLitiuM, Withaust, Menotdan, NoriteSC, mtszkarbowiak, Just-Feeshy, MineBill, nothingTVatYT
+
+PRs merged: 29
+
+* Add invert green channel option to texture tool
+* Add various .NET and VSCode intellisense fixes
+* Add new icon for macOS
+* Add automatic code modules references adding when cloning plugin project
+* Add **saved colors to color picker**
+* Add infinite loop to behavior tree `Loop` decorator
+* Add **option to import model file as Prefab**
+* Add `ModelPrefab` to imported model prefab for reimporting functionality
+* Add various improvements to models importing code
+* Add support for loading prefab instance if the root was changed or deleted
+* Add support for displaying and reverting array values to prefab value in properties panel
+* Add removing thumbnails for deleted assets
+* Add `Half` to `Vector2`/`Vector4`
+* Add `Where`, `Select` and `RemoveAll` to `ArrayExtensions`
+* Add `SloppyOptimization` disabledby default and lower default `LOD Target Error` value for model auto-LOD
+* Add better `ScaleWithResolution `defaults in Canvas Scaler
+* Add `Async` to anim events (`false` by default) to delay events execution into main thread and prevent multi-threading issues by default
+* Add `PixelFormatExtensions::ComputeBlockSize`
+* Add ability to change default Android screen orientation
+* Add better Visual Script debugger tooltips display
+* Add mouse tracking on Linux
+* Add context menu to load additional scenes quickly
+* Add auto-sizing for box colliders when they are added to the scene
+* Update `meshoptimizer` to `v0.20`
+* Optimize time service update math code
+* Remove old warnings about invalid model instance buffer
+* Replace `ImportedModelData` with `ModelData` for model importing
+* Refactor `INetworkDriver::PopEvent` to use network event as output parameter rather than raw pointer
+* Refactor objects splitting in models importing to be handled by `ModelTool` not the importer code itself
+* Refactor prefab's `objectsCache` to be explicitly `SceneObject` values
+* Refactor memory allocators to use dedicated path when moving collection data that is not blittable
+* Refactor Visual Script debugger apis to use bindings generator
+* Refactor Physics Colliders to use auto serialization
+* Fix ability in editor to delete content and source folders
+* Fix tooltip location check when wraps over the screen
+* Fix UI Dropdown size issue with large font
+* Fix selecting prefab object when object from prefab is already selected
+* Fix constant value sliders in material graphs to not be used due to shader compilations
+* Fix deadlock in `NetworkManager` when network peer returns invalid event type
+* Fix zero clamp on hinge velocity to allow negative values
+* Fix `__cplusplus` macro on MSVC and add logging C++ version used during compilation
+* Fix missing channel masking in material Scene Texture node
+* Fix missing surface graph edited flag after removing anim graph state transition
+* Fix missing output parameters conversion when calling interface implementation in scripting
+* Fix selecting objects/gizmos with high far plane
+* Fix blending additive animations
+* Fix `MissingScript` to be added only when object type exists (skip for prefab instances)
+* Fix not showing primary context menu on Visject surface if child control handled input event
+* Fix layout of editor updating when adding a script to multiple actors in a scene
+* Fix incorrect empty meshes/LODs removal after auto-lod generation
+* Fix invalid codegen for array reference passed as output parameter in scripting interface method
+* Fix incorrect pointer marshalling from `Variant` to managed runtime
+* Fix model asset thumbnail if mesh is not centered around origin
+* Fix prefab window performance with large hierarchies
+* Fix not supported dragging prefab actors between windows
+* Fix spawned prefab name after drag&drop into prefab window
+* Fix invalid BT node decorator linkage after removing it
+* Fix invalid tracy events from C# profiling api when profiler gets connected mid-event
+* Fix .NET runtime packaging with installed .NET 8 SDK
+* Fix Visual Studio build issues with C# projects when engine path has spaces
+* Fix Json serialzier regression after hot-reload
+* Fix `Swap` for non-copyable types
+* Fix swapping core collections
+* Fix project initialization with `-new` if it already exists
+* Fix calling script `OnDestroy` when removing actors or scripts from the scene
+* Fix several actor types performing default spawn behavior when spawning from a prefab
+* Fix docking windows on Linux
+* Fix importing `.dds` files `as-is`if the compressed image is too small for the engine (block size validation)
+* Fix dark outline around Screen Space Reflections alpha blending area
+* Fix default prefab instance not taking into account root position
+* Fix plugin clone and loading to wait for `git` process end properly
+* Fix managed method delegate creation to be thread-safe
+* Fix typo in `Tag` comparison function
+* Fix render target pool over-allocation when changing render resolution frequently
+* Fix deadlock in `Asset.WaitForLoaded` when loading task hangs in the loading queue for a main thread sync
+* Fix deadlock when loading block-compressed texture that is smaller than block size
+* Fix deadlock in asset thumbnails rendering queue when texture streaming fails
+* Fix various crashes
+* Fix crash in UI prefab changes apply when reparenting controls
+* Fix crash when boxing native non-POD structure into managed format
+* Fix crash when updating prefabs from async thread
+* Fix crash when spawning actor from asyc thread into the SceneObject
+* Fix crash when unloading texture that has active streaming tasks
+* Fix crash when resizing navmesh capacity with crowd created for that navmesh
+* Fix crash when drawing terrain without cached neighbor chunks
+* Fix crash in mesh LOD generator if generated mesh has more indices
+* Fix crash in Content Storage async job when someone is using file storage and access cannot be freed
+
 ### Version 1.7.6406.1 - 25 November 2023
 
 Contributors: mafiesto4, Tryibion, GoaLitiuM, mrunion, MineBill, RuanLucasGD, Tryibion, Chikinsupu, NoriteSC, Menotdan, SinnersSum, Radiangames, schmidt-florian, HydrogenC, nothingTVatYT

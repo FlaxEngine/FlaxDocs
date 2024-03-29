@@ -63,7 +63,7 @@
     "dest": "_site",
     "globalMetadata": {
       "_appTitle": "Flax Documentation",
-      "_appFooter": "Copyright © 2012-2023 Wojciech Figat",
+      "_appFooter": "Copyright © 2012-2024 Wojciech Figat",
       "_enableSearch": true,
       "_enableNewTab": true,
       "_gitUrlPattern": "github",

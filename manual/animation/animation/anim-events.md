@@ -10,7 +10,9 @@ There are 2 types of animation events:
 
 ### Multithreading
 
-By default Animation System uses the Job System to update all animated models asynchronously during game updates. This allows to greatly improve performance for scenes with a large number of objects. As a result, the animation event callbacks are invoked on job threads (the main thread is sleeping). Thus it's important to safely access other gameplay data during events to ensure it doesn't result in race conditions. In general, accessing a single Animated Model object or its scripts/children is safe as every model instance is updating its own animation only once during this async routing (you can spawn or edit objects belonging to that animated model within an event).
+**By default, events are invoked on a main thread** which makes it safe to access scene objects and modify gameplay.
+
+Animation System uses the Job System to update all animated models asynchronously during game updates. This allows to greatly improve performance for scenes with a large number of objects. As a result, the animation event callbacks can be invoked on job threads (the main thread is sleeping) if you set `Async` property of the event (eg. in constructor). Then it's important to safely access other gameplay data during events to ensure it doesn't result in race conditions. In general, accessing a single Animated Model object or its scripts/children is safe as every model instance is updating its own animation only once during this async routing (you can spawn or edit objects belonging to that animated model within an event).
 
 To learn more about multithreading see [this documentation](../../scripting/advanced/multithreading.md).
 

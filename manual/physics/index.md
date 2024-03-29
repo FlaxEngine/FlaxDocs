@@ -37,4 +37,4 @@ Using built-in physics engine helps with creating realistic behaviour for game o
 
 * [How to create a bouncing ball](tutorials/bouncing-ball.md)
 * [How to use a trigger](tutorials/use-trigger.md)
-
+* [How to play footsteps on different surfaces](tutorials/footsteps.md)

@@ -267,6 +267,7 @@
 #### [How to create scene animation from code](animation/scene-animations/tutorials/scene-anim-from-code.md)
 ## [Advanced](animation/advanced/index.md)
 ### [Root motion](animation/advanced/root-motion.md)
+### [Anim Graph Debugging](animation/advanced/anim-graph-debugging.md)
 ### [Bones debugging](animation/advanced/bones-debugging.md)
 ## [Tutorials](animation/tutorials/index.md)
 ### [How to setup animated model](animation/tutorials/setup-animated-model.md)
@@ -304,6 +305,7 @@
 ## [Controls](ui/controls/index.md)
 ### [Button](ui/controls/button.md)
 ### [CheckBox](ui/controls/checkbox.md)
+### [Slider](ui/controls/slider.md)
 ### [Image](ui/controls/image.md)
 ### [Label](ui/controls/label.md)
 ### [Dropdown](ui/controls/dropdown.md)
@@ -337,6 +339,7 @@
 ### [How to create a Main Menu](ui/tutorials/create-main-menu.md)
 ### [How to create a custom control](ui/tutorials/create-custom-control.md)
 ### [How to create UI animation in prefab](ui/tutorials/ui-prefab-animation.md)
+### [How to raycast UI](ui/tutorials/raycast-ui.md)
 
 # [Input](input/index.md)
 ## [Virtual Input](input/virtual-input.md)
@@ -396,6 +399,7 @@
 ## [Tutorials](physics/tutorials/index.md)
 ### [How to create a bouncing ball](physics/tutorials/bouncing-ball.md)
 ### [How to use a trigger](physics/tutorials/use-trigger.md)
+### [How to play footsteps on different surfaces](physics/tutorials/footsteps.md)
 
 # [Particles](particles/index.md)
 ## [Particle Emitter](particles/particle-emitter.md)
@@ -439,6 +443,7 @@
 ## [Public Projects](contributing/public-projects.md)
 
 # [Release Notes](release-notes/index.md)
+## [1.8 release notes](release-notes/1_8/index.md)
 ## [1.7 release notes](release-notes/1_7/index.md)
 ## [1.6 release notes](release-notes/1_6/index.md)
 ## [1.5 release notes](release-notes/1_5/index.md)

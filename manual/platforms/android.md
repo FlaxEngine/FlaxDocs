@@ -50,6 +50,8 @@ See *Android Platform Settings* asset.
 |--------|--------|
 | **Package Name** | The application package name (eg. `com.company.product`). Custom tokens: `${PROJECT_NAME}`, `${COMPANY_NAME}`. |
 | **Permissions** | The application permissions list (eg. `android.media.action.IMAGE_CAPTURE`). Added to the generated manifest file. |
+| **Default Orientation** | The default screen orientation. |
+| **Textures Quality** | The output textures quality (compression). |
 | **Override Icon** | Custom icon texture to use for the application (overrides the default one). |
 
 ## C\+\+ Debugging

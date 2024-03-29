@@ -26,7 +26,7 @@ You can use the *Content* window to create new settings. Simply right-click in t
 | **Product Name** | The name of your game. |
 | **Company Name** | The name of your company or organization. |
 | **Copyright Notice** | The copyright note used for content signing (eg. source code header). |
-| **Icon** | The default application icon. Can be overriden per platform. |
+| **Icon** | The default application icon. Can be overridden per platform. |
 |||
 | **FirstScene** | Reference to the first scene to load on a game startup. |
 | **No Splash Screen** | True if skip showing splash screen image on the game startup. |

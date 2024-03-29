@@ -14,8 +14,6 @@ In *Content* window, *right-click* on an asset and select **Select actors using 
 
 In *Content* window, *right-click* on an asset and select **Show asset references graph** option. It will open a window with a graph containing visual representation of assets that reference this asset and assets references by this asset. The graph deep level is constrained to 4 and it doesn't diplsay duplicates (ie. if asset A references B and C but B references C too, then C won't be displayed 2nd time).
 
-![Asset References Graph]
-
 > [!NOTE]
 > Searching for asset references can be a slow process if project is large or is located on HDD drive so be patient (loading progress is displayed in percentage).
 

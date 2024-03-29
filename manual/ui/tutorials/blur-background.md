@@ -22,7 +22,9 @@ For the newly created GUI we will use a `Blur Panel` control. To do so, select t
 
 ## 4. Adjusting the panel
 
-Now, set the **Blur Strength** to **8** for example and adjust the **bounds** of the control to cover the whole background of the interface (you can use *Dock Style* set to *Fill*).
+![UI Control Stretch All](media/ui-stretch-all.png)
+
+Now, set the **Blur Strength** to **8** for example and adjust the **bounds** of the control to cover the whole background of the interface (you can use *Anchor Presets* set to *Stretch All* with *Shift* key pressed down to update bounds).
 
 ## 5. See the results
 
