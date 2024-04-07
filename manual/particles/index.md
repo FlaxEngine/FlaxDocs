@@ -2,7 +2,7 @@
 
 ![Particles](media/title.jpg)
 
-Flax supports large-scale particles simulation and performant rendering of sprite, mesh and ribbon particles. Advanced toolset in Editor helps to create complex visual effects. Particle system allows to easily extend it and produce desire particle effects. Use this documentation section to learn how to create your particles effects to create a great visual experience.
+Flax supports large-scale particles simulation and performant rendering of sprite, mesh and ribbon particles. Advanced toolset in Editor helps to create complex visual effects. Particle system allows to easily extend it and produce desired particle effects. Use this documentation section to learn how to create your particles effects to create a great visual experience.
 
 ## Basics
 
