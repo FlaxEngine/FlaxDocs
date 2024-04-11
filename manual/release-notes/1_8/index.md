@@ -66,6 +66,7 @@ We've added font fallback for text rendering, enabling **better support for CJK 
 
 Every update brings more features and improvements to the Editor. This time we added functionalities such as:
 * Saving collapsing panels state for subgroups in the Properties panel,
+* Vertex Snapping (move gizmo with V key pressed),
 * Refreshed collection editor interface to be more streamlined ([GH-2208](https://github.com/FlaxEngine/FlaxEngine/pull/2208)),
 * SI units, such as meters, kilograms, in input fields for both displaying and parsing ([GH-2213](https://github.com/FlaxEngine/FlaxEngine/pull/2213)),
 * Quick script creation right from *Add script* button ([GH-1827](https://github.com/FlaxEngine/FlaxEngine/pull/1827)).
