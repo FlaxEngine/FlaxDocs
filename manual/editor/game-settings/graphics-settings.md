@@ -17,7 +17,6 @@ You can change most of these values at runtime using the [GraphicsQuality](https
 | **Volumetric Fog Quality** | Volumetric Fog quality setting. |
 | **Shadows Quality** | The shadows quality. |
 | **Shadow Maps Quality** | The shadow maps quality (textures resolution). |
-| **Allow CSM Blending** | If checked, enabled cascades splits blending for directional light shadows. Disable to reduce performance impact for dynamic sun shadows. |
 | **Default Probe Resolution** | Default probes cubemap resolution (use for Environment Probes, can be overridden per-actor). Recommended is default `128x128`. For mobile platforms try using a lower resolution to get more performance. |
 | **Use HDR Probes** | If checked, Environment Probes will use HDR texture format. Improves quality in very bright scenes at cost of higher memory usage. |
 |||
