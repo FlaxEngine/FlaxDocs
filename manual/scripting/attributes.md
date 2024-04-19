@@ -43,7 +43,7 @@ The following table lists the most common attributes with usage description.
 | **MultilineText** | Instructs UI editor to use multiline textbox for editing *string* property or field. |
 | **AssetReference** | Specifies a options for an asset reference picker in the editor. Allows to customize view or provide custom value assign policy. |
 | **Collection** | This attributes provides additional information on a member collection for the editor. |
-| **CustomEditor** | Overrides the default editor provided for the target object/class/field/property. Allows to extend visuals and editing experience of the object. To learn more see [Custom Editors](custom-editors/index.md) docuemntation. |
+| **CustomEditor** | Overrides the default editor provided for the target object/class/field/property. Allows to extend visuals and editing experience of the object. To learn more see [Custom Editors](custom-editors/index.md) documentation. |
 | **CustomEditorAlias** | Works the same as *CustomEditor* attribute, except uses a typename that can be located in different assembly (not referenced). |
 | **ExecuteInEditMode** | Makes a script execute in edit mode. |
 | **RequireChildActor** | Automatically adds required child actor as dependencies if not added yet. |
