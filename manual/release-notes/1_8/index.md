@@ -82,6 +82,98 @@ Every update brings more features and improvements to the Editor. This time we a
 
 ## Changelog
 
+### Version 1.8.6511.1 - 27 April 2024
+
+Contributors: mafiesto4, GoaLitiuM, Tryibion, rkrahn, Zode, xxSeys1, Menotdan, Muzz, duarteroso
+
+PRs merged: 25
+
+* Add support for importing `.exr` textures
+* Add logging and cleaning up leaked scene objects after play mode in Editor
+* Add trading minor optimizations in MSVC Development builds for compile speed
+* Add automatic restoring Anim Event tracks when reimporting animation asset
+* Add `ShowDebugDrawSkeleton` to preview Animated Model skeleton via Debug Draw
+* Add toggle orthographic view hotkey (`Numpad Decimal`)
+* Add locking actor selection in properties and prefab windows
+* Add displaying all actors in Actor toolbox search tab when no filter is applied
+* Add better anim events visuals in timeline editor
+* Add sorting search actor toolbox
+* Add `Tags.Find` utility
+* Add statically disabled tessellation on macOS/iOS
+* Add statically disabled geometry shaders on mobile
+* Add CPU profiler events for UI drawing
+* Add setter for crword agent position and velocity
+* Add option for using Address and Thread sanitizers
+* Add hiding TAA settings if TAA isn't enabled
+* Add `Time.Synchronize` to stabilize engine loop
+* Add `Engine::UpdateCount` to sync gameplay logic updates with game loop rather than draw frames
+* Add improved size of Multi Blend nodes
+* Add undo for Multi Blend points moving
+* Add context menu to Multi Blend node points
+* Add tooltips to Multi Blend points
+* Add `Ctrl` to snap points to grid in Multi Blend editor
+* Add improved visuals of points in Multi Blend
+* Add grid labels drawing to Multi Blend
+* Add live debugging of blend position in Multi Blend
+* Add add/remove buttons to Multi Blend
+* Add better `const` correctness in `Mesh` and `SkinnedMesh` api
+* Add `Write`/`Read` methods to `NetworkStream` for `INetworkSerializable` sending in C# api
+* Add more useful orientation settings to Android
+* Add exported property to activity element in `AndroidManifest.xml` template
+* Add basic Android version settings to editor
+* Optimize `DrawBatch` for faster sorting
+* Optimize draw calls sorting in opaque passes
+* Optimize TreeNode rendering
+* Optimize ActorTreeNode reparent when it's not collapsed but one of the parents is
+* Optimize Anim Graph node size and remove limit of max `64` state transitions
+* Refactor engine loop to have better sync between game update, physics and drawing
+* Refactor `UpdateGraph` to run after engine services and game scripts
+* Refactor Visject Graph nodes data for unlimited size
+* Refactor Multi Blend nodes to support up to `255` blend points
+* Update `DirectXTex` to `mar2024`
+* Change default collision type to `ConvexMesh` from `TriangleMesh`
+* Fix default diffuse color value when importing material
+* Fix Editor viewport aspect ratio scaling to be removed from camera mouse movement
+* Fix numpad enter to normal enter on Linux
+* Fix Two Bone IK to have correct bone roll
+* Fix blend shapes transformation applying
+* Fix blend shapes normals usage
+* Fix blending nested animations to properly handle it per-node
+* Fix nested animations sampling
+* Fix animated model skinning precision issues
+* Fix errors on using spline editor in Prefab window
+* Fix error when applying prefab changes with Spline
+* Fix deselecting actors when using camera orbiting in viewport after releasing LMB when Alt is up
+* Fix text underline being in wrong spot on different DPIs
+* Fix particle emitter creation from templates
+* Fix various bugs in code detected with address/thread sanitizers
+* Fix `EyeAdaptation` bug to flash on play mode start in Editor when time gets reset
+* Fix heightfield not saved when editing splatmap of terrain with physical materials in use
+* Fix editor toolstrip by moving game cooking and building to the right for less missclicks
+* Fix panning Visject Surface with middle mouse button (right button does it) to prevent missed connections removals
+* Fix Debug Log scrolling when many entries are added at once
+* Fix cloning value utility for object references
+* Fix missing UI Control preview when changing UI Widget type
+* Fix surface node context menu to not show when moving surface
+* Fix margins issues in context menus
+* Fix `FindRandomPointAroundCircle` to always find a valid point on a NavMesh in the radius
+* Fix NavMesh to initialize earlier and prevent issues with crowd agents on a scene
+* Fix .NET runtime validity checks with daily runtime builds
+* Fix `CachedAttributeGetter` holding references to collectible types
+* Fix to release Prefab assets when unloading Scripting service
+* Fix freeze when selecting ModelPrefab referencing a removed asset
+* Fix terrain heightmap to use higher range format when decompressed
+* Fix bug in `ValueContainer.HasDifferentTypes` causing incorrect editor setup
+* Fix model tool importing to use temp file only for Assimp
+* Fix deadlock when parsing invalid HTML text in `RichTextBox`
+* Fix crash on prefab preview with lightmap in use
+* Fix crash when accessing physics objects state in `OnLateFixedUpdate`
+* Fix crash when resizing window on Vulkan
+* Fix crash when removing Anim Event visual script that is used in opened Animation timeline
+* Fix crash when using old `Blend with Mask` node in Anim Graph
+* Fix crash when playing uninitialized audio source
+* Fix crash when reimporting animation with translation set
+
 ### Version 1.8.6510.0 - 29 March 2024
 
 Contributors: mafiesto4, Tryibion, stefnotch, abrasivetroop, Withaust, MineBill, z1dev, GoaLitiuM, NoriteSC, Menotdan, nothingTVatYT, plemsoft, GasimoCodes, whocares77, RuanLucasGD, envision3d, Tesla-J, Chikinsupu, rkrahn, dustytrailsdev, cNori, lifeformed
