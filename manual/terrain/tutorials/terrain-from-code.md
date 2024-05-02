@@ -32,7 +32,6 @@ public class TerrainFromCode : Script
         _terrain.HideFlags = HideFlags.DontSave;
         _terrain.Name = "My Terrain";
         _terrain.Setup();
-        _terrain.Parent = Actor;
 
         // Generate terrain using the async task to prevent game stalls
         // You can also use C# thread to perform this work
@@ -66,6 +65,9 @@ public class TerrainFromCode : Script
                 _terrain.SetupPatchHeightMap(ref patchCoord, heightmap, null, true);
             }
         }
+
+        // Spawn terrain to the scene on a main-thread (safe)
+        Scripting.InvokeOnUpdate(() => _terrain.Parent = Actor);
     }
 }
 ```
