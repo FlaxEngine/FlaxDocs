@@ -41,8 +41,8 @@ Follow these instructions to make your game development more robust!
 </div>
 
 <div class="frontpage-section">
-<a href="advanced/index.md"><img src="flax-build/media/icon.jpg"></a>
-<h3><a href="advanced/index.md">Flax.Build</a></h3>
+<a href="flax-build/index.md"><img src="flax-build/media/icon.jpg"></a>
+<h3><a href="flax-build/index.md">Flax.Build</a></h3>
 <p>Build your game like a pro.</p>
 </div>
 
