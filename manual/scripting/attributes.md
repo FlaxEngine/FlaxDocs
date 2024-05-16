@@ -53,6 +53,7 @@ The following table lists the most common attributes with usage description.
 | **DefaultValue** | Can be used to specify the default value for the field or the property. The editor will highlight the modified properties and add an option to restore value to default. You can use it on basic types like: `[DefaultValue(3.14f)] public float MyValue;` or on complex types: `[DefaultValue(typeof(Vector2), "1,2")] public Vector2 StartPosition;`. |
 | **ReadOnly** | Properties and fields marked with this attribute won't be editable in the inspector. This allows to show object proeprties values in the editor but without option to modify the value which can be handy in some cases. |
 | **Category** | Describes the category name for a type. Can be used to group script, asset or actor types for editor pickers to organize types. |
+| **Watermark** | Adds a watermark to a string textbox in the editor field. |
 
 ## Script execution in editor
 
