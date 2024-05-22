@@ -82,6 +82,68 @@ Every update brings more features and improvements to the Editor. This time we a
 
 ## Changelog
 
+### Version 1.8.6512.2 - 22 May 2024
+
+Contributors: mafiesto4, GoaLitiuM, Tryibion, Harloys, tecnessino
+
+PRs merged: 35
+
+* Add watermark attribute to add watermark to string fields in editor
+* Add removing selected blend space point with `Delete` key
+* Add margin to item tree in toolbox
+* Add shift scroll for panels and textbox
+* Add control transform to `General` group for better usability
+* Add trimming content item name and actor name on rename to prevent dangling whitespace
+* Add drag drop controls to Actor Toolbox
+* Add font and case options to Label and Textbox
+* Add color properties to Panel's scroll bars
+* Add width padding for tooltip text
+* Add tree node guidelines for Editor hierarchies
+* Add checkerboard background to color picker dialog color
+* Add support for adding script via drag drop on actor
+* Add minor improvements to UI Editor widget drawing
+* Add better error messages to `NetworkReplicator::SetObjectOwnership` for incorrect usage
+* Add layer masking for `PostFxVolume` against Camera's `RenderLayersMask`
+* Add `OnStaticFlagsChanged` to Actor
+* Add Gameplay Global combobox to default to the last type of variable
+* Add `For Distribution` to be enabled by default in `Release` builds
+* Add Windows on Arm build support for PhysX and NvCloth libs
+* Add test case of nested types in scripting
+* Add option to move all selected UI Controls while holding `Shift` key
+* Optimize navmesh building and reduce scene lock time
+* Rename `Options` to `Editor Options` and move under `Edit` menu
+* Refactor `Color.FromRGBA` and add matching old logic `Color.FromARGB`
+* Fix looping root motion
+* Fix error when using undo after removing Multi Blend node
+* Fix odd offset between 1st property and property label
+* Fix empty layers to be ignored by LayerMask Editor
+* Fix TreeNode not rendering all nodes properly with invisible children
+* Fix editor to focus prefab window on item spawn
+* Fix textbox caret not showing on empty string
+* Fix caret location on text box with no text
+* Fix drawing an extra character with `Render2D.DrawText`
+* Fix actor type drag spawn to correctly assign parent
+* Fix editor game window focus while cursor is not visible
+* Fix smooth step visject node width
+* Fix color picker dialog
+* Fix item search to clear on select prefab
+* Fix incorrect `async` methods used as RPCs (not supported now)
+* Fix `ReadOnly` attribute handling in collection editors
+* Fix UI navigation when using multiple canvases
+* Fix TAA in editors debug view modes
+* Fix compilation warnings when using 64-bit coords
+* Fix compilation when using non-strongly typed enum as default value
+* Fix Editor not launching if custom interface fonts are missing
+* Fix creating virtual terrain collision of actor that is not in a game
+* Fix missing camera model preview in Prefab viewport
+* Fix missing curve initialization when loading from json
+* Fix windows cursor to force show or hide based on cursor hidden value
+* Fix bindings code generation for nested types
+* Fix deadlock between content storage and asset that is being updated during load
+* Fix crash when using scripting object as interface implementation in object property displayed in Editor
+* Fix crash when unboxing of array type Variant
+* Fix crash when Visual Script event binding instance is invalid
+
 ### Version 1.8.6511.1 - 27 April 2024
 
 Contributors: mafiesto4, GoaLitiuM, Tryibion, rkrahn, Zode, xxSeys1, Menotdan, Muzz, duarteroso
