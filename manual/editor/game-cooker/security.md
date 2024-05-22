@@ -14,14 +14,14 @@ During game cooking, all assets used by the game are collected, processed, and p
 
 ### Binary Assets
 
-Binary assets (`BinaryAsset`) in most cases are packaged as-it-is after processing. This depends on the asset type, for instance:
+Binary assets (`BinaryAsset`) are usually packaged as-it-is after processing. This depends on the asset type, for instance:
 * **textures** can be converted into the other format for some platforms (eg. Android) or down-scaled based on the [texture groups settings](../../graphics/textures/texture-groups.md),
 * **shaders** are pre-compiled thus no shader source code is even deployed (no runtime shaders compilation),
 * **materials, particle emitters** are precompiled into destination platform shader bytecode (shader source code is removed).
 
 ### Json Assets
 
-Json assets (`JsonAssetBase`) by default are compressed using *LZ4* algorithm (internally) and stored in compressed format. At runtime content system automatically decompressed data and parsed the Json for further processing (eg. settings loading or scene deserialization). This reduces built game size (compressed text weights far less) and improves gaming performance (fewer data to read from a drive, data is decompressed in memory).
+Json assets (`JsonAssetBase`) are compressed using *LZ4* algorithm (internally) and stored in compressed format. At runtime data is automatically decompressed and parsed into the Json for further processing (eg. settings loading or scene deserialization). This reduces the built game size (compressed text weights far less) and improves game performance (less data to read from a drive, data is compressed in memory).
 
 ### Custom Assets
 

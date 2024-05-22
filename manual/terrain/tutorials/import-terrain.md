@@ -6,7 +6,7 @@ In this tutorial, you will learn how to generate a terrain from a heightmap text
 
 Firstly you will need to import a heightmap texture to your project. You can follow [those instructions](../../graphics/textures/index.md) to learn how to do it.
 
-When importing `.RAW` files importer will hint to use *HdrRGBA* format without compression which gives better quality to terrain (also, RAW files needs to have the square size). If you import grayscale heightmap please ensure to use HDR format as well and disable compression to reduce artifacts in the generated terrain. You heightmap after importing won't be used by the engine so don't lock yourself to a certain resolution.
+When importing `.RAW` or `.EXR` files importer will hint to use *HdrRGBA* format without compression which gives better quality to terrain (also, RAW files needs to have the square size). If you import grayscale heightmap please ensure to use HDR format as well and disable compression to reduce artifacts in the generated terrain. You heightmap after importing won't be used by the engine so don't lock yourself to a certain resolution.
 
 Flax supports **any heightmap size** as a heightmap.
 

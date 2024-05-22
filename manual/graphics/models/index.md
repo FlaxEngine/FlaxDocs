@@ -25,9 +25,11 @@ By enabling **Use Dithered LOD Transition** option on model materials you can us
 
 In some cases, eg. during cut-scenes it may be required to increase the visual quality of the scene and ignore the lower LODs. To achieve this you can apply the Model LOD Bias per view using the following C# code:
 
-``
-MainRenderTask.Instance.View.ModelLODBias = 2;
-``
+```cs
+var view = MainRenderTask.Instance.View;
+view.ModelLODBias = 2;
+MainRenderTask.Instance.View = view;
+```
 
 or adjusting it per model instance using **LOD Bias** and **Forced LOD** properties.
 

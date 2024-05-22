@@ -43,7 +43,7 @@ The following table lists the most common attributes with usage description.
 | **MultilineText** | Instructs UI editor to use multiline textbox for editing *string* property or field. |
 | **AssetReference** | Specifies a options for an asset reference picker in the editor. Allows to customize view or provide custom value assign policy. |
 | **Collection** | This attributes provides additional information on a member collection for the editor. |
-| **CustomEditor** | Overrides the default editor provided for the target object/class/field/property. Allows to extend visuals and editing experience of the object. To learn more see [Custom Editors](custom-editors/index.md) docuemntation. |
+| **CustomEditor** | Overrides the default editor provided for the target object/class/field/property. Allows to extend visuals and editing experience of the object. To learn more see [Custom Editors](custom-editors/index.md) documentation. |
 | **CustomEditorAlias** | Works the same as *CustomEditor* attribute, except uses a typename that can be located in different assembly (not referenced). |
 | **ExecuteInEditMode** | Makes a script execute in edit mode. |
 | **RequireChildActor** | Automatically adds required child actor as dependencies if not added yet. |
@@ -53,6 +53,7 @@ The following table lists the most common attributes with usage description.
 | **DefaultValue** | Can be used to specify the default value for the field or the property. The editor will highlight the modified properties and add an option to restore value to default. You can use it on basic types like: `[DefaultValue(3.14f)] public float MyValue;` or on complex types: `[DefaultValue(typeof(Vector2), "1,2")] public Vector2 StartPosition;`. |
 | **ReadOnly** | Properties and fields marked with this attribute won't be editable in the inspector. This allows to show object proeprties values in the editor but without option to modify the value which can be handy in some cases. |
 | **Category** | Describes the category name for a type. Can be used to group script, asset or actor types for editor pickers to organize types. |
+| **Watermark** | Adds a watermark to a string textbox in the editor field. |
 
 ## Script execution in editor
 

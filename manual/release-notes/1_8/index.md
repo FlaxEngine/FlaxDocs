@@ -82,6 +82,160 @@ Every update brings more features and improvements to the Editor. This time we a
 
 ## Changelog
 
+### Version 1.8.6512.2 - 22 May 2024
+
+Contributors: mafiesto4, GoaLitiuM, Tryibion, Harloys, tecnessino
+
+PRs merged: 35
+
+* Add watermark attribute to add watermark to string fields in editor
+* Add removing selected blend space point with `Delete` key
+* Add margin to item tree in toolbox
+* Add shift scroll for panels and textbox
+* Add control transform to `General` group for better usability
+* Add trimming content item name and actor name on rename to prevent dangling whitespace
+* Add drag drop controls to Actor Toolbox
+* Add font and case options to Label and Textbox
+* Add color properties to Panel's scroll bars
+* Add width padding for tooltip text
+* Add tree node guidelines for Editor hierarchies
+* Add checkerboard background to color picker dialog color
+* Add support for adding script via drag drop on actor
+* Add minor improvements to UI Editor widget drawing
+* Add better error messages to `NetworkReplicator::SetObjectOwnership` for incorrect usage
+* Add layer masking for `PostFxVolume` against Camera's `RenderLayersMask`
+* Add `OnStaticFlagsChanged` to Actor
+* Add Gameplay Global combobox to default to the last type of variable
+* Add `For Distribution` to be enabled by default in `Release` builds
+* Add Windows on Arm build support for PhysX and NvCloth libs
+* Add test case of nested types in scripting
+* Add option to move all selected UI Controls while holding `Shift` key
+* Optimize navmesh building and reduce scene lock time
+* Rename `Options` to `Editor Options` and move under `Edit` menu
+* Refactor `Color.FromRGBA` and add matching old logic `Color.FromARGB`
+* Fix looping root motion
+* Fix error when using undo after removing Multi Blend node
+* Fix odd offset between 1st property and property label
+* Fix empty layers to be ignored by LayerMask Editor
+* Fix TreeNode not rendering all nodes properly with invisible children
+* Fix editor to focus prefab window on item spawn
+* Fix textbox caret not showing on empty string
+* Fix caret location on text box with no text
+* Fix drawing an extra character with `Render2D.DrawText`
+* Fix actor type drag spawn to correctly assign parent
+* Fix editor game window focus while cursor is not visible
+* Fix smooth step visject node width
+* Fix color picker dialog
+* Fix item search to clear on select prefab
+* Fix incorrect `async` methods used as RPCs (not supported now)
+* Fix `ReadOnly` attribute handling in collection editors
+* Fix UI navigation when using multiple canvases
+* Fix TAA in editors debug view modes
+* Fix compilation warnings when using 64-bit coords
+* Fix compilation when using non-strongly typed enum as default value
+* Fix Editor not launching if custom interface fonts are missing
+* Fix creating virtual terrain collision of actor that is not in a game
+* Fix missing camera model preview in Prefab viewport
+* Fix missing curve initialization when loading from json
+* Fix windows cursor to force show or hide based on cursor hidden value
+* Fix bindings code generation for nested types
+* Fix deadlock between content storage and asset that is being updated during load
+* Fix crash when using scripting object as interface implementation in object property displayed in Editor
+* Fix crash when unboxing of array type Variant
+* Fix crash when Visual Script event binding instance is invalid
+
+### Version 1.8.6511.1 - 27 April 2024
+
+Contributors: mafiesto4, GoaLitiuM, Tryibion, rkrahn, Zode, xxSeys1, Menotdan, Muzz, duarteroso
+
+PRs merged: 25
+
+* Add support for importing `.exr` textures
+* Add logging and cleaning up leaked scene objects after play mode in Editor
+* Add trading minor optimizations in MSVC Development builds for compile speed
+* Add automatic restoring Anim Event tracks when reimporting animation asset
+* Add `ShowDebugDrawSkeleton` to preview Animated Model skeleton via Debug Draw
+* Add toggle orthographic view hotkey (`Numpad Decimal`)
+* Add locking actor selection in properties and prefab windows
+* Add displaying all actors in Actor toolbox search tab when no filter is applied
+* Add better anim events visuals in timeline editor
+* Add sorting search actor toolbox
+* Add `Tags.Find` utility
+* Add statically disabled tessellation on macOS/iOS
+* Add statically disabled geometry shaders on mobile
+* Add CPU profiler events for UI drawing
+* Add setter for crword agent position and velocity
+* Add option for using Address and Thread sanitizers
+* Add hiding TAA settings if TAA isn't enabled
+* Add `Time.Synchronize` to stabilize engine loop
+* Add `Engine::UpdateCount` to sync gameplay logic updates with game loop rather than draw frames
+* Add improved size of Multi Blend nodes
+* Add undo for Multi Blend points moving
+* Add context menu to Multi Blend node points
+* Add tooltips to Multi Blend points
+* Add `Ctrl` to snap points to grid in Multi Blend editor
+* Add improved visuals of points in Multi Blend
+* Add grid labels drawing to Multi Blend
+* Add live debugging of blend position in Multi Blend
+* Add add/remove buttons to Multi Blend
+* Add better `const` correctness in `Mesh` and `SkinnedMesh` api
+* Add `Write`/`Read` methods to `NetworkStream` for `INetworkSerializable` sending in C# api
+* Add more useful orientation settings to Android
+* Add exported property to activity element in `AndroidManifest.xml` template
+* Add basic Android version settings to editor
+* Optimize `DrawBatch` for faster sorting
+* Optimize draw calls sorting in opaque passes
+* Optimize TreeNode rendering
+* Optimize ActorTreeNode reparent when it's not collapsed but one of the parents is
+* Optimize Anim Graph node size and remove limit of max `64` state transitions
+* Refactor engine loop to have better sync between game update, physics and drawing
+* Refactor `UpdateGraph` to run after engine services and game scripts
+* Refactor Visject Graph nodes data for unlimited size
+* Refactor Multi Blend nodes to support up to `255` blend points
+* Update `DirectXTex` to `mar2024`
+* Change default collision type to `ConvexMesh` from `TriangleMesh`
+* Fix default diffuse color value when importing material
+* Fix Editor viewport aspect ratio scaling to be removed from camera mouse movement
+* Fix numpad enter to normal enter on Linux
+* Fix Two Bone IK to have correct bone roll
+* Fix blend shapes transformation applying
+* Fix blend shapes normals usage
+* Fix blending nested animations to properly handle it per-node
+* Fix nested animations sampling
+* Fix animated model skinning precision issues
+* Fix errors on using spline editor in Prefab window
+* Fix error when applying prefab changes with Spline
+* Fix deselecting actors when using camera orbiting in viewport after releasing LMB when Alt is up
+* Fix text underline being in wrong spot on different DPIs
+* Fix particle emitter creation from templates
+* Fix various bugs in code detected with address/thread sanitizers
+* Fix `EyeAdaptation` bug to flash on play mode start in Editor when time gets reset
+* Fix heightfield not saved when editing splatmap of terrain with physical materials in use
+* Fix editor toolstrip by moving game cooking and building to the right for less missclicks
+* Fix panning Visject Surface with middle mouse button (right button does it) to prevent missed connections removals
+* Fix Debug Log scrolling when many entries are added at once
+* Fix cloning value utility for object references
+* Fix missing UI Control preview when changing UI Widget type
+* Fix surface node context menu to not show when moving surface
+* Fix margins issues in context menus
+* Fix `FindRandomPointAroundCircle` to always find a valid point on a NavMesh in the radius
+* Fix NavMesh to initialize earlier and prevent issues with crowd agents on a scene
+* Fix .NET runtime validity checks with daily runtime builds
+* Fix `CachedAttributeGetter` holding references to collectible types
+* Fix to release Prefab assets when unloading Scripting service
+* Fix freeze when selecting ModelPrefab referencing a removed asset
+* Fix terrain heightmap to use higher range format when decompressed
+* Fix bug in `ValueContainer.HasDifferentTypes` causing incorrect editor setup
+* Fix model tool importing to use temp file only for Assimp
+* Fix deadlock when parsing invalid HTML text in `RichTextBox`
+* Fix crash on prefab preview with lightmap in use
+* Fix crash when accessing physics objects state in `OnLateFixedUpdate`
+* Fix crash when resizing window on Vulkan
+* Fix crash when removing Anim Event visual script that is used in opened Animation timeline
+* Fix crash when using old `Blend with Mask` node in Anim Graph
+* Fix crash when playing uninitialized audio source
+* Fix crash when reimporting animation with translation set
+
 ### Version 1.8.6510.0 - 29 March 2024
 
 Contributors: mafiesto4, Tryibion, stefnotch, abrasivetroop, Withaust, MineBill, z1dev, GoaLitiuM, NoriteSC, Menotdan, nothingTVatYT, plemsoft, GasimoCodes, whocares77, RuanLucasGD, envision3d, Tesla-J, Chikinsupu, rkrahn, dustytrailsdev, cNori, lifeformed

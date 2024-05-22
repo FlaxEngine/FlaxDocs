@@ -49,6 +49,9 @@ See *Android Platform Settings* asset.
 | Property | Description |
 |--------|--------|
 | **Package Name** | The application package name (eg. `com.company.product`). Custom tokens: `${PROJECT_NAME}`, `${COMPANY_NAME}`. |
+| **Version Code** | The application version code (eg. 1, 12, 123). |
+| **Minimum API Level** | The minimum Android API level (eg. 20, 28, 34). |
+| **Target API Level** | The target Android API level (eg. 20, 28, 34). |
 | **Permissions** | The application permissions list (eg. `android.media.action.IMAGE_CAPTURE`). Added to the generated manifest file. |
 | **Default Orientation** | The default screen orientation. |
 | **Textures Quality** | The output textures quality (compression). |
