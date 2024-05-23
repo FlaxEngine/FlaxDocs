@@ -30,5 +30,6 @@ This section explains all you need to know about working with the materials pipe
 * [Fog effects](fog-effects/index.md)
 * [Post effects](post-effects/index.md)
 * [Shaders](shaders/index.md)
+* [Video](video/index.md)
 * [Debugging tools](debugging-tools/index.md)
 * [Tutorials](tutorials/index.md)

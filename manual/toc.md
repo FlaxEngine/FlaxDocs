@@ -153,6 +153,7 @@
 ### [Custom Geometry Drawing](graphics/shaders/custom-geometry-drawing.md)
 ### [Custom Compute Shader](graphics/shaders/custom-compute-shader.md)
 ### [Graphics API](graphics/shaders/graphics-api.md)
+## [Video](graphics/video/index.md)
 ## [Debugging tools](graphics/debugging-tools/index.md)
 ### [Debug View](graphics/debugging-tools/debug-view.md)
 ### [View Flags](graphics/debugging-tools/view-flags.md)
