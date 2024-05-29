@@ -14,11 +14,12 @@
 A model asset can contain an SDF texture baked for the meshes which can be created in the Model Window. It displays the resolution and GPU memory usage of the baked texture. You can adjust the bake options and *Rebuild* or *Remove* the data.
 
 > [!Warning]
-> Calculating an SDF texture is a very computationally expensive process and Flax uses the Job System to schedule asynchronious calculations which might *freeze the computer*.
+> Calculating an SDF texture is a very computationally expensive process and Flax uses the GPU or Job System to schedule asynchronious calculations which might *freeze the computer*.
 
 | Option | Description |
 |--------|--------|
 | **Resolution Scale** | The SDF texture resolution scale used for building the texture. Higher values drastically increase memory usage and computation time but increase the quality of the mesh representation. |
+| **Bake on GPU** | If checked, SDF generation will be calculated using GPU on Compute Shader, otherwise CPU will use Job System. GPU generation is fast but result in artifacts in various meshes (eg. foliage). |
 | **Backfaces Threshold** | Custom threshold (in the range `0-1`) for adjusting mesh internals detection based on the percentage of test rays hitting triangle backfaces. Use lower values for more dense meshes. |
 | **LOD Index** | Index of the model Level of Detail to use for SDF data building. By default the lowest quality LOD is used for fast building. |
 
