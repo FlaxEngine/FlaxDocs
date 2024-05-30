@@ -44,6 +44,8 @@ After selecting a prefab instance the *Properties Window* shows two additional b
 
 The **Select Prefab** button shows the linked prefab asset location in the *Content Window* and selects it.
 
+The **Edit Prefab** button opens the selected prefab in a new *Prefab editor*.
+
 The **View Changes** button shows a popup with any modified actor and scripts properties compared to the prefab. It is used to see all the changes applied to the prefab instance and allows them to be reverted or applied to the prefab. The picture below shows the content of a sample prefab changes popup. You can right click on the modified tree nodes to revert the per-property change while keeping other modification unchanged.
 
 ![Prefab Instance Diff Popup](media/prefab-instance-diff-popup.png)
