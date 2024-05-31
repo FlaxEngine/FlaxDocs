@@ -21,6 +21,7 @@ You can change most of these values at runtime using the [GraphicsQuality](https
 | **Use HDR Probes** | If checked, Environment Probes will use HDR texture format. Improves quality in very bright scenes at cost of higher memory usage. |
 |||
 | **Enable Global SDF** | If checked, enables Global SDF rendering. This can be used in materials, shaders, and particles. |
+| **Global SDF Distance** | Draw distance of the Global SDF. Actual value can be large when using DDGI. |
 | **Global SDF Quality** | The Global SDF quality. Controls the volume texture resolution and amount of cascades to use. |
 | **Generate SDF On Model Import** | If checked, the `Generate SDF` option will be checked on model import options by default. Use it if your project uses Global SDF (eg. for Global Illumination or particles). |
 |||
