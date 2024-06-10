@@ -74,10 +74,12 @@ namespace Serialization
     inline void Serialize(ISerializable::SerializeStream& stream, const MyCustomNativeData& v, const void* otherObj)
     {
         // Populate stream with the struct data
+        stream.StartObject();
         stream.JKEY("Direction");
         Serialize(stream, v.Direction, nullptr);
         stream.JKEY("Length");
         Serialize(stream, v.Length, nullptr);
+        stream.EndObject();
     }
     inline void Deserialize(ISerializable::DeserializeStream& stream, MyCustomNativeData& v, ISerializeModifier* modifier)
     {
