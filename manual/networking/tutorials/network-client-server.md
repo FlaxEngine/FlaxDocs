@@ -22,7 +22,7 @@ public class ServerScript : Script
     {
         _server = NetworkPeer.CreatePeer(new NetworkConfig
         {
-            NetworkDriverType = NetworkDriverType.ENet,
+            NetworkDriver = new ENetDriver(),
             ConnectionsLimit = 8,
             MessagePoolSize = 1024,
             MessageSize = 1400,
@@ -67,7 +67,7 @@ public class ClientScript : Script
     {
         _client = NetworkPeer.CreatePeer(new NetworkConfig
         {
-            NetworkDriverType = NetworkDriverType.ENet,
+            NetworkDriver = new ENetDriver(),
             ConnectionsLimit = 32,
             MessagePoolSize = 256,
             MessageSize = 1400,
