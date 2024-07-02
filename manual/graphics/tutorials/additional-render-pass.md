@@ -1,4 +1,4 @@
-# Additional render pass
+# HOWTO: Write additional render pass
 
 In this tutorial you will learn how to inject a custom render pass into the pipeline. This technique is widely adopted in a lot of custom effects. This tutorial will implement a Toon-style outline by the method of back face fattening, which requires an additional outline pass after the opaque object is rendered. 
 
@@ -26,7 +26,6 @@ namespace Game;
 /// </summary>
 public class OutlineRenderer : PostProcessEffect
 {
-
     private Material _material;
     private Model _model;
 
@@ -42,10 +41,12 @@ public class OutlineRenderer : PostProcessEffect
         }
     }
 
+    /// <inheritdoc />
     public override unsafe void OnEnable()
     {
         // This postfx overdraws the input buffer without using output
         UseSingleTarget = true; 
+
         // Custom draw location in a pipeline, before forward pass so that the draw call could be executed together with other forward draw calls
         Location = PostProcessEffectLocation.BeforeForwardPass; 
 
@@ -58,17 +59,20 @@ public class OutlineRenderer : PostProcessEffect
         SceneRenderTask.AddGlobalCustomPostFx(this);
     }
 
+    /// <inheritdoc />
     public override void OnDisable()
     {
         // Remember to unregister from events and release created resources (it's gamedev, not webdev)
         SceneRenderTask.RemoveGlobalCustomPostFx(this);
     }
 
+    /// <inheritdoc />
     public override bool CanRender()
     {
         return base.CanRender() && _material;
     }
 
+    /// <inheritdoc />
     public override unsafe void Render(GPUContext context, ref RenderContext renderContext, GPUTexture input, GPUTexture output)
     {
         // Second pass: draw the model with the outline material

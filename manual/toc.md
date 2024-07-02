@@ -158,6 +158,7 @@
 ### [View Flags](graphics/debugging-tools/view-flags.md)
 ## [Tutorials](graphics/tutorials/index.md)
 ### [How to render object outline](graphics/tutorials/render-object-outline.md)
+### [How to write additional render pass](graphics/tutorials/additional-render-pass.md)
 ### [How to render FPS weapon](graphics/tutorials/render-fps-weapon.md)
 ### [How to use anisotropic texture sampler](graphics/tutorials/anisotropic-texture-sampler.md)
 ### [How to use dynamic texture](graphics/tutorials/use-dynamic-texture.md)
