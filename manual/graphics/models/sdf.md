@@ -86,8 +86,8 @@ GlobalSDFData GlobalSDF;
 META_CB_END
 
 // Provide shader resources with GlobalSDF texture and low-res mip
-Texture3D<float> GlobalSDFTex : register(t0);
-Texture3D<float> GlobalSDFMip : register(t1);
+Texture3D<snorm float> GlobalSDFTex : register(t0);
+Texture3D<snorm float> GlobalSDFMip : register(t1);
 
 float TestSampleSDF(float3 worldPosition)
 {
