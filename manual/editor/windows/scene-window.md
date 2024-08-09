@@ -19,6 +19,26 @@ You can select and drag an actor or selection of actors to reorder and reparent 
 Using **right-click** will display the context menu for the selected actor node. 
 This will allow you to copy, paste, cut, duplicate, delete and add new actors.
 
+## Searching
+
+By typing in the search bar of the **Scene Window**, Actors can be filtered by name.
+
+### Additional Search Filters
+
+Filters are not case sensitive and can be used together seperated by a `,`.
+
+| Filter | Action |
+|-------|-------|
+| **a:** | Search for Actor by type |
+| **s:** | Search for Actor by attached Script type |
+
+### Examples
+
+- Typing `a:CharacterController` will find all Actors in the scene that are of Actor type **CharacterController**.
+- Typing `s:NetworkTransform` will find all of the Actors in the scene that have the Script **NetworkTransform** attached.
+- Typing `a:CharacterController, s:NetworkTransform` will find all of the Actors in the scene that are of type **CharacterController** and have the **NetworkTransform** script attached.
+- Typing `Tom, a:CharacterController, s:NetworkTransform` will find all of the Actors in the scene that are of type **CharacterController**, have the **NetworkTransform** script attached, and have the name of `Tom`.
+
 ## Shortcuts
 
 | Control | Action |
