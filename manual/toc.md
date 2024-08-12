@@ -59,6 +59,7 @@
 ## [Flax.Build](editor/flax-build/index.md)
 ### [API Tags](editor/flax-build/api-tags.md)
 ### [Plugins](editor/flax-build/plugins.md)
+### [Guide](editor/flax-build/guide.md)
 ## [Editor Options](editor/options/index.md)
 ## [Profiling](editor/profiling/index.md)
 ### [Profiler](editor/profiling/profiler.md)
