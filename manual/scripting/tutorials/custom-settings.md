@@ -86,7 +86,7 @@ API_CLASS() class GAME_API MySettings : public SettingsBase
 {
     API_AUTO_SERIALIZATION();
     DECLARE_SCRIPTING_TYPE_NO_SPAWN(SettingsBase);
-    DECLARE_SETTINGS_GETTER(SettingsBase);
+    DECLARE_SETTINGS_GETTER(MySettings);
 public:
     // The custom option.
     API_FIELD() String Text;
@@ -94,6 +94,9 @@ public:
 
 // .cpp
 #include "MySettings.h"
+#include "Engine/Core/Config/GameSettings.h"
+#include "Engine/Content/Content.h"
+#include "Engine/Content/JsonAsset.h"
 
 IMPLEMENT_GAME_SETTINGS_GETTER(MySettings, "MySettings");
 ```
