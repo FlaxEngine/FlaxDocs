@@ -26,7 +26,7 @@ The main repository [Flax Engine](https://github.com/FlaxEngine/FlaxEngine) cont
 
 The repository available on GitHub is a mirror of our internal Git repository hosted on [https://gitlab.flaxengine.com/flax/flaxengine](https://gitlab.flaxengine.com/flax/flaxengine) (mirror updated every 5 minutes). We use our internal LFS server for large binary file hosting. The repository contains an `.lfsconfig` file for LFS to work properly but if you encounter issues when pushing changes on your fork try using `git push --no-verify` or migrate to your own LFS server.
 
-If you want to open the Flax Engine in Visual Studio you might need to install the [Flax Engine Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=Flax.FlaxVS) extension.
+If you want to open the Flax Engine in Visual Studio you might need to install the [Flax Engine Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=Flax.FlaxVS) extension (Not needed for Version 1.6 and higher).
 
 ### Flax Docs
 
