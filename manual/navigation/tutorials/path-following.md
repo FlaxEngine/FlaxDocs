@@ -65,9 +65,9 @@ public class Agent007 : Script
 
             // Move the start/end points to navmesh floor
             if (_path.Length != 0)
-                Navigation.ProjectPoint(_path[0], out _path[0]);
+                Navigation.FindClosestPoint(_path[0], out _path[0]);
             if (_path.Length > 1)
-                Navigation.ProjectPoint(_path[_path.Length - 1], out _path[_path.Length - 1]);
+                Navigation.FindClosestPoint(_path[_path.Length - 1], out _path[_path.Length - 1]);
 
             // Compute path length
             for (int i = 1; i < _path.Length; i++)
