@@ -30,10 +30,15 @@ You can also use the [InputEvent](https://docs.flaxengine.com/api/FlaxEngine.Inp
 public InputEvent FireEvent = new InputEvent("Fire");
 public InputAxis MouseX = new InputAxis("MouseX");
 
-public MyScript()
+public OnStart()
 {
 	// Register for input action event
 	FireEvent.Pressed += ShootBall;
+}
+
+private void ShootBall()
+{
+	Debug.Log("Shooting Ball");
 }
 
 public override void OnUpdate()
@@ -45,6 +50,9 @@ public override void OnUpdate()
 
 public override void OnDestroy()
 {
+	// Deregister from input action event
+	FireEvent.Pressed -= ShootBall;
+
 	// Remember to dispose the action object (it holds reference to your methods)
 	FireEvent.Dispose();
 	MouseX.Dispose();
