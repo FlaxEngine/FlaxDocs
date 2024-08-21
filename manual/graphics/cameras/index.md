@@ -42,6 +42,7 @@ To learn more about the C# scripting API see the [Camera](http://docs.flaxengine
 | **Near Plane** | The nearest point the camera can see (near clipping plane). |
 | **Far Plane** | The furthest point the camera can see (far clipping plane). |
 | **Custom Aspect Ratio** | Custom aspect ratio you specify. Otherwise, automatically adjust the aspect ratio to the render target ratio. Use value 0 to disable it. |
+| **Orthographic Size** | The orthographic projection view height (width is based on the aspect ratio). Use `0` for size to be based on the viewport size. |
 | **Orthographic Scale** | Additional scale used for the orthographic projection size. This has the effect of zooming in and out. |
 | **Render Layers Mask** | The layers mask used for rendering using this camera. Can be used to include or exclude specific actor layers from the drawing. |
 
@@ -70,6 +71,8 @@ If a camera has the **Use Perspective** value checked, then it will use perspect
 ## Orthographic scale (orthographic mode only)
 
 If a camera has the **Use Perspective** value unchecked, then it will use orthographic projection. The **orthographic scale** changes the camera frustum size, and has the effect of zooming in or out of the scene.
+
+To have more precise over projection use **Orthographic Size** property that defines the exact size (if not set to `0` which uses viewport size).
 
 | Orthographic scale: 0.3 | Orthographic scale: 1 |
 |--------|--------|
