@@ -26,3 +26,14 @@ Temporal Anti-Aliasing (**TAA**) is an advanced effect where frames are accumula
 Subpixel Morphological Anti-Aliasing (**SMAA**) is a high quality anti-aliasing effect. Depending on the art-style of your production it can work as well as TAA while avoiding some of the shortcomings of this technique. This effect is slower than FXAA.
 
 For more information, see: [SMAA Publication](http://www.iryoku.com/smaa).
+
+## Contrast Adaptive Sharpening
+
+Contrast Adaptive Sharpening (**CAS**) is an additional filter pass that can run after FXAA or SMAA to increase the final image contrast and sharpness of the color edges.
+
+| Property | Description |
+|--------|--------|
+| **Sharpening Amount** | The sharpening strength. |
+| **Edge Sharpening** | The edge sharpening strength. |
+| **Min Edge Threshold** | The minimum edge threshold. |
+| **Over Blur Limit** | The over-blur limit. |
