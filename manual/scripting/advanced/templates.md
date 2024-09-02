@@ -4,9 +4,11 @@ Script templates can be used to allow users to create a new script based on a te
 
 ## Create a script template
 
-Create a text document anywhere in the **Content** folder and create the template that you desire. Use the following identifiers to replace certain parts of your template with information upon creation by the user.
+Create a text document anywhere in the **Content** folder and create the template that you desire. It is recommended the use .cs or .h/.cpp for the file extension for the template files.
 
 ### The available identifiers
+
+Use the following identifiers to replace certain parts of your template with information upon creation by the user.
 
 | Identifier | Description |
 |--------|--------|
