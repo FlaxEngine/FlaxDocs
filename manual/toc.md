@@ -201,6 +201,7 @@
 ### [Plugins Window](scripting/plugins/plugins-window.md)
 ### [Plugin Project](scripting/plugins/plugin-project.md)
 ## [Advanced](scripting/advanced/index.md)
+### [Script Templates](scripting/advanced/templates.md)
 ### [Raw Data Asset](scripting/advanced/raw-data-asset.md)
 ### [Custom Editor Options](scripting/advanced/custom-editor-options.md)
 ### [Curve](scripting/advanced/curve.md)

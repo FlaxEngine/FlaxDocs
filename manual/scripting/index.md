@@ -77,6 +77,7 @@ To start visual scripting see the related documentation [here](visual/index.md).
   * [Plugins Window](plugins/plugins-window.md)
   * [Plugin Project](plugins/plugin-project.md)
 * [Advanced](advanced/index.md)
+  * [Script Templates](advanced/templates.md)
   * [Raw Data Asset](advanced/raw-data-asset.md)
   * [Custom Editor Options](advanced/custom-editor-options.md)
   * [Curve](advanced/curve.md)
