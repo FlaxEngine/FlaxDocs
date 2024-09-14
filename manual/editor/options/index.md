@@ -14,8 +14,6 @@ You can modify the properties and press **Save** icon on a toolstrip to apply th
 
 ## General options
 
-![General Options](media/options-general.png)
-
 | Property | Description |
 |--------|--------|
 | **Startup Scene Mode** | The scene to load on editor startup. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**None**</td><td>Don't open scene on startup.</td></tr><tr><td>**Project Default**</td><td>The project default scene.</td></tr><tr><td>**Last Opened**</td><td>The last opened scene in the editor.</td></tr></tbody></table>|
@@ -34,8 +32,6 @@ You can modify the properties and press **Save** icon on a toolstrip to apply th
 | **Enable Editor Analytics** | Enables or disables anonymous editor analytics service used to improve editor experience and the quality. |
 
 ## Interface options
-
-![Interface Options](media/options-interface.png)
 
 | Property | Description |
 |--------|--------|
@@ -69,8 +65,6 @@ Use this section to modify the input shortcuts binding used by the editor. By pr
 
 ## Viewport options
 
-![Viewport Options](media/options-viewport.png)
-
 | Property | Description |
 |--------|--------|
 | **Mouse Sensitivity** | The mouse movement sensitivity scale applied when using the viewport camera. |
@@ -81,7 +75,6 @@ Use this section to modify the input shortcuts binding used by the editor. By pr
 
 ## Visual options
 
-![Visual Options](media/options-visual.png)
 
 | Property | Description |
 |--------|--------|
@@ -93,8 +86,6 @@ Use this section to modify the input shortcuts binding used by the editor. By pr
 | **Enable MSAA For DebugDraw** | Determines whether enable MSAA for DebugDraw primitives rendering. Helps with pixel aliasing but reduces performance. |
 
 ## Source Code options
-
-![Source Code Options](media/options-source-code.png)
 
 | Property | Description |
 |--------|--------|
