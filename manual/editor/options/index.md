@@ -168,4 +168,4 @@ Use this section to modify the input shortcuts binding used by the editor. By pr
 ## Custom options
 
 The Editor supports extending the options by adding custom settings. This can be used by the editor plugins. 
-To learn how to use custom option it see the [tutorial here](../../scripting/tutorials/custom-editor-settings.md).
+To learn how to use custom option see the [tutorial here](../../scripting/tutorials/custom-editor-settings.md).
