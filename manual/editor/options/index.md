@@ -59,7 +59,7 @@ You can modify the properties and press **Save** icon on a toolstrip to apply th
 
 ## Input options
 
-![Input Options](media/options-input.png)
+![Open Editor Options](media/input-options-clear.png)
 
 Use this section to modify the input shortcuts binding used by the editor. By pressing `X` button you can remove the binding.
 
