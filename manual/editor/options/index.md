@@ -51,7 +51,7 @@ You can modify the properties and press the **Save** icon in the toolstrip to ap
 |--------|--------|
 | *Interface* ||
 | **Interface Scale** | Editor User Interface scale. Applied to all UI elements, windows and text. Can be used to scale the interface up on a bigger display. Editor restart required. |
-| **Use Native Window System** | Determines whether use native window title bar. Editor restart required. Windows Only.|
+| **Use Native Window System** | Determines whether use native window title bar. Editor restart required. *Windows Only.*|
 | **Show Selected Camera Preview** | Determines whether show selected camera preview in the edit window. |
 | **Center Mouse On Game Window Focus** | Determines whether center mouse position on window focus in play mode. Helps when working with games that lock mouse cursor. |
 | **New Window Location** | Define the opening method for new windows, open in a new tab by default. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Float**</td><td>Spawn new windows as floating window.</td></tr><tr><td>**DockFill**</td><td>*No description avaliable.*</td></tr><tr><td>**DockLeft**</td><td>*No description avaliable.*</td></tr><tr><td>**DockRight**</td><td>*No description avaliable.*</td></tr><tr><td>**DockTop**</td><td>*No description avaliable.*</td></tr><tr><td>**DockBottom**</td><td>*No description avaliable.*</td></tr></tbody></table> |
