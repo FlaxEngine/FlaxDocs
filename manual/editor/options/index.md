@@ -28,7 +28,7 @@ You can modify the properties and press the **Save** icon in the toolstrip to ap
 | **Script Memebers Order** | Order of script properties/fields in properties panel. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Alphabetical**</td><td>Shows properties/fields in alphabetical order.</td></tr><tr><td>**Declaration**</td><td>Shows properties/fields in declaration order.</td></tr></tbody></table>|
 | **Auto Save Visual Script On Play Start** | Determines whether automatically save the Visual Script asset editors when starting the play mode in editor. |
 | *Content* ||
-| **Use Asset Import Path Relative** | *No description avaliable.* |
+| **Use Asset Import Path Relative** | If checked, imported file path will be stored relative to the project folder within imported asset metadata. Otherwise will use absolute path. |
 | **Auto Rebuild CSG** | Determines whether perform automatic CSG rebuild on brush change. |
 | *CSG* ||
 | **Auto Rebuild CSG** | Determines whether perform automatic CSG rebuild on brush change. |
@@ -54,13 +54,13 @@ You can modify the properties and press the **Save** icon in the toolstrip to ap
 | **Use Native Window System** | Determines whether use native window title bar. Editor restart required. *Windows Only.*|
 | **Show Selected Camera Preview** | Determines whether show selected camera preview in the edit window. |
 | **Center Mouse On Game Window Focus** | Determines whether center mouse position on window focus in play mode. Helps when working with games that lock mouse cursor. |
-| **New Window Location** | Define the opening method for new windows, open in a new tab by default. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Float**</td><td>Spawn new windows as floating window.</td></tr><tr><td>**DockFill**</td><td>*No description avaliable.*</td></tr><tr><td>**DockLeft**</td><td>*No description avaliable.*</td></tr><tr><td>**DockRight**</td><td>*No description avaliable.*</td></tr><tr><td>**DockTop**</td><td>*No description avaliable.*</td></tr><tr><td>**DockBottom**</td><td>*No description avaliable.*</td></tr></tbody></table> |
+| **New Window Location** | Define the opening method for new windows, open in a new tab by default. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Float**</td><td>Spawn new windows as floating window.</td></tr><tr><td>**DockFill**</td><td>The dock fill as a tab.</td></tr><tr><td>**DockLeft**</td><td>The dock left.</td></tr><tr><td>**DockRight**</td><td>The dock right.</td></tr><tr><td>**DockTop**</td><td>The dock top.</td></tr><tr><td>**DockBottom**</td><td>The dock bottom.</td></tr></tbody></table> |
 | **Icons Scale** | Editor icons scale. Editor restart required. |
 | **Content Window Orientation** | Define the opening method for new windows, open in a new tab by default. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Horizontal**</td><td>Horizontal Content Window.</td></tr><tr><td>**Vertical**</td><td>Vertical Content Window.</td></tbody></table> |
-| **Auto Accept Color Picker Change** | *No description avaliable.* |
-| **Value Formatting** | *No description avaliable.* Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**None**</td><td>No formatting.</td></tr><tr><td>**BaseUnit**</td><td>The Format using the base SI unit.</td></tr><tr><td>**AutoUnit**</td><td>Format using a unit that matches the value best.</td></tr></tbody></table> |
-| **Sparate Value And Unit** | *No description avaliable.* |
-| **Show Tree Lines** | *No description avaliable.* |
+| **Auto Accept Color Picker Change** | "If checked, color pickers will always modify the color unless 'Cancel' is pressed, otherwise color won't change unless 'Ok' is pressed." |
+| **Value Formatting** | The formatting option for numeric values in the editor Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**None**</td><td>No formatting.</td></tr><tr><td>**BaseUnit**</td><td>The Format using the base SI unit.</td></tr><tr><td>**AutoUnit**</td><td>Format using a unit that matches the value best.</td></tr></tbody></table> |
+| **Sparate Value And Unit** | The option to put a space between numbers and units for unit formatting. |
+| **Show Tree Lines** | Toggles tree line visibility in places like the Scene or Content Panel |
 | *Debug Log* ||
 | **Debug Log Timestamps Format** | The timestamps prefix mode for debug log messages. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**None**</td><td>No prefix.</td></tr><tr><td>**Utc**</td><td>The UTC time format.</td></tr><tr><td>**Local Time**</td><td>The local time format.</td></tr><tr><td>**Time Since Startup**</td><td>The time since startup (in seconds).</td></tr></tbody></table> |
 | **Clear On Play** | Clears all log entries on enter playmode. |
@@ -82,10 +82,10 @@ You can modify the properties and press the **Save** icon in the toolstrip to ap
 | **Scroll To Bottom On On Play** | Scroll the output log view to bottom automatically when Play Mode is entered. |
 | *Play In-Editor* ||
 | **Focus Game Window On Play** | Determines whether auto-focus game window on play mode start. |
-| **Play Button Action** | *No description avaliable.* Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**PlayGame**</td><td>Launches the game from the First Scene defined in the project settings.</td></tr><tr><td>**PlayScenes**</td><td>Launches the game using the scenes currently loaded in the editor.</td></tr></tbody></table> |
-| **Game Window Mode** | *No description avaliable.* Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Docked**</td><td>Launches the game from the First Scene defined in the project settings.</td></tr><tr><td>**PopupWindow**</td><td>Shows the game window as a popup.</td></tr><tr><td>**MaximizedWindow**</td><td>Shows the game window maximized. (Same as pressing F11).</td></tr><tr><td>**BorderlessWindow**</td><td>Shows the game window borderless.</td></tr></tbody></table> |
+| **Play Button Action** | A value indicating what action should be taken upon pressing the play button. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**PlayGame**</td><td>Launches the game from the First Scene defined in the project settings.</td></tr><tr><td>**PlayScenes**</td><td>Launches the game using the scenes currently loaded in the editor.</td></tr></tbody></table> |
+| **Game Window Mode** | Determines how the game window is displayed when the game is launched. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Docked**</td><td>Launches the game from the First Scene defined in the project settings.</td></tr><tr><td>**PopupWindow**</td><td>Shows the game window as a popup.</td></tr><tr><td>**MaximizedWindow**</td><td>Shows the game window maximized. (Same as pressing F11).</td></tr><tr><td>**BorderlessWindow**</td><td>Shows the game window borderless.</td></tr></tbody></table> |
 | *Visject* ||
-| **Connection Curvature** | *No description avaliable.* |
+| **Connection Curvature** | The curvature of the line connecting to connected visject nodes. |
 | **Node Description Panel** | Shows/hides the description panel in visual scripting context menu. |
 | **Grid Snapping** | Toggles grid snapping when moving nodes. |
 | **Grid Snapping Size** | Defines the size of the grid for nodes snapping. |
@@ -148,7 +148,7 @@ Use this section to modify the input shortcuts binding used by the editor. By pr
 | *Quality* ||
 | **Enable MSAA For DebugDraw** | Determines whether enable MSAA for DebugDraw primitives rendering. Helps with pixel aliasing but reduces performance. |
 | *Preview* ||
-| **Enable Particles Preview** | *No description avaliable.* |
+| **Enable Particles Preview** | A value indicating whether show looping particle effects in Editor viewport to simulate in-game look. |
 
 ## Source Code options
 
@@ -162,8 +162,8 @@ Use this section to modify the input shortcuts binding used by the editor. By pr
 
 | Property | Description |
 |--------|--------|
-| **Selected Style** | *No description avaliable.* |
-| **Styles** | *No description avaliable.* |
+| **Selected Style** | Currently selected style. *Restart editor to apply.* |
+| **Styles** | All available styles. |
 
 ## Custom options
 
