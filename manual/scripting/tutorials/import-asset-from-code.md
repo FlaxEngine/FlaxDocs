@@ -22,8 +22,8 @@ var outputPath = Globals.ProjectContentFolder;
 var outputLocation = (ContentFolder)Editor.Instance.ContentDatabase.Find(outputPath);
 
 var settings = new FlaxEditor.Content.Import.ModelImportSettings();
-settings.ImportVertexColors = false;
-settings.Scale = 10.0f;
+settings.Settings.ImportVertexColors = false;
+settings.Settings.Scale = 1.0f;
 
 Editor.Instance.ContentImporting.Import(sourcePath, outputLocation, true, settings);
 ```
