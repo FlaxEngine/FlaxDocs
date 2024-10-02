@@ -5,6 +5,7 @@ on:
       - update-*
 
 env:
+  GIT_CLONE_PROTECTION_ACTIVE: false
   DOTNET_NOLOGO: true
   DOTNET_CLI_TELEMETRY_OPTOUT: false
 

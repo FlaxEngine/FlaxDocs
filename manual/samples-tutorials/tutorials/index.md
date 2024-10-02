@@ -71,6 +71,7 @@ You can use **Ctrl + F** to quickly find what you are looking for.
 * [How to create foliage](../../foliage/tutorials/create-foliage.md)
 * [How to create foliage from code](../../foliage/tutorials/foliage-from-code.md)
 * [How to render an object outline](../../graphics/tutorials/render-object-outline.md)
+* [How to write additional render pass](../../graphics/tutorials/additional-render-pass.md)
 * [How to import an asset from code](../../scripting/tutorials/import-asset-from-code.md)
 * [How to create terrain](../../terrain/tutorials/create-terrain.md)
 * [How to import terrain](../../terrain/tutorials/import-terrain.md)
