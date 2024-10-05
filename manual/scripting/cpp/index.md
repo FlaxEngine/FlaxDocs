@@ -1,6 +1,6 @@
 # C++ Scripting
 
-Flax Engine fully supports C++ scripting with even more features than C# scripting. In general, C\+\+ offers more **performance** and allows to **access engine API directly** which comes with many benefits. Flax Engine is mostly written in C\+\+ with C# flavor which means you can easily build the game on top of the engine. Also, Flax uses its own build tool called [Flax.Build](../../editor/flax-build/index.md) to compile both engine and game.
+Flax Engine fully supports C++ scripting with even more features than C# scripting. In general, C\+\+ offers more **performance** and allows to **access engine API directly** which comes with many benefits. Flax Engine is mostly written in C\+\+ with C# flavor which means you can easily build the game on top of the engine. Also, Flax uses its own build tool called [Flax.Build](../../editor/flax-build/index.md) to compile both the engine and the game.
 
 Follow this documentation section to learn how to write your own C\+\+ scripts and use them in a game. Also, if you see any code examples in the *Flax Documentation* that are written in C# you can similarly use them in C\+\+ scripts since the engine uses the same API in both languages (you can even move your existing game code from C# to C\+\+ quite quickly).
 

@@ -34,7 +34,7 @@ To learn more about project file properties see the [reference](https://docs.fla
 
 * **&lt;root&gt;**
  * **Binaries** - compiled game scripts binaries
- * **Cache** - editor local cache folder, buid cache, used for thumbnails, game cooker cache and other temporary files
+ * **Cache** - editor local cache folder, build cache, used for thumbnails, game cooker cache and other temporary files
  * **Content** - contains all the game assets (models, textures, settings, etc.)
    * **SceneData** - dedicated directory for the [private scene assets](scenes/scene-data.md)
    * **Shaders** - auto-improted shaders assets (from source)
