@@ -28,7 +28,7 @@ The following table lists all the available event functions to override from the
 | **void OnStart()** | Called when a script is enabled just before any of the Update methods is called for the first time. |
 | **void OnUpdate()** | Called every frame if object is enabled (C++ scripts need to set `_tickUpdate=true` in constructor). |
 | **void OnLateUpdate()** | Called every frame (after *Update*) if object is enabled (C++ scripts need to set `_tickLateUpdate=true` in constructor). |
-| **void OnFixedUpdate()** | Called every fixed framerate frame if object is enable (C++ scripts need to set `_tickFixedUpdate=true` in constructor)d. |
+| **void OnFixedUpdate()** | Called every fixed framerate frame if object is enabled (C++ scripts need to set `_tickFixedUpdate=true` in constructor). |
 | **void OnDebugDraw()** | Called during drawing debug shapes in editor. Use [DebugDraw](https://docs.flaxengine.com/api/FlaxEngine.DebugDraw.html). |
 | **void OnDebugDrawSelected()** | Called during drawing debug shapes in editor when the object is selected. Use [DebugDraw](https://docs.flaxengine.com/api/FlaxEngine.DebugDraw.html). |
 
