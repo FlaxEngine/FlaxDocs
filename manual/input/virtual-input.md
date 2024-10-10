@@ -10,7 +10,7 @@ The first step to using the virtual input is preparing a proper configuration. T
 
 ![Virtual Input Config](media/virtual-input-config.jpg)
 
-As you can see in the image above, there can be many virtual inputs, and there can be multiple inputs bound to each one. For instance, the `Fire` Action is set to trigger on both `Left Mouse Button` and `Gamepad Button A`. This Action is set to `Press` mode, which means it will trigger an event when the action is activated.
+As you can see in the image above, there can be many virtual inputs, and they can handle input from a mouse, keyboard, or controller. For instance, the `Fire` Action is set to trigger on both `Left Mouse Button` and `Gamepad Button B`, and there is an option to add a keyboard input as well. This Action is set to `Press` mode, which means it will trigger an event when the action is activated.
 
 In your C# script you can read the state of the action directly:
 
@@ -59,7 +59,7 @@ public override void OnDestroy()
 }
 ```
 
-If you select the Actor with this script in the Editor, you can modify the `FireEvent` and `MouseX` names without editing the code.
+If you select the Actor with this script in the Editor, you can edit the `FireEvent` and `MouseX` inputs without editing the code. 
 
 ![Virtual Input Script](media/virtual-input-script-example.jpg)
 
