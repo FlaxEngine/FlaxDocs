@@ -1,5 +1,6 @@
 # Release Notes
 
+* [1.9 release notes](1_9/index.md)
 * [1.8 release notes](1_8/index.md)
 * [1.7 release notes](1_7/index.md)
 * [1.6 release notes](1_6/index.md)
