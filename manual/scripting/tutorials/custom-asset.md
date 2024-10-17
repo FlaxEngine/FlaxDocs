@@ -253,3 +253,19 @@ public class MyEditorPlugin : EditorPlugin
     }
 }
 ```
+
+Another simple way to add a custom icon to a **JsonAsset** without creating a new proxy is as follows.
+
+```cs
+public class MyEditorPlugin : EditorPlugin
+{
+    public override void InitializeEditor()
+    {
+        base.InitializeEditor();
+		var atlas = Content.Load<SpriteAtlas>("Content/ExampleSpriteAtlas.flax");
+        var spriteHandle = new SpriteHandle(atlas, 0);
+        Editor.ContentDatabase.AddProxy(new SpawnableJsonAssetProxy<MySettings>(spriteHandle));
+        Editor.ContentDatabase.Rebuild(true);
+    }
+}
+```

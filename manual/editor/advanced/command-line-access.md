@@ -36,7 +36,7 @@ Of course, all those things can be made manually by using Flax Editor C# API and
 | **-novsync** | Forces to disable vertical synchronization when presenting the frame on screen. |
 | **-nolog** | Disables output log file. |
 | **-std** | Redirects log to the standard process output (std). |
-| **-debug <ip:port>** | Sets the Mono debugger address and port (or just port) used for the remote debugging. The default Mono debugger IP=127.0.0.1, Port=41000+(process_id%1000). Can be just port number to use *localhost*. |
+| **-debug `ip:port`** | Sets the Mono debugger address and port (or just port) used for the remote debugging. The default Mono debugger IP=127.0.0.1, Port=41000+(process_id%1000). Can be just port number to use *localhost*. |
 | **-debugwait** | Instructs Mono debugger to wait for client attach for 5 seconds. Can be used to debug initialization code when a standalone game starts. |
 | **-headless** | Starts without windows, used by CL. Can be also used in cooked game on desktop platforms. |
 | **-lowdpi** | Disables High DPI awareness support. |
@@ -50,8 +50,6 @@ Of course, all those things can be made manually by using Flax Editor C# API and
 | **-intel** | Hints to use Intel GPU (if available). |
 | **-monolog** | Enables advanced debugging for Mono runtime. Can be used to debug problems with managed scripting runtime. Produces lots of logs. |
 | **-mute** | Disables audio playback and uses Null Audio Backend. |
-| **-skipcompile** | Skips the scripts compilation on editor startup, useful when launching engine from IDE. |
-| **-shaderdebug** | Enables debugging data generation for shaders and disables shader compiler optimizations. |
 
 ## Editor-only options
 
@@ -61,7 +59,9 @@ Of course, all those things can be made manually by using Flax Editor C# API and
 | **-new** | Generates the project files inside the specified project folder or uses current workspace folder. |
 | **-play** | Starts the play-mode in Editor after startup. Can open a certain level if provided with asset id (eg. `-play SCENE_ASSET_ID`). |
 | **-genProjectFiles** | Generates the scripts project files and exits. |
+| **-skipcompile** | Skips the scripts compilation on editor startup, useful when launching engine from IDE. |
+| **-shaderdebug** | Enables debugging data generation for shaders and disables shader compiler optimizations. |
+| **-shaderprofile** | Enables debugging data generation for shaders but leaves shader compiler optimizations active for performance profiling. |
 | **-clearCache** | Clears the project cache before starting the editor. |
 | **-clearCooker** | Clears the project Game Cooker cache before starting the editor. |
-| **-build <preset.target>** | Starts the game building after editor launch and closes editor after building end. You can specify the single present name to build all its targets or specify both the present name and target name (separated by a dot. You can use braces if your preset/target name contains space characters. |
-
+| **-build `preset.target`** | Starts the game building after editor launch and closes editor after building end. You can specify the single present name to build all its targets or specify both the present name and target name (separated by a dot). You can use braces if your preset/target name contains space characters. |

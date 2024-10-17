@@ -46,6 +46,9 @@ Flax offers two modes for light fall off. A custom **Exponent** parameter can be
 | **Depth Bias** | Controls dynamic shadow depth bias value. Depth bias is used for shadow map comparison. |
 | **Normal Offset Scale** | Controls dynamic shadows normal vector offset scale. A factor specifying the offset to add to the calculated shadow map depth with respect to the surface normal. |
 | **Contact Shadows Length** | The length of the rays for contact shadows computed via screen-space tracing. Set this to values higher than 0 to enable screen-space shadow rendering for this light. This improves the shadowing details. Actual ray distance is based on the pixel distance from the camera. |
+| **Update Rate** | Frequency of shadow updates. 1 - every frame, 0.5 - every second frame, 0 - on start or change. It's the inverse value of how many frames should happen in-between shadow map updates (eg. inverse of 0.5 is 2 thus shadow will update every 2nd frame). |
+| **Update Rate At Distance** | Frequency of shadow updates at the maximum distance from the view at which shadows are still rendered. This value is multiplied by *Shadows Update Rate* and allows scaling the update rate in-between the shadow range. For example, if light is near view, it will get normal shadow updates but will reduce this rate when far from view. |
+| **Resolution** | Defines the resolution of the shadow map texture used to draw objects projection from light-point-of-view. Higher values increase shadow quality at cost of performance. |
 
 > [!Note]
 > To learn more about shadows in Flax see [this page](../shadows.md).

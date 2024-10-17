@@ -20,6 +20,12 @@ Major features:
 
 This documentation section covers most of the topics related to Flax.Build tool. To learn more please refer to Flax.Build sources located under `Source\Tools\Flax.Build` and/or use `Binaries\Tools\Flax.Build.exe -help` to learn more about usage. The engine repository contains useful scripts that are wrappers against the build tool and automatically compile its sources.
 
+## In this section
+
+* [API tags](api-tags.md)
+* [Build Blugins](plugins.md)
+* [Build Tool Guide](guide.md)
+
 ## Build Scripts
 
 The main source of build configuration are **.Build.cs** files located in the project `Source` directory. Written in **C#**, scripts can contain targets, modules, SDKs, or other utilities used for building. When generating project scripts files, all build scripts are included in **Rules** project which defines the build rules and can be explored with code IDE.

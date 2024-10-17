@@ -10,6 +10,10 @@ public class MyFileReference : Script
     [AssetReference(".txt"), CustomEditorAlias("FlaxEditor.CustomEditors.Editors.AssetRefEditor")]
     public string Path = "";
 
+    // Alternative way for path reference that supports any text input (eg. URL)
+    [AssetReference(".txt"), CustomEditorAlias("FlaxEditor.CustomEditors.Editors.FilePathEditor")]
+    public string Url = "";
+
     /// <inheritdoc />
     public override void OnStart()
     {
