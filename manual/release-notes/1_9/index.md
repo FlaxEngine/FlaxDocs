@@ -123,7 +123,7 @@ Flax Editor is under constant development towards making it the best game editor
 
 ### Version 1.9.6605 - 17 October 2024
 
-Contributors: mafiesto4, tecnessino, Tryibion, GoaLitiuM, z1dev, abrasivetroop, Chikinsupu, MrCapy0, xxSeys1, HydrogenC, Swiggies, Menotdan, cNori, tecnessino, envision3d, Zode, RuanLucasGD, Arcnor, mtszkarbowiak, RomanZhu, HydrogenC, Menotdan, GaryMcWhorter, lifeformed, amir9480, fibref, Muzz
+Contributors: mafiesto4, Tryibion, GoaLitiuM, z1dev, abrasivetroop, Chikinsupu, MrCapy0, xxSeys1, HydrogenC, Swiggies, Menotdan, cNori, tecnessino, envision3d, Zode, RuanLucasGD, Arcnor, mtszkarbowiak, RomanZhu, GaryMcWhorter, lifeformed, amir9480, fibref, Muzz
 
 PRs merged: 169
 
