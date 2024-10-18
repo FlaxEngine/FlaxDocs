@@ -8,18 +8,18 @@ Basic coroutine workflow requires 3 steps:
 
 ## 1. Creating Sequence
 
-To create a sequence, a builder pattern (or a fluent interface) is define step-by-step content of our coroutine.
+To create a sequence, a builder pattern is used to define steps. The order of executing those steps is the same as the order of adding them.
 
 # [C#](#tab/code-csharp)
 ```cs
-CoroutineBuilder sequence = new CoroutineBuilder()
+CoroutineSequence sequence = new CoroutineSequence()
     .ThenRun(() => { Debug.Log("Greeting in 3 seconds!"); })
     .ThenWait(3.0f)
     .ThenRun(() => { Debug.Log("Hello World!"); });
 ```
 # [C++](#tab/code-cpp)
 ```cpp
-CoroutineBuilder* sequence = New<CoroutineBuilder>()
+CoroutineSequence* sequence = New<CoroutineSequence>()
     ->ThenRun([](){ DebugLog::Log(TEXT("Greeting in 3 seconds!")); })
     ->ThenWait(3.0f)
     ->ThenRun([](){ DebugLog::Log(TEXT("Hello World!")); });
@@ -41,7 +41,7 @@ CoroutineHandle _handle;
 
 public override OnEnabled() 
 {
-    CoroutineBuilder sequence = ...;
+    CoroutineSequence sequence = ...;
     _handle = ExecuteOnce(sequence);
 }
 ```
@@ -115,12 +115,12 @@ public class Bomb : Script
     [Serialize] public Light BlinkSource;
     [Serialize] public AudioSource BeepSource;
 
-    private CoroutineBuilder _tickingSequence;
+    private CoroutineSequence _tickingSequence;
     private CoroutineHandle _tickingHandle;
 
     public override OnStart()
     {
-        _tickingSequence = new CoroutineBuilder()
+        _tickingSequence = new CoroutineSequence()
             .ThenRun(() => { 
                 BlinkSource.IsActive = true;
                 BeepSource.Play();
@@ -168,7 +168,7 @@ class Bomb : public Script
     API_FIELD() ScirptingObjectReference<AudioSource> BeedSource;
 
 private:
-    ScriptingObjectReference<CoroutineBuilder> _tickingSequence;
+    ScriptingObjectReference<CoroutineSequence> _tickingSequence;
     ScriptingObjectReference<CoroutineHandle> _tickingHandle;
 
     void Explode()
@@ -180,7 +180,7 @@ private:
 public:
     void OnStart() override
     {
-        _tickingSequence = New<CoroutineBuilder>()
+        _tickingSequence = New<CoroutineSequence>()
             ->ThenRun([this](){
                 BlinkSource.SetIsActive(true);
                 BeepSource->Play();
