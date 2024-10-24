@@ -119,6 +119,12 @@ Flax Editor is under constant development towards making it the best game editor
 * Scene animation timelines gizmos (viewport gizmos to edit camera track curve),
 * Animation events UI.
 
+## Migration Guide
+
+* Objects drawing has been refectored to use material batching for different meshes (aside from existing hardware instancing), all objects transformations and data is stored in a single large GPU buffer shared by the whole frame. New per-draw constant buffer is used at slot `2` - update your custom material shaders that were using additional constant buffers to use slot `3` instead. Materials and shaders using `WorldMatrix`, `LODDitherFactor`, `PerInstanceRandom` directly from `Data` constant buffer at slot `0` need to use `LoadObject` function to properly read data on a GPU.
+* Sort Order has been reduced from `int16` to `in8` due to performance reason (more optimial sort key packing in rendering), this leaves range of `-[127; 127]`for transaprency sort reordering.
+* `DEPRECATED` has been changed to be a function that accepts custom deprecation message.
+
 ## Changelog
 
 ### Version 1.9.6605 - 17 October 2024
