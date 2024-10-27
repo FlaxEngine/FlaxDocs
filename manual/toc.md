@@ -217,6 +217,7 @@
 ### [Tags](scripting/advanced/tags.md)
 ### [Run code on module load](scripting/advanced/code-on-load.md)
 ### [File Reference](scripting/advanced/file-reference.md)
+### [Debug Commands](scripting/advanced/debug-commands.md)
 ## [Artificial Intelligence](scripting/ai/index.md)
 ### [Behavior Trees](scripting/ai/behavior-trees/index.md)
 #### [Behavior Knowledge](scripting/ai/behavior-trees/knowledge.md)

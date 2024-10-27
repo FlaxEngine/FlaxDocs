@@ -91,6 +91,7 @@ To start visual scripting see the related documentation [here](visual/index.md).
   * [Tags](advanced/tags.md)
   * [Run code on module load](advanced/code-on-load.md)
   * [File Reference](advanced/file-reference.md)
+  * [Debug Commands](advanced/debug-commands.md)
 * [Artificial Intelligence](ai/index.md)
   * [Behavior Trees](ai/behavior-trees/index.md)
     * [Behavior Knowledge](ai/behavior-trees/knowledge.md)
