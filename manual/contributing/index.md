@@ -18,7 +18,7 @@ Check out the official repositories on a GitHub:
 
 ## Open Source
 
-![Flax Engine](media/repo-title.png)
+![Flax Engine](media/repo-title-revized.png)
 
 ### Flax Engine
 
