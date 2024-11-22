@@ -32,3 +32,4 @@ The animations retargeting system uses the reference pose of the source skeleton
 
 - Use the same T-Pose or A-Pose for both animation skeleton and target model pose so retargeting can work properly (eg. use Import Rotation on the imported model and animation to match the source and target skeletons)
 - If you have only animation file you can import it as Animation and then as Skinned Model to use its skeleton for retargeting (Skinned Model doesn't need to have geometry as it can be skeleton-only container for retargeting)
+- You can use Copy/Paste options to replicate setup to other assets (right-click on a drop down panel header or use small settings button icon)
