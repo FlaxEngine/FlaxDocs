@@ -23,7 +23,7 @@ This documentation section covers most of the topics related to Flax.Build tool.
 ## In this section
 
 * [API tags](api-tags.md)
-* [Build Blugins](plugins.md)
+* [Build Plugin](plugins.md)
 * [Build Tool Guide](guide.md)
 
 ## Build Scripts
