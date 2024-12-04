@@ -8,7 +8,7 @@ It’s very common technique to build games on the separate machines or even in 
 Here is an example command that will build the game project in the Output folder for the Windows platform:
 
 ```
-FlaxEditor.exe -project "<project-path>" -headless -mute -null -std -build "Development.Windows 64bit"
+FlaxEditor.exe -project "<project-path>" -headless -mute -null -std -build "Development.Windows"
 ```
 
 To run Flax via Windows **Command Prompt** (`cmd.exe`) with logs use `start /w ...` as follows:
@@ -65,3 +65,4 @@ Of course, all those things can be made manually by using Flax Editor C# API and
 | **-clearCache** | Clears the project cache before starting the editor. |
 | **-clearCooker** | Clears the project Game Cooker cache before starting the editor. |
 | **-build `preset.target`** | Starts the game building after editor launch and closes editor after building end. You can specify the single present name to build all its targets or specify both the present name and target name (separated by a dot). You can use braces if your preset/target name contains space characters. |
+| **-exit** | Exits the editor after startup and performing all queued actions. Usefull when invoking editor from CL/CD. |
