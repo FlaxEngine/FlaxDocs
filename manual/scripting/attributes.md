@@ -54,6 +54,49 @@ The following table lists the most common attributes with usage description.
 | **ReadOnly** | Properties and fields marked with this attribute won't be editable in the inspector. This allows to show object proeprties values in the editor but without option to modify the value which can be handy in some cases. |
 | **Category** | Describes the category name for a type. Can be used to group script, asset or actor types for editor pickers to organize types. |
 | **Watermark** | Adds a watermark to a string textbox in the editor field. |
+| **Button** | Adds a button in the properties panel which user can click and invoke a method. |
+
+## Button attribute
+
+Button attributes can display methods as clickable buttons in the editor's properties panels. It works with both static and member methods in C++/C#/Visual Script.
+
+# [C#](#tab/code-csharp)
+```cs
+/// <summary>
+/// Button tooltip comes from this comment.
+/// </summary>
+[Button]
+private void CallMe()
+{
+    Debug.LogError("Ho!");
+}
+
+[Button("Another Button", "Custom tooltip text")]
+public static void CallMeTest()
+{
+    Debug.LogError("Hello there!");
+}
+```
+# [C++](#tab/code-cpp)
+```cpp
+// Button tooltip comes from this comment.
+API_FUNCTION(Attributes="Button")
+void CallMe()
+{
+    LOG(Error, "Ho!");
+}
+
+API_FUNCTION(Attributes="Button(\"Another Button\", \"Custom tooltip text\")")
+static void CallMeTest()
+{
+    LOG(Error, "Hello there!");
+}
+```
+# [Visual Script](#tab/code-vs)
+Right-click on a function node header, select *Edit attributes..** menu. Then add new `Button Attribute` and hit *OK* button.
+
+![Button attribute in Visual Script](media/vs-button-attribute.png)
+***
 
 ## Script execution in editor
 

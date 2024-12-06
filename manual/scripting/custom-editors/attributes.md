@@ -166,6 +166,23 @@ public int[] CoolVariable = new int[]
 
 ![Example](media/Collection.jpg)
 
+### Button
+
+Button attribute displays the method as a clickable button in the editor's properties panel.
+
+```cs
+/// <summary>
+/// Button tooltip comes from this comment.
+/// </summary>
+[Button]
+private void CallMe()
+{
+	Debug.LogError("Ho!");
+}
+```
+
+![Example](media/Button.png)
+
 ### CustomEditor
 
 Overrides the default editor provided for the target object/class/field/property. Allows to extend visuals and editing experience of the object.
