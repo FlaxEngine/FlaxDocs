@@ -61,7 +61,11 @@ Useful C# API: [InputAxis](https://docs.flaxengine.com/api/FlaxEngine.InputAxis.
 
 ## Keyboard Keys selection
 
+![Mouse Button enum picking with Listen](media/input-settings-listen.jpg)
+
+Sometimes picking the right input for your action/axis mapping can be problematic because there are so many options to scroll through. To make this easier, you can press the 'Listen' button, and then press whatever input you want mapped onto this action. This makes it easier to setup your input settings for any input device.
+
 ![Keyboard Keys enum picking with keyboard](media/keyboard-navigation-context-menu.gif)
 
-Sometimes picking the right key for the action/axis mapping can be problematic because there are so many keyboard keys to scroll through. To make this easier, you can **use your keyboard to search** for the item in the open context menu popup. By pressing a key multiple times, it will take you through each key starting with that letter. You can also **navigate with arrow keys** through the list and **confirm the choice with Enter**. This makes it easier to setup your input settings. This feature works with all long context menu lists across the Editor.
+Another way you can set the input is to **use your keyboard to search** for the item in the dropdown menu. By pressing a letter key multiple times, it will take you through each key starting with that letter. You can also **navigate with arrow keys** through the list and **confirm the choice with Enter**. This feature works with all long context menu lists across the Editor.
 
