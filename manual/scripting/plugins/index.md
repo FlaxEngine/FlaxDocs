@@ -148,7 +148,7 @@ Your game can also use a Game Plugins within a code to implement various gamepla
 
 You can now get a reference to your Game Plugin with:
 ```cs
-MyPlugin gamePlugin = PluginManager.GetPlugin<>(MyPlugin);
+MyPlugin gamePlugin = PluginManager.GetPlugin<MyPlugin>();
 ```
 
 To make access to the plugin easier, you can define a property in your MyPlugin class like this:
