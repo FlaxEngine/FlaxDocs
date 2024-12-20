@@ -4,6 +4,6 @@
 
 Flax Editor uses Custom Editors to show selected actors properties in the *Properties* window. It also lists scripts attached. Game developers can write custom editors to extend the default UI and logic of the editor. For example, you can very easily **create a custom editor for your script**. To learn how, see [this tutorial](../tutorials/custom-editor.md).
 
-You can also use custom attributes right insiide your code. See [this documentation page](attributes.md).
+You can also use custom attributes right inside your code. See [this documentation page](attributes.md).
 
 Implementation of the Custom Editors is open source (as a part of *Flax Engine*) and can be found [here](https://github.com/FlaxEngine/FlaxEngine/tree/master/Source/Editor/CustomEditors).
