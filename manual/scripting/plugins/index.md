@@ -144,6 +144,33 @@ void MyPlugin::Deinitialize()
 
 Your game can also use a Game Plugins within a code to implement various gameplay features because plugins don't rely on loaded scenes or scene objects and are created before the scenes loading (compared to the normal scripts).
 
+### How to get your Game Plugin
+
+You can now get a reference to your Game Plugin with:
+```cs
+MyPlugin gamePlugin = PluginManager.GetPlugin<>(MyPlugin);
+```
+
+To make access to the plugin easier, you can define a property in your MyPlugin class like this:
+```cs
+public static MyPlugin Instance 
+{
+    get 
+    {   
+        if (_instance == null)
+            _instance = PluginManager.GetPlugin<MyPlugin>();
+
+        return _instance;
+    }
+}
+private static MyPlugin _instance;
+```
+
+Now you can access the Game Plugin like this:
+```cs
+MyPlugin gamePlugin  = MyPlugin.Instance;
+```
+
 ### Game Plugin Settings
 
 If you need to include custom settings for your plugin see [this tutorial](../tutorials/custom-settings.md) to learn more.
