@@ -16,8 +16,6 @@ If you're working with Visual Studio then use **File -> Generate project file** 
 
 Now, we want to write a simple Vertex and Pixel shaders that will process our geometry and display it on a screen. To do so we first declare a constant buffer with object transformation (`WorldMatrix`) and camera+screen transformation (`ViewProjectionMatrix`). Those matrices are used to transform the vertex from model local-space to the world-space and then to the screen. This transformation is performed per-vertex in function `VS_Custom`. As you can see it gets `ModelInput` structure data as input (single vertex data) and outputs the processed vertex data in structure `VertexOutput`. Then, this data is processed by GPU which builds triangles, interpolates the triangles, performs the depth-test and calls the pixel shader function `PS_Custom` for every visible pixel on a screen. In this example we simple create a color gradient based on the pixel `WorldPoition.y` which is a location on Y axis of the pixel in the game world.
 
-Also, note that vertex shader function contains a `META_VS_IN_ELEMENT(..)` attribute that informs the shader compiler and graphics pipeline backend that this function accepts the single RGB32 data as vertex position. If your ModelInput needs more data, remember to add the attributes there.
-
 ```hlsl
 #include "./Flax/Common.hlsl"
 
@@ -48,7 +46,6 @@ struct PixelInput
 
 // Vertex shader function for custom geometry processing
 META_VS(true, FEATURE_LEVEL_ES2)
-META_VS_IN_ELEMENT(POSITION, 0, R32G32B32_FLOAT, 0, 0, PER_VERTEX, 0, true)
 VertexOutput VS_Custom(ModelInput input)
 {
     VertexOutput output;
@@ -142,7 +139,11 @@ public class CustomGeometryDrawing : PostProcessEffect
         _vertexBuffer = new GPUBuffer();
         fixed (Float3* ptr = _vertices)
         {
-            var desc = GPUBufferDescription.Vertex(sizeof(Float3), _vertices.Length, new IntPtr(ptr));
+            var layout = GPUVertexLayout.Get([
+                // Layout of the vertex structure (must match vertex data format)
+                new VertexElement(VertexElement.Types.Position, 0, 0, false, PixelFormat.R32G32B32_Float)
+            ]);
+            var desc = GPUBufferDescription.Vertex(layout, sizeof(Float3), _vertices.Length, new IntPtr(ptr));
             _vertexBuffer.Init(ref desc);
         }
 

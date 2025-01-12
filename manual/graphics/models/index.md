@@ -62,22 +62,76 @@ Another important topic related to models is **Vertex Painting**. It is a proces
 
 ## Vertex properties
 
-Flax uses fixed model data format. Although an index buffer can use 16 or 32-bit format layout, vertex buffers layout is strictly defined. Vertex Buffer data is highly compressed to reduce memory usage and optimize the rendering performance.
+Flax uses flexible model data format. Mesh can have up to 3 vertex buffers and one index buffer in 16-bit or 32-bit format layout. Each vertex buffer can defien own layout. By default, the first one contains position, the second one general components (texcoords, normals, tangents, skinning), the third one contains vertex colors (to easly swap it with painted instance buffer when drawing mesh). Vertex data is highly compressed to reduce memory usage and optimize the rendering performance.
 
-Here is a list of vertex structures used by the engine:
+### Model Vertex Layout
+
+![Model Vertex Layout](media/vertex-layout.png)
+
+You can inspect vertex format in the imported model under *Vertex layout* section in *Meshes* tab.
+
+### GPU Vertex Layout
+
+When creating custom vertex buffers or vertex data use `GPUVertexLayout` with array of `VertexElement`.
+
+Example code:
+
+# [C#](#tab/code-csharp)
+```cs
+using System.Runtime.InteropServices;
+
+[StructLayout(LayoutKind.Sequential)]
+public struct MyVertex
+{
+    public Float3 Position;
+    public Half2 TexCoord;
+    public FloatR10G10B10A2 Normal;
+
+    // Gets the layout for this structure.
+    static GPUVertexLayout GetLayout()
+    {
+        return GPUVertexLayout.Get([
+            new VertexElement(VertexElement.Types.Position, 0, 0, false, PixelFormat.R32G32B32_Float),
+            new VertexElement(VertexElement.Types.TexCoord, 0, 0, false, PixelFormat.R16G16_Float),
+            new VertexElement(VertexElement.Types.Normal, 0, 0, false, PixelFormat.R10G10B10A2_UNorm)
+        ]);
+    }
+}
+```
+# [C++](#tab/code-cpp)
+```cpp
+#include "Engine/Graphics/Shaders/GPUVertexLayout.h"
+
+PACK_STRUCT(struct MyVertex
+    {
+    Float3 Position;
+    Half2 TexCoord;
+    FloatR10G10B10A2 Normal;
+
+    // Gets the layout for this structure.
+    static GPUVertexLayout* GetLayout()
+    {
+        return GPUVertexLayout::Get({
+            { VertexElement::Types::Position, 0, 0, 0, PixelFormat::R32G32B32_Float },
+            { VertexElement::Types::TexCoord, 1, 0, 0, PixelFormat::R16G16_Float },
+            { VertexElement::Types::Normal, 1, 0, 0, PixelFormat::R10G10B10A2_UNorm },
+        });
+    }
+});
+```
+***
+
+### Example Vertex Layout
+
+Here is a list of common vertex format:
 
 **Vertex Buffer 0**:
 * Float3 Position
 
 **Vertex Buffer 1**:
 * Half2 TexCoord
-* Float1010102 Normal
-* Float1010102 Tangent
-* Half2 LightmapUVs
+* FloatR10G10B10A2 Normal
+* FloatR10G10B10A2 Tangent
 
 **Vertex Buffer 2** (*optional*):
 * Color32 Color
-
-
-
-

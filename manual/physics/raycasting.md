@@ -118,24 +118,37 @@ public override void OnUpdate()
             if (meshBase is Mesh mesh)
             {
                 // Access static mesh data
-                var indexBuffer = mesh.DownloadIndexBuffer();
-                var vertexBuffer = mesh.DownloadVertexBuffer();
+                var accessor = new MeshAccessor();
+                if (accessor.LoadMesh(mesh))
+                {
+                    Debug.LogError("Failed to get mesh data");
+                    return;
+                }
 
                 // Get the hit triangle data
-                ref var v0 = ref vertexBuffer[indexBuffer[triangle * 3 + 0]];
-                ref var v1 = ref vertexBuffer[indexBuffer[triangle * 3 + 1]];
-                ref var v2 = ref vertexBuffer[indexBuffer[triangle * 3 + 2]];
+                var indexStream = accessor.Index();
+                var i0 = indexStream.GetInt((int)triangle * 3 + 0);
+                var i1 = indexStream.GetInt((int)triangle * 3 + 1);
+                var i2 = indexStream.GetInt((int)triangle * 3 + 2);
 
                 // Interpolate normal of the triangle using the barycentric coordinate of the hit
-                var n = v0.Normal * (1.0f - hit.UV.X - hit.UV.Y) + v1.Normal * hit.UV.X + v2.Normal * hit.UV.Y;
+                var normalStream = accessor.Normal();
+                var n0 = normalStream.GetFloat3(i0);
+                var n1 = normalStream.GetFloat3(i1);
+                var n2 = normalStream.GetFloat3(i2);
+                MeshAccessor.UnpackNormal(ref n0);
+                MeshAccessor.UnpackNormal(ref n1);
+                MeshAccessor.UnpackNormal(ref n2);
+                var n = n0 * (1.0f - hit.UV.X - hit.UV.Y) + n1 * hit.UV.X + n2 * hit.UV.Y;
 
                 // Transform mesh data into world-space
+                var positionStream = accessor.Position();
                 n = Vector3.Normalize(n);
                 var t = hit.Collider.Transform;
                 n = t.TransformDirection(n);
-                var p0 = t.LocalToWorld(v0.Position);
-                var p1 = t.LocalToWorld(v1.Position);
-                var p2 = t.LocalToWorld(v2.Position);
+                var p0 = t.LocalToWorld(positionStream.GetFloat3(i0));
+                var p1 = t.LocalToWorld(positionStream.GetFloat3(i1));
+                var p2 = t.LocalToWorld(positionStream.GetFloat3(i2));
 
                 // Display hit geometry normal and the triangle
                 DebugDraw.DrawTriangle(p0, p1, p2, Color.Green.AlphaMultiplied(0.5f), 10000);
@@ -152,6 +165,7 @@ public override void OnUpdate()
 #include "Engine/Physics/Physics.h"
 #include "Engine/Level/Actors/Camera.h"
 #include "Engine/Physics/Colliders/MeshCollider.h"
+#include "Engine/Graphics/Models/MeshAccessor.h"
 #include "Engine/Debug/DebugDraw.h"
 
 void MyScript::OnUpdate() override
@@ -181,49 +195,37 @@ void MyScript::OnUpdate() override
             if (auto* mesh = Cast<Mesh>(meshBase))
             {
                 // Access static mesh data
-                BytesContainer indexBuffer, vertexBuffer0, vertexBuffer1;
-                int32 indices, vertices;
-                mesh->DownloadDataCPU(MeshBufferType::Index, indexBuffer, indices);
-                mesh->DownloadDataCPU(MeshBufferType::Vertex0, vertexBuffer0, vertices);
-                mesh->DownloadDataCPU(MeshBufferType::Vertex1, vertexBuffer1, vertices);
+                MeshAccessor accessor;
+                if (accessor.LoadMesh(mesh))
+                {
+                    LOG(Error, "Failed to get mesh data");
+                    return;
+                }
 
                 // Get the hit triangle data
-                uint32 i0, i1, i2;
-                if (mesh->Use16BitIndexBuffer())
-                {
-                    const auto* ib16 = indexBuffer.Get<uint16>();
-                    i0 = ib16[triangle * 3 + 0];
-                    i1 = ib16[triangle * 3 + 1];
-                    i2 = ib16[triangle * 3 + 2];
-                }
-                else
-                {
-                    const auto* ib32 = indexBuffer.Get<uint32>();
-                    i0 = ib32[triangle * 3 + 0];
-                    i1 = ib32[triangle * 3 + 1];
-                    i2 = ib32[triangle * 3 + 2];
-                }
-                VB0ElementType v00, v01, v02;
-                VB1ElementType v10, v11, v12;
-                const auto* vb0 = vertexBuffer0.Get<VB0ElementType>();
-                const auto* vb1 = vertexBuffer1.Get<VB1ElementType>();
-                const auto* ib16 = indexBuffer.Get<uint16>();
-                v00 = vb0[i0];
-                v01 = vb0[i1];
-                v02 = vb0[i2];
-                v10 = vb1[i0];
-                v11 = vb1[i1];
-                v12 = vb1[i2];
+                auto indexStream = accessor.Index();
+                auto i0 = indexStream.GetInt(triangle * 3 + 0);
+                auto i1 = indexStream.GetInt(triangle * 3 + 1);
+                auto i2 = indexStream.GetInt(triangle * 3 + 2);
 
                 // Interpolate normal of the triangle using the barycentric coordinate of the hit
-                auto n = v10.Normal.ToFloat3() * (1.0f - hit.UV.X - hit.UV.Y) + v11.Normal.ToFloat3() * hit.UV.X + v12.Normal.ToFloat3() * hit.UV.Y;
+                auto normalStream = accessor.Normal();
+                auto n0 = normalStream.GetFloat3(i0);
+                auto n1 = normalStream.GetFloat3(i1);
+                auto n2 = normalStream.GetFloat3(i2);
+                MeshAccessor::UnpackNormal(n0);
+                MeshAccessor::UnpackNormal(n1);
+                MeshAccessor::UnpackNormal(n2);
+                auto n = n0 * (1.0f - hit.UV.X - hit.UV.Y) + n1 * hit.UV.X + n2 * hit.UV.Y;
 
                 // Transform mesh data into world-space
+                auto positionStream = accessor.Position();
                 n = Vector3::Normalize(n);
                 auto t = hit.Collider->GetTransform();
                 n = Vector3::Transform(n, t.Orientation);
-                auto p0 = t.LocalToWorld(v00.Position);
-                auto p1 = t.LocalToWorld(v01.Position);
+                auto p0 = t.LocalToWorld(positionStream.GetFloat3(i0));
+                auto p1 = t.LocalToWorld(positionStream.GetFloat3(i1));
+                auto p2 = t.LocalToWorld(positionStream.GetFloat3(i2));
                 auto p2 = t.LocalToWorld(v02.Position);
 
                 // Display hit geometry normal and the triangle

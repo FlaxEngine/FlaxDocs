@@ -6,6 +6,10 @@ In this tutorial you will learn how to create a simple icosahedron mesh.
 
 This sample uses the C# API method [Content.CreateVirtualAsset<T>](http://docs.flaxengine.com/api/FlaxEngine.Content.html#FlaxEngine_Content_CreateVirtualAsset__1) to generate a procedural model resource which can be modified at runtime from code.
 
+## Mesh Accessor
+
+When editing larger models or when perfoming real-time mesh editing use `MeshAccessor` that provides robust per-component access for vertex elements. It supports various data formats (including packed `R10G10B10A2` and others) with automatic convertion between vector or scalar values.
+
 ## Tutorial
 
 ### 1. Create new C# script `ModelGenerator`

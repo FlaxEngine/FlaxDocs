@@ -22,7 +22,6 @@ As an extension to the HLSL language, Flax uses a small set of **attribute macro
 | **Attribute** | **Description** |
 |--------|--------|
 | `META_VS(isVisible, minFeatureLevel)` | Placed above Vertex Shader function annotates it. |
-| `META_VS_IN_ELEMENT(type, index, format, slot, offset, slotClass, stepRate, isVisible)` | Placed between Vertex Shader function annotation and definition marks the vertex shader input usage and defines the data properties. Can be used multiple for every possible vertex element. |
 | `META_HS(isVisible, minFeatureLevel)` | Placed above Hull Shader function annotates it. |
 | `META_HS_PATCH(inControlPoints)` | Placed between Hull Shader function annotation and definition defines the amount of control points used by the patch function. |
 | `META_DS(isVisible, minFeatureLevel)` | Placed above Domain Shader function annotates it. |
