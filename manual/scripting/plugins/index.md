@@ -151,19 +151,9 @@ You can now get a reference to your Game Plugin with:
 MyPlugin gamePlugin = PluginManager.GetPlugin<MyPlugin>();
 ```
 
-To make access to the plugin easier, you can define a property in your MyPlugin class like this:
+To make access to the plugin easier, you can define an Instance property in your MyPlugin class like this:
 ```cs
-public static MyPlugin Instance 
-{
-    get 
-    {   
-        if (_instance == null)
-            _instance = PluginManager.GetPlugin<MyPlugin>();
-
-        return _instance;
-    }
-}
-private static MyPlugin _instance;
+public static MyPlugin Instance { get => PluginManager.GetPlugin<MyPlugin>(); }
 ```
 
 Now you can access the Game Plugin like this:
