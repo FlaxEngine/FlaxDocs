@@ -19,7 +19,7 @@ public float Speed;
 
 ## Moving fields or properties when refactoring code
 
-In this example, asset had field named `WalkableRadius` but it was removed and refactored into structure `SurfaceOptions`. By adding property you can use its setter method to perform data upgrade on deserialization. Make it `private`, add `Serialize` attribute so it will be using serialization and mark as `Obsolete` so it won't be saved anymore.
+In this example, asset had field named `WalkableRadius` but it was removed and refactored into structure `SurfaceOptions`. By adding property you can use its setter method to perform data upgrade on deserialization. Make it `private`, add `Serialize` attribute so it will be using serialization and mark as `Obsolete` so it won't be saved anymore. `ContentDeprecated.Mark` can be used to indicate that object upgraded its data from the old format which wil cause source asset saving in Editor.
 
 # [C#](#tab/code-csharp)
 ```cs
@@ -41,11 +41,18 @@ private float WalkableRadius
     {
         // Upgrade value
         Surface.WalkRadius = value;
+
+#if FLAX_EDITOR
+        // Mark content as deprecated (engine will resave asset)
+        ContentDeprecated.Mark();
+#endif
     }
 }
 ```
 # [C++](#tab/code-cpp)
 ```cpp
+#include "Engine/Content/Deprecated.h"
+
 // If your type is using API_AUTO_SERIALIZATION() then add deprecated property upgrader:
 private:
 API_PROPERTY(Attributes="Serialize, Obsolete, NoUndo") float GetWalkableRadius() const
@@ -57,6 +64,9 @@ API_PROPERTY(Attributes="Serialize, Obsolete, NoUndo") void SetWalkableRadius(fl
 {
     // Upgrade value
     Surface.WalkRadius = value;
+
+    // Mark content as deprecated (engine will resave asset)
+    MARK_CONTENT_DEPRECATED();
 }
 
 // If you manually serialize your type, then read the old json entry during deserialization:
