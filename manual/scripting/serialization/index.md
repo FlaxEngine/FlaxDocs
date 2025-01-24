@@ -4,7 +4,7 @@
 
 Flax uses the **Json** format to store scripts and objects state. It's a lightweight and very standardized format. 
 
-Flax's C# API contains a build-in methods to serialize and deserialize objects, even at runtime. See [JsonSerializer](https://docs.flaxengine.com/api/FlaxEngine.Json.JsonSerializer.html) class. Under the hood, Flax uses custom [Json.NET](https://github.com/JamesNK/Newtonsoft.Json) which is a popular high-performance JSON framework for .NET.
+Flax's C# API contains a build-in methods to serialize and deserialize objects, even at runtime. See [JsonSerializer](https://docs.flaxengine.com/api/FlaxEngine.Json.JsonSerializer.html) class. Under the hood, Flax uses a custom fork of [Json.NET](https://github.com/JamesNK/Newtonsoft.Json), which is a popular high-performance JSON framework for .NET.
 
 ## Serialization rules
 
