@@ -14,7 +14,7 @@ Flax serializes an object field or a property if:
 * It is `public`
 * It is `private` **and** has a [Serialize](https://docs.flaxengine.com/api/FlaxEngine.SerializeAttribute.html) attribute (inherited `private` members are not saved - but `protected` are)
 
-Flax does not serialize an object field or a property if:
+Flax does *not* serialize an object field or a property if:
 * It is `private`
 * It is `static`
 * It is `readonly`
