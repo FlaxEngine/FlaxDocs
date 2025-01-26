@@ -28,7 +28,7 @@ float Field1 = 11;
 ```
 ***
 
-If you want to **don't serialize** a public property or a field use [NoSerialize](https://docs.flaxengine.com/api/FlaxEngine.NoSerializeAttribute.html) attribute.
+If you **do not want to serialize** a public property or a field, use the [NoSerialize](https://docs.flaxengine.com/api/FlaxEngine.NoSerializeAttribute.html) attribute.
 
 # [C#](#tab/code-csharp)
 ```cs
