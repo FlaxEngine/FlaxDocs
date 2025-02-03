@@ -4,12 +4,20 @@
 
 Radial menus are useful when making a quick select menu, where normal menu types just do not fit.</br>
 
-> [!IMPORTANT]
+| Parameter                         | Description                                                                                                                                                            |
+|---------------------------------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Thickness                          | How thick the randial menu is                                                                                                                                          |
+|Edge Offset                        | Distance to the edge of the UI unform bounds size                                                                                                                      |
+|Center As Button                   | Center is becoming a button                                                                                                                                            |
+|Allow Change Selection When Inside | By default is set to **false** changing it to **true** will allow mouse to swap selection when inside the region considered as a button if the **Center As Button** is set to **true** <br> this regon is defined with <br>Center = ((1.0 - EdgeOffset) - Thickness) * uniformSize * 0.5,<br> keeping value false is useful when creating a stacked menus |
+
+> [!NOTE]
 > The radial menu has two modes
-> | Mode                                      | Active if            |
-> |-------------------------------------------|----------------------|
-> | Layout Controller                         | Material is not set  |
-> | Layout Controller and Material Controller,| Material is set      |
+
+| Mode                                      | Active if            |
+|-------------------------------------------|----------------------|
+| Layout Controller                         | Material is not set  |
+| Layout Controller and Material Controller,| Material is set      |
 
 > [!NOTE]
 > Default background brush is not working, the draw function is overridden by Radial Menu.</br>
@@ -29,11 +37,11 @@ Any child control added to the radial menu will be automatically layout around i
 > index inside RadialMenu.Children array dytets the order of the UI elements,
 
 ### Material Controller and Layout Controller
+Child control added to the radial menu will be automatically layout around its center.
 
 > [!IMPORTANT]
-> 1. Radial menu Default material, expect min of 2 children.</br>
-> 2. Radial Menu supports only `Image` controls as children. do to mouse ray being blocked by mouse capturing UI events elements,</br> This is intentional and will not be changed</br>
-> 3. Radial Menu creates instance of the material with can't be accessed yet (this will be changed).
+> Radial Menu supports only `Image` controls as children. do to mouse ray being blocked by mouse capturing UI events elements,</br> This is intentional and will not be changed</br>
+> Radial Menu creates instance of the material with can't be accessed yet (this will be changed).
 
 ### Sample script
 
@@ -102,6 +110,9 @@ public class RadialMenuUsageExample : Script
 Material assigned to the Radial Menu control can be used to draw the background to display selected and highlighted controls.</br>
 
 #### Default Material
+> [!IMPORTANT]
+> Radial menu Default material, expect min of 2 children.</br>
+
 Default Radial Menu is fully genereted out of math it is not using any textures
 1. Gradient nodes used
     * Cone
@@ -120,7 +131,7 @@ or make youre own</br>
 1. **Material parameters requaierd**</br>
     Ensure material is using following parameters, parameters are controlled by the radial menu
     > [!IMPORTANT]
-    > All paramiters are pefixed with **RadialMenu_**
+    > All paramiters are pefixed with **"RadialMenu_"**
 
     | Parameter     | Description                                                        | type    | Range           |
     |---------------|--------------------------------------------------------------------|---------|-----------------|
