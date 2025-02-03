@@ -34,7 +34,7 @@ Any child control added to the radial menu will be automatically layout around i
 
 > [!NOTE]
 > It's recommended to add children by a script in this mode,
-> index inside RadialMenu.Children array dytets the order of the UI elements,
+> index inside RadialMenu.Children array dictates the order of the UI elements,
 
 ### Material Controller and Layout Controller
 Child control added to the radial menu will be automatically layout around its center.
