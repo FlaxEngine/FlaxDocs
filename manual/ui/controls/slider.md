@@ -9,13 +9,13 @@ The **Slider** responds to a value changed event from the user to change a value
 Here is a c# example of how to get and use a slider's `ValueChanged` event in a script:
 
 ```cs
-public UIControl SliderUIControl;
+public ControlReference<Slider> Slider;
 private Slider _slider;
 
 public override void OnStart()
 {
-    if (SliderUIControl)
-        _slider = SliderUIControl.Get<Slider>();
+    if (Slider)
+        _slider = Slider.Control;
     if (_slider != null)
         _slider.ValueChanged += OnValueChanged;
 }
@@ -28,6 +28,9 @@ private void OnValueChanged()
 public override void OnDestroy()
 {
     if (_slider != null)
+    {
         _slider.ValueChanged -= OnValueChanged;
+        _slider = null;
+    }
 }
 ```
