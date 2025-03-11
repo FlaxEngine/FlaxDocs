@@ -31,6 +31,7 @@ Filters are not case sensitive and can be used together seperated by a `,`.
 |-------|-------|
 | **a:** | Search for Actor by type |
 | **s:** | Search for Actor by attached Script type |
+| **c:** | Search for UIControl by set Control type |
 
 ### Examples
 
@@ -38,6 +39,7 @@ Filters are not case sensitive and can be used together seperated by a `,`.
 - Typing `s:NetworkTransform` will find all of the Actors in the scene that have the Script **NetworkTransform** attached.
 - Typing `a:CharacterController, s:NetworkTransform` will find all of the Actors in the scene that are of type **CharacterController** and have the **NetworkTransform** script attached.
 - Typing `Tom, a:CharacterController, s:NetworkTransform` will find all of the Actors in the scene that are of type **CharacterController**, have the **NetworkTransform** script attached, and have the name of `Tom`.
+- Typing `c:Image` will find all of the UIControls in the scene that have a Control type of **Image**.
 
 ## Shortcuts
 
