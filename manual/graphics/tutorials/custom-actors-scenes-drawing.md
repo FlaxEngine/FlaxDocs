@@ -1,6 +1,6 @@
 # HOWTO: Draw custom set of actors or scenes
 
-By default Flax draws all loaded scenes into the game viewport. There are several ways to incldue or exclude specific objects from being visible such as:
+By default Flax draws all loaded scenes into the game viewport. There are several ways to include or exclude specific objects from being visible such as:
 * Actor enable state (`IsActiveInHierarchy`) - only active actors are visible.
 * Actor layer mask - only actors matching camera's (`RenderLayersMask`) or view's layers mask are visible.
 * Custom actor or scenes set on Scene Render Task (`MainRenderTask.Instance.ActorsSource`).
