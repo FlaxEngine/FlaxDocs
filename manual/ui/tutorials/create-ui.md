@@ -46,30 +46,31 @@ namespace Game
 		public float Health { get; set; } = 100.0f;
 
 		[Tooltip("Reference to the player health progress bar control")]
-		public UIControl HealthBar { get; set; }
+		public ControlReference<ProgressBar> HealthBar { get; set; }
 
 		private ProgressBar _healthBar;
 
 		public override void OnStart()
 		{
-			if (HealthBar == null || !HealthBar.Is<ProgressBar>())
+			// Cache health bar control
+			_healthBar = HealthBar.Control;
+			if (_healthBar == null)
 			{
-				Debug.LogError("Missing or invalid health bar control");
+				Debug.LogError("Missing health bar control");
 				return;
 			}
-
-			_healthBar = HealthBar.Get<ProgressBar>();
 		}
 
 		public override void OnUpdate()
 		{
+			// Control the health value with keys
 			if (Input.GetKey(KeyboardKeys.Q))
 				Health -= 5;
-
 			if (Input.GetKey(KeyboardKeys.E))
 				Health += 5;
-
 			Health = Mathf.Clamp(Health, 0, 100);
+
+			// Update the progress bar
 			_healthBar.Value = Health;
 		}
 	}

@@ -33,7 +33,7 @@ To better showcase both quality and performance improvements of Dynamic Diffuse 
 
 ![Bistro DDGI Rendering in Flax Engine](media/bistro-lighting.png)
 
-[Dynamic Diffuse Global Illumination](../../graphics/lighting/gi/realtime.md) (**DDGI**) is using our custom sorftware-raytracing solution used to draw dynamic lighting. Flax 1.9 adds substantial quality and performance upgrades to this visual. We've added **variable ray-count per-probe** meaning the GI probes outside the view frustum or far from geometry or far from camera origin use less rays per frame. Probes **relocation algorithm applies smooth probe movement** to better adapt in dynamically changing scenes. Also, probes sampling supports fallback from other grid cells which reduces back artifacts. Overall, **DDGI is ready for production** and can be used to achieve **realistic-looking lighting in large-scale games**.
+[Dynamic Diffuse Global Illumination](../../graphics/lighting/gi/realtime.md) (**DDGI**) is using our custom software-raytracing solution used to draw dynamic lighting. Flax 1.9 adds substantial quality and performance upgrades to this visual. We've added **variable ray-count per-probe** meaning the GI probes outside the view frustum or far from geometry or far from camera origin use less rays per frame. Probes **relocation algorithm applies smooth probe movement** to better adapt in dynamically changing scenes. Also, probes sampling supports fallback from other grid cells which reduces back artifacts. Overall, **DDGI is ready for production** and can be used to achieve **realistic-looking lighting in large-scale games**.
 
 To showcase those improvements we've updated our Tech Demo from 2022 which can be downloaded on Steam:
 

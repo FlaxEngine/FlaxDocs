@@ -14,6 +14,8 @@ public override void OnStart()
     var light = new PointLight();
     light.Color = Color.Blue;
     light.Parent = Actor;
+    // object will be part of the scene hierarhcy
+    // engine will destroy it on scene unload
 }
 ```
 # [C++](#tab/code-cpp)
@@ -23,6 +25,8 @@ void ExampleScript::OnStart()
     auto light = New<PointLight>();
     light->Color = Color::Blue;
     light->SetParent(GetActor());
+    // object will be part of the scene hierarhcy
+    // engine will destroy it on scene unload
 }
 ```
 ***
@@ -44,12 +48,14 @@ void ExampleScript::OnStart()
     auto script = New<Player>();
     script->SetParent(GetActor());
     script->HP = 100;
+    // object will be part of the scene hierarhcy
+    // engine will destroy it on scene unload
 }
 ```
 ***
 
 > [!Note]
-> Scene objects (actors, scripts) should **not use constructors** to prevent issues.
+> Scene objects (actors, scripts) should **not use constructors** other than initialize itself (defaults).
 
 ## Removing objects
 
@@ -80,3 +86,17 @@ Destroy(Actor.GetScript<Player>());
 GetActor()->GetScript<ExampleScript>()->DeleteObject();
 ```
 ***
+
+## Language-specific
+
+### C#
+
+Various components and APIs that are specific to C# language use `Dispose()` pattern and implement `IDisposable` interface for convenience. For example:
+* `Control` - GUI controls use `Dispose` method to destroy UI element,
+* `InputAxis`/`InputEvent` - virtual input reading utility has to be released via `Dispose`,
+
+### C++
+
+* Use utility macros: `SAFE_DISPOSE`, `SAFE_RELEASE`, `SAFE_DELETE` to cleanup objects, depending on the method to call.
+* Graphics objects such as `GPUTexture` or `GPUBuffer` can be cleared via `SAFE_DELETE_GPU_RESOURCE` macro. Those are normal scripting objects but invoking `ReleaseGPU` beforehand helps to reduce memory pressure when unused.
+* `Task` system uses automatic auto-destruction of past tasks. There is no need to manually destroy objects after use.

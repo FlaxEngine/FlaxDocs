@@ -29,6 +29,7 @@ The following table lists all the available event functions to override from the
 | **void OnUpdate()** | Called every frame if object is enabled (C++ scripts need to set `_tickUpdate=true` in constructor). |
 | **void OnLateUpdate()** | Called every frame (after *Update*) if object is enabled (C++ scripts need to set `_tickLateUpdate=true` in constructor). |
 | **void OnFixedUpdate()** | Called every fixed framerate frame if object is enabled (C++ scripts need to set `_tickFixedUpdate=true` in constructor). |
+| **void OnLateFixedUpdate()** | Called every fixed framerate frame (after *FixedUpdate*) if object is enabled (C++ scripts need to set `_tickLateFixedUpdate=true` in constructor). |
 | **void OnDebugDraw()** | Called during drawing debug shapes in editor. Use [DebugDraw](https://docs.flaxengine.com/api/FlaxEngine.DebugDraw.html). |
 | **void OnDebugDrawSelected()** | Called during drawing debug shapes in editor when the object is selected. Use [DebugDraw](https://docs.flaxengine.com/api/FlaxEngine.DebugDraw.html). |
 
@@ -46,7 +47,7 @@ Events OnAwake and OnStart can be called only once on a script. OnStart is alway
 
 ### Game Logic
 
-Engine main loop update is highly configurable and supports performing the game update, physics update and drawing at different framerates. This means that update, fixed update, and a draw might be desynchronized and not called in the same order. Event **OnUpdate** is called during the game update, then is followed by **OnLateUpdate**. During physics update engine invokes **OnFixedUpdate**. During rendering engine can invoke **OnDebugDraw** and **OnDebugDrawSelected** (used by the editor).
+Engine main loop update is highly configurable and supports performing the game update, physics update and drawing at different framerates. This means that update, fixed update, and a draw might be desynchronized and not called in the same order. Event **OnUpdate** is called during the game update, then is followed by **OnLateUpdate**. During physics update engine invokes **OnFixedUpdate** and **OnLateFixedUpdate**. During rendering engine can invoke **OnDebugDraw** and **OnDebugDrawSelected** (used by the editor).
 
 ### Deinitialization
 

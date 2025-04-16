@@ -29,7 +29,7 @@ The following table lists the most common attributes with usage description.
 
 | Attribute | Description |
 |--------|--------|
-| **Serialize** | Indicates that a field or a property should be be serialized. |
+| **Serialize** | Indicates that a field or a property should be serialized. |
 | **NoSerialize** | Indicates that a field or a property should not be serialized. |
 | **HideInEditor** | Makes a variable not show up in the editor. |
 | **ShowInEditor** | Makes a variable show up in the editor (even private ones). If used on a private field/property you may also need to add SerializeAttribute to ensure that modified value is being serialized. |

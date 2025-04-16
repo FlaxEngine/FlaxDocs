@@ -24,12 +24,12 @@ Material assigned to the Radial Menu control can be used to draw the background 
 ```cs
 public class RadialMenuUsageExample : Script
 {
-    public Actor ActorRadialMenu;
+    public ControlReference<RadialMenu> ActorRadialMenu;
     private RadialMenu _radialMenu;
 
     public override void OnStart()
     {
-        _radialMenu = ActorRadialMenu.As<UIControl>().Control as RadialMenu;
+        _radialMenu = ActorRadialMenu.Control;
         _radialMenu.Selected += OnOptionSelected;
     }
 

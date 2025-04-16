@@ -52,7 +52,7 @@ When creating complex vehicles (eg. based on Animated Model) you can query wheel
 
 ### Technical details
 
-Vehicles are using *PhysX Vehicles SDK* for driving, suspension and car components simulation (gearbox, engine, clutch, suspension, differential). Many of the exposed properties can be precesly configured to enhance the driving model per-vehicle.
+Vehicles are using *PhysX Vehicles SDK* for driving, suspension and car components simulation (gearbox, engine, clutch, suspension, differential). Many of the exposed properties can be precisely configured to enhance the driving model per-vehicle.
 
 * Maximum amount of wheels used per-vehicle is `20`.
 * `Z` axis is forward.

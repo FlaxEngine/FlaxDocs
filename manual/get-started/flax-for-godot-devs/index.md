@@ -15,9 +15,6 @@ Flax Editor and Godot Editor are very similar. You can see the color-coded, high
 
 ![Flax Editor](../media/flax-layout.png)
 
-> [!Tip]
-> Flax is working on providing large 3D worlds with great performance.
-
 ## Terminology
 
 This section contains the most common terms used in Godot and their Flax equivalents (or rough equivalents). Flax keywords link directly to more in-depth information inside the documentation.

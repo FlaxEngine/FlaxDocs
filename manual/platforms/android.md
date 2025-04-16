@@ -86,7 +86,7 @@ Use `.\adb.exe -d logcat Flax:I *:S` to listen for game logs on device.
 ## Vulkan debugging
 
 * Build Debug build
-* Copy `libVkLayer_khronos_validation.so` (optionally other validation libs) from `NDK/sources/third_party/vulkan/src/build-android/jniLibs/arm64-v8a` to output Gradle project libs folder (`<output>/app/jniLibs/arm64-v8a`)
+* Copy `libVkLayer_khronos_validation.so` (optionally other validation libs) from `NDK/sources/third_party/vulkan/src/build-android/jniLibs/arm64-v8a` or from [official website](https://developer.android.com/ndk/guides/graphics/validation-layer) to output Gradle project libs folder (`<output>/app/jniLibs/arm64-v8a`)
 * Monitor adb output log with Vulkan Validation layer logs
 * Note that game performance will be lower (esp. CPU) due to additional validation of the GPU commands
 
