@@ -1,6 +1,6 @@
 # Debug Commands
 
-`DebugCommand` is an attribute that can be placed on classes, fields, methods, and properties to expose them to Debug Commands interface which can be used for configuration, modding, or tooling.
+`DebugCommand` is an attribute that can be placed on classes, fields, methods, and properties to expose them for configuration, modding, or tooling.
 
 > [!TIP]
 > Only `static` members can be used in debug commands.
