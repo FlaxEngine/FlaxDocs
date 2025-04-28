@@ -31,7 +31,7 @@ There are several ways to do it. You can right-click and choose the Animation no
 
 ![Anim Graph Playback](media/anim-walk-playback.gif)
 
-The final step is to connect the animation node with the Anim Grap output node. Then you can see your animation being played. To learn how to use it in a game see the next tutorial: [How to use Anim Graph](use-anim-graph.md).
+The final step is to connect the animation node with the Anim Graph output node. Then you can see your animation being played. To learn how to use it in a game see the next tutorial: [How to use Anim Graph](use-anim-graph.md).
 
 
 

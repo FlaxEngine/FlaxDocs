@@ -1,6 +1,6 @@
 # Shaders
 
-Shaders are **GPU program** resources which can run on the GPU and are able to perform rendering calculation using textures, vertices and other resources. Follow this documentation to learn more about wrtting and using shaders in your projects.
+Shaders are **GPU program** resources which can run on the GPU and are able to perform rendering calculation using textures, vertices and other resources. Follow this documentation to learn more about writing and using shaders in your projects.
 
 ## Graphics rendering
 
@@ -76,13 +76,13 @@ The problem is that we have to create a set of different **variations of this sh
 4) Without specular, with IES Profile.
 
 However we don’t want to write 4 shaders but single one and just permutate it.
-That’s why we use macros *META_PERMUTATION_2*. Then we can simply compile shader with different sets of macros (eg. *NO_SPECULAR=1*, *USE_IES_PROFILE=0*) and generate different shaders from the same source code. The key to success is that we use data-oriented design and define all possible shader permutation statically in a shader. Later at runtime we just select desire permutation by index and use it in rendering code. This approach is low-overhead and doesn't generate unnessesery permutations but only the ones delcared by the user.
+That’s why we use macros *META_PERMUTATION_2*. Then we can simply compile shader with different sets of macros (eg. *NO_SPECULAR=1*, *USE_IES_PROFILE=0*) and generate different shaders from the same source code. The key to success is that we use data-oriented design and define all possible shader permutation statically in a shader. Later at runtime we just select desire permutation by index and use it in rendering code. This approach is low-overhead and doesn't generate unnecessary permutations but only the ones declared by the user.
 
-Also, if your code needs to be used just for a single shader function use macro `_<function_name>` (eg. `_CS_Sort`). In that way also resources used just by this function (eg. buffer slot or texture slot) can be exlucded from other functions compilation.
+Also, if your code needs to be used just for a single shader function use macro `_<function_name>` (eg. `_CS_Sort`). In that way also resources used just by this function (eg. buffer slot or texture slot) can be excluded from other functions compilation.
 
 #### Including shader files
 
-Shader sources are stored in `.shader` files. Each file can contain one or more shader functions for the certain graphics rendering implementation. Hovewer when building complex graphics pipeline you might need to split some functionalities into several utility files. For this case, `.hlsl` files can be used as they can contain custom code to be included. Flax supports including files with a following pattern:
+Shader sources are stored in `.shader` files. Each file can contain one or more shader functions for the certain graphics rendering implementation. However when building complex graphics pipeline you might need to split some functionalities into several utility files. For this case, `.hlsl` files can be used as they can contain custom code to be included. Flax supports including files with a following pattern:
 
 ```hlsl
 #include "./<project_name>/<file_path>.hlsl"
