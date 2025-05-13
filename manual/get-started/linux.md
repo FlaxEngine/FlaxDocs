@@ -46,7 +46,7 @@ For information about supported platforms, see [Platforms](../platforms/index.md
 
 ## Command line access
 
-Ig you're using laptop with integrated GPU and you want Flax to run on dedicated GPU for more power you can use command line switches to instruct engine to select a desire GPU based on the manufacturer:
+Ig you're using laptop with integrated GPU, and you want Flax to run on dedicated GPU for more power, you can use command line switches to instruct engine to select a desire GPU based on the manufacturer:
 
 | Option | Description |
 |-------|-------|
@@ -70,4 +70,11 @@ To help you start using Flax pick the latest Flax Samples from [https://github.c
 
 ## New project
 
-To create a new project to run Flax Editor executable as follows `./FlaxEditor -new -project <new_project_path>` to create a new project inside a specified folder. Editor will generate a project template and open it.
+To create a new project to run Flax Editor executable as follows:
+
+```
+./FlaxEditor -new -project <"new_project_path">
+``` 
+This will create a new project inside the specified folder. The Editor will generate a project template and open it.
+
+*In case the Editor informs that a script compilation failure has ocurred, remember to set `Binaries/Tools/Flax.Build` as executable.
