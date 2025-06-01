@@ -27,7 +27,7 @@ You can create as many physics settings as you want (even special versions per p
 
 | Property | Description |
 |--------|--------|
-| **Default Gravity** | The default gravity force value (in cm^2/s). |
+| **Default Gravity** | The default gravity value (in cm/(s^2)). |
 | **Queries Hit Triggers** | If checked, any [raycast](raycasting.md) or other scene query that intersects with a collider marked as a trigger will returns with a hit. Individual raycasts can override this behavior. |
 | **Triangle Mesh Triangle Min Area Threshold** | Triangles from triangle meshes (CSG) with an area less than or equal to this value will be removed from physics collision data. Set to less than or equal 0 to disable. |
 | **Bounce Threshold Velocity** | Minimum relative velocity required for an object to bounce. A typical value for simulation stability is about 0.2 * gravity. |
