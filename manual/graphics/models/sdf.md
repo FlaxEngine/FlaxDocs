@@ -27,7 +27,7 @@ A model asset can contain an SDF texture baked for the meshes which can be creat
 
 ![Model Import SDF Generate Option](media/model-sdf-import-settings.png)
 
-When importing model assets you can check the **Generate SDF** option to automatically calculate an SDF texture for eveyr imported model file. In projects that use DDGI or Global SDF you can enable the **Generate SDF On Model Import** option in [Graphics Settings](../../editor/game-settings/graphics-settings.md) which will change the default model import value to always generate SDFs on model import.
+When importing model assets you can check the **Generate SDF** option to automatically calculate an SDF texture for every imported model file. In projects that use DDGI or Global SDF you can enable the **Generate SDF On Model Import** option in [Graphics Settings](../../editor/game-settings/graphics-settings.md) which will change the default model import value to always generate SDFs on model import.
 
 ![Model SDF option in Game Settings](media/model-sdf-option-setting.png)
 
