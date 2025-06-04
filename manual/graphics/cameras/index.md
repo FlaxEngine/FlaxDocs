@@ -2,7 +2,7 @@
 
 ![Camera](media/camera.png)
 
-**Camera** captures the scene and displays it to the user. It defines a view in screen space. A camera's position and rotaton define the *viewport* and *view direction*. Those properties are used to render scene objects and present them to the user.
+**Camera** captures the scene and displays it to the user. It defines a view in screen space. A camera's position and rotation define the *viewport* and *view direction*. Those properties are used to render scene objects and present them to the user.
 
 ## Changing the active camera
 
@@ -41,7 +41,7 @@ To learn more about the C# scripting API see the [Camera](http://docs.flaxengine
 
 ## Camera properties
 
-![Camera Propertiess](media/camera-properties.png)
+![Camera Properties](media/camera-properties.png)
 
 | Property | Description |
 |--------|--------|
@@ -116,7 +116,7 @@ Then, the renderer will use `R16G16B16A16` format for the image textures and pas
 
 ## Override view
 
-Flax uses an extensible RenderTask system for high-level rendering achitecture. By default a game uses the `MainRenderTask.Instance` to drive the scene rendering into the main game viewport. You can use it to plug into the rendering pipeline for custom effects, rendering or view override.
+Flax uses an extensible RenderTask system for high-level rendering architecture. By default a game uses the `MainRenderTask.Instance` to drive the scene rendering into the main game viewport. You can use it to plug into the rendering pipeline for custom effects, rendering or view override.
 
 # [C#](#tab/code-csharp)
 ```cs
