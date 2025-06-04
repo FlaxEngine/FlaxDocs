@@ -9,7 +9,7 @@ The rendering system in Flax Engine uses the full power of the latest Graphics A
 
 Single frame rendering flow is shown in a graph below.
 
-<!-- ![Rendering Flow](media/RenderingFlow.jpg) -->
+![Rendering Flow](media/RenderingFlow.jpg)
 
 ## Upscaling with Rendering Percentage
 
