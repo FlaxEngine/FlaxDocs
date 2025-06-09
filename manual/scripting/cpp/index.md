@@ -19,7 +19,7 @@ Visit **[C++ API Reference](../../../api-cpp/index.md)** to learn about scriptin
 
 ## Setup
 
-Flax Editor contains a build-in C# compiler for scripts but for C\+\+ scripting the platform-dependent toolset is required to be installed on the machine. Every platform uses its own native tools. To learn about them see this [page](../../platforms/index.md). Below you can learn quickly how to set it up depending on your platform.
+Flax Editor contains a built-in C# compiler for scripts but for C\+\+ scripting the platform-dependent toolset is required to be installed on the machine. Every platform uses its own native tools. To learn about them see this [page](../../platforms/index.md). Below you can learn quickly how to set it up depending on your platform.
 
 ### Windows
 
