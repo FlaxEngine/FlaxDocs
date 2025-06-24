@@ -58,3 +58,15 @@ Brush that draws a linear, two-color gradient between top and bottom edges of th
 ![9 Slicing Brush](media/9slicing.gif)
 
 9-slicing is used by *Texture 9-Slicing* brush and *Sprite 9-Slicing* brush. To set up those brushes adjust the **Border** property that defines the image borders in texture space (0-1 range). **Border Size** defines the pixel size of the borders. You can use debug checkbox **Show Borders** to display a 9-slicing borders rectangle. It helps when adjusting the settings.
+
+# Video Brush
+
+Video Brush displays image from Video Player inside UI element use. Video Brush needs a reference to the Video Player to access GPU Texture - assign it via `Player` property. Learn more [here](../../graphics/video/index.md).
+
+![Edit Video Brush](../../graphics/video/media/video-brush-edit.png)
+
+# UI Brush
+
+UI Brush uses the brush defined in UI Brush Asset. This allows to define UI styling inside json asset. To use it, **create a new Json Asset**, then select `UIBrushAsset` and confirm. Open that new asset and edit Brush property. Then you can assign that asset to `UI Brush`, which will display it.
+
+![UI Brush](media/ui-brush.png)
