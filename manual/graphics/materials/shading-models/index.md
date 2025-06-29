@@ -24,3 +24,13 @@ The default lit material is the most common choice for material surfaces. It can
 The **Subsurface** shading model is intended to be used by materials like skin, jade, wax or foliage. It works similar to *Lit*, except it supports light scattering through the material. This can be controlled by the **Subsurface Color** input which defines the color of the material's internal volume and the **Opacity** input that describes the material's local thickness (value 1 means fully opaque, value 0 means light can easily pass through). The default opacity value is *1*, which does not result in a very convincing effect. Use values closer to 0 to give more transparency for light scattering (eg. `0.1`).
 
 ![Subsurface Material](media/subsurface.png)
+
+## Foliage
+
+The **Foliage** shading model is similar to Subsurface except it's made directly for foliage surfaces such as leaves and brushes that are usually thinner.
+
+## Custom Lit
+
+**Custom Lit** shading model provides whole lighting information within a shader and allows implementing custom shading. It has access to the scene lights data during both GBuffer and Forward pass rendering, thus it can be used to implement [Cel Shading](../../shaders/cel-shading.md).
+
+![Cel Shading with Custom Lit](../../shaders/media/cel-shading-material.png)

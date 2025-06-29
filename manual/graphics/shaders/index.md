@@ -104,4 +104,5 @@ To learn how to use shaders in your projects follow the documentation and tutori
 * [Custom Fullscreen Shader](custom-fullscreen-shader.md)
 * [Custom Geometry Drawing](custom-geometry-drawing.md)
 * [Custom Compute Shader](custom-compute-shader.md)
+* [Cel Shading](cel-shading.md)
 * [Graphics API](graphics-api.md)

@@ -154,6 +154,7 @@
 ### [Custom Fullscreen Shader](graphics/shaders/custom-fullscreen-shader.md)
 ### [Custom Geometry Drawing](graphics/shaders/custom-geometry-drawing.md)
 ### [Custom Compute Shader](graphics/shaders/custom-compute-shader.md)
+### [Cel Shading](graphics/shaders/cel-shading.md)
 ### [Graphics API](graphics/shaders/graphics-api.md)
 ## [Video](graphics/video/index.md)
 ## [Debugging tools](graphics/debugging-tools/index.md)
