@@ -48,3 +48,9 @@ Tracy supports automatic instrumentation of the profiled code without injecting 
 ![Tracy Profiler Flax Engine](media/tracy-memory-profiling.png)
 
 Flax automatically captures the callstack for memory allocations and frees. This can be used in Tracy profiler app to analyze memory usage.
+
+## GPU Profiling
+
+![Tracy GPU Profiler Flax Engine](media/tracy-gpu.png)
+
+D3D11, D3D12 and Vulkan graphics APIs are supported in GPU performance timeline. Integration automatically inserts timer queries to calculate duration of various events. Additionally Tracy provides functionality to show CPU section that corresponds to the given GPU work event. This can be used to profile rendering performance on connected devices.
