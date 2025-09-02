@@ -98,6 +98,7 @@ public class WeaponRenderer : PostProcessEffect
             IsCustomRendering = true, // Don't use automatic rendering but manually schedule rendering
             Output = _outputTexture,
         };
+        _renderingTask.Buffers.LinkedCustomBuffers = MainRenderTask.Instance.Buffers;
         _renderingTask.Buffers.UseAlpha = true;
 
         // Create PSO that will draw weapon over the scene (rendered weapon is alpha-masked)
