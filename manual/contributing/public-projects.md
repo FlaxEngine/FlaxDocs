@@ -40,3 +40,5 @@ Flax Engine is very extensible which allows developers to create custom solution
 * [FlaxCustomAttributes](https://github.com/FlaxCommunityProjects/FlaxCustomAttributes) - Custom C# attributes usage utility for Editor
 * [HeroCrab Plugin](https://github.com/herocrab/HeroCrabPlugin) - Authoritative network messaging framework for use in multi-player games
 * [RmlUi](https://github.com/GoaLitiuM/RmlUi) - HTML/CSS user interface library `RmlUi` wrapper ([samples](https://github.com/GoaLitiuM/FlaxRmlUiSamples))
+* [Flax FMOD](https://github.com/Tryibion/FlaxFmod) - FMOD audio library integration
+* [Flax Simple Save System](https://github.com/Tryibion/FlaxSimpleSaveSystem) - save system that includes save slots, encryption, hashing, and data caching.
