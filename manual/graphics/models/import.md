@@ -91,6 +91,10 @@ Flax uses the same import settings data schemes for **models**, **skinned models
 | **Collision Meshes Prefix** | If specified, all meshes that starts with this prefix in the name will be imported as a separate collision data asset (excluded used for rendering). |
 | **Collision Type** | The type of collision that should be generated if the mesh has a collision prefix specified. |
 |||
+| **Data Format** ||
+| **Position Format** | The imported vertex positions data format to use by meshes. Changing this affects memory usage of the mesh data, performance and overall quality. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Float32**</td><td>XYZ channels with 32-bit precision (12 bytes per vertex).</td></tr><tr><td>**Float16**</td><td>XYZ(W) channels with 16-bit precision (8 bytes per vertex).</td></tr><tr><td>**Automatic**</td><td>Selects the most memory-efficient format that can represent positions within a max error defined in project Build Settings.</td></tr></table></tbody>|
+| **Tex Coord Format** | The imported vertex texture coordinates data format to use by meshes. Changing this affects memory usage of the mesh data, performance and overall quality. Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Float16**</td><td>XY channels with 16-bit precision (4 bytes per vertex).</td></tr><tr><td>**UNorm8**</td><td>XY channels with 8-bit precision (2 bytes per vertex). Valid only for normalized UVs within range [0; 1], scaled or negative UVs won't work.</td></tr></table></tbody>|
+|||
 | **Transform** ||
 | **Scale** | Custom uniform scale applied to the imported model data. |
 | **Rotation** | Custom import geometry rotation applied to the imported model data. |

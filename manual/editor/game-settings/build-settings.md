@@ -23,6 +23,7 @@ For editing and using presets see [Game Cooker window](../game-cooker/index.md) 
 | **Shaders No Optimize** | Disables shader compiler optimizations in the cooked game. Can be used to debug shaders on a target platform or to speed up the shaders compilation time. |
 | **Shaders Generate Debug Data** | Enables shader debug data generation for shaders in cooked game (depends on the target platform rendering backend). |
 | **Skip Default Fonts** | If checked, skips bundling default engine fonts for UI. Use if to reduce build size if you don't use default engine fonts but custom ones only. |
+| **Max Mesh Position Error** | The maximum acceptable mesh vertex position error (in world units) for data quantization. Use `0` to disable this feature. Affects meshes during import (or reimpport). |
 |||
 | **Skip .NET Runtime Packaging** | If checked, .NET Runtime won't be packaged with a game and will be required by user to be installed on system upon running game build. Available only on supported platforms such as Windows, Linux and macOS. |
 | **Skip Unused .NET Runtime Libs Packaging** | If checked, .NET Runtime packaging will skip unused libraries from packaging resulting in smaller game builds. |
