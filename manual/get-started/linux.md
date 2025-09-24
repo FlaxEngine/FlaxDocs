@@ -8,6 +8,10 @@ You can get Flax from your [Download](https://flaxengine.com/download/) page, or
 
 The Editor executable is located in folder `Binaries/Editor/Linux/Development/FlaxEditor` (you can use also Debug or Release configuration if you want).
 
+### Third Party Launchers
+
+* [Seed](https://github.com/MineBill/Seed) - Seed is a cross-platform launcher for Flax that manages multiple engine versions and projects.
+
 ## Requirements
 
 For developers using Flax Editor on Linux platforms the requirements are:
