@@ -173,6 +173,7 @@
 ## [Create and use a script](scripting/new-script.md)
 ## [Script properties and fields](scripting/properties.md)
 ## [Script events](scripting/events.md)
+
 ## [Accessing scene objects](scripting/scene-objects.md)
 ## [Creating and destroying objects](scripting/objects-lifetime.md)
 ## [Attributes](scripting/attributes.md)
@@ -183,6 +184,10 @@
 ## [Scripts serialization](scripting/serialization/index.md)
 ## [Empty Actor](scripting/empty-actor.md)
 ## [Engine API](scripting/engine-api.md)
+## [Coroutines](scripting/coroutines/coroutines.md)
+### [Basics of Coroutines](scripting/coroutines/coroutines-basics.md)
+### [Advanced Scenarios](scripting/coroutines/coroutines-advanced.md)
+### [Rationale](scripting/coroutines/coroutines-rationale.md)
 ## [Custom Editors](scripting/custom-editors/index.md)
 ### [Custom script editor](scripting/tutorials/custom-editor.md)
 ### [Attributes](scripting/custom-editors/attributes.md)
