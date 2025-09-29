@@ -91,7 +91,7 @@ As you can see, the script registers in `OnEnable` and disposes in `OnDisable`. 
 
 Then **add script** to a model actor on scene and **assign the Outline Material** created in step 2 to **Outline Material** property. 
 
-## 4. See results
+## 3. See results
 
 Once you setup material, script and add it to a scene model you should be able to see the outline pass working (under game mode). In case of problems see *Output Log* window in Editor as it may contain any compilation errors.
 
