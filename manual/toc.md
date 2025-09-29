@@ -60,6 +60,7 @@
 ### [API Tags](editor/flax-build/api-tags.md)
 ### [Plugins](editor/flax-build/plugins.md)
 ### [Guide](editor/flax-build/guide.md)
+### [Nuget Packages](editor/flax-build/nuget-packages.md)
 ## [Editor Options](editor/options/index.md)
 ## [Profiling](editor/profiling/index.md)
 ### [Profiler](editor/profiling/profiler.md)

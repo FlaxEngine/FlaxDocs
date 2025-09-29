@@ -2,9 +2,17 @@
 
 ![Camera](media/camera.png)
 
-**Camera** captures the scene and displays it to the user. It defines a view in screen space. A camera's position and rotaton define the *viewport* and *view direction*. Those properties are used to render scene objects and present them to the user.
+**Camera** captures the scene and displays it to the user. It defines a view in screen space. A camera's position and rotation define the *viewport* and *view direction*. Those properties are used to render scene objects and present them to the user.
+
+## Changing the active camera
 
 Flax Engine allows to create an unlimited amount of cameras in scenes while the [main one](http://docs.flaxengine.com/api/FlaxEngine.Camera.html#FlaxEngine_Camera_MainCamera) is used for the final frame rendering.
+
+To change the camera used for rendering, you can use the following code, where `MyCamera` is the camera you want to change to:
+
+```cs
+Camera.OverrideMainCamera = MyCamera;
+```
 
 ## Creating a camera in the editor
 
@@ -33,18 +41,20 @@ To learn more about the C# scripting API see the [Camera](http://docs.flaxengine
 
 ## Camera properties
 
-![Camera Propertiess](media/camera-properties.png)
+![Camera Properties](media/camera-properties.png)
 
 | Property | Description |
 |--------|--------|
-| **Field Of View** | The vertical field of view (in degrees) used for perspective projection. |
 | **Use Perspective** | If checked, camera will use perspective projection, otherwise orthographic. |
+| **Field Of View** | The vertical field of view (in degrees) used for perspective projection. |
 | **Near Plane** | The nearest point the camera can see (near clipping plane). |
 | **Far Plane** | The furthest point the camera can see (far clipping plane). |
 | **Custom Aspect Ratio** | Custom aspect ratio you specify. Otherwise, automatically adjust the aspect ratio to the render target ratio. Use value 0 to disable it. |
-| **Orthographic Size** | The orthographic projection view height (width is based on the aspect ratio). Use `0` for size to be based on the viewport size. |
-| **Orthographic Scale** | Additional scale used for the orthographic projection size. This has the effect of zooming in and out. |
+| **Orthographic Size** | *Only visible when **Use Perspective** is false.* The orthographic projection view height (width is based on the aspect ratio). Use `0` for size to be based on the viewport size. |
+| **Orthographic Scale** | *Only visible when **Use Perspective** is false.* Additional scale used for the orthographic projection size. This has the effect of zooming in and out. |
 | **Render Layers Mask** | The layers mask used for rendering using this camera. Can be used to include or exclude specific actor layers from the drawing. |
+| **Render Flags** | Frame rendering flags used to switch between graphics features for this camera. See [ViewFlags](https://docs.flaxengine.com/api/FlaxEngine.ViewFlags.html) api reference. |
+| **Render Mode** | Describes frame rendering modes for this camera. See [ViewMode](https://docs.flaxengine.com/api/FlaxEngine.ViewMode.html). |
 
 ## Masking object layers
 
@@ -106,7 +116,7 @@ Then, the renderer will use `R16G16B16A16` format for the image textures and pas
 
 ## Override view
 
-Flax uses an extensible RenderTask system for high-level rendering achitecture. By default a game uses the `MainRenderTask.Instance` to drive the scene rendering into the main game viewport. You can use it to plug into the rendering pipeline for custom effects, rendering or view override.
+Flax uses an extensible RenderTask system for high-level rendering architecture. By default a game uses the `MainRenderTask.Instance` to drive the scene rendering into the main game viewport. You can use it to plug into the rendering pipeline for custom effects, rendering or view override.
 
 # [C#](#tab/code-csharp)
 ```cs
