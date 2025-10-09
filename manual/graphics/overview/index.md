@@ -17,11 +17,28 @@ Flax supports performing scene rendering in lower resolution and upscaling the i
 
 Flax performs upscaling by default using Catmull-Rom filtering with 9-taps. For more advanced upscaling you can use the open-source [AMD FidelityFX Super Resolution plugin for Flax Engine](https://github.com/FlaxEngine/FidelityFX-FSR).
 
-### Get available screen resolutions
-You can get the available [screen resolutions and refresh rates](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.VideoOutputMode.html) like this:
+## Available Display Resolutions
 
+You can get the available [screen resolutions and refresh rates](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.VideoOutputMode.html) using the following code:
+
+# [C#](#tab/code-csharp)
 ```cs
+// Monitors
+GPUDevice.VideoOutput[] outputs = GPUDevice.Instance.VideoOutputs;
+
+// Fullscreen modes (VideoOutputIndex maps mode into specific output)
 GPUDevice.VideoOutputMode[] outputModes = GPUDevice.Instance.VideoOutputModes;
 ```
+# [C++](#tab/code-cpp)
+```cpp
+#include "Engine/Graphics/GPUDevice.h"
+
+// Monitors
+const Array<GPUDevice::VideoOutput>& outputs = GPUDevice::Instance->VideoOutputs;
+
+// Fullscreen modes (VideoOutputIndex maps mode into specific output)
+const Array<GPUDevice::VideoOutputMode>& outputModes = GPUDevice::Instance->VideoOutputModes;
+```
+***
 
 Depending on the connected screen(s), the same resolution might be available more than once, but with different refresh rates. If you only care about the resolutions and not the refresh rates, you will have to do some custom filtering to ensure that each resolution only exists once.
