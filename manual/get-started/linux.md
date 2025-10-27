@@ -18,7 +18,7 @@ For developers using Flax Editor on Linux platforms the requirements are:
 
 | | Recommended |
 |-------|-------|
-| Tested operating systems | Ubuntu 23 or above |
+| Tested operating systems | Ubuntu 24 or above |
 | Processor | Quad-core or more, 2 GHz or faster |
 | RAM | 4 GB or more |
 | Hard drive space | 1 GB minimum |
