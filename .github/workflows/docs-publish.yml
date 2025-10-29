@@ -54,7 +54,7 @@ jobs:
           cd FlaxEngine
           git reset --hard $(cat ../commit.txt)
           git lfs pull
-          ./Development/Scripts/Linux/CallBuildTool.sh -log -arch=x64 -configuration=Development -platform=Windows -buildtargets=FlaxEditor -build -BuildBindingsOnly
+          ./Development/Scripts/Linux/CallBuildTool.sh -log -arch=x64 -configuration=Development -platform=Windows -buildtargets=FlaxEditor -build -dotnet=8 -BuildBindingsOnly
           cd ..
           mono docfx/docfx.exe metadata
           mono code2yaml/code2yaml.exe code2yaml.json
