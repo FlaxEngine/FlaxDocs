@@ -26,8 +26,11 @@ This feature comes with a set of great tools, such as Editor's Profiler integrat
 
 ### GPU Particles Performance Improvements
 
+<center>
 <video src="media/flax-game-particles.mp4" autoplay muted loop width="100%"></video>
-| Game made with Flax running on Nintendo Switch
+<em>Game made with Flax running on Nintendo Switch.</em>
+</center><br>
+
 
 If your project utilizes GPU particles then on 1.11 it should run a lot of faster! Both rendering and simulation have been refactored to scale better across different hardware. GPU particles sortings run parallel and has very fast-path for small emitters (less than `2048` particles). Finally, GPU execution has been improved by using **UAV overlaps and more optimized memory barriers**.
 
@@ -49,8 +52,11 @@ For this release, we added integration of GPU profiling with [Tracy](../../edito
 
 ### Visject Improvements
 
-<video src="media/node-formatting-tools.mp4" autoplay muted loop height="400"></video>
-| New node formatting options
+<center>
+<video src="media/node-formatting-tools.mp4" autoplay muted loop height="400" />
+<em>New node formatting options</em>
+</center><br>
+
 
 Flax has its own graph editing tools, called Visject. It is used in many areas of the engine, from materials and particles to animations. In 1.11, a lot of new features were added and a lot of already existing ones were improved, making assets that use Visject **even quicker and easy to edit**.
 
@@ -86,14 +92,20 @@ The layers matrix could become quite hard to read when there are lots of layers 
 
 ### Threading Improvements
 
+<center>
 <video src="media/falling-boxes.mp4" autoplay muted loop width="100%"></video>
-| 10,000 falling boxes
+<em>10,000 falling boxes</em>
+</center><br>
 
-We've improved many engine parts to use multi-threading more often. Especially, physics simulation results processing, content streaming processing, particles and much more. In the sample falling boxes project, the lowest FPS ancounted when all `10,000` boxes collide went up from average `47fps` to `75fps`. This shows how **engine scales better in large projects** were object count grows exponentionally to meet visual fidelity.
+
+We improved many engine parts to use multi-threading more often. Especially, physics simulation results processing, content streaming processing, particles and much more. In the sample falling boxes project, the lowest FPS ancounted when all `10,000` boxes collide went up from average `47fps` to `75fps`. This shows how **engine scales better in large projects** were object count grows exponentionally to meet visual fidelity.
 
 ### GPU Texture Preview
 
+<center>
 <video src="media/gputexture.mp4" autoplay muted loop height="200"></video>
+</center><br>
+
 
 When exposing a `GPUTexture` to the Properties Panel it will now show a preview as long as something is rendered to it.
 
