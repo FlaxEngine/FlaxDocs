@@ -4,6 +4,7 @@ Visit **[C# API Reference](../../../api-csharp/index.md)** to learn about script
 
 ## In this section
 
+* [Project file management](project-file-management.md)
 * [Nuget Packages](nuget-packages.md)
 * [Restrictions](restrictions.md)
 

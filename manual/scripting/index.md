@@ -60,6 +60,7 @@ To start visual scripting see the related documentation [here](visual/index.md).
   * [Attributes](custom-editors/attributes.md)
 * [Preprocessor variables](preprocessor.md)
 * [C# Scripting](csharp/index.md)
+  * [Project file management](csharp/project-file-management.md)
   * [Nuget Packages](csharp/nuget-packages.md)
   * [Scripting Restrictions](csharp/restrictions.md)
 * [C++ Scripting](cpp/index.md)

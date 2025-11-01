@@ -188,6 +188,7 @@
 ### [Attributes](scripting/custom-editors/attributes.md)
 ## [Preprocessor variables](scripting/preprocessor.md)
 ## [C# Scripting](scripting/charp/index.md)
+### [Project file management](scripting/csharp/project-file-management.md)
 ### [Nuget Packages](scripting/csharp/nuget-packages.md)
 ### [Scripting Restrictions](scripting/csharp/restrictions.md)
 ## [C++ Scripting](scripting/cpp/index.md)
