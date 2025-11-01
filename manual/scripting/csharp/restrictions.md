@@ -14,6 +14,10 @@ Flax tries to implement all the engine features and scripting APIs across all su
 - System.Reflection.Metadata.dll
 - System.Web.Extensions.Design.dll
 
+## Static variables in editor
+
+Static variables may behave differently when running the scripts in editor compared to running the cooked game. The static variables are usually initialized when the scripting assemblies are loaded and used for the first time, but Flax Editor may not always reload the assemblies between runs (unless recompilation is needed), so the values from previous runs are retained. There are many ways to work around this by using [Game Plugins](../plugins/index.md) to manage state or subscribing to `FlaxEditor.Editor.Instance.PlayModeBeginning` event which is called right before entering play mode.
+
 ## Ahead-of-time compile
 
 Ahead-of-time (**AOT**) compile is a technique used to precompile all the managed code during game building process instead of using just-in-time (**JIT**) compilation on the target device. That's because some platforms do not allow runtime code generation. In most cases this has no effect on game scripting but in a few specific cases, AOT platforms require additional consideration.
