@@ -1,6 +1,6 @@
 # Project file management
 
-Flax.Build tool generates the required C# project files expected for the configured Code Editor, which usually uses the .csproj-file format accompanied with Visual Studio .sln-solution files. The code editor can then use these files to provide code completion and other features language server features to help the user navigate around the codebase.
+Flax.Build tool generates the required C# project files expected for the configured Code Editor, which usually uses the .csproj-file format accompanied with Visual Studio .sln-solution files. The code editor can then use these files to provide code completion and other features language server features to help the user navigate around the codebase. The compilation process does not use MSBuild which uses .csproj-files but rather compiles the source files directly with the C#-compiler using the module and build target configuration files.
 
 As these files are constantly regenerated after modifying the module files or adding new source files, any permanent modifications to the generated .csproj-file should be avoided. The expected place to do these modifications are in the [module configuration files](../../editor/flax-build/index.md) (eg. `Game.Build.cd`), which are used to configure the project file generation process.
 
