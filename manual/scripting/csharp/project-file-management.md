@@ -8,7 +8,7 @@ As these files are constantly regenerated after modifying the module files or ad
 
 `/Source/Game/MyScript.cs(32,13,32,18): error CS1069: The type name 'Regex' could not be found in the namespace 'System.Text.RegularExpressions'. This type has been forwarded to assembly 'System.Text.RegularExpressions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' Consider adding a reference to that assembly.`
 
-When scripting requires referencing other common system references, we can modify the module build file (eg. `Game.Build.cd`) in the following way to add the reference to the required assembly:
+When scripting requires referencing other common system references, we can modify the module build file (eg. `Game.Build.cs`) in the following way to add the reference to the required assembly:
 ```cs
 public override void Setup(BuildOptions options)
 {
