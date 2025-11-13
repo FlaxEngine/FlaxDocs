@@ -25,7 +25,6 @@ This documentation section covers most of the topics related to Flax.Build tool.
 * [API tags](api-tags.md)
 * [Build Plugin](plugins.md)
 * [Build Tool Guide](guide.md)
-* [Nuget Packages](nuget-packages.md)
 
 ## Build Scripts
 
