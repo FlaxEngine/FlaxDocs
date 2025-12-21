@@ -47,7 +47,7 @@ using FlaxEngine.GUI;
 public class MainMenu : Script
 {
 	[Tooltip("The menu buttons.")]
-	public List<ControlReference<UIControl>> Buttons;
+	public List<ControlReference<Button>> Buttons;
 
 	public override void OnStart()
 	{
