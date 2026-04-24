@@ -41,3 +41,64 @@ public override void OnUpdate()
 ```
 
 When creating pause menu or game main menu you can use `Engine.FocusGameViewport()` method which focuses the game window and allows player to use UI Navigation (eg. with gamepad or Tab) within the opened UI panel.
+
+### Cursor image
+
+Depending on the platform, mouse cursor can have a custom image. Use `Window.LoadCursorImage` to load cursor from texture data (or from `.cur`/`.ani` file on Windows). Then you can call `SetCursorImage` on game window and shoow it by changing cursor to `CursorType.Image`. See the example code below:
+
+```cs
+public class TestCursor : Script
+{
+    private IntPtr _cursorFromFile;
+    private IntPtr _cursorFromTexture;
+
+    public Texture CursorFromTexture;
+
+    public override void OnEnable()
+    {
+        // Load cursor from file 'Content/cursor1.cur'
+        _cursorFromFile = Window.LoadCursorImage(Path.Combine(Globals.ProjectContentFolder, "cursor1.cur"));
+
+        // Load cursor from texture data (use uncompressed image)
+        var textureData = CursorFromTexture.GetTextureData();
+        var hotSpot = Int2.Zero;
+        _cursorFromTexture = Window.LoadCursorImage(textureData, hotSpot);
+    }
+
+    public override void OnDisable()
+    {
+        // Ensure to destroy unsued resources
+        Window.DestroyCursorImage(_cursorFromFile);
+        Window.DestroyCursorImage(_cursorFromTexture);
+    }
+
+    /// <inheritdoc/>
+    public override void OnUpdate()
+    {
+        // Get current game window (works in both Editor and cooked Game)
+        var win = RootControl.GameRoot.RootWindow.Window;
+
+        // Toggle cursor visibility Q/W keys
+        if (Input.GetKeyDown(KeyboardKeys.Q))
+            Screen.CursorVisible = true;
+        if (Input.GetKeyDown(KeyboardKeys.W))
+            Screen.CursorVisible = false;
+
+        // Change cursor type 1-3 keys
+        if (Input.GetKeyDown(KeyboardKeys.Alpha1))
+        {
+            win.Cursor = CursorType.Default;
+        }
+        if (Input.GetKeyDown(KeyboardKeys.Alpha2))
+        {
+            win.Cursor = CursorType.Image;
+            win.CursorImage = _cursorFromFile;
+        }
+        if (Input.GetKeyDown(KeyboardKeys.Alpha3))
+        {
+            win.Cursor = CursorType.Image;
+            win.CursorImage = _cursorFromTexture;
+        }
+    }
+}
+```
