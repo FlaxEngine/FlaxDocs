@@ -60,9 +60,10 @@ public class TestCursor : Script
         _cursorFromFile = Window.LoadCursorImage(Path.Combine(Globals.ProjectContentFolder, "cursor1.cur"));
 
         // Load cursor from texture data (use uncompressed image)
-        var textureData = CursorFromTexture.GetTextureData();
+        CursorFromTexture.GetTextureData(out var textureData);
         var hotSpot = Int2.Zero;
         _cursorFromTexture = Window.LoadCursorImage(textureData, hotSpot);
+        Destroy(textureData);
     }
 
     public override void OnDisable()
