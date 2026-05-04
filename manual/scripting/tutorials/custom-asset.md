@@ -10,7 +10,7 @@ In this tutorial you will learn how to define a custom json asset type and use i
 
 ### 1. Define a data class
 
-Implement a class that will define the asset data layout. In this example we store some supported screen resolutions and the default language. Then it will be saved to json and modified in editor. Later game can load asset and use its data.
+Implement a class that will define the asset data layout. In this example we store some supported screen resolutions and the default language. Then it will be saved to json and modified in editor. Later, the game can load asset and use its data.
 
 # [C#](#tab/code-csharp)
 ```cs

@@ -13,7 +13,7 @@ The full source code of the implemented editor plugin with options:
 ```cs
 public class TestPlugin : EditorPlugin
 {
-	// The custom options key used to idenify them
+	// The custom options key used to identify them
     public const string SettingsName = "Test Plugin";
 
 	// Custom options object that defines the data layout
