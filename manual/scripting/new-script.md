@@ -1,42 +1,54 @@
 # Create and use a script
 
-Scripts in Flax are written in the **C#** language (source files with extension `.cs`).
-If you want to create a C++ Script you can find out how [here](cpp/index.md).
-To provide better organization in a project workspace script files are located in the `Source/` directory.
-In that way scripts are separated from the assets which reduces mess and makes it easier to work with project sources.
-
-Flax Editor creates a solution file (`.sln`) and C# projects (`.csproj`) for game scripts and editor plugins.
-
-![Workspace](media/scripts-workspace.jpg)
-
 > [!Note]
-> We recommend using Visual Studio for code editing with [Flax Engine Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=Flax.FlaxVS) installed.
+> If you want to use C++ scripting you can find out how [here](cpp/index.md).
+
+Scripts in Flax are written in the **C#** language (source files with extension `.cs`).
+
+For organizational purposes, script files are located in the `Source/` directory of your Flax project.
+This nicely separates scripts (logic) from assets (content).
+
+The editor creates a solution (`.sln`) file as well as C# projects (`.csproj`) for game scripts and editor plugins.
+
+![Workspace](media/scripts-workspace.png)
+
+In Flax, like in many other engines, scripts are **attached to actors**. Every actor can contain an unlimited amount of individual scripts (including multiple instances of the same script type). This means that the script's lifetime is related to that of the actor. 
 
 # Create a script
 
-1. In the *Content* window, Navigate to '&lt;project_name&gt;/Source/&lt;game_module_name&gt;'.
-	<br>![Step 1](media/new-script.gif)
-	
-2. Double-click to open the script. Wait for Flax to open your IDE, which will then open the new script.
+1. In the *Content* window, navigate to the *Game module folder* located at *&lt;project_name&gt;/Source/&lt;game_module_name&gt;*.
+By default that will be `Source/Game`.
 
-Once opened this is what the script file will look like.
-[!code-csharp[Example1](code-examples/events.cs)]
+2. Right click in any empty space. Click on `New/C#/C# Script` in the context menu that has appeared to create a new C# script. There are many other templates available, but `C# Script` is the one you will use most commonly. 
+<br> The new script will automatically enter renaming mode after you create it, so you can just type in a name. It is recommended that you give the new script a name, since some of the templates will use as a class name. 
+<br>![Step 2](media/create-new-script.gif)
+
+3. Double-click the newly created script. Flax will now open it in your IDE. If your IDE isn't open yet, Flax will do that for you as well.
+
+Congratulations! You have now created a new script. Follow this manual to learn how to use a script in your Flax Project or continue on your own if you already know that part. Happy coding :)
 
 # Use a script
 
-Scripts are **attached to actors**. Every actor can contain an unlimited amount of individual scripts (including multiple instances of the same script type). This means that the script's lifetime is related to that of the actor's and the scene's lifetime. For instance, if you load a scene, the scripts attached to the objects in that scene also will be loaded.
+1. Select the actor you want to add a script to.
+2. Drag and drop the script into the **Drag scripts here** area that shows in the *Properties* panel.
 
-1. Select an actor to add script to it (note label *Drag scripts here* in **Scripts** group in *Properties* window)
-2. Drag and drop the script into the **Drag scripts here** area
-3. Script is ready (sample script with 3 public fields)
-   <br>![Step 1](media/attach-script.gif)
+Alternatively you can also:
+- Drag a script over an actor in the *Scene* panel.
+- Use the "Add script" button in the *Scripts* section shown in the *Properties* panel of the selected actor.
+- Use the `AddScript()` method of an `Actor` (not recommended if you just want to attach and use a script normally).
 
-The Flax Editor shows public script properties and fields using a dedicated group (within `Scripts` group). Each script group header shows a script class type name, **settings button on the right** and **script toggle checkbox on the left**. You can disable or enable the script by using this checkbox.
+<br>![Reorder Script](media/create-new-script.gif)
 
-To **remove**, **edit** or **reorder** a script use the **settings button** which shows a popup with various options.
+Each script is displayed collapsible panel within the `Scripts` section of the *Properties* panel.
+
+It will show public properties and fields by default, but you can further control which members are visible in the *Properties* panel by using various attributes.
+
+Each script panel shows the scripts class type name and a **checkbox to toggle the scripts execution** and **`Enabled` state**.
+
+To **remove**, **edit** or **reorder** a script, use the **settings button** on the right side of the script header, which shows a popup with various options.
 
 ![Script settings](media/script-settings.png)
 
-You can also easily pick a reference to a script or reorder it. Simply click and drag the **three-bar icon button** as shown on a gif below:
+You can also easily **pick a reference to a script or reorder it** by simply clicking and dragging the **three-bar icon** as shown on a gif below:
 
-![Reorder Script](media/script-reorder-with-drag.gif)
+![Reorder Script](media/script-reoder-set-reference.gif)
