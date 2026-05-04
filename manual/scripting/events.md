@@ -13,10 +13,12 @@ Example for `Script`:
 # [C++](#tab/code-cpp)
 [!code-cpp[Example2](code-examples/events.h)]
 ***
+
 <br>
 Example for a custom UI `Control`:
-# [C#](#tab/code-csharp)
-[!code-csharp[Example1](code-examples/event-examples-ui-control.cs)]
+
+# [C#](#tab/code-csharp-ui)
+[!code-csharp[Example3](code-examples/event-examples-ui-control.cs)]
 ***
 
 ## Event functions
