@@ -25,6 +25,7 @@ A **Directional Light** emits light uniformly from a single direction. Direction
 | **Partition Mode** | The partitioning mode for the shadow cascades. Possible options: <br><table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**Manual**</td><td>Internally defined cascade splits.</td></tr><tr><td>**Logarithmic**</td><td>Logarithmic cascade splits.</td></tr><tr><td>**PSSM**</td><td>Parallel-Split Shadow Maps cascade splits.</td></tr></tbody></table> |
 | **Cascade Count** | The number of cascades used for slicing the range of depth covered by the light during shadow rendering. Values are 1, 2 or 4 cascades; a typical scene uses 4 cascades. |
 | **Sharpness** | Controls shadow sharpness. Can be used to tweak the penumbra width. |
+| **Cascade Blend Size** | Percentage of the cascade distance over which cascades will blend together. This helps to hide the transition between cascades. |
 | **Strength** | Controls dynamic shadow blending strength. Default is 1 for fully opaque shadows, a value of 0 disables shadows. |
 | **Distance** | Shadow rendering distance (in world units). |
 | **Fade Distance** | Shadow fade off distance (in world units). |
