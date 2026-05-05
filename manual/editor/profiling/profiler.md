@@ -69,7 +69,7 @@ PROFILE_GPU("MyFunction"); // or PROFILE_GPU_CPU to inject both CPU and GPU prof
 
 The memory profiling mode focused on breaking down system memory allocations. This includes separate stats for native memory allocation and managed C# allocations. Below the charts there is a table with memory usage broken down into certain engine categories such as: physics, graphics, level, audio, scripting, etc.
 
-Table contains 4 collumns:
+Table contains 4 columns:
 * name of the group,
 * memory usage,
 * peek of memory usage (since the start of the program),
