@@ -32,6 +32,21 @@ Lowering the update rate for the shadow improves the performance as the shadowma
 
 This rate can be additionally lowered when light is far away from the view via *Update Rate At Distance* property. For example, if light is near view, it will get normal frequent shadow updates but this rate will be scaled down linearly once camera start to move away from the light.
 
+### Shadows Filtering
+
+![Soft Shadows for Point Light with PCSS](media/soft_point_shadows_pcss.gif)
+
+Depending on the graphics quality shadows can be filtered using:
+* `Low` - 1x1 PCF filter,
+* `Medium` - 2x2 PCF filter,
+* `High` - 3x3 PCF filter,
+* `Ultra` - 32-tap PCSS filter.
+
+`PCF` filtering offers good performance with a fixed-size penumbra size that softens the shadow edges.
+`PCSS` is more physically accurate as it varies penumbra size based on the distance to the shadow blocker and light source size. Directional Lights control shadow softness via `SourceAngle` property, point/spot lights are using `SourceRadius`. Use those properties to adjust the final look of the light.
+
+Use Graphics Quality window in Editor to preview shadows. Game uses values from [Graphics Settings](../../editor/game-settings/graphics-settings.md) asset, which can be changed at runtime via `Graphics.ShadowsQuality`.
+
 ## Contact Shadows
 
 ![Contact Shadows](media/contact-shadows.gif)

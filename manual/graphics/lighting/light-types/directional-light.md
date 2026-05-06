@@ -14,6 +14,7 @@ A **Directional Light** emits light uniformly from a single direction. Direction
 | **Brightness** | Light brightness parameter. Controls intensity of the light emitted by this actor. |
 | **View Distance** | Controls light visibility range. The distance at which the light becomes completely faded. Use a value of 0 to always draw a light. |
 | **Minimum Roughness** | Controls the minimum roughness value used to clamp material surface roughness during shading. Can help with softening specular highlights. |
+| **Source Angle** | Light source angle (in degrees) that defines its angular diameter. Higher values produce softer shadows. The default value is 0.5357 degrees, which is the angular diameter of the Sun as seen from Earth. Set this to 0 to produce hard shadows with sharp edges. |
 
 ## Shadow Properties
 
