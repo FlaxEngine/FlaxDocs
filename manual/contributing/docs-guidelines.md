@@ -50,4 +50,4 @@ You can add a link by doing `[text](link)`.
 
 ## Accessibility
 
-- Always add an *alt text* that is descriptive enough to your images
+- Always add an *alt text* that is descriptive enough to your images. The alt text is the text in the `[]` of your markdown image embed
