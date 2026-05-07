@@ -24,6 +24,8 @@ Actors can be marked with specific **tags** to be used by different gameplay sys
 
 **Tags** can be added or removed by ticking or unticking the **tag**'s checkbox. Each **tag** has a plus (`+`) button on the right side which can be used to add a **sub-tag** to the current **tag**. Utility buttons on the top of the editor provide quick access to frequently used actions and the search field allows to filter **tags** by their name. It is also possible to quickly add a new **tag** in the format of `X.Y.Z` via the *Add Tag* section.
 
+The **tag** editor will display all of the selected tags in a list next to the `...` button.
+
 ![Tags Editor](media/tags-editor.png)
 
 ## Tags in the Scripting API
