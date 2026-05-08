@@ -33,6 +33,7 @@ If you are in doubt wether a specific part of information is necessary, you shou
 
 - TODO: When `_variableName` vs when without `_`?
 - Don't use file scoped namespaces
+- Place a whitespace between a member, an = and a value. Like this: `foo = 1f;`.
 
 ### Use of Curly Braces
 
@@ -62,7 +63,13 @@ If you are in doubt wether a specific part of information is necessary, you shou
 - Leave a single empty line between variable declarations and the first method/ constructor (in C#).
 - If the class requires an empty constructor, it should always be placed on top of all other constructors. 
 
-## XML Documentation Comments
+## Comments
+
+- Use `// TODO: What is to be done?` or `// HACK: What is hacky?` to mark something that needs work/ to be done or a hack.
+- Check your comments for any grammar or spelling mistakes
+- Place a space in front of comment contents, like this `// Comment content.`
+
+### XML Documentation Comments
 
 > [!Tip]
 > Most IDEs will automatically create the framework for a documentation comment if you type three `/`.
