@@ -31,7 +31,7 @@ If you are in doubt wether a specific part of information is necessary, you shou
 > Some of this might overlap with the [Common C# code conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions).
 >
 
-- TODO: When _variableName vs when without _?
+- TODO: When `_variableName` vs when without `_`?
 - Don't use file scoped namespaces
 
 ### Use of Curly Braces
@@ -40,7 +40,7 @@ If you are in doubt wether a specific part of information is necessary, you shou
 
 ### Cases
 
-- Use `camelCase`
+- Use camel case. `UpperCamelCase` for public fields and properties, `camelCase` for everything else. Always use `UpperCamelCase` for method names.
 - Use `UpperCamelCase` for constants (`const`) if you are defining it in class scope, use `camelCase` if it's defined in the scope of a method.
 
 ### Declaration Order
