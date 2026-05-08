@@ -40,8 +40,9 @@ If you are in doubt wether a specific part of information is necessary, you shou
 
 ### Cases
 
-- Use camel case. `UpperCamelCase` for public fields and properties, `camelCase` for everything else. Always use `UpperCamelCase` for method names.
-- Use `UpperCamelCase` for constants (`const`) if you are defining it in class scope, use `camelCase` if it's defined in the scope of a method.
+- Use `PascalCase` for public fields and properties as well as method names.
+- Use `camelCase` for everything else.
+- Use `PascalCase` for constants (`const`) if you are defining it in class scope, use `camelCase` if it's defined in the scope of a method.
 
 ### Declaration Order
 
