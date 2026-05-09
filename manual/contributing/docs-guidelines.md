@@ -15,9 +15,15 @@ This page will list a few guidelines that, if respected while writing documentat
 - The individual, (un-) dockable sections that make up the Flax Editor should be referred to as "*Panel*"s (for example *Content Panel*, *Properties Panel*). If it's nicer to just put the name (like *Toolbox*, *Scene Tree*, *Main 3D Editor*), then that is fine as well.
 - Write the following terms in all capital letters:
     - API
+    - C#
+    - C++
+    - IDE
+    - PR *(as in Pull Request)*
     - UI
     - URL
+    - XML
 - Spell "Flax Engine" with a capital "F" and "E" 
+- Spell Visject with a capital "C"
 
 ## Style & Syntax
 
@@ -34,7 +40,12 @@ This page will list a few guidelines that, if respected while writing documentat
 ## Code
 
 - Put code code blocks (surround them with two `` ` `` ). 
+- Don't put put language keywords in code blocks, except for when you are trying to say something like "to define a public property, you can use the `public` keyword".
+- Put types into code blocks.
+
 - *Don't* put common programming terms (eg. "*class*", "*struct*", "*float*") into a code block, unless you deem it absolutely necessary.
+
+
 - Add a linebreak (`<br>`) after the end (represented by `***`) of a code block table (usually used to give one C# and one C++ example, as seen [here](../scripting/advanced/tags.md/#code-example)) if it is directly followed by another text paragraph.
 
 ## Links
@@ -45,7 +56,7 @@ This page will list a few guidelines that, if respected while writing documentat
 You can add a link by doing `[text](link)`.
 
 ## Images
-- Use a yellow box or freeform drawing to mark an important part in your image (if necessary and it does not distract from the image itself or obstructs the images contents), like this:
+- Use a yellow box (or other shape if necessary) drawing to mark an important part in your image (if necessary and it does not distract from the image itself or obstructs the images contents), like this:
 ![the last paragraph with a yellow box around "an important part in your image"](media/image-marking.png)
 
 ## Accessibility
