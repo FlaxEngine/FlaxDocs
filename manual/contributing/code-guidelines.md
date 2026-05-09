@@ -33,9 +33,31 @@ If you are in doubt wether a specific part of information is necessary, you shou
 
 - TODO: When `_variableName` vs when without `_`?
 - Don't use file scoped namespaces
-- Place a whitespace between a member, an = and a value. Like this: `foo = 1f;`.
+- Place a whitespace between a member, a math symbol and a value. Like for this example: `foo = 1f;`.
 
 ### Use of Curly Braces
+
+- Don't use curly braces (`{}`) in a loop or a if statement body if the body line count does allow that (not more than one line). However, use them in an `else` or `else if` statement, no matter the line count.
+
+# [C#](#tab/code-csharp-curly-braces)
+```cs
+// No need to use curly braces.
+if (myBoolean)
+    Foo();
+
+// Use curly braces here, even if they could be left out for the else if statement.
+if (myOtherBoolean)
+{
+    float myFloat = Bar();
+    Foo(myFloat);
+}
+else if (myInt == 0)
+{
+    Foo(11f);
+}
+```
+***
+<br>
 
 - Don't use `{}` for your loops or if statements if the body of the statement is just one line. If you already are inside two `{}`, always use `{}`, no matter the body's line count. 
 
