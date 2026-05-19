@@ -17,3 +17,4 @@
 * [Run code on module load](code-on-load.md)
 * [File Reference](file-reference.md)
 * [Debug Commands](debug-commands.md)
+* [Debug Commands List](debug-commands-list.md)

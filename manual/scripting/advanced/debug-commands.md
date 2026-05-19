@@ -5,6 +5,10 @@
 > [!TIP]
 > Only `static` members can be used in debug commands.
 
+## Reference
+
+Complete list of all console commands available in Flax Engine is [available here](debug-commands-list.md).
+
 ## Access
 
 ### Output Log

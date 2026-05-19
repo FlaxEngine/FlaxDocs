@@ -24,7 +24,7 @@ if %errorlevel% neq 0 exit /b %errorlevel%
 
 :: Build C# for metadata
 echo Building Flax Editor...
-call "Development\Scripts\Windows\CallBuildTool.bat" -log -arch=x64 -configuration=Development -platform=Windows -buildTargets=FlaxEditor -build -BuildBindingsOnly
+call "Development\Scripts\Windows\CallBuildTool.bat" -log -arch=x64 -dotnet=8 -configuration=Development -platform=Windows -buildTargets=FlaxEditor -build -BuildBindingsOnly
 if %errorlevel% neq 0 exit /b %errorlevel%
 cd ..
 

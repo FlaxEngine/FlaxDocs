@@ -1,0 +1,14 @@
+{
+	"Name": "Flax Docs Prep Project",
+	"Version": "1.0",
+	"Company": "Flax",
+	"Copyright": "",
+	"GameTarget": "GameTarget",
+	"EditorTarget": "GameEditorTarget",
+	"References": [
+		{
+			"Name": "$(EnginePath)/Flax.flaxproj"
+		}
+	],
+	"MinEngineVersion": "1.12.6912"
+}

@@ -137,11 +137,11 @@ We've updated minimum versions of various platforms to support the latest featur
 
 ## Changelog
 
-### Version 1.12.6912.0 - 24 April 2025
+### Version 1.12.6912.0 - 19 May 2025
 
 Contributors: mafiesto4, xxSeys1, GoaLitiuM, Yahasana, Tryibion, VitaminCpp, AcidicVoid, Inertia-Squared, ThePhantomMask, socialtwisty, lifeformed, fibref, Menotdan, alsed, envision3d, Zode
 
-PRs merged: 110
+PRs merged: 111
 
 * **Add Web export support**
 * Add new collection type `ConcurrentDictionary`
@@ -303,6 +303,7 @@ PRs merged: 110
 * Optimize `VariantType` to use static type name in game or from non-reloadable assemblies
 * Optimize `GPUVertexLayout` caches with `ConcurrentDictionary`
 * Optimize Global SDF tracing to not scale steps nearby geometry and properly trace mip cascade
+* Optimize `RendererAllocation` by reducing fragmentation with operating on power-of-2 blocks
 * Refactor Mesh SDF generation on GPU to use raytracing for more precise results
 * **Refactor DDGI irradiance filtering** for smoother and more accurate lighting
 * **Refactor DDGI irradiance sampling** when nearby probe is missing to use precomputed fallback probes
@@ -342,6 +343,7 @@ PRs merged: 110
 * Fix DDGI iradiance to use debanding by applying quantization error to reduce yellowish artifacts due to `R11G11B10` format
 * Fix DDGI cascades blending to be smoother
 * Fix DDGI flickering on floors aligned to world axes
+* Fix directional light cascaded shadow maps rendering stability
 * Fix AOT libs cooking to avoid file dirtying for more accurate iterative cooking
 * Fix async tasks destruction to wait on the dependencies in chain
 * Fix material shader generation when material layer fails to load
@@ -380,6 +382,7 @@ PRs merged: 110
 * Fix various DPI issues on macOS in Editor
 * Fix various missing features from window-management on macOS
 * Fix shadows from wireframe materials
+* Fix missing `ChannelMask` parameter type clone for Material Instance
 * Fix loading cube texture import settings
 * Fix missing vertex counting in draws (use index count to approx) for profiler
 * Fix parsing `else` preprocessor and `&&` conditions in bindings generator
