@@ -10,6 +10,10 @@ GPU pipeline uses **slot-based binding model** which is explicit and has low-ove
 
 To learn more about graphics programming in Flax see related [documentation here](graphics-api.md).
 
+### GPU Debug Layer
+
+Graphics backends (D3D11, D3D12, Vulkan, etc.) implement debugging and validation layers that can be enabled in `Development` or `Debug` builds to provide more information about rendering correctness. They can be enabled via  `-gpudebug` command line (expect performance overhead varying across devices and platforms).
+
 ## Shading language
 
 Flax uses **HLSL** as a shading language as it's very popular in the industry and supports all major graphics rendering features. Additionally, engine will automatically compile HLSL shaders into target platform such as Vulkan or PS4 with full runtime support.

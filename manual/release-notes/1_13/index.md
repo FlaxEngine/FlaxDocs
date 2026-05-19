@@ -14,7 +14,7 @@ TODO
 
 ### API Changes
 
-* TODO
+* Automatic GPU Debug Layer has been disabled in `Debug` builds and can be activated manually via command line `-gpudebug` in both `Debug` and `Development` builds. `GPU_ENABLE_DIAGNOSTICS` has been renamed to `GPU_ENABLE_DEBUG_LAYER`.
 
 ### Known Issues
 

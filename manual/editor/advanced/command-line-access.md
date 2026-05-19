@@ -48,7 +48,7 @@ Of course, all those things can be made manually by using Flax Editor C# API and
 | **-nvidia** | Hints to use NVIDIA GPU (if available). |
 | **-amd** | Hints to use AMD GPU (if available). |
 | **-intel** | Hints to use Intel GPU (if available). |
-| **-monolog** | Enables advanced debugging for Mono runtime. Can be used to debug problems with managed scripting runtime. Produces lots of logs. |
+| **-gpudebug** | Activates GPU Debug Layers and additional assertions for rendering validation. Only in `Development` or `Debug` builds. |
 | **-mute** | Disables audio playback and uses Null Audio Backend. |
 
 ## Editor-only options
