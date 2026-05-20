@@ -39,32 +39,35 @@ struct CelShading
 {
     float3 Color;
     float Visibility;
-
-    void Mix(CelShading other)
-    {
-        // Use the highest light
-        if (other.Visibility > Visibility)
-        {
-            Color = other.Color;
-            Visibility = other.Visibility;
-        }
-    }
-
-    float3 Lit(CelShadingMaterial mat)
-    {
-        if (Visibility > mat.HighlightThreshold)
-        {
-            // Highlight
-            return mat.HighlightThreshold * saturate(Color);
-        }
-        if (Visibility > mat.ShadowThreshold)
-        {
-            // Key
-            return mat.KeyColor * lerp(saturate(Color), (float3)1, 0.5);
-        }
-        return mat.ShadowColor;
-    }
 };
+
+// MMixes two cel shadings.
+CelShading MixCelShading(CelShading shading, CelShading other)
+{
+	// Use the highest light
+	if (other.Visibility > shading.Visibility)
+	{
+		shading.Color = other.Color;
+		shading.Visibility = other.Visibility;
+	}
+	return shading;
+}
+
+// Lits the material with a cel shading.
+float3 LitCelShading(CelShading shading, CelShadingMaterial mat)
+{
+	if (shading.Visibility > mat.HighlightThreshold)
+	{
+		// Highlight
+		return mat.HighlightThreshold * saturate(shading.Color);
+	}
+	if (shading.Visibility > mat.ShadowThreshold)
+	{
+		// Key
+		return mat.KeyColor * lerp(saturate(shading.Color), (float3)1, 0.5);
+	}
+	return mat.ShadowColor;
+}
 
 // Calculates the cel shading for a given light
 CelShading GetCelShading(MaterialInput input, LightData light, bool isRadial)
@@ -112,11 +115,11 @@ LOOP
 for (uint i = 0; i < GetLocalLightsCount(); i++)
 {
     const LightData localLight = GetLocalLight(i);
-    cel.Mix(GetCelShading(input, localLight, true));
+    cel = MixCelShading(cel, GetCelShading(input, localLight, true));
 }
 
 // Perform cel shading
-float3 lighting = cel.Lit(mat);
+float3 lighting = LitCelShading(cel, mat);
 
 // Add outline
 float3 cameraVector = normalize(ViewPos.xyz - input.WorldPosition);
