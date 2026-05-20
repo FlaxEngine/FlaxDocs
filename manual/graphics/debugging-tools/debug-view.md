@@ -45,3 +45,13 @@ MainRenderTask.Instance.View.Mode = ViewMode.Diffuse;
 | <div style="background-color: #029319; width: 10px; padding: 10px; border: 1px solid black;"> | <div style="background-color: #00ff95; width: 10px; padding: 10px; border: 1px solid black;"> | <div style="background-color: #00fffd; width: 10px; padding: 10px; border: 1px solid black;"> | <div style="background-color: #8efa00; width: 10px; padding: 10px; border: 1px solid black;"> | <div style="background-color: #fffb00; width: 10px; padding: 10px; border: 1px solid black;"> | <div style="background-color: #ff9300; width: 10px; padding: 10px; border: 1px solid black;"> | <div style="background-color: #941100; width: 10px; padding: 10px; border: 1px solid black;"> | <div style="background-color: #ffffff; width: 10px; padding: 10px; border: 1px solid black;"> |
 
 Reference: [https://blog.selfshadow.com/2012/11/12/counting-quads/](https://blog.selfshadow.com/2012/11/12/counting-quads/)
+
+## Global SDF Overdraw
+
+![Global SDF Overdraw Debug View](media/global-sdf-overdraw.png)
+
+**Global SDF Overdraw** displays complexity and overdraw when rendering Global SDF from model/terrain SDFs. It's usefull when profiling slow Global SDF for a specific scenes. Dynamic objects or tooo many objects affect the complexity of the SDF rasterization process.
+
+| Ideal | Good | Complex | Expensive |
+|--------|--------|--------|--------|
+|  Green <div style="background-color: #00f704; width: 10px; padding: 10px; border: 1px solid black;"> | Blue <div style="background-color: #3333b2; width: 10px; padding: 10px; border: 1px solid black;"> | Orange <div style="background-color: #ff9500; width: 10px; padding: 10px; border: 1px solid black;"> | Red <div style="background-color: #ff0000; width: 10px; padding: 10px; border: 1px solid black;"> |
