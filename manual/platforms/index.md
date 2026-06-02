@@ -8,7 +8,7 @@ This section covers the specific information for different aspects of each platf
 
 ## Supported platforms
 
-* [Windows Desktop 7, 8, 10, 11](windows.md)
+* [Windows](windows.md)
 * [Xbox One](xbox-one.md)
 * [Xbox Scarlett](xbox-scarlett.md)
 * [PlayStation 4](ps4.md)
