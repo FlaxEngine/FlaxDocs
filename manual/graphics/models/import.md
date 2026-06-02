@@ -120,6 +120,10 @@ Flax uses the same import settings data schemes for **models**, **skinned models
 | **Triangle Reduction** | The target amount of triangles for the generated LOD (based on the higher LOD). Normalized to range 0-1. For instance 0.4 cuts the triangle count to 40%. |
 | **Sloppy Optimization** | Whether to do a sloppy mesh optimization. This is faster but does not follow the topology of the original mesh. |
 | **LOD Target Error** | Target error is an approximate measure of the deviation from the original mesh using distance normalized to `[0,1]` range (e.g. `0.01` means that simplifier will try to maintain the error to be below `1%` of the mesh extents). *Only used if Sloppy is unchecked.* |
+| **LOD Target Error Absolute** | If checked, the target error will be treated as absolute rather than relative to the mesh extents. In that mode, error is defined in absolute units which can be universal across similar mesh types no matter their size. *Only used if Sloppy is unchecked.* |
+| **Lock Border** | If checked, vertices on topological borders (edges without a paired triangle) will not be moved during simplification. Useful for meshes that tile or share edges with other meshes. *Only used if Sloppy is unchecked.* |
+| **Preserve UVs** | If checked, UV channels will be included in the simplification error metric to preserve UV layout. Essential for trimsheets and atlased textures. *Only used if Sloppy is unchecked.* |
+| **Preserve UVs Weight** | The weight of UV attributes in the simplification error metric. Higher values preserve UVs more aggressively at the cost of geometric quality. *Only used if Sloppy is unchecked and Preserve UVs is checked.* |
 |||
 | **Import Materials** | If checked, the importer will create materials for model meshes as specified in the file. |
 | **Import Materials As Instances** | If checked, the importer will create the model's materials as instances of a base material. |
