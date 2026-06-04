@@ -56,34 +56,3 @@ Now you can use all Visual Studio Code debugging features to verify state of the
 ![Script in Visual Studio](media/vscode-debugging.png)
 
 For more information about C# in Visual Studio Code, see the [VS Code documentation](https://code.visualstudio.com/docs/languages/csharp).
-
-## Mono debugging
-
-In past, Flax used mono for C# runtime (version 1.5 and older) which required `ms-vscode.mono-debug` extension in VS Code. Mobile and Console platforms still use mono for .NET hosting (including Mono AOT feature). To debug such builds use **Mono Debug** extension.
-
-To attach with C# debugger to Flax you will need to know the **debugger port**. This can be checked in the log and find the line similar to the following:
-
-```
-...
-[ 00:00:02.667 ]: [Info] Initialize Scripting...
-[ 00:00:02.667 ]: [Info] Mono debugger server at 127.0.0.1:41816
-...
-```
-
-This informs about the Mono debugger server running on a local machine and the given port. It's calculated from expression `41000 + process_id % 1000`. You can also run Flax with specified ip and port with a command-line argument such as `-debug 127.0.0.1:55555`.
-
-Once you know the port you can set it in the `launch.json` file that contains a debugger configuration for VS Code. Find the chunk similar to the following and set the port property to the one your Flax is using right now.
-
-```json
-...
-{
-    "type": "mono",
-    "name": "MyProject (C# attach)|Game.Windows.Development|x64",
-    "request": "attach",
-    "address": "localhost",
-    "port": 55555
-},
-...
-```
-
-If you set the port property to the proper port you can launch this task and attach with debugger. Visual Studio Code should enter a debugging mode and the bottom of the IDE will remain orange. This signifies IDE is ready for debugging.

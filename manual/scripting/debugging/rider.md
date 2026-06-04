@@ -52,30 +52,3 @@ Now you can use all Rider debugging features to verify state of the variables an
 ![Debuggign C# Script in Rider](media/rider-debugging-csharp.png)
 
 For more information about C# in Rider, see the [Rider documentation](https://www.jetbrains.com/help/rider/Languages_CSharp.html).
-
-## Mono debugging
-
-In past, Flax used mono for C# runtime (version 1.5 and older). Mobile and Console platforms still use mono for .NET hosting (including Mono AOT feature). To debug such builds use to attach with C# Mono debugger by identifying the debugger server port from Log:
-
-```
-...
-[ 00:00:02.667 ]: [Info] Initialize Scripting...
-[ 00:00:02.667 ]: [Info] Mono debugger server at 127.0.0.1:41816
-...
-```
-
-This informs about the Mono debugger server running on a local machine and the given port. It's calculated from expression `41000 + process_id % 1000`. You can also run Flax with specified ip and port with a command-line argument such as `-debug 127.0.0.1:55555`.
-
-Once you know the port you can create configuration of type **Mono Remote**. Use *Edit Configuration* button and select `+` plus button to create new confgiuration for Mono Remote debugging.
-
-![Rider Edit Configuration](media/rider-edit-configuration.png)
-
-![Rider Mono Remote](media/rider-add-mono-remote.png)
-
-Then name it eg. to `Debug C# Game` and set **Port** to the value from the editor log.
-
-![Rider Mono Remote](media/rider-edit-mono-remote.png)
-
-Once you've set the port you can launch this configuration and attach with debugger.
-
-![Rider Debug C# Start](media/rider-start-debug.png)

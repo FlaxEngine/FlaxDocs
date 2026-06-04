@@ -62,7 +62,7 @@ LOG(Info, "sb: {0}", str); // print to log
 * enum types (eg. `ShadowsCastingMode`)
 * structure types (eg. `RayCastHit`)
 * raw data (eg. `byte[]`)
-* C# objects references (eg. `MonoObject*`)
+* C# objects references (eg. `MObject*`)
 
 It contains wide scripting API for accessing data and querying the value type including casting and comparisions. It can be serialized to raw bytes stream or to json (and loaded back). Scripting API supports automatic translation between `Variant` in C++ and `object` in C#.
 
