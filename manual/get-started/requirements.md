@@ -9,8 +9,8 @@ Flax Engine has specific hardware and software requirements for running the game
 | Operating system | Windows 10 64-bit | Windows 11 64-bit |
 | Processor | 2 GHz | Quad-core, 2.5 GHz or faster |
 | RAM | 4 GB | 8 GB |
-| Hard drive space | 1 GB | 5 GB |
-| GPU | 512MB, DirectX 10+ compatible GPU | 2 GB, DirectX 11 |
+| Hard drive space | 1 GB | 5 GB (SSD) |
+| GPU | 1 GB, DirectX 11 compatible GPU | 8 GB, DirectX 11 |
 
 ## Linux
 
@@ -27,9 +27,9 @@ The launcher will check and begin installation if it is missing, however if your
 
 Flax Launcher requires [Microsoft .NET Framework 4.5.2](https://www.microsoft.com/en-us/download/details.aspx?id=42642) or higher.
 
-Flax Editor requires [.NET SDK 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
+Flax Editor requires [.NET SDK 10](https://dotnet.microsoft.com/en-us/download/dotnet/10.0).
 
-We also recommend using Visual Studio 2022 for writing code.
+We also recommend using Visual Studio 2026 for writing code.
 You can download the free community edition [here](https://www.visualstudio.com/downloads/).
 
 ## GPU Drivers

@@ -59,6 +59,9 @@ See *Android Platform Settings* asset.
 
 ## C\+\+ Debugging
 
+> [!Warning]
+> Visual Studio 2026 has deprecated native code debugging.
+
 * Install `C++ Android development tools` via Visual Studio Installer
 * Build game for android to `.apk` and install it on the device
 * Regenerate scripts projects files
@@ -95,5 +98,3 @@ Use `.\adb.exe -d logcat Flax:I *:S` to listen for game logs on device.
 - Flax exposes Gamepad for Android device at index 0 which can be used to vibrate the device or read the Back key pressed by the user during gameplay
 - To enable device vibrations add `android.permission.VIBRATE` to the permissions list in Android Platform Settings asset
 - To enable device network state reading add `android.permission.ACCESS_NETWORK_STATE` to the permissions list in Android Platform Settings asset
-
-

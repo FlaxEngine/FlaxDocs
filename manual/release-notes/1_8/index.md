@@ -12,7 +12,7 @@ We finally made it! New editing tools are coming to Flax. Now you can easily **v
 
 ![.NET 8 support in Flax Engine](media/dotnet8.jpg)
 
-**.NET SDK 8 is now used as a base version** (instead of `7`) with **C# 12** and the latest performance improvements. It's a Long Term Support version (`LTS`), meaning it will be maintained by Microsoft until `November 2026`. We plan to use the [official .NET release cycle](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core) and maintain active .NET versions in Flax tools ecosystem. Both Editor and Launcher will check for the proper .NET version on the system upon starting Editor. When building your game ensure to have the [latest .NET SDK installed](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (especially when cooking games for Android or iOS).
+**.NET SDK 8 is now used as a base version** (instead of `7`) with **C# 12** and the latest performance improvements. It's a Long Term Support version (`LTS`), meaning it will be maintained by Microsoft until `November 2026`. We plan to use the [official .NET release cycle](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core) and maintain active .NET versions in Flax tools ecosystem. Both Editor and Launcher will check for the proper .NET version on the system upon starting Editor. When building your game ensure to have the [latest .NET SDK installed](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) (especially when cooking games for Android or iOS).
 
 ### ASTC texture compression
 

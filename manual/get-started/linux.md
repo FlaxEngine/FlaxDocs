@@ -32,9 +32,9 @@ Flax Editor needs:
 sudo apt-get install -y curl libcurl4-gnutls-dev
 ```
 
-*  `.Net 8 SDK` ([https://dotnet.microsoft.com/en-us/download/dotnet/8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)).
+*  `.Net 10 SDK` ([https://dotnet.microsoft.com/en-us/download/dotnet/10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)).
 ```
-sudo apt install dotnet-sdk-8.0
+sudo apt install dotnet-sdk-10.0
 ```
 
 .Net version can be verified with:
