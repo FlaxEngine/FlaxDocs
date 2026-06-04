@@ -21,6 +21,7 @@ float Field1 = 11f;
 API_FIELD(Attributes = "Tooltip(\"Light color\")")
 Color ColorVal;
 ```
+# [Visual Script](#tab/code-vs)
 ***
 
 ## Common attributes
@@ -106,4 +107,5 @@ By using **ExecuteInEditMode** you can enable your scripts to run in Editor. Thi
 [!code-csharp[Example1](code-examples/attributes.cs)]
 # [C++](#tab/code-cpp)
 [!code-cpp[Example2](code-examples/attributes.h)]
+# [Visual Script](#tab/code-vs)
 ***
