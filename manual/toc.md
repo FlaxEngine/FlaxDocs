@@ -188,7 +188,7 @@
 ### [Custom script editor](scripting/tutorials/custom-editor.md)
 ### [Attributes](scripting/custom-editors/attributes.md)
 ## [Preprocessor variables](scripting/preprocessor.md)
-## [C# Scripting](scripting/charp/index.md)
+## [C# Scripting](scripting/csharp/index.md)
 ### [Project file management](scripting/csharp/project-file-management.md)
 ### [Nuget Packages](scripting/csharp/nuget-packages.md)
 ### [Scripting Restrictions](scripting/csharp/restrictions.md)
