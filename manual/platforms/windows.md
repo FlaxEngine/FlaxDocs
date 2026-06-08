@@ -7,6 +7,18 @@ Flax is compiled for Windows platform using Microsoft Visual C++ compiler. It us
 > [!Note]
 > Flax requires **Visual C++ Redistributable for Visual Studio 2015** to be installed on Windows in order to start.
 
+### ARM64 support
+
+Flax can run on Windows ARM64 devices both Editor and cooked Game. At this moment, engine is not redistributed with ARM64 binaries nor third-party dependencies which can be built manually by the devs who wish to use or support Windows ARM64 in their projects.
+
+Engine requires specific third-party dependencies to be built to compile for Windows ARM64. Run the following script inside the engine source workspace:
+
+```
+"Development/Scripts/Windows/CallBuildTool.bat" -log -BuildDeps -verbose  -platform=Windows -arch=arm64
+```
+
+It will automatically download all dependency packages (eg. `PhysX`, `Assimp`, `freetype`) used by the engine on Windows and compile them for ARM64 architecture. Then you can build and use engine.
+
 ## Build options
 
 ![Build Options](media/build-windows.jpg)
