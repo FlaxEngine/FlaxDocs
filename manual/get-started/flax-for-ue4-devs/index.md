@@ -1,8 +1,8 @@
-# Flax for UE4® developers
+# Flax for Unreal® developers
 
 ![Unreal to Flax](media/title.jpg)
 
-Flax and Unreal have many similarities (materials pipeline, physics engine) and share many concepts, however there are a few differences. This page helps Unreal Engine 4 developers to translate their existing experience into the world of Flax Engine.
+Flax and Unreal have many similarities (materials pipeline, physics engine) and share many concepts, however there are a few differences. This page helps Unreal Engine 5 developers to translate their existing experience into the world of Flax Engine.
 
 > [!Warning]
 > Warning! Guaranteed speed ahead!
@@ -20,7 +20,7 @@ Flax Editor and Unreal Editor are very similar. You can see the color-coded, hig
 
 ## Terminology
 
-This section contains the most common terms used in UE4 and their Flax equivalents (or rough equivalent). Flax keywords link directly to more in-depth information inside the documentation.
+This section contains the most common terms used in UE5 and their Flax equivalents (or rough equivalent). Flax keywords link directly to more in-depth information inside the documentation.
 
 | Unreal | Flax |
 |--------|--------|
@@ -37,7 +37,7 @@ This section contains the most common terms used in UE4 and their Flax equivalen
 
 ![Flax Project](../media/project-structure.png)
 
-Flax projects structure is similar to UE4 projects. The editor uses **Cache** folder to keep temporary data. Also, **Content** folder works the same way as in Unreal (assets-only), while **Source** directory is used to keep all C# and C\+\+ scripts.
+Flax projects structure is similar to UE5 projects. The editor uses **Cache** folder to keep temporary data. Also, **Content** folder works the same way as in Unreal (assets-only), while **Source** directory is used to keep all C# and C\+\+ scripts.
 
 Flax also generates a solution and project files for your game scripts.
 

@@ -66,3 +66,9 @@ public class GameplayGlobalsSet : Script
 ```
 
 You can also create virtual Gameplay Globals assets from code and save it to project in case of code-generated procedural content.
+
+## Textures
+
+![Texture in Gameplay Globals](media/gameplay_globals_texture.gif)
+
+Gameplay Globals support textures and cube textures binding to materials/particles/animations/scripts across the project. It's a very easy way to setup game systems/visuals such as animated cloud shadows, procedural wind, fog-of-war or anything else.

@@ -20,4 +20,3 @@ This panel shows audio clip properties.
 - **Import Settings** group contains audio import options (restored from last import). You can modify them and press **Reimport** button to update the asset from the source audio file
 
 To learn more about audio import options see dedicated [Audio Import Settings](importing.md) page.
-

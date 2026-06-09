@@ -26,6 +26,32 @@ Start-Process -Wait FlaxEditor.exe -Args "-std -project `"<project-path>`""
 It will also send the log (including C# API [Debug.Log](https://docs.flaxengine.com/api/FlaxEngine.Debug.html#FlaxEngine_Debug_Log_System_Object_)) to the standard process output so in case of issues they can be easily detected. What is, even more, the editor may start without a window (headless mode) and perform some additional actions like clearing cooker cache or project cache.
 Of course, all those things can be made manually by using Flax Editor C# API and Editor Plugins (see [here](https://docs.flaxengine.com/api/FlaxEditor.GameCooker.html)).
 
+## Command line in code
+
+Game or plugin scripts can access current command line via:
+
+
+
+# [C#](#tab/code-csharp)
+```cs
+using FlaxEngine;
+
+if (Engine.CommandLine.Contains("-skipIntro"))
+{
+    //..
+}
+```
+# [C++](#tab/code-cpp)
+```cpp
+#include "Engine/Engine/Engine.h"
+
+if (Engine::GetCommandLine().Contains(TEXT("-skipIntro")))
+{
+    //..
+}
+```
+***
+
 ## Options
 
 | Command | Description |

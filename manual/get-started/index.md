@@ -34,8 +34,8 @@ Welcome to the Official Flax Engine Manual! In this section you will find everyt
 
 <div class="frontpage-section">
 <a href="flax-for-ue4-devs/index.md"><img src="flax-for-ue4-devs/media/icon.jpg"></a>
-<h3><a href="flax-for-ue4-devs/index.md">Flax for UE4® devs</a></h3>
-<p>Migrating from UE4 to Flax.</p>
+<h3><a href="flax-for-ue4-devs/index.md">Flax for Unreal® devs</a></h3>
+<p>Migrating from UE5 to Flax.</p>
 </div>
 
 <div class="frontpage-section">

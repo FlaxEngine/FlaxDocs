@@ -13,6 +13,8 @@ For better understanding how shaders are handled by the engine see dedicated doc
 
 Custom Code node allows to write raw HLSL code which operates on fixed inputs and outputs. It's rather simple solution for small code chunks that can implement dynamic branching, dynamic loops or invoke shader functions from external sources (eg. shader library files).
 
+All inputs and outputs are using `float4` type but material and shader can use subset of vector components. Passing textures or other values is not supported at this moment.
+
 ## Global Custom Code
 
 ![Global Custom Code node](media/custom-global-code-node.png)
