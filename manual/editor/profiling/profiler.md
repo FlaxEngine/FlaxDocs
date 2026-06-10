@@ -63,6 +63,12 @@ PROFILE_GPU("MyFunction"); // or PROFILE_GPU_CPU to inject both CPU and GPU prof
 
 ![GPU Dump Command](media/gpu-dump-command.png)
 
+### GPU Memory
+
+![GPU Memory Profiler](media/gpu-memory-profiler-preview.png)
+
+GPU Memory profiler shows a list of all allocated graphics resources such as textures, render targets, buffers. Select resource to display it's properties and live preview on the right-side panel. Then you ccan navigate the list using up/down arrows.
+
 ### Memory
 
 ![Memory Profiler in Editor](media/memory-profiler-editor.png)
