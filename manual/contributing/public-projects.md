@@ -10,6 +10,7 @@ Flax Engine is very extensible which allows developers to create custom solution
 * [Arizona Framework](https://github.com/FlaxEngine/ArizonaFramework) - open-source framework for creating games in Flax
 * [Arizona Framework Sample](https://github.com/FlaxEngine/ArizonaFrameworkSample) - open-source sample multiplayer game using Arizona Framework
 * [NVIDIA DLSS](https://github.com/FlaxEngine/DLSS) - NVIDIA DLSS for Flax Engine
+* [NVIDIA PerfSDK](https://github.com/FlaxEngine/PerfSDK) - NVIDIA PerfSDK plugin for Flax Engine
 * [FidelityFX FSR](https://github.com/FlaxEngine/FidelityFX-FSR) - AMD FidelityFX Super Resolution for Flax Engine
 * [Online Platform Steam](https://github.com/FlaxEngine/OnlinePlatformSteam) - Steam for Flax Engine
 * [Online Platform Xbox Live](https://github.com/FlaxEngine/OnlinePlatformXboxLive) - Xbox Live for Flax Engine
