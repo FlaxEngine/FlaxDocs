@@ -6,7 +6,7 @@ In this tutorial you will learn how to inject a custom render pass into the pipe
 
 Firstly, create a new material as the toon outline material. You can do it manually or use Editor and *right-click* in Content window content folder **New -> Material -> Material**.
 
-To implement back face fattening, You have to expand the model by a little through moving the vertex a bit in the direction of the normal. Only back faces of the enlarged model is rendered so that the original model won't be occluded. Open the material and set the Blend Mode to **Transparent** and set the Cull Mode to **Inverted**, turn off Z Test and Z Write. Then setup the graph as the image below: 
+To implement back face fattening, You have to expand the model by a little through moving the vertex a bit in the direction of the normal. Only back faces of the enlarged model is rendered so that the original model won't be occluded. Open the material and set the Blend Mode to **Transparent** and set the Cull Mode to **Inverted**, **turn off Depth Write**. Then setup the graph as the image below: 
 
 ![Toon outline](media/toon-outline-material.png)
 
@@ -22,38 +22,26 @@ using FlaxEngine;
 namespace Game;
 
 /// <summary>
-/// OutlineRenderer Script.
+/// Outline mesh rendering script.
 /// </summary>
 public class OutlineRenderer : PostProcessEffect
 {
     private Material _material;
-    private Model _model;
 
+    /// <summary>
+    /// ss
+    /// </summary>
     public Material OutlineMaterial
     {
         get => _material;
-        set
-        {
-            if (_material != value)
-            {
-                _material = value;
-            }
-        }
+        set => _material = value;
     }
 
     /// <inheritdoc />
     public override unsafe void OnEnable()
     {
         // This postfx overdraws the input buffer without using output
-        UseSingleTarget = true; 
-
-        // Custom draw location in a pipeline, before forward pass so that the draw call could be executed together with other forward draw calls
-        Location = PostProcessEffectLocation.BeforeForwardPass; 
-
-        // Get the actor as a `StaticModel` (or `AnimatedModel` instead)
-        var modelInstance = Actor as StaticModel;
-        // Get the actual `Model`
-        _model = modelInstance.Model;
+        UseSingleTarget = true;
 
         // Register postFx to all game views (including editor)
         SceneRenderTask.AddGlobalCustomPostFx(this);
@@ -69,19 +57,23 @@ public class OutlineRenderer : PostProcessEffect
     /// <inheritdoc />
     public override bool CanRender()
     {
-        return base.CanRender() && _material;
+        return base.CanRender() && _material && Actor;
     }
 
     /// <inheritdoc />
-    public override unsafe void Render(GPUContext context, ref RenderContext renderContext, GPUTexture input, GPUTexture output)
+    public override void CollectDrawCalls(ref RenderContextBatch renderContextBatch)
     {
-        // Second pass: draw the model with the outline material
-
         // Get the transform of the actor
         Actor.GetLocalToWorldMatrix(out var world);
-        
+
+        // Render to main view only, drawing into other contexts can be used to draw shadows of custom meshes
+        ref RenderContext renderContext = ref renderContextBatch.MainContext;
+
         // Submit the draw call to the render list, which will be handled later in the forward pass
-        _model.Draw(ref renderContext, _material, ref world, StaticFlags.None, false);
+        if (Actor is StaticModel staticModel)
+            staticModel.Model.Draw(ref renderContext, _material, ref world, StaticFlags.None, false);
+        else if (Actor is AnimatedModel animatedModel)
+            animatedModel.SkinnedModel.Draw(ref renderContext, animatedModel.SkinnedMeshBones, _material, ref world, StaticFlags.None, false);
     }
 }
 ```
