@@ -92,6 +92,9 @@ public class LoadingScreen : Script
 }
 ```
 
+> [!Note]
+> If your game uses DDGI for lighting, then you can include the check `Graphics.GI.GetConvergence(MainRenderTask.Instance?.Buffers) >= 1.0f` inside `IsLoading` to wait for GI to spread after scene load.
+
 ### 2. Create Loading Screen prefab with UI
 
 Next step is to create a loading screen prefab with Ui that will be displayed on top of the game while it's being loaded.
