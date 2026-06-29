@@ -18,11 +18,15 @@ To learn how to quickly set up Realtime Global Illumination see [this tutorial](
 
 It uses light probes (world-space, automatically placed) to gather indirect lighting at a fixed location and then later sample it in materials (opaque, transparent and volumetric). To prevent light leaking, a common problem of light probe-based solutions, the DDGI algorithm renders a low-resolution depth buffer around each probe and applies the *Chebyshev* visibility weight.
 
-DDGI probes are placed around the camera and are split into a series of cascades to cover the whole scene. When the camera moves though the scene, the probes are scrolled to maintain GI coverage.
+DDGI probes are placed around the camera and are split into a series of cascades to cover the whole scene. When the camera moves though the scene, the probes are scrolled to maintain GI coverage. Far-scene outside the GI *Distance* uses a fallback probe with ambient irradiance from the sky.
 
 ### DDGI Algorithm
 
-Flax's implementation of the DDGI algorithm uses custom a **Software Ray Tracing** solution and an automatically **scrolled probes volume** with up to **4 cascades**. Watch the video below to learn more about the technical and artistic aspects of this rendering feature:
+Flax's implementation of the DDGI algorithm uses custom a **Software Ray Tracing** solution and an automatically **scrolled probes volume** with up to **4 cascades**. Cascades closer to the camera are update more often compared to far cascades.
+
+Probes use variable-ray count based on probe state and variance of the irradiance calculated during probe update. This allows scale down ray count to save on perf when nearby lighting has stabilized and doesn't fluctuate but when for example nearby objects are moving or changing color then ray count automaticallly increases to account for dynamic lighting response. Additionallly, to amortize potential noise artifacts when using low ray count the blend factor used by the probe is high which slows down the GI changes.
+
+Watch the video below to learn more about the technical and artistic aspects of this rendering feature:
 
 <center><a href="https://www.gdcvault.com/play/1026182/" target="_blank"><img src="media/ddgi-video-icon.jpg" style="width:80%; border:4px solid #000"></a></center>
 
@@ -45,7 +49,9 @@ Then you can adjust the following options:
 | **BounceIntensity** | Global Illumination infinite indirect lighting bounce intensity scale. Can be used to boost or reduce the GI effect for light bouncing on the surfaces. |
 | **Temporal Response** | Defines how quickly GI blends between the the current frame and the history buffer. Lower values update GI faster, but with more jittering and noise. If the camera in your game doesn't move much, we recommend values closer to 1. |
 | **Distance** | Draw distance of the Global Illumination effect. Scenes outside the range will use fallback irradiance. |
+| **Indirect Shadows Strength** | Indirect lighting shadows intensity. Default is 1 for fully opaque shadowing, lower values bleed the lighting into shadowed areas. Can be sued for artistic control over GI. |
 | **Fallback Irradiance** | The irradiance lighting outside the GI range used as a fallback to prevent a pure-black scene outside the Global Illumination range. |
+| **Indirect Resolution** | The indirect lighting render resolution. Full gives better quality, but half improves performance. |
 
 Additional relevant options in the [Graphics Settings](../../../editor/game-settings/graphics-settings.md):
 
@@ -118,11 +124,21 @@ Use **View -> Debug View -> Global Illumination** to preview DDGI probes in a vi
 * **Meshes need to have simple interiors** (eg. house model with separate walls) - use Global Surface Atlas debug view to analyze your content.
 * Large emissive surfaces like a TV screen might need additional light sources to correctly cover specular lighting.
 * Small emissive objects might flicker due to imperfections caused by reduced rendering resources resolution.
+* Use **Global SDF Overlap** debug view mode to analyze cost of SDF rasterization, which is related to the number of objects in each chunk of the world (shown an a picture below).
 
-### DDGI Cost
+![Global SDF Overlap](media/global-sdf-overlap.png)
 
- Total GPU memory usage of DDGI is between 200-400 MB (depending on quality and content):
-* DDGI uses up to 69 MB of GPU memory (depending on quality) *(nice)*
-* Global Surface Atlas uses around 49 MB of GPU memory (or more when using higher resolution)
-* Global SDF uses up to 130 MB of GPU memory (depending on the quality)
-* Models SDFs can use several MBs of GPU memory
+### DDGI Memory
+
+Total GPU memory usage of DDGI is between 200-300 MB (depending on quality and content):
+* DDGI uses up to 69 MB of GPU memory (depending on quality),
+* Global Surface Atlas uses around 24 MB of GPU memory (based on resolution setting),
+* Global SDF uses up to 65 MB of GPU memory (depending on the quality),
+* Models SDFs can use several MBs of GPU memory,
+* Use `Graphics.GI.Dump` to log current stats or DDGI rendering internals and memory usage.
+
+### Performance & Optimization
+
+Use `StaticFlags` on static scene objects to optimize rendering. Dynamic objects are rasterized into Global SDF more often and their surfaces are rendered into Global Surface Atlas at higher refresh rate.
+
+Setup *GI Quality* to scale across different devices. GI Quality controls amount of rays that can be shoot from probes every frame. Higher quality uses more rays thus accoutns for more stable and dynamic GI. On lower quality,  with less rays avaliable, GI can contain minor artifacts in low-light scenarios and uses higher blending to reduce nosie which limits GI propagation speed. Additional, *Indirect Resolution* setting can help on low-end devices by resolving GI lighting in lower resolution with bilateral upscaling (depth and normal weighting).
