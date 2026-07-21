@@ -52,6 +52,8 @@ Then you can adjust the following options:
 | **Indirect Shadows Strength** | Indirect lighting shadows intensity. Default is 1 for fully opaque shadowing, lower values bleed the lighting into shadowed areas. Can be sued for artistic control over GI. |
 | **Fallback Irradiance** | The irradiance lighting outside the GI range used as a fallback to prevent a pure-black scene outside the Global Illumination range. |
 | **Indirect Resolution** | The indirect lighting render resolution. Full gives better quality, but half improves performance. |
+| **Reflections** | The indirect specular reflections rendering mode to use. Set this to `DDGI` to enable dynamic reflections. |
+| **Reflections Resolution** | The indirect specular reflections render resolution. Full gives better quality, but half improves performance. |
 
 Additional relevant options in the [Graphics Settings](../../../editor/game-settings/graphics-settings.md):
 
@@ -74,6 +76,16 @@ This uses our custom Software Tracing of the Global Surface Atlas as a fallback 
 This screen space rendering method however comes with one major limitation, that is that pixels that are visible on-screen can be used in reflections. With software raytracing using the Global SDF and the Global Surface Atlas, full-scene raytracing is used which provides reflections even for off-screen objects.
 
 Using this feature can have a significant performance impact (between 0.5-1ms of GPU time), but drastically enhances the look of the scenes by making the lighting more realistic and complete.
+
+### DDGI Specular Reflections
+
+![DDGI Specular Reflections](../reflections/media/ddgi-reflections.gif)
+
+Change `Reflections` mode to `DDGI` in *Post Process Settings* to enable realtime rough reflections from automatically placed probes. Those probes are reusing results from indirect diffuse lighting radiance raytracing but convolve traces into radiance that is stored at `14x14` resolution per-probe (octahedral mapping). Output reflections are lower quality than Environment probes but are far more scalable and provide dynamic reflections by default. Average scene can utilize for example `50,000` probes at memory cost of `49MB` of VRAM. Performance overhead varies on resolution, scene and GPU but is usually rather small: `0.5ms - 0.9ms` (RTX 2080Ti).
+
+Debug view of DDGI Specular probes:
+
+![DDGI Specular Probes](../reflections/media/ddgi-specular-probes.jpg)
 
 ### Software Ray Tracing
 
