@@ -19,6 +19,7 @@ Flax Engine is very extensible which allows developers to create custom solution
 * [Example Plugin](https://github.com/FlaxEngine/ExamplePlugin) - Example Plugin for Flax
 * [Dear ImGui](https://github.com/FlaxEngine/ImGui) - Dear ImGui for Flax Engine
 * [Flax Web Racing](https://github.com/FlaxEngine/FlaxWebRacing) - Arcade racing game in Flax Engine
+* [Split Screen Sample](https://github.com/FlaxEngine/SplitScreenSample) - Simple local co-op racing game project with split-screen
 
 ## Community Projects
 

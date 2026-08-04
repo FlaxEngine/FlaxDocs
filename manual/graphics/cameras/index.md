@@ -55,6 +55,7 @@ To learn more about the C# scripting API see the [Camera](http://docs.flaxengine
 | **Render Layers Mask** | The layers mask used for rendering using this camera. Can be used to include or exclude specific actor layers from the drawing. |
 | **Render Flags** | Frame rendering flags used to switch between graphics features for this camera. See [ViewFlags](https://docs.flaxengine.com/api/FlaxEngine.ViewFlags.html) api reference. |
 | **Render Mode** | Describes frame rendering modes for this camera. See [ViewMode](https://docs.flaxengine.com/api/FlaxEngine.ViewMode.html). |
+| **Viewport Rect** |  values that define where on the screen this camera should be drawn. Measured in normalized coordinates (range 0-1). Order: *X*, *Y*, *Width*, *Height*. For example `(0, 0, 1, 1)` means full screen, `(0, 0, 0.5, 1)` means left half of the screen and `(0.5, 0, 0.5, 1)` means right half of the screen. |
 
 ## Masking object layers
 
@@ -113,6 +114,10 @@ MainRenderTask.Instance.Buffers.UseAlpha = true;
 ```
 
 Then, the renderer will use `R16G16B16A16` format for the image textures and passthrough the alpha channel. This affects game performance, as the default `R11G11B10` format is more optimized for lower memory bandwidth. When using alpha in output try to disable unused PostFx features to reduce memory pressure and improve performance.
+
+# Split Screen
+
+See the dedicated documentation page [here](split-screen.md).
 
 ## Override view
 

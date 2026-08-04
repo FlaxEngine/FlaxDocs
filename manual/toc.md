@@ -80,6 +80,7 @@
 ## [Rendering overview](graphics/overview/index.md)
 ## [Cameras](graphics/cameras/index.md)
 ### [How to render a camera to a texture](graphics/cameras/render-camera-to-texture.md)
+### [Split Screen](graphics/cameras/split-screen.md)
 ## [Materials](graphics/materials/index.md)
 ### [Materials Basics](graphics/materials/basics/index.md)
 ### [Materials Editor](graphics/materials/material-editor/index.md)

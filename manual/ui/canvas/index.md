@@ -22,6 +22,7 @@
 | **Render Camera** | Camera used to place the GUI. *Used only by Camera Space canvas.* |
 | **Distance** | Distance from the RenderCamera to place the plane with GUI. If the screen is resized, changes resolution, or the camera frustum changes then the canvas will automatically change size to match as well. Value is in world units. |
 | **Output Texture** | Output texture for the canvas when render mode is set to <see cref="CanvasRenderMode.GPUTexture"/>. The size of the canvas will be automatically set to the size of the texture. The canvas will render its content into this texture.
+| **Viewport Rect** | Four values that define where on the screen this canvas should be drawn. Measured in normalized coordinates (range 0-1). Order: *X*, *Y*, *Width*, *Height*. For example `(0, 0, 1, 1)` means full screen, `(0, 0, 0.5, 1)` means left half of the screen and `(0.5, 0, 0.5, 1)` means right half of the screen. |
 |||
 | **Input Repeat Delay** | The delay (in seconds) before a navigation input event starts repeating if input control is held down (Input Action mode is set to *Pressing*). |
 | **Input Repeat Rate** | The delay (in seconds) between successive repeated navigation input events after the first one. |
