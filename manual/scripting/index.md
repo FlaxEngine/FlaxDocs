@@ -52,6 +52,7 @@ To start visual scripting see the related documentation [here](visual/index.md).
   * [Visual Studio](debugging/visual-studio.md)
   * [Visual Studio Code](debugging/visual-studio-code.md)
   * [Rider](debugging/rider.md)
+  * [CLion](debugging/clion.md)
 * [Scripts serialization](serialization/index.md)
 * [Empty Actor](empty-actor.md)
 * [Engine API](engine-api.md)
