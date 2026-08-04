@@ -23,11 +23,55 @@ Flax deserialization works more like `populate` existing object with data rather
 
 Here are listed various hints about Flax serialization:
 
-* References to the scene objects (actors, scripts) are serialized as `Guid` (hex format, inlined). See [Object.ID](https://docs.flaxengine.com/api/FlaxEngine.Object.html#FlaxEngine_Object_ID).
-* Editor uses default serialization rules for Undo
-* Flax deserializes all child scene object before calling `OnAwake`/`OnStart` methods on loaded objects (parent object may not be deserialized yet).
-* Avoid recursive references for custom objects types. It's better to use loop-references for scene objects.
-* When performing code refactoring see [this tutorial](../advanced/refactoring-renaming.md) about supporting old data format loading
+* References to the scene objects (actors, scripts) are serialized as `Guid` (hex format, inlined). See [Object.ID](https://docs.flaxengine.com/api/FlaxEngine.Object.html#FlaxEngine_Object_ID),
+* Editor uses default serialization rules for Undo,
+* Flax deserializes all child scene object before calling `OnAwake`/`OnStart` methods on loaded objects (parent object may not be deserialized yet),
+* Avoid recursive references for custom objects types. It's better to use loop-references for scene objects,
+* When performing code refactoring see [this tutorial](../advanced/refactoring-renaming.md) about supporting old data format loading.
+
+### Enums serialization
+
+Enumeration values are serialized as plain integers by default, using the value they hold. This works well for a single value or a combination of flags while providing fast serialization. Hovewer, when enum entries are added or moved their values might not be stable while devloping the game. For such case, enum type can be marked with `EnumString` attribute which works for both C# and C++ enums.
+
+# [C#](#tab/code-csharp)
+```cs
+/// <summary>
+/// Basic enum serialized as string.
+/// </summary>
+[EnumString]
+public enum TestEnumString
+{
+    /// <summary>
+    /// Value 1
+    /// </summary>
+    Value1,
+
+    /// <summary>
+    /// Value 2
+    /// </summary>
+    Value2,
+
+    /// <summary>
+    /// Value 3
+    /// </summary>
+    Value3,
+}
+```
+# [C++](#tab/code-cpp)
+```cpp
+// Basic enum serialized as string.
+API_ENUM(Attributes="EnumString")
+enum class TestEnumString
+{
+    // Value 1
+    Value1,
+    // Value 2
+    Value2,
+    // Value 3
+    Value3,
+};
+```
+***
 
 ## Serialization callbacks
 
@@ -40,6 +84,7 @@ Flax supports serialization callback methods. A callback can be used to manipula
 
 Example:
 
+# [C#](#tab/code-csharp)
 ```cs
 using System.Runtime.Serialization;
 
@@ -70,6 +115,40 @@ public class MyScript : Script
     }
 }
 ```
+# [C++](#tab/code-cpp)
+```cpp
+#include "Engine/Serialization/ISerializeModifier.h"
+
+API_CLASS() class GAME_API MyScript : public Script
+{
+    API_AUTO_SERIALIZATION();
+    DECLARE_SCENE_OBJECT(MyScript);
+
+public:
+    API_FUNCTION(Attributes="OnSerializing", Hidden)
+    void OnSerializing(const CallbackContext& context)
+    {
+    }
+
+    API_FUNCTION(Attributes="OnSerialized", Hidden)
+    void OnSerialized(const CallbackContext& context)
+    {
+    }
+
+    API_FUNCTION(Attributes="OnDeserializing", Hidden)
+    void OnDeserializing(const CallbackContext& context)
+    {
+        // 'context.Modifier->EngineBuild' holds engine version of saved data
+    }
+
+    API_FUNCTION(Attributes="OnDeserialized", Hidden)
+    void OnDeserialized(const CallbackContext& context)
+    {
+        // 'context.Modifier->EngineBuild' holds engine version of saved data
+    }
+};
+```
+***
 
 ## Native C\+\+ serialization
 

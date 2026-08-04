@@ -32,7 +32,7 @@ Example:
 ```cpp
 #include "Engine/Serialization/ISerializeModifier.h"
 
-API_CLASS() class FLAXENGINE_API MyScript : public Script
+API_CLASS() class GAME_API MyScript : public Script
 {
     API_AUTO_SERIALIZATION();
     DECLARE_SCENE_OBJECT(MyScript);
