@@ -49,6 +49,10 @@ if (Engine::GetCommandLine().Contains(TEXT("-skipIntro")))
 {
     //..
 }
+
+// or use: (incl. value parsing)
+bool value;
+bool hasValue = CommandLine::Get(TEXT("skipIntro"), value);
 ```
 ***
 
@@ -74,6 +78,7 @@ if (Engine::GetCommandLine().Contains(TEXT("-skipIntro")))
 | **-intel** | Hints to use Intel GPU (if available). |
 | **-gpudebug** | Activates GPU Debug Layers and additional assertions for rendering validation. Only in `Development` or `Debug` builds. |
 | **-mute** | Disables audio playback and uses Null Audio Backend. |
+| **-CoreLimit=X** | Limits the maximum amount of CPU cores that engine can use. |
 
 ## Editor-only options
 
