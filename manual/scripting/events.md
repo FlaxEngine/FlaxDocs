@@ -1,68 +1,97 @@
 # Script events
 
-Scripts in Flax does not work like the traditional programs where code runs continuously in a loop until end.
-Instead, Flax calls declared in script functions to handle specific game events like update or physics collision.
-These functions are called **event functions** because they are executed by Flax in response to events that occur during gameplay. Using these function allows you to implement gameplay logic and handle different situations inside your game.
+Programming using scripts in Flax does not work like traditional programs, where code runs continuously in a loop until the program is exited.
+
+Instead, Flax calls different functions in `Script`s to handle game and editor events like the main update loop (`OnUpdate()`) or user input. These functions are called **event functions**, **events** or **callbacks**, because they are executed by Flax in response to events that have occurred. 
 
 ## Examples
 
+Example for `Script`:
+
 # [C#](#tab/code-csharp)
-[!code-csharp[Example1](code-examples/events.cs)]
+[!code-csharp[Example1](code-examples/event-examples-script.cs)]
 # [C++](#tab/code-cpp)
 [!code-cpp[Example2](code-examples/events.h)]
 ***
 
+<br>
+Example for a custom UI `Control`:
+
+# [C#](#tab/code-csharp-ui)
+[!code-csharp[Example3](code-examples/event-examples-ui-control.cs)]
+***
+
 ## Event functions
 
-The following table lists all the available event functions to override from the base **Script** class.
+The following table lists all the available event functions to override from the base `Script` class.
 
 > [!TIP]
-> You don't have to call the base class methods if you script inherits directly from Script type. The default implementations are empty.
+> The default implementations of these methods are empty, so no need to call the base implementation if you script inherits directly from the `Script` type. 
 
 | Event | Description |
 |--------|--------|
-| **void OnAwake()** | Called after the object is loaded to initialize it. Before the enabling it or calling start (including any other scene objects). |
-| **void OnEnable()** | Called when object becomes enabled and active. |
-| **void OnDisable()** | Called when object becomes disabled and inactive. |
-| **void OnDestroy()** | Called before the object will be destroyed. |
-| **void OnStart()** | Called when a script is enabled just before any of the Update methods is called for the first time. |
-| **void OnUpdate()** | Called every frame if object is enabled (C++ scripts need to set `_tickUpdate=true` in constructor). |
-| **void OnLateUpdate()** | Called every frame (after *Update*) if object is enabled (C++ scripts need to set `_tickLateUpdate=true` in constructor). |
-| **void OnFixedUpdate()** | Called every fixed framerate frame if object is enabled (C++ scripts need to set `_tickFixedUpdate=true` in constructor). |
-| **void OnLateFixedUpdate()** | Called every fixed framerate frame (after *FixedUpdate*) if object is enabled (C++ scripts need to set `_tickLateFixedUpdate=true` in constructor). |
-| **void OnDebugDraw()** | Called during drawing debug shapes in editor. Use [DebugDraw](https://docs.flaxengine.com/api/FlaxEngine.DebugDraw.html). |
-| **void OnDebugDrawSelected()** | Called during drawing debug shapes in editor when the object is selected. Use [DebugDraw](https://docs.flaxengine.com/api/FlaxEngine.DebugDraw.html). |
+| `void OnAwake()` | Called after the object is loaded but before `OnStart()` or `OnEnable()`. Can be used to initialize it. |
+| `void OnEnable()` | Called when object becomes enabled and active, before any of the update methods will be called. |
+| `void OnDisable()` | Called when object becomes disabled and inactive. |
+| `void OnDestroy()` | Called before the object will be destroyed. |
+| `void OnStart()` | Called when a script is enabled, just before `OnEnable()` is called. |
+| `void OnUpdate()` | Called every frame if the object is enabled (C++ scripts need to set `_tickUpdate = true` in their constructor). |
+| `void OnLateUpdate()` | Called every frame (after `OnUpdate()`) if the object is enabled (C++ scripts need to set `_tickLateUpdate = true` in their constructor). |
+| `void OnFixedUpdate()` | Called every fixed framerate frame if object is enabled (C++ scripts need to set `_tickFixedUpdate = true` in their constructor). |
+| `void OnLateFixedUpdate()` | Called every fixed framerate frame (after `OnFixedUpdate()`) if the object is enabled (C++ scripts need to set `_tickLateFixedUpdate = true` in their constructor). |
+| `void OnDebugDraw()` | Called during the drawing of debug shapes in the editor. See [DebugDraw](https://docs.flaxengine.com/api/FlaxEngine.DebugDraw.html). |
+| `void OnDebugDrawSelected()` | Called during the drawing of debug shapes in editor if the object is selected. See [DebugDraw](https://docs.flaxengine.com/api/FlaxEngine.DebugDraw.html). |
 
-## Order of execution for event functions
+## Order of execution
 
-Script events are invoked in the following order:
+This diagram shows the invocation order of all script events:
 
 ![Script Events Order](media/script-events.png)
 
+### Update callbacks
+
+Flax supports performing the games update, physics update and drawing at different update-/ frame rates. This means that gameplay logic should not depend on `Script`s events like `OnUpdate()`, `OnFixedUpdate()` and `OnDebugDraw()` being called in a deterministic order. 
+
+`OnUpdate()` is called during the game update, which is then followed by `OnLateUpdate()`. 
+
+During physics update the engine invokes `OnFixedUpdate()` and then `OnLateFixedUpdate()`. 
+
+During rendering, the engine will invoke `OnDebugDraw()` and `OnDebugDrawSelected()`.
+
 ### Initialization
 
-Every created and added to *Actor* script receives **OnAwake**. If Script and its parent are active in the hierarchy then **OnStart** and **OnEnable** are being called (on game start or object spawn). Otherwise, this call is postponed until someone enables that script.
+Every script that was attached to an *Actor* receives the `OnAwake()` event after it was created. 
 
-Events OnAwake and OnStart can be called only once on a script. OnStart is always called before the first OnEnable. All scripts receive OnAwake first, before BeginPlay-phrase starts that enables the scripts. In general, OnAwake should be used to initialize the object itself (eg. setup game system manager or pre-allocate memory). Then OnStart/OnEnable should be utilized for cross-object interactions (eg. register to a game manager, cache player scripts, etc.).
+If the script and the actor it is attached to are active in the scene hierarchy, `OnEnable()` will be called immediately, while `OnStart()` will be called right before the first call to `OnEnable()`. 
 
-### Game Logic
+If the actor or script are disabled, these calls are postponed until the actor and script are enabled.
 
-Engine main loop update is highly configurable and supports performing the game update, physics update and drawing at different framerates. This means that update, fixed update, and a draw might be desynchronized and not called in the same order. Event **OnUpdate** is called during the game update, then is followed by **OnLateUpdate**. During physics update engine invokes **OnFixedUpdate** and **OnLateFixedUpdate**. During rendering engine can invoke **OnDebugDraw** and **OnDebugDrawSelected** (used by the editor).
+Note that `OnAwake()` and `OnStart()` are only called once per script instance.
+
+`OnAwake()` should be used to initialize the object itself (eg. to perform setup or pre-allocate memory). `OnStart()`/ `OnEnable()` should be used for cross-object interactions (eg. registering the object to a game manager, caching player scripts).
 
 ### Deinitialization
 
-On game end all scripts are disabled and **OnDisable** event is called when removing the object from gameplay. Then during actual object destruction, the **OnDestroy** is invoked. Also, if the script becomes inactive (eg. someone disables it or one of its parents in its hierarchy) then the engine invokes **OnDisable**. The disabled script can be activated again and receive *OnEnable* to begin being part of the gameplay logic.
+When the game ends, all scripts are disabled and the `OnDisable()` event is called when the object is removed from gameplay. Then, during the actual object destruction, the `OnDestroy()` callback is invoked.
 
-Event OnDestroy can be called only once on a script. Flax does not use the script anymore after OnDestroy event invocation.
+If the script becomes inactive (eg. it or the actor it is attached to are disabled), the engine invokes `OnDisable()`. The disabled script can be re-activated, receiving a call to `OnEnable()` and all subsequent calls to `OnUpdate()` and other update methods again.
 
-### Events in Editor
+The `OnDestroy()` event can be called only once per a script. Flax does not use the script instance anymore after the `OnDestroy()` event was invoked.
 
-Flax does not invoke any script events during `edit-time` (when the scene is loaded and the user modifies it) except **OnDebugDraw** and **OnDebugDrawSelected**. Only when in-build play mode starts the actual game logic is being simulated. However, if the game script wants to receive events during editing it can be marked with `[ExecuteInEditMode]` attribute. Then all events will be called normally.
+### Some Notes On Initialization and Deinitialization
 
-### Order
+Initialization events (`OnAwake()`, `OnEnable()`, `OnStart()`) and deinitialization events (`OnDisable()`, `OnDestroy()`) are always called for the object that is being created or destroyed first, then further down into the hierarchy. 
 
-The Script event's invocation order depends on the event type. Gameplay logic events (update, fixed update and debug drawing) are called in non-stable order so gameplay logic should not depend on it. Initialization events (awake, enable, start) and deinitialization events (disable, destroy) are always called for the parent objects first, then further down into the hierarchy. This means that script in parent actor can query the child actors' objects and scripts but they might not be initialized yet.
+This means that scripts can try to access child actors and their data while they might not be initialized yet.
 
-However, you can still use initialization events to add new objects as child actors/scripts because Flax will invoke initialization for them when required.
+However, you can still use initialization events to add child actors or scripts to the actor. Flax will invoke initialization events for the newly created scripts/ actors when required.
 
-All script events are called when a script is already deserialized and has valid data ready to use (exception is OnAwake which relies to a single object readiness - other objects might be not initialized yet).
+All the other script events are called when a script is already deserialized and has valid data ready to use, with the exception being `OnAwake()`. It only waits for the object itself to be ready - other objects might be not initialized yet.
+
+## Events in Editor
+
+Flax by default does not invoke any script events during *edit-time* (when the scene is loaded in editor), except `OnDebugDraw()` and `OnDebugDrawSelected()`. 
+
+Only when the game is running, for example in in-editor play mode, will the actual game logic be simulated. 
+
+If you want a `Script` to receive events during editing, it can be marked with the `[ExecuteInEditMode]` attribute. Then all events will be called normally during *edit-time*, just like the game was actually running.
