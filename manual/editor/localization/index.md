@@ -61,9 +61,9 @@ Flax supports **importing translated strings** from `.po` files into Localized S
 
 ![Localized String Editor](media/localized-string.png)
 
-**Localized String** is scripting type for easy texts localziation. It contains two fields: `Id` and `Value`. *Id* is the localized string identifier, *Value* is custom overriden text value (if *Value* is set, the *Id* won't be used).
+**Localized String** is scripting type for easy texts localization. It contains two fields: `Id` and `Value`. *Id* is the localized string identifier, *Value* is custom overridden text value (if *Value* is set, the *Id* won't be used).
 
-In Editor *Id* textfield contains utility button that shows a localized string picker from the Localization Settings. If *Value* field is empty then it will display watermark of the current text from the localization. You can also manually set *Value*. By using `+` button on the right side of the *Value* textfield you can add the text to the localization settigns for all locales in project (the inserted value will be passed to default `en` locale, rest of the cultures will have empty, missing text translation).
+In Editor *Id* textfield contains utility button that shows a localized string picker from the Localization Settings. If *Value* field is empty then it will display watermark of the current text from the localization. You can also manually set *Value*. By using `+` button on the right side of the *Value* textfield you can add the text to the localization settings for all locales in project (the inserted value will be passed to default `en` locale, rest of the cultures will have empty, missing text translation).
 
 `LocalizedString` is supported in both C++ and C# scripting API and can be used for texts localization instead of raw `String` type. It supports implicit conversion between in-built string type and can be serialized or deserialized.
 

@@ -113,7 +113,7 @@ public class Steam : Script
 }
 ```
 
-To learn more see the libary [website](https://github.com/rlabrecque/Steamworks.NET).
+To learn more see the library [website](https://github.com/rlabrecque/Steamworks.NET).
 
 ## External module with scripting
 

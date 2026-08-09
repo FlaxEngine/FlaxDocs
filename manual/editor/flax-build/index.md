@@ -34,7 +34,7 @@ Build scripts are using C# 12 with full .NET 8 support. Additionally Flax.Build 
 * `CommandLine` attribute for command line parsing
 * `Log` utility with info/errors logging capabilities (to log file and to console output)
 * `Tokenizer` class for passing code as tokens
-* `Utilities` class with many usefull tools (eg. `WriteFileIfChanged`, `ReplaceInFiles`, `Run`, `GetFileSize`..)
+* `Utilities` class with many useful tools (eg. `WriteFileIfChanged`, `ReplaceInFiles`, `Run`, `GetFileSize`..)
 * `Sdk` searching and caching tools (used for ex. `PS4Sdk`, `GDK`, `VulkanSdk`)
 * `VCEnvironment` tool that can invoke *MSBuild* tool (works on Windows, Linux and Mac).
 

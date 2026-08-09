@@ -1,6 +1,6 @@
 # Requirements
 
-Flax Engine has specific hardware and software requirements for running the game or developing with the engine.
+Flax Engine has specific hardware and software requirements for running the game or developing games with the engine.
 
 ### Hardware Requirements
 
@@ -20,7 +20,7 @@ For developers using Flax Editor on Linux platforms the requirements are [here](
 
 For developers using Flax Editor on Mac platforms the requirements are [here](mac.md).
 
-## Software Requirements
+## Windows Software Requirements
 
 Flax Engine requires **Visual C++ Redistributable for Visual Studio 2015** (or newer) to be installed on Windows in order to start.
 The launcher will check and begin installation if it is missing, however if your game is targeting the Windows platform you should include the redistributable installer with it. You can download it [here](https://www.microsoft.com/download/details.aspx?id=48145).
@@ -37,5 +37,6 @@ You can download the free community edition [here](https://www.visualstudio.com/
 Please ensure that you have the latest GPU drivers installed:
 - [NVIDIA drivers](https://www.nvidia.com/Download/index.aspx)
 - [AMD drivers](https://www.amd.com/support)
+- [Intel drivers](https://www.intel.com/content/www/us/en/download-center/home.html)
 
 For information about supported platforms, see [Platforms](../platforms/index.md).

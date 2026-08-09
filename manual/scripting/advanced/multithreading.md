@@ -12,7 +12,7 @@ There is no *great rule* whether use main thread or custom jobs. In most cases, 
 > [!TIP]
 > To profile asynchronous code use in-built [Profiler](../../editor/profiling/profiler.md) or [Tracy](../../editor/profiling/tracy.md) profiler.
 
-## Synchronziation
+## Synchronization
 
 One of the key elements of multi-threaded programming is synchronization. Work submissions and results fetching are important aspects of this area. Always try to implement your algorithms starting from designing the data that you want to process. For instance, if you generate voxel terrain, then you can generate geometry in async but the created model can be added to the scene only on the main thread, then you can use something like this: `Scripting.InvokeOnUpdate(() => model.Parent = mainScene)`.
 
@@ -29,7 +29,7 @@ Thread-safe concurrent collections you can use in C#
 
 ## Job System
 
-Flax contains own **Job System** which is used by the engine to pararellize systems like particles, animations, content, etc. It can be also used by the game to execute code in paraller. It makes easier to optimize large data sets processing using multi-core. Job System uses one thread per CPU. Example usage of the job system that will trigger two async job dispatches and wait for the second one to finish before continuing.
+Flax contains own **Job System** which is used by the engine to parallelize systems like particles, animations, content, etc. It can be also used by the game to execute code in parallel. It makes easier to optimize large data sets processing using multi-core. Job System uses one thread per CPU. Example usage of the job system that will trigger two async job dispatches and wait for the second one to finish before continuing.
 
 ```cs
 using System;
@@ -58,7 +58,7 @@ class JobSystemTest : Script
 
 ## Task Graph
 
-For more advanced gameplay systems that need to use dependencies and aim to improve CPU performance (better scheduling without gaps) the **Task Graph** is preferred. It's used by the engine to parallarize animations, particles, streaming and other systems update and can be used by the gameplay code. For instance, you can create own Task Graph System for a game that will calculate AI paths or perform player visibility checks or anything your project needs. The advantage of using Task Graph is that your async jobs will overlap with other jobs including engine async task which gives significant performance boost over traditional single-threaded gameplay programming.
+For more advanced gameplay systems that need to use dependencies and aim to improve CPU performance (better scheduling without gaps) the **Task Graph** is preferred. It's used by the engine to parallelize animations, particles, streaming and other systems update and can be used by the gameplay code. For instance, you can create own Task Graph System for a game that will calculate AI paths or perform player visibility checks or anything your project needs. The advantage of using Task Graph is that your async jobs will overlap with other jobs including engine async task which gives significant performance boost over traditional single-threaded gameplay programming.
 
 **TaskGraph** is a graph-based asynchronous tasks scheduler for high-performance computing and processing. It contains a list of systems to execute. You can create own graphs or use in-built ones to share CPU with engine systems.
 
@@ -182,7 +182,7 @@ class AsyncTest : Script
 }
 ```
 
-Also, when using `async` tasks you can use the `Scripting.MainThreadScheduler` to invoke task on a main thread during game *Update*. This can be usefull when chacing the async tasks with main thread tasks.
+Also, when using `async` tasks you can use the `Scripting.MainThreadScheduler` to invoke task on a main thread during game *Update*. This can be useful when checking the async tasks with main thread tasks.
 
 ## Thread
 

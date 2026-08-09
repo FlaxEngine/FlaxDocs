@@ -20,7 +20,7 @@ public class SpringArmCamera : Script
     /// <summary>
     /// Target camera actor.
     /// </summary>
-    public Camera CamerActor;
+    public Camera CameraActor;
 
     /// <summary>
     /// Initial spring arm radius to roam around.
@@ -63,10 +63,10 @@ public class SpringArmCamera : Script
         // Auto-link actors
         if (!TargetActor)
             TargetActor = Actor;
-        if (!CamerActor)
+        if (!CameraActor)
         {
-            CamerActor = Scene.FindActor<Camera>();
-            if (CamerActor == null)
+            CameraActor = Scene.FindActor<Camera>();
+            if (CameraActor == null)
                 Debug.LogError("Missing camera");
         }
     }
@@ -74,7 +74,7 @@ public class SpringArmCamera : Script
     /// <inheritdoc />
     public override void OnUpdate()
     {
-        if (!CamerActor || !TargetActor)
+        if (!CameraActor || !TargetActor)
             return;
 
         // Update input
@@ -89,15 +89,15 @@ public class SpringArmCamera : Script
         Vector3 direction = Vector3.Transform(Vector3.Forward, rotation) * Distance;
         Vector3 newPosition = targetPosition + direction;
         direction = (newPosition - targetPosition).Normalized;
-        CamerActor.Position = targetPosition + direction * Distance;
-        CamerActor.LookAt(targetPosition, Vector3.Up);
+        CameraActor.Position = targetPosition + direction * Distance;
+        CameraActor.LookAt(targetPosition, Vector3.Up);
         
         // Snap Camera if it intercepts with an environment
         if (Physics.RayCast(targetPosition, direction, out RayCastHit hit, Distance, CollisionLayers))
         {
-            var bias = CollisionDistanceBias + CamerActor.NearPlane;
+            var bias = CollisionDistanceBias + CameraActor.NearPlane;
             var distance = Mathf.Max(hit.Distance - bias, MinDistance);
-            CamerActor.Position = targetPosition + direction * distance;
+            CameraActor.Position = targetPosition + direction * distance;
         }
     }
 }
