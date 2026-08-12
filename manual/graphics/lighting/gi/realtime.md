@@ -48,7 +48,7 @@ Then you can adjust the following options:
 | **Intensity** | Global Illumination indirect lighting intensity scale. Can be used to boost or reduce the GI effect. |
 | **BounceIntensity** | Global Illumination infinite indirect lighting bounce intensity scale. Can be used to boost or reduce the GI effect for light bouncing on the surfaces. |
 | **Temporal Response** | Defines how quickly GI blends between the the current frame and the history buffer. Lower values update GI faster, but with more jittering and noise. If the camera in your game doesn't move much, we recommend values closer to 1. |
-| **Distance** | Draw distance of the Global Illumination effect. Scenes outside the range will use fallback irradiance. |
+| **Distance** | Camera-centered draw distance of the Global Illumination effect. Scene outside the range will use fallback irradiance. DDGI automatically derives its cascade layout from this distance and the global probe spacing, so continuously blending this value can recreate probe resources and cause a visible lighting reset. |
 | **Indirect Shadows Strength** | Indirect lighting shadows intensity. Default is 1 for fully opaque shadowing, lower values bleed the lighting into shadowed areas. Can be sued for artistic control over GI. |
 | **Fallback Irradiance** | The irradiance lighting outside the GI range used as a fallback to prevent a pure-black scene outside the Global Illumination range. |
 | **Indirect Resolution** | The indirect lighting render resolution. Full gives better quality, but half improves performance. |

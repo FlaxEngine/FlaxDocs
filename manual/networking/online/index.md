@@ -9,6 +9,10 @@ Flax contains `IOnlinePlatform` interface designed for online platform providers
 * [Xbox Live](https://github.com/FlaxEngine/OnlinePlatformXboxLive)
 * Platform-specific (PlayStation, Switch) for registered developers
 
+## Online Platform Sample
+
+Sample project with Online Platform usage can be found [here](https://github.com/FlaxEngine/OnlinePlatformSample). Can be used as a reference in game projects for how to link into different online/store systems.
+
 ## Online Platform Setup
 
 In your game code setup the Online system with Online Platform (eg. when game opens the main menu). Depening on the runtime platform you can pick the online service to use (eg. Xbox Live on Xbox, Google Play on Android and Steam on Windows/Mac/Linux):

@@ -27,8 +27,8 @@ You can change most of these values at runtime using the [GraphicsQuality](https
 | **Generate SDF On Model Import** | If checked, the `Generate SDF` option will be checked on model import options by default. Use it if your project uses Global SDF (eg. for Global Illumination or particles). |
 |||
 | **GI Quality** | The Global Illumination quality. Controls the quality of the GI effect. |
-| **GI Probes Spacing** | The Global Illumination probes spacing distance (in world units). Defines the quality of the GI resolution. Adjust to 200-500 to improve performance and lower frequency GI data. |
-| **GI Cascades Blending** | Enables cascades splits blending for Global Illumination. |
+| **GI Probes Spacing** | The global spacing between Global Illumination probes (in world units). Smaller values improve interior detail at a higher GPU cost. Values around 100-150 are a useful starting point for mixed interiors and exteriors; adjust to 200-500 for mostly outdoor scenes and lower-frequency GI. Changing this value recreates the DDGI probe resources and can change the automatic cascade layout. |
+| **GI Cascades Blending** | Enables smooth blending between Global Illumination cascade splits. If disabled, the transition uses dithering intended for temporal anti-aliasing. Smooth blending can expose rounded cascade boundaries when adjacent cascades contain significantly different lighting. |
 | **Global Surface Atlas Resolution** | The Global Surface Atlas resolution. Adjust it if atlas `flickers` due to overflow (eg. to 4096). |
 |||
 | **Gamma Color Space** | If checked, color space workflow will use Gamma instead of Linear. Gamma color space defines colors with an applied a gamma curve (sRGB) so they are perceptually linear. This makes sense when the output of the rendering represent final color values that will be presented to a non-HDR screen. |
