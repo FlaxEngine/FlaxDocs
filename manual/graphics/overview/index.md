@@ -8,6 +8,7 @@ The rendering system in Flax Engine uses the full power of the latest Graphics A
 ## In this section
 
 * [Upscaling](upscaling.md)
+* [Shading](shading.md)
 
 ## Rendering flow
 
