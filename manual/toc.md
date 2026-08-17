@@ -78,6 +78,7 @@
 
 # [Graphics](graphics/index.md)
 ## [Rendering overview](graphics/overview/index.md)
+### [Upscaling](graphics/overview/upscaling.md)
 ## [Cameras](graphics/cameras/index.md)
 ### [How to render a camera to a texture](graphics/cameras/render-camera-to-texture.md)
 ### [Split Screen](graphics/cameras/split-screen.md)
