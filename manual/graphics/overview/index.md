@@ -16,6 +16,16 @@ Single frame rendering flow is shown in a graph below.
 
 ![Rendering Flow](media/RenderingFlow.jpg)
 
+## Reverse Z
+
+Flax renders scene with depth-inverse (`1` is near, `0` is far) to reduce Z-fighting and other depth buffer precision artifacts. To learn more, follow the [article from NVIDIA](https://developer.nvidia.com/content/depth-precision-visualized) explaining the theory and benefits behind using reverse Z.
+
+Both C++ code and shaders are compiled with preprocessor define `REVERSE_Z` which toggles this feature (change `UseReverseZ` to `false` in `Flax.flaxproj` to disable it). Shaders can use various utility macros to remain compliant with hot code paths:
+* `DEPTH_RANGE_MIN`/`DEPTH_RANGE_MAX` - depth range from near to far planes,
+* `DEPTH_CMP` - depth values comparision function,
+* `DEPTH_DIFF` - depth substraction function,
+* `DEPTH_01` - depth normalization function (flips when using reversed z).
+
 ## Available Display Resolutions
 
 You can get the available [screen resolutions and refresh rates](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.VideoOutputMode.html) using the following code:
