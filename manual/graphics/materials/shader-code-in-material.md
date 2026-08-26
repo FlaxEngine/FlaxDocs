@@ -37,7 +37,7 @@ Use `#include "./_project_name__/MyFunction.hlsl"` inside the **Global Custom Co
 Example contents of `_project_/Source/Shaders/MyFunction.hlsl` file:
 
 ```hlsl
-#include "./Flax/Noise.hlsl"
+#include "./Flax/Math/Noise.hlsl"
 
 float2 GetRandomValue(float2 uv)
 {

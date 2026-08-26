@@ -87,7 +87,7 @@ Global SDF can be sampled in custom shaders by using a utility header with const
 
 ```hlsl
 // Include Global SDF utility
-#include "./Flax/GlobalSignDistanceField.hlsl"
+#include "./Flax/Utils/GlobalSignDistanceField.hlsl"
 
 META_CB_BEGIN(0, Data)
 //..constants..
