@@ -17,7 +17,17 @@ The same versioning schema is used for binaries (both native and managed C#) and
 
 The combination of `major.minor` is called `stable branch` and is used in separation for maintenance and support (see [branches](https://github.com/FlaxEngine/FlaxEngine/branches)). This way we can apply hotfixes and security updates separately for multiple releases (the latest one and the past ones if needed).
 
-Most of the active development work happens on the `master` branch, which is used for the next engine update. Changes can also be backported from `master` into specific release branches. Shortly after stable releases we keep `master`` for hotfixes and further stabilization (e.g. 1-2 weeks) and wait before merging any new features or breaking changes.
+Most of the active development work happens on the `master` branch, which is used for the next engine update. Changes can also be backported from `master` into specific release branches. Shortly after stable releases we keep `master` for hotfixes and further stabilization (e.g. 1-2 weeks) and wait before merging any new features or breaking changes.
+
+## Contributing
+
+If you want to contribute with a bugfix or a feature:
+* Fork the [FlaxEngine](https://github.com/FlaxEngine/FlaxEngine), create a new branch, and push your changes there. In most cases, use `master` branch as a base for changes unless it breaks APIs or provides very new functionality that might need more ongoing work to implement, stabilize, and test before shipping to users. In that case, use the future engine version branch (eg. if the last update was Flax 1.12, then branch off from `1.13` which is used for the next update).
+* Create a pull request. Make sure to describe as to what led to the fix for better understanding; for small and obvious fixes, this is not really needed. However, make sure to mention the relevant issue where it was first reported, if possible.
+* Generally, good code quality is expected, make sure your contribution works as intended and is appropriately commented where necessary.
+* After we positively review and test it, PR will be merged. Your change will appear in the Release Notes and your nick in the contributors list.
+
+Thank you for taking interest in contributing to Flax!
 
 ## Support
 
