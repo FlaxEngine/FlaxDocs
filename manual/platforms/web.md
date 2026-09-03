@@ -88,7 +88,17 @@ Use `Release` configuration only for final game build as it doesn't have various
 
 Flax builds a standalone website for easy game hosting that includes `index.html`, JavaScript files, WebAssembly files, `files.data` with game content and `favicon.ico`. The output files are ready to be zipped and uploaded to the popular Web publishing stores such as [itch.io](https://itch.io/). Game can be self-hosted too, as long as server complies with [Emscripten guidelines](https://emscripten.org/docs/compiling/WebAssembly.html#web-server-setup).
 
-Output game can be tested locally `emrun` tool. See [this documentation](https://emscripten.org/docs/compiling/Running-html-files-with-emrun.html) to learn more about it. Alternatively, you can run `python -m http.server` command and open `http://localhost:8000/` in your browser.
+Output game can be tested locally `emrun` tool. See [this documentation](https://emscripten.org/docs/compiling/Running-html-files-with-emrun.html) to learn more about it. Alternatively, you can run command:
+
+```
+python -m http.server
+```
+
+Then open browser page:
+
+```
+http://localhost:8000/
+```
 
 > [!Tip]
 > Use developer console inside the browser (`F12` or `Ctrl + Shift + I`) to inspect engine or game logs available in Development or Debug builds.
