@@ -22,8 +22,7 @@ For developers using Flax Editor on Mac platforms the requirements are [here](ma
 
 ## Software Requirements
 
-Flax Engine requires **Visual C++ Redistributable for Visual Studio 2015** (or newer) to be installed on Windows in order to start.
-The launcher will check and begin installation if it is missing, however if your game is targeting the Windows platform you should include the redistributable installer with it. You can download it [here](https://www.microsoft.com/download/details.aspx?id=48145).
+Flax Engine requires **Visual C++ Redistributable for Visual Studio 2015** (or newer) to be installed on Windows in order to start. **Both the x86 and x64 versions of the redistributable are required, even on 64-bit Windows**. The launcher will check and begin installation if it is missing, however if your game is targeting the Windows platform you should include the redistributable installer with it. You can download it [here](https://www.microsoft.com/download/details.aspx?id=48145).
 
 Flax Launcher requires [Microsoft .NET Framework 4.5.2](https://www.microsoft.com/en-us/download/details.aspx?id=42642) or higher.
 
