@@ -62,7 +62,7 @@ Every Flax update brings new features and fixes into all engine areas. This time
 
 `NetworkReplicationHierarchy` is a new feature that allows the game to configure objects replication mechanism. It's an optional extension to `NetworkReplicator` accessible via `Hierarchy` property and can be set by game to a custom nodes hierarchy. It's used to store objects for replication in a more optimized structure (eg. grid or hierarchical tree) and it can be used to control the replication rate and target clients for each object individually.
 
-For example, when a large game level contains 10k networked objects (eg. POIs) then replicating all of them to all connected clients would kill the performance. To solve this problem a simple replication hierarchy can be created that would control Replication FPS for each object and skip unnecessary replications for clients that are too far away. See [docs](../../networking/high-level.md) to learn more.
+For example, when a large game level contains 10k networked objects (eg. POIs) then replicating all of them to all connected clients would kill the performance. To solve this problem a simple replication hierarchy can be created that would control Replication FPS for each object and skip unnecessary replications for clients that are too far away. See [docs](../../networking/high-level/index.md) to learn more.
 
 Additionally, we've put lots of efforts into the networking system as we see many game projects in-developments that use it. Network RPCs codegen is more reliable and supports more features.
 

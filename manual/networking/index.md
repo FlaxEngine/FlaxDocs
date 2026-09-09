@@ -15,7 +15,7 @@ To integrate your game into various online platforms such as Steam, Xbox Live or
 Flax contains three layers of networking:
 * [Sockets](network-api.md) with raw Berkeley sockets (cross-platform) for UDP/TCP connections.
 * [Low-level](low-level.md) with `NetworkPeer`, `INetworkDriver` and `NetworkMessage` API which supports low-level networking packets via messages networking.
-* [High-level](high-level.md) with `NetworkManager`, `NetworkClient` and `NetworkStream` API which suppors high-level objects replications, spawning, RPCs invoking, object authority and object ownership.
+* [High-level](high-level/index.md) with `NetworkManager`, `NetworkClient` and `NetworkStream` API which suppors high-level objects replications, spawning, RPCs invoking, object authority and object ownership.
 
 The high-level wraps over low-level and provides more features for multiplayer games which is favored in most cases. Follow documentation to learn more.
 
@@ -24,7 +24,10 @@ The high-level wraps over low-level and provides more features for multiplayer g
 * [Network API](network-api.md)
 * [Network Sample](network-sample.md)
 * [Low-Level Networking](low-level.md)
-* [High-Level Networking](high-level.md)
+* [High-Level Networking](high-level/index.md)
+  * [Network Settings](high-level/settings.md)
+  * [Network Replication](high-level/replication.md)
+  * [Network RPCs](high-level/rpcs.md)
 * [Online](online/index.md)
 
 ## Tutorials

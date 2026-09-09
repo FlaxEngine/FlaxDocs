@@ -10,7 +10,7 @@ Complete **multiplayer support** comes to Flax! This was one of the most awaited
 
 New networking components allow to quickly create multiplayer games in server-client architecture (including self-hosted games). Flax networking layer will automatically handle connections setup, data replication, and objects spawning over the network (eg. spawn player prefab to all clients). Both C++ and C# scripting support new `NetworkReplicated` attribute (marks field/properties for automatic replication), `NetworkRpc` attribute (marks function as RPC), and `INetworkObject` interface (for customizations to networked object lifetime).
 
-To learn more about High-Level Networking see new [documentation here](../../networking/high-level.md).
+To learn more about High-Level Networking see new [documentation here](../../networking/high-level/index.md).
 
 ### Arizona Framework
 
