@@ -11,7 +11,7 @@ API_CLASS() class GAME_API MyScript : public Script
     DECLARE_SCRIPTING_TYPE(MyScript);
 
     API_FIELD() float Field1 = 11;
-    API_FIELD() Color Field2 = Color::Yellow;
+    API_FIELD() Color Field2 = Color::LightBlue;
     API_FIELD() ScriptingObjectReference<DirectionalLight> Field3;
 
     // [Script]

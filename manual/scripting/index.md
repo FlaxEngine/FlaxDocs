@@ -1,44 +1,64 @@
 # Scripting Games
 
-![Scripting](media/title.jpg)
+![Scripting](media/title.png)
 
-The most important part of every game are **Scripts**. Creating chunks of code that handle game events, respond to user input, and control objects is an essential ingredient in all games. In short, scripts make games interactive by adding gameplay. It applies to both small and huge production. This documentation section covers the most important parts of the scripting pipeline and helps with starting the game programming.
+A **Script** is what implements logic for your game. Creating pieces of code that handle game events, respond to user input and control objects is an essential ingredient in the recipe for a game of all sorts. 
 
-Flax supports **C#**, **C++** and **Visual** scripting. The mix of those three languages is highly integrated into the engine as it's written in those languages (engine is C++, editor is C#).
+This documentation section covers the most important parts of the scripting pipeline and helps you with getting started with scripting in Flax Engine.
 
 > [!Note]
-> Explaining C#, C++ and vector math is out of the scope of this documentation.
+> Explaining the basics of C# and C++ programming, as well as vector math is out of the scope of this documentation.
 
-## Code Modules
+### Scripting Languages
 
-Important concepts related to programming in Flax are **binary modules**. Binary modules are compiled source code libraries that can reference other modules (eg. Editor, Graphics, or plugins).
+Flax supports **C#**, **C++** and **Visual Scripting**. Every one of those three languages is highly integrated into the engine, as the engine is written in C++, while the editor is C#, which Visual Scripting also relies on. 
 
-In most cases, the main game code is in the module named `<project_name>` or named `Game` located in `Source` folder (eg. `Source/Game`). That's the place where you can add new scripts so build tool will compile them. For more, advanced uses game can contain multiple modules and have code split for better organization (as for example engine does - it's made of multiple modules working together). For instance, you can create an editor-only module and use its code only in the Editor.
+## Code/ Binary Modules
 
-To learn more about build tools and infrastructure see [Flax.Build](../editor/flax-build/index.md) utility documentation.
+An important concept related to programming in Flax are **binary modules**. Binary modules are compiled source code libraries that can be referenced in other modules (eg. Editor, Graphics, or plugins).
+
+In most cases, the main code of your game will be in the module named `Game` (automatically created by Flax in every new project). It is located in the `Source` folder at `Source/Game`.
+
+The `Game` folder/ module is the place where your games scripts live. They will be automatically compiled by the build tool as soon as it detects a new script or changes in an existing one.
+
+To learn more about build tools and infrastructure, see the [Flax.Build](../editor/flax-build/index.md) documentation.
+
+For more advanced uses, your Flax project can contain multiple modules and have code split between them for better organization (the engine does that for example - it is made of multiple modules all working together).
 
 ## C# Scripting
 
-You can write scripts in **C#** and add them to scene objects. To learn more about it see the pages in this section. Most of the documentation related to scripting covers C# to implement various gameplay logic. If you need help with learning C# see [this page](http://www.letmegooglethat.com/?q=C%23+tutorial).
+In Flax you can write scripts in **C#** (amongst other languages) and attach them to `Actor`s in your scene. Most of the documentation related to scripting covers C# scripting.
+
+If you need help with learning C# itself, that is unfortunately out of the scope of this documentation, but you can easily find some beginner tutorials online.
 
 Flax uses [.NET](https://dotnet.microsoft.com/en-us) to load, compile and execute C# scripts.
-Currently the newest **C# 12** version is fully supported. Flax Editor requires [.NET SDK 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) to be installed on a system.
+Currently, the newest **C# 12** version is fully supported. The Flax Editor requires [.NET SDK 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) to be installed.
 
-If you want to use custom .NET libraries use build scripts to reference them as [shown here](tutorials/use-third-party-library.md).
+If you want to use third party .NET libraries, you can use build scripts to reference them in your project (as [shown here](tutorials/use-third-party-library.md)).
 
 ## C++ Scripting
 
-Flax supports native **C++** scripting with direct access to whole engine API. C++ scripts can be created side-by-side with C# scripts and expose own types/functions/properties via automatic bindings as decscribed [here](../editor/flax-build/api-tags.md). To write and use C\+\+ code engine headers and platform toolset are requried.
+Flax supports native **C++** scripting with direct access to whole engine API. 
 
-To start native scripting in C\+\+ see the related documentation [here](cpp/index.md).
+C++ scripts can be created side-by-side with C# scripts and expose their own types, functions and properties via automatic binding generation (more about that [here](../editor/flax-build/api-tags.md)). 
+
+To write and use C++ code, engine headers and platform toolset are required.
+
+To start native scripting in C++ see the related documentation [here](cpp/index.md).
 
 ## Visual Scripting
 
-Flax supports **Visual** scripting with fully-featured Editor tools for creating, using and debugging Visual Scripts. Visual Scripts can inherit from C++ or C# classes (eg. custom Actor or Script) to provide more logic and data. Visual Scripting is very light-weight and extensible solution for prototyping games especially boosting the rapid development.
+Flax supports **Visual Scripting** with fully-featured Editor tools for creating and debugging Visual Scripts.
 
-Visual Scripts can access to whole engine API and the game code. Visual Scripts can be created side-by-side with C# and C++ scripts to expose own functions/properties. Also, Visual Scripting doesn't requrie any additional tools nor compiler as it's hot-reloading in Editor without any processing to provide even more robust development.
+As opposed to C# or C++ scripts, Visual Scripts can not be created in the `Source/Game` folder and live in your projects `/Content` folder instead.
 
-To start visual scripting see the related documentation [here](visual/index.md).
+They can inherit from C++ or C# classes (eg. a custom Actor or Script). and access the whole engine API, as well as any existing C# or C++ code. Of course you can also define custom functions, classes and variables inside of Visual Scripts.
+
+It's a very light-weight and extensible solution for prototyping games, but can also be used by artists and other people with no or few coding experience to make a whole game.
+
+It does also not require any additional tooling or compiler, since it will hot-reload in editor to provide an even more robust and easy development.
+
+To start visual scripting, see the related documentation [here](visual/index.md).
 
 ## In this section
 

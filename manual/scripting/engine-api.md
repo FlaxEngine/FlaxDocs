@@ -3,9 +3,9 @@
 Scripting API list for gameplay programming (available in both C++, C# and Visual Scripting):
 * `Engine` - global engine API
 * `Content` - assets loading and content management
-* `Audio` - audio effects and music playback
+* `Audio` - audio effects and playback
 * `DebugDraw` - debug shapes drawing
-* `DebugLog` - debug log messages sending
+* `Debug` - info, warning and error messages
 * `Globals` - global engine variables container
 * `Screen` - utility for game viewport management
 * `Time` - game ticking and time management
@@ -13,7 +13,7 @@ Scripting API list for gameplay programming (available in both C++, C# and Visua
 * `Input` - user input reading, access and processing
 * `Level` - scene manager for actors and scene object lifetime handling
 * `Navigation` - pathfinding and navigation utilities for AI
-* `Physics` - physical simulation manager
+* `Physics` - physics simulation manager
 * `Platform` - low-level runtime platform implementation (memory access, system info, etc.)
 * `Clipboard` - system clipboard
 * `MessageBox` - native platform message box popup utility
@@ -24,15 +24,14 @@ Scripting API list for gameplay programming (available in both C++, C# and Visua
 
 ## Objects Hierarchy
 
-The diagram with a hierarchy of the main object types used in Flax.
+This diagram shows the hierarchy of the main object types used in Flax.
 
-In C# and Visual Scripting API `FlaxEngine.Object` type is mapped into `ScriptingObject`.
+In the C# and Visual Scripting API, the `FlaxEngine.Object` type is mapped into `ScriptingObject`.
 
 ![Flax Object Hierarchy Diagram](media/objects-hierarchy.png)
 
 ## Engine Architecture
 
-The diagram below shows the simplified architecture of the engine and editor.
+The diagram below shows the simplified architecture of the engine and the editor.
 
 ![Flax Engine Architecture](media/engine-architecture.png)
-
