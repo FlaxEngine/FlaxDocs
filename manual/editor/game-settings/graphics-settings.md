@@ -36,4 +36,4 @@ You can change most of these values at runtime using the [GraphicsQuality](https
 |||
 | **Fallback Fonts** | The list of fallback fonts used for text rendering. Ignored if empty. |
 |||
-| **Post Process Settings** | The default Post Process settings. Can be overriden by PostFxVolume on a level locally, per camera or for a whole map. |
+| **Post Process Settings** | The default Post Process settings. Can be overridden by PostFxVolume on a level locally, per camera or for a whole map. |

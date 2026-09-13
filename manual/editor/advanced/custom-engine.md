@@ -24,7 +24,7 @@ You can use *Flax.Build* for automated editor building with a custom engine for 
 
 * `PackagePlatforms.bat`/`PackagePlatforms.sh` - runs build tool to compile and package platforms data (executable files and platform data/tools). You can use Flax.Build arguments to specify the build parameters such as `-platform=Windows -arch=x64`.
 * `PackageEditor.bat`/`PackageEditor.sh` - runs build tool to compile and package Editor (executable files and  content). You can use Flax.Build arguments to specify the build parameters such as `-deployOutput=Output -arch=x64`.
-* `GenerateProjectFiles.bat`/`GenerateProjectFiles.sh` - generates the script project files for the engine. You can run it with custom parameters to override some options such as: `-commpiler=v140 -vscode`.
+* `GenerateProjectFiles.bat`/`GenerateProjectFiles.sh` - generates the script project files for the engine. You can run it with custom parameters to override some options such as: `-compiler=v140 -vscode`.
 
 ## Engine Registration
 

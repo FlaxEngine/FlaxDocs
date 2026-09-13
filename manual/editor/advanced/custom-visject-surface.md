@@ -32,7 +32,7 @@ This asset type will be a [json asset](https://docs.flaxengine.com/api/FlaxEngin
 
 ## Asset Proxy
 
-To create and open assets using the Flax Editor, an [asset proxy](https://docs.flaxengine.com/api/FlaxEditor.Content.AssetProxy.html) is required. Since it's an editor file, it needs to be in the editor assembly. To do so, create a new folder called `Editor`. In this folder, create a new asset proxy.
+To create and open assets using the Flax Editor, an [asset proxy](https://docs.flaxengine.com/api/FlaxEditor.Content.JsonAssetProxy.html) is required. Since it's an editor file, it needs to be in the editor assembly. To do so, create a new folder called `Editor`. In this folder, create a new asset proxy.
 
 ```cs
 public class ExpressionGraphProxy : JsonAssetProxy

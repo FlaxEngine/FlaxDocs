@@ -4,7 +4,7 @@
 
 All Flax projects have a unified structure. This strict organization helps with development and provides better standardization across all Flax games.
 
-The Flax Editor can load projects located in any location on your drive. It's only required to place a valid **.flaxproj** file that describes the project (name, metadata). The Flax Editor will generate all project folders if they are missing (Cache, Content, Logs and Source directories) as well as C# projects and solution files.
+The Flax Editor can load projects located in any location on your drive. It is only required to place a valid **.flaxproj** file that describes the project (name, metadata). The Flax Editor will generate all project folders if they are missing (Cache, Content, Logs and Source directories) as well as C# projects and solution files.
 
 ## Example .flaxproj
 

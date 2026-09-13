@@ -4,7 +4,7 @@ Flax Editor supports editing the default UI style, colors and font via editor op
 
 ## Fonts
 
-![Customzied Editor Fonts](media/editor-custom-font.png)
+![Customized Editor Fonts](media/editor-custom-font.png)
 
 Open **Interface** tab and in the section **Fonts** you can adjust the font assets and font sizes used for Editor UI. You can also adjust the visuals for a particular parts of the editor (eg. Debug Log, Output Log).
 To see changes please restart editor.
