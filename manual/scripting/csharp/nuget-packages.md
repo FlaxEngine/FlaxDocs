@@ -9,7 +9,7 @@ public override void Setup(BuildOptions options)
 {
     base.Setup(options);
 
-    options.NugetPackages.Add("<nuget package name>", "<nuget package version>", "<framework version to use>")
+    options.NugetPackageReferences.Add(new NugetPackage("<nuget package name>", "<nuget package version>", "<framework version to use>");
 }
 ```
 
