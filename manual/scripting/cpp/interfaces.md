@@ -6,6 +6,7 @@ Flax Scripting API supports using interfaces on classes to splitting unrelated f
 
 Declaring an interface is quite similar to declaring a normal class: simply use `API_INTERFACE` tag. Then you can declare virtual function to be part of the interface.
 
+# [C++](#tab/code-cpp)
 ```cpp
 #pragma once
 
@@ -19,6 +20,15 @@ DECLARE_SCRIPTING_TYPE_MINIMAL(IMyInterface);
     API_FUNCTION() virtual float GetSpeed(const Vector3& v) = 0;
 };
 ```
+# [C#](#tab/code-csharp)
+```cs
+public interface IMyInterface
+{
+    // Interface virtual method
+    float GetSpeed(Vector3 v);
+}
+```
+***
 
 > [!Tip]
 > Interfaces with an abstract method (deleted virtual) that don't contain `API_FUNCTION` tag are not supported.
@@ -27,7 +37,7 @@ DECLARE_SCRIPTING_TYPE_MINIMAL(IMyInterface);
 
 The next step is to define interface inheritance on an class and implement all it's methods. Interfaces can be implemented on any Scripting Object such as `Script`, `Actor`, `PersistentScriptingObject`. Interface methods are virtual thus they can be overridden also in C# and Visual Scripting.
 
-### C++
+# [C++](#tab/code-cpp)
 ```cpp
 #pragma once
 
@@ -47,8 +57,7 @@ DECLARE_SCRIPTING_TYPE(InterfaceInCpp);
     }
 };
 ```
-
-### C#
+# [C#](#tab/code-csharp)
 ```cs
 // Script that implements custom interface
 public class InterfaceInCSharp : Script, IMyInterface
@@ -60,10 +69,11 @@ public class InterfaceInCSharp : Script, IMyInterface
     }
 }
 ```
+***
 
 ## Interface calling
 
-### C++
+# [C++](#tab/code-cpp)
 ```cpp
 #pragma once
 
@@ -90,8 +100,7 @@ DECLARE_SCRIPTING_TYPE(InterfaceInCpp);
     }
 };
 ```
-
-### C#
+# [C#](#tab/code-csharp)
 ```cs
 public class InterfaceInCSharp : Script, IMyInterface
 {
@@ -110,10 +119,30 @@ public class InterfaceInCSharp : Script, IMyInterface
     }
 }
 ```
+***
+
+## Interface reference
+
+Scripting objects (such as scripts or actors) can implement interfaces and be referenced in scripts using a dedicated type `ScriptingObjectInterfaceReference`:
+
+# [C++](#tab/code-cpp)
+```cpp
+#include "Engine/Scripting/ScriptingObjectInterfaceReference.h"
+
+ScriptingObjectInterfaceReference<IMyInterface> Interface;
+```
+# [C#](#tab/code-csharp)
+```cs
+public ScriptingObjectInterfaceReference<IMyInterface> Interface;
+```
+***
+
+> [!Note]
+> This works only when the referenced interface is a scripting object identified by its unique ID and can be serialized.
 
 ## Checking if object implements interface
 
-### C++
+# [C++](#tab/code-cpp)
 ```cpp
 auto someObject = GetActor();
 if (someObject && someObject->GetType().GetInterface(IMyInterface::TypeInitializer))
@@ -121,8 +150,7 @@ if (someObject && someObject->GetType().GetInterface(IMyInterface::TypeInitializ
     // someObject implements IMyInterface interface...
 }
 ```
-
-### C#
+# [C#](#tab/code-csharp)
 ```cs
 var someObject = Actor;
 if (someObject is IMyInterface)
@@ -130,3 +158,4 @@ if (someObject is IMyInterface)
     // someObject implements IMyInterface interface...
 }
 ```
+***
