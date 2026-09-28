@@ -32,7 +32,7 @@ Delay node that waits a specific amount of time while executed.
 
 ## Sub Tree
 
-Sub-tree node runs a nested Behavior Tree within this tree.
+Sub-tree node runs a nested Behavior Tree within this tree. Sub-tree has to use knowledge that matches the outer tree knowledge type (eg. the same or base type for the current one).
 
 | Property | Description |
 |--------|--------|

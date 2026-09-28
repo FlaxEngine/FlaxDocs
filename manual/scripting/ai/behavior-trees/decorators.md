@@ -1,5 +1,7 @@
 # Behavior Tree Decorators
 
+![Behavior Tree Decorators](media/decorators.png)
+
 Behavior Trees are very extensible meaning you can create own decorator types in your game project or use the ones from engine and plugins. Each decorator can define custom logic, contain properties and store runtime state (per-instance). This page contains a list of all in-built decorator types with their documentation.
 
 ## Invert
