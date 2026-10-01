@@ -38,6 +38,7 @@ Use **Root Motion Flags** to specify which components of the motion should be ex
 | **Root Rotation** | Root node rotation. Applies orientation changes. Good for animations that have baked-in root rotation (eg. turn animations). |
 | **Root Position** | Root node position. |
 | **Root Transform** | Root node position and rotation. | 
+| **Local Position Mask** | Marks that the root node position is affected by the skeleton transform and should be extracted with transformed mask. Use this option for models that don't use Y-up coordinate system. |
 
 ## Tips
 
