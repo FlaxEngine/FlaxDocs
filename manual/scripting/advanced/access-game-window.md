@@ -151,7 +151,7 @@ public class TestCursor : Script
 #include "Engine/Graphics/Textures/TextureData.h"
 #include "Engine/Input/Input.h"
 
-class FLAXENGINE_API TestCursor : public Script
+class GAME_API TestCursor : public Script
 {
     DECLARE_SCRIPTING_TYPE(TestCursor);
     API_AUTO_SERIALIZATION();
