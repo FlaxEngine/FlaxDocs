@@ -29,6 +29,7 @@ You can modify the properties and press the **Save** icon in the toolstrip to ap
 | **Auto Save Visual Script On Play Start** | Determines whether automatically save the Visual Script asset editors when starting the play mode in editor. |
 | *Content* ||
 | **Use Asset Import Path Relative** | If checked, imported file path will be stored relative to the project folder within imported asset metadata. Otherwise will use absolute path. |
+| **Auto Attach Debug Preview Actor** | If checked, editor windows will try to automatically attach to the first found valid actor for preview. For example, Animation Graph window will pick the first matching instance to preview. |
 | **Auto Rebuild CSG** | Determines whether perform automatic CSG rebuild on brush change. |
 | *CSG* ||
 | **Auto Rebuild CSG** | Determines whether perform automatic CSG rebuild on brush change. |
@@ -114,7 +115,6 @@ Use this section to modify the input shortcuts binding used by the editor. By pr
 | **Invert Mouse Y Axis Rotation** | Whether to invert the Y rotation of the mouse in the editor viewport. |
 | *Camera* ||
 | **Total Camera Speed Steps** | The total amount of steps the camera needs to go from minimum to maximum speed. |
-| **Total Camera Speed Steps** | The total amount of steps the camera needs to go from minimum to maximum speed. |
 | **Camera Easing Degree** | The degree to which the camera will be eased when using camera flight in the editor window (ignored if camera easing degree is enabled). |
 | *Defaults* ||
 | **Movement Speed** | The default movement speed for the viewport camera (must be in range between minimum and maximum movement speed values). |
@@ -128,11 +128,20 @@ Use this section to modify the input shortcuts binding used by the editor. By pr
 | **Invert Panning** | The default panning direction for the viewport camera. |
 | **Use Relative Panning** | The default relative panning mode. Uses distance between camera and target to determine panning speed. |
 | **Panning Speed** | The default camera panning speed (ignored if relative panning is enabled). |
-| **Viewport Grid Scale** | The default editor viewport grid scale. |
+| **Use Persistence Over Defaults** | Allow persistence setting from last session to override default settings. |
 | *Grid* ||
 | **Viewport Grid View Distance** | The maximum distance you will be able to see the grid. |
 | **Viewport Grid Color** | The color for the viewport grid. |
-
+| *Viewport Icons* ||
+| **Icons Minimum Size** | The minimum size used for viewport icons. |
+| **Icons Maximum Size** | The maximum size used for viewport icons. |
+| **Max Size Distance** | The distance towards the camera at which the max icon scale will be applied. Set to 0 to disable scaling the icons based on the distance to the camera. |
+| *Direction Gizmo* ||
+| **ShowDirectionGizmo** | Sets the visibility of the direction gizmo in the main editor viewport. |
+| **Direction Gizmo Scale** | The scale of the direction gizmo in the main viewport. |
+| **Direction Gizmo Background Opacity** | The background opacity of the of the direction gizmo in the main viewport. |
+| **Direction Gizmo Opacity** | The opacity of the of the direction gizmo in the main viewport. |
+| **Direction Gizmo Brightness** | The brightness of the of the direction gizmo in the main viewport. |
 
 ## Visual options
 
@@ -140,15 +149,26 @@ Use this section to modify the input shortcuts binding used by the editor. By pr
 |--------|--------|
 | *Gizmo* ||
 | **Show Selection Outline** | If checked, the selection outline will be visible. |
+| *Transform Gizmo* ||
 | **Selection Outline Color 0** | The first color of the selection outline gradient. |
-| **Ui Control Outline Size** | The size of the selection outline for UI controls. |
 | **Selection Outline Color 1** | The second color of the selection outline gradient. |
 | **Gizmo Size** | The transform gizmo size. |
 | **Highlight Color** | The color used to highlight selected meshes and CSG surfaces. |
+| **Gizmo Opacity** | The opacity of the transform gizmo. |
+| **Disabled Gizmo Brightness** | How bright the transform gizmo is when it is disabled, for example when one of the selected actors is static in play mode. Use a value of 0 to make the gizmo fully gray. Value over 1 will result in the gizmo emitting light. |
+| *UI Gizmo* ||
+| **UI Control Outline Size** | The size of the selection outline for UI controls. |
+| **UI Pivot Color** | The color of the pivot for the UI Gizmo. |
+| **UI Anchor Color** | The color of the anchors for the UI Gizmo. |
 | *Quality* ||
 | **Enable MSAA For DebugDraw** | Determines whether enable MSAA for DebugDraw primitives rendering. Helps with pixel aliasing but reduces performance. |
 | *Preview* ||
 | **Enable Particles Preview** | A value indicating whether show looping particle effects in Editor viewport to simulate in-game look. |
+| *Log* ||
+| **Info Color** | The color used for info messages in the Debug and Output Log. |
+| **Warning Color** | The color used for warnings in the Debug and Output Log. |
+| **Error Color** | The color used for errors in the Debug and Output Log. |
+| **Color Debug Log Text** | Whether to use the set colors in the text of a Debug Log entry. |
 
 ## Source Code options
 
