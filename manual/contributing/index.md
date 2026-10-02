@@ -28,6 +28,8 @@ The repository available on GitHub is a mirror of our internal Git repository ho
 
 If you want to open the Flax Engine in Visual Studio you might need to install the [Flax Engine Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=Flax.FlaxVS) extension (Not needed for Version 1.6 and higher).
 
+You can see guidelines on how to write code for Flax Engine [here](code-guidelines.md).
+
 ### Flax Docs
 
 The documentation you're reading right now is hosted as an open project on GitHub [here](https://github.com/FlaxEngine/FlaxDocs). You can fork the repository and edit it to contribute to the project or report issues there.
