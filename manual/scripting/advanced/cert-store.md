@@ -19,7 +19,7 @@ ServicePointManager.ServerCertificateValidationCallback +=
 
 ### Cert Store plugin
 
-The best solution is to use a collection of root certificates that are trusted widely across the Internet such as provided by Mozzila. The example plugin below implements caching trusted root certificates collection in `RawDataAsset`. At runtime, it loads the certificates from the data and adds them to the Root so the following SSL requests will be validated upon those certificates.
+The best solution is to use a collection of root certificates that are trusted widely across the Internet such as provided by Mozilla. The example plugin below implements caching trusted root certificates collection in `RawDataAsset`. At runtime, it loads the certificates from the data and adds them to the Root so the following SSL requests will be validated upon those certificates.
 
 Note that the first plugin start will take a few seconds because it will cache the newest certificates collection to the asset (stored in `Content/CertStore.flax`). Subsequential initializations take usually between 200-500ms. You can strip the certificates list for your needs to improve the setup time if needed.
 
