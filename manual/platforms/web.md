@@ -22,7 +22,7 @@ The current browser support coverage:
 |--------|--------|--------|
 | **Chrome**/**Edge** | `v137` (May 2025) | |
 | **Firefox** | `v147` (Jan 2026) | Requires flag `javascript.options.wasm_js_promise_integration` set in `about:config`. |
-| **Safari** | `Safari Technology Preview 238` (Feb 2026) | The latest stable Safari version doesn't have JSPI but the `Technology Preview 238` ships it and works correctly.  |
+| **Safari** | `Safari 27` (Sep 2026) | JSPI support appeared first in the `Technology Preview 238`. |
 
 Flax outputs JavaScript code that checks for the minimum browser version and warns user on startup that the browser needs an update in order to run a game. The same applies to other features such as WebGPU or JSPI.
 

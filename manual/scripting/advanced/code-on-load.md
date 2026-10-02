@@ -27,7 +27,7 @@ struct Initializer
 {
     Initializer()
     {
-        LOG(Info, "Helllo!");
+        LOG(Info, "Hello!");
     }
 };
 

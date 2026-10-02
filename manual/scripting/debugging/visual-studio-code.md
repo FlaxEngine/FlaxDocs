@@ -16,7 +16,7 @@ Programming gameplay for Flax game in VS Code requries a set of extensions:
 
 ![Flax Editor Source Code Editor VSCode](media/vscode-selected.png)
 
-Open Flax Editor, go to **Tools -> Options** in main menu to open editor options windows. Then select **Source Code** tab and set **Source Code Editor** to **Visual Studio Code**. If this option is missing, then ensure you have VSCode installed. Confirm with the Save button to apply changes.
+Open Flax Editor, go to **Edit -> Editor Options** in main menu to open editor options windows. Then select **Source Code** tab and set **Source Code Editor** to **Visual Studio Code**. If this option is missing, then ensure you have VSCode installed. Confirm with the Save button to apply changes.
 
 ### 3. Attach script to actor
 

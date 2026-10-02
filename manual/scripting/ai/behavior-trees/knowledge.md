@@ -15,7 +15,7 @@ Knowledge consists of:
 
 ## Blackboard
 
-**Blackboard** is used to store information for Behavior Tree logic. For example, it can contain current movement speed of the agent provided by gameplay code to be used for pathfollowing. A typical workflow would be to create a blackboard object class or structure and fill it will fields or properties. Blackboard type can be **assigned on a Root node** (see picture above) of the Behavior Tree.
+**Blackboard** is used to store information for Behavior Tree logic. For example, it can contain current movement speed of the agent provided by gameplay code to be used for path-following. A typical workflow would be to create a blackboard object class or structure and fill it will fields or properties. Blackboard type can be **assigned on a Root node** (see picture above) of the Behavior Tree.
 
 # [C#](#tab/code-csharp)
 ```cs

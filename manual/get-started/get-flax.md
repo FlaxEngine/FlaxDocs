@@ -19,7 +19,7 @@ The next step is to **log in** to the Flax Launcher.
 
 # Installing The Flax Engine
 
-After loging in go to the **Engine** page. Here you can download and manage engine installations. You can have different versions of Flax installed on your computer. To download updates and additional packgages, go to the **Engine** page. 
+After logging in go to the **Engine** page. Here you can download and manage engine installations. You can have different versions of Flax installed on your computer. To download updates and additional packages, go to the **Engine** page. 
 
 ![Open Launcher](media/launcher-engine.png)
 

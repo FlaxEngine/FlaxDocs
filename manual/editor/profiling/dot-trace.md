@@ -20,4 +20,4 @@ Then pick game executable (as shown above) to **Path** field. When launching Fla
 
 ![dotTrace profiler for Flax](media/dot-trace-profiler-flax.png)
 
-dotTrace profiler snapshots provide various informations about the Flax game performance. Those can be used to deeply analyze and monitor the runtime. To learn more about it please visit official documentation [here](https://www.jetbrains.com/profiler/documentation/documentation.html).
+dotTrace profiler snapshots provide various information about the Flax game performance. Those can be used to deeply analyze and monitor the runtime. To learn more about it please visit official documentation [here](https://www.jetbrains.com/profiler/documentation/documentation.html).

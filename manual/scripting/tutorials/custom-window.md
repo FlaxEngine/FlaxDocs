@@ -53,7 +53,7 @@ Navigate to `Source/<module_name>` directory and create new `MyWindow` script. A
 
 ### 3. Implement editor window
 
-Open a code editor and write the following code of the editor window. It should implement [CustomEditorWindow](https://docs.flaxengine.com/api/FlaxEditor.CustomEditorWindow.html) class. Note that it requries to override `public override void Initialize(LayoutElementsContainer layout)` function similar to custom editors.
+Open a code editor and write the following code of the editor window. It should implement [CustomEditorWindow](https://docs.flaxengine.com/api/FlaxEditor.CustomEditorWindow.html) class. Note that it requires to override `public override void Initialize(LayoutElementsContainer layout)` function similar to custom editors.
 
 ```cs
 public class MyWindow : CustomEditorWindow

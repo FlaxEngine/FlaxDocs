@@ -25,7 +25,7 @@ By typing in the search bar of the **Scene Window**, Actors can be filtered by n
 
 ### Additional Search Filters
 
-Filters are not case sensitive and can be used together seperated by a `,`.
+Filters are not case sensitive and can be used together separated by a `,`.
 
 | Filter | Action |
 |-------|-------|

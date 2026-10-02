@@ -6,7 +6,7 @@ Scripting API contains the structure `Tag` which holds index of the tag in a glo
 
 ## Actor Tags
 
-Every actor contains list of tags (`Actor.Tags`) and various utilities for quick checking for a tag (`Actor.HasTag`). Actors can be marked with specific tags to be used by different gameplay systems. For example, player rigidbody and collider can be marked with a tag `Player` to distinguish them when processing collision events or when calculating hit damage in a shooter game.
+Every actor contains list of tags (`Actor.Tags`) and various utilities for quick checking for a tag (`Actor.HasTag`). Actors can be marked with specific tags to be used by different gameplay systems. For example, player rigidBody and collider can be marked with a tag `Player` to distinguish them when processing collision events or when calculating hit damage in a shooter game.
 
 ## Tag Editor
 
