@@ -23,8 +23,9 @@ This documentation section covers most of the topics related to Flax.Build tool.
 ## In this section
 
 * [API tags](api-tags.md)
-* [Build Plugin](plugins.md)
+* [Build Plugins](plugins.md)
 * [Build Tool Guide](guide.md)
+* [Flax Project Format (.flaxproj)](flaxproj-format.md)
 
 ## Build Scripts
 

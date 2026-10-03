@@ -8,9 +8,11 @@ Flax supports the concept of plugin projects. A plugin project is a separate Fla
 > Internet access is required for the first plugin project created using this tool.
 
 Open the Plugin Window **Tools -> Plugins**.
+
 ![Plugin Menu](media/plugin-menu.png)
 
 Click the create plugin project button and fill out the name, version, and company of the plugin project.
+
 ![Plugin Create Menu](media/plugin-create-menu.png)
 
 Click the submit button.
@@ -23,9 +25,11 @@ Restart the editor for the changes to take effect.
 > Internet access and Git are required for this tool.
 
 Open the Plugin Window **Tools -> Plugins**.
+
 ![Plugin Menu](media/plugin-menu.png)
 
 Click the clone plugin project button and enter the Git address of the plugin project. Entering a name is optional and will only rename the folder that contains the plugin project, otherwise the repository name will be used.
+
 ![Plugin Clone Menu](media/plugin-clone-menu.png)
 
 Click the submit button.
@@ -40,18 +44,18 @@ It is imperitive that you rename plugin project files as the default name of "Ga
 
 Next, add a **reference** from your game project to the added plugin project. Open **<project_name>.flaxproj** with a text editor and add reference to the plugin project:
 
-```
-    "References": [
-        {
-            "Name": "$(EnginePath)/Flax.flaxproj"
-        },
-        {
-            "Name": "$(ProjectPath)/Plugins/MyPlugin/MyPlugin.flaxproj"
-        }
-    ],
+```json
+  "References": [
+    {
+      "Name": "$(EnginePath)/Flax.flaxproj"
+    },
+    {
+      "Name": "$(ProjectPath)/Plugins/MyPlugin/MyPlugin.flaxproj"
+    }
+  ],
 ```
 
-As you can see, by using `$(ProjectPath)` followed by the local path you can reference the plugin project file directly. Then you can open the editor and use content and scripts from the plugin project in your game.
+As you can see, by using `$(ProjectPath)` followed by the local path you can reference the plugin project file directly. Then you can open the editor and use content and scripts from the plugin project in your game. See [projects docs](../../editor/flax-build/flaxproj-format.md) to learn more.
 
 ## Referencing the plugin
 
