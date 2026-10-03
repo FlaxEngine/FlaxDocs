@@ -10,6 +10,14 @@ The full list of options and the documentation is available [here](https://docs.
 
 You can also adjust those options from code:
 
+# [C++](#tab/code-cpp)
+```cpp
+#include "Engine/Graphics/RenderTask.h"
+
+MainRenderTask::Instance->View.Flags |= ViewFlags::PhysicsDebug;
+```
+# [C#](#tab/code-csharp)
 ```cs
 MainRenderTask.Instance.View.Flags |= ViewFlags.PhysicsDebug;
 ```
+***

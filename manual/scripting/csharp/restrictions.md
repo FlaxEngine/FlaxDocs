@@ -38,3 +38,4 @@ Platforms that use AOT:
 * PlayStation 5
 * Switch
 * iOS
+* Web

@@ -2,7 +2,7 @@
 
 Flax.Build allows using Nuget Packages.
 
-To add a Nuget Package, open your build.cs module and add code that is similar to the following in the `Setup` method. Flax will automatically download the Nuget package if needed.
+To add a Nuget Package, open your `*.Build.cs` module and add code that is similar to the following in the `Setup` method. Flax will automatically download the Nuget package if needed.
 
 ```cs
 public override void Setup(BuildOptions options)
