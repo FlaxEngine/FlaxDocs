@@ -359,6 +359,7 @@
 ### [How to blur UI panel background](ui/tutorials/blur-background.md)
 ### [How to create a Main Menu](ui/tutorials/create-main-menu.md)
 ### [How to create a custom control](ui/tutorials/create-custom-control.md)
+### [How to create a curved and distorted UI](ui/tutorials/create-curved-ui.md)
 ### [How to create UI animation in prefab](ui/tutorials/ui-prefab-animation.md)
 ### [How to raycast UI](ui/tutorials/raycast-ui.md)
 
