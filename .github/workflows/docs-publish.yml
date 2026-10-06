@@ -47,7 +47,7 @@ jobs:
           dotnet --info
           dotnet workload --info
 
-      - name: Build docs
+      - name: Get Flax
         run: |
           git lfs version
           git clone https://github.com/FlaxEngine/FlaxEngine.git FlaxEngine
@@ -56,6 +56,9 @@ jobs:
           git lfs pull
           ./Development/Scripts/Linux/CallBuildTool.sh -log -arch=x64 -configuration=Development -platform=Windows -buildtargets=FlaxEditor -build -dotnet=10 -BuildBindingsOnly
           cd ..
+
+      - name: Build docs
+        run: |
           mono docfx/docfx.exe metadata
           mono code2yaml/code2yaml.exe code2yaml.json
           mono docfx/docfx.exe build
