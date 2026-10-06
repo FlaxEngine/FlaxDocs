@@ -47,5 +47,5 @@ To learn more about project file properties see this [documentation page](../edi
      * **&lt;GameModule&gt;.Build.cs** - game module build script
    * **GameTarget.Build.cs** - game target build configuration script
    * **GameEditorTarget.Build.cs** - editor target build configuration script
- * **&lt;project_name&gt;.sln** - project scripts solution file, open it with Visual Studio
+ * **&lt;project_name&gt;.slnx** - project scripts solution file, open it with Visual Studio
  * **&lt;project_name&gt;.flaxproj** - project description and metadata file (used by editor and launcher)

@@ -5,7 +5,7 @@ If you want to create a C++ Script you can find out how [here](cpp/index.md).
 To provide better organization in a project workspace script files are located in the `Source/` directory.
 In that way scripts are separated from the assets which reduces mess and makes it easier to work with project sources.
 
-Flax Editor creates a solution file (`.sln`) and C# projects (`.csproj`) for game scripts and editor plugins.
+Flax Editor creates a solution file (`.slnx`) and C# projects (`.csproj`) for game scripts and editor plugins.
 
 ![Workspace](media/scripts-workspace.jpg)
 
