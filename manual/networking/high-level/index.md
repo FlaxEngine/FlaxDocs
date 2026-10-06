@@ -30,7 +30,7 @@ High-level networking layer supports creating fully-featured multiplayer games. 
   * Ability to invoke gameplay method on server or remote clients
   * Automatic arguments serialization
   * Customizable `NetworkChannelType`
-* Build on top of the existing [low-level networking](low-level.md)
+* Build on top of the existing [low-level networking](../low-level.md)
   * Offers the ability to swap `INetworkDriver` backend
   * Cross-platform networking
 * Supports cross-play
@@ -81,7 +81,7 @@ To extend networking for more custom case you can use `INetworkObject` interface
 
 ### Profiling and debugging
 
-To analyze network transfer use Network tab in [Profiler window](../editor/profiling/profiler.md) in Editor.
+To analyze network transfer use Network tab in [Profiler window](../../editor/profiling/profiler.md) in Editor.
 To quickly profile networking with lag simulation (eg. due to bad network ocnnection) you can use `NetworkLagDriver` (set it in `Network Settings`) which can delay network messages sending to fake the lag between server and client.
 
 To access objects **replication logs** use:

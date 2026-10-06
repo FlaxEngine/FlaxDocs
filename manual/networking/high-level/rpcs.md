@@ -2,7 +2,7 @@
 
 **Remote Procedure Call** (shorten as RPC) is used to invoke code on other network clients. For example, call server method from client or vice versa: call method on all clients from server. This is useful to synchronize state or invoke certain action over the network (eg. player attack, chat message, etc.). RPC methods can be normally called from gameplay code but inner logic might be executed only on other clients.
 
-To declare RPC use `NetworkRpc` attribute on function with `Server` or `Client` value set. Each RPC can also specify the transport channel to use (`Unreliable`, `UnreliableOrdered`, `Reliable`, `ReliableOrdered`). [Flax.Build](../editor/flax-build/index.md) codegen will inject custom code before the method body which will invoke the method properly on remote clients. Example RPCs:
+To declare RPC use `NetworkRpc` attribute on function with `Server` or `Client` value set. Each RPC can also specify the transport channel to use (`Unreliable`, `UnreliableOrdered`, `Reliable`, `ReliableOrdered`). [Flax.Build](../../editor/flax-build/index.md) codegen will inject custom code before the method body which will invoke the method properly on remote clients. Example RPCs:
 
 > [!Tip]
 > RPCs can be used only in networked objects (registered via `NetworkReplicator.AddObject`) and in types which code module is marked with `Network` tag.

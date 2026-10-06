@@ -38,7 +38,7 @@ MainRenderTask.Instance.View.Mode = ViewMode.Diffuse;
 
 ### No PostFx
 
-![View Mode No PostFx](media/View-NoPostFx.png)
+![View Mode No PostFx](media/View-NoPostFX.png)
 
 **No PostFx** view mode shows the scene with materials and lighting applied but without any post-processing.
 
