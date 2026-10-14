@@ -58,5 +58,9 @@ These pages contain information about how to use Flax Engine. This manual helps 
 
 ## Help us creating documentation
 
-The Flax documentation is open-source, which means anyone can edit it. If you find a mistake, you can correct it or comment on GitHub. [Here](https://github.com/FlaxEngine/FlaxDocs) is the official repository.
+The Flax documentation is open-source, which means anyone can edit it. 
+
+If you find a mistake, feel free to correct it and push a pr or to open an issue. You can find the repository that hosts the documentation [here](https://github.com/FlaxEngine/FlaxDocs).
+
+In case you want to make a contribution and are unsure about style or terminology, you can see our [Documentation Guideline](contributing/docs-guidelines.md).
 
