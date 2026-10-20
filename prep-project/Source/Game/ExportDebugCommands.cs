@@ -19,6 +19,7 @@ public static class ExportDebugCommands
         var sorted = new List<string>(commands);
         sorted.Sort();
         commands = sorted.ToArray();
+        Debug.Log($"Exporting {sorted.Count} Debug Commands...");
 
         // Generate a single reference table with all commands
         var sb = new StringBuilder();
@@ -34,6 +35,8 @@ public static class ExportDebugCommands
         }
 
         // Write to file for docs
-        File.WriteAllText(Path.Combine(docsRoot, "manual/scripting/advanced/debug-commands.gen.md"), sb.ToString(), Encoding.UTF8);
+        var path = Path.Combine(docsRoot, "manual/scripting/advanced/debug-commands.gen.md");
+        File.WriteAllText(path, sb.ToString(), Encoding.UTF8);
+        Debug.Log("Exported Debug Commands to: " + path);
     }
 }

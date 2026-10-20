@@ -2,6 +2,7 @@
 
 using System.IO;
 using System.Reflection;
+using FlaxEngine;
 
 namespace Game;
 
@@ -16,6 +17,9 @@ public static class ExportGitVersion
         var assembly = typeof(FlaxEditor.Editor).Assembly;
         var assemblyInformationalVersion = assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>();
         var versionParts = assemblyInformationalVersion.InformationalVersion.Split('+');
-        File.WriteAllText(Path.Combine(docsRoot, "commit.txt"), versionParts[2]);
+        var path = Path.Combine(docsRoot, "commit.txt");
+        var commit = versionParts[2];
+        File.WriteAllText(path, commit);
+        Debug.Log($"Exported commit hash ({commit}) to: " + path);
     }
 }
