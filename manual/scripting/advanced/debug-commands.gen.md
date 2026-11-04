@@ -22,6 +22,7 @@
 | `Globals.ProjectContentFolder` | Project content directory path. Value type: String |
 | `Globals.ProjectFolder` | Directory that contains project Value type: String |
 | `Globals.ProjectSourceFolder` | Game source code directory path (editor-only). Value type: String |
+| `Globals.RenderThreadID` | Render thread id (usually main thread, set on rendering begin). Value type: UInt64 |
 | `Globals.StartupFolder` | Main engine directory path. Value type: String |
 | `Globals.TemporaryFolder` | Temporary folder path. Value type: String |
 | `GPUDevice.DumpResources` | Dumps all GPU resources information to the log. |
