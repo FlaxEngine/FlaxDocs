@@ -166,6 +166,51 @@ We've fixed Scene Animation `Script` tracks created for prefab objects to store 
 
 ## Changelog
 
+### Version 1.13.7014.1 - 4 November 2026
+
+Contributors: mafiesto4, meet-brad-ch, GoaLitiuM, cNori, xxSeys1, ItsMrClockwork, fibref
+
+PRs merged: 22
+
+* Add auto-select to scene editor window tab when using Pilot Actor feature
+* Add `Scene` path and filename to game API
+* Add `BatchedDrawCall` and `ConcurrentArenaAllocator` to public API
+* Add `PreSkinnedPosition` and `PreSkinnedNormal` to Decal materials
+* Add `input.TexCoord3D` to Decal for all-axis pixel placement information
+* Add `BC6H` format compression/decompression support on non-Windows platforms
+* Add line breaks to save yes no prompts for better readability
+* Refactor shadows `Normal Offset Scale` to be unclamped over distance to properly apply to large local lights
+* Fix point light shadow seams at cubemap projection sides to have additional margin for better filtering
+* Fix missing `Level.SceneLoaded` event callback when preloading scenes
+* Fix scene actions processing bug
+* Fix viewport mouse ray precision and nav gizmo placement
+* Fix BC7 texture compression of HDR image with `bc7enc16` lib on non-Windows platforms
+* Fix probe baking finish event when texture compression fails
+* Fix partial RPC cleanup on network message
+* Fix invoking scripting updates that were added during `InvokeOnUpdate`
+* Fix empty new actor name regression
+* Fix maximized window flickering on Wayland when restored from layout- #4371
+* Fix using material instance with GPU Buffer parameter
+* Fix drawing foliage type with only shadows
+* Fix the unordered access views of DirectX 12 texture arrays
+* Fix `GPUContextDX12::ResetUA` when multiple UAVs are bound
+* Fix Vulkan debug layer warning during compute shader to have proper context loaded
+* Fix Vulkan/D3D12 upload page buffer sizes to align properly
+* Fix foliage instances dithered transitions over the cull distance or screen size cull to avoid popping artifacts
+* Fix assertion failure involving Skinned Meshes
+* Fix the index handling of `MeshAccelerationStructure` meshes merging
+* Fix missing `Released` event call for GPU Resource properties
+* Fix drawing bugs on other thread than main (eg. during drag&drop)
+* Fix Text Render culling bug when using render origin
+* Fix memory allocation in `NativeInterop.GetTypeSize`
+* Fix picking nested types in Editor
+* Fix `stb` texture block compression for the lowest mips
+* Fix `Object Size` node in Decals
+* Fix actor search highlights placement when changing scenes
+* Fix importing glTF roughness and metalness factors with Assimp
+* Fix crash on invalid `Variant` data in a stream
+* Fix crash on start with DX12 on Intel Arc
+
 ### Version 1.13.7012.0 - 21 October 2026
 
 Contributors: mafiesto4, lifeformed, Muzz, HydrogenC, Niko, GoaLitiuM, xrEugene, RomanZhu, Snakemonster, envision3d, xxSeys1, ThePhantomMask, Tryibion, Duroxxigar, ifromstone, jb-perrier, Alewinn-TerizKoming, luchu1993, TyGrze, ZaPx64, CodeForBeauty, DanielMacura, daveranan, Swiggies, vaibhav8a, ghueldre-pierre, Withaust, killerdevildog, fibref, vthirulo, TONYflare123, hallister, meet-brad-ch
