@@ -189,7 +189,7 @@ PRs merged: 22
 * Fix partial RPC cleanup on network message
 * Fix invoking scripting updates that were added during `InvokeOnUpdate`
 * Fix empty new actor name regression
-* Fix maximized window flickering on Wayland when restored from layout- #4371
+* Fix maximized window flickering on Wayland when restored from layout
 * Fix using material instance with GPU Buffer parameter
 * Fix drawing foliage type with only shadows
 * Fix the unordered access views of DirectX 12 texture arrays
