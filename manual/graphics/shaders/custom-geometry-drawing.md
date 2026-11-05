@@ -2,6 +2,9 @@
 
 In this tutorial you will learn how to implement custom geometry drawing. This technique allows to create custom geometry data, process it and display on a screen. It can be used to implement custom rendering for a game.
 
+### Extra important information
+Drawing GPU buffers directly bypasses some sub systems/submission path, so those draws do not automatically participate in occlusion culling, shadow passes or editor selection. 
+
 ## 1. Create new shader
 
 Firstly, create empty file in folder **Source/Shaders** and name it in a proper way, eg. `CustomGeometryDrawing.shader`. You can do it manually or use Editor and *right-click* in Content window shaders source folder **New -> Shader**.
@@ -215,8 +218,12 @@ public class CustomGeometryDrawing : PostProcessEffect
         if (cb != IntPtr.Zero)
         {
             var data = new Data();
-            Matrix.Multiply(ref renderContext.View.View, ref renderContext.View.Projection, out var viewProjection);
             Actor.GetLocalToWorldMatrix(out var world);
+            //with large worlds offset is needed to render it correctly
+            world.M41 -= (float)renderContext.View.Origin.X;
+            world.M42 -= (float)renderContext.View.Origin.Y;
+            world.M43 -= (float)renderContext.View.Origin.Z;
+            Matrix.Multiply(ref renderContext.View.View, ref renderContext.View.Projection, out var viewProjection);
             Matrix.Transpose(ref world, out data.WorldMatrix);
             Matrix.Transpose(ref viewProjection, out data.ViewProjectionMatrix);
             context.UpdateCB(cb, new IntPtr(&data));
@@ -243,3 +250,254 @@ Then **add script** to actor on scene and **assign Shader** property to the auto
 Once you setup shader, script and add it to the scene you should be able to see in both Editor and Game viewports the rendered custom model. In case of problems see *Output Log* window in Editor as it may contain any compilation errors (for both C# script and shader code).
 
 ![Sharpen Filter Example](media/custom-geometry-drawing.png)
+
+# Expanded example
+some shading and shadow receiver example 
+how to interact with flax lighting system
+
+
+```csharp
+using System;
+using System.Runtime.InteropServices;
+using FlaxEngine;
+
+public class FullVertexCube : PostProcessEffect
+{
+    public Shader Shader;
+    // All modes are albedo inputs to Flax deferred lighting.
+    [Limit(0, 4)] public int DebugMode;
+    [Limit(0.04f, 1.0f)] public float Roughness = 0.6f;
+    [Limit(0.0f, 1.0f)] public float Metalness;
+
+    [StructLayout(LayoutKind.Sequential)]
+    private struct Vertex
+    {
+        public Float3 Position;
+        public Float3 Normal;
+        public Float4 Tangent;
+        public Float2 UV;
+        public Float4 Color;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    private struct Data
+    {
+        public Matrix World;
+        public Matrix ViewProjection;
+        public Float4 Options;
+    }
+
+    private GPUBuffer _vertices, _indices;
+    private GPUPipelineState _pipeline;
+    private Shader _pipelineShader;
+
+    public override unsafe void OnEnable()
+    {
+        //this.Actor.BoundingBox
+
+        UseSingleTarget = true;
+        Location = PostProcessEffectLocation.AfterGBufferPass;
+        var vertices = new Vertex[24];
+        var indices = new uint[36];
+        // Each face has its own vertices: hard normals and independent UV seams.
+        Face(vertices, indices, 0, new Float3(1, 0, 0), new Float3(0, 0, -1), new Float3(0, 1, 0));
+        Face(vertices, indices, 1, new Float3(-1, 0, 0), new Float3(0, 0, 1), new Float3(0, 1, 0));
+        Face(vertices, indices, 2, new Float3(0, 1, 0), new Float3(1, 0, 0), new Float3(0, 0, -1));
+        Face(vertices, indices, 3, new Float3(0, -1, 0), new Float3(1, 0, 0), new Float3(0, 0, 1));
+        Face(vertices, indices, 4, new Float3(0, 0, 1), new Float3(1, 0, 0), new Float3(0, 1, 0));
+        Face(vertices, indices, 5, new Float3(0, 0, -1), new Float3(-1, 0, 0), new Float3(0, 1, 0));
+        try
+        {
+            var layout = GPUVertexLayout.Get(new[]
+            {
+                new VertexElement(VertexElement.Types.Position, 0, 0, false, PixelFormat.R32G32B32_Float),
+                new VertexElement(VertexElement.Types.Normal, 0, 12, false, PixelFormat.R32G32B32_Float),
+                new VertexElement(VertexElement.Types.Tangent, 0, 24, false, PixelFormat.R32G32B32A32_Float),
+                new VertexElement(VertexElement.Types.TexCoord0, 0, 40, false, PixelFormat.R32G32_Float),
+                new VertexElement(VertexElement.Types.Color, 0, 48, false, PixelFormat.R32G32B32A32_Float),
+            });
+            _vertices = new GPUBuffer();
+            fixed (Vertex* ptr = vertices)
+            {
+                var desc = GPUBufferDescription.Vertex(layout, sizeof(Vertex), vertices.Length, (IntPtr)ptr);
+                if (_vertices.Init(ref desc)) throw new InvalidOperationException("Vertex buffer Init failed.");
+            }
+            _indices = new GPUBuffer();
+            fixed (uint* ptr = indices)
+            {
+                var desc = GPUBufferDescription.Index(sizeof(uint), indices.Length, (IntPtr)ptr);
+                if (_indices.Init(ref desc)) throw new InvalidOperationException("Index buffer Init failed.");
+            }
+            Content.AssetReloading += OnReload;
+            SceneRenderTask.AddGlobalCustomPostFx(this);
+        }
+        catch
+        {
+            Destroy(ref _vertices);
+            Destroy(ref _indices);
+            throw;
+        }
+    }
+
+    private static void Face(Vertex[] vertices, uint[] indices, int face, Float3 normal, Float3 u, Float3 v)
+    {
+        for (int corner = 0; corner < 4; corner++)
+        {
+            float x = corner == 1 || corner == 2 ? 1 : 0;
+            float y = corner >= 2 ? 1 : 0;
+            vertices[face * 4 + corner] = new Vertex
+            {
+                Position = (normal + u * (x * 2 - 1) + v * (y * 2 - 1)) * 50,
+                Normal = normal,
+                Tangent = new Float4(u.X, u.Y, u.Z, 1),
+                UV = new Float2(x, y),
+                Color = new Float4(normal.X * .5f + .5f, normal.Y * .5f + .5f, normal.Z * .5f + .5f, 1)
+            };
+        }
+        uint b = (uint)(face * 4);
+        int i = face * 6;
+        indices[i] = b; indices[i + 1] = b + 1; indices[i + 2] = b + 2;
+        indices[i + 3] = b; indices[i + 4] = b + 2; indices[i + 5] = b + 3;
+    }
+
+    private void OnReload(Asset asset)
+    {
+        if (asset == Shader) Destroy(ref _pipeline);
+    }
+
+    public override bool CanRender() => base.CanRender() && Shader != null && Shader.IsLoaded && _vertices != null && _indices != null;
+
+    public override unsafe void Render(GPUContext context, ref RenderContext renderContext, GPUTexture input, GPUTexture output)
+    {
+        if (_pipelineShader != Shader)
+        {
+            Destroy(ref _pipeline);
+            _pipelineShader = Shader;
+        }
+        if (_pipeline == null)
+        {
+            var desc = GPUPipelineState.Description.Default;
+            desc.VS = Shader.GPU.GetVS("VS_Custom");
+            desc.PS = Shader.GPU.GetPS("PS_Custom");
+            desc.CullMode = CullMode.TwoSided; // Inspect both sides during attribute tests.
+            if (desc.VS == IntPtr.Zero || desc.PS == IntPtr.Zero) return;
+            _pipeline = new GPUPipelineState();
+            if (_pipeline.Init(ref desc))
+            {
+                Destroy(ref _pipeline);
+                throw new InvalidOperationException("Graphics pipeline Init failed.");
+            }
+        }
+        var cb = Shader.GPU.GetCB(0);
+        if (cb == IntPtr.Zero) return;
+        Actor.GetLocalToWorldMatrix(out var world);
+        //with large worlds offset is needed to render it correctly
+        world.M41 -= (float)renderContext.View.Origin.X;
+        world.M42 -= (float)renderContext.View.Origin.Y;
+        world.M43 -= (float)renderContext.View.Origin.Z;
+        Matrix.Multiply(ref renderContext.View.View, ref renderContext.View.Projection, out var vp);
+        var data = new Data { Options = new Float4(DebugMode, Mathf.Clamp(Roughness, 0.04f, 1.0f), Mathf.Clamp(Metalness, 0.0f, 1.0f), 0.5f) };
+        Matrix.Transpose(ref world, out data.World);
+        Matrix.Transpose(ref vp, out data.ViewProjection);
+        context.UpdateCB(cb, (IntPtr)(&data));
+        context.BindCB(0, cb);
+        context.BindVB(new[] { _vertices });
+        context.BindIB(_indices);
+        context.SetState(_pipeline);
+        // MRT order must match GBufferPass::Fill and the pixel shader outputs.
+        context.SetRenderTarget(renderContext.Buffers.DepthBuffer.View(), new[]
+        {
+            input.View(), // scene light/emission target, not final post-process output
+            renderContext.Buffers.GBuffer0.View(),
+            renderContext.Buffers.GBuffer1.View(),
+            renderContext.Buffers.GBuffer2.View(),
+            renderContext.Buffers.GBuffer3.View(),
+        });
+        context.DrawIndexed(36);
+    }
+
+    public override void OnDisable()
+    {
+        SceneRenderTask.RemoveGlobalCustomPostFx(this);
+        Content.AssetReloading -= OnReload;
+        Destroy(ref _pipeline);
+        Destroy(ref _vertices);
+        Destroy(ref _indices);
+        _pipelineShader = null;
+    }
+}
+
+```
+
+Shader Code
+
+```hlsl
+#include "./Flax/Common.hlsl"
+META_CB_BEGIN(0, Data)
+float4x4 World;
+float4x4 ViewProjection;
+float4 Options;
+META_CB_END
+
+struct VertexInput
+{
+    float3 Position : POSITION;
+    float3 Normal : NORMAL;
+    float4 Tangent : TANGENT;
+    float2 UV : TEXCOORD0;
+    float4 Color : COLOR0;
+};
+struct Interpolants
+{
+    float4 Position : SV_Position;
+    float3 Normal : TEXCOORD0;
+    float3 Tangent : TEXCOORD1;
+    float2 UV : TEXCOORD2;
+    float4 Color : COLOR0;
+};
+META_VS(true, FEATURE_LEVEL_SM5)
+Interpolants VS_Custom(VertexInput input)
+{
+    Interpolants output;
+    float3 position = mul(float4(input.Position, 1), World).xyz;
+    output.Position = mul(float4(position, 1), ViewProjection);
+    float3 tangent = mul(float4(input.Tangent.xyz, 0), World).xyz;
+    float3 bitangent = mul(float4(cross(input.Normal, input.Tangent.xyz) * input.Tangent.w, 0), World).xyz;
+    // Tangent-plane cross product handles positive nonuniform scale too.
+    output.Normal = normalize(cross(tangent, bitangent) * input.Tangent.w);
+    output.Tangent = normalize(tangent);
+    output.UV = input.UV;
+    output.Color = input.Color;
+    return output;
+}
+// This is a minimal opaque lit-material GBuffer writer, not a generated material.
+struct GBufferOutput
+{
+    float4 Light : SV_Target0;
+    float4 RT0 : SV_Target1;
+    float4 RT1 : SV_Target2;
+    float4 RT2 : SV_Target3;
+    float4 RT3 : SV_Target4;
+};
+META_PS(true, FEATURE_LEVEL_SM5)
+GBufferOutput PS_Custom(Interpolants input)
+{
+    float3 normal = normalize(input.Normal);
+    float checker = fmod(floor(input.UV.x * 8) + floor(input.UV.y * 8), 2);
+    float3 albedo = lerp(float3(.08,.15,.25), float3(.9,.7,.3), checker);
+    if (Options.x > 3.5) albedo = input.Color.rgb;
+    else if (Options.x > 2.5) albedo = normalize(input.Tangent) * .5 + .5;
+    else if (Options.x > 1.5) albedo = float3(input.UV, 0);
+    else if (Options.x > .5) albedo = normal * .5 + .5;
+    GBufferOutput output;
+    output.Light = float4(0, 0, 0, 1);
+    output.RT0 = float4(albedo, 1); // linear base colour, AO
+    output.RT1 = float4(normal * .5 + .5, SHADING_MODEL_LIT / 3.0);
+    output.RT2 = float4(Options.y, Options.z, Options.w, 0); // roughness, metalness, specular
+    output.RT3 = 0; // no subsurface/custom payload
+    return output;
+}
+```
+result
+
+![FullVertexCube](media/Shaded-custom-geometry.png)

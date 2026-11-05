@@ -1,25 +1,11 @@
-# Custom Compute Shader
+## Running compute with in Post Proccesing efect
 
-In this tutorial you will learn how to create and use a simple **blur effect** that will use a Compute Shader in two-pass to blur the input image.
-This example requires compute shaders and draw-indirect support from GPU which might not be available on low-end GPUs.
+Let's start with simple blur effect<br>
 
-Compute shaders are GPU programs that don't use classical GPU pipeline such as vertex transformations, fragment shading or MSAA. They are fully configurable code that can run on GPU in async. They can be used for massively parallel computational algorithms, or to accelerate parts of game rendering. Compute shaders don't need vertex/index buffers and don't write to output render target directly but instead can read and write to arbitrary buffers and textures provided by the user.
+In this example we use two functions: one will blur the input image horizontally (`CS_BlurH`), second one will perform a vertical blur (`CS_BlurV`). The blur will use a configurable radius (in range 0-10) and blending intensity.
 
-## 1. Create new shader
-
-Firstly, create empty file in folder **Source/Shaders** and name it in a proper way, eg. `BlurComputeShader.shader`. You can do it manually or use Editor and *right-click* in Content window shaders source folder **New -> Shader**.
-
-![New Shader Source](media/new-shader-source.png)
-
-If you're working with Visual Studio then use **File -> Generate project file** option to ensure new file was added to VS project. Then you can **double-click** to open shader in code editor.
-
-![Editing Shader Source](media/shader-editing.png)
-
-## 2. Writing compute shader
-
-Now, let's write the compute shader. In this example we use two functions: one will blur the input image horizotnally (`CS_BlurH`), second one will perform a vertical blur (`CS_BlurV`). The blur will use a configurable radius (in range 0-10) and blending intensity.
-
-Here is an example code used in this tutorial. Follow code comments to better understand how it works.
+> [!NOTE]
+> Follow code comments to better understand how it works.
 
 ```hlsl
 #include "./Flax/Common.hlsl"
@@ -51,7 +37,7 @@ void CS_BlurH(uint3 groupID : SV_GroupID, uint3 groupThreadID : SV_GroupThreadID
 {
 	// These positions are relative to the "grid", AKA the horizontal group of pixels that this thread group is writing to
 	const int2 gridStartXY = groupID.xy * BLUR_GRID_SIZE;
-	const int2 gridXY = groupThreadID.xy - BLUR_APRON_SIZE;
+	const int2 gridXY = int2(groupThreadID.xy) - BLUR_APRON_SIZE;
 
 	// These positions are relative to the pixel coordinates
 	const int sampleX = gridStartXY.x + gridXY.x;
@@ -104,7 +90,7 @@ void CS_BlurV(uint3 groupID : SV_GroupID, uint3 groupThreadID : SV_GroupThreadID
 {
 	// These positions are relative to the "grid", AKA the horizontal group of pixels that this thread group is writing to
 	const int2 gridStartXY = groupID.xy * BLUR_GRID_SIZE;
-	const int2 gridXY = groupThreadID.xy - BLUR_APRON_SIZE;
+	const int2 gridXY = int2(groupThreadID.xy) - BLUR_APRON_SIZE;
 
 	// These positions are relative to the pixel coordinates
 	const int sampleX = groupID.x;
@@ -152,11 +138,11 @@ void CS_BlurV(uint3 groupID : SV_GroupID, uint3 groupThreadID : SV_GroupThreadID
 
 ```
 
-## 3. Dispatching compute
+## Dispatching compute
 
 Next step is to write a script that will invoke the compute shader execution on a GPU. To do so we will use a C# script that implements **PostProcessEffect** class which is used to inject custom rendering code into the in-built graphics pipeline. You can also override the *Order* and *Location* properties to have even more control over rendering.
 
-Create C# script and add it to the any actor on the scene. You can use [this tutorial](../../scripting/new-script.md) to learn how to do it. Then, write the following code:
+Create C# script and add it to the any actor on the scene. You can use [this tutorial](../../../scripting/new-script.md) to learn how to do it. Then, write the following code:
 
 ```cs
 using System;
@@ -183,6 +169,7 @@ public class BlurComputeShader : PostProcessEffect
     public float BlurRadius = 10.0f;
 
     private bool _isComputeSupported;
+    private MainRenderTask _task;
 
     public Shader Shader;
 
@@ -191,13 +178,15 @@ public class BlurComputeShader : PostProcessEffect
         _isComputeSupported = GPUDevice.Instance.Limits.HasCompute;
 
         // Register postFx to game view
-        MainRenderTask.Instance.AddCustomPostFx(this);
+        _task = MainRenderTask.Instance;
+        _task?.AddCustomPostFx(this);
     }
 
     public override void OnDisable()
     {
         // Remember to unregister from drawing
-        MainRenderTask.Instance?.RemoveCustomPostFx(this);
+        _task?.RemoveCustomPostFx(this);
+        _task = null;
     }
 
     public override bool CanRender()
@@ -215,8 +204,8 @@ public class BlurComputeShader : PostProcessEffect
         {
             var data = new Data
             {
-                BlurStrength = BlurStrength,
-                BlurRadius = BlurRadius,
+                BlurStrength = Mathf.Clamp(BlurStrength, 0.0f, 1.0f),
+                BlurRadius = Mathf.Clamp(BlurRadius, 0.0f, 10.0f),
             };
             context.UpdateCB(cb, new IntPtr(&data));
         }
@@ -265,8 +254,11 @@ public class BlurComputeShader : PostProcessEffect
 }
 ```
 
-## 4. See results
+> [!NOTE]
+> This blur sample still needs format-capability checks and exception-safe release of pooled targets before production use. Do not assume the input format supports UAV writes. The two dispatches are separate passes; binding resets are not CPU/GPU completion fences. The constant-buffer data occupies 16 bytes.
+
+## See results
 
 The final step is to **add script** to actor on scene and **assign Shader** property to the auto-imported shader source from `Content/Shaders`.  When changing **Blur Radius** property from 0 to 10 you can see the effect in action real-time. In case of problems see *Output Log* window in Editor as it may contain any compilation errors (for both C# script and shader code).
 
-![Compute Shader Blur](media/compute-blur.gif)
+![Compute Shader Blur](../media/compute-blur.gif)
