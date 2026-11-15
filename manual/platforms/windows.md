@@ -45,3 +45,4 @@ It will automatically download all dependency packages (eg. `PhysX`, `Assimp`, `
 | **Support DirectX 11** | Enables support for DirectX 11. Disabling it reduces compiled shaders count. |
 | **Support DirectX 10** | Enables support for DirectX 10 and DirectX 10.1. Disabling it reduces compiled shaders count. |
 | **Support Vulkan** | Enables support for Vulkan. Disabling it reduces compiled shaders count. |
+| **Shader Cache Version** | Custom version number for GPU shaders cache and PSOs storage. Increment it after major game updates to clear local GPU driver cache to avoid PSO hitches. Unused if set to 0. |

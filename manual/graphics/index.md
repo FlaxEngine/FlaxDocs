@@ -13,7 +13,7 @@ This section explains all you need to know about working with the materials pipe
 * Vulkan
 * WebGPU
 * Null
-* Platform native (eg. on PS4)
+* Platform native (eg. on PS4, PS5)
 
 > [!TIP]
 > To check which rendering backend the game is running use [GPUDevice.Instance.RendererType](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_GPUDevice_RendererType). You can also use [GPUDevice.Instance.ShaderProfile](https://docs.flaxengine.com/api/FlaxEngine.GPUDevice.html#FlaxEngine_GPUDevice_ShaderProfile) to check the shaders format that is being used by the rendering backend.

@@ -147,7 +147,7 @@ API_INJECT_CODE(cpp, "#include \"Engine/Platform/Platform.h\"");
 Tag attributes that can be added to the API tags braces to adjust the bindings logic:
 
 * `Static` - marks the method/class/property to not use instance of the object but be static in code
-* `Sealed` - makes the class to be final and blocks inheritance
+* `Sealed` - makes the class to be final and blocks inheritance, when used on function makes it virtual only for C++, C# and Visual Script won't be able to override it
 * `Abstract` - makes the class to be abstract (cannot create object of it, can be only inherited)
 * `Public`/`Protected`/`Private` - access levels specified for methods/classes/properties to define the visibility in the scripting API
 * `InBuild` - marks type (class, struct, enum) as in-build into scripting API (skips generation by assuming it's already in the bindings API)

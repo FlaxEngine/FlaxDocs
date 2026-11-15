@@ -95,6 +95,9 @@ public class LoadingScreen : Script
 > [!Note]
 > If your game uses DDGI for lighting, then you can include the check `Graphics.GI.GetConvergence(MainRenderTask.Instance?.Buffers) >= 1.0f` inside `IsLoading` to wait for GI to spread after scene load.
 
+> [!Note]
+> If your game runs on DirectX 12 or Vulkan graphics you can wait for [PSO Precaching](../../graphics/overview/pso-precaching.md) to finish before hiding the loading screen: `GPUPipelineCache::GetPrecacheTasksCount() <= 0` (C++ only API).
+
 ### 2. Create Loading Screen prefab with UI
 
 Next step is to create a loading screen prefab with UI that will be displayed on top of the game while it's being loaded.
