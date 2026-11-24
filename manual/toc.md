@@ -83,6 +83,7 @@
 ### [Shading](graphics/overview/shading.md)
 ### [Culling](graphics/overview/culling.md)
 ### [PSO Precaching](graphics/overview/pso-precaching.md)
+### [HDR Output](graphics/overview/hdr.md)
 ## [Cameras](graphics/cameras/index.md)
 ### [How to render a camera to a texture](graphics/cameras/render-camera-to-texture.md)
 ### [Split Screen](graphics/cameras/split-screen.md)

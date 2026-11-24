@@ -11,6 +11,7 @@ The rendering system in Flax Engine uses the full power of the latest Graphics A
 * [Shading](shading.md)
 * [Culling](culling.md)
 * [PSO Precaching](pso-precaching.md)
+* [HDR Output](hdr.md)
 
 ## Rendering flow
 

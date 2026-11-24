@@ -37,6 +37,7 @@ You can change most of these values at runtime using the [GraphicsQuality](https
 |||
 | **Gamma Color Space** | If checked, color space workflow will use Gamma instead of Linear. Gamma color space defines colors with an applied a gamma curve (sRGB) so they are perceptually linear. This makes sense when the output of the rendering represent final color values that will be presented to a non-HDR screen. |
 | **Render Color Format** | Pixel format used by the rendering pipeline (for light buffer and post-processing). Possible options: <table><tbody><tr><th>Option</th><th>Description</th></tr><tr><td>**R11G11B10**</td><td>HDR 32-bit buffer without alpha channel support. Offers good performance but might result in colors banding or shift towards yellowish colors due to low data precision.</td></tr><tr><td>**R8G8B8A8**</td><td>LDR 32-bit buffer with alpha channel support. Offers good performance but doesn't support High Dynamic Range rendering.</td></tr><tr><td>**R16G16B16A16**</td><td>HDR 64-bit buffer with alpha channel support. Offers very good quality for wide range of colors but requires more memory.</td></tr></tbody></table> |
+| **Enable HDR** | Enables HDR output when supported by the active display and platform. See [this page](../../graphics/overview/hdr.md) to learn more.
 |||
 | **Fallback Fonts** | The list of fallback fonts used for text rendering. Ignored if empty. |
 |||
